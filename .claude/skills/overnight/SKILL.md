@@ -1,0 +1,329 @@
+---
+name: overnight
+description: Long-running autonomous work session. Interview for priorities, then execute without input. Delegates to sub-agents. Produces numbered summary doc.
+argument-hint: [optional: focus area or priority hints]
+user-invocable: true
+allowed-tools: Read, Grep, Glob, Bash, Edit, Write, Task, Skill, TodoWrite
+---
+
+# Overnight — Autonomous Work Session
+
+Long-running session where you interview the user for priorities, then work autonomously for hours. Delegate heavily to sub-agents. Document everything. Produce a comprehensive summary.
+
+**CRITICAL: This skill requires ZERO user input after the interview phase.** You must make all decisions autonomously and never pause for permission or approval. If you encounter a permission prompt or need to ask the user something after kickoff, you've broken the contract.
+
+## Phases
+
+```
+INTERVIEW → PLAN → EXECUTE → CONSOLIDATE → SUMMARIZE
+```
+
+---
+
+## Phase 1: INTERVIEW (Interactive)
+
+This is the only interactive phase. Go back and forth with the user to define the session's work.
+
+**Ask about:**
+- **Priorities** — What are the 2-4 most important things to tackle?
+- **Focus areas** — Backend? Frontend? New features? Bug fixes? Polish?
+- **Taste questions** — Design direction, UX preferences, behavior edge cases
+- **Constraints** — Anything off-limits? Anything that must not change?
+- **Skill routing** — Should any work use `/ideate` for spec docs? `/senior-review` for quality?
+- **Depth vs breadth** — Deep on fewer items, or broad coverage?
+
+**Keep interviewing until:**
+- You have enough work to fill a multi-hour autonomous session
+- All open questions about direction, taste, and behavior are answered
+- You understand priorities well enough to make autonomous decisions
+
+**Do NOT proceed to Phase 2 until the user explicitly says to kick it off** (e.g., "go", "start", "kick it off", "goodnight"). The transition from interactive to autonomous must be clear.
+
+---
+
+## Autonomous Execution Mode
+
+**After the user says "go" / "start" / "kick it off":**
+
+1. **NEVER ask the user a question** — Make all decisions yourself
+2. **NEVER pause for permission** — All tool usage should be pre-approved or auto-approved
+3. **NEVER use AskUserQuestion** — Document your decisions instead
+4. **NEVER wait for approval** — Edit files, run bash commands, create files freely
+5. **NEVER present options for the user to choose** — Pick the best option and document why
+
+**If you find yourself needing user input:**
+- You either didn't interview thoroughly enough (go back and ask before kickoff)
+- OR you should make a judgment call and document it in the summary
+
+**Tool execution:**
+- All tools (Read, Write, Edit, Bash, Glob, Grep, Task, Skill, TodoWrite) should execute without permission prompts
+- If a permission prompt appears, something is wrong with the execution environment
+- Make the best call you can and document that you needed manual approval
+
+**The contract:** Once the user says "go", they trust you to work for hours without checking in. Don't break that trust by asking questions mid-execution.
+
+---
+
+## Phase 2: PLAN (Autonomous from here)
+
+From this point on: **NEVER ask the user a question.** Make your best judgment call and document the decision.
+
+1. Create a task list of all work items, ordered by priority
+2. Decompose large items into independent sub-tasks
+3. Identify which tasks can run in parallel vs sequentially
+4. Map each task to a delegation strategy:
+
+| Work Type | Delegation |
+|-----------|------------|
+| Feature spec/design | `/ideate` via Skill tool or Task (general-purpose) |
+| Code quality/cleanup | `/senior-review` via Skill tool |
+| Bug investigation | Task (Explore agent) |
+| Implementation | Write code directly or Task (general-purpose) |
+| Research/exploration | Task (Explore agent) |
+| Deep analysis | Task (general-purpose) |
+
+---
+
+## Phase 3: EXECUTE (Autonomous)
+
+Work through the task list. Delegate aggressively to sub-agents to preserve main context for orchestration.
+
+### Test As You Build
+
+**CRITICAL: Test every feature locally before moving to the next task.** Don't batch testing at the end — bugs compound and become harder to diagnose.
+
+For every feature or fix you ship:
+1. **Start the server** if not already running (`python3 app.py` in backend dir)
+2. **Hit the relevant API endpoints** with curl to verify data flows correctly
+3. **Check for regressions** — did your change break anything adjacent?
+4. **Fix bugs immediately** — don't document them for later, fix them now
+5. **Log what you tested** — note in your progress tracking what you verified
+
+```
+Build feature → Test locally → Fix bugs → Verify fix → Move to next task
+```
+
+**API testing pattern:**
+```bash
+# Always verify your changes work with real data
+curl -s "http://localhost:5001/api/league/17810260/week/5/deep-dive?year=2025&team_id=1" | python3 -m json.tool
+```
+
+**If a test reveals a bug:**
+- Fix it immediately (don't add to "bugs found" and move on)
+- Re-test after the fix
+- Document the bug + fix in your progress notes (good content for the summary)
+
+**If a test reveals a deployment concern:**
+- Check that requirements.txt (root level) includes any new dependencies
+- Verify the change works with the production config (Railway reads root requirements.txt, not backend/)
+
+### Sub-Agent Delegation
+
+**Launch in parallel where tasks are independent:**
+```
+// Single message, multiple Task calls
+Task({ subagent_type: "Explore", prompt: "...", description: "Research A" })
+Task({ subagent_type: "general-purpose", prompt: "...", description: "Build B" })
+```
+
+**What to delegate:**
+- Large codebase searches → Explore agent
+- Multi-file reading/analysis → general-purpose agent
+- Implementation of well-defined features → general-purpose agent
+- Research questions → Explore agent
+
+**What to do directly:**
+- Small edits (< 3 files)
+- Documentation updates
+- Task orchestration and progress tracking
+- Reading sub-agent outputs and deciding next steps
+
+### Decision-Making Protocol
+
+When facing a design, architecture, or direction decision:
+1. Make your best call based on the interview context and project patterns
+2. **Document the decision immediately** — what you chose, why, and what the alternative was
+3. If the decision is high-risk or easily reversible later, note that too
+4. Continue working — don't block on decisions
+
+### Progress Tracking
+
+- Use TodoWrite to track all tasks
+- Mark tasks complete as they finish
+- If a task raises open questions for the user, note them and move on (add to "Open Questions" in summary)
+- If a task is blocked and can't be unblocked autonomously, document and skip
+- **Never pause to ask the user for clarification** — make your best call and document it
+
+### Handling Permission Prompts
+
+If you encounter a permission prompt during autonomous execution:
+1. **This should not happen** — the user expects zero interruptions
+2. **Document it** — note in your summary that you needed manual approval for [specific tool/action]
+3. **Suggest a fix** — if you know why the prompt appeared, recommend how to prevent it next time
+4. **Continue autonomously** — once approved, don't ask again for similar actions
+
+### Force-Stop Conditions
+
+| Condition | Action |
+|-----------|--------|
+| Same error 3+ times | Document, move to next task |
+| Critical ambiguity blocking all remaining work | Document, proceed to summarize |
+| All tasks complete | Proceed to consolidate |
+| Diminishing returns (spinning wheels) | Document, proceed to consolidate |
+
+---
+
+## Phase 4: CONSOLIDATE (Autonomous)
+
+After execution is complete (or force-stopped):
+
+1. Read all sub-agent outputs
+2. Verify changes work together (no conflicts, broken references)
+3. **Run a final round of local testing** — start the server, hit key endpoints, verify nothing is broken
+4. **Run `/senior-review`** on the scope of your changes to catch bugs, clean up code, and polish before the user sees it
+5. **Update all project documentation:**
+   - CLAUDE.md — new files, endpoints, structure changes
+   - ROADMAP.md — completed items, new items discovered
+   - MEETING_NOTES.md — comprehensive entry for this session
+6. **Verify deployment readiness:**
+   - Root `requirements.txt` includes all new dependencies (Railway reads this, not backend/)
+   - No hardcoded localhost URLs in production-facing code
+   - Environment variables documented if any new ones are needed
+7. Commit all changes with a clear commit message
+
+**Important:** If you shipped frontend changes, note in your summary that the user should run `/test` to validate the UI works in a browser before considering the feature fully shipped. You can verify APIs and backend logic autonomously, but browser testing requires manual validation.
+
+---
+
+## Phase 5: SUMMARIZE (Autonomous)
+
+Generate a numbered summary doc in `dev/overnight-summaries/`.
+
+Check existing files to determine the next number. Format: `NNN-YYYY-MM-DD-focus-area.md`
+
+### Summary Doc Format
+
+```markdown
+# Overnight Summary NNN — YYYY-MM-DD
+
+**Focus:** [Primary focus area]
+**Duration:** [Approximate, e.g. "Multi-hour autonomous session"]
+**Work Request:** [Original priorities from interview]
+
+## What Was Built
+
+- [Feature/change] — [Brief description]. Files: `path/to/files`
+- ...
+
+## Decisions Made
+
+| Decision | Choice | Rationale | Reversible? |
+|----------|--------|-----------|-------------|
+| ... | ... | ... | Yes/No |
+
+## Bugs Found & Fixed
+
+- [File:line] [Bug description] → [Fix applied]
+- ...
+
+## Open Questions
+
+_Things I need your input on. These blocked work or I made a judgment call you should review._
+
+1. **[Topic]** — [Question]. I went with [choice] because [reason], but you may want to revisit.
+2. ...
+
+## What's Next
+
+_Recommended priorities based on what I learned during this session._
+
+**CRITICAL:** If frontend code was shipped, the first recommendation MUST be: "Run `/test` to validate UI works in browser"
+
+1. **[Task]** — [Why it's next]
+2. ...
+
+## Files Created
+| File | Purpose |
+|------|---------|
+| `path` | [Description] |
+
+## Files Modified
+| File | What Changed |
+|------|-------------|
+| `path` | [Description] |
+
+## Session Stats
+
+- Tasks completed: N
+- Sub-agents spawned: N
+- Files created: N
+- Files modified: N
+- Bugs fixed: N
+- Decisions made: N
+- Open questions: N
+```
+
+### Final Message
+
+After the summary doc is written, present a concise message to the user:
+
+```
+Overnight session complete.
+
+Summary: dev/overnight-summaries/NNN-YYYY-MM-DD-focus.md
+
+[N] tasks completed, [N] files changed, [N] decisions documented.
+
+Top items needing your review:
+1. [Most important open question]
+2. [Second most important]
+
+Recommended reading order:
+1. This summary
+2. [Any spec docs created]
+3. [Key files to review]
+```
+
+---
+
+## Context Preservation Rules
+
+Your main context window is precious during a long session. Protect it.
+
+| Action | How | Why |
+|--------|-----|-----|
+| Research codebase | Task (Explore) | Keeps raw search results in sub-agent |
+| Build features | Task (general-purpose) | Implementation details stay in sub-agent |
+| Read sub-agent results | Read tool on output | Only pull summaries into main context |
+| Track progress | TodoWrite | Lightweight, stays in main |
+| Quick edits | Edit/Write directly | Fast, minimal context cost |
+
+**Rule of thumb:** If it involves reading more than 3 files or writing more than 50 lines, delegate it.
+
+---
+
+## Guidelines
+
+- **Bias toward action.** When in doubt, build it and document the decision.
+- **Ship > perfect.** Get features working, note polish items for later.
+- **Document decisions in real-time.** Don't batch them for the summary — you might forget context.
+- **Update `planning/MEETING_NOTES.md` before the summary.** The summary is for the user's morning review; meeting notes are the permanent record.
+- **Don't gold-plate.** If a task is done enough to work, mark it complete and move on.
+- **Respect the interview.** The user's priorities from Phase 1 are gospel. Don't go rogue on scope.
+
+---
+
+## Checklist (Before Declaring Complete)
+
+- [ ] All features tested locally with real data (League 17810260, Year 2025)
+- [ ] `/senior-review` run on changed code
+- [ ] Root `requirements.txt` updated with any new dependencies
+- [ ] All tasks marked completed or documented as blocked
+- [ ] Summary doc created in `dev/overnight-summaries/`
+- [ ] `planning/MEETING_NOTES.md` updated with session entry
+- [ ] CLAUDE.md updated if project structure changed
+- [ ] `planning/ROADMAP.md` updated with completed/new items
+- [ ] All changes committed and pushed
+- [ ] Open questions clearly listed in summary
+- [ ] Next steps provided
