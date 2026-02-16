@@ -4,6 +4,60 @@ Session-by-session log of conversations, decisions, and implementations.
 
 ---
 
+## 2026-02-15 — Overnight Session: Features, Filtering & Hall of Fame
+
+**Autonomous multi-hour session implementing user feedback**
+
+### What Was Shipped
+
+**UI Bug Fixes:**
+- Removed winner spoiler from season homepage
+- Fixed castaway headshots with fallback initials in tribe colors
+
+**New Filtering Features:**
+- Items page: Filter by Successful/Unsuccessful/Not Played/Voted Out Holding
+- Challenges page: Filter by Pre-Merge/Post-Merge Reward/Post-Merge Individual Immunity
+- Removed tribe filters from Castaways page (now shows all)
+
+**Hall of Fame Page (NEW):**
+- Individual records: voting accuracy, challenge wins, votes received, idol plays
+- Season records table: items played, votes nullified, players receiving votes
+- All-time stats calculated across all available seasons (28, 29, 30)
+
+**Data Infrastructure:**
+- Created `export_all_seasons.R` script to export seasons 1-39 from survivoR package
+- Script ready to run (requires R + survivoR package installation)
+
+**Code Quality:**
+- Ran `/senior-review` on all changes
+- Fixed 4 bugs (Counter import, min() defaults, None-check, debug console.log)
+- Updated CLAUDE.md with all new templates and endpoints
+
+### Files Created
+- `templates/hall_of_fame.html` — All-time records page
+- `export_all_seasons.R` — Data export script for seasons 1-39
+- `dev/overnight-summaries/001-2026-02-15-features-and-filtering.md` — Full session summary
+
+### Files Modified
+- `app.py` — Hall of Fame route + stats, bug fixes
+- `templates/base.html` — Hall of Fame nav link
+- `templates/index.html` — Winner spoiler removed
+- `templates/castaways.html` — Tribe filters removed, headshot fallbacks
+- `templates/items.html` — Filtering added
+- `templates/challenges.html` — Filtering added
+- `static/js/app.js` — Debug console.log removed
+- `CLAUDE.md` — Documentation updated
+- `planning/MEETING_NOTES.md` — This entry
+
+### Next Steps
+1. Run `export_all_seasons.R` to generate data for seasons 1-39 (requires R installation)
+2. Test Hall of Fame performance with full 39-season dataset
+3. Verify headshot URLs work for older seasons
+
+**Full details:** See `dev/overnight-summaries/001-2026-02-15-features-and-filtering.md`
+
+---
+
 ## 2026-02-15 — Senior Review: Templates & app.py
 
 **Scope:** `templates/` directory and `app.py`
