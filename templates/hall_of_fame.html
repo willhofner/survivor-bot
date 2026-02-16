@@ -1,0 +1,387 @@
+{% extends "base.html" %}
+
+{% block title %}Hall of Fame - Survivor{% endblock %}
+
+{% block content %}
+<div class="hall-of-fame-view">
+    <h1 class="text-center mb-5 survivor-title">
+        <span class="torch-large">🏆</span><br>
+        HALL OF FAME
+    </h1>
+    <p class="text-center subtitle mb-5">All-Time Records Across All Seasons</p>
+
+    <!-- INDIVIDUAL RECORDS -->
+    <section class="mb-5">
+        <h2 class="section-title mb-4">
+            <span class="torch">⚔️</span> Individual Records
+        </h2>
+
+        <div class="row g-4">
+            <!-- Champion Voting Accuracy -->
+            <div class="col-md-6">
+                <div class="record-card">
+                    <div class="record-icon">🎯</div>
+                    <h4 class="record-title">Highest Voting Accuracy (Champion)</h4>
+                    {% if individual_records.highest_voting_accuracy_champion %}
+                    <div class="record-holder">
+                        {{ individual_records.highest_voting_accuracy_champion.name }}
+                    </div>
+                    <div class="record-value">
+                        {{ individual_records.highest_voting_accuracy_champion.voting_accuracy.accuracy }}%
+                    </div>
+                    <div class="record-season">
+                        Season {{ individual_records.highest_voting_accuracy_champion.season }}: {{ individual_records.highest_voting_accuracy_champion.season_name }}
+                    </div>
+                    <div class="record-details">
+                        {{ individual_records.highest_voting_accuracy_champion.voting_accuracy.correct }}/{{ individual_records.highest_voting_accuracy_champion.voting_accuracy.total }} votes correct
+                    </div>
+                    {% else %}
+                    <p class="text-muted">No data available</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="record-card">
+                    <div class="record-icon">🎯</div>
+                    <h4 class="record-title">Lowest Voting Accuracy (Champion)</h4>
+                    {% if individual_records.lowest_voting_accuracy_champion %}
+                    <div class="record-holder">
+                        {{ individual_records.lowest_voting_accuracy_champion.name }}
+                    </div>
+                    <div class="record-value">
+                        {{ individual_records.lowest_voting_accuracy_champion.voting_accuracy.accuracy }}%
+                    </div>
+                    <div class="record-season">
+                        Season {{ individual_records.lowest_voting_accuracy_champion.season }}: {{ individual_records.lowest_voting_accuracy_champion.season_name }}
+                    </div>
+                    <div class="record-details">
+                        {{ individual_records.lowest_voting_accuracy_champion.voting_accuracy.correct }}/{{ individual_records.lowest_voting_accuracy_champion.voting_accuracy.total }} votes correct
+                    </div>
+                    {% else %}
+                    <p class="text-muted">No data available</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Challenge Wins -->
+            <div class="col-md-6">
+                <div class="record-card">
+                    <div class="record-icon">💪</div>
+                    <h4 class="record-title">Most Challenge Wins (All Players)</h4>
+                    <div class="record-holder">
+                        {{ individual_records.most_challenge_wins.name }}
+                    </div>
+                    <div class="record-value">
+                        {{ individual_records.most_challenge_wins.challenge_stats.total_wins }} wins
+                    </div>
+                    <div class="record-season">
+                        Season {{ individual_records.most_challenge_wins.season }}: {{ individual_records.most_challenge_wins.season_name }}
+                    </div>
+                    <div class="record-details">
+                        💎 {{ individual_records.most_challenge_wins.challenge_stats.immunity_wins }} immunity | 🏆 {{ individual_records.most_challenge_wins.challenge_stats.reward_wins }} reward
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="record-card">
+                    <div class="record-icon">💪</div>
+                    <h4 class="record-title">Most Challenge Wins (Champion)</h4>
+                    {% if individual_records.most_challenge_wins_champion %}
+                    <div class="record-holder">
+                        {{ individual_records.most_challenge_wins_champion.name }}
+                    </div>
+                    <div class="record-value">
+                        {{ individual_records.most_challenge_wins_champion.challenge_stats.total_wins }} wins
+                    </div>
+                    <div class="record-season">
+                        Season {{ individual_records.most_challenge_wins_champion.season }}: {{ individual_records.most_challenge_wins_champion.season_name }}
+                    </div>
+                    <div class="record-details">
+                        💎 {{ individual_records.most_challenge_wins_champion.challenge_stats.immunity_wins }} immunity | 🏆 {{ individual_records.most_challenge_wins_champion.challenge_stats.reward_wins }} reward
+                    </div>
+                    {% else %}
+                    <p class="text-muted">No data available</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="record-card">
+                    <div class="record-icon">💪</div>
+                    <h4 class="record-title">Fewest Challenge Wins (Champion)</h4>
+                    {% if individual_records.least_challenge_wins_champion %}
+                    <div class="record-holder">
+                        {{ individual_records.least_challenge_wins_champion.name }}
+                    </div>
+                    <div class="record-value">
+                        {{ individual_records.least_challenge_wins_champion.challenge_stats.total_wins }} wins
+                    </div>
+                    <div class="record-season">
+                        Season {{ individual_records.least_challenge_wins_champion.season }}: {{ individual_records.least_challenge_wins_champion.season_name }}
+                    </div>
+                    {% else %}
+                    <p class="text-muted">No data available</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Votes Received -->
+            <div class="col-md-6">
+                <div class="record-card">
+                    <div class="record-icon">🗳️</div>
+                    <h4 class="record-title">Most Votes Received (Champion)</h4>
+                    {% if individual_records.most_votes_received_champion %}
+                    <div class="record-holder">
+                        {{ individual_records.most_votes_received_champion.name }}
+                    </div>
+                    <div class="record-value">
+                        {{ individual_records.most_votes_received_champion.votes_against }} votes
+                    </div>
+                    <div class="record-season">
+                        Season {{ individual_records.most_votes_received_champion.season }}: {{ individual_records.most_votes_received_champion.season_name }}
+                    </div>
+                    {% else %}
+                    <p class="text-muted">No data available</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="record-card">
+                    <div class="record-icon">🗳️</div>
+                    <h4 class="record-title">Fewest Votes Received (Champion)</h4>
+                    {% if individual_records.least_votes_received_champion %}
+                    <div class="record-holder">
+                        {{ individual_records.least_votes_received_champion.name }}
+                    </div>
+                    <div class="record-value">
+                        {{ individual_records.least_votes_received_champion.votes_against }} votes
+                    </div>
+                    <div class="record-season">
+                        Season {{ individual_records.least_votes_received_champion.season }}: {{ individual_records.least_votes_received_champion.season_name }}
+                    </div>
+                    {% else %}
+                    <p class="text-muted">No data available</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDOL/ADVANTAGE RECORDS -->
+    <section class="mb-5">
+        <h2 class="section-title mb-4">
+            <span class="torch">💎</span> Idol & Advantage Records
+        </h2>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="record-card">
+                    <div class="record-icon">💎</div>
+                    <h4 class="record-title">Most Votes Nullified (Single Idol)</h4>
+                    {% if most_votes_nullified %}
+                    <div class="record-holder">
+                        {{ most_votes_nullified.found_by }}
+                    </div>
+                    <div class="record-value">
+                        {{ most_votes_nullified.votes_negated }} votes nullified
+                    </div>
+                    <div class="record-season">
+                        Season {{ most_votes_nullified.season }}: {{ most_votes_nullified.season_name }}
+                    </div>
+                    <div class="record-details">
+                        {{ most_votes_nullified.type }}
+                    </div>
+                    {% else %}
+                    <p class="text-muted">No successful idol plays yet</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="record-card">
+                    <div class="record-icon">💎</div>
+                    <h4 class="record-title">Most Successful Idol Plays (Player)</h4>
+                    {% if most_successful_idol_player[0] %}
+                    <div class="record-holder">
+                        {{ most_successful_idol_player[0] }}
+                    </div>
+                    <div class="record-value">
+                        {{ most_successful_idol_player[1] }} successful plays
+                    </div>
+                    {% else %}
+                    <p class="text-muted">No successful idol plays yet</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="record-card">
+                    <div class="record-icon">💎</div>
+                    <h4 class="record-title">Most Idols Played (Single Season)</h4>
+                    {% if most_idols_played_season[0] %}
+                    <div class="record-value">
+                        {{ most_idols_played_season[1] }} idols played
+                    </div>
+                    <div class="record-season">
+                        Season {{ most_idols_played_season[0] }}: {{ season_names[most_idols_played_season[0]] }}
+                    </div>
+                    {% else %}
+                    <p class="text-muted">No idol plays yet</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="record-card">
+                    <div class="record-icon">💎</div>
+                    <h4 class="record-title">Most Items Found (Single Season)</h4>
+                    {% if most_items_season[0] %}
+                    <div class="record-value">
+                        {{ most_items_season[1] }} items found
+                    </div>
+                    <div class="record-season">
+                        Season {{ most_items_season[0] }}: {{ season_names[most_items_season[0]] }}
+                    </div>
+                    {% else %}
+                    <p class="text-muted">No items yet</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEASON RECORDS -->
+    <section class="mb-5">
+        <h2 class="section-title mb-4">
+            <span class="torch">📊</span> Season Records
+        </h2>
+
+        <div class="table-responsive">
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th>Season</th>
+                        <th>Items Played</th>
+                        <th>Votes Nullified</th>
+                        <th>Voted Out Holding</th>
+                        <th>Players Receiving Votes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for season_num in seasons %}
+                    {% set record = season_records[season_num] %}
+                    <tr>
+                        <td><strong>Season {{ season_num }}: {{ record.season_name }}</strong></td>
+                        <td>{{ record.items_played }}</td>
+                        <td>{{ record.votes_nullified }}</td>
+                        <td>{{ record.voted_out_holding }}</td>
+                        <td>{{ record.players_receiving_votes }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <div class="back-to-top text-center mt-5">
+        <button class="btn btn-survivor" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            Back to Top ↑
+        </button>
+    </div>
+</div>
+
+<style>
+.hall-of-fame-view {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section-title {
+    color: var(--torch-orange);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.record-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--bamboo);
+    border-radius: 10px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+.record-card:hover {
+    border-color: var(--torch-orange);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+}
+
+.record-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.record-title {
+    color: var(--sand);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    min-height: 3rem;
+}
+
+.record-holder {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--torch-orange);
+    margin-bottom: 0.5rem;
+}
+
+.record-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 0.5rem;
+}
+
+.record-season {
+    color: var(--sand);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.record-details {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.table-dark {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--bamboo);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-dark th {
+    background: rgba(255, 107, 53, 0.3);
+    color: var(--torch-orange);
+    font-weight: bold;
+    border-bottom: 2px solid var(--torch-orange);
+}
+
+.table-dark td {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.table-dark tbody tr:hover {
+    background: rgba(255, 107, 53, 0.2);
+}
+</style>
+{% endblock %}

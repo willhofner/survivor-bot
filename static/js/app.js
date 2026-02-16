@@ -10,6 +10,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-// Log page view
-console.log('🔥 Survivor: Cagayan - Voting Tracker Loaded');

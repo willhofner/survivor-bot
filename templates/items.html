@@ -8,6 +8,14 @@
         <span class="torch">💎</span> Advantages & Idols
     </h1>
 
+    <div class="item-filter mb-4 text-center">
+        <button class="btn btn-filter active" data-result="all">All</button>
+        <button class="btn btn-filter" data-result="successful">✓ Successful</button>
+        <button class="btn btn-filter" data-result="unsuccessful">✗ Unsuccessful</button>
+        <button class="btn btn-filter" data-result="not-played">Not Played</button>
+        <button class="btn btn-filter" data-result="voted-out-holding">Voted Out Holding</button>
+    </div>
+
     {% if summary %}
     <div class="items-summary mb-5">
         <div class="row text-center">
@@ -41,7 +49,8 @@
 
     <div class="advantages-timeline">
         {% for advantage in advantages %}
-        <div class="advantage-card mb-4 {{ 'successful' if advantage.result == 'successful' else 'unsuccessful' if advantage.result == 'unsuccessful' else 'not-played' }}">
+        <div class="advantage-card mb-4 {{ 'successful' if advantage.result == 'successful' else 'unsuccessful' if advantage.result == 'unsuccessful' else 'not-played' }}"
+             data-result="{% if advantage.voted_out_holding %}voted-out-holding{% else %}{{ advantage.result.replace('_', '-') if advantage.result else 'not-played' }}{% endif %}">
             <div class="advantage-header">
                 <div class="advantage-icon">💎</div>
                 <div class="advantage-meta">
@@ -115,4 +124,26 @@
         </button>
     </div>
 </div>
+
+<script>
+// Item filtering
+document.querySelectorAll('.item-filter .btn-filter').forEach(button => {
+    button.addEventListener('click', function() {
+        const result = this.dataset.result;
+
+        // Update active button
+        document.querySelectorAll('.item-filter .btn-filter').forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+
+        // Filter advantage cards
+        document.querySelectorAll('.advantage-card').forEach(card => {
+            if (result === 'all' || card.dataset.result === result) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
 {% endblock %}

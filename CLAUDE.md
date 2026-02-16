@@ -43,8 +43,12 @@ survivor-bot/
 ├── templates/             <- 🎨 HTML TEMPLATES
 │   ├── base.html         <- Base template with nav
 │   ├── index.html        <- Landing page
-│   ├── episodes.html     <- Episode view
-│   └── castaways.html    <- Castaway profiles
+│   ├── tribal_councils.html <- Scrollable tribal councils
+│   ├── castaways.html    <- Castaway profiles (no filters)
+│   ├── challenges.html   <- Challenge timeline with filtering
+│   ├── events.html       <- Season timeline
+│   ├── items.html        <- Advantages/idols with filtering
+│   └── hall_of_fame.html <- All-time records across all seasons
 │
 ├── static/                <- 📦 STATIC ASSETS
 │   ├── css/
@@ -134,8 +138,15 @@ Land on home → Choose exploration mode →
 - **Stack**: Python 3 + Flask, Bootstrap + Custom CSS, Vanilla JS
 - **Data Source**: survivoR R Package (GitHub) — JSON exports for all 49 seasons
 - **Server**: http://localhost:8000 (development) — **NEVER use port 5000 on macOS** (conflicts with AirPlay)
-- **Current Coverage**: Season 28 (Cagayan) only — 18 castaways, 13 episodes, 16 tribal councils
-- **Features Live**: Episode navigation, Castaway profiles, Tribe filtering, Survivor-themed UI
+- **Current Coverage**: Seasons 28, 29, 30 (Cagayan, San Juan del Sur, Worlds Apart)
+- **Features Live**:
+  - Tribal Councils timeline
+  - Castaway profiles with voting accuracy & challenge stats
+  - Challenge timeline with filtering (pre-merge, post-merge reward, post-merge immunity)
+  - Season events timeline
+  - Items/Advantages tracking with filtering (Successful, Unsuccessful, Not Played, Voted Out Holding)
+  - Hall of Fame with all-time records across all available seasons
+  - Castaway headshots with fallback initials
 
 ---
 
@@ -157,11 +168,17 @@ Land on home → Choose exploration mode →
 
 ## API Endpoints
 
-<!-- Document API endpoints as you build them -->
-
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| TBD | GET | TBD |
+| `/` | GET | Landing page with season selector |
+| `/tribal-councils?season=N` | GET | Scrollable tribal councils timeline for season N |
+| `/castaways?season=N` | GET | Castaway profiles with stats for season N |
+| `/challenges?season=N` | GET | Challenge timeline with filtering for season N |
+| `/events?season=N` | GET | Season events timeline for season N |
+| `/items?season=N` | GET | Advantages/idols tracking with filtering for season N |
+| `/hall-of-fame` | GET | All-time records across all available seasons |
+| `/api/episode/<season>/<episode_num>` | GET | JSON data for specific episode |
+| `/api/castaway/<season>/<name>` | GET | JSON data for specific castaway |
 
 ---
 

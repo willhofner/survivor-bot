@@ -8,24 +8,20 @@
         <span class="torch">🔥</span> The Castaways
     </h1>
 
-    <div class="tribe-filter mb-4 text-center">
-        <button class="btn btn-filter active" data-tribe="all">All</button>
-        <button class="btn btn-filter" data-tribe="Brawn" style="background-color: #8B4513;">Brawn</button>
-        <button class="btn btn-filter" data-tribe="Brains" style="background-color: #4169E1;">Brains</button>
-        <button class="btn btn-filter" data-tribe="Beauty" style="background-color: #FF1493;">Beauty</button>
-    </div>
-
     <div class="castaways-grid">
         {% for castaway in castaways %}
         <div class="castaway-card"
-             data-tribe="{{ 'Brawn' if 'Brawn' in castaway.original_tribe else 'Brains' if 'Brains' in castaway.original_tribe else 'Beauty' }}"
              data-placement="{{ castaway.placement }}">
             <div class="castaway-header" style="border-color: {{ castaway.color }};">
-                {% if castaway.headshot %}
                 <div class="castaway-headshot">
-                    <img src="{{ castaway.headshot }}" alt="{{ castaway.name }}" onerror="this.style.display='none'">
+                    {% if castaway.headshot %}
+                    <img src="{{ castaway.headshot }}" alt="{{ castaway.name }}"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    {% endif %}
+                    <div class="headshot-fallback" style="display: {% if not castaway.headshot %}flex{% else %}none{% endif %}; width: 100%; height: 100%; align-items: center; justify-content: center; background: {{ castaway.color }}; font-size: 2.5rem; font-weight: bold; color: white;">
+                        {{ castaway.name[0] }}
+                    </div>
                 </div>
-                {% endif %}
                 <div class="castaway-placement">
                     {% if castaway.placement == "Winner" %}
                         <span class="crown">👑</span>
@@ -134,22 +130,5 @@
             button.textContent = 'View Voting History';
         }
     }
-
-    // Tribe filtering
-    document.querySelectorAll('.btn-filter').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
-            e.target.classList.add('active');
-
-            const tribe = e.target.dataset.tribe;
-            document.querySelectorAll('.castaway-card').forEach(card => {
-                if (tribe === 'all' || card.dataset.tribe === tribe) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    });
 </script>
 {% endblock %}

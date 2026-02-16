@@ -8,13 +8,21 @@
         <span class="torch">🏆</span> Challenge Timeline
     </h1>
 
+    <div class="challenge-filter mb-4 text-center">
+        <button class="btn btn-filter active" data-phase="all">All Challenges</button>
+        <button class="btn btn-filter" data-phase="pre-merge">Pre-Merge (Tribal)</button>
+        <button class="btn btn-filter" data-phase="post-merge-immunity">Post-Merge Individual Immunity</button>
+        <button class="btn btn-filter" data-phase="post-merge-reward">Post-Merge Reward</button>
+    </div>
+
     <div class="timeline-stats text-center mb-4">
         <span class="stat-badge">{{ challenges|length }} Total Challenges</span>
     </div>
 
     <div class="challenge-timeline">
         {% for challenge in challenges %}
-        <div class="challenge-card mb-3">
+        <div class="challenge-card mb-3"
+             data-phase="{% if challenge.outcome_type == 'Tribal' %}pre-merge{% elif 'Immunity' in challenge.challenge_type %}post-merge-immunity{% else %}post-merge-reward{% endif %}">
             <div class="challenge-header">
                 <div class="challenge-meta">
                     <span class="challenge-number">#{{ challenge.challenge_id }}</span>
@@ -59,4 +67,26 @@
         </button>
     </div>
 </div>
+
+<script>
+// Challenge filtering
+document.querySelectorAll('.challenge-filter .btn-filter').forEach(button => {
+    button.addEventListener('click', function() {
+        const phase = this.dataset.phase;
+
+        // Update active button
+        document.querySelectorAll('.challenge-filter .btn-filter').forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+
+        // Filter challenge cards
+        document.querySelectorAll('.challenge-card').forEach(card => {
+            if (phase === 'all' || card.dataset.phase === phase) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
 {% endblock %}

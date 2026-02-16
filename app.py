@@ -1,4 +1,5 @@
 from flask import Flask, render_template, jsonify, request
+from collections import Counter
 import json
 
 app = Flask(__name__)
@@ -264,6 +265,112 @@ def get_castaway(season, name):
     season_data = seasons_data[season]
     castaway = next((c for c in season_data['voting']['castaways'] if c['name'].lower() == name.lower()), None)
     return jsonify(castaway) if castaway else ('Castaway not found', 404)
+
+@app.route('/hall-of-fame')
+def hall_of_fame():
+    """Hall of Fame - all-time records across all seasons"""
+
+    # Calculate individual records
+    all_castaways = []
+    champions = []
+
+    for season_num, season_data in seasons_data.items():
+        voting_data = season_data['voting']
+        challenge_data = season_data['challenges']
+        advantages_data = season_data['advantages']
+
+        for castaway in voting_data['castaways']:
+            # Add season context
+            castaway_record = castaway.copy()
+            castaway_record['season'] = season_num
+            castaway_record['season_name'] = SEASON_NAMES[season_num]
+
+            # Track champions separately
+            if castaway.get('placement') == 'Winner':
+                champions.append(castaway_record)
+
+            all_castaways.append(castaway_record)
+
+    # Calculate individual records
+    individual_records = {
+        'highest_voting_accuracy_champion': max(champions, key=lambda c: c.get('voting_accuracy', {}).get('accuracy', 0)) if champions else None,
+        'lowest_voting_accuracy_champion': min(champions, key=lambda c: c.get('voting_accuracy', {}).get('accuracy', 0)) if champions else None,
+        'most_challenge_wins': max(all_castaways, key=lambda c: c.get('challenge_stats', {}).get('total_wins', 0)),
+        'most_challenge_wins_champion': max(champions, key=lambda c: c.get('challenge_stats', {}).get('total_wins', 0)) if champions else None,
+        'least_challenge_wins_champion': min(champions, key=lambda c: c.get('challenge_stats', {}).get('total_wins', 0)) if champions else None,
+        'most_votes_received_champion': max(champions, key=lambda c: c.get('votes_against', 0)) if champions else None,
+        'least_votes_received_champion': min(champions, key=lambda c: c.get('votes_against', 0)) if champions else None,
+    }
+
+    # Calculate idol/advantage records
+    idol_records = []
+    for season_num, season_data in seasons_data.items():
+        advantages = season_data['advantages'].get('advantages', [])
+        for adv in advantages:
+            idol_records.append({
+                **adv,
+                'season': season_num,
+                'season_name': SEASON_NAMES[season_num]
+            })
+
+    # Most votes nullified by a single idol
+    most_votes_nullified = max(idol_records, key=lambda x: x.get('votes_negated', 0)) if idol_records else None
+
+    # Most successful idol plays by a player
+    successful_plays_by_player = Counter()
+    for idol in idol_records:
+        if idol.get('result') == 'successful':
+            player = idol.get('found_by') or idol.get('played_for')
+            if player:
+                successful_plays_by_player[player] += 1
+
+    most_successful_idol_player = max(successful_plays_by_player.items(), key=lambda x: x[1]) if successful_plays_by_player else (None, 0)
+
+    # Most idols played in a season
+    idols_by_season = Counter()
+    items_by_season = Counter()
+    for idol in idol_records:
+        if idol.get('day_played'):
+            idols_by_season[idol['season']] += 1
+        items_by_season[idol['season']] += 1
+
+    most_idols_played_season = max(idols_by_season.items(), key=lambda x: x[1]) if idols_by_season else (None, 0)
+    most_items_season = max(items_by_season.items(), key=lambda x: x[1]) if items_by_season else (None, 0)
+
+    # Season records
+    season_records = {}
+    for season_num, season_data in seasons_data.items():
+        advantages = season_data['advantages'].get('advantages', [])
+        voting_data = season_data['voting']
+
+        votes_nullified = sum(adv.get('votes_negated', 0) for adv in advantages)
+        voted_out_holding = sum(1 for adv in advantages if adv.get('voted_out_holding'))
+
+        # Count unique players who received votes
+        all_vote_targets = set()
+        for episode in voting_data.get('episodes', []):
+            for tc in episode.get('tribal_councils', []):
+                for vote_group in tc.get('votes', []):
+                    all_vote_targets.add(vote_group.get('target'))
+
+        season_records[season_num] = {
+            'season': season_num,
+            'season_name': SEASON_NAMES[season_num],
+            'items_played': len([a for a in advantages if a.get('day_played')]),
+            'votes_nullified': votes_nullified,
+            'voted_out_holding': voted_out_holding,
+            'players_receiving_votes': len(all_vote_targets)
+        }
+
+    return render_template('hall_of_fame.html',
+                         individual_records=individual_records,
+                         most_votes_nullified=most_votes_nullified,
+                         most_successful_idol_player=most_successful_idol_player,
+                         most_idols_played_season=most_idols_played_season,
+                         most_items_season=most_items_season,
+                         season_records=season_records,
+                         seasons=AVAILABLE_SEASONS,
+                         season_names=SEASON_NAMES)
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
