@@ -1,0 +1,24 @@
+{
+  "name": "Ben Driebergen",
+  "season": 35,
+  "season_name": "Survivor: Heroes vs. Healers vs. Hustlers",
+  "archetype": {
+    "voting_control": 6,
+    "physical_game": 3,
+    "social_capital": 5,
+    "strategic_aggression": 8
+  },
+  "signature_move": "Played three consecutive hidden immunity idols across the final six, five, and four tribal councils to survive unanimous targeting by the rest of the tribe, then won the newly introduced final four fire-making challenge to reach Final Tribal Council.",
+  "stats": {
+    "voting_accuracy": 78,
+    "immunity_wins": 0,
+    "reward_wins": 0,
+    "jury_votes": "5-2-1",
+    "idols_played": 3,
+    "idols_successful": 3,
+    "times_received_votes": 11,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Ben built a strong majority alliance ('The Round Table') in the early post-merge but became the consensus biggest jury threat by Day 30. Rather than relying on social maneuvering to deflect, he pivoted to a pure survival strategy: finding and playing three hidden immunity idols in consecutive tribal councils while the entire tribe voted against him. His endgame was saved by the first-ever mandatory fire-making challenge at final four, which he won against Devon Pinto to reach the jury.",
+  "fun_fact": "Ben is a United States Marine who served in Iraq, and his military background heavily informed his strategic approach. He is also the first Survivor winner to play three hidden immunity idols in a single season, and the first winner whose path to the finals required the fire-making twist introduced that very season."
+}

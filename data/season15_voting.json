@@ -1,0 +1,616 @@
+{
+  "season": 15,
+  "season_name": "Survivor: China",
+  "castaways": [
+    {
+      "name": "Todd",
+      "original_tribe": "Fei Long",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Leslie",
+          "day": 9
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Sherea",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jaime",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jean-Robert",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Frosti",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "James",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Erik",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Peih-Gee",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Denise",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Courtney",
+      "original_tribe": "Fei Long",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jean-Robert",
+          "day": 9
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Jean-Robert",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jaime",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jean-Robert",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Frosti",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "James",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Erik",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Peih-Gee",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Denise",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Amanda",
+      "original_tribe": "Fei Long",
+      "tribe_color": "",
+      "placement": "2nd Runner-up",
+      "days_lasted": 39,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Leslie",
+          "day": 9
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Sherea",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jaime",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jean-Robert",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Frosti",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "James",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Erik",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Peih-Gee",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Denise",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Denise",
+      "original_tribe": "Fei Long",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 38,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Leslie",
+          "day": 9
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Sherea",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jaime",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Peih-Gee",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Frosti",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "James",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Erik",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Peih-Gee",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Todd",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Peih-Gee",
+      "original_tribe": "Zhan Hu",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 36,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Chicken",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Ashley",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Dave",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Aaron",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jean-Robert",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "James",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Frosti",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Todd",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Todd",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Todd",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Erik",
+      "original_tribe": "Zhan Hu",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 33,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Chicken",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Ashley",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Dave",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Aaron",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jean-Robert",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "James",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Frosti",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "James",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Todd",
+          "day": 33
+        }
+      ]
+    },
+    {
+      "name": "James",
+      "original_tribe": "Fei Long",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 30,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Leslie",
+          "day": 9
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Peih-Gee",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jaime",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jean-Robert",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Frosti",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Peih-Gee",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "Frosti",
+      "original_tribe": "Zhan Hu",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 27,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Chicken",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Ashley",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Dave",
+          "day": 12
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Sherea",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jaime",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jean-Robert",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Erik",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "Jean-Robert",
+      "original_tribe": "Fei Long",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 24,
+      "votes_against": 12,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Leslie",
+          "day": 9
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Sherea",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jaime",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "James",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Jaime",
+      "original_tribe": "Zhan Hu",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 21,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Chicken",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Ashley",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Dave",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Aaron",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jean-Robert",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Sherea",
+      "original_tribe": "Zhan Hu",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 18,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Chicken",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Ashley",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Dave",
+          "day": 12
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Jean-Robert",
+          "day": 18
+        }
+      ]
+    },
+    {
+      "name": "Aaron",
+      "original_tribe": "Fei Long",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 15,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Leslie",
+          "day": 9
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "James",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Dave",
+      "original_tribe": "Zhan Hu",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 12,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Ashley",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Ashley",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Sherea",
+          "day": 12
+        }
+      ]
+    },
+    {
+      "name": "Leslie",
+      "original_tribe": "Fei Long",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 9,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jean-Robert",
+          "day": 9
+        }
+      ]
+    },
+    {
+      "name": "Ashley",
+      "original_tribe": "Zhan Hu",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 6,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Peih-Gee",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Dave",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Chicken",
+      "original_tribe": "Zhan Hu",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Ashley",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

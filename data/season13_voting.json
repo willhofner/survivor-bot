@@ -1,0 +1,816 @@
+{
+  "season": 13,
+  "season_name": "Survivor: Cook Islands",
+  "castaways": [
+    {
+      "name": "Yul",
+      "original_tribe": "Puka Puka",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Cecilia",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Cao Boi",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jessica",
+          "day": 18
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Nate",
+          "day": 27
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Candice",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Jonathan",
+          "day": 33
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Parvati",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Adam",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Sundra",
+          "day": 38
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Ozzy",
+      "original_tribe": "Aitutaki",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 1,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Billy",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Becky",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Cao Boi",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jessica",
+          "day": 18
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Nate",
+          "day": 27
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Candice",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Jonathan",
+          "day": 33
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Parvati",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Adam",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Becky",
+          "day": 38
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Becky",
+      "original_tribe": "Puka Puka",
+      "tribe_color": "",
+      "placement": "2nd Runner-up",
+      "days_lasted": 39,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Cecilia",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Cao Boi",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jessica",
+          "day": 18
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Nate",
+          "day": 27
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Candice",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Jonathan",
+          "day": 33
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Parvati",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Adam",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Sundra",
+          "day": 38
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Sundra",
+      "original_tribe": "Manihiki",
+      "tribe_color": "",
+      "placement": "Lost fire challenge",
+      "days_lasted": 38,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sekou",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Becky",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Cao Boi",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jessica",
+          "day": 18
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Nate",
+          "day": 27
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Candice",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Jonathan",
+          "day": 33
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Parvati",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Adam",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Becky",
+          "day": 38
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Adam",
+      "original_tribe": "Rarotonga",
+      "tribe_color": "",
+      "placement": "16th voted out",
+      "days_lasted": 37,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "J.P.",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Stephannie",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Cristina",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Brad",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Rebecca",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jenny",
+          "day": 24
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Yul",
+          "day": 27
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Jonathan",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Jonathan",
+          "day": 33
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Sundra",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Yul",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Parvati",
+      "original_tribe": "Rarotonga",
+      "tribe_color": "",
+      "placement": "15th voted out",
+      "days_lasted": 36,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "J.P.",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Stephannie",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Cristina",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Brad",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Rebecca",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jenny",
+          "day": 24
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Yul",
+          "day": 27
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Jonathan",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Jonathan",
+          "day": 33
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Sundra",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Jonathan",
+      "original_tribe": "Rarotonga",
+      "tribe_color": "",
+      "placement": "14th voted out",
+      "days_lasted": 33,
+      "votes_against": 15,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Cecilia",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Cao Boi",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jessica",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Brad",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Rebecca",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jenny",
+          "day": 24
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Nate",
+          "day": 27
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Candice",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Adam",
+          "day": 33
+        }
+      ]
+    },
+    {
+      "name": "Candice",
+      "original_tribe": "Rarotonga",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 30,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Cao Boi",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jessica",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Brad",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Rebecca",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jenny",
+          "day": 24
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Yul",
+          "day": 27
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Jonathan",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "Nate",
+      "original_tribe": "Manihiki",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 27,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sundra",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Stephannie",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Stephannie",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Brad",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Rebecca",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jonathan",
+          "day": 24
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Yul",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "Rebecca",
+      "original_tribe": "Manihiki",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 24,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sekou",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "J.P.",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Stephannie",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Cristina",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Brad",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jonathan",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Jenny",
+      "original_tribe": "Puka Puka",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 24,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "J.P.",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Stephannie",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Cristina",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Brad",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Rebecca",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jonathan",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Brad",
+      "original_tribe": "Puka Puka",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 21,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "J.P.",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Stephannie",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jenny",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jonathan",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Jessica",
+      "original_tribe": "Rarotonga",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 18,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Cecilia",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Jonathan",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jonathan",
+          "day": 18
+        }
+      ]
+    },
+    {
+      "name": "Cao Boi",
+      "original_tribe": "Puka Puka",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 15,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Cecilia",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Candice",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Cristina",
+      "original_tribe": "Aitutaki",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 15,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Billy",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "J.P.",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Stephannie",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jenny",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Stephannie",
+      "original_tribe": "Manihiki",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 14,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sekou",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "J.P.",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Cristina",
+          "day": 14
+        }
+      ]
+    },
+    {
+      "name": "J.P.",
+      "original_tribe": "Aitutaki",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 11,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Billy",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Stephannie",
+          "day": 11
+        }
+      ]
+    },
+    {
+      "name": "Cecilia",
+      "original_tribe": "Aitutaki",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 8,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Billy",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Becky",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "name": "Billy",
+      "original_tribe": "Aitutaki",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 6,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Ozzy",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Sekou",
+      "original_tribe": "Manihiki",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sundra",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

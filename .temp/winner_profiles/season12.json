@@ -1,0 +1,24 @@
+{
+  "name": "Aras Baskauskas",
+  "season": 12,
+  "season_name": "Survivor: Panama",
+  "archetype": {
+    "voting_control": 7,
+    "physical_game": 6,
+    "social_capital": 8,
+    "strategic_aggression": 5
+  },
+  "signature_move": "Held the dysfunctional Casaya alliance together through sheer social capital, keeping Shane from quitting and mediating constant tribal conflict, then struck at the perfect moment to blindside Courtney and Shane in the endgame when the Casaya six had to cannibalize itself.",
+  "stats": {
+    "voting_accuracy": 75,
+    "immunity_wins": 1,
+    "reward_wins": 1,
+    "jury_votes": "5-2",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 9,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Aras won through social dominance rather than strategic fireworks or challenge dominance. As the youngest member of the chaotic Casaya tribe, he positioned himself as the calm, level-headed leader who held volatile personalities like Shane Powers together, while forming the season's most critical bond with Cirie Fields. His game was defined by navigating the post-merge against Terry Deitz's record-setting five consecutive individual immunity wins, patiently waiting for Terry to finally lose immunity while systematically picking off La Mina members and then his own Casaya allies at exactly the right moments.",
+  "fun_fact": "Aras is a certified yoga instructor who used meditation and mindfulness techniques throughout the game; at age 24, he was the youngest winner at the time of his season and is one of the few winners to defeat a challenge beast (Terry Deitz, who won 5 straight individual immunities) without ever holding a hidden immunity idol."
+}

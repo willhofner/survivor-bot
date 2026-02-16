@@ -1,0 +1,24 @@
+{
+  "name": "Nick Wilson",
+  "season": 37,
+  "season_name": "Survivor: David vs. Goliath",
+  "archetype": {
+    "voting_control": 8,
+    "physical_game": 7,
+    "social_capital": 8,
+    "strategic_aggression": 7
+  },
+  "signature_move": "Won the final three consecutive individual immunity challenges to secure his path to Final Tribal Council, after being a key architect of the David alliance's mid-game power surge that used a vote steal and idol nullifier to blindside Dan Rengering.",
+  "stats": {
+    "voting_accuracy": 75,
+    "immunity_wins": 3,
+    "reward_wins": 1,
+    "jury_votes": "7-3",
+    "idols_played": 1,
+    "idols_successful": 1,
+    "times_received_votes": 0,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Nick played a versatile underdog game from the David tribe, building cross-tribal alliances (notably with Mike White on the Jabeni swap tribe) and accumulating advantages including a vote steal and hidden immunity idol. He orchestrated key blindsides in the mid-game using the David alliance's combined advantages, then pivoted to an immunity run when his alliance crumbled, winning the final three challenges to guarantee his spot at Final Tribal Council where the jury rewarded his scrappy, well-rounded game.",
+  "fun_fact": "Nick never received a single vote against him across all 14 tribal councils he attended — one of only a handful of Survivor winners to play a perfect zero-votes-against game over a full 39-day season."
+}

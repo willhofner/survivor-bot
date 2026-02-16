@@ -2,66 +2,152 @@
 
 {% block content %}
 <div class="text-center hero-section">
-    <h1 class="display-3 survivor-title mb-4">
-        <span class="torch-large">🔥</span><br>
-        SURVIVOR: CAGAYAN
+    <h1 class="display-3 survivor-title mb-3">
+        <span class="torch-large">&#x1F525;</span><br>
+        SURVIVOR BOT
     </h1>
-    <h2 class="subtitle mb-4">Brawn vs. Brains vs. Beauty</h2>
+    <h2 class="subtitle mb-2">The Complete Visual History of Survivor</h2>
+    <p class="text-muted" style="font-size: 1.1rem; max-width: 700px; margin: 0 auto;">
+        Explore alliances, blindsides, and winning strategies across 39 seasons.
+        Decode the paths to victory through interactive gameplay analysis.
+    </p>
+</div>
 
-    <div class="row mt-5">
-        <div class="col-md-6 mb-4">
-            <a href="/episodes" class="view-card">
-                <div class="card h-100 tribal-card">
-                    <div class="card-body text-center">
-                        <div class="card-icon">📺</div>
-                        <h3 class="card-title">Episode View</h3>
-                        <p class="card-text">Navigate through 13 episodes and see every tribal council vote in chronological order</p>
-                        <div class="btn btn-survivor mt-3">Explore Episodes</div>
-                    </div>
-                </div>
-            </a>
+<!-- QUICK STATS -->
+<div class="season-stats mt-4 mb-5">
+    <div class="row text-center g-3">
+        <div class="col-6 col-md-3">
+            <div class="stat-box">
+                <div class="stat-number">39</div>
+                <div class="stat-label">Seasons</div>
+            </div>
         </div>
-        <div class="col-md-6 mb-4">
-            <a href="/castaways" class="view-card">
-                <div class="card h-100 tribal-card">
-                    <div class="card-body text-center">
-                        <div class="card-icon">⚔️</div>
-                        <h3 class="card-title">Castaway View</h3>
-                        <p class="card-text">Explore each player's journey, voting history, and ultimate fate in the game</p>
-                        <div class="btn btn-survivor mt-3">View Castaways</div>
-                    </div>
-                </div>
-            </a>
+        <div class="col-6 col-md-3">
+            <div class="stat-box">
+                <div class="stat-number">{{ total_castaways }}</div>
+                <div class="stat-label">Castaways</div>
+            </div>
         </div>
-    </div>
-
-    <div class="season-stats mt-5">
-        <div class="row text-center">
-            <div class="col-md-3">
-                <div class="stat-box">
-                    <div class="stat-number">18</div>
-                    <div class="stat-label">Castaways</div>
-                </div>
+        <div class="col-6 col-md-3">
+            <div class="stat-box">
+                <div class="stat-number">{{ total_challenges }}</div>
+                <div class="stat-label">Challenges</div>
             </div>
-            <div class="col-md-3">
-                <div class="stat-box">
-                    <div class="stat-number">16</div>
-                    <div class="stat-label">Tribal Councils</div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="stat-box">
-                    <div class="stat-number">39</div>
-                    <div class="stat-label">Days</div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="stat-box">
-                    <div class="stat-number">3</div>
-                    <div class="stat-label">Tribes</div>
-                </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="stat-box">
+                <div class="stat-number">{{ winner_count }}</div>
+                <div class="stat-label">Winner Profiles</div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- EXPLORE SECTIONS -->
+<div class="row g-4 mb-5">
+    <div class="col-md-4">
+        <a href="/winners" class="view-card">
+            <div class="card h-100 tribal-card">
+                <div class="card-body text-center">
+                    <div class="card-icon">&#x1F451;</div>
+                    <h3 class="card-title">Winners Hall</h3>
+                    <p class="card-text">Strategic profiles of all 39 winners with radar charts, archetype ratings, and signature moves</p>
+                    <div class="btn btn-survivor mt-3">Explore Winners</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="/compare" class="view-card">
+            <div class="card h-100 tribal-card">
+                <div class="card-body text-center">
+                    <div class="card-icon">&#x2694;&#xFE0F;</div>
+                    <h3 class="card-title">Compare Winners</h3>
+                    <p class="card-text">Side-by-side comparison with overlapping radar charts, head-to-head stats, and strategy breakdowns</p>
+                    <div class="btn btn-survivor mt-3">Compare Now</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="/analytics" class="view-card">
+            <div class="card h-100 tribal-card">
+                <div class="card-body text-center">
+                    <div class="card-icon">&#x1F4CA;</div>
+                    <h3 class="card-title">Analytics</h3>
+                    <p class="card-text">Era comparisons, archetype trends, immunity and idol analysis — how the game has evolved</p>
+                    <div class="btn btn-survivor mt-3">View Analytics</div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="row g-4 mb-5">
+    <div class="col-md-3">
+        <a href="/seasons" class="view-card">
+            <div class="card h-100 tribal-card">
+                <div class="card-body text-center">
+                    <div class="card-icon">&#x1F3DD;&#xFE0F;</div>
+                    <h3 class="card-title" style="font-size: 1.1rem;">All Seasons</h3>
+                    <p class="card-text" style="font-size: 0.85rem;">Browse 39 seasons with summaries, twists, and iconic moments</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a href="/castaways?season=28" class="view-card">
+            <div class="card h-100 tribal-card">
+                <div class="card-body text-center">
+                    <div class="card-icon">&#x2694;&#xFE0F;</div>
+                    <h3 class="card-title" style="font-size: 1.1rem;">Castaways</h3>
+                    <p class="card-text" style="font-size: 0.85rem;">Player profiles with voting accuracy and challenge stats</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a href="/tribal-councils?season=28" class="view-card">
+            <div class="card h-100 tribal-card">
+                <div class="card-body text-center">
+                    <div class="card-icon">&#x1F525;</div>
+                    <h3 class="card-title" style="font-size: 1.1rem;">Tribal Councils</h3>
+                    <p class="card-text" style="font-size: 0.85rem;">Every vote, every blindside, every torch snuffed</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a href="/hall-of-fame" class="view-card">
+            <div class="card h-100 tribal-card">
+                <div class="card-body text-center">
+                    <div class="card-icon">&#x1F3C6;</div>
+                    <h3 class="card-title" style="font-size: 1.1rem;">Records</h3>
+                    <p class="card-text" style="font-size: 0.85rem;">All-time records across all seasons</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<!-- RANDOM PLAYER -->
+<div class="text-center mb-5">
+    <button class="btn btn-outline-survivor" onclick="goToRandomPlayer()">
+        &#x1F3B2; Discover a Random Season
+    </button>
+</div>
+
+<!-- FEATURED WINNER -->
+{% if featured_winner %}
+<div class="winner-announcement p-4 mb-5" style="max-width: 700px; margin: 0 auto;">
+    <h3 class="text-center" style="color: var(--sand); font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">Featured Winner</h3>
+    <div class="text-center">
+        <div class="winner-name" style="font-size: 2rem;">{{ featured_winner.name }}</div>
+        <div style="color: var(--sand); font-style: italic;">Season {{ featured_winner.season }}: {{ featured_winner.season_name }}</div>
+        <div style="color: gold; margin: 0.5rem 0;">Jury Vote: {{ featured_winner.stats.jury_votes }}</div>
+        <p style="color: #fff; font-size: 0.9rem; margin-top: 1rem; line-height: 1.5;">{{ featured_winner.signature_move }}</p>
+        <a href="/winner/{{ featured_winner.season }}" class="btn btn-survivor btn-sm mt-2">View Full Profile</a>
+    </div>
+</div>
+{% endif %}
 {% endblock %}

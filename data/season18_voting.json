@@ -1,0 +1,581 @@
+{
+  "season": 18,
+  "season_name": "Survivor: Tocantins",
+  "castaways": [
+    {
+      "name": "J.T.",
+      "original_tribe": "Jalapao",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Carolina",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Sandy",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Spencer",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Sydney",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Sierra",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Tyson",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Sierra",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Debbie",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Erinn",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Taj",
+          "day": 37
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Erinn",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Stephen",
+      "original_tribe": "Jalapao",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 1,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Carolina",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Sandy",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Spencer",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Sydney",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Brendan",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Tyson",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Sierra",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Debbie",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Coach",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Taj",
+          "day": 37
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Erinn",
+      "original_tribe": "Timbira",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 38,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Candace",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Jerry",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Sierra",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Tyson",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Stephen",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Debbie",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Coach",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Taj",
+          "day": 37
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Taj",
+      "original_tribe": "Jalapao",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 37,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Carolina",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Joe",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Spencer",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Sydney",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Brendan",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Tyson",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Debbie",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Debbie",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Coach",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Erinn",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Coach",
+      "original_tribe": "Timbira",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 36,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Candace",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Jerry",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Brendan",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Sierra",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Sierra",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Taj",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Erinn",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Debbie",
+      "original_tribe": "Timbira",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 33,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Candace",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Jerry",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Brendan",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Sierra",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Sierra",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Coach",
+          "day": 33
+        }
+      ]
+    },
+    {
+      "name": "Sierra",
+      "original_tribe": "Timbira",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 30,
+      "votes_against": 11,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Candace",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Jerry",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Coach",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Tyson",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Debbie",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "Tyson",
+      "original_tribe": "Timbira",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 27,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Candace",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Jerry",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Sierra",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Sierra",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "Brendan",
+      "original_tribe": "Timbira",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 24,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Candace",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Jerry",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Coach",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Joe",
+      "original_tribe": "Jalapao",
+      "tribe_color": "",
+      "placement": "Medically evacuated",
+      "days_lasted": 20,
+      "votes_against": 1,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Carolina",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Sandy",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Spencer",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Taj",
+          "day": 18
+        }
+      ]
+    },
+    {
+      "name": "Sydney",
+      "original_tribe": "Jalapao",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 18,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Carolina",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Sandy",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Spencer",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Taj",
+          "day": 18
+        }
+      ]
+    },
+    {
+      "name": "Spencer",
+      "original_tribe": "Jalapao",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 15,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Carolina",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Sandy",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Taj",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Sandy",
+      "original_tribe": "Jalapao",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 12,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Carolina",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Sydney",
+          "day": 12
+        }
+      ]
+    },
+    {
+      "name": "Jerry",
+      "original_tribe": "Timbira",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 9,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Candace",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Erinn",
+          "day": 9
+        }
+      ]
+    },
+    {
+      "name": "Candace",
+      "original_tribe": "Timbira",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 6,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Sierra",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Carolina",
+      "original_tribe": "Jalapao",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sandy",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

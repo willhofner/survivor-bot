@@ -1,0 +1,966 @@
+{
+  "season": 27,
+  "season_name": "Survivor: Blood vs. Water",
+  "castaways": [
+    {
+      "name": "Tyson",
+      "original_tribe": "Galang",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 2,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Laura M.",
+          "day": 1
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Laura M.",
+          "day": 13
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Aras",
+          "day": 21
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Vytas",
+          "day": 22
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Tina",
+          "day": 24
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Laura M.",
+          "day": 26
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Caleb",
+          "day": 29
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Hayden",
+          "day": 32
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Hayden",
+          "day": 32
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 32
+        },
+        {
+          "tribal_council": 18,
+          "voted_for": "Hayden",
+          "day": 35
+        },
+        {
+          "tribal_council": 19,
+          "voted_for": "Ciera",
+          "day": 37
+        },
+        {
+          "tribal_council": 20,
+          "voted_for": "Tina",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Monica",
+      "original_tribe": "Galang",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Candice",
+          "day": 1
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Laura M.",
+          "day": 13
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Kat",
+          "day": 16
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Laura B.",
+          "day": 18
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Aras",
+          "day": 21
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Vytas",
+          "day": 22
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Tina",
+          "day": 24
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Laura M.",
+          "day": 26
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Caleb",
+          "day": 29
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Hayden",
+          "day": 32
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 32
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 32
+        },
+        {
+          "tribal_council": 18,
+          "voted_for": "Hayden",
+          "day": 35
+        },
+        {
+          "tribal_council": 19,
+          "voted_for": "Ciera",
+          "day": 37
+        },
+        {
+          "tribal_council": 20,
+          "voted_for": "Tina",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Gervase",
+      "original_tribe": "Galang",
+      "tribe_color": "",
+      "placement": "2nd Runner-up",
+      "days_lasted": 39,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Candice",
+          "day": 1
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Laura M.",
+          "day": 13
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Aras",
+          "day": 21
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Vytas",
+          "day": 22
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Tina",
+          "day": 24
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Laura M.",
+          "day": 26
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Caleb",
+          "day": 29
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Hayden",
+          "day": 32
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Hayden",
+          "day": 32
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 32
+        },
+        {
+          "tribal_council": 18,
+          "voted_for": "Hayden",
+          "day": 35
+        },
+        {
+          "tribal_council": 19,
+          "voted_for": "Ciera",
+          "day": 37
+        },
+        {
+          "tribal_council": 20,
+          "voted_for": "Tina",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Tina",
+      "original_tribe": "Galang",
+      "tribe_color": "",
+      "placement": "17th voted out",
+      "days_lasted": 38,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Candice",
+          "day": 1
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Laura M.",
+          "day": 13
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Kat",
+          "day": 16
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Laura B.",
+          "day": 18
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Ciera",
+          "day": 21
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Vytas",
+          "day": 22
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Tyson",
+          "day": 24
+        },
+        {
+          "tribal_council": 19,
+          "voted_for": "Gervase",
+          "day": 37
+        },
+        {
+          "tribal_council": 20,
+          "voted_for": "Gervase",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Ciera",
+      "original_tribe": "Tadhana",
+      "tribe_color": "",
+      "placement": "16th voted out",
+      "days_lasted": 37,
+      "votes_against": 14,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Laura B.",
+          "day": 1
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Marissa",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "John",
+          "day": 6
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "John",
+          "day": 8
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Brad",
+          "day": 10
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "",
+          "day": 10
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Aras",
+          "day": 21
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Katie",
+          "day": 22
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Tina",
+          "day": 24
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Laura M.",
+          "day": 26
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Caleb",
+          "day": 29
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Monica",
+          "day": 32
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Monica",
+          "day": 32
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 32
+        },
+        {
+          "tribal_council": 18,
+          "voted_for": "Gervase",
+          "day": 35
+        },
+        {
+          "tribal_council": 19,
+          "voted_for": "Gervase",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Hayden",
+      "original_tribe": "Tadhana",
+      "tribe_color": "",
+      "placement": "15th voted out",
+      "days_lasted": 35,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Laura B.",
+          "day": 1
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Marissa",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Rachel",
+          "day": 6
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "John",
+          "day": 8
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Ciera",
+          "day": 10
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Ciera",
+          "day": 10
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Aras",
+          "day": 21
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Vytas",
+          "day": 22
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Tina",
+          "day": 24
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Laura M.",
+          "day": 26
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Ciera",
+          "day": 29
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Monica",
+          "day": 32
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 32
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 32
+        },
+        {
+          "tribal_council": 18,
+          "voted_for": "Gervase",
+          "day": 35
+        }
+      ]
+    },
+    {
+      "name": "Katie",
+      "original_tribe": "Tadhana",
+      "tribe_color": "",
+      "placement": "Eliminated",
+      "days_lasted": 32,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Marissa",
+          "day": 1
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Marissa",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "John",
+          "day": 6
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "John",
+          "day": 8
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Brad",
+          "day": 10
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Brad",
+          "day": 10
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Kat",
+          "day": 16
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Laura B.",
+          "day": 18
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Ciera",
+          "day": 21
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Vytas",
+          "day": 22
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Monica",
+          "day": 24
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Laura M.",
+          "day": 26
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Ciera",
+          "day": 29
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Monica",
+          "day": 32
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Monica",
+          "day": 32
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 32
+        }
+      ]
+    },
+    {
+      "name": "Caleb",
+      "original_tribe": "Tadhana",
+      "tribe_color": "",
+      "placement": "14th voted out",
+      "days_lasted": 29,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Laura B.",
+          "day": 1
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Marissa",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Rachel",
+          "day": 6
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "John",
+          "day": 8
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Brad",
+          "day": 10
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Brad",
+          "day": 10
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Aras",
+          "day": 21
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Vytas",
+          "day": 22
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Tina",
+          "day": 24
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Laura M.",
+          "day": 26
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Ciera",
+          "day": 29
+        }
+      ]
+    },
+    {
+      "name": "Laura M.",
+      "original_tribe": "Galang",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 26,
+      "votes_against": 19,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Candice",
+          "day": 1
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Laura B.",
+          "day": 13
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Aras",
+          "day": 21
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Vytas",
+          "day": 22
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Tina",
+          "day": 24
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Katie",
+          "day": 26
+        }
+      ]
+    },
+    {
+      "name": "Vytas",
+      "original_tribe": "Tadhana",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 22,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Laura B.",
+          "day": 1
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Marissa",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Rachel",
+          "day": 6
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "John",
+          "day": 8
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Ciera",
+          "day": 10
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Brad",
+          "day": 10
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Kat",
+          "day": 16
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Laura B.",
+          "day": 18
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Laura M.",
+          "day": 21
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Tyson",
+          "day": 22
+        }
+      ]
+    },
+    {
+      "name": "Aras",
+      "original_tribe": "Galang",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 21,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Gervase",
+          "day": 1
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Laura M.",
+          "day": 13
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Laura M.",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Laura B.",
+      "original_tribe": "Tadhana",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 18,
+      "votes_against": 11,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Marissa",
+          "day": 1
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Laura M.",
+          "day": 13
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Kat",
+          "day": 16
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Vytas",
+          "day": 18
+        }
+      ]
+    },
+    {
+      "name": "Kat",
+      "original_tribe": "Galang",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 16,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Candice",
+          "day": 1
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Laura M.",
+          "day": 13
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Vytas",
+          "day": 16
+        }
+      ]
+    },
+    {
+      "name": "Brad",
+      "original_tribe": "Tadhana",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 10,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Laura B.",
+          "day": 1
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Marissa",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Rachel",
+          "day": 6
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "John",
+          "day": 8
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Ciera",
+          "day": 10
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "",
+          "day": 10
+        }
+      ]
+    },
+    {
+      "name": "John",
+      "original_tribe": "Tadhana",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 8,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Laura B.",
+          "day": 1
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Marissa",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Rachel",
+          "day": 6
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Ciera",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "name": "Colton",
+      "original_tribe": "Galang",
+      "tribe_color": "",
+      "placement": "Quit",
+      "days_lasted": 7,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Candice",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "name": "Rachel",
+      "original_tribe": "Tadhana",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 6,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Katie",
+          "day": 1
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Marissa",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Ciera",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Marissa",
+      "original_tribe": "Tadhana",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 3,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Brad",
+          "day": 1
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Katie",
+          "day": 3
+        }
+      ]
+    },
+    {
+      "name": "Candice",
+      "original_tribe": "Galang",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 1,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Laura M.",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "name": "Rupert",
+      "original_tribe": "Galang",
+      "tribe_color": "",
+      "placement": "Switched",
+      "days_lasted": 1,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Laura M.",
+          "day": 1
+        }
+      ]
+    }
+  ]
+}

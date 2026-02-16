@@ -1,0 +1,456 @@
+{% extends "base.html" %}
+
+{% block title %}Winners Hall - Survivor{% endblock %}
+
+{% block content %}
+<div class="winners-view">
+    <h1 class="text-center mb-3 survivor-title">
+        <span class="torch-large">👑</span><br>
+        WINNERS HALL
+    </h1>
+    <p class="text-center subtitle mb-4">Decoding the Paths to Victory Across {{ winners|length }} Seasons</p>
+
+    <!-- AGGREGATE STATS -->
+    <div class="winners-aggregate mb-5">
+        <div class="row g-3 text-center">
+            <div class="col-6 col-md-3">
+                <div class="stat-box">
+                    <div class="stat-number">{{ winners|length }}</div>
+                    <div class="stat-label">Winners</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-box">
+                    <div class="stat-number">{{ avg_stats.avg_immunity|round(1) }}</div>
+                    <div class="stat-label">Avg Immunity Wins</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-box">
+                    <div class="stat-number">{{ avg_stats.avg_voting_control|round(1) }}</div>
+                    <div class="stat-label">Avg Vote Control</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-box">
+                    <div class="stat-number">{{ avg_stats.avg_social|round(1) }}</div>
+                    <div class="stat-label">Avg Social Capital</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar mb-4">
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+            <button class="btn btn-filter era-filter active" data-era="all" onclick="filterWinners('all')">All Seasons</button>
+            <button class="btn btn-filter era-filter" data-era="old" onclick="filterWinners('old')">Old School (1-10)</button>
+            <button class="btn btn-filter era-filter" data-era="middle" onclick="filterWinners('middle')">Middle Era (11-20)</button>
+            <button class="btn btn-filter era-filter" data-era="new" onclick="filterWinners('new')">New School (21-30)</button>
+            <button class="btn btn-filter era-filter" data-era="modern" onclick="filterWinners('modern')">Modern (31-39)</button>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+            <select id="sortSelect" class="form-select form-select-sm season-selector" style="max-width: 250px;" onchange="sortWinners(this.value)">
+                <option value="season">Sort by Season</option>
+                <option value="voting_control">Sort by Vote Control</option>
+                <option value="physical_game">Sort by Physical Game</option>
+                <option value="social_capital">Sort by Social Capital</option>
+                <option value="strategic_aggression">Sort by Strategic Aggression</option>
+                <option value="immunity_wins">Sort by Immunity Wins</option>
+            </select>
+            <input type="text" id="winnerSearch" class="form-control form-control-sm" style="max-width: 250px; background: rgba(255,255,255,0.1); border: 1px solid var(--torch-orange); color: #fff;" placeholder="Search winners..." oninput="searchWinners(this.value)">
+        </div>
+    </div>
+
+    <!-- WINNERS GRID -->
+    <div class="winners-grid" id="winnersGrid">
+        {% for winner in winners %}
+        <div class="winner-card"
+             data-season="{{ winner.season }}"
+             data-era="{% if winner.season <= 10 %}old{% elif winner.season <= 20 %}middle{% elif winner.season <= 30 %}new{% else %}modern{% endif %}"
+             data-name="{{ winner.name|lower }}"
+             data-voting-control="{{ winner.archetype.voting_control }}"
+             data-physical="{{ winner.archetype.physical_game }}"
+             data-social="{{ winner.archetype.social_capital }}"
+             data-aggression="{{ winner.archetype.strategic_aggression }}"
+             data-immunity="{{ winner.stats.immunity_wins }}">
+
+            <div class="winner-card-header">
+                <div class="winner-season-badge">S{{ winner.season }}</div>
+                <h3 class="winner-name">{{ winner.name }}</h3>
+                <div class="winner-season-name">{{ winner.season_name }}</div>
+            </div>
+
+            <div class="winner-radar-container">
+                <canvas id="radar-{{ winner.season }}" width="200" height="200"></canvas>
+            </div>
+
+            <div class="winner-signature">
+                <div class="signature-label">Signature Move</div>
+                <div class="signature-text">{{ winner.signature_move }}</div>
+            </div>
+
+            <div class="winner-stats-row">
+                <div class="winner-stat">
+                    <span class="ws-value">{{ winner.stats.jury_votes }}</span>
+                    <span class="ws-label">Jury Vote</span>
+                </div>
+                <div class="winner-stat">
+                    <span class="ws-value">{{ winner.stats.immunity_wins }}</span>
+                    <span class="ws-label">Immunity</span>
+                </div>
+                <div class="winner-stat">
+                    <span class="ws-value">{{ winner.stats.days_lasted }}</span>
+                    <span class="ws-label">Days</span>
+                </div>
+            </div>
+
+            <div class="winner-archetype-bars">
+                <div class="arch-bar">
+                    <span class="arch-label">Vote Control</span>
+                    <div class="arch-track"><div class="arch-fill" style="width: {{ winner.archetype.voting_control * 10 }}%; background: #FF6B35;"></div></div>
+                    <span class="arch-val">{{ winner.archetype.voting_control }}</span>
+                </div>
+                <div class="arch-bar">
+                    <span class="arch-label">Physical</span>
+                    <div class="arch-track"><div class="arch-fill" style="width: {{ winner.archetype.physical_game * 10 }}%; background: #4169E1;"></div></div>
+                    <span class="arch-val">{{ winner.archetype.physical_game }}</span>
+                </div>
+                <div class="arch-bar">
+                    <span class="arch-label">Social</span>
+                    <div class="arch-track"><div class="arch-fill" style="width: {{ winner.archetype.social_capital * 10 }}%; background: #FFD700;"></div></div>
+                    <span class="arch-val">{{ winner.archetype.social_capital }}</span>
+                </div>
+                <div class="arch-bar">
+                    <span class="arch-label">Aggression</span>
+                    <div class="arch-track"><div class="arch-fill" style="width: {{ winner.archetype.strategic_aggression * 10 }}%; background: #FF1493;"></div></div>
+                    <span class="arch-val">{{ winner.archetype.strategic_aggression }}</span>
+                </div>
+            </div>
+
+            <a href="/winner/{{ winner.season }}" class="btn btn-sm btn-details mt-2">
+                View Full Profile
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% if not winners %}
+    <div class="text-center py-5">
+        <p class="text-muted" style="font-size: 1.2rem;">Winner profiles are being researched... Check back soon!</p>
+    </div>
+    {% endif %}
+
+    <div class="back-to-top text-center mt-5">
+        <button class="btn btn-survivor" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            Back to Top &uarr;
+        </button>
+    </div>
+</div>
+
+<style>
+.winners-view {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.winners-aggregate .stat-box {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--bamboo);
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.filter-bar {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.era-filter.active {
+    background: var(--torch-orange) !important;
+    color: white !important;
+    border-color: var(--torch-orange) !important;
+}
+
+.winners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+}
+
+.winner-card {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--bamboo);
+    border-radius: 12px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.winner-card:hover {
+    border-color: gold;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
+}
+
+.winner-card-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.winner-season-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--torch-orange);
+    color: white;
+    font-weight: bold;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+}
+
+.winner-name {
+    color: gold;
+    font-size: 1.4rem;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.winner-season-name {
+    color: var(--sand);
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.winner-radar-container {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+    min-height: 180px;
+}
+
+.winner-radar-container canvas {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.winner-signature {
+    background: rgba(255, 215, 0, 0.1);
+    border-left: 3px solid gold;
+    padding: 0.75rem;
+    border-radius: 0 5px 5px 0;
+    margin-bottom: 1rem;
+}
+
+.signature-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: gold;
+    margin-bottom: 0.25rem;
+}
+
+.signature-text {
+    color: #fff;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.winner-stats-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.winner-stat {
+    text-align: center;
+}
+
+.ws-value {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--torch-orange);
+}
+
+.ws-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--sand);
+    letter-spacing: 0.5px;
+}
+
+.winner-archetype-bars {
+    margin-bottom: 0.75rem;
+}
+
+.arch-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.arch-label {
+    font-size: 0.7rem;
+    color: var(--sand);
+    min-width: 80px;
+    text-align: right;
+}
+
+.arch-track {
+    flex: 1;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.arch-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.arch-val {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--torch-orange);
+    min-width: 20px;
+}
+
+.winner-card .btn-details {
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .winners-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+// Winner data for charts and filtering
+const winnersData = {{ winners|tojson }};
+
+// Initialize radar charts
+document.addEventListener('DOMContentLoaded', function() {
+    winnersData.forEach(winner => {
+        const canvas = document.getElementById(`radar-${winner.season}`);
+        if (!canvas) return;
+
+        new Chart(canvas, {
+            type: 'radar',
+            data: {
+                labels: ['Vote Control', 'Physical', 'Social', 'Aggression'],
+                datasets: [{
+                    data: [
+                        winner.archetype.voting_control,
+                        winner.archetype.physical_game,
+                        winner.archetype.social_capital,
+                        winner.archetype.strategic_aggression
+                    ],
+                    backgroundColor: 'rgba(255, 215, 0, 0.2)',
+                    borderColor: 'gold',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'gold',
+                    pointBorderColor: '#fff',
+                    pointRadius: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: { legend: { display: false } },
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 10,
+                        ticks: {
+                            display: false,
+                            stepSize: 2
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        angleLines: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        pointLabels: {
+                            color: 'rgba(245, 222, 179, 0.8)',
+                            font: { size: 9 }
+                        }
+                    }
+                }
+            }
+        });
+    });
+});
+
+// Filter by era
+function filterWinners(era) {
+    document.querySelectorAll('.era-filter').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`[data-era="${era}"]`).classList.add('active');
+
+    document.querySelectorAll('.winner-card').forEach(card => {
+        if (era === 'all' || card.dataset.era === era) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+// Sort winners
+function sortWinners(field) {
+    const grid = document.getElementById('winnersGrid');
+    const cards = Array.from(grid.querySelectorAll('.winner-card'));
+
+    cards.sort((a, b) => {
+        let aVal, bVal;
+        switch(field) {
+            case 'season':
+                return parseInt(a.dataset.season) - parseInt(b.dataset.season);
+            case 'voting_control':
+                return parseInt(b.dataset.votingControl) - parseInt(a.dataset.votingControl);
+            case 'physical_game':
+                return parseInt(b.dataset.physical) - parseInt(a.dataset.physical);
+            case 'social_capital':
+                return parseInt(b.dataset.social) - parseInt(a.dataset.social);
+            case 'strategic_aggression':
+                return parseInt(b.dataset.aggression) - parseInt(a.dataset.aggression);
+            case 'immunity_wins':
+                return parseInt(b.dataset.immunity) - parseInt(a.dataset.immunity);
+            default:
+                return 0;
+        }
+    });
+
+    cards.forEach(card => grid.appendChild(card));
+}
+
+// Search winners
+function searchWinners(query) {
+    query = query.toLowerCase();
+    document.querySelectorAll('.winner-card').forEach(card => {
+        const name = card.dataset.name;
+        card.style.display = name.includes(query) ? '' : 'none';
+    });
+}
+</script>
+{% endblock %}

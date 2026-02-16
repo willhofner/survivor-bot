@@ -41,13 +41,18 @@ survivor-bot/
 │   └── voting_data.json  <- Season 28 voting data
 │
 ├── templates/             <- 🎨 HTML TEMPLATES
-│   ├── base.html         <- Base template with nav
-│   ├── index.html        <- Landing page
+│   ├── base.html         <- Base template with collapsible nav, search, dark mode
+│   ├── index.html        <- Landing page (project homepage)
 │   ├── tribal_councils.html <- Scrollable tribal councils
 │   ├── castaways.html    <- Castaway profiles (no filters)
 │   ├── challenges.html   <- Challenge timeline with filtering
 │   ├── events.html       <- Season timeline
 │   ├── items.html        <- Advantages/idols with filtering
+│   ├── winners.html      <- Winners Hall gallery with radar charts
+│   ├── winner_profile.html <- Individual winner profiles
+│   ├── compare.html      <- Winner comparison (2-4 side-by-side)
+│   ├── seasons.html      <- All seasons overview with summaries
+│   ├── analytics.html    <- Data visualizations and era analysis
 │   └── hall_of_fame.html <- All-time records across all seasons
 │
 ├── static/                <- 📦 STATIC ASSETS
@@ -115,6 +120,20 @@ An interactive voting tracker that lets Survivor fans explore how each season un
 
 Future vision: All 49 seasons, alliance network graphs, blindside detection, move quality grading, player stats and comparisons.
 
+### The Ultimate Goal: Decoding Paths to Victory
+
+**The core research question:** What strategies actually lead to winning Survivor?
+
+We want to analyze every winner across all seasons to answer questions like:
+
+- **Challenge Performance**: Is immunity challenge dominance truly correlated with winning? Even winners we don't think of as "challenge beasts" — did they still pick up a win or two on their path to final tribal?
+- **Voting Accuracy**: Do winners consistently vote with the majority, or can someone take it home while being blindsided repeatedly?
+- **Vote Control**: Is being "in the know" on every vote essential, or have winners succeeded with spotty voting records?
+- **Strategic Patterns**: Can we identify distinct strategic archetypes (social floater, strategic mastermind, challenge beast, under-the-radar, etc.)?
+- **Common Pitfalls**: What moves consistently correlate with NOT winning? What strategies should players avoid?
+
+**The vision: Visual strategy maps** showing different paths to victory — exploring how the game can be played and what trends emerge across 40+ seasons. Not just stats tables, but interactive explorations that reveal the hidden patterns behind winning games.
+
 ### The Emotional Core
 
 Survivor fans love rewatching and analyzing seasons. We're building the ultimate reference tool for:
@@ -122,6 +141,7 @@ Survivor fans love rewatching and analyzing seasons. We're building the ultimate
 - Understanding player strategies and voting patterns
 - Settling debates about who made the best moves
 - Discovering patterns across seasons
+- **Answering the big questions about what strategies actually work**
 
 ### Core User Flow
 
@@ -129,6 +149,7 @@ Survivor fans love rewatching and analyzing seasons. We're building the ultimate
 Land on home → Choose exploration mode →
   Episodes: Click through tribal councils chronologically
   Castaways: Click into player profiles, see voting history
+  Winners Analysis: Compare winner strategies, explore paths to victory
 ```
 
 ---
@@ -138,14 +159,22 @@ Land on home → Choose exploration mode →
 - **Stack**: Python 3 + Flask, Bootstrap + Custom CSS, Vanilla JS
 - **Data Source**: survivoR R Package (GitHub) — JSON exports for all 49 seasons
 - **Server**: http://localhost:8000 (development) — **NEVER use port 5000 on macOS** (conflicts with AirPlay)
-- **Current Coverage**: Seasons 28, 29, 30 (Cagayan, San Juan del Sur, Worlds Apart)
+- **Current Coverage**: Seasons 1-39 (all classic Survivor seasons)
 - **Features Live**:
-  - Tribal Councils timeline
-  - Castaway profiles with voting accuracy & challenge stats
-  - Challenge timeline with filtering (pre-merge, post-merge reward, post-merge immunity)
-  - Season events timeline
-  - Items/Advantages tracking with filtering (Successful, Unsuccessful, Not Played, Voted Out Holding)
-  - Hall of Fame with all-time records across all available seasons
+  - Tribal Councils timeline (per season)
+  - Castaway profiles with voting accuracy & challenge stats (per season)
+  - Challenge timeline with filtering (per season)
+  - Season events timeline (per season)
+  - Items/Advantages tracking with filtering (per season)
+  - Winners Hall — gallery of all 39 winners with radar charts & archetype bars
+  - Individual winner profiles with strategic analysis
+  - Winner comparison — side-by-side with overlapping radar charts (2-4 winners)
+  - Seasons overview — all 39 seasons with summaries, twists, iconic moments
+  - Analytics — era comparison radar, trend lines, archetype distribution, scatter plots
+  - Hall of Fame with all-time records (sortable tables)
+  - Global player search (nav bar)
+  - Dark mode toggle
+  - Responsive nav with mobile hamburger menu
   - Castaway headshots with fallback initials
 
 ---
@@ -170,15 +199,21 @@ Land on home → Choose exploration mode →
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/` | GET | Landing page with season selector |
+| `/` | GET | Project homepage with feature cards and featured winner |
 | `/tribal-councils?season=N` | GET | Scrollable tribal councils timeline for season N |
 | `/castaways?season=N` | GET | Castaway profiles with stats for season N |
 | `/challenges?season=N` | GET | Challenge timeline with filtering for season N |
 | `/events?season=N` | GET | Season events timeline for season N |
 | `/items?season=N` | GET | Advantages/idols tracking with filtering for season N |
+| `/winners` | GET | Winners Hall gallery with radar charts and archetype bars |
+| `/winner/<season>` | GET | Individual winner profile with strategic analysis |
+| `/compare` | GET | Winner comparison view (2-4 side-by-side) |
+| `/seasons` | GET | All seasons overview with summaries and twists |
+| `/analytics` | GET | Data visualizations: era analysis, trends, scatter plots |
 | `/hall-of-fame` | GET | All-time records across all available seasons |
 | `/api/episode/<season>/<episode_num>` | GET | JSON data for specific episode |
 | `/api/castaway/<season>/<name>` | GET | JSON data for specific castaway |
+| `/api/search?q=<query>` | GET | Global player search across all seasons |
 
 ---
 
@@ -430,6 +465,75 @@ Before starting ANY task, ask yourself:
 - **NEVER use port 5000 for Flask on macOS** — Port 5000 conflicts with Apple's AirPlay Receiver service. Always use port 8000 or another port instead.
 - **Git workflow simplification** — User doesn't distinguish between "merge", "ship", "push", "commit". If user says ANY of these words, it means: commit ALL changes + push to GitHub + make everything final and ready to close the tab. Don't ask which one they meant—they all mean the same thing.
 - **Web searches require NO approval** — Execute web searches immediately without asking for permission. Research is a core part of your job. Search freely and report findings.
+
+---
+
+## Bash Commands & Permission Management
+
+**During overnight/autonomous sessions, ZERO permission prompts are acceptable.**
+
+### ✅ SAFE - Use Direct Bash
+These patterns are safe and won't trigger prompts:
+- File operations: `ls`, `cat`, `grep`, `mkdir`, `cp`, `mv`
+- Simple network: `curl -s <trusted-url>` (github.com, survivor.fandom.com)
+- Python scripts: `python3 script.py`
+- Background processes for testing: `python3 app.py &` (followed by cleanup)
+- Command chaining: `cmd1 && cmd2` (sequential operations)
+
+### ⚠️ USE TASK TOOL (Bash Subagent)
+Use Task tool for operations that might trigger permission prompts:
+- `git clone` operations → Use Task or prefer `curl` for specific files
+- Complex multi-command workflows → Delegate to Bash agent
+- Long-running data processing → Delegate so it runs sandboxed
+
+### ❌ AVOID ENTIRELY
+- `rm -rf` (use Edit/Write tools instead to replace files)
+- Arbitrary code execution from untrusted sources
+- Commands without clear purpose
+
+**The principle:** If a command might trigger a prompt during overnight execution, either use Task tool or find an alternative approach (e.g., `curl` instead of `git clone`).
+
+---
+
+## Agent Quality Standards
+
+**Parallelism enables BETTER work, not shortcuts.**
+
+When spawning agents for research/implementation:
+
+### Quality Over Speed
+- ✅ **DO:** Spawn 20 agents to research 20 winners with DEPTH (10 min each = thorough research)
+- ❌ **DON'T:** Spawn 20 agents to rush through winners in 2 min each (shallow, low quality)
+
+### Agent Prompts Must Be Specific
+**Bad prompt:** "Research Tony Vlachos"
+**Good prompt:**
+```
+Research Tony Vlachos (Survivor: Cagayan winner). Output JSON file to data/winners/tony_vlachos_s28.json with this exact schema:
+
+{
+  "name": "Tony Vlachos",
+  "season": 28,
+  "voting_control": "High/Moderate/Low",
+  "physical_game": "Dominant/Competitive/Weak",
+  "social_capital": "Beloved/Respected/Mixed",
+  "strategic_aggression": "Aggressive/Balanced/Under-the-Radar",
+  "signature_move": "2-3 sentences describing their defining strategic moment",
+  "challenge_wins": {"immunity": N, "reward": N},
+  "votes_against": N,
+  "days_lasted": 39
+}
+
+Research using Survivor Wiki, episode recaps, and strategy analysis. Focus on WHY they won, not just stats.
+```
+
+### Validate Agent Outputs
+- Spot-check 20% of agent outputs for quality
+- If quality is low, re-prompt or re-run with better instructions
+- Don't integrate garbage data just because it's fast
+
+### The Standard
+Every agent should produce work that's **study-worthy** - good enough that someone preparing for Survivor could learn from it. Depth, nuance, accuracy.
 
 ---
 

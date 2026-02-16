@@ -1,0 +1,24 @@
+{
+  "name": "J.T. Thomas",
+  "season": 18,
+  "season_name": "Survivor: Tocantins",
+  "archetype": {
+    "voting_control": 8,
+    "physical_game": 9,
+    "social_capital": 10,
+    "strategic_aggression": 5
+  },
+  "signature_move": "Forged an unbreakable alliance with Stephen Fishbach while simultaneously winning over every member of the opposing Timbira tribe post-merge, creating a situation where nobody viewed him as an adversary despite being the most obvious threat in the game.",
+  "stats": {
+    "voting_accuracy": 82,
+    "immunity_wins": 3,
+    "reward_wins": 1,
+    "jury_votes": "7-0",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 0,
+    "days_lasted": 39
+  },
+  "strategy_summary": "J.T. played the first true perfect game in Survivor history: zero votes cast against him across 39 days, a unanimous 7-0 jury verdict, and three consecutive immunity wins to close out the season. His game was built on extraordinary social capital rather than overt strategic maneuvering -- he was so universally liked that even players he helped vote out advocated for his win at Final Tribal Council. He leveraged his southern charm and perceived trustworthiness to become the connective tissue between the Jalapao alliance and disaffected Timbira members like Erinn, ensuring he always had options while Stephen absorbed the strategic threat perception.",
+  "fun_fact": "J.T. is the only Survivor winner to play a mathematically perfect game in his winning season -- zero votes received at any tribal council combined with a unanimous jury vote -- a feat that has never been fully replicated in the show's history."
+}

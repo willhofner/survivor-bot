@@ -1,0 +1,24 @@
+{
+  "name": "Sandra Diaz-Twine",
+  "season": 7,
+  "season_name": "Survivor: Pearl Islands",
+  "archetype": {
+    "voting_control": 7,
+    "physical_game": 2,
+    "social_capital": 8,
+    "strategic_aggression": 6
+  },
+  "signature_move": "Orchestrating Burton's second blindside at Final 5 by convincing Lill to flip on her closest ally, removing the biggest challenge and strategic threat and clearing Sandra's path to the Final Two.",
+  "stats": {
+    "voting_accuracy": 82,
+    "immunity_wins": 0,
+    "reward_wins": 0,
+    "jury_votes": "6-1",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 0,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Sandra pioneered the 'anybody but me' survival philosophy, deflecting attention onto bigger targets while maintaining strong social bonds and a sharp read on tribal dynamics. She never won an individual challenge and received zero votes against her across 39 days, proving that social positioning and adaptability can outweigh physical dominance. Her willingness to openly challenge Jonny Fairplay while quietly building jury respect through authenticity and loyalty to allies like Rupert gave her a commanding 6-1 jury victory over Lillian.",
+  "fun_fact": "Sandra is the only two-time winner in Survivor history (Pearl Islands and Heroes vs. Villains), and in Pearl Islands she achieved the rare distinction of never receiving a single vote at any tribal council across the entire 39-day game."
+}

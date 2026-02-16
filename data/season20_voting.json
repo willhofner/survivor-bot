@@ -1,0 +1,846 @@
+{
+  "season": 20,
+  "season_name": "Survivor: Heroes vs. Villains",
+  "castaways": [
+    {
+      "name": "Sandra",
+      "original_tribe": "Villains",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Randy",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Russell",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Russell",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Coach",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Courtney",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "J.T.",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Amanda",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Candice",
+          "day": 31
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Rupert",
+          "day": 33
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Rupert",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Colby",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Jerri",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Parvati",
+      "original_tribe": "Villains",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Randy",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Tyson",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Boston Rob",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Coach",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Courtney",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "J.T.",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Amanda",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Rupert",
+          "day": 31
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Rupert",
+          "day": 33
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Rupert",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Colby",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Jerri",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Russell",
+      "original_tribe": "Villains",
+      "tribe_color": "",
+      "placement": "2nd Runner-up",
+      "days_lasted": 39,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Randy",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Tyson",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Boston Rob",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Courtney",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Courtney",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "J.T.",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Amanda",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Candice",
+          "day": 31
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Danielle",
+          "day": 33
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Rupert",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Colby",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Jerri",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Jerri",
+      "original_tribe": "Villains",
+      "tribe_color": "",
+      "placement": "17th voted out",
+      "days_lasted": 38,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Randy",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Parvati",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Boston Rob",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Courtney",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Courtney",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "J.T.",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Amanda",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Candice",
+          "day": 31
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Danielle",
+          "day": 33
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Rupert",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Colby",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Parvati",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Colby",
+      "original_tribe": "Heroes",
+      "tribe_color": "",
+      "placement": "16th voted out",
+      "days_lasted": 37,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sugar",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Amanda",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Cirie",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "James",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "James",
+          "day": 15
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jerri",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Parvati",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Candice",
+          "day": 31
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Danielle",
+          "day": 33
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Sandra",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Sandra",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Rupert",
+      "original_tribe": "Heroes",
+      "tribe_color": "",
+      "placement": "15th voted out",
+      "days_lasted": 36,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sugar",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Stephenie",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Colby",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Tom",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "James",
+          "day": 15
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jerri",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Parvati",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Candice",
+          "day": 31
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Danielle",
+          "day": 33
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Sandra",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Danielle",
+      "original_tribe": "Villains",
+      "tribe_color": "",
+      "placement": "14th voted out",
+      "days_lasted": 33,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Randy",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Tyson",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Boston Rob",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Coach",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Courtney",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "J.T.",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Amanda",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Rupert",
+          "day": 31
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Rupert",
+          "day": 33
+        }
+      ]
+    },
+    {
+      "name": "Candice",
+      "original_tribe": "Heroes",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 31,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sugar",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Stephenie",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Tom",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Tom",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "James",
+          "day": 15
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jerri",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Amanda",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Rupert",
+          "day": 31
+        }
+      ]
+    },
+    {
+      "name": "Amanda",
+      "original_tribe": "Heroes",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 30,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sugar",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Stephenie",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Tom",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Tom",
+          "day": 14
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jerri",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Parvati",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "J.T.",
+      "original_tribe": "Heroes",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 27,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sugar",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Stephenie",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Cirie",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Tom",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "James",
+          "day": 15
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jerri",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "Courtney",
+      "original_tribe": "Villains",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 24,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Randy",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Parvati",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Russell",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Coach",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jerri",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Coach",
+      "original_tribe": "Villains",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 21,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Randy",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Parvati",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Courtney",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Courtney",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Boston Rob",
+      "original_tribe": "Villains",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 18,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Randy",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Russell",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Russell",
+          "day": 18
+        }
+      ]
+    },
+    {
+      "name": "Tyson",
+      "original_tribe": "Villains",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 15,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Randy",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Parvati",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "James",
+      "original_tribe": "Heroes",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 15,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sugar",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Stephenie",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Colby",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Tom",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Colby",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Tom",
+      "original_tribe": "Heroes",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 14,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sugar",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Amanda",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Cirie",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "James",
+          "day": 14
+        }
+      ]
+    },
+    {
+      "name": "Cirie",
+      "original_tribe": "Heroes",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 11,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sugar",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Stephenie",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Tom",
+          "day": 11
+        }
+      ]
+    },
+    {
+      "name": "Randy",
+      "original_tribe": "Villains",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 8,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Boston Rob",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "name": "Stephenie",
+      "original_tribe": "Heroes",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 6,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sugar",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Amanda",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Sugar",
+      "original_tribe": "Heroes",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Amanda",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

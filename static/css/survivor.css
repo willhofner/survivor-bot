@@ -97,23 +97,42 @@ body {
     50% { opacity: 0.85; }
 }
 
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links .nav-link {
+.survivor-nav .nav-link {
     color: var(--sand) !important;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
     transition: all 0.3s;
     text-decoration: none;
+    font-size: 0.85rem;
 }
 
-.nav-links .nav-link:hover {
+.survivor-nav .nav-link:hover {
     color: var(--torch-orange) !important;
     text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+}
+
+.survivor-nav .dropdown-menu-dark {
+    background: #1a1a1a;
+    border: 1px solid var(--torch-orange);
+}
+
+.survivor-nav .dropdown-item {
+    color: var(--sand);
+    font-size: 0.85rem;
+}
+
+.survivor-nav .dropdown-item:hover {
+    background: rgba(255, 107, 53, 0.3);
+    color: var(--torch-orange);
+}
+
+.survivor-nav .navbar-toggler {
+    border-color: var(--torch-orange);
+}
+
+.survivor-nav .season-selector {
+    max-width: 180px;
 }
 
 /* Main content */
@@ -1032,6 +1051,112 @@ main {
 .challenge-breakdown {
     color: var(--sand);
     font-size: 0.9rem;
+}
+
+/* Dark Theme */
+body[data-theme="dark"] {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+}
+
+body[data-theme="dark"] .survivor-nav {
+    background: linear-gradient(90deg, #0a0a0a 0%, #1a1a2e 100%);
+}
+
+body[data-theme="dark"] .tribal-pattern {
+    background-image: repeating-linear-gradient(
+        45deg, transparent, transparent 20px,
+        rgba(255, 107, 53, 0.02) 20px, rgba(255, 107, 53, 0.02) 40px
+    );
+}
+
+body[data-theme="dark"] .survivor-footer {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--bamboo);
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Global Search Dropdown */
+.search-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    min-width: 280px;
+    background: #1a1a1a;
+    border: 1px solid var(--torch-orange);
+    border-radius: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    margin-top: 0.25rem;
+}
+
+.search-item {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.2s;
+}
+
+.search-item:hover {
+    background: rgba(255, 107, 53, 0.2);
+    color: var(--torch-orange);
+}
+
+.search-item:last-child {
+    border-bottom: none;
+}
+
+.search-meta {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--sand);
+    margin-top: 0.2rem;
+}
+
+/* Sortable Table Headers */
+.sortable th {
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s;
+}
+
+.sortable th:hover {
+    color: gold !important;
+}
+
+.sortable th::after {
+    content: ' ↕';
+    opacity: 0.4;
+    font-size: 0.8em;
+}
+
+.sortable th.sort-asc::after {
+    content: ' ↑';
+    opacity: 1;
+}
+
+.sortable th.sort-desc::after {
+    content: ' ↓';
+    opacity: 1;
 }
 
 /* Responsive adjustments */

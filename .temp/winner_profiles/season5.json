@@ -1,0 +1,24 @@
+{
+  "name": "Brian Heidik",
+  "season": 5,
+  "season_name": "Survivor: Thailand",
+  "archetype": {
+    "voting_control": 10,
+    "physical_game": 7,
+    "social_capital": 3,
+    "strategic_aggression": 9
+  },
+  "signature_move": "Pioneered the 'goat strategy' by maintaining separate Final Two deals with Helen, Ted, and Clay, then systematically eliminating each ally in order while dragging Clay — the least likable player — to the end as a beatable opponent.",
+  "stats": {
+    "voting_accuracy": 100,
+    "immunity_wins": 3,
+    "reward_wins": 2,
+    "jury_votes": "4-3",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 0,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Brian treated Survivor as a cold business transaction, forming calculated alliances purely for utility and discarding each one at the optimal moment. He maintained total vote control from start to finish — never once receiving a vote against him — while engineering every post-merge elimination. His ruthless efficiency won the game but alienated the jury so deeply that he barely scraped by with a 4-3 vote, with Ted Rogers famously calling it a choice between 'the lesser of two evils.'",
+  "fun_fact": "Before Survivor, Brian worked as a used car salesman, which his castmates frequently cited as the perfect metaphor for his gameplay — he could sell anyone on anything, but nobody felt good about the deal afterward."
+}

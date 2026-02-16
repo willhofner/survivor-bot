@@ -1,0 +1,24 @@
+{
+  "name": "Sandra Diaz-Twine",
+  "season": 20,
+  "season_name": "Survivor: Heroes vs. Villains",
+  "archetype": {
+    "voting_control": 4,
+    "physical_game": 1,
+    "social_capital": 8,
+    "strategic_aggression": 3
+  },
+  "signature_move": "Played a hidden immunity idol at the final six tribal council to negate two votes against her, keeping herself alive while openly campaigning against Russell Hantz for the entire post-merge -- then weaponized that anti-Russell stance to win over a bitter jury 6-3-0.",
+  "stats": {
+    "voting_accuracy": 75,
+    "immunity_wins": 0,
+    "reward_wins": 0,
+    "jury_votes": "6-3",
+    "idols_played": 1,
+    "idols_successful": 1,
+    "times_received_votes": 3,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Sandra employed her signature 'anyone but me' survival strategy, floating between power structures after her original alliance with Boston Rob collapsed. She repeatedly and openly tried to get Russell voted out -- even attempting to recruit the Heroes post-merge -- but when those efforts failed, she pivoted to ensuring she sat next to the most despised player at Final Tribal Council. Her social awareness told her what the jury valued, and she delivered exactly that: authenticity, loyalty to her word, and zero pretense about who she was.",
+  "fun_fact": "Sandra famously threw Russell Hantz's hat into the campfire while he was sleeping, cementing one of the most iconic petty revenge moments in Survivor history and perfectly encapsulating her unapologetic personality."
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Rob Mariano",
+  "season": 22,
+  "season_name": "Survivor: Redemption Island",
+  "archetype": {
+    "voting_control": 10,
+    "physical_game": 7,
+    "social_capital": 8,
+    "strategic_aggression": 9
+  },
+  "signature_move": "Built the 'Stealth R Us' alliance on Ometepe and maintained absolute loyalty from his five allies through the entire post-merge, systematically eliminating every Zapatera member before cutting his own allies one by one to reach the finals with the two weakest players.",
+  "stats": {
+    "voting_accuracy": 92,
+    "immunity_wins": 4,
+    "reward_wins": 0,
+    "jury_votes": "8-1-0",
+    "idols_played": 1,
+    "idols_successful": 1,
+    "times_received_votes": 7,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Rob played perhaps the most dominant controlling game in Survivor history, leveraging his veteran experience on his 4th attempt to maintain an iron grip on the Ometepe tribe from Day 1. He dictated every single post-merge vote, used buddy systems to prevent side conversations, engineered a split vote to flush Kristina's idol pre-merge, and chose his ideal Final 3 of Natalie and Phillip — two players the jury would never reward. His 8-1-0 jury victory is one of the most lopsided in Survivor history.",
+  "fun_fact": "Rob is the only player in Survivor history to play four times before finally winning, and he proposed to fellow Survivor contestant Amber Brkich (whom he met on All-Stars) during the live reunion of Season 8 — they married in 2005 and have four daughters together."
+}

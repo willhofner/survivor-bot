@@ -1,0 +1,24 @@
+{
+  "name": "Kim Spradlin",
+  "season": 24,
+  "season_name": "Survivor: One World",
+  "archetype": {
+    "voting_control": 10,
+    "physical_game": 9,
+    "social_capital": 10,
+    "strategic_aggression": 8
+  },
+  "signature_move": "Ran parallel alliances with the women's alliance and the men (Jay, Troyzan, Michael), using each side's trust to systematically eliminate every man post-merge while keeping her core five women loyal until the end.",
+  "stats": {
+    "voting_accuracy": 90,
+    "immunity_wins": 4,
+    "reward_wins": 1,
+    "jury_votes": "7-2-0",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 3,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Kim played what many consider the single most dominant game in Survivor history, controlling every vote from merge to finale through unmatched social manipulation and dual alliances. She won 4 of the last 5 individual immunity challenges while never needing to play her hidden immunity idol, received only 3 votes against her across 39 days, and swept the jury 7-2-0 — also winning the $100,000 Fan Favorite Award, a feat almost unheard of for a strategic frontrunner.",
+  "fun_fact": "Kim is one of only a handful of Survivor winners to also win the Fan Favorite (Sprint Player of the Season) award in the same season, proving she dominated the game so thoroughly that even the audience at home was rooting for her despite being the obvious frontrunner."
+}

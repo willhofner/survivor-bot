@@ -1,0 +1,805 @@
+{
+  "season": 37,
+  "season_name": "Survivor: David vs. Goliath",
+  "castaways": [
+    {
+      "name": "Nick",
+      "original_tribe": "David",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Jessica",
+          "day": 6
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Natalie",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Lyrsa",
+          "day": 17
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Elizabeth",
+          "day": 20
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "John",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Dan",
+          "day": 25
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Dan",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Alec",
+          "day": 28
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Alison",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Christian",
+          "day": 32
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Christian",
+          "day": 35
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Alison",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Alison",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Mike",
+      "original_tribe": "Goliath",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 1,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jeremy",
+          "day": 9
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Natalie",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Lyrsa",
+          "day": 17
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Elizabeth",
+          "day": 20
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Christian",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Christian",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Alec",
+          "day": 28
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Carl",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Gabby",
+          "day": 32
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Davie",
+          "day": 35
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Davie",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Alison",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Angelina",
+      "original_tribe": "Goliath",
+      "tribe_color": "",
+      "placement": "2nd Runner-up",
+      "days_lasted": 39,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jeremy",
+          "day": 9
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Lyrsa",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Lyrsa",
+          "day": 17
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Elizabeth",
+          "day": 20
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Christian",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Christian",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Alec",
+          "day": 28
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Alison",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Gabby",
+          "day": 32
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Christian",
+          "day": 35
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Davie",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Alison",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Kara",
+      "original_tribe": "Goliath",
+      "tribe_color": "",
+      "placement": "Lost final 4 fire challenge",
+      "days_lasted": 38,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jeremy",
+          "day": 9
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Davie",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Elizabeth",
+          "day": 20
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Christian",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Angelina",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Alec",
+          "day": 28
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Carl",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Christian",
+          "day": 32
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Christian",
+          "day": 35
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Davie",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Alison",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Alison",
+      "original_tribe": "Goliath",
+      "tribe_color": "",
+      "placement": "14th voted out",
+      "days_lasted": 37,
+      "votes_against": 13,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jeremy",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Elizabeth",
+          "day": 20
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Christian",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Alec",
+          "day": 28
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Carl",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Christian",
+          "day": 32
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Davie",
+          "day": 35
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Davie",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Mike",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Davie",
+      "original_tribe": "David",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 36,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Lyrsa",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Natalia",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Elizabeth",
+          "day": 20
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "John",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Dan",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Alec",
+          "day": 28
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Alison",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Christian",
+          "day": 32
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Alison",
+          "day": 35
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Alison",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Christian",
+      "original_tribe": "David",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 35,
+      "votes_against": 18,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Jessica",
+          "day": 6
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Elizabeth",
+          "day": 20
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "John",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Dan",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Alec",
+          "day": 28
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Carl",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Alison",
+          "day": 32
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Alison",
+          "day": 35
+        }
+      ]
+    },
+    {
+      "name": "Gabby",
+      "original_tribe": "David",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 32,
+      "votes_against": 2,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Jessica",
+          "day": 6
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Elizabeth",
+          "day": 20
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Angelina",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Dan",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Alec",
+          "day": 28
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Carl",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Christian",
+          "day": 32
+        }
+      ]
+    },
+    {
+      "name": "Carl",
+      "original_tribe": "David",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 30,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Lyrsa",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Elizabeth",
+          "day": 20
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Angelina",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Dan",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Alec",
+          "day": 28
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Alison",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "Alec",
+      "original_tribe": "Goliath",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 28,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jeremy",
+          "day": 9
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Natalia",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Elizabeth",
+          "day": 20
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Christian",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Angelina",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Carl",
+          "day": 28
+        }
+      ]
+    },
+    {
+      "name": "Dan",
+      "original_tribe": "Goliath",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 25,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jeremy",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Elizabeth",
+          "day": 20
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Christian",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Christian",
+          "day": 25
+        }
+      ]
+    },
+    {
+      "name": "John",
+      "original_tribe": "Goliath",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 22,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jeremy",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Elizabeth",
+          "day": 20
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Christian",
+          "day": 22
+        }
+      ]
+    },
+    {
+      "name": "Elizabeth",
+      "original_tribe": "David",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 20,
+      "votes_against": 13,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Jessica",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Natalia",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Angelina",
+          "day": 20
+        }
+      ]
+    },
+    {
+      "name": "Lyrsa",
+      "original_tribe": "David",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 17,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Jessica",
+          "day": 6
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Natalie",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Angelina",
+          "day": 17
+        }
+      ]
+    },
+    {
+      "name": "Natalie",
+      "original_tribe": "Goliath",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 15,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jeremy",
+          "day": 9
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Lyrsa",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Natalia",
+      "original_tribe": "Goliath",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 11,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jeremy",
+          "day": 9
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Elizabeth",
+          "day": 11
+        }
+      ]
+    },
+    {
+      "name": "Bi",
+      "original_tribe": "David",
+      "tribe_color": "",
+      "placement": "Quit",
+      "days_lasted": 10,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Lyrsa",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Jeremy",
+      "original_tribe": "Goliath",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 9,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Natalie",
+          "day": 9
+        }
+      ]
+    },
+    {
+      "name": "Jessica",
+      "original_tribe": "David",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 6,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Lyrsa",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Pat",
+      "original_tribe": "David",
+      "tribe_color": "",
+      "placement": "Medically evacuated",
+      "days_lasted": 3,
+      "votes_against": 0,
+      "voting_history": []
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "season": 32,
+  "season_name": "Survivor: Ka\u00f4h R\u014dng",
+  "challenges": [
+    {
+      "challenge_id": 1,
+      "episode": 1,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Liz",
+        "Peter",
+        "Neal",
+        "Debbie",
+        "Joe",
+        "Aubry",
+        "Caleb",
+        "Anna",
+        "Nick",
+        "Julia",
+        "Tai",
+        "Michele"
+      ]
+    },
+    {
+      "challenge_id": 2,
+      "episode": 2,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Liz",
+        "Peter",
+        "Neal",
+        "Debbie",
+        "Joe",
+        "Aubry",
+        "Caleb",
+        "Anna",
+        "Nick",
+        "Julia",
+        "Tai",
+        "Michele"
+      ]
+    },
+    {
+      "challenge_id": 3,
+      "episode": 3,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Caleb",
+        "Anna",
+        "Nick",
+        "Julia",
+        "Tai",
+        "Michele",
+        "Alecia",
+        "Scot",
+        "Jason",
+        "Cydney"
+      ]
+    },
+    {
+      "challenge_id": 4,
+      "episode": 4,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Peter",
+        "Neal",
+        "Debbie",
+        "Joe",
+        "Aubry",
+        "Caleb",
+        "Anna",
+        "Nick",
+        "Julia",
+        "Tai",
+        "Michele"
+      ]
+    },
+    {
+      "challenge_id": 5,
+      "episode": 4,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Peter",
+        "Neal",
+        "Debbie",
+        "Joe",
+        "Aubry",
+        "Anna",
+        "Nick",
+        "Julia",
+        "Tai",
+        "Michele"
+      ]
+    },
+    {
+      "challenge_id": 6,
+      "episode": 5,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Neal",
+        "Nick",
+        "Debbie",
+        "Jason",
+        "Cydney",
+        "Michele"
+      ]
+    },
+    {
+      "challenge_id": 7,
+      "episode": 6,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Peter",
+        "Scot",
+        "Julia",
+        "Joe",
+        "Tai",
+        "Aubry"
+      ]
+    },
+    {
+      "challenge_id": 8,
+      "episode": 6,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Neal",
+        "Nick",
+        "Debbie",
+        "Jason",
+        "Cydney",
+        "Michele"
+      ]
+    },
+    {
+      "challenge_id": 9,
+      "episode": 7,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Nick"
+      ]
+    },
+    {
+      "challenge_id": 10,
+      "episode": 8,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "Nick",
+        "Debbie",
+        "Scot",
+        "Julia",
+        "Tai"
+      ]
+    },
+    {
+      "challenge_id": 11,
+      "episode": 8,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Tai"
+      ]
+    },
+    {
+      "challenge_id": 12,
+      "episode": 9,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "Scot",
+        "Julia",
+        "Jason",
+        "Tai"
+      ]
+    },
+    {
+      "challenge_id": 13,
+      "episode": 9,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Julia"
+      ]
+    },
+    {
+      "challenge_id": 14,
+      "episode": 10,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Julia",
+        "Tai",
+        "Michele"
+      ]
+    },
+    {
+      "challenge_id": 15,
+      "episode": 10,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Jason"
+      ]
+    },
+    {
+      "challenge_id": 16,
+      "episode": 11,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "Cydney",
+        "Michele"
+      ]
+    },
+    {
+      "challenge_id": 17,
+      "episode": 11,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Michele"
+      ]
+    },
+    {
+      "challenge_id": 18,
+      "episode": 12,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "Jason",
+        "Tai",
+        "Michele"
+      ]
+    },
+    {
+      "challenge_id": 19,
+      "episode": 12,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Cydney"
+      ]
+    },
+    {
+      "challenge_id": 20,
+      "episode": 13,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Joe"
+      ]
+    },
+    {
+      "challenge_id": 21,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Aubry"
+      ]
+    },
+    {
+      "challenge_id": 22,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Michele"
+      ]
+    },
+    {
+      "challenge_id": 23,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Michele"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "John Cochran",
+  "season": 26,
+  "season_name": "Survivor: Caramoan",
+  "archetype": {
+    "voting_control": 9,
+    "physical_game": 4,
+    "social_capital": 8,
+    "strategic_aggression": 7
+  },
+  "signature_move": "Orchestrated the blindside of Andrea Boehlke, his closest ally, when she became too dangerous to keep around \u2014 demonstrating the cold-blooded decision-making that won the jury's respect.",
+  "stats": {
+    "voting_accuracy": 90,
+    "immunity_wins": 3,
+    "reward_wins": 2,
+    "jury_votes": "8-0-0",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 0,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Cochran evolved from his South Pacific disaster into the perfect Survivor player on his second try. He built genuine relationships across the board, won 3 clutch immunities, and made strategic moves at every turn \u2014 earning the first male unanimous victory since Earl Cole. His Final Tribal Council performance was masterful, owning his game with humor and self-awareness.",
+  "fun_fact": "Cochran is the only Survivor winner who went on to become a writer for CBS sitcoms, working on The Millers and later as a consulting producer."
+}

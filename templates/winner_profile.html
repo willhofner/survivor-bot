@@ -1,0 +1,366 @@
+{% extends "base.html" %}
+
+{% block title %}{{ winner.name }} - Season {{ winner.season }} Winner{% endblock %}
+
+{% block content %}
+<div class="winner-profile-view">
+    <div class="back-nav mb-4">
+        <a href="/winners" class="btn btn-outline-survivor btn-sm">&larr; Back to Winners Hall</a>
+    </div>
+
+    <div class="row g-4">
+        <!-- LEFT COLUMN: Identity + Radar -->
+        <div class="col-lg-5">
+            <div class="profile-hero">
+                <div class="profile-crown">👑</div>
+                <h1 class="profile-name">{{ winner.name }}</h1>
+                <div class="profile-season">{{ winner.season_name }}</div>
+                <div class="profile-season-num">Season {{ winner.season }} Winner</div>
+
+                <div class="profile-radar-container mt-4">
+                    <canvas id="profileRadar" width="300" height="300"></canvas>
+                </div>
+
+                <div class="profile-archetype-grid mt-3">
+                    <div class="pa-item">
+                        <div class="pa-value" style="color: #FF6B35;">{{ winner.archetype.voting_control }}/10</div>
+                        <div class="pa-label">Vote Control</div>
+                    </div>
+                    <div class="pa-item">
+                        <div class="pa-value" style="color: #4169E1;">{{ winner.archetype.physical_game }}/10</div>
+                        <div class="pa-label">Physical</div>
+                    </div>
+                    <div class="pa-item">
+                        <div class="pa-value" style="color: #FFD700;">{{ winner.archetype.social_capital }}/10</div>
+                        <div class="pa-label">Social</div>
+                    </div>
+                    <div class="pa-item">
+                        <div class="pa-value" style="color: #FF1493;">{{ winner.archetype.strategic_aggression }}/10</div>
+                        <div class="pa-label">Aggression</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Stats + Analysis -->
+        <div class="col-lg-7">
+            <!-- Strategy Summary -->
+            <div class="profile-section">
+                <h3 class="profile-section-title">Strategic Assessment</h3>
+                <p class="strategy-summary">{{ winner.strategy_summary }}</p>
+            </div>
+
+            <!-- Signature Move -->
+            <div class="profile-section">
+                <h3 class="profile-section-title">Signature Move</h3>
+                <div class="signature-highlight">
+                    <span class="signature-icon">⚡</span>
+                    {{ winner.signature_move }}
+                </div>
+            </div>
+
+            <!-- Game Stats -->
+            <div class="profile-section">
+                <h3 class="profile-section-title">Game Statistics</h3>
+                <div class="game-stats-grid">
+                    <div class="gs-item">
+                        <div class="gs-icon">🗳️</div>
+                        <div class="gs-value">{{ winner.stats.jury_votes }}</div>
+                        <div class="gs-label">Jury Vote</div>
+                    </div>
+                    <div class="gs-item">
+                        <div class="gs-icon">💎</div>
+                        <div class="gs-value">{{ winner.stats.immunity_wins }}</div>
+                        <div class="gs-label">Immunity Wins</div>
+                    </div>
+                    <div class="gs-item">
+                        <div class="gs-icon">🏆</div>
+                        <div class="gs-value">{{ winner.stats.reward_wins }}</div>
+                        <div class="gs-label">Reward Wins</div>
+                    </div>
+                    <div class="gs-item">
+                        <div class="gs-icon">📅</div>
+                        <div class="gs-value">{{ winner.stats.days_lasted }}</div>
+                        <div class="gs-label">Days Lasted</div>
+                    </div>
+                    <div class="gs-item">
+                        <div class="gs-icon">🎯</div>
+                        <div class="gs-value">{{ winner.stats.voting_accuracy }}%</div>
+                        <div class="gs-label">Voting Accuracy</div>
+                    </div>
+                    <div class="gs-item">
+                        <div class="gs-icon">🛡️</div>
+                        <div class="gs-value">{{ winner.stats.times_received_votes }}</div>
+                        <div class="gs-label">Votes Received</div>
+                    </div>
+                    <div class="gs-item">
+                        <div class="gs-icon">🗡️</div>
+                        <div class="gs-value">{{ winner.stats.idols_played }}</div>
+                        <div class="gs-label">Idols Played</div>
+                    </div>
+                    <div class="gs-item">
+                        <div class="gs-icon">✅</div>
+                        <div class="gs-value">{{ winner.stats.idols_successful }}</div>
+                        <div class="gs-label">Idols Successful</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fun Fact -->
+            {% if winner.fun_fact %}
+            <div class="profile-section">
+                <h3 class="profile-section-title">Did You Know?</h3>
+                <div class="fun-fact">
+                    <span class="ff-icon">💡</span>
+                    {{ winner.fun_fact }}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="profile-nav mt-5">
+        <div class="d-flex justify-content-between">
+            {% if prev_winner %}
+            <a href="/winner/{{ prev_winner.season }}" class="btn btn-outline-survivor">
+                &larr; S{{ prev_winner.season }}: {{ prev_winner.name }}
+            </a>
+            {% else %}
+            <div></div>
+            {% endif %}
+            {% if next_winner %}
+            <a href="/winner/{{ next_winner.season }}" class="btn btn-outline-survivor">
+                S{{ next_winner.season }}: {{ next_winner.name }} &rarr;
+            </a>
+            {% else %}
+            <div></div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<style>
+.winner-profile-view {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.profile-hero {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid gold;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.profile-crown {
+    font-size: 4rem;
+    filter: drop-shadow(0 0 20px gold);
+}
+
+.profile-name {
+    font-family: 'Trade Winds', cursive;
+    color: gold;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+    margin: 0.5rem 0;
+}
+
+.profile-season {
+    color: var(--sand);
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.profile-season-num {
+    color: var(--torch-orange);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.profile-radar-container {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.profile-archetype-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.pa-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 0.75rem;
+}
+
+.pa-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.pa-label {
+    font-size: 0.75rem;
+    color: var(--sand);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.profile-section {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--bamboo);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.profile-section-title {
+    color: var(--torch-orange);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 107, 53, 0.3);
+}
+
+.strategy-summary {
+    color: #fff;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.signature-highlight {
+    background: rgba(255, 215, 0, 0.1);
+    border-left: 4px solid gold;
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    color: #fff;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.signature-icon {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+}
+
+.game-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.gs-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1rem 0.5rem;
+}
+
+.gs-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.gs-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--torch-orange);
+}
+
+.gs-label {
+    font-size: 0.7rem;
+    color: var(--sand);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.fun-fact {
+    background: rgba(65, 105, 225, 0.15);
+    border-left: 4px solid #4169E1;
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.ff-icon {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .game-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .profile-name {
+        font-size: 1.8rem;
+    }
+}
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const canvas = document.getElementById('profileRadar');
+    if (!canvas) return;
+
+    new Chart(canvas, {
+        type: 'radar',
+        data: {
+            labels: ['Vote Control', 'Physical Game', 'Social Capital', 'Strategic Aggression'],
+            datasets: [{
+                data: [
+                    {{ winner.archetype.voting_control }},
+                    {{ winner.archetype.physical_game }},
+                    {{ winner.archetype.social_capital }},
+                    {{ winner.archetype.strategic_aggression }}
+                ],
+                backgroundColor: 'rgba(255, 215, 0, 0.2)',
+                borderColor: 'gold',
+                borderWidth: 3,
+                pointBackgroundColor: ['#FF6B35', '#4169E1', '#FFD700', '#FF1493'],
+                pointBorderColor: '#fff',
+                pointRadius: 6,
+                pointHoverRadius: 8
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: { legend: { display: false } },
+            scales: {
+                r: {
+                    beginAtZero: true,
+                    max: 10,
+                    ticks: {
+                        stepSize: 2,
+                        color: 'rgba(245, 222, 179, 0.5)',
+                        backdropColor: 'transparent',
+                        font: { size: 10 }
+                    },
+                    grid: {
+                        color: 'rgba(255, 255, 255, 0.15)'
+                    },
+                    angleLines: {
+                        color: 'rgba(255, 255, 255, 0.15)'
+                    },
+                    pointLabels: {
+                        color: 'rgba(245, 222, 179, 0.9)',
+                        font: { size: 12, weight: 'bold' }
+                    }
+                }
+            }
+        }
+    });
+});
+</script>
+{% endblock %}

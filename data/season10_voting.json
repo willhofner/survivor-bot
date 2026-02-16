@@ -1,0 +1,714 @@
+{
+  "season": 10,
+  "season_name": "Survivor: Palau",
+  "castaways": [
+    {
+      "name": "Tom",
+      "original_tribe": "Koror",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 7,
+          "voted_for": "Willard",
+          "day": 12
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Coby",
+          "day": 24
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Stephenie",
+          "day": 30
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Gregg",
+          "day": 33
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Caryn",
+          "day": 36
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Ian",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Ian",
+          "day": 37
+        },
+        {
+          "tribal_council": 18,
+          "voted_for": "Ian",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Katie",
+      "original_tribe": "Koror",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 1,
+      "voting_history": [
+        {
+          "tribal_council": 7,
+          "voted_for": "Willard",
+          "day": 12
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Coby",
+          "day": 24
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Stephenie",
+          "day": 30
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Gregg",
+          "day": 33
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Caryn",
+          "day": 36
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Jenn",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Jenn",
+          "day": 37
+        },
+        {
+          "tribal_council": 18,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Ian",
+      "original_tribe": "Koror",
+      "tribe_color": "",
+      "placement": "14th voted out",
+      "days_lasted": 38,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 7,
+          "voted_for": "Willard",
+          "day": 12
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Coby",
+          "day": 24
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Stephenie",
+          "day": 30
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Gregg",
+          "day": 33
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Caryn",
+          "day": 36
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Jenn",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 37
+        },
+        {
+          "tribal_council": 18,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Jenn",
+      "original_tribe": "Koror",
+      "tribe_color": "",
+      "placement": "Lost fire challenge",
+      "days_lasted": 37,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 7,
+          "voted_for": "Willard",
+          "day": 12
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Coby",
+          "day": 24
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Stephenie",
+          "day": 30
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Caryn",
+          "day": 33
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Caryn",
+          "day": 36
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Ian",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Caryn",
+      "original_tribe": "Koror",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 36,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 7,
+          "voted_for": "Willard",
+          "day": 12
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Coby",
+          "day": 24
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Stephenie",
+          "day": 30
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Gregg",
+          "day": 33
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Ian",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Gregg",
+      "original_tribe": "Koror",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 33,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 7,
+          "voted_for": "Willard",
+          "day": 12
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Coby",
+          "day": 24
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Stephenie",
+          "day": 30
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Caryn",
+          "day": 33
+        }
+      ]
+    },
+    {
+      "name": "Stephenie",
+      "original_tribe": "Ulong",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 30,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jolanda",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Ashlee",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Jeff",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kim",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Bobby Jon",
+          "day": 12
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Angie",
+          "day": 12
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ibrehem",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "James",
+          "day": 15
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Ibrehem",
+          "day": 18
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "",
+          "day": 21
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Coby",
+          "day": 24
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Caryn",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "Janu",
+      "original_tribe": "Koror",
+      "tribe_color": "",
+      "placement": "Quit",
+      "days_lasted": 27,
+      "votes_against": 1,
+      "voting_history": [
+        {
+          "tribal_council": 7,
+          "voted_for": "Willard",
+          "day": 12
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Stephenie",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Coby",
+      "original_tribe": "Koror",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 24,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 7,
+          "voted_for": "Willard",
+          "day": 12
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Janu",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Bobby Jon",
+      "original_tribe": "Ulong",
+      "tribe_color": "",
+      "placement": "Lost fire challenge",
+      "days_lasted": 21,
+      "votes_against": 2,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Angie",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Ashlee",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Kim",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kim",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Angie",
+          "day": 12
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "",
+          "day": 12
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "James",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "James",
+          "day": 15
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Ibrehem",
+          "day": 18
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Ibrehem",
+      "original_tribe": "Ulong",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 18,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Angie",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Kim",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Jeff",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kim",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "James",
+          "day": 12
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Angie",
+          "day": 12
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "James",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "",
+          "day": 15
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Stephenie",
+          "day": 18
+        }
+      ]
+    },
+    {
+      "name": "James",
+      "original_tribe": "Ulong",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 15,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jolanda",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Ashlee",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Kim",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kim",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Angie",
+          "day": 12
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Angie",
+          "day": 12
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ibrehem",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Willard",
+      "original_tribe": "Koror",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 12,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 7,
+          "voted_for": "Katie",
+          "day": 12
+        }
+      ]
+    },
+    {
+      "name": "Angie",
+      "original_tribe": "Ulong",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 12,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jolanda",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Ashlee",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Jeff",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kim",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Bobby Jon",
+          "day": 12
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "",
+          "day": 12
+        }
+      ]
+    },
+    {
+      "name": "Kim",
+      "original_tribe": "Ulong",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 11,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jolanda",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Ashlee",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Jeff",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "James",
+          "day": 11
+        }
+      ]
+    },
+    {
+      "name": "Jeff",
+      "original_tribe": "Ulong",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 8,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jolanda",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Ashlee",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "James",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "name": "Ashlee",
+      "original_tribe": "Ulong",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 6,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jolanda",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Jeff",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Jolanda",
+      "original_tribe": "Ulong",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Angie",
+          "day": 3
+        }
+      ]
+    },
+    {
+      "name": "Jonathan",
+      "original_tribe": "None",
+      "tribe_color": "",
+      "placement": "Eliminated",
+      "days_lasted": 2,
+      "votes_against": 0,
+      "voting_history": []
+    },
+    {
+      "name": "Wanda",
+      "original_tribe": "None",
+      "tribe_color": "",
+      "placement": "Eliminated",
+      "days_lasted": 2,
+      "votes_against": 0,
+      "voting_history": []
+    }
+  ]
+}

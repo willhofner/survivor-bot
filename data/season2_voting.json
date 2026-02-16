@@ -1,0 +1,706 @@
+{
+  "season": 2,
+  "season_name": "Survivor: The Australian Outback",
+  "castaways": [
+    {
+      "name": "Tina",
+      "original_tribe": "Ogakor",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 42,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Kel",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Maralyn",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Mitchell",
+          "day": 12
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Mitchell",
+          "day": 12
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jeff",
+          "day": 21
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jeff",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Alicia",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jerri",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Nick",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Amber",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Rodger",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Elisabeth",
+          "day": 39
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "",
+          "day": 41
+        }
+      ]
+    },
+    {
+      "name": "Colby",
+      "original_tribe": "Ogakor",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 42,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Kel",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Maralyn",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Mitchell",
+          "day": 12
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Mitchell",
+          "day": 12
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jeff",
+          "day": 21
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "",
+          "day": 21
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Alicia",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jerri",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Nick",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Rodger",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Rodger",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Elisabeth",
+          "day": 39
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Keith",
+          "day": 41
+        }
+      ]
+    },
+    {
+      "name": "Keith",
+      "original_tribe": "Ogakor",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 41,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Kel",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Mitchell",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Mitchell",
+          "day": 12
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "",
+          "day": 12
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "",
+          "day": 12
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jeff",
+          "day": 21
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jeff",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Alicia",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jerri",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Nick",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Amber",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Rodger",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Elisabeth",
+          "day": 39
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "",
+          "day": 41
+        }
+      ]
+    },
+    {
+      "name": "Elisabeth",
+      "original_tribe": "Kucha",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 39,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Debb",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Kimmi",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Colby",
+          "day": 21
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Colby",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jerri",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jerri",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Amber",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Amber",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Keith",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Keith",
+          "day": 39
+        }
+      ]
+    },
+    {
+      "name": "Rodger",
+      "original_tribe": "Kucha",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 36,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Debb",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Kimmi",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Colby",
+          "day": 21
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Colby",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jerri",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jerri",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Amber",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Amber",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Keith",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Amber",
+      "original_tribe": "Ogakor",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 33,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Kel",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Maralyn",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Keith",
+          "day": 12
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Keith",
+          "day": 12
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jeff",
+          "day": 21
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jeff",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Alicia",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Elisabeth",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Nick",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Rodger",
+          "day": 33
+        }
+      ]
+    },
+    {
+      "name": "Nick",
+      "original_tribe": "Kucha",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 30,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Debb",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Kimmi",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Colby",
+          "day": 21
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Colby",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jerri",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jerri",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Keith",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "Jerri",
+      "original_tribe": "Ogakor",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 27,
+      "votes_against": 12,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Kel",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Maralyn",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Keith",
+          "day": 12
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Keith",
+          "day": 12
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jeff",
+          "day": 21
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jeff",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Alicia",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Elisabeth",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "Alicia",
+      "original_tribe": "Kucha",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 24,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Debb",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Kimmi",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Colby",
+          "day": 21
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Colby",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jerri",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Jeff",
+      "original_tribe": "Kucha",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 21,
+      "votes_against": 11,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Debb",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Kimmi",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Colby",
+          "day": 21
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "",
+          "day": 21
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Michael",
+      "original_tribe": "Kucha",
+      "tribe_color": "",
+      "placement": "Medically evacuated",
+      "days_lasted": 17,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Debb",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Kimmi",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Kimmi",
+      "original_tribe": "Kucha",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 15,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Debb",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Jeff",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Mitchell",
+      "original_tribe": "Ogakor",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 12,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Kel",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Maralyn",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Keith",
+          "day": 12
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "",
+          "day": 12
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "",
+          "day": 12
+        }
+      ]
+    },
+    {
+      "name": "Maralyn",
+      "original_tribe": "Ogakor",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 9,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Kel",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Jerri",
+          "day": 9
+        }
+      ]
+    },
+    {
+      "name": "Kel",
+      "original_tribe": "Ogakor",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 6,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Jerri",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Debb",
+      "original_tribe": "Kucha",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Jeff",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "season": 31,
+  "season_name": "Survivor: Cambodia",
+  "challenges": [
+    {
+      "challenge_id": 1,
+      "episode": 1,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Kelly",
+        "Jeff",
+        "Terry",
+        "Peih-Gee",
+        "Abi-Maria",
+        "Vytas",
+        "Spencer",
+        "Woo",
+        "Kelley",
+        "Shirin"
+      ]
+    },
+    {
+      "challenge_id": 2,
+      "episode": 1,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Kimmi",
+        "Andrew",
+        "Stephen",
+        "Monica",
+        "Ciera",
+        "Tasha",
+        "Kass",
+        "Jeremy",
+        "Keith",
+        "Joe"
+      ]
+    },
+    {
+      "challenge_id": 3,
+      "episode": 2,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Kimmi",
+        "Andrew",
+        "Stephen",
+        "Monica",
+        "Ciera",
+        "Tasha",
+        "Kass",
+        "Jeremy",
+        "Keith",
+        "Joe"
+      ]
+    },
+    {
+      "challenge_id": 4,
+      "episode": 3,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Kelly",
+        "Kimmi",
+        "Stephen",
+        "Monica",
+        "Spencer",
+        "Jeremy",
+        "Terry",
+        "Ciera",
+        "Kass",
+        "Kelley",
+        "Keith",
+        "Joe"
+      ]
+    },
+    {
+      "challenge_id": 5,
+      "episode": 4,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Jeff",
+        "Andrew",
+        "Abi-Maria",
+        "Tasha",
+        "Woo",
+        "Terry",
+        "Ciera",
+        "Kass",
+        "Kelley",
+        "Keith",
+        "Joe"
+      ]
+    },
+    {
+      "challenge_id": 6,
+      "episode": 4,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Kelly",
+        "Kimmi",
+        "Stephen",
+        "Monica",
+        "Spencer",
+        "Jeremy",
+        "Terry",
+        "Ciera",
+        "Kass",
+        "Kelley",
+        "Keith",
+        "Joe"
+      ]
+    },
+    {
+      "challenge_id": 7,
+      "episode": 5,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Andrew",
+        "Abi-Maria",
+        "Tasha",
+        "Woo",
+        "Terry",
+        "Ciera",
+        "Kass",
+        "Kelley",
+        "Keith",
+        "Joe"
+      ]
+    },
+    {
+      "challenge_id": 8,
+      "episode": 5,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Andrew",
+        "Abi-Maria",
+        "Tasha",
+        "Woo",
+        "Terry",
+        "Ciera",
+        "Kass",
+        "Kelley",
+        "Keith",
+        "Joe"
+      ]
+    },
+    {
+      "challenge_id": 9,
+      "episode": 6,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Kelly",
+        "Andrew",
+        "Abi-Maria",
+        "Ciera",
+        "Spencer",
+        "Kass",
+        "Woo"
+      ]
+    },
+    {
+      "challenge_id": 10,
+      "episode": 6,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Kimmi",
+        "Stephen",
+        "Tasha",
+        "Kelley",
+        "Jeremy",
+        "Keith",
+        "Joe"
+      ]
+    },
+    {
+      "challenge_id": 11,
+      "episode": 7,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Joe"
+      ]
+    },
+    {
+      "challenge_id": 12,
+      "episode": 8,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "Kelly",
+        "Kimmi",
+        "Ciera",
+        "Kelley",
+        "Keith",
+        "Joe"
+      ]
+    },
+    {
+      "challenge_id": 13,
+      "episode": 8,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Joe"
+      ]
+    },
+    {
+      "challenge_id": 14,
+      "episode": 9,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "Stephen",
+        "Ciera",
+        "Tasha",
+        "Spencer",
+        "Joe"
+      ]
+    },
+    {
+      "challenge_id": 15,
+      "episode": 9,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Joe"
+      ]
+    },
+    {
+      "challenge_id": 16,
+      "episode": 10,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "Abi-Maria",
+        "Ciera",
+        "Tasha",
+        "Spencer",
+        "Joe"
+      ]
+    },
+    {
+      "challenge_id": 17,
+      "episode": 10,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Joe"
+      ]
+    },
+    {
+      "challenge_id": 18,
+      "episode": 11,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Stephen"
+      ]
+    },
+    {
+      "challenge_id": 19,
+      "episode": 11,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Spencer"
+      ]
+    },
+    {
+      "challenge_id": 20,
+      "episode": 12,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Kelley"
+      ]
+    },
+    {
+      "challenge_id": 21,
+      "episode": 12,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Kelley",
+        "Keith"
+      ]
+    },
+    {
+      "challenge_id": 22,
+      "episode": 13,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Keith"
+      ]
+    },
+    {
+      "challenge_id": 23,
+      "episode": 13,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Spencer"
+      ]
+    },
+    {
+      "challenge_id": 24,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Spencer"
+      ]
+    },
+    {
+      "challenge_id": 25,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Kelley"
+      ]
+    },
+    {
+      "challenge_id": 26,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Jeremy"
+      ]
+    }
+  ]
+}

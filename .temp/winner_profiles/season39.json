@@ -1,0 +1,24 @@
+{
+  "name": "Tommy Sheehan",
+  "season": 39,
+  "season_name": "Survivor: Island of the Idols",
+  "archetype": {
+    "voting_control": 8,
+    "physical_game": 5,
+    "social_capital": 9,
+    "strategic_aggression": 5
+  },
+  "signature_move": "Tommy convinced Lauren Beck to use her hidden immunity idol on him at Final 5 instead of saving it for herself \u2014 a masterclass in social manipulation that secured his path to Final Tribal Council without ever finding an idol or advantage himself.",
+  "stats": {
+    "voting_accuracy": 82,
+    "immunity_wins": 2,
+    "reward_wins": 1,
+    "jury_votes": "8-2-0",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 3,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Tommy won through pure social and strategic play without ever possessing a hidden immunity idol or advantage \u2014 a rarity in modern Survivor. As a 4th grade teacher, he used his natural warmth and ability to connect with people of all backgrounds to build unshakeable bonds. He was the last winner of the 39-day format before the show switched to 26 days.",
+  "fun_fact": "Tommy is the only winner in the 30s era of Survivor to win without playing a single idol or advantage, proving that old-school social gameplay can still triumph in the modern era."
+}

@@ -1,0 +1,741 @@
+{
+  "season": 11,
+  "season_name": "Survivor: Guatemala",
+  "castaways": [
+    {
+      "name": "Danni",
+      "original_tribe": "Nakum",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 1,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Jim",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Blake",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Brian",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Amy",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jamie",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Stephenie",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jamie",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Gary",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Judd",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Cindy",
+          "day": 36
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Lydia",
+          "day": 37
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Rafe",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Stephenie",
+      "original_tribe": "Yaxha",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 2,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Morgan",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Brianna",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Brooke",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Margaret",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Brandon",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Bobby Jon",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jamie",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Gary",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Judd",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Cindy",
+          "day": 36
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Lydia",
+          "day": 37
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Rafe",
+      "original_tribe": "Yaxha",
+      "tribe_color": "",
+      "placement": "16th voted out",
+      "days_lasted": 38,
+      "votes_against": 2,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Morgan",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Brianna",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Brooke",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Margaret",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Brandon",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Bobby Jon",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jamie",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Gary",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Judd",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Cindy",
+          "day": 36
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Lydia",
+          "day": 37
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Lydia",
+      "original_tribe": "Yaxha",
+      "tribe_color": "",
+      "placement": "15th voted out",
+      "days_lasted": 37,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Morgan",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Brianna",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Brooke",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Margaret",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Brandon",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Bobby Jon",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jamie",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Gary",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Judd",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Cindy",
+          "day": 36
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Danni",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Cindy",
+      "original_tribe": "Nakum",
+      "tribe_color": "",
+      "placement": "14th voted out",
+      "days_lasted": 36,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Jim",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Lydia",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Margaret",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Brandon",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Bobby Jon",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jamie",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Gary",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Lydia",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Rafe",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Judd",
+      "original_tribe": "Nakum",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 33,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Jim",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Brooke",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Margaret",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Brandon",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Bobby Jon",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Gary",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Gary",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Lydia",
+          "day": 33
+        }
+      ]
+    },
+    {
+      "name": "Gary",
+      "original_tribe": "Yaxha",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 30,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Morgan",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Brianna",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Blake",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Brian",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Amy",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jamie",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Cindy",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jamie",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Cindy",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "Jamie",
+      "original_tribe": "Yaxha",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 27,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Morgan",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Brianna",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Brooke",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Margaret",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Brandon",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Bobby Jon",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Gary",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "Bobby Jon",
+      "original_tribe": "Nakum",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 24,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Jim",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Blake",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Brian",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Amy",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jamie",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Stephenie",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Brandon",
+      "original_tribe": "Nakum",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 21,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Jim",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Brian",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Brian",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Amy",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jamie",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Amy",
+      "original_tribe": "Yaxha",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 18,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Morgan",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Brianna",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Blake",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Brian",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Bobby Jon",
+          "day": 18
+        }
+      ]
+    },
+    {
+      "name": "Margaret",
+      "original_tribe": "Nakum",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 15,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Jim",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Lydia",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Judd",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Brian",
+      "original_tribe": "Yaxha",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 15,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Morgan",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Brianna",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Blake",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Bobby Jon",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Blake",
+      "original_tribe": "Nakum",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 14,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Jim",
+          "day": 3
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Brian",
+          "day": 14
+        }
+      ]
+    },
+    {
+      "name": "Brooke",
+      "original_tribe": "Nakum",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 11,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Jim",
+          "day": 3
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Lydia",
+          "day": 11
+        }
+      ]
+    },
+    {
+      "name": "Brianna",
+      "original_tribe": "Yaxha",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 8,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Morgan",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Lydia",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "name": "Morgan",
+      "original_tribe": "Yaxha",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 6,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Lydia",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Jim",
+      "original_tribe": "Nakum",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Margaret",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,305 @@
+{
+  "season": 21,
+  "season_name": "Survivor: Nicaragua",
+  "challenges": [
+    {
+      "challenge_id": 1,
+      "episode": 1,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Shannon",
+        "Kelly B.",
+        "Alina",
+        "Brenda",
+        "NaOnka",
+        "Purple Kelly",
+        "Benry",
+        "Sash",
+        "Chase",
+        "Fabio"
+      ]
+    },
+    {
+      "challenge_id": 2,
+      "episode": 1,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Shannon",
+        "Kelly B.",
+        "Alina",
+        "Brenda",
+        "NaOnka",
+        "Purple Kelly",
+        "Benry",
+        "Sash",
+        "Chase",
+        "Fabio"
+      ]
+    },
+    {
+      "challenge_id": 3,
+      "episode": 2,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Jimmy J.",
+        "Jimmy T.",
+        "Tyrone",
+        "Yve",
+        "Jill",
+        "Marty",
+        "Jane",
+        "Dan",
+        "Holly"
+      ]
+    },
+    {
+      "challenge_id": 4,
+      "episode": 3,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Kelly B.",
+        "Alina",
+        "Brenda",
+        "NaOnka",
+        "Purple Kelly",
+        "Benry",
+        "Sash",
+        "Chase",
+        "Fabio"
+      ]
+    },
+    {
+      "challenge_id": 5,
+      "episode": 4,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Kelly B.",
+        "Alina",
+        "Brenda",
+        "NaOnka",
+        "Purple Kelly",
+        "Benry",
+        "Sash",
+        "Chase",
+        "Fabio"
+      ]
+    },
+    {
+      "challenge_id": 6,
+      "episode": 5,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Tyrone",
+        "Yve",
+        "Alina",
+        "NaOnka",
+        "Benry",
+        "Dan",
+        "Holly",
+        "Chase"
+      ]
+    },
+    {
+      "challenge_id": 7,
+      "episode": 5,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Kelly B.",
+        "Jill",
+        "Marty",
+        "Brenda",
+        "Purple Kelly",
+        "Jane",
+        "Sash",
+        "Fabio"
+      ]
+    },
+    {
+      "challenge_id": 8,
+      "episode": 6,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal / Individual",
+      "winners": [
+        "Jill"
+      ]
+    },
+    {
+      "challenge_id": 9,
+      "episode": 7,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Alina",
+        "NaOnka",
+        "Benry",
+        "Dan",
+        "Holly",
+        "Chase"
+      ]
+    },
+    {
+      "challenge_id": 10,
+      "episode": 7,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Alina",
+        "NaOnka",
+        "Benry",
+        "Dan",
+        "Holly",
+        "Chase"
+      ]
+    },
+    {
+      "challenge_id": 11,
+      "episode": 8,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Jane",
+        "Fabio"
+      ]
+    },
+    {
+      "challenge_id": 12,
+      "episode": 9,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "Marty",
+        "Benry",
+        "Dan",
+        "Sash",
+        "Fabio"
+      ]
+    },
+    {
+      "challenge_id": 13,
+      "episode": 9,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Brenda"
+      ]
+    },
+    {
+      "challenge_id": 14,
+      "episode": 10,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "NaOnka",
+        "Purple Kelly",
+        "Jane",
+        "Chase",
+        "Fabio"
+      ]
+    },
+    {
+      "challenge_id": 15,
+      "episode": 10,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Jane"
+      ]
+    },
+    {
+      "challenge_id": 16,
+      "episode": 12,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "NaOnka",
+        "Benry",
+        "Dan",
+        "Holly",
+        "Chase"
+      ]
+    },
+    {
+      "challenge_id": 17,
+      "episode": 13,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Chase"
+      ]
+    },
+    {
+      "challenge_id": 18,
+      "episode": 13,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Sash"
+      ]
+    },
+    {
+      "challenge_id": 19,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Chase"
+      ]
+    },
+    {
+      "challenge_id": 20,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Fabio"
+      ]
+    },
+    {
+      "challenge_id": 21,
+      "episode": 15,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Fabio"
+      ]
+    },
+    {
+      "challenge_id": 22,
+      "episode": 15,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Fabio"
+      ]
+    }
+  ]
+}

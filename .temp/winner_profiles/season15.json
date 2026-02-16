@@ -1,0 +1,24 @@
+{
+  "name": "Todd Herzog",
+  "season": 15,
+  "season_name": "Survivor: China",
+  "archetype": {
+    "voting_control": 10,
+    "physical_game": 2,
+    "social_capital": 7,
+    "strategic_aggression": 9
+  },
+  "signature_move": "Orchestrated the blindside of James Clement while James held two Hidden Immunity Idols, engineering the idol transfer to James in the first place and then striking before he could play either one -- widely regarded as one of the greatest strategic plays in Survivor history.",
+  "stats": {
+    "voting_accuracy": 100,
+    "immunity_wins": 0,
+    "reward_wins": 0,
+    "jury_votes": "4-2-1",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 5,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Todd played a masterclass in strategic manipulation without ever winning individual immunity, proving that vote control and alliance management can be more powerful than physical dominance. He maintained a perfect 100% voting accuracy across all nine tribal councils, always voting with the majority, and systematically dismantled threats -- from blindsiding his own ally Jean-Robert to engineering James's iconic two-idol exit. His Final Tribal Council performance, where he owned his game with confident honesty rather than apologizing, sealed the win over Courtney and Amanda.",
+  "fun_fact": "At 22 years old, Todd was the youngest male winner at the time and one of the youngest winners in Survivor history. He was a flight attendant from Pleasant Grove, Utah, and was such a superfan that he had applied to be on the show since he was 15."
+}

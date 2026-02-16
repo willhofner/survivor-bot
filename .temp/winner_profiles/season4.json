@@ -1,0 +1,24 @@
+{
+  "name": "Vecepia Towery",
+  "season": 4,
+  "season_name": "Survivor: Marquesas",
+  "archetype": {
+    "voting_control": 6,
+    "physical_game": 4,
+    "social_capital": 6,
+    "strategic_aggression": 3
+  },
+  "signature_move": "At the Final Immunity Challenge, Vecepia struck a deal with Neleh to step down in exchange for a Final Two pact, betraying her closer ally Kathy and securing the spot she needed to win the jury vote 4-3.",
+  "stats": {
+    "voting_accuracy": 80,
+    "immunity_wins": 2,
+    "reward_wins": 0,
+    "jury_votes": "4-3",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 2,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Vecepia played a quintessential under-the-radar game, keeping her threat level low while strategically positioning herself between shifting alliances. She was instrumental in the historic Rotu Four power shift at the merge but never became the visible leader, allowing bigger targets to absorb attention. Her willingness to cut allies at the right moment, combined with receiving only 2 votes against her across 39 days, demonstrated exceptional social awareness.",
+  "fun_fact": "Vecepia was the first African-American winner of Survivor, and one of the most under-discussed winners in the show's history despite pioneering the under-the-radar strategic archetype that many future winners would emulate."
+}

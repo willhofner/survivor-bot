@@ -1,0 +1,287 @@
+{
+  "season": 18,
+  "season_name": "Survivor: Tocantins",
+  "challenges": [
+    {
+      "challenge_id": 1,
+      "episode": 1,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Candace",
+        "Jerry",
+        "Brendan",
+        "Tyson",
+        "Sierra",
+        "Debbie",
+        "Coach",
+        "Erinn"
+      ]
+    },
+    {
+      "challenge_id": 2,
+      "episode": 2,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Sandy",
+        "Spencer",
+        "Sydney",
+        "Joe",
+        "Taj",
+        "Stephen",
+        "J.T."
+      ]
+    },
+    {
+      "challenge_id": 3,
+      "episode": 3,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Sandy",
+        "Spencer",
+        "Sydney",
+        "Joe",
+        "Taj",
+        "Stephen",
+        "J.T."
+      ]
+    },
+    {
+      "challenge_id": 4,
+      "episode": 3,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Sandy",
+        "Spencer",
+        "Sydney",
+        "Joe",
+        "Taj",
+        "Stephen",
+        "J.T."
+      ]
+    },
+    {
+      "challenge_id": 5,
+      "episode": 4,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Sandy",
+        "Spencer",
+        "Sydney",
+        "Joe",
+        "Taj",
+        "Stephen",
+        "J.T."
+      ]
+    },
+    {
+      "challenge_id": 6,
+      "episode": 4,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Brendan",
+        "Tyson",
+        "Sierra",
+        "Debbie",
+        "Coach",
+        "Erinn"
+      ]
+    },
+    {
+      "challenge_id": 7,
+      "episode": 5,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Spencer",
+        "Sydney",
+        "Joe",
+        "Taj",
+        "Stephen",
+        "J.T."
+      ]
+    },
+    {
+      "challenge_id": 8,
+      "episode": 5,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Brendan",
+        "Tyson",
+        "Sierra",
+        "Debbie",
+        "Coach",
+        "Erinn"
+      ]
+    },
+    {
+      "challenge_id": 9,
+      "episode": 7,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Brendan",
+        "Tyson",
+        "Sierra",
+        "Debbie",
+        "Coach",
+        "Erinn"
+      ]
+    },
+    {
+      "challenge_id": 10,
+      "episode": 7,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Brendan",
+        "Tyson",
+        "Sierra",
+        "Debbie",
+        "Coach",
+        "Erinn"
+      ]
+    },
+    {
+      "challenge_id": 11,
+      "episode": 8,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Tyson"
+      ]
+    },
+    {
+      "challenge_id": 12,
+      "episode": 9,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "Brendan",
+        "Debbie",
+        "J.T."
+      ]
+    },
+    {
+      "challenge_id": 13,
+      "episode": 9,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Tyson"
+      ]
+    },
+    {
+      "challenge_id": 14,
+      "episode": 10,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "Tyson",
+        "Debbie",
+        "Erinn",
+        "J.T."
+      ]
+    },
+    {
+      "challenge_id": 15,
+      "episode": 10,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Debbie"
+      ]
+    },
+    {
+      "challenge_id": 16,
+      "episode": 11,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Stephen"
+      ]
+    },
+    {
+      "challenge_id": 17,
+      "episode": 11,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Coach"
+      ]
+    },
+    {
+      "challenge_id": 18,
+      "episode": 12,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Stephen"
+      ]
+    },
+    {
+      "challenge_id": 19,
+      "episode": 13,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "J.T."
+      ]
+    },
+    {
+      "challenge_id": 20,
+      "episode": 13,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "J.T."
+      ]
+    },
+    {
+      "challenge_id": 21,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "J.T."
+      ]
+    },
+    {
+      "challenge_id": 22,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "J.T."
+      ]
+    }
+  ]
+}

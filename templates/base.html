@@ -8,30 +8,58 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/survivor.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar navbar-dark survivor-nav">
+<body data-theme="jungle">
+    <nav class="navbar navbar-dark navbar-expand-lg survivor-nav">
         <div class="container-fluid">
             <a class="navbar-brand survivor-logo" href="/">
-                <span class="torch">🔥</span>
-                SURVIVOR{% if season_name %}: {{ season_name | upper }}{% endif %}
+                <span class="torch">&#x1F525;</span>
+                SURVIVOR BOT
             </a>
-            <div class="nav-links">
-                {% set current_season = season if season is defined else 28 %}
-                <select id="seasonSelector" class="form-select form-select-sm season-selector" onchange="changeSeason(this.value)">
-                    {% if seasons is defined %}
-                        {% for s in seasons %}
-                        <option value="{{ s }}" {% if s == current_season %}selected{% endif %}>
-                            Season {{ s }}: {{ season_names[s] }}
-                        </option>
-                        {% endfor %}
-                    {% endif %}
-                </select>
-                <a href="/tribal-councils?season={{ current_season }}" class="nav-link">Tribal Councils</a>
-                <a href="/castaways?season={{ current_season }}" class="nav-link">Castaways</a>
-                <a href="/challenges?season={{ current_season }}" class="nav-link">Challenges</a>
-                <a href="/events?season={{ current_season }}" class="nav-link">Events</a>
-                <a href="/items?season={{ current_season }}" class="nav-link">Items</a>
-                <a href="/hall-of-fame" class="nav-link">🏆 Hall of Fame</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-1">
+                    {% set current_season = season if season is defined else 28 %}
+                    <li class="nav-item">
+                        <select id="seasonSelector" class="form-select form-select-sm season-selector" onchange="changeSeason(this.value)">
+                            {% if seasons is defined %}
+                                {% for s in seasons %}
+                                <option value="{{ s }}" {% if s == current_season %}selected{% endif %}>
+                                    S{{ s }}: {{ season_names[s] }}
+                                </option>
+                                {% endfor %}
+                            {% endif %}
+                        </select>
+                    </li>
+                    <!-- Season-specific pages dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Explore</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="/tribal-councils?season={{ current_season }}">Tribal Councils</a></li>
+                            <li><a class="dropdown-item" href="/castaways?season={{ current_season }}">Castaways</a></li>
+                            <li><a class="dropdown-item" href="/challenges?season={{ current_season }}">Challenges</a></li>
+                            <li><a class="dropdown-item" href="/events?season={{ current_season }}">Events</a></li>
+                            <li><a class="dropdown-item" href="/items?season={{ current_season }}">Items</a></li>
+                        </ul>
+                    </li>
+                    <!-- Global pages -->
+                    <li class="nav-item"><a class="nav-link" href="/winners">Winners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/compare">Compare</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/seasons">Seasons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/analytics">Analytics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/hall-of-fame">Records</a></li>
+                    <!-- Search -->
+                    <li class="nav-item">
+                        <div class="nav-search-container" style="position: relative;">
+                            <input type="text" id="globalSearch" class="form-control form-control-sm" placeholder="Search players..." style="background: rgba(255,255,255,0.1); border: 1px solid var(--bamboo); color: #fff; width: 160px; font-size: 0.8rem;" oninput="handleGlobalSearch(this.value)">
+                            <div id="searchResults" class="search-dropdown" style="display:none;"></div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-sm theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#x1F319;</button>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -43,17 +71,74 @@
     </main>
 
     <footer class="text-center py-4 survivor-footer">
-        <p class="mb-0">{% if season_name %}Season {{ season }} • {{ season_name }}{% else %}Survivor Bot{% endif %}</p>
+        <p class="mb-0">Survivor Bot &mdash; The Complete Visual History of Survivor</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function changeSeason(seasonNum) {
-            // Get current page path
             const currentPath = window.location.pathname;
-            // Update URL with new season parameter
-            window.location.href = currentPath + '?season=' + seasonNum;
+            // Only add season param to pages that use it
+            const seasonPages = ['/tribal-councils', '/castaways', '/challenges', '/events', '/items'];
+            if (seasonPages.some(p => currentPath.startsWith(p))) {
+                window.location.href = currentPath + '?season=' + seasonNum;
+            } else {
+                // Navigate to castaways for the selected season
+                window.location.href = '/castaways?season=' + seasonNum;
+            }
         }
+
+        // Global search
+        let searchTimeout;
+        function handleGlobalSearch(query) {
+            clearTimeout(searchTimeout);
+            const dropdown = document.getElementById('searchResults');
+            if (query.length < 2) { dropdown.style.display = 'none'; return; }
+            searchTimeout = setTimeout(() => {
+                fetch(`/api/search?q=${encodeURIComponent(query)}`)
+                    .then(r => r.json())
+                    .then(results => {
+                        if (results.length === 0) {
+                            dropdown.innerHTML = '<div class="search-item text-muted">No results</div>';
+                        } else {
+                            dropdown.innerHTML = results.map(r =>
+                                `<a href="${r.url}" class="search-item">
+                                    <strong>${r.name}</strong>
+                                    <span class="search-meta">S${r.season}: ${r.season_name} &bull; ${r.placement}</span>
+                                </a>`
+                            ).join('');
+                        }
+                        dropdown.style.display = 'block';
+                    });
+            }, 200);
+        }
+
+        // Close search on click outside
+        document.addEventListener('click', e => {
+            if (!e.target.closest('.nav-search-container')) {
+                document.getElementById('searchResults').style.display = 'none';
+            }
+        });
+
+        // Dark mode toggle
+        function toggleTheme() {
+            const body = document.body;
+            const current = body.getAttribute('data-theme');
+            const next = current === 'dark' ? 'jungle' : 'dark';
+            body.setAttribute('data-theme', next);
+            localStorage.setItem('survivor-theme', next);
+            document.querySelector('.theme-toggle').textContent = next === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
+        }
+
+        // Restore theme from localStorage
+        (function() {
+            const saved = localStorage.getItem('survivor-theme');
+            if (saved) {
+                document.body.setAttribute('data-theme', saved);
+                const btn = document.querySelector('.theme-toggle');
+                if (btn) btn.textContent = saved === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
+            }
+        })();
     </script>
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
     {% block scripts %}{% endblock %}

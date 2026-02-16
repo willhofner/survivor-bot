@@ -1,0 +1,24 @@
+{
+  "name": "Fabio Birza",
+  "season": 21,
+  "season_name": "Survivor: Nicaragua",
+  "archetype": {
+    "voting_control": 3,
+    "physical_game": 9,
+    "social_capital": 7,
+    "strategic_aggression": 2
+  },
+  "signature_move": "Won the final three consecutive individual immunity challenges when he was the clear next target, forcing the majority alliance to cannibalize itself while he sailed to the end untouched.",
+  "stats": {
+    "voting_accuracy": 60,
+    "immunity_wins": 4,
+    "reward_wins": 0,
+    "jury_votes": "5-4",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 2,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Fabio played one of the most unorthodox winning games in Survivor history, relying on a disarming surfer-dude persona that kept him off the radar as a strategic threat while stronger players targeted each other. He had minimal voting control for most of the game and frequently voted on the wrong side, but his likability ensured he never accumulated enemies. When the endgame arrived and he was the obvious boot, he won three straight immunity challenges to guarantee his spot at Final Tribal Council, where he beat Chase Rice's indecisiveness and Sash Lenahan's perceived dishonesty.",
+  "fun_fact": "Fabio's real name is Judson Birza -- the nickname 'Fabio' was given to him by Shannon Elkins on Day 1 as a reference to the Italian model, and producers liked it so much they changed his name in the opening credits, making him the first contestant to have his displayed name changed mid-production."
+}

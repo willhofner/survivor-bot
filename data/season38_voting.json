@@ -1,0 +1,896 @@
+{
+  "season": 38,
+  "season_name": "Survivor: Edge of Extinction",
+  "castaways": [
+    {
+      "name": "Chris",
+      "original_tribe": "Manu",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Reem",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Keith",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Kelley",
+          "day": 8
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Victoria",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Lauren",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Gavin",
+      "original_tribe": "Kama",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 5,
+          "voted_for": "Aubry",
+          "day": 13
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Lauren",
+          "day": 16
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Wendy",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Joe",
+          "day": 19
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Eric",
+          "day": 22
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Julia",
+          "day": 23
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "David",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Aurora",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Wardog",
+          "day": 29
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Ron",
+          "day": 31
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Ron",
+          "day": 31
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Aurora",
+          "day": 34
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Rick",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Chris",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Julie",
+      "original_tribe": "Kama",
+      "tribe_color": "",
+      "placement": "2nd Runner-up",
+      "days_lasted": 39,
+      "votes_against": 1,
+      "voting_history": [
+        {
+          "tribal_council": 7,
+          "voted_for": "Joe",
+          "day": 19
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Lauren",
+          "day": 22
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Julia",
+          "day": 23
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "David",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Aurora",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Wardog",
+          "day": 29
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Rick",
+          "day": 31
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Aurora",
+          "day": 34
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Rick",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Chris",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Rick",
+      "original_tribe": "Manu",
+      "tribe_color": "",
+      "placement": "Lost final 4 fire challenge",
+      "days_lasted": 38,
+      "votes_against": 12,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Reem",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Keith",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Chris",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Lauren",
+          "day": 11
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Kelley",
+          "day": 19
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Lauren",
+          "day": 22
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Julia",
+          "day": 23
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Wardog",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Kelley",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Aurora",
+          "day": 29
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Aurora",
+          "day": 31
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Aurora",
+          "day": 34
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Victoria",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Lauren",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Lauren",
+      "original_tribe": "Manu",
+      "tribe_color": "",
+      "placement": "16th voted out",
+      "days_lasted": 37,
+      "votes_against": 11,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Wendy",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Keith",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Chris",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Rick",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Wendy",
+          "day": 16
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "David",
+          "day": 19
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Eric",
+          "day": 22
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Julia",
+          "day": 23
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "David",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Aurora",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Wardog",
+          "day": 29
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Ron",
+          "day": 31
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Aurora",
+          "day": 34
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Rick",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Chris",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Victoria",
+      "original_tribe": "Kama",
+      "tribe_color": "",
+      "placement": "15th voted out",
+      "days_lasted": 36,
+      "votes_against": 2,
+      "voting_history": [
+        {
+          "tribal_council": 5,
+          "voted_for": "Aubry",
+          "day": 13
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Lauren",
+          "day": 16
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Wendy",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Joe",
+          "day": 19
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Eric",
+          "day": 22
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Julia",
+          "day": 23
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "David",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Kelley",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Wardog",
+          "day": 29
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Rick",
+          "day": 31
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Aurora",
+          "day": 34
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Chris",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Aurora",
+      "original_tribe": "Kama",
+      "tribe_color": "",
+      "placement": "14th voted out",
+      "days_lasted": 34,
+      "votes_against": 12,
+      "voting_history": [
+        {
+          "tribal_council": 7,
+          "voted_for": "Rick",
+          "day": 19
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Eric",
+          "day": 22
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "David",
+          "day": 23
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "David",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Kelley",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Wardog",
+          "day": 29
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Rick",
+          "day": 31
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Julie",
+          "day": 34
+        }
+      ]
+    },
+    {
+      "name": "Ron",
+      "original_tribe": "Kama",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 31,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 7,
+          "voted_for": "Joe",
+          "day": 19
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Kelley",
+          "day": 22
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Julia",
+          "day": 23
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "David",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Kelley",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Wardog",
+          "day": 29
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Rick",
+          "day": 31
+        }
+      ]
+    },
+    {
+      "name": "Wardog",
+      "original_tribe": "Manu",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 29,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Wendy",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Keith",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Chris",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Rick",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Wendy",
+          "day": 16
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Wendy",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "David",
+          "day": 19
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Eric",
+          "day": 22
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Julia",
+          "day": 23
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "David",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Kelley",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Aurora",
+          "day": 29
+        }
+      ]
+    },
+    {
+      "name": "Kelley",
+      "original_tribe": "Manu",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 27,
+      "votes_against": 14,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Wendy",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Keith",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Chris",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Rick",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Wendy",
+          "day": 16
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Wendy",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "David",
+          "day": 19
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Eric",
+          "day": 22
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Julia",
+          "day": 23
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "David",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Aurora",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "David",
+      "original_tribe": "Manu",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 25,
+      "votes_against": 12,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Reem",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Keith",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Chris",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Lauren",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Wendy",
+          "day": 16
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Wendy",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Kelley",
+          "day": 19
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Eric",
+          "day": 22
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Julia",
+          "day": 23
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Wardog",
+          "day": 25
+        }
+      ]
+    },
+    {
+      "name": "Julia",
+      "original_tribe": "Kama",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 23,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 7,
+          "voted_for": "Joe",
+          "day": 19
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Eric",
+          "day": 22
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Kelley",
+          "day": 23
+        }
+      ]
+    },
+    {
+      "name": "Eric",
+      "original_tribe": "Kama",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 22,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 5,
+          "voted_for": "Aubry",
+          "day": 13
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Lauren",
+          "day": 16
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Wendy",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Joe",
+          "day": 19
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Kelley",
+          "day": 22
+        }
+      ]
+    },
+    {
+      "name": "Joe",
+      "original_tribe": "Kama",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 19,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 7,
+          "voted_for": "Rick",
+          "day": 19
+        }
+      ]
+    },
+    {
+      "name": "Wendy",
+      "original_tribe": "Manu",
+      "tribe_color": "",
+      "placement": "6th voted out; Quit EoE",
+      "days_lasted": 16,
+      "votes_against": 15,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Lauren",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Kelley",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Kelley",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Aubry",
+          "day": 13
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Lauren",
+          "day": 16
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "",
+          "day": 16
+        }
+      ]
+    },
+    {
+      "name": "Aubry",
+      "original_tribe": "Kama",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 13,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 5,
+          "voted_for": "Wendy",
+          "day": 13
+        }
+      ]
+    },
+    {
+      "name": "Keith",
+      "original_tribe": "Manu",
+      "tribe_color": "",
+      "placement": "2nd voted out; Quit EoE",
+      "days_lasted": 6,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Reem",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Wendy",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Reem",
+      "original_tribe": "Manu",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Kelley",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

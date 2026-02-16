@@ -1,0 +1,921 @@
+{
+  "season": 34,
+  "season_name": "Survivor: Game Changers",
+  "castaways": [
+    {
+      "name": "Sarah",
+      "original_tribe": "Nuku",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 6,
+          "voted_for": "Sandra",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jeff",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Michaela",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ozzy",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Debbie",
+          "day": 26
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Zeke",
+          "day": 29
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Sierra",
+          "day": 32
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Andrea",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Michaela",
+          "day": 35
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Michaela",
+          "day": 35
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Tai",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Aubry",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Tai",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Brad",
+      "original_tribe": "Nuku",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 2,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Caleb",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Malcolm",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Hali",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ozzy",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Andrea",
+          "day": 26
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Tai",
+          "day": 29
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Andrea",
+          "day": 32
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Andrea",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Michaela",
+          "day": 35
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Aubry",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Aubry",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Tai",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Troyzan",
+      "original_tribe": "Mana",
+      "tribe_color": "",
+      "placement": "2nd Runner-up",
+      "days_lasted": 39,
+      "votes_against": 2,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Ciera",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Tony",
+          "day": 6
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Hali",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ozzy",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Andrea",
+          "day": 26
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Tai",
+          "day": 29
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Andrea",
+          "day": 32
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Andrea",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Michaela",
+          "day": 35
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Tai",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Aubry",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Tai",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Tai",
+      "original_tribe": "Nuku",
+      "tribe_color": "",
+      "placement": "16th voted out",
+      "days_lasted": 38,
+      "votes_against": 12,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Caleb",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Malcolm",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Sandra",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jeff",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Hali",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ozzy",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Andrea",
+          "day": 26
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Sierra",
+          "day": 29
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Sierra",
+          "day": 32
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Andrea",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "",
+          "day": 35
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Sarah",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Aubry",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Troyzan",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Aubry",
+      "original_tribe": "Mana",
+      "tribe_color": "",
+      "placement": "15th voted out",
+      "days_lasted": 37,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Ciera",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Tony",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Sierra",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Michaela",
+          "day": 13
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Hali",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Zeke",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Debbie",
+          "day": 26
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Zeke",
+          "day": 29
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Sierra",
+          "day": 32
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Brad",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Tai",
+          "day": 35
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Sarah",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Troyzan",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Cirie",
+      "original_tribe": "Nuku",
+      "tribe_color": "",
+      "placement": "Eliminated",
+      "days_lasted": 36,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 8,
+          "voted_for": "Michaela",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Sierra",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Debbie",
+          "day": 26
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Zeke",
+          "day": 29
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Sierra",
+          "day": 32
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Andrea",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Aubry",
+          "day": 35
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Sarah",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Michaela",
+      "original_tribe": "Mana",
+      "tribe_color": "",
+      "placement": "14th voted out",
+      "days_lasted": 35,
+      "votes_against": 11,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Ciera",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Tony",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Sierra",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "J.T.",
+          "day": 13
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Zeke",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Zeke",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Debbie",
+          "day": 26
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Zeke",
+          "day": 29
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Sierra",
+          "day": 32
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Andrea",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Tai",
+          "day": 35
+        }
+      ]
+    },
+    {
+      "name": "Andrea",
+      "original_tribe": "Nuku",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 33,
+      "votes_against": 14,
+      "voting_history": [
+        {
+          "tribal_council": 6,
+          "voted_for": "Sandra",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jeff",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Michaela",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Zeke",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Debbie",
+          "day": 26
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Zeke",
+          "day": 29
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Sierra",
+          "day": 32
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Brad",
+          "day": 33
+        }
+      ]
+    },
+    {
+      "name": "Sierra",
+      "original_tribe": "Nuku",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 32,
+      "votes_against": 15,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Caleb",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Malcolm",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Hali",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ozzy",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Andrea",
+          "day": 26
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Tai",
+          "day": 29
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Andrea",
+          "day": 32
+        }
+      ]
+    },
+    {
+      "name": "Zeke",
+      "original_tribe": "Nuku",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 29,
+      "votes_against": 11,
+      "voting_history": [
+        {
+          "tribal_council": 6,
+          "voted_for": "Sandra",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jeff",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Michaela",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Aubry",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Debbie",
+          "day": 26
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Sierra",
+          "day": 29
+        }
+      ]
+    },
+    {
+      "name": "Debbie",
+      "original_tribe": "Nuku",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 26,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Caleb",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Malcolm",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jeff",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Hali",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ozzy",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ozzy",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Andrea",
+          "day": 26
+        }
+      ]
+    },
+    {
+      "name": "Ozzy",
+      "original_tribe": "Nuku",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 24,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 6,
+          "voted_for": "Sandra",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jeff",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Hali",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Zeke",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Hali",
+      "original_tribe": "Mana",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 21,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Ciera",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Tony",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Caleb",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Malcolm",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Zeke",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Jeff",
+      "original_tribe": "Mana",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 18,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Ciera",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Tony",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Sierra",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "J.T.",
+          "day": 13
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Tai",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "",
+          "day": 18
+        }
+      ]
+    },
+    {
+      "name": "Sandra",
+      "original_tribe": "Mana",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 16,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Ciera",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Aubry",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Sierra",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "J.T.",
+          "day": 13
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Tai",
+          "day": 16
+        }
+      ]
+    },
+    {
+      "name": "J.T.",
+      "original_tribe": "Nuku",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 13,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "Sierra",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Michaela",
+          "day": 13
+        }
+      ]
+    },
+    {
+      "name": "Malcolm",
+      "original_tribe": "Mana",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 11,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Ciera",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Tony",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Sierra",
+          "day": 11
+        }
+      ]
+    },
+    {
+      "name": "Caleb",
+      "original_tribe": "Mana",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 9,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Ciera",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Tony",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Hali",
+          "day": 9
+        }
+      ]
+    },
+    {
+      "name": "Tony",
+      "original_tribe": "Mana",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 6,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Ciera",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Aubry",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Ciera",
+      "original_tribe": "Mana",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Michaela",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

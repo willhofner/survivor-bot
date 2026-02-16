@@ -1,0 +1,24 @@
+{
+  "name": "Chris Daugherty",
+  "season": 9,
+  "season_name": "Survivor: Vanuatu",
+  "archetype": {
+    "voting_control": 7,
+    "physical_game": 6,
+    "social_capital": 9,
+    "strategic_aggression": 7
+  },
+  "signature_move": "After being the last man standing on Day 27 with a 6-1 female majority against him, Chris exploited cracks in the women's alliance by convincing Twila and Scout to flip on Leann, triggering a chain reaction that let him eliminate every remaining woman except the two he could beat at Final Tribal Council.",
+  "stats": {
+    "voting_accuracy": 83,
+    "immunity_wins": 3,
+    "reward_wins": 0,
+    "jury_votes": "5-2",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 3,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Chris played one of the greatest underdog games in Survivor history, surviving as the sole remaining male after the women's Yasur Alliance systematically eliminated every man post-merge. His game was defined by elite social maneuvering: he built genuine trust with Twila and Scout, weaponized the fractures between the younger and older women, and won three critical immunity challenges in the final stretch. At Final Tribal Council, he owned his deceptions and apologized sincerely, presenting a stark contrast to Twila's combative defensiveness, earning a decisive 5-2 jury victory.",
+  "fun_fact": "Chris was nearly the first person eliminated from his tribe -- he received 3 votes at the very first tribal council (from Brook, John K., and John P.) but survived because the majority alliance targeted Brook instead."
+}

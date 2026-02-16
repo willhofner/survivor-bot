@@ -1,0 +1,901 @@
+{
+  "season": 23,
+  "season_name": "Survivor: South Pacific",
+  "castaways": [
+    {
+      "name": "Sophie",
+      "original_tribe": "Upolu",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Stacey",
+          "day": 5
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Stacey",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Edna",
+          "day": 16
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Keith",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Keith",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ozzy",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jim",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Dawn",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Whitney",
+          "day": 27
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Cochran",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Edna",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Brandon",
+          "day": 35
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Rick",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Ozzy",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Coach",
+      "original_tribe": "Upolu",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Christine",
+          "day": 5
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Stacey",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Mikayla",
+          "day": 16
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Keith",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Keith",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ozzy",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jim",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Dawn",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Whitney",
+          "day": 27
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Cochran",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Edna",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Brandon",
+          "day": 35
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Rick",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Ozzy",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Albert",
+      "original_tribe": "Upolu",
+      "tribe_color": "",
+      "placement": "2nd Runner-up",
+      "days_lasted": 39,
+      "votes_against": 1,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Christine",
+          "day": 5
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Stacey",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Edna",
+          "day": 16
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Keith",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Keith",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ozzy",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jim",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Dawn",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Whitney",
+          "day": 27
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Cochran",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Edna",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Sophie",
+          "day": 35
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Rick",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Ozzy",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Ozzy",
+      "original_tribe": "Savaii",
+      "tribe_color": "",
+      "placement": "17th voted out",
+      "days_lasted": 38,
+      "votes_against": 17,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Semhar",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Papa Bear",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Cochran",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Cochran",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Rick",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Rick",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Cochran",
+          "day": 22
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Sophie",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Albert",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Rick",
+      "original_tribe": "Upolu",
+      "tribe_color": "",
+      "placement": "16th voted out",
+      "days_lasted": 37,
+      "votes_against": 15,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Stacey",
+          "day": 5
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Stacey",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Mikayla",
+          "day": 16
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Keith",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ozzy",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jim",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Dawn",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Whitney",
+          "day": 27
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Cochran",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Edna",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Brandon",
+          "day": 35
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Sophie",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Brandon",
+      "original_tribe": "Upolu",
+      "tribe_color": "",
+      "placement": "15th voted out",
+      "days_lasted": 35,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Christine",
+          "day": 5
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Stacey",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Mikayla",
+          "day": 16
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Keith",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Keith",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ozzy",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jim",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Dawn",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Whitney",
+          "day": 27
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Cochran",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Edna",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Sophie",
+          "day": 35
+        }
+      ]
+    },
+    {
+      "name": "Edna",
+      "original_tribe": "Upolu",
+      "tribe_color": "",
+      "placement": "14th voted out",
+      "days_lasted": 32,
+      "votes_against": 15,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Stacey",
+          "day": 5
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Stacey",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Mikayla",
+          "day": 16
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Keith",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Keith",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ozzy",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jim",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Dawn",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Whitney",
+          "day": 27
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Rick",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Brandon",
+          "day": 32
+        }
+      ]
+    },
+    {
+      "name": "Cochran",
+      "original_tribe": "Savaii",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 30,
+      "votes_against": 13,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Semhar",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Papa Bear",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Elyse",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Ozzy",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Rick",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Keith",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ozzy",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jim",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Dawn",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Whitney",
+          "day": 27
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Rick",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "Dawn",
+      "original_tribe": "Savaii",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 27,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Semhar",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Papa Bear",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Elyse",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Ozzy",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Rick",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Rick",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ozzy",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Edna",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Edna",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "Whitney",
+      "original_tribe": "Savaii",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 27,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Semhar",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Papa Bear",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Dawn",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Ozzy",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Rick",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Rick",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ozzy",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Edna",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Edna",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Cochran",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "Jim",
+      "original_tribe": "Savaii",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 24,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Semhar",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Cochran",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Elyse",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Ozzy",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Rick",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Rick",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Cochran",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Edna",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Keith",
+      "original_tribe": "Savaii",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 21,
+      "votes_against": 12,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Semhar",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Papa Bear",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Dawn",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Ozzy",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Rick",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Mikayla",
+      "original_tribe": "Upolu",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 16,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Christine",
+          "day": 5
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Stacey",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Edna",
+          "day": 16
+        }
+      ]
+    },
+    {
+      "name": "Elyse",
+      "original_tribe": "Savaii",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 14,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Semhar",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Papa Bear",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Cochran",
+          "day": 14
+        }
+      ]
+    },
+    {
+      "name": "Stacey",
+      "original_tribe": "Upolu",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 11,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Sophie",
+          "day": 5
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Edna",
+          "day": 11
+        }
+      ]
+    },
+    {
+      "name": "Papa Bear",
+      "original_tribe": "Savaii",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 8,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Semhar",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Jim",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "name": "Christine",
+      "original_tribe": "Upolu",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 5,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Edna",
+          "day": 5
+        }
+      ]
+    },
+    {
+      "name": "Semhar",
+      "original_tribe": "Savaii",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Cochran",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

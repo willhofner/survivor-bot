@@ -1,0 +1,24 @@
+{
+  "name": "Natalie White",
+  "season": 19,
+  "season_name": "Survivor: Samoa",
+  "archetype": {
+    "voting_control": 4,
+    "physical_game": 2,
+    "social_capital": 9,
+    "strategic_aggression": 3
+  },
+  "signature_move": "Persuaded Galu members to turn on their own ally Erik Cardona at the first post-merge tribal council, fracturing the majority alliance and creating the opening that allowed the decimated Foa Foa Four to systematically dismantle the 8-4 Galu numbers advantage.",
+  "stats": {
+    "voting_accuracy": 100,
+    "immunity_wins": 0,
+    "reward_wins": 0,
+    "jury_votes": "7-2-0",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 8,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Natalie played a masterful under-the-radar social game, deliberately positioning herself as non-threatening behind Russell Hantz's aggressive gameplay while building genuine relationships with jury members that Russell systematically burned. Her critical strategic contribution was orchestrating the Erik Cardona blindside by leveraging her social bonds with Galu women, proving she was not merely a passive passenger but a player who struck at precisely the right moment. She understood that in a season dominated by Russell's confrontational style, the jury would reward the player who outwitted them with grace rather than the one who outplayed them with cruelty.",
+  "fun_fact": "Natalie is one of the youngest women to ever win Survivor, taking the title at age 26, and her 7-2-0 jury victory was one of the most lopsided Final Tribal Council results at the time -- a stunning rebuke of Russell Hantz, who had found multiple hidden immunity idols and controlled nearly every vote but alienated almost the entire jury in the process."
+}

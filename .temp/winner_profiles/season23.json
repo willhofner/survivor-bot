@@ -1,0 +1,24 @@
+{
+  "name": "Sophie Clarke",
+  "season": 23,
+  "season_name": "Survivor: South Pacific",
+  "archetype": {
+    "voting_control": 7,
+    "physical_game": 6,
+    "social_capital": 5,
+    "strategic_aggression": 4
+  },
+  "signature_move": "Winning the final immunity challenge over challenge beast Ozzy Lusth, then eviscerating Coach at Final Tribal Council by calling him 'a little girl' and exposing his lies, swinging the jury decisively in her favor.",
+  "stats": {
+    "voting_accuracy": 85,
+    "immunity_wins": 3,
+    "reward_wins": 0,
+    "jury_votes": "6-3",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 5,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Sophie embedded herself in the dominant Upolu alliance ('The Family') from Day 1 alongside Coach, Albert, Brandon, and Rick, then rode the Pagonging of the Savaii tribe post-merge after Cochran's pivotal flip. She played an intentionally under-the-radar game, suppressing her intelligence to avoid being targeted, while maintaining enough strategic awareness to be on the correct side of 11 out of 13 tribal council votes. Her victory was sealed by clutching the final immunity win over Ozzy and delivering a brutally honest Final Tribal Council performance that contrasted sharply with Coach's evasiveness.",
+  "fun_fact": "Sophie was only 22 years old when she won South Pacific, making her one of the youngest Sole Survivors in the show's history. She was a medical student at the time and later returned for Winners at War (Season 40), where she was blindsided by Tony Vlachos with an idol still in her pocket."
+}

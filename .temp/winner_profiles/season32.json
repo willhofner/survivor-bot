@@ -1,0 +1,24 @@
+{
+  "name": "Michele Fitzgerald",
+  "season": 32,
+  "season_name": "Survivor: Kaoh Rong",
+  "archetype": {
+    "voting_control": 5,
+    "physical_game": 7,
+    "social_capital": 9,
+    "strategic_aggression": 4
+  },
+  "signature_move": "Won the final reward challenge to earn the unprecedented power to remove a juror, strategically eliminating Neal Gottlieb from the jury to neutralize his potential advocacy for Aubry at Final Tribal Council.",
+  "stats": {
+    "voting_accuracy": 67,
+    "immunity_wins": 2,
+    "reward_wins": 1,
+    "jury_votes": "5-2",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 2,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Michele played one of the most socially dominant winning games in Survivor history, building genuine personal connections that translated into jury votes despite being perceived as a lesser strategic threat than finalist Aubry Bracco. She avoided becoming a target through most of the post-merge by staying adaptable rather than dictating votes, pivoting from the women's alliance to side voting positions as needed. Her late-game immunity run and the jury removal advantage were clutch moves that secured her path to a decisive 5-2-0 victory.",
+  "fun_fact": "At 24, Michele was the youngest winner since Jud 'Fabio' Birza, and her win sparked one of the most polarizing Survivor debates ever — fans and even host Jeff Probst openly questioned whether the 'right person' won over strategic powerhouse Aubry Bracco, making Michele the poster child for the social game's value in Survivor."
+}

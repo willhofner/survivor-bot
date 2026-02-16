@@ -1,0 +1,24 @@
+{
+  "name": "Parvati Shallow",
+  "season": 16,
+  "season_name": "Survivor: Micronesia",
+  "archetype": {
+    "voting_control": 10,
+    "physical_game": 5,
+    "social_capital": 10,
+    "strategic_aggression": 9
+  },
+  "signature_move": "Founded the Black Widow Brigade, an all-female alliance that systematically blindsided every remaining man post-merge, culminating in convincing Erik Reichenbach to surrender his immunity necklace at Final 5 — widely regarded as the greatest single move in Survivor history.",
+  "stats": {
+    "voting_accuracy": 100,
+    "immunity_wins": 1,
+    "reward_wins": 0,
+    "jury_votes": "5-3",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 4,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Parvati leveraged her social game and interpersonal magnetism to build trust across tribal lines, then weaponized those relationships by assembling the Black Widow Brigade — a five-woman alliance that controlled every post-merge vote. She orchestrated Ozzy's 5-4 blindside, manipulated Erik into giving up immunity, and maintained alliance loyalty despite being an obvious threat, winning a 5-3 jury vote over Amanda Kimmel by owning her cutthroat gameplay at Final Tribal Council.",
+  "fun_fact": "Parvati is one of only two players in Survivor history to win the game with a 100% voting accuracy rate across all tribal councils she attended in her winning season — she voted correctly at every single one of the 8 tribals where she cast a vote."
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Tina Wesson",
+  "season": 2,
+  "season_name": "Survivor: The Australian Outback",
+  "archetype": {
+    "voting_control": 10,
+    "physical_game": 4,
+    "social_capital": 9,
+    "strategic_aggression": 6
+  },
+  "signature_move": "Cultivated a deep loyalty with challenge beast Colby Donaldson throughout the game, ultimately convincing him to take her to the Final Two over the easier-to-beat Keith Famie — a decision widely regarded as one of the biggest strategic mistakes in Survivor history, and Tina's greatest triumph.",
+  "stats": {
+    "voting_accuracy": 100,
+    "immunity_wins": 0,
+    "reward_wins": 1,
+    "jury_votes": "4-3",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 0,
+    "days_lasted": 42
+  },
+  "strategy_summary": "Tina played the original social-strategic game, serving as the Ogakor tribe matriarch who held her alliance together through every vote while never once receiving a vote against her. She maintained perfect voting accuracy across all 10 tribal councils she attended, always voting with the majority. Her genius was making Colby feel that loyalty and honor mattered more than optimal gameplay, securing a Final Two seat she could win on jury management alone.",
+  "fun_fact": "Tina is the first woman to ever win Survivor, and she did so without winning a single individual immunity challenge — proving that social dominance can outplay physical dominance in the game."
+}

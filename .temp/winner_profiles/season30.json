@@ -1,0 +1,24 @@
+{
+  "name": "Mike Holloway",
+  "season": 30,
+  "season_name": "Survivor: Worlds Apart",
+  "archetype": {
+    "voting_control": 4,
+    "physical_game": 10,
+    "social_capital": 5,
+    "strategic_aggression": 6
+  },
+  "signature_move": "After being exposed as the primary target at the Survivor Auction (Day 25), Mike won 5 consecutive individual immunity challenges from Final 7 to Final 4, making himself immune every time the majority alliance could have eliminated him.",
+  "stats": {
+    "voting_accuracy": 82,
+    "immunity_wins": 5,
+    "reward_wins": 1,
+    "jury_votes": "6-1-1",
+    "idols_played": 1,
+    "idols_successful": 1,
+    "times_received_votes": 4,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Mike's game is the quintessential challenge beast path to victory. After leading the Blue Collar alliance to merge dominance, he overplayed his hand by publicly confronting Rodney's sub-alliance at the Survivor Auction, instantly becoming public enemy number one. From that point forward, he survived exclusively through individual immunity wins and a well-timed hidden immunity idol play, then leveraged the jury's respect for his fighting spirit to win a decisive 6-1-1 final vote against Carolyn and Will.",
+  "fun_fact": "Mike's 5 consecutive individual immunity wins from the Final 7 onward is one of the longest end-game immunity streaks in Survivor history, and he is one of the few winners who was the primary target at virtually every post-merge tribal council he attended."
+}

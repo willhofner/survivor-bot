@@ -1,0 +1,547 @@
+{% extends "base.html" %}
+
+{% block title %}Compare Winners - Survivor{% endblock %}
+
+{% block content %}
+<div class="compare-view">
+    <h1 class="text-center mb-3 survivor-title">
+        <span class="torch-large">&#x2694;&#xFE0F;</span><br>
+        WINNER COMPARISON
+    </h1>
+    <p class="text-center subtitle mb-4">Select 2-4 winners to compare their strategic profiles side-by-side</p>
+
+    <!-- WINNER SELECTOR -->
+    <div class="compare-selector mb-4">
+        <div class="selector-row">
+            <div class="selector-slots" id="selectorSlots">
+                <div class="selector-slot" id="slot-0">
+                    <select class="form-select form-select-sm winner-select" data-slot="0" onchange="selectWinner(0, this.value)">
+                        <option value="">Choose Winner 1...</option>
+                        {% for w in winners %}
+                        <option value="{{ w.season }}">S{{ w.season }}: {{ w.name }} — {{ w.season_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="selector-slot" id="slot-1">
+                    <select class="form-select form-select-sm winner-select" data-slot="1" onchange="selectWinner(1, this.value)">
+                        <option value="">Choose Winner 2...</option>
+                        {% for w in winners %}
+                        <option value="{{ w.season }}">S{{ w.season }}: {{ w.name }} — {{ w.season_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="selector-slot" id="slot-2">
+                    <select class="form-select form-select-sm winner-select" data-slot="2" onchange="selectWinner(2, this.value)">
+                        <option value="">+ Add Winner 3 (optional)</option>
+                        {% for w in winners %}
+                        <option value="{{ w.season }}">S{{ w.season }}: {{ w.name }} — {{ w.season_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="selector-slot" id="slot-3">
+                    <select class="form-select form-select-sm winner-select" data-slot="3" onchange="selectWinner(3, this.value)">
+                        <option value="">+ Add Winner 4 (optional)</option>
+                        {% for w in winners %}
+                        <option value="{{ w.season }}">S{{ w.season }}: {{ w.name }} — {{ w.season_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="quick-compare mt-3 text-center">
+                <span class="quick-label">Quick Compare:</span>
+                <button class="btn btn-sm btn-outline-survivor" onclick="quickCompare([1, 28])">Richard vs Tony</button>
+                <button class="btn btn-sm btn-outline-survivor" onclick="quickCompare([16, 20])">Parvati vs Sandra</button>
+                <button class="btn btn-sm btn-outline-survivor" onclick="quickCompare([22, 24])">Boston Rob vs Kim</button>
+                <button class="btn btn-sm btn-outline-survivor" onclick="quickCompare([10, 37])">Tom vs Nick</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- COMPARISON CONTENT (hidden until 2+ selected) -->
+    <div id="comparisonContent" style="display: none;">
+
+        <!-- OVERLAPPING RADAR CHART -->
+        <div class="compare-radar-section mb-4">
+            <h2 class="section-title mb-3">Strategic Profile Overlay</h2>
+            <div class="radar-container">
+                <canvas id="compareRadar" width="400" height="400"></canvas>
+            </div>
+        </div>
+
+        <!-- STAT COMPARISON TABLE -->
+        <div class="compare-table-section mb-4">
+            <h2 class="section-title mb-3">Head-to-Head Stats</h2>
+            <div class="table-responsive">
+                <table class="table table-dark table-hover compare-table">
+                    <thead>
+                        <tr>
+                            <th>Stat</th>
+                            <th id="col-header-0" class="compare-col"></th>
+                            <th id="col-header-1" class="compare-col"></th>
+                            <th id="col-header-2" class="compare-col" style="display:none;"></th>
+                            <th id="col-header-3" class="compare-col" style="display:none;"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="compareTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ARCHETYPE BAR COMPARISON -->
+        <div class="compare-bars-section mb-4">
+            <h2 class="section-title mb-3">Archetype Breakdown</h2>
+            <div id="archetypeBars"></div>
+        </div>
+
+        <!-- STRATEGY COMPARISON -->
+        <div class="compare-strategies-section mb-4">
+            <h2 class="section-title mb-3">Strategic Approaches</h2>
+            <div class="row g-3" id="strategyCards"></div>
+        </div>
+    </div>
+
+    <!-- EMPTY STATE -->
+    <div id="emptyState" class="text-center py-5">
+        <div style="font-size: 4rem; margin-bottom: 1rem;">&#x2694;&#xFE0F;</div>
+        <p class="text-muted" style="font-size: 1.2rem;">Select at least two winners above to compare their games</p>
+    </div>
+</div>
+
+<style>
+.compare-view {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.compare-selector {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--bamboo);
+    border-radius: 12px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.selector-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.winner-select {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid var(--bamboo) !important;
+    color: #fff !important;
+    font-size: 0.85rem;
+}
+
+.winner-select option {
+    background: #2a2a2a;
+    color: #fff;
+}
+
+.quick-label {
+    color: var(--sand);
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+}
+
+.section-title {
+    color: var(--torch-orange);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.radar-container {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid var(--bamboo);
+}
+
+.radar-container canvas {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.compare-table {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--bamboo);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.compare-table th {
+    background: rgba(255, 107, 53, 0.3);
+    color: var(--torch-orange);
+    font-weight: bold;
+    border-bottom: 2px solid var(--torch-orange);
+    text-align: center;
+    min-width: 120px;
+}
+
+.compare-table th:first-child {
+    text-align: left;
+}
+
+.compare-table td {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.compare-table td:first-child {
+    text-align: left;
+    color: var(--sand);
+    font-weight: bold;
+}
+
+.stat-best {
+    color: gold !important;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.archetype-compare-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.arch-compare-label {
+    min-width: 120px;
+    color: var(--sand);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.arch-compare-bars {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.arch-compare-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.arch-compare-name {
+    min-width: 100px;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: right;
+}
+
+.arch-compare-track {
+    flex: 1;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.arch-compare-fill {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.5s ease;
+}
+
+.arch-compare-val {
+    min-width: 25px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.strategy-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--bamboo);
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: 100%;
+}
+
+.strategy-card-name {
+    color: gold;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.strategy-card-season {
+    color: var(--sand);
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.strategy-card-summary {
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.strategy-card-move {
+    background: rgba(255, 215, 0, 0.1);
+    border-left: 3px solid gold;
+    padding: 0.75rem;
+    border-radius: 0 5px 5px 0;
+}
+
+.strategy-card-move-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: gold;
+    margin-bottom: 0.25rem;
+}
+
+.strategy-card-move-text {
+    color: #fff;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .selector-slots { grid-template-columns: 1fr; }
+    .archetype-compare-row { flex-direction: column; align-items: stretch; }
+    .arch-compare-label { min-width: auto; text-align: center; }
+    .arch-compare-name { min-width: 80px; }
+}
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+const allWinners = {{ winners|tojson }};
+const selectedWinners = [null, null, null, null];
+const COLORS = [
+    { bg: 'rgba(255, 215, 0, 0.2)', border: 'gold', point: 'gold' },
+    { bg: 'rgba(65, 105, 225, 0.2)', border: '#4169E1', point: '#4169E1' },
+    { bg: 'rgba(255, 20, 147, 0.2)', border: '#FF1493', point: '#FF1493' },
+    { bg: 'rgba(0, 255, 127, 0.2)', border: '#00FF7F', point: '#00FF7F' }
+];
+
+let radarChart = null;
+
+function getWinner(season) {
+    return allWinners.find(w => w.season === parseInt(season));
+}
+
+function selectWinner(slot, seasonVal) {
+    if (!seasonVal) {
+        selectedWinners[slot] = null;
+    } else {
+        selectedWinners[slot] = getWinner(seasonVal);
+    }
+    updateComparison();
+}
+
+function quickCompare(seasons) {
+    // Reset all
+    selectedWinners.fill(null);
+    document.querySelectorAll('.winner-select').forEach((sel, i) => {
+        sel.value = seasons[i] !== undefined ? seasons[i] : '';
+        if (seasons[i] !== undefined) {
+            selectedWinners[i] = getWinner(seasons[i]);
+        }
+    });
+    updateComparison();
+}
+
+function updateComparison() {
+    const active = selectedWinners.filter(w => w !== null);
+    const content = document.getElementById('comparisonContent');
+    const empty = document.getElementById('emptyState');
+
+    if (active.length < 2) {
+        content.style.display = 'none';
+        empty.style.display = 'block';
+        return;
+    }
+
+    content.style.display = 'block';
+    empty.style.display = 'none';
+
+    updateRadarChart(active);
+    updateStatsTable(active);
+    updateArchetypeBars(active);
+    updateStrategyCards(active);
+}
+
+function updateRadarChart(winners) {
+    const canvas = document.getElementById('compareRadar');
+    if (radarChart) radarChart.destroy();
+
+    const datasets = winners.map((w, i) => ({
+        label: w.name,
+        data: [
+            w.archetype.voting_control,
+            w.archetype.physical_game,
+            w.archetype.social_capital,
+            w.archetype.strategic_aggression
+        ],
+        backgroundColor: COLORS[i].bg,
+        borderColor: COLORS[i].border,
+        borderWidth: 2,
+        pointBackgroundColor: COLORS[i].point,
+        pointBorderColor: '#fff',
+        pointRadius: 5,
+        pointHoverRadius: 7
+    }));
+
+    radarChart = new Chart(canvas, {
+        type: 'radar',
+        data: {
+            labels: ['Vote Control', 'Physical Game', 'Social Capital', 'Strategic Aggression'],
+            datasets: datasets
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom',
+                    labels: { color: '#F5DEB3', font: { size: 13 }, padding: 20 }
+                }
+            },
+            scales: {
+                r: {
+                    beginAtZero: true,
+                    max: 10,
+                    ticks: { display: true, stepSize: 2, color: 'rgba(255,255,255,0.5)', backdropColor: 'transparent' },
+                    grid: { color: 'rgba(255, 255, 255, 0.15)' },
+                    angleLines: { color: 'rgba(255, 255, 255, 0.15)' },
+                    pointLabels: { color: '#F5DEB3', font: { size: 13, weight: 'bold' } }
+                }
+            }
+        }
+    });
+}
+
+function updateStatsTable(winners) {
+    // Show/hide column headers
+    winners.forEach((w, i) => {
+        const th = document.getElementById(`col-header-${i}`);
+        th.textContent = w.name;
+        th.style.display = '';
+        th.style.color = COLORS[i].border;
+    });
+    for (let i = winners.length; i < 4; i++) {
+        document.getElementById(`col-header-${i}`).style.display = 'none';
+    }
+
+    const stats = [
+        { label: 'Season', key: w => `S${w.season}`, highlight: false },
+        { label: 'Jury Vote', key: w => w.stats.jury_votes, highlight: false },
+        { label: 'Voting Accuracy', key: w => `${w.stats.voting_accuracy}%`, numKey: w => w.stats.voting_accuracy, highlight: true },
+        { label: 'Immunity Wins', key: w => w.stats.immunity_wins, numKey: w => w.stats.immunity_wins, highlight: true },
+        { label: 'Reward Wins', key: w => w.stats.reward_wins, numKey: w => w.stats.reward_wins, highlight: true },
+        { label: 'Idols Played', key: w => w.stats.idols_played, numKey: w => w.stats.idols_played, highlight: true },
+        { label: 'Idols Successful', key: w => w.stats.idols_successful, numKey: w => w.stats.idols_successful, highlight: true },
+        { label: 'Votes Against', key: w => w.stats.times_received_votes, numKey: w => w.stats.times_received_votes, highlight: true, lower: true },
+        { label: 'Days Lasted', key: w => w.stats.days_lasted, numKey: w => w.stats.days_lasted, highlight: true },
+        { label: 'Vote Control', key: w => w.archetype.voting_control, numKey: w => w.archetype.voting_control, highlight: true },
+        { label: 'Physical Game', key: w => w.archetype.physical_game, numKey: w => w.archetype.physical_game, highlight: true },
+        { label: 'Social Capital', key: w => w.archetype.social_capital, numKey: w => w.archetype.social_capital, highlight: true },
+        { label: 'Strategic Aggression', key: w => w.archetype.strategic_aggression, numKey: w => w.archetype.strategic_aggression, highlight: true }
+    ];
+
+    const tbody = document.getElementById('compareTableBody');
+    tbody.innerHTML = stats.map(stat => {
+        const values = winners.map(w => stat.key(w));
+        const numValues = stat.numKey ? winners.map(w => stat.numKey(w)) : null;
+
+        let bestIdx = -1;
+        if (stat.highlight && numValues) {
+            if (stat.lower) {
+                bestIdx = numValues.indexOf(Math.min(...numValues));
+            } else {
+                bestIdx = numValues.indexOf(Math.max(...numValues));
+            }
+        }
+
+        let cells = `<td>${stat.label}</td>`;
+        winners.forEach((w, i) => {
+            const cls = (i === bestIdx) ? 'stat-best' : '';
+            cells += `<td class="${cls}">${values[i]}</td>`;
+        });
+        for (let i = winners.length; i < 4; i++) {
+            cells += `<td style="display:none;"></td>`;
+        }
+        return `<tr>${cells}</tr>`;
+    }).join('');
+}
+
+function updateArchetypeBars(winners) {
+    const axes = [
+        { key: 'voting_control', label: 'Vote Control', color: '#FF6B35' },
+        { key: 'physical_game', label: 'Physical Game', color: '#4169E1' },
+        { key: 'social_capital', label: 'Social Capital', color: '#FFD700' },
+        { key: 'strategic_aggression', label: 'Strategic Aggression', color: '#FF1493' }
+    ];
+
+    const container = document.getElementById('archetypeBars');
+    container.innerHTML = axes.map(axis => {
+        const bars = winners.map((w, i) => {
+            const val = w.archetype[axis.key];
+            return `
+                <div class="arch-compare-bar">
+                    <span class="arch-compare-name" style="color: ${COLORS[i].border}">${w.name}</span>
+                    <div class="arch-compare-track">
+                        <div class="arch-compare-fill" style="width: ${val * 10}%; background: ${COLORS[i].border};"></div>
+                    </div>
+                    <span class="arch-compare-val" style="color: ${COLORS[i].border}">${val}</span>
+                </div>
+            `;
+        }).join('');
+
+        return `
+            <div class="archetype-compare-row">
+                <div class="arch-compare-label">${axis.label}</div>
+                <div class="arch-compare-bars">${bars}</div>
+            </div>
+        `;
+    }).join('');
+}
+
+function updateStrategyCards(winners) {
+    const container = document.getElementById('strategyCards');
+    container.innerHTML = winners.map((w, i) => `
+        <div class="col-md-${12 / Math.min(winners.length, 3)}">
+            <div class="strategy-card" style="border-color: ${COLORS[i].border};">
+                <div class="strategy-card-name" style="color: ${COLORS[i].border};">${w.name}</div>
+                <div class="strategy-card-season">S${w.season}: ${w.season_name}</div>
+                <div class="strategy-card-summary">${w.strategy_summary}</div>
+                <div class="strategy-card-move">
+                    <div class="strategy-card-move-label">Signature Move</div>
+                    <div class="strategy-card-move-text">${w.signature_move}</div>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Handle URL params for direct links
+document.addEventListener('DOMContentLoaded', function() {
+    const params = new URLSearchParams(window.location.search);
+    const seasons = params.getAll('s');
+    if (seasons.length >= 2) {
+        quickCompare(seasons.map(Number));
+    }
+});
+</script>
+{% endblock %}

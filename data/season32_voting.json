@@ -1,0 +1,660 @@
+{
+  "season": 32,
+  "season_name": "Survivor: Ka\u00f4h R\u014dng",
+  "castaways": [
+    {
+      "name": "Michele",
+      "original_tribe": "Gondol",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 2,
+      "voting_history": [
+        {
+          "tribal_council": 9,
+          "voted_for": "Nick",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Debbie",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Tai",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Julia",
+          "day": 29
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Jason",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Aubry",
+          "day": 37
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Aubry",
+      "original_tribe": "Chan Loh",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Peter",
+          "day": 8
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Anna",
+          "day": 13
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Peter",
+          "day": 16
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Nick",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Debbie",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Scot",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Julia",
+          "day": 29
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Jason",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Cydney",
+          "day": 37
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Tai",
+      "original_tribe": "Gondol",
+      "tribe_color": "",
+      "placement": "2nd Runner-up",
+      "days_lasted": 39,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 6,
+          "voted_for": "Anna",
+          "day": 13
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Peter",
+          "day": 16
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jason",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Cydney",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Scot",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Julia",
+          "day": 29
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Michele",
+          "day": 32
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Michele",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Cydney",
+          "day": 37
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Cydney",
+      "original_tribe": "To Tang",
+      "tribe_color": "",
+      "placement": "Lost fire challenge",
+      "days_lasted": 37,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Alecia",
+          "day": 3
+        },
+        {
+          "tribal_council": 1,
+          "voted_for": "Darnell",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Jennifer",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Alecia",
+          "day": 11
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Nick",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Debbie",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Scot",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Julia",
+          "day": 29
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Jason",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Aubry",
+          "day": 37
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Joe",
+      "original_tribe": "Chan Loh",
+      "tribe_color": "",
+      "placement": "Medically evacuated",
+      "days_lasted": 34,
+      "votes_against": 1,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Liz",
+          "day": 8
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Liz",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Anna",
+          "day": 13
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Julia",
+          "day": 16
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Nick",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Scot",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Scot",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Julia",
+          "day": 29
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Jason",
+          "day": 32
+        }
+      ]
+    },
+    {
+      "name": "Jason",
+      "original_tribe": "To Tang",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 32,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Alecia",
+          "day": 3
+        },
+        {
+          "tribal_council": 1,
+          "voted_for": "Darnell",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Jennifer",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Alecia",
+          "day": 11
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Aubry",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Cydney",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Aubry",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Tai",
+          "day": 29
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Joe",
+          "day": 32
+        }
+      ]
+    },
+    {
+      "name": "Julia",
+      "original_tribe": "Gondol",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 29,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 6,
+          "voted_for": "",
+          "day": 13
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Peter",
+          "day": 16
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Nick",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Debbie",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Tai",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Tai",
+          "day": 29
+        }
+      ]
+    },
+    {
+      "name": "Scot",
+      "original_tribe": "To Tang",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 27,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Darnell",
+          "day": 3
+        },
+        {
+          "tribal_council": 1,
+          "voted_for": "Darnell",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Alecia",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Alecia",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Anna",
+          "day": 13
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Peter",
+          "day": 16
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Aubry",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Cydney",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Aubry",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "Debbie",
+      "original_tribe": "Chan Loh",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 24,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Liz",
+          "day": 8
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Liz",
+          "day": 8
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Nick",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Scot",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Nick",
+      "original_tribe": "Gondol",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 22,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 9,
+          "voted_for": "Debbie",
+          "day": 22
+        }
+      ]
+    },
+    {
+      "name": "Neal",
+      "original_tribe": "Chan Loh",
+      "tribe_color": "",
+      "placement": "Medically evacuated",
+      "days_lasted": 19,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Peter",
+          "day": 8
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Liz",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "name": "Peter",
+      "original_tribe": "Chan Loh",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 16,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Aubry",
+          "day": 8
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "",
+          "day": 8
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Anna",
+          "day": 13
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Julia",
+          "day": 16
+        }
+      ]
+    },
+    {
+      "name": "Anna",
+      "original_tribe": "Gondol",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 13,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 6,
+          "voted_for": "Peter",
+          "day": 13
+        }
+      ]
+    },
+    {
+      "name": "Alecia",
+      "original_tribe": "To Tang",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 11,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Darnell",
+          "day": 3
+        },
+        {
+          "tribal_council": 1,
+          "voted_for": "",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Jennifer",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Scot",
+          "day": 11
+        }
+      ]
+    },
+    {
+      "name": "Caleb",
+      "original_tribe": "Gondol",
+      "tribe_color": "",
+      "placement": "Medically evacuated",
+      "days_lasted": 9,
+      "votes_against": 0,
+      "voting_history": []
+    },
+    {
+      "name": "Liz",
+      "original_tribe": "Chan Loh",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 8,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Aubry",
+          "day": 8
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "name": "Jennifer",
+      "original_tribe": "To Tang",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 6,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Darnell",
+          "day": 3
+        },
+        {
+          "tribal_council": 1,
+          "voted_for": "Darnell",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Alecia",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Darnell",
+      "original_tribe": "To Tang",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Alecia",
+          "day": 3
+        },
+        {
+          "tribal_council": 1,
+          "voted_for": "",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

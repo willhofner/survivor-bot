@@ -1,0 +1,24 @@
+{
+  "name": "Earl Cole",
+  "season": 14,
+  "season_name": "Survivor: Fiji",
+  "archetype": {
+    "voting_control": 10,
+    "physical_game": 4,
+    "social_capital": 9,
+    "strategic_aggression": 7
+  },
+  "signature_move": "Recruited Dreamz away from the Four Horsemen alliance after the merge, then used insider knowledge to orchestrate the blindside of Edgardo -- splitting the opposing alliance apart and systematically eliminating its members one by one.",
+  "stats": {
+    "voting_accuracy": 89,
+    "immunity_wins": 0,
+    "reward_wins": 0,
+    "jury_votes": "9-0-0",
+    "idols_played": 1,
+    "idols_successful": 0,
+    "times_received_votes": 1,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Earl played a masterful social and strategic game, building a loyal core alliance with Yau-Man, Cassandra, and later Dreamz, while never winning individual immunity. He controlled nearly every post-merge vote through superior information gathering and alliance management, flipping Dreamz from the rival Four Horsemen to dismantle them from within. His game was so respected that he became the first unanimous winner in Survivor history, receiving all 9 jury votes.",
+  "fun_fact": "Earl had never seen an episode of Survivor before being recruited for the show, yet he became the first player in the show's history to win by a unanimous jury vote (9-0-0)."
+}

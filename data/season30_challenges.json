@@ -5,467 +5,316 @@
     {
       "challenge_id": 1,
       "episode": 1,
+      "day": null,
       "challenge_type": "Immunity and Reward",
       "outcome_type": "Tribal",
-      "day": null,
       "winners": [
-        "Masaya"
-      ],
-      "losers": [
-        "Escameca",
-        "Nagarote"
+        "Lindsey",
+        "Kelly",
+        "Dan",
+        "Sierra",
+        "Rodney",
+        "Mike",
+        "Vince",
+        "Nina",
+        "Hali",
+        "Joe",
+        "Jenn",
+        "Will"
       ]
     },
     {
       "challenge_id": 2,
-      "episode": 1,
-      "challenge_type": "Immunity",
-      "outcome_type": "Tribal",
+      "episode": 2,
       "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
       "winners": [
-        "Escameca"
-      ],
-      "losers": [
-        "Masaya",
-        "Nagarote"
+        "Max",
+        "Joaquin",
+        "Shirin",
+        "Tyler",
+        "Carolyn"
       ]
     },
     {
       "challenge_id": 3,
-      "episode": 2,
-      "challenge_type": "Reward",
-      "outcome_type": "Tribal",
+      "episode": 3,
       "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
       "winners": [
-        "Escameca"
-      ],
-      "losers": [
-        "Masaya",
-        "Nagarote"
+        "Lindsey",
+        "Kelly",
+        "Dan",
+        "Sierra",
+        "Rodney",
+        "Mike",
+        "Max",
+        "Joaquin",
+        "Shirin",
+        "Tyler",
+        "Carolyn"
       ]
     },
     {
       "challenge_id": 4,
-      "episode": 2,
-      "challenge_type": "Immunity",
-      "outcome_type": "Tribal",
+      "episode": 4,
       "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
       "winners": [
-        "Escameca",
-        "Nagarote"
-      ],
-      "losers": [
-        "Masaya"
+        "Max",
+        "Joaquin",
+        "Shirin",
+        "Tyler",
+        "Carolyn",
+        "Hali",
+        "Joe",
+        "Jenn",
+        "Will"
       ]
     },
     {
       "challenge_id": 5,
-      "episode": 3,
-      "challenge_type": "Reward",
-      "outcome_type": "Tribal",
+      "episode": 4,
       "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
       "winners": [
-        "Nagarote"
-      ],
-      "losers": [
-        "Escameca",
-        "Masaya"
+        "Max",
+        "Joaquin",
+        "Shirin",
+        "Tyler",
+        "Carolyn",
+        "Hali",
+        "Joe",
+        "Jenn",
+        "Will"
       ]
     },
     {
       "challenge_id": 6,
-      "episode": 3,
-      "challenge_type": "Immunity",
-      "outcome_type": "Tribal",
+      "episode": 5,
       "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
       "winners": [
-        "Escameca",
-        "Nagarote"
-      ],
-      "losers": [
-        "Masaya"
+        "Joaquin",
+        "Joe",
+        "Tyler",
+        "Dan",
+        "Sierra",
+        "Rodney",
+        "Mike"
       ]
     },
     {
       "challenge_id": 7,
-      "episode": 4,
+      "episode": 5,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Tribal",
-      "day": null,
       "winners": [
-        "Escameca"
-      ],
-      "losers": [
-        "Nagarote"
+        "Joaquin",
+        "Joe",
+        "Tyler",
+        "Dan",
+        "Sierra",
+        "Rodney",
+        "Mike"
       ]
     },
     {
       "challenge_id": 8,
-      "episode": 5,
+      "episode": 6,
+      "day": null,
       "challenge_type": "Reward",
       "outcome_type": "Tribal",
-      "day": null,
       "winners": [
-        "Nagarote"
-      ],
-      "losers": [
-        "Escameca"
+        "Kelly",
+        "Hali",
+        "Jenn",
+        "Shirin",
+        "Will",
+        "Carolyn"
       ]
     },
     {
       "challenge_id": 9,
-      "episode": 5,
+      "episode": 6,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Tribal",
-      "day": null,
       "winners": [
-        "Nagarote"
-      ],
-      "losers": [
-        "Escameca"
+        "Kelly",
+        "Hali",
+        "Jenn",
+        "Shirin",
+        "Will",
+        "Carolyn"
       ]
     },
     {
       "challenge_id": 10,
-      "episode": 6,
-      "challenge_type": "Reward",
-      "outcome_type": "Tribal",
+      "episode": 7,
       "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
       "winners": [
-        "Nagarote"
-      ],
-      "losers": [
-        "Escameca"
+        "Joe"
       ]
     },
     {
       "challenge_id": 11,
-      "episode": 6,
-      "challenge_type": "Immunity",
-      "outcome_type": "Tribal",
+      "episode": 8,
       "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
       "winners": [
-        "Escameca"
-      ],
-      "losers": [
-        "Nagarote"
+        "Joe"
       ]
     },
     {
       "challenge_id": 12,
-      "episode": 7,
+      "episode": 8,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Individual",
-      "day": null,
       "winners": [
-        "Jenn"
-      ],
-      "participants": [
-        "Mike",
-        "Rodney",
-        "Carolyn",
-        "Tyler",
-        "Will",
-        "Dan",
-        "Sierra",
-        "Joaquin",
-        "Jenn",
-        "Shirin",
-        "Hali",
         "Joe"
       ]
     },
     {
       "challenge_id": 13,
-      "episode": 8,
+      "episode": 9,
+      "day": null,
       "challenge_type": "Reward",
       "outcome_type": "Team",
-      "day": null,
       "winners": [
-        "Mike",
-        "Rodney",
-        "Carolyn",
+        "Shirin",
         "Tyler",
-        "Will",
-        "Dan"
-      ],
-      "all_participants": [
-        "Mike",
-        "Rodney",
-        "Carolyn",
-        "Tyler",
-        "Will",
         "Dan",
         "Sierra",
-        "Jenn",
-        "Shirin",
-        "Hali",
-        "Joe"
+        "Mike"
       ]
     },
     {
       "challenge_id": 14,
-      "episode": 8,
+      "episode": 9,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Individual",
-      "day": null,
       "winners": [
-        "Joe"
-      ],
-      "participants": [
-        "Mike",
-        "Rodney",
-        "Carolyn",
-        "Tyler",
-        "Will",
-        "Dan",
-        "Sierra",
-        "Jenn",
-        "Shirin",
-        "Hali",
-        "Joe"
+        "Tyler"
       ]
     },
     {
       "challenge_id": 15,
-      "episode": 9,
-      "challenge_type": "Reward",
-      "outcome_type": "Team",
+      "episode": 10,
       "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
       "winners": [
-        "Rodney",
-        "Will",
-        "Sierra",
-        "Joaquin"
-      ],
-      "all_participants": [
-        "Mike",
-        "Rodney",
-        "Carolyn",
-        "Tyler",
-        "Will",
-        "Dan",
-        "Sierra",
-        "Joaquin",
-        "Jenn",
-        "Shirin",
-        "Joe"
+        "Mike"
       ]
     },
     {
       "challenge_id": 16,
-      "episode": 9,
-      "challenge_type": "Immunity",
-      "outcome_type": "Individual",
+      "episode": 11,
       "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
       "winners": [
-        "Joe"
-      ],
-      "participants": [
-        "Mike",
-        "Rodney",
-        "Carolyn",
         "Tyler",
-        "Will",
         "Dan",
-        "Sierra",
-        "Joaquin",
-        "Jenn",
-        "Shirin",
-        "Joe"
+        "Will",
+        "Carolyn"
       ]
     },
     {
       "challenge_id": 17,
-      "episode": 10,
-      "challenge_type": "Reward",
-      "outcome_type": "Individual",
+      "episode": 11,
       "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
       "winners": [
-        "Dan"
-      ],
-      "participants": [
-        "Mike",
-        "Rodney",
         "Carolyn",
-        "Tyler",
-        "Will",
-        "Dan",
-        "Sierra",
-        "Jenn",
-        "Shirin",
-        "Joe"
+        "Mike"
       ]
     },
     {
       "challenge_id": 18,
-      "episode": 10,
-      "challenge_type": "Immunity",
-      "outcome_type": "Individual",
+      "episode": 12,
       "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
       "winners": [
-        "Joe"
-      ],
-      "participants": [
-        "Mike",
-        "Rodney",
-        "Carolyn",
-        "Tyler",
-        "Will",
-        "Dan",
         "Sierra",
-        "Jenn",
-        "Shirin",
-        "Joe"
+        "Carolyn",
+        "Mike"
       ]
     },
     {
       "challenge_id": 19,
-      "episode": 11,
-      "challenge_type": "Reward",
-      "outcome_type": "Individual",
+      "episode": 12,
       "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
       "winners": [
-        "Mike"
-      ],
-      "participants": [
-        "Mike",
-        "Rodney",
-        "Carolyn",
-        "Tyler",
-        "Will",
-        "Dan",
-        "Sierra",
-        "Jenn",
-        "Shirin"
+        "Carolyn"
       ]
     },
     {
       "challenge_id": 20,
-      "episode": 11,
-      "challenge_type": "Immunity",
-      "outcome_type": "Individual",
+      "episode": 13,
       "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
       "winners": [
-        "Carolyn"
-      ],
-      "participants": [
-        "Mike",
-        "Rodney",
-        "Carolyn",
-        "Tyler",
         "Will",
-        "Dan",
-        "Sierra",
-        "Jenn",
-        "Shirin"
+        "Carolyn",
+        "Mike"
       ]
     },
     {
       "challenge_id": 21,
-      "episode": 12,
-      "challenge_type": "Reward",
-      "outcome_type": "Individual",
+      "episode": 13,
       "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
       "winners": [
         "Mike"
-      ],
-      "participants": [
-        "Mike",
-        "Rodney",
-        "Carolyn",
-        "Will",
-        "Dan",
-        "Sierra",
-        "Jenn"
       ]
     },
     {
       "challenge_id": 22,
-      "episode": 12,
-      "challenge_type": "Immunity",
-      "outcome_type": "Individual",
+      "episode": 14,
       "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
       "winners": [
         "Mike"
-      ],
-      "participants": [
-        "Mike",
-        "Rodney",
-        "Carolyn",
-        "Will",
-        "Dan",
-        "Sierra",
-        "Jenn"
       ]
     },
     {
       "challenge_id": 23,
-      "episode": 13,
-      "challenge_type": "Reward",
-      "outcome_type": "Individual",
+      "episode": 14,
       "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
       "winners": [
-        "Rodney"
-      ],
-      "participants": [
-        "Mike",
-        "Rodney",
-        "Carolyn",
-        "Will",
-        "Dan",
-        "Sierra"
+        "Mike"
       ]
     },
     {
       "challenge_id": 24,
-      "episode": 13,
-      "challenge_type": "Immunity",
-      "outcome_type": "Individual",
-      "day": null,
-      "winners": [
-        "Mike"
-      ],
-      "participants": [
-        "Mike",
-        "Rodney",
-        "Carolyn",
-        "Will",
-        "Dan",
-        "Sierra"
-      ]
-    },
-    {
-      "challenge_id": 25,
       "episode": 14,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Individual",
-      "day": null,
       "winners": [
         "Mike"
-      ],
-      "participants": [
-        "Mike",
-        "Rodney",
-        "Carolyn",
-        "Will",
-        "Dan"
-      ]
-    },
-    {
-      "challenge_id": 26,
-      "episode": 14,
-      "challenge_type": "Immunity",
-      "outcome_type": "Individual",
-      "day": null,
-      "winners": [
-        "Mike"
-      ],
-      "participants": [
-        "Mike",
-        "Rodney",
-        "Carolyn",
-        "Will"
       ]
     }
   ]

@@ -1,0 +1,721 @@
+{
+  "season": 17,
+  "season_name": "Survivor: Gabon",
+  "castaways": [
+    {
+      "name": "Bob",
+      "original_tribe": "Kota",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 2,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Paloma",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Dan",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ken",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Crystal",
+          "day": 27
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Susie",
+          "day": 30
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Matty",
+          "day": 33
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Crystal",
+          "day": 36
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Ken",
+          "day": 37
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Matty",
+          "day": 38
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Susie",
+      "original_tribe": "Fang",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Michelle",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Gillian",
+          "day": 6
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Dan",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Marcus",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Charlie",
+          "day": 27
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Randy",
+          "day": 30
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Corinne",
+          "day": 33
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Crystal",
+          "day": 36
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Ken",
+          "day": 37
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Bob",
+          "day": 38
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Sugar",
+      "original_tribe": "Kota",
+      "tribe_color": "",
+      "placement": "2nd Runner-up",
+      "days_lasted": 39,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Paloma",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "GC",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kelly",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Ace",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Charlie",
+          "day": 27
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Randy",
+          "day": 30
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Corinne",
+          "day": 33
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Crystal",
+          "day": 36
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Ken",
+          "day": 37
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Matty",
+          "day": 38
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Matty",
+      "original_tribe": "Fang",
+      "tribe_color": "",
+      "placement": "Lost fire challenge",
+      "days_lasted": 38,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Michelle",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Gillian",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Jacquie",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "GC",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kelly",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Crystal",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Charlie",
+          "day": 27
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Randy",
+          "day": 30
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Corinne",
+          "day": 33
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Crystal",
+          "day": 36
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Ken",
+          "day": 37
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Bob",
+          "day": 38
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Ken",
+      "original_tribe": "Fang",
+      "tribe_color": "",
+      "placement": "14th voted out",
+      "days_lasted": 37,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Michelle",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Gillian",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Jacquie",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "GC",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kelly",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Ace",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Marcus",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Charlie",
+          "day": 27
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Randy",
+          "day": 30
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Matty",
+          "day": 33
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Matty",
+          "day": 36
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Susie",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Crystal",
+      "original_tribe": "Fang",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 36,
+      "votes_against": 11,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Michelle",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Gillian",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Jacquie",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "GC",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kelly",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Ace",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Marcus",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Charlie",
+          "day": 27
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Randy",
+          "day": 30
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Corinne",
+          "day": 33
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Matty",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Corinne",
+      "original_tribe": "Kota",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 33,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Paloma",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Dan",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Crystal",
+          "day": 27
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Susie",
+          "day": 30
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Matty",
+          "day": 33
+        }
+      ]
+    },
+    {
+      "name": "Randy",
+      "original_tribe": "Fang",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 30,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Michelle",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Gillian",
+          "day": 6
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Susie",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Crystal",
+          "day": 27
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Susie",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "Charlie",
+      "original_tribe": "Kota",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 27,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Paloma",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Dan",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Crystal",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "Marcus",
+      "original_tribe": "Kota",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 24,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Paloma",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Susie",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ken",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Ace",
+      "original_tribe": "Kota",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 21,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Paloma",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Kelly",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "GC",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kelly",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Crystal",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Dan",
+      "original_tribe": "Fang",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 21,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Michelle",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Gillian",
+          "day": 6
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Susie",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Kelly",
+      "original_tribe": "Kota",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 18,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Ace",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Jacquie",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "GC",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Crystal",
+          "day": 18
+        }
+      ]
+    },
+    {
+      "name": "GC",
+      "original_tribe": "Fang",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 15,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Michelle",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Gillian",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Jacquie",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Kelly",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Jacquie",
+      "original_tribe": "Kota",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 12,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Paloma",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Kelly",
+          "day": 12
+        }
+      ]
+    },
+    {
+      "name": "Paloma",
+      "original_tribe": "Kota",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 9,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Ace",
+          "day": 9
+        }
+      ]
+    },
+    {
+      "name": "Gillian",
+      "original_tribe": "Fang",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 6,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Michelle",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Ken",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Michelle",
+      "original_tribe": "Fang",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Gillian",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

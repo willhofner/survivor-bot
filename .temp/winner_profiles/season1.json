@@ -1,0 +1,24 @@
+{
+  "name": "Richard Hatch",
+  "season": 1,
+  "season_name": "Survivor: Borneo",
+  "archetype": {
+    "voting_control": 9,
+    "physical_game": 4,
+    "social_capital": 6,
+    "strategic_aggression": 10
+  },
+  "signature_move": "Stepped down from the Final Immunity Challenge at Final 3, correctly calculating that Kelly would take him over Rudy to the Final 2 — a move that both secured his spot and damaged Kelly's jury standing.",
+  "stats": {
+    "voting_accuracy": 90,
+    "immunity_wins": 1,
+    "reward_wins": 1,
+    "jury_votes": "4-3",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 6,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Richard Hatch invented the Survivor alliance, forming the Tagi Four (with Sue, Rudy, and Kelly) and executing the first systematic post-merge elimination of an opposing tribe — a strategy so dominant it became known as 'Pagonging.' His game was built on strategic foresight and vote control rather than physical dominance, culminating in his legendary Final Immunity step-down that manipulated the endgame to his advantage. He won despite being openly disliked by several jurors, proving that respect for gameplay could overcome personal animosity.",
+  "fun_fact": "Richard was the first person in Survivor history to form a voting alliance — a concept so foreign to the other players that Pagong tribe members openly refused to 'play politics' and were systematically eliminated as a result."
+}

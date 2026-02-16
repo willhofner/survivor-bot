@@ -1,0 +1,24 @@
+{
+  "name": "Tom Westman",
+  "season": 10,
+  "season_name": "Survivor: Palau",
+  "archetype": {
+    "voting_control": 9,
+    "physical_game": 10,
+    "social_capital": 8,
+    "strategic_aggression": 7
+  },
+  "signature_move": "Convinced his closest ally Ian Rosenberger to voluntarily step down from the final immunity challenge after nearly 12 hours, eliminating him at final 3 and securing an uncontested path to the Final Tribal Council.",
+  "stats": {
+    "voting_accuracy": 86,
+    "immunity_wins": 5,
+    "reward_wins": 0,
+    "jury_votes": "6-1",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 0,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Tom played the most dominant physical game in Survivor history up to that point, winning 5 individual immunities while leading Koror to an unprecedented sweep of all 8 tribal immunity challenges. He controlled the vote at every tribal council he attended, never received a single vote against him the entire game, and leveraged a tight alliance with Ian and Katie to systematically eliminate threats. His combination of challenge dominance, social authority, and strategic positioning made him nearly untouchable.",
+  "fun_fact": "Tom is a retired New York City firefighter who was 41 years old during filming, making his 5 individual immunity wins even more remarkable given he outperformed contestants nearly two decades younger. He also received zero votes against him across all 39 days, one of the cleanest winning games ever played."
+}

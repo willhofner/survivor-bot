@@ -1,0 +1,24 @@
+{
+  "name": "Chris Underwood",
+  "season": 38,
+  "season_name": "Survivor: Edge of Extinction",
+  "archetype": {
+    "voting_control": 3,
+    "physical_game": 7,
+    "social_capital": 6,
+    "strategic_aggression": 8
+  },
+  "signature_move": "After returning from the Edge of Extinction on Day 35, Chris gave up his immunity idol to Rick Devens to build jury trust, then won the fire-making challenge against Devens at Final 4 \u2014 securing the win by demonstrating boldness in his final 8 days.",
+  "stats": {
+    "voting_accuracy": 50,
+    "immunity_wins": 1,
+    "reward_wins": 0,
+    "jury_votes": "9-4-0",
+    "idols_played": 1,
+    "idols_successful": 1,
+    "times_received_votes": 4,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Chris played one of the most controversial winning games ever. Voted out third on Day 8, he spent 28 days on the Edge of Extinction building jury relationships before winning the return challenge. In his final 8 days back in the game, he made several bold moves \u2014 including giving away his immunity idol \u2014 that impressed the jury enough to earn a 9-4 victory over Gavin Whitson.",
+  "fun_fact": "Chris spent more days OUT of the actual game (28 on the Edge) than IN it (11 days of active gameplay), making him by far the least 'active' winner in Survivor history."
+}

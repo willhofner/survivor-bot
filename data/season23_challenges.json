@@ -1,0 +1,348 @@
+{
+  "season": 23,
+  "season_name": "Survivor: South Pacific",
+  "challenges": [
+    {
+      "challenge_id": 1,
+      "episode": 1,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Ozzy",
+        "Semhar",
+        "Papa Bear",
+        "Elyse",
+        "Keith",
+        "Jim",
+        "Dawn",
+        "Whitney",
+        "Cochran"
+      ]
+    },
+    {
+      "challenge_id": 2,
+      "episode": 1,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Coach",
+        "Christine",
+        "Stacey",
+        "Mikayla",
+        "Edna",
+        "Brandon",
+        "Rick",
+        "Albert",
+        "Sophie"
+      ]
+    },
+    {
+      "challenge_id": 3,
+      "episode": 2,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Ozzy",
+        "Papa Bear",
+        "Elyse",
+        "Keith",
+        "Jim",
+        "Dawn",
+        "Whitney",
+        "Cochran"
+      ]
+    },
+    {
+      "challenge_id": 4,
+      "episode": 3,
+      "day": null,
+      "challenge_type": "Duel",
+      "outcome_type": "Individual",
+      "winners": [
+        "Semhar"
+      ]
+    },
+    {
+      "challenge_id": 5,
+      "episode": 3,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Coach",
+        "Stacey",
+        "Mikayla",
+        "Edna",
+        "Brandon",
+        "Rick",
+        "Albert",
+        "Sophie"
+      ]
+    },
+    {
+      "challenge_id": 6,
+      "episode": 4,
+      "day": null,
+      "challenge_type": "Duel",
+      "outcome_type": "Individual",
+      "winners": [
+        "Christine"
+      ]
+    },
+    {
+      "challenge_id": 7,
+      "episode": 4,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Ozzy",
+        "Elyse",
+        "Keith",
+        "Jim",
+        "Dawn",
+        "Whitney",
+        "Cochran"
+      ]
+    },
+    {
+      "challenge_id": 8,
+      "episode": 5,
+      "day": null,
+      "challenge_type": "Duel",
+      "outcome_type": "Individual",
+      "winners": [
+        "Christine"
+      ]
+    },
+    {
+      "challenge_id": 9,
+      "episode": 5,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Coach",
+        "Mikayla",
+        "Edna",
+        "Brandon",
+        "Rick",
+        "Albert",
+        "Sophie"
+      ]
+    },
+    {
+      "challenge_id": 10,
+      "episode": 6,
+      "day": null,
+      "challenge_type": "Duel",
+      "outcome_type": "Individual",
+      "winners": [
+        "Christine"
+      ]
+    },
+    {
+      "challenge_id": 11,
+      "episode": 6,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Ozzy",
+        "Keith",
+        "Jim",
+        "Dawn",
+        "Whitney",
+        "Cochran"
+      ]
+    },
+    {
+      "challenge_id": 12,
+      "episode": 7,
+      "day": null,
+      "challenge_type": "Duel",
+      "outcome_type": "Individual",
+      "winners": [
+        "Christine"
+      ]
+    },
+    {
+      "challenge_id": 13,
+      "episode": 7,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Coach",
+        "Edna",
+        "Brandon",
+        "Rick",
+        "Albert",
+        "Sophie"
+      ]
+    },
+    {
+      "challenge_id": 14,
+      "episode": 8,
+      "day": null,
+      "challenge_type": "Duel",
+      "outcome_type": "Individual",
+      "winners": [
+        "Ozzy"
+      ]
+    },
+    {
+      "challenge_id": 15,
+      "episode": 8,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Dawn"
+      ]
+    },
+    {
+      "challenge_id": 16,
+      "episode": 9,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Jim"
+      ]
+    },
+    {
+      "challenge_id": 17,
+      "episode": 9,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Whitney"
+      ]
+    },
+    {
+      "challenge_id": 18,
+      "episode": 10,
+      "day": null,
+      "challenge_type": "Duel",
+      "outcome_type": "Individual",
+      "winners": [
+        "Ozzy"
+      ]
+    },
+    {
+      "challenge_id": 19,
+      "episode": 10,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Sophie"
+      ]
+    },
+    {
+      "challenge_id": 20,
+      "episode": 10,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Sophie"
+      ]
+    },
+    {
+      "challenge_id": 21,
+      "episode": 12,
+      "day": null,
+      "challenge_type": "Duel",
+      "outcome_type": "Individual",
+      "winners": [
+        "Ozzy"
+      ]
+    },
+    {
+      "challenge_id": 22,
+      "episode": 12,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Albert"
+      ]
+    },
+    {
+      "challenge_id": 23,
+      "episode": 13,
+      "day": null,
+      "challenge_type": "Duel",
+      "outcome_type": "Individual",
+      "winners": [
+        "Ozzy"
+      ]
+    },
+    {
+      "challenge_id": 24,
+      "episode": 13,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Coach"
+      ]
+    },
+    {
+      "challenge_id": 25,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Duel",
+      "outcome_type": "Individual",
+      "winners": [
+        "Ozzy"
+      ]
+    },
+    {
+      "challenge_id": 26,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Brandon"
+      ]
+    },
+    {
+      "challenge_id": 27,
+      "episode": 15,
+      "day": null,
+      "challenge_type": "Duel",
+      "outcome_type": "Individual",
+      "winners": [
+        "Ozzy"
+      ]
+    },
+    {
+      "challenge_id": 28,
+      "episode": 15,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Ozzy"
+      ]
+    },
+    {
+      "challenge_id": 29,
+      "episode": 15,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Sophie"
+      ]
+    }
+  ]
+}

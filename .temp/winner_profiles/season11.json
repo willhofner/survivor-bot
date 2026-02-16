@@ -1,0 +1,24 @@
+{
+  "name": "Danni Boatwright",
+  "season": 11,
+  "season_name": "Survivor: Guatemala",
+  "archetype": {
+    "voting_control": 6,
+    "physical_game": 6,
+    "social_capital": 9,
+    "strategic_aggression": 4
+  },
+  "signature_move": "Purchased a challenge advantage at the Survivor Auction and used it to win a crucial immunity when she was the last member of her original alliance standing, then systematically infiltrated the majority Nakum alliance through personal relationships rather than overt strategy.",
+  "stats": {
+    "voting_accuracy": 83,
+    "immunity_wins": 2,
+    "reward_wins": 0,
+    "jury_votes": "6-1",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 1,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Danni is the definitive 'stealth bomber' winner — she entered the merge outnumbered, lost her closest allies in the Pagonging of old Yaxha, and survived by building genuine personal bonds with the Nakum majority rather than making flashy strategic moves. She famously concealed her strategy even from producers during confessionals, won immunity at the two most critical junctures (Final 6 and Final Immunity), and earned a dominant 6-1 jury victory over Stephenie LaGrossa by being universally liked while her opponent had burned too many bridges.",
+  "fun_fact": "Danni was a former beauty queen (second runner-up at Miss Teen USA 1992 and first runner-up at Miss USA 1996) and worked as a sports radio host in Kansas City — making her one of the few winners whose real-world charisma and interview skills translated directly into a dominant Final Tribal Council performance."
+}

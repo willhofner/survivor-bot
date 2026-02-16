@@ -1,0 +1,24 @@
+{
+  "name": "Adam Klein",
+  "season": 33,
+  "season_name": "Survivor: Millennials vs. Gen X",
+  "archetype": {
+    "voting_control": 7,
+    "physical_game": 4,
+    "social_capital": 8,
+    "strategic_aggression": 7
+  },
+  "signature_move": "At the Final 10, Adam played his stolen reward advantage to forge cross-generational bonds, then orchestrated the blindside of Will Wahl at Final 6 by convincing Hannah to flip \u2014 securing his path to the end.",
+  "stats": {
+    "voting_accuracy": 70,
+    "immunity_wins": 1,
+    "reward_wins": 1,
+    "jury_votes": "10-0-0",
+    "idols_played": 1,
+    "idols_successful": 0,
+    "times_received_votes": 5,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Adam played a messy, emotional, yet ultimately winning game. He was on the wrong side of multiple votes and received votes against him throughout the season, but his ability to build genuine connections, make necessary big moves, and deliver a devastating Final Tribal Council speech about playing for his mother (who was battling cancer) earned him a unanimous 10-0-0 jury vote.",
+  "fun_fact": "Adam's mother passed away from lung cancer the day after he returned home from filming. His emotional revelation at Final Tribal Council is considered one of the most powerful moments in Survivor history."
+}

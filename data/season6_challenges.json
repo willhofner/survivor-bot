@@ -1,0 +1,785 @@
+{
+  "season": 6,
+  "season_name": "Survivor: The Amazon",
+  "challenges": [
+    {
+      "challenge_id": 1,
+      "episode": 1,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Janet",
+        "JoAnna",
+        "Jeanne",
+        "Shawna",
+        "Deena",
+        "Christy",
+        "Heidi",
+        "Jenna",
+        "Janelle",
+        "Gavin",
+        "Benny",
+        "Daini",
+        "Shannon",
+        "Simon",
+        "Kez",
+        "Chelsea",
+        "Gerald",
+        "Emmett",
+        "Dani",
+        "Flick",
+        "Stacey-Lee",
+        "Murishca",
+        "Marthunis",
+        "Tevin",
+        "Toni",
+        "PK",
+        "Katinka",
+        "Werner"
+      ]
+    },
+    {
+      "challenge_id": 2,
+      "episode": 2,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Janet",
+        "JoAnna",
+        "Jeanne",
+        "Shawna",
+        "Deena",
+        "Christy",
+        "Heidi",
+        "Jenna",
+        "Janelle",
+        "Gavin",
+        "Benny",
+        "Daini",
+        "Shannon",
+        "Simon",
+        "Kez",
+        "Chelsea",
+        "Gerald",
+        "Emmett",
+        "Dani",
+        "Flick",
+        "Stacey-Lee",
+        "Murishca",
+        "Marthunis",
+        "Tevin",
+        "Toni",
+        "PK",
+        "Katinka",
+        "Werner"
+      ]
+    },
+    {
+      "challenge_id": 3,
+      "episode": 2,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Daniel",
+        "Roger",
+        "Dave",
+        "Alex",
+        "Butch",
+        "Rob",
+        "Matthew",
+        "Janelle",
+        "Gavin",
+        "Benny",
+        "Daini",
+        "Shannon",
+        "Simon",
+        "Kez",
+        "Chelsea",
+        "Gerald",
+        "Emmett",
+        "Dani",
+        "Flick",
+        "Stacey-Lee",
+        "Murishca",
+        "Marthunis",
+        "Tevin",
+        "Toni",
+        "PK",
+        "Katinka",
+        "Werner",
+        "Jeanne"
+      ]
+    },
+    {
+      "challenge_id": 4,
+      "episode": 3,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "JoAnna",
+        "Jeanne",
+        "Shawna",
+        "Deena",
+        "Christy",
+        "Heidi",
+        "Jenna",
+        "Mitch",
+        "Joey",
+        "Georgia",
+        "Rachel",
+        "Baden",
+        "Laura",
+        "Andrew",
+        "Wai",
+        "Cara",
+        "George",
+        "Hayley",
+        "Stacey-Lee",
+        "Murishca",
+        "Marthunis",
+        "Tevin",
+        "Toni",
+        "PK",
+        "Katinka",
+        "Werner"
+      ]
+    },
+    {
+      "challenge_id": 5,
+      "episode": 3,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "JoAnna",
+        "Jeanne",
+        "Shawna",
+        "Deena",
+        "Christy",
+        "Heidi",
+        "Jenna",
+        "Gavin",
+        "Benny",
+        "Daini",
+        "Shannon",
+        "Simon",
+        "Kez",
+        "Chelsea",
+        "Gerald",
+        "Emmett",
+        "Dani",
+        "Flick",
+        "Ace",
+        "Josie",
+        "Vusi",
+        "Chane",
+        "Palesa",
+        "Annalize",
+        "Tom"
+      ]
+    },
+    {
+      "challenge_id": 6,
+      "episode": 4,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Roger",
+        "Dave",
+        "Alex",
+        "Butch",
+        "Rob",
+        "Matthew",
+        "Mitch",
+        "Joey",
+        "Georgia",
+        "Rachel",
+        "Baden",
+        "Laura",
+        "Andrew",
+        "Wai",
+        "Cara",
+        "George",
+        "Hayley",
+        "Ace",
+        "Josie",
+        "Vusi",
+        "Chane",
+        "Palesa",
+        "Annalize",
+        "Tom"
+      ]
+    },
+    {
+      "challenge_id": 7,
+      "episode": 4,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Roger",
+        "Dave",
+        "Alex",
+        "Butch",
+        "Rob",
+        "Matthew",
+        "Benny",
+        "Daini",
+        "Shannon",
+        "Simon",
+        "Kez",
+        "Chelsea",
+        "Gerald",
+        "Emmett",
+        "Dani",
+        "Flick",
+        "Ace",
+        "Josie",
+        "Toni",
+        "Werner",
+        "Jeanne",
+        "Marthunis",
+        "Tevin",
+        "PK",
+        "Katinka",
+        "Annalize"
+      ]
+    },
+    {
+      "challenge_id": 8,
+      "episode": 5,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Shawna",
+        "Deena",
+        "Alex",
+        "Rob",
+        "Matthew",
+        "Jenna",
+        "Mitch",
+        "Joey",
+        "Georgia",
+        "Rachel",
+        "Baden",
+        "Laura",
+        "Andrew",
+        "Wai",
+        "Cara",
+        "George",
+        "Hayley",
+        "Marthunis",
+        "Tevin",
+        "PK",
+        "Katinka",
+        "Annalize",
+        "Murishca",
+        "Vusi",
+        "Chane",
+        "Palesa",
+        "Tom"
+      ]
+    },
+    {
+      "challenge_id": 9,
+      "episode": 6,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Roger",
+        "Dave",
+        "Christy",
+        "Heidi",
+        "Butch",
+        "Daini",
+        "Shannon",
+        "Simon",
+        "Kez",
+        "Chelsea",
+        "Gerald",
+        "Emmett",
+        "Dani",
+        "Flick",
+        "Josie",
+        "Toni",
+        "Werner",
+        "Jeanne",
+        "Marthunis",
+        "Tevin",
+        "PK",
+        "Katinka",
+        "Annalize"
+      ]
+    },
+    {
+      "challenge_id": 10,
+      "episode": 6,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Roger",
+        "Dave",
+        "Christy",
+        "Heidi",
+        "Butch",
+        "Daini",
+        "Shannon",
+        "Simon",
+        "Kez",
+        "Chelsea",
+        "Gerald",
+        "Emmett",
+        "Dani",
+        "Flick",
+        "Vusi",
+        "Chane",
+        "Palesa",
+        "Tom"
+      ]
+    },
+    {
+      "challenge_id": 11,
+      "episode": 7,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Deena",
+        "Daini",
+        "Shannon",
+        "Simon",
+        "Kez",
+        "Chelsea",
+        "Gerald",
+        "Emmett",
+        "Dani",
+        "Flick",
+        "Katinka",
+        "Werner",
+        "Annalize",
+        "Jeanne",
+        "Tevin",
+        "Josie",
+        "Toni",
+        "PK"
+      ]
+    },
+    {
+      "challenge_id": 12,
+      "episode": 8,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Dave",
+        "Daini",
+        "Shannon",
+        "Simon",
+        "Kez",
+        "Chelsea",
+        "Gerald",
+        "Emmett",
+        "Dani",
+        "Flick",
+        "Katinka",
+        "Werner",
+        "Annalize",
+        "Jeanne",
+        "Vusi",
+        "Chane",
+        "Palesa",
+        "Tom"
+      ]
+    },
+    {
+      "challenge_id": 13,
+      "episode": 8,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Jenna",
+        "Joey",
+        "Georgia",
+        "Rachel",
+        "Baden",
+        "Laura",
+        "Andrew",
+        "Wai",
+        "George",
+        "Hayley",
+        "Katinka",
+        "Werner",
+        "Annalize",
+        "Jeanne",
+        "Vusi",
+        "Chane",
+        "Palesa",
+        "Tom"
+      ]
+    },
+    {
+      "challenge_id": 14,
+      "episode": 9,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Alex",
+        "Daini",
+        "Shannon",
+        "Simon",
+        "Kez",
+        "Chelsea",
+        "Gerald",
+        "Emmett",
+        "Dani",
+        "Cara",
+        "Flick",
+        "Katinka",
+        "Werner",
+        "Annalize",
+        "Jeanne",
+        "Vusi",
+        "Chane",
+        "Palesa",
+        "Tom"
+      ]
+    },
+    {
+      "challenge_id": 15,
+      "episode": 9,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Matthew",
+        "Shannon",
+        "Simon",
+        "Chelsea",
+        "Baden",
+        "Andrew",
+        "Dani",
+        "Wai",
+        "Flick",
+        "Hayley",
+        "Toni"
+      ]
+    },
+    {
+      "challenge_id": 16,
+      "episode": 11,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Rob",
+        "Rachel",
+        "Emmett",
+        "Andrew",
+        "Wai",
+        "Chane",
+        "Palesa",
+        "Toni",
+        "Werner"
+      ]
+    },
+    {
+      "challenge_id": 17,
+      "episode": 12,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Matthew",
+        "Georgia",
+        "Rachel",
+        "Kez",
+        "Gerald",
+        "Laura",
+        "Emmett",
+        "Cara",
+        "George",
+        "Katinka"
+      ]
+    },
+    {
+      "challenge_id": 18,
+      "episode": 12,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Jenna",
+        "Simon",
+        "Chelsea",
+        "Baden",
+        "Andrew",
+        "Dani",
+        "Wai",
+        "Flick",
+        "Hayley",
+        "Palesa"
+      ]
+    },
+    {
+      "challenge_id": 19,
+      "episode": 13,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Matthew",
+        "Simon",
+        "Chelsea",
+        "Baden",
+        "Andrew",
+        "Dani",
+        "Wai",
+        "Flick",
+        "Hayley",
+        "Werner"
+      ]
+    },
+    {
+      "challenge_id": 20,
+      "episode": 13,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Matthew",
+        "Kez",
+        "Gerald",
+        "Laura",
+        "Emmett",
+        "Cara",
+        "George",
+        "Tom"
+      ]
+    },
+    {
+      "challenge_id": 21,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Jenna",
+        "Kez",
+        "Gerald",
+        "Laura",
+        "Emmett",
+        "Cara",
+        "George",
+        "Werner"
+      ]
+    },
+    {
+      "challenge_id": 22,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Jenna",
+        "Werner"
+      ]
+    },
+    {
+      "challenge_id": 23,
+      "episode": 13,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Emmett",
+        "Tom"
+      ]
+    },
+    {
+      "challenge_id": 24,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Emmett",
+        "Andrew",
+        "Dani",
+        "Tom"
+      ]
+    },
+    {
+      "challenge_id": 25,
+      "episode": 15,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Emmett",
+        "Jeanne"
+      ]
+    },
+    {
+      "challenge_id": 26,
+      "episode": 15,
+      "day": null,
+      "challenge_type": "Duel",
+      "outcome_type": "Individual",
+      "winners": [
+        "Hayley",
+        "Jeanne"
+      ]
+    },
+    {
+      "challenge_id": 27,
+      "episode": 16,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "Laura",
+        "Andrew",
+        "Wai",
+        "George",
+        "Hayley"
+      ]
+    },
+    {
+      "challenge_id": 28,
+      "episode": 16,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Andrew"
+      ]
+    },
+    {
+      "challenge_id": 29,
+      "episode": 17,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Emmett",
+        "Andrew",
+        "Flick",
+        "George",
+        "Hayley"
+      ]
+    },
+    {
+      "challenge_id": 30,
+      "episode": 18,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Dani"
+      ]
+    },
+    {
+      "challenge_id": 31,
+      "episode": 18,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Hayley"
+      ]
+    },
+    {
+      "challenge_id": 32,
+      "episode": 19,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "Wai",
+        "Cara",
+        "Flick",
+        "George"
+      ]
+    },
+    {
+      "challenge_id": 33,
+      "episode": 19,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Hayley"
+      ]
+    },
+    {
+      "challenge_id": 34,
+      "episode": 20,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Dani"
+      ]
+    },
+    {
+      "challenge_id": 35,
+      "episode": 21,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Dani"
+      ]
+    },
+    {
+      "challenge_id": 36,
+      "episode": 21,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Wai"
+      ]
+    },
+    {
+      "challenge_id": 37,
+      "episode": 22,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Hayley"
+      ]
+    },
+    {
+      "challenge_id": 38,
+      "episode": 23,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Flick"
+      ]
+    },
+    {
+      "challenge_id": 39,
+      "episode": 24,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Hayley"
+      ]
+    }
+  ]
+}

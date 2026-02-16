@@ -1,0 +1,24 @@
+{
+  "name": "Yul Kwon",
+  "season": 13,
+  "season_name": "Survivor: Cook Islands",
+  "archetype": {
+    "voting_control": 10,
+    "physical_game": 4,
+    "social_capital": 8,
+    "strategic_aggression": 7
+  },
+  "signature_move": "Used the threat of his God Idol (playable after votes were read) to convince Jonathan Penner to flip at the merge, single-handedly dismantling the Raro majority and turning a 5-4 numbers disadvantage into a dominant Aitu Four steamroll to the end.",
+  "stats": {
+    "voting_accuracy": 100,
+    "immunity_wins": 0,
+    "reward_wins": 1,
+    "jury_votes": "5-4",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 5,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Yul played the quintessential cerebral game, wielding the most powerful hidden immunity idol in Survivor history not as a shield but as a diplomatic weapon. He maintained perfect voting accuracy across all nine tribal councils he attended, never once finding himself on the wrong side of the vote. His ability to hold together the Aitu Four alliance after the mutiny twist left them outnumbered, combined with his calculated persuasion of Penner, makes him one of the most strategically clean winners in the show's history.",
+  "fun_fact": "Yul is a Yale Law School graduate who went on to work at the FCC and as a management consultant at McKinsey, making him one of the most credentialed contestants in Survivor history. He was also the first Asian-American winner of Survivor."
+}

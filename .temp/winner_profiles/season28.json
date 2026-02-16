@@ -1,0 +1,24 @@
+{
+  "name": "Tony Vlachos",
+  "season": 28,
+  "season_name": "Survivor: Cagayan",
+  "archetype": {
+    "voting_control": 10,
+    "physical_game": 4,
+    "social_capital": 7,
+    "strategic_aggression": 10
+  },
+  "signature_move": "Built a spy shack to eavesdrop on allies, found three hidden immunity idols including the Tyler Perry Idol, then bluffed that its powers extended to Final 4 when it actually expired at Final 5 — intimidating the entire tribe into never voting against him.",
+  "stats": {
+    "voting_accuracy": 100,
+    "immunity_wins": 0,
+    "reward_wins": 1,
+    "jury_votes": "8-1",
+    "idols_played": 2,
+    "idols_successful": 0,
+    "times_received_votes": 5,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Tony played one of the most aggressive and chaotic winning games in Survivor history, controlling nearly every vote from the merge onward despite never winning individual immunity. He weaponized information (spy shack), leveraged idol psychology over brute-force idol plays, and made bold moves like blindsiding his own allies LJ and Trish when they became threats. His 8-1 jury victory proved the jury respected his relentless gameplay over Woo's loyalty-based approach.",
+  "fun_fact": "Tony is a police officer from Jersey City, New Jersey, who lied about his profession for the entire game — telling castmates he was a construction worker to avoid the 'untrustworthy cop' stigma, despite forming his core 'Cops-R-Us' alliance with fellow officer Sarah Lacina on Day 1."
+}

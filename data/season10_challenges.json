@@ -1,0 +1,701 @@
+{
+  "season": 10,
+  "season_name": "Survivor: Palau",
+  "challenges": [
+    {
+      "challenge_id": 1,
+      "episode": 1,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Ian",
+        "Jolanda",
+        "Ben",
+        "Candy",
+        "Jesse",
+        "Kate",
+        "Kristin",
+        "Noonan",
+        "Morgan",
+        "Nash",
+        "Paulie",
+        "PD",
+        "Ursula",
+        "Zen"
+      ]
+    },
+    {
+      "challenge_id": 2,
+      "episode": 1,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Willard",
+        "Coby",
+        "Janu",
+        "Gregg",
+        "Caryn",
+        "Jenn",
+        "Ian",
+        "Katie",
+        "Tom",
+        "AJ",
+        "Ally",
+        "Indy",
+        "Kaelan",
+        "Karin",
+        "Kent",
+        "Laura",
+        "Logan",
+        "Max",
+        "Myles",
+        "Rich",
+        "Zara"
+      ]
+    },
+    {
+      "challenge_id": 3,
+      "episode": 2,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Ashlee",
+        "Jeff",
+        "Kim",
+        "Angie",
+        "James",
+        "Ibrehem",
+        "Bobby Jon",
+        "Stephenie",
+        "AJ",
+        "Ally",
+        "Indy",
+        "Kaelan",
+        "Karin",
+        "Kent",
+        "Laura",
+        "Logan",
+        "Max",
+        "Myles",
+        "Rich",
+        "Zara",
+        "Noonan"
+      ]
+    },
+    {
+      "challenge_id": 4,
+      "episode": 2,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Willard",
+        "Coby",
+        "Janu",
+        "Gregg",
+        "Caryn",
+        "Jenn",
+        "Ian",
+        "Katie",
+        "Tom",
+        "Laura",
+        "Ben",
+        "Jesse",
+        "Kate",
+        "Kristin",
+        "Noonan",
+        "Morgan",
+        "Nash",
+        "Paulie",
+        "PD",
+        "Ursula",
+        "Zen"
+      ]
+    },
+    {
+      "challenge_id": 5,
+      "episode": 3,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Jeff",
+        "Kim",
+        "Angie",
+        "James",
+        "Ibrehem",
+        "Bobby Jon",
+        "Stephenie",
+        "Ben",
+        "Jesse",
+        "Kate",
+        "Kristin",
+        "Noonan",
+        "Morgan",
+        "Nash",
+        "Paulie",
+        "PD",
+        "Ursula",
+        "Zen"
+      ]
+    },
+    {
+      "challenge_id": 6,
+      "episode": 3,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Willard",
+        "Coby",
+        "Janu",
+        "Gregg",
+        "Caryn",
+        "Jenn",
+        "Ian",
+        "Katie",
+        "Tom",
+        "Ben",
+        "Jesse",
+        "Kate",
+        "Kristin",
+        "Noonan",
+        "Morgan",
+        "Nash",
+        "Paulie",
+        "PD",
+        "Ursula"
+      ]
+    },
+    {
+      "challenge_id": 7,
+      "episode": 4,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Willard",
+        "Coby",
+        "Janu",
+        "Gregg",
+        "Caryn",
+        "Jenn",
+        "Ian",
+        "Katie",
+        "Tom",
+        "AJ",
+        "Ally",
+        "Kaelan",
+        "Karin",
+        "Laura",
+        "Logan",
+        "Max",
+        "Myles",
+        "Rich",
+        "Zara"
+      ]
+    },
+    {
+      "challenge_id": 8,
+      "episode": 4,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Willard",
+        "Coby",
+        "Janu",
+        "Gregg",
+        "Caryn",
+        "Jenn",
+        "Ian",
+        "Katie",
+        "Tom",
+        "AJ",
+        "Ally",
+        "Kaelan",
+        "Karin",
+        "Laura",
+        "Logan",
+        "Max",
+        "Myles",
+        "Rich",
+        "Zara"
+      ]
+    },
+    {
+      "challenge_id": 9,
+      "episode": 5,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Willard",
+        "Coby",
+        "Janu",
+        "Gregg",
+        "Caryn",
+        "Jenn",
+        "Ian",
+        "Katie",
+        "Tom",
+        "Ben",
+        "Jesse",
+        "Kate",
+        "Kristin",
+        "Noonan",
+        "Morgan",
+        "Paulie",
+        "PD",
+        "Ursula"
+      ]
+    },
+    {
+      "challenge_id": 10,
+      "episode": 6,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "James",
+        "Ibrehem",
+        "Bobby Jon",
+        "Stephenie",
+        "Ben",
+        "Jesse",
+        "Kate",
+        "Kristin",
+        "Noonan",
+        "Morgan",
+        "Paulie",
+        "PD",
+        "Ursula"
+      ]
+    },
+    {
+      "challenge_id": 11,
+      "episode": 6,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Coby",
+        "Janu",
+        "Gregg",
+        "Caryn",
+        "Jenn",
+        "Ian",
+        "Katie",
+        "Tom",
+        "Ben",
+        "Jesse",
+        "Kate",
+        "Kristin",
+        "Noonan",
+        "Morgan",
+        "Paulie",
+        "PD",
+        "Rich",
+        "Ursula"
+      ]
+    },
+    {
+      "challenge_id": 12,
+      "episode": 7,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Coby",
+        "Janu",
+        "Gregg",
+        "Caryn",
+        "Jenn",
+        "Ian",
+        "Katie",
+        "Tom",
+        "Ben",
+        "Jesse",
+        "Kate",
+        "Kristin",
+        "Noonan",
+        "Morgan",
+        "Paulie",
+        "PD",
+        "Rich",
+        "Ursula"
+      ]
+    },
+    {
+      "challenge_id": 13,
+      "episode": 7,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Coby",
+        "Janu",
+        "Gregg",
+        "Caryn",
+        "Jenn",
+        "Ian",
+        "Katie",
+        "Tom",
+        "AJ",
+        "Kaelan",
+        "Karin",
+        "Kristin",
+        "Noonan",
+        "Logan",
+        "Paulie",
+        "Rich",
+        "Ursula"
+      ]
+    },
+    {
+      "challenge_id": 14,
+      "episode": 8,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Coby",
+        "Janu",
+        "Gregg",
+        "Caryn",
+        "Jenn",
+        "Ian",
+        "Katie",
+        "Tom",
+        "Ben",
+        "Jesse",
+        "Kate",
+        "Laura",
+        "Max",
+        "Morgan",
+        "Myles",
+        "PD",
+        "Zara"
+      ]
+    },
+    {
+      "challenge_id": 15,
+      "episode": 8,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Coby",
+        "Janu",
+        "Gregg",
+        "Caryn",
+        "Jenn",
+        "Ian",
+        "Katie",
+        "Tom",
+        "Ben",
+        "Jesse",
+        "Kate",
+        "Laura",
+        "Max",
+        "Morgan",
+        "Myles",
+        "PD",
+        "Zara"
+      ]
+    },
+    {
+      "challenge_id": 16,
+      "episode": 9,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Tom",
+        "AJ",
+        "Kaelan",
+        "Karin",
+        "Kristin",
+        "Noonan",
+        "Logan",
+        "Paulie"
+      ]
+    },
+    {
+      "challenge_id": 17,
+      "episode": 10,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "Janu",
+        "Gregg",
+        "Caryn",
+        "Tom",
+        "Ben",
+        "Jesse",
+        "Kate",
+        "Laura",
+        "Morgan",
+        "Myles",
+        "PD",
+        "Zara"
+      ]
+    },
+    {
+      "challenge_id": 18,
+      "episode": 10,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Tom",
+        "Ben",
+        "Jesse",
+        "Kate",
+        "Laura",
+        "Morgan",
+        "Myles",
+        "PD",
+        "Zara"
+      ]
+    },
+    {
+      "challenge_id": 19,
+      "episode": 11,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Ian",
+        "AJ",
+        "Kaelan",
+        "Karin",
+        "Kristin",
+        "Logan",
+        "Paulie"
+      ]
+    },
+    {
+      "challenge_id": 20,
+      "episode": 12,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Gregg",
+        "Ben",
+        "Jesse",
+        "Kate",
+        "Laura",
+        "Morgan",
+        "Myles",
+        "PD"
+      ]
+    },
+    {
+      "challenge_id": 21,
+      "episode": 12,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Ian",
+        "Ben",
+        "Jesse",
+        "Kate",
+        "Laura",
+        "Morgan",
+        "Myles",
+        "PD"
+      ]
+    },
+    {
+      "challenge_id": 22,
+      "episode": 13,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Ian",
+        "Kate"
+      ]
+    },
+    {
+      "challenge_id": 23,
+      "episode": 13,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Tom",
+        "Logan"
+      ]
+    },
+    {
+      "challenge_id": 24,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Tom",
+        "Kaelan"
+      ]
+    },
+    {
+      "challenge_id": 25,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Tom",
+        "AJ",
+        "Karin",
+        "Kate",
+        "Kristin",
+        "Myles",
+        "Paulie"
+      ]
+    },
+    {
+      "challenge_id": 26,
+      "episode": 15,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Kaelan"
+      ]
+    },
+    {
+      "challenge_id": 27,
+      "episode": 16,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Kate"
+      ]
+    },
+    {
+      "challenge_id": 28,
+      "episode": 17,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Team",
+      "winners": [
+        "AJ",
+        "Karin",
+        "Kate",
+        "Morgan",
+        "Zara"
+      ]
+    },
+    {
+      "challenge_id": 29,
+      "episode": 18,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "AJ",
+        "Kristin"
+      ]
+    },
+    {
+      "challenge_id": 30,
+      "episode": 18,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Kaelan"
+      ]
+    },
+    {
+      "challenge_id": 31,
+      "episode": 19,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Kristin"
+      ]
+    },
+    {
+      "challenge_id": 32,
+      "episode": 19,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Kaelan"
+      ]
+    },
+    {
+      "challenge_id": 33,
+      "episode": 20,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Kaelan"
+      ]
+    },
+    {
+      "challenge_id": 34,
+      "episode": 21,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Kaelan"
+      ]
+    },
+    {
+      "challenge_id": 35,
+      "episode": 21,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Kate"
+      ]
+    },
+    {
+      "challenge_id": 36,
+      "episode": 22,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Zara"
+      ]
+    },
+    {
+      "challenge_id": 37,
+      "episode": 23,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Myles"
+      ]
+    },
+    {
+      "challenge_id": 38,
+      "episode": 24,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Kaelan"
+      ]
+    }
+  ]
+}

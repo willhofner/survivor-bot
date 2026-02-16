@@ -1,0 +1,24 @@
+{
+  "name": "Ethan Zohn",
+  "season": 3,
+  "season_name": "Survivor: Africa",
+  "archetype": {
+    "voting_control": 8,
+    "physical_game": 7,
+    "social_capital": 9,
+    "strategic_aggression": 4
+  },
+  "signature_move": "Orchestrated the first-ever intentional tribal immunity challenge throw in Survivor history, deliberately losing to eliminate Silas Gaither after the tribe swap placed him with old Samburu members Frank and Teresa, flipping the power dynamic.",
+  "stats": {
+    "voting_accuracy": 100,
+    "immunity_wins": 1,
+    "reward_wins": 1,
+    "jury_votes": "5-2",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 0,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Ethan played the quintessential early-era social game, anchoring the tight Boran Alliance with Lex and Tom while never receiving a single vote against him across 10 tribal councils. His 100% voting accuracy reflects total control of his position in the game without appearing threatening. He let Lex absorb the strategic target and Tom absorb the physical threat label, winning through likability, quiet influence, and an unimpeachable social reputation that earned him a decisive 5-2 jury victory over Kim Johnson.",
+  "fun_fact": "A former professional soccer goalkeeper who played in Zimbabwe, Cape Cod, and Hawaii, Ethan donated his $1 million prize to co-found Grassroot Soccer, a nonprofit that trains African professional soccer players to teach children about HIV/AIDS prevention — one of the most impactful charitable legacies from any reality TV winner."
+}

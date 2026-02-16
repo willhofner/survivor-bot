@@ -1,796 +1,362 @@
 {
-  "season": {
-    "number": 30,
-    "name": "Survivor: Worlds Apart",
-    "location": "San Juan del Sur, Rivas, Nicaragua",
-    "aired": "2015-02-25 - 2015-12-16",
-    "theme": "Mike Holloway",
-    "winner": "Mike",
-    "runner_up": "Carolyn Rivera, Will Sims II",
-    "final_vote": "6-1-1"
-  },
-  "episodes": [
-    {
-      "number": 1,
-      "tribal_councils": [
-        {
-          "number": 1,
-          "day": 3,
-          "tribe": "Masaya",
-          "eliminated": "So",
-          "votes": [
-            {
-              "target": "So",
-              "voters": [
-                "Carolyn",
-                "Max",
-                "Shirin",
-                "Tyler"
-              ],
-              "count": 4
-            },
-            {
-              "target": "Carolyn",
-              "voters": [
-                "Joaquin",
-                "So"
-              ],
-              "count": 2
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "number": 2,
-      "tribal_councils": [
-        {
-          "number": 2,
-          "day": 6,
-          "tribe": "Nagarote",
-          "eliminated": "Vince",
-          "votes": [
-            {
-              "target": "Vince",
-              "voters": [
-                "Hali",
-                "Jenn",
-                "Will"
-              ],
-              "count": 3
-            },
-            {
-              "target": "Jenn",
-              "voters": [
-                "Nina",
-                "Vince"
-              ],
-              "count": 2
-            },
-            {
-              "target": "Nina",
-              "voters": [
-                "Joe"
-              ],
-              "count": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "number": 3,
-      "tribal_councils": [
-        {
-          "number": 3,
-          "day": 8,
-          "tribe": "Nagarote",
-          "eliminated": "Nina",
-          "votes": [
-            {
-              "target": "Nina",
-              "voters": [
-                "Jenn",
-                "Joe",
-                "Will"
-              ],
-              "count": 3
-            },
-            {
-              "target": "Will",
-              "voters": [
-                "Hali",
-                "Nina"
-              ],
-              "count": 2
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "number": 4,
-      "tribal_councils": [
-        {
-          "number": 4,
-          "day": 11,
-          "tribe": "Escameca",
-          "eliminated": "Lindsey",
-          "votes": [
-            {
-              "target": "Lindsey",
-              "voters": [
-                "Dan",
-                "Dan",
-                "Kelly",
-                "Mike",
-                "Mike"
-              ],
-              "count": 5
-            },
-            {
-              "target": "Rodney",
-              "voters": [
-                "Lindsey",
-                "Sierra"
-              ],
-              "count": 2
-            },
-            {
-              "target": "Sierra",
-              "voters": [
-                "Kelly",
-                "Rodney"
-              ],
-              "count": 2
-            }
-          ],
-          "notes": "Tie vote"
-        }
-      ]
-    },
-    {
-      "number": 5,
-      "tribal_councils": [
-        {
-          "number": 5,
-          "day": 14,
-          "tribe": "Nagarote",
-          "eliminated": "Max",
-          "votes": [
-            {
-              "target": "Max",
-              "voters": [
-                "Carolyn",
-                "Hali",
-                "Jenn",
-                "Kelly",
-                "Will"
-              ],
-              "count": 5
-            },
-            {
-              "target": "Will",
-              "voters": [
-                "Max",
-                "Shirin"
-              ],
-              "count": 2
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "number": 6,
-      "tribal_councils": [
-        {
-          "number": 6,
-          "day": 16,
-          "tribe": "Escameca",
-          "eliminated": "Joaquin",
-          "votes": [
-            {
-              "target": "Joaquin",
-              "voters": [
-                "Dan",
-                "Joe",
-                "Mike",
-                "Sierra"
-              ],
-              "count": 4
-            },
-            {
-              "target": "Joe",
-              "voters": [
-                "Joaquin",
-                "Rodney",
-                "Tyler"
-              ],
-              "count": 3
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "number": 7,
-      "tribal_councils": [
-        {
-          "number": 7,
-          "day": 19,
-          "tribe": "Merica",
-          "eliminated": "Kelly",
-          "votes": [
-            {
-              "target": "Jenn",
-              "voters": [
-                "Carolyn",
-                "Dan",
-                "Kelly",
-                "Mike",
-                "Rodney",
-                "Sierra",
-                "Tyler"
-              ],
-              "count": 7
-            },
-            {
-              "target": "Kelly",
-              "voters": [
-                "Hali",
-                "Jenn",
-                "Joe",
-                "Shirin"
-              ],
-              "count": 4
-            },
-            {
-              "target": "Hali",
-              "voters": [
-                "Will"
-              ],
-              "count": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "number": 8,
-      "tribal_councils": [
-        {
-          "number": 8,
-          "day": 22,
-          "tribe": "Merica",
-          "eliminated": "Hali",
-          "votes": [
-            {
-              "target": "Hali",
-              "voters": [
-                "Carolyn",
-                "Dan",
-                "Mike",
-                "Rodney",
-                "Sierra",
-                "Tyler",
-                "Will"
-              ],
-              "count": 7
-            },
-            {
-              "target": "Dan",
-              "voters": [
-                "Hali",
-                "Jenn",
-                "Joe",
-                "Shirin"
-              ],
-              "count": 4
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "number": 9,
-      "tribal_councils": [
-        {
-          "number": 9,
-          "day": 24,
-          "tribe": "Merica",
-          "eliminated": "Joe",
-          "votes": [
-            {
-              "target": "Joe",
-              "voters": [
-                "Dan",
-                "Mike",
-                "Rodney",
-                "Shirin",
-                "Sierra"
-              ],
-              "count": 5
-            },
-            {
-              "target": "Jenn",
-              "voters": [
-                "Carolyn",
-                "Joe",
-                "Tyler",
-                "Will"
-              ],
-              "count": 4
-            },
-            {
-              "target": "Dan",
-              "voters": [
-                "Jenn"
-              ],
-              "count": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "number": 10,
-      "tribal_councils": [
-        {
-          "number": 10,
-          "day": 27,
-          "tribe": "Merica",
-          "eliminated": "Jenn",
-          "votes": [
-            {
-              "target": "Jenn",
-              "voters": [
-                "Carolyn",
-                "Mike",
-                "Shirin",
-                "Tyler",
-                "Will"
-              ],
-              "count": 5
-            },
-            {
-              "target": "Shirin",
-              "voters": [
-                "Dan",
-                "Rodney",
-                "Sierra"
-              ],
-              "count": 3
-            },
-            {
-              "target": "Carolyn",
-              "voters": [
-                "Jenn"
-              ],
-              "count": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "number": 11,
-      "tribal_councils": [
-        {
-          "number": 11,
-          "day": 29,
-          "tribe": "Merica",
-          "eliminated": "Shirin",
-          "votes": [
-            {
-              "target": "Shirin",
-              "voters": [
-                "Carolyn",
-                "Dan",
-                "Rodney",
-                "Sierra"
-              ],
-              "count": 4
-            },
-            {
-              "target": "Tyler",
-              "voters": [
-                "Mike",
-                "Shirin"
-              ],
-              "count": 2
-            },
-            {
-              "target": "Dan",
-              "voters": [
-                "Tyler",
-                "Will"
-              ],
-              "count": 2
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "number": 12,
-      "tribal_councils": [
-        {
-          "number": 12,
-          "day": 32,
-          "tribe": "Merica",
-          "eliminated": "Tyler",
-          "votes": [
-            {
-              "target": "Mike",
-              "voters": [
-                "Dan",
-                "Rodney",
-                "Tyler",
-                "Will"
-              ],
-              "count": 4
-            },
-            {
-              "target": "Tyler",
-              "voters": [
-                "Carolyn",
-                "Mike",
-                "Sierra"
-              ],
-              "count": 3
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "number": 13,
-      "tribal_councils": [
-        {
-          "number": 13,
-          "day": 35,
-          "tribe": "Merica",
-          "eliminated": "Dan",
-          "votes": [
-            {
-              "target": "Carolyn",
-              "voters": [
-                "Dan",
-                "Dan",
-                "Rodney",
-                "Sierra",
-                "Will"
-              ],
-              "count": 5
-            },
-            {
-              "target": "Dan",
-              "voters": [
-                "Carolyn",
-                "Mike"
-              ],
-              "count": 2
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "number": 14,
-      "tribal_councils": [
-        {
-          "number": 14,
-          "day": 37,
-          "tribe": "Merica",
-          "eliminated": "Sierra",
-          "votes": [
-            {
-              "target": "Sierra",
-              "voters": [
-                "Carolyn",
-                "Mike",
-                "Rodney",
-                "Will"
-              ],
-              "count": 4
-            },
-            {
-              "target": "Rodney",
-              "voters": [
-                "Sierra"
-              ],
-              "count": 1
-            }
-          ]
-        },
-        {
-          "number": 15,
-          "day": 38,
-          "tribe": "Merica",
-          "eliminated": "Rodney",
-          "votes": [
-            {
-              "target": "Carolyn",
-              "voters": [
-                "Rodney",
-                "Will"
-              ],
-              "count": 2
-            },
-            {
-              "target": "Rodney",
-              "voters": [
-                "Carolyn",
-                "Mike"
-              ],
-              "count": 2
-            }
-          ],
-          "notes": "Tie vote"
-        }
-      ]
-    }
-  ],
+  "season": 30,
+  "season_name": "Survivor: Worlds Apart",
   "castaways": [
     {
       "name": "Mike",
-      "original_tribe": "Escameca (Blue Collar)",
-      "color": "#0B58A0",
+      "original_tribe": "Escameca",
+      "tribe_color": "",
       "placement": "Winner",
       "days_lasted": 39,
       "votes_against": 4,
       "voting_history": [
         {
-          "tc": 4,
+          "tribal_council": 4,
           "voted_for": "Lindsey",
           "day": 11
         },
         {
-          "tc": 6,
+          "tribal_council": 4,
+          "voted_for": "Lindsey",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
           "voted_for": "Joaquin",
           "day": 16
         },
         {
-          "tc": 7,
+          "tribal_council": 7,
           "voted_for": "Jenn",
           "day": 19
         },
         {
-          "tc": 8,
+          "tribal_council": 8,
           "voted_for": "Hali",
           "day": 22
         },
         {
-          "tc": 9,
+          "tribal_council": 9,
           "voted_for": "Joe",
           "day": 24
         },
         {
-          "tc": 10,
+          "tribal_council": 10,
           "voted_for": "Jenn",
           "day": 27
         },
         {
-          "tc": 11,
+          "tribal_council": 11,
           "voted_for": "Tyler",
           "day": 29
         },
         {
-          "tc": 12,
+          "tribal_council": 12,
           "voted_for": "Tyler",
           "day": 32
         },
         {
-          "tc": 13,
+          "tribal_council": 13,
           "voted_for": "Dan",
           "day": 35
         },
         {
-          "tc": 14,
+          "tribal_council": 14,
           "voted_for": "Sierra",
           "day": 37
         },
         {
-          "tc": 15,
+          "tribal_council": 15,
           "voted_for": "Rodney",
           "day": 38
-        }
-      ],
-      "final_result": "Sole Survivor"
-    },
-    {
-      "name": "Will",
-      "original_tribe": "Nagarote (No Collar)",
-      "color": "#C11E21",
-      "placement": "Runner-up",
-      "days_lasted": 39,
-      "votes_against": 4,
-      "voting_history": [
-        {
-          "tc": 2,
-          "voted_for": "Vince",
-          "day": 6
         },
         {
-          "tc": 3,
-          "voted_for": "Nina",
-          "day": 8
-        },
-        {
-          "tc": 5,
-          "voted_for": "Max",
-          "day": 14
-        },
-        {
-          "tc": 7,
-          "voted_for": "Hali",
-          "day": 19
-        },
-        {
-          "tc": 8,
-          "voted_for": "Hali",
-          "day": 22
-        },
-        {
-          "tc": 9,
-          "voted_for": "Jenn",
-          "day": 24
-        },
-        {
-          "tc": 10,
-          "voted_for": "Jenn",
-          "day": 27
-        },
-        {
-          "tc": 11,
-          "voted_for": "Dan",
-          "day": 29
-        },
-        {
-          "tc": 12,
-          "voted_for": "Mike",
-          "day": 32
-        },
-        {
-          "tc": 13,
-          "voted_for": "Carolyn",
-          "day": 35
-        },
-        {
-          "tc": 14,
-          "voted_for": "Sierra",
-          "day": 37
-        },
-        {
-          "tc": 15,
-          "voted_for": "Carolyn",
+          "tribal_council": 15,
+          "voted_for": "",
           "day": 38
         }
-      ],
-      "final_result": "Runner-up"
+      ]
     },
     {
       "name": "Carolyn",
-      "original_tribe": "Masaya (White Collar)",
-      "color": "#E9CC0E",
+      "original_tribe": "Masaya",
+      "tribe_color": "",
       "placement": "Runner-up",
       "days_lasted": 39,
       "votes_against": 10,
       "voting_history": [
         {
-          "tc": 1,
+          "tribal_council": 1,
           "voted_for": "So",
           "day": 3
         },
         {
-          "tc": 5,
+          "tribal_council": 5,
           "voted_for": "Max",
           "day": 14
         },
         {
-          "tc": 7,
+          "tribal_council": 7,
           "voted_for": "Jenn",
           "day": 19
         },
         {
-          "tc": 8,
+          "tribal_council": 8,
           "voted_for": "Hali",
           "day": 22
         },
         {
-          "tc": 9,
+          "tribal_council": 9,
           "voted_for": "Jenn",
           "day": 24
         },
         {
-          "tc": 10,
+          "tribal_council": 10,
           "voted_for": "Jenn",
           "day": 27
         },
         {
-          "tc": 11,
+          "tribal_council": 11,
           "voted_for": "Shirin",
           "day": 29
         },
         {
-          "tc": 12,
+          "tribal_council": 12,
           "voted_for": "Tyler",
           "day": 32
         },
         {
-          "tc": 13,
+          "tribal_council": 13,
           "voted_for": "Dan",
           "day": 35
         },
         {
-          "tc": 14,
+          "tribal_council": 14,
           "voted_for": "Sierra",
           "day": 37
         },
         {
-          "tc": 15,
+          "tribal_council": 15,
           "voted_for": "Rodney",
           "day": 38
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "",
+          "day": 38
         }
-      ],
-      "final_result": "Runner-up"
+      ]
     },
     {
-      "name": "Sierra",
-      "original_tribe": "Escameca (Blue Collar)",
-      "color": "#0B58A0",
-      "placement": "14th",
-      "days_lasted": 37,
-      "votes_against": 6,
+      "name": "Will",
+      "original_tribe": "Nagarote",
+      "tribe_color": "",
+      "placement": "2nd Runner-up",
+      "days_lasted": 39,
+      "votes_against": 4,
       "voting_history": [
         {
-          "tc": 4,
-          "voted_for": "Rodney",
-          "day": 11
+          "tribal_council": 2,
+          "voted_for": "Vince",
+          "day": 6
         },
         {
-          "tc": 6,
-          "voted_for": "Joaquin",
-          "day": 16
+          "tribal_council": 3,
+          "voted_for": "Nina",
+          "day": 8
         },
         {
-          "tc": 7,
-          "voted_for": "Jenn",
+          "tribal_council": 5,
+          "voted_for": "Max",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Hali",
           "day": 19
         },
         {
-          "tc": 8,
+          "tribal_council": 8,
           "voted_for": "Hali",
           "day": 22
         },
         {
-          "tc": 9,
-          "voted_for": "Joe",
+          "tribal_council": 9,
+          "voted_for": "Jenn",
           "day": 24
         },
         {
-          "tc": 10,
-          "voted_for": "Shirin",
+          "tribal_council": 10,
+          "voted_for": "Jenn",
           "day": 27
         },
         {
-          "tc": 11,
-          "voted_for": "Shirin",
+          "tribal_council": 11,
+          "voted_for": "Dan",
           "day": 29
         },
         {
-          "tc": 12,
-          "voted_for": "Tyler",
+          "tribal_council": 12,
+          "voted_for": "Mike",
           "day": 32
         },
         {
-          "tc": 13,
+          "tribal_council": 13,
           "voted_for": "Carolyn",
           "day": 35
         },
         {
-          "tc": 14,
+          "tribal_council": 14,
+          "voted_for": "Sierra",
+          "day": 37
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Carolyn",
+          "day": 38
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Rodney",
+      "original_tribe": "Escameca",
+      "tribe_color": "",
+      "placement": "Lost fire challenge",
+      "days_lasted": 38,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "Sierra",
+          "day": 11
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Joe",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jenn",
+          "day": 19
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Hali",
+          "day": 22
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Joe",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Shirin",
+          "day": 27
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Shirin",
+          "day": 29
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Mike",
+          "day": 32
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Carolyn",
+          "day": 35
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Sierra",
+          "day": 37
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Carolyn",
+          "day": 38
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Sierra",
+      "original_tribe": "Escameca",
+      "tribe_color": "",
+      "placement": "14th voted out",
+      "days_lasted": 37,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "Rodney",
+          "day": 11
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Joaquin",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jenn",
+          "day": 19
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Hali",
+          "day": 22
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Joe",
+          "day": 24
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Shirin",
+          "day": 27
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Shirin",
+          "day": 29
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Tyler",
+          "day": 32
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Carolyn",
+          "day": 35
+        },
+        {
+          "tribal_council": 14,
           "voted_for": "Rodney",
           "day": 37
         }
@@ -798,54 +364,64 @@
     },
     {
       "name": "Dan",
-      "original_tribe": "Escameca (Blue Collar)",
-      "color": "#0B58A0",
-      "placement": "13th",
+      "original_tribe": "Escameca",
+      "tribe_color": "",
+      "placement": "13th voted out",
       "days_lasted": 35,
       "votes_against": 9,
       "voting_history": [
         {
-          "tc": 4,
+          "tribal_council": 4,
           "voted_for": "Lindsey",
           "day": 11
         },
         {
-          "tc": 6,
+          "tribal_council": 4,
+          "voted_for": "Lindsey",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
           "voted_for": "Joaquin",
           "day": 16
         },
         {
-          "tc": 7,
+          "tribal_council": 7,
           "voted_for": "Jenn",
           "day": 19
         },
         {
-          "tc": 8,
+          "tribal_council": 8,
           "voted_for": "Hali",
           "day": 22
         },
         {
-          "tc": 9,
+          "tribal_council": 9,
           "voted_for": "Joe",
           "day": 24
         },
         {
-          "tc": 10,
+          "tribal_council": 10,
           "voted_for": "Shirin",
           "day": 27
         },
         {
-          "tc": 11,
+          "tribal_council": 11,
           "voted_for": "Shirin",
           "day": 29
         },
         {
-          "tc": 12,
+          "tribal_council": 12,
           "voted_for": "Mike",
           "day": 32
         },
         {
-          "tc": 13,
+          "tribal_council": 13,
+          "voted_for": "Carolyn",
+          "day": 35
+        },
+        {
+          "tribal_council": 13,
           "voted_for": "Carolyn",
           "day": 35
         }
@@ -853,49 +429,49 @@
     },
     {
       "name": "Tyler",
-      "original_tribe": "Masaya (White Collar)",
-      "color": "#E9CC0E",
-      "placement": "12th",
+      "original_tribe": "Masaya",
+      "tribe_color": "",
+      "placement": "12th voted out",
       "days_lasted": 32,
       "votes_against": 5,
       "voting_history": [
         {
-          "tc": 1,
+          "tribal_council": 1,
           "voted_for": "So",
           "day": 3
         },
         {
-          "tc": 6,
+          "tribal_council": 6,
           "voted_for": "Joe",
           "day": 16
         },
         {
-          "tc": 7,
+          "tribal_council": 7,
           "voted_for": "Jenn",
           "day": 19
         },
         {
-          "tc": 8,
+          "tribal_council": 8,
           "voted_for": "Hali",
           "day": 22
         },
         {
-          "tc": 9,
+          "tribal_council": 9,
           "voted_for": "Jenn",
           "day": 24
         },
         {
-          "tc": 10,
+          "tribal_council": 10,
           "voted_for": "Jenn",
           "day": 27
         },
         {
-          "tc": 11,
+          "tribal_council": 11,
           "voted_for": "Dan",
           "day": 29
         },
         {
-          "tc": 12,
+          "tribal_council": 12,
           "voted_for": "Mike",
           "day": 32
         }
@@ -903,44 +479,44 @@
     },
     {
       "name": "Shirin",
-      "original_tribe": "Masaya (White Collar)",
-      "color": "#E9CC0E",
-      "placement": "11th",
+      "original_tribe": "Masaya",
+      "tribe_color": "",
+      "placement": "11th voted out",
       "days_lasted": 29,
       "votes_against": 7,
       "voting_history": [
         {
-          "tc": 1,
+          "tribal_council": 1,
           "voted_for": "So",
           "day": 3
         },
         {
-          "tc": 5,
+          "tribal_council": 5,
           "voted_for": "Will",
           "day": 14
         },
         {
-          "tc": 7,
+          "tribal_council": 7,
           "voted_for": "Kelly",
           "day": 19
         },
         {
-          "tc": 8,
+          "tribal_council": 8,
           "voted_for": "Dan",
           "day": 22
         },
         {
-          "tc": 9,
+          "tribal_council": 9,
           "voted_for": "Joe",
           "day": 24
         },
         {
-          "tc": 10,
+          "tribal_council": 10,
           "voted_for": "Jenn",
           "day": 27
         },
         {
-          "tc": 11,
+          "tribal_council": 11,
           "voted_for": "Tyler",
           "day": 29
         }
@@ -948,44 +524,44 @@
     },
     {
       "name": "Jenn",
-      "original_tribe": "Nagarote (No Collar)",
-      "color": "#C11E21",
-      "placement": "10th",
+      "original_tribe": "Nagarote",
+      "tribe_color": "",
+      "placement": "10th voted out",
       "days_lasted": 27,
       "votes_against": 18,
       "voting_history": [
         {
-          "tc": 2,
+          "tribal_council": 2,
           "voted_for": "Vince",
           "day": 6
         },
         {
-          "tc": 3,
+          "tribal_council": 3,
           "voted_for": "Nina",
           "day": 8
         },
         {
-          "tc": 5,
+          "tribal_council": 5,
           "voted_for": "Max",
           "day": 14
         },
         {
-          "tc": 7,
+          "tribal_council": 7,
           "voted_for": "Kelly",
           "day": 19
         },
         {
-          "tc": 8,
+          "tribal_council": 8,
           "voted_for": "Dan",
           "day": 22
         },
         {
-          "tc": 9,
+          "tribal_council": 9,
           "voted_for": "Dan",
           "day": 24
         },
         {
-          "tc": 10,
+          "tribal_council": 10,
           "voted_for": "Carolyn",
           "day": 27
         }
@@ -993,39 +569,39 @@
     },
     {
       "name": "Joe",
-      "original_tribe": "Nagarote (No Collar)",
-      "color": "#C11E21",
-      "placement": "9th",
+      "original_tribe": "Nagarote",
+      "tribe_color": "",
+      "placement": "9th voted out",
       "days_lasted": 24,
       "votes_against": 8,
       "voting_history": [
         {
-          "tc": 2,
+          "tribal_council": 2,
           "voted_for": "Nina",
           "day": 6
         },
         {
-          "tc": 3,
+          "tribal_council": 3,
           "voted_for": "Nina",
           "day": 8
         },
         {
-          "tc": 6,
+          "tribal_council": 6,
           "voted_for": "Joaquin",
           "day": 16
         },
         {
-          "tc": 7,
+          "tribal_council": 7,
           "voted_for": "Kelly",
           "day": 19
         },
         {
-          "tc": 8,
+          "tribal_council": 8,
           "voted_for": "Dan",
           "day": 22
         },
         {
-          "tc": 9,
+          "tribal_council": 9,
           "voted_for": "Jenn",
           "day": 24
         }
@@ -1033,34 +609,34 @@
     },
     {
       "name": "Hali",
-      "original_tribe": "Nagarote (No Collar)",
-      "color": "#C11E21",
-      "placement": "8th",
+      "original_tribe": "Nagarote",
+      "tribe_color": "",
+      "placement": "8th voted out",
       "days_lasted": 22,
       "votes_against": 8,
       "voting_history": [
         {
-          "tc": 2,
+          "tribal_council": 2,
           "voted_for": "Vince",
           "day": 6
         },
         {
-          "tc": 3,
+          "tribal_council": 3,
           "voted_for": "Will",
           "day": 8
         },
         {
-          "tc": 5,
+          "tribal_council": 5,
           "voted_for": "Max",
           "day": 14
         },
         {
-          "tc": 7,
+          "tribal_council": 7,
           "voted_for": "Kelly",
           "day": 19
         },
         {
-          "tc": 8,
+          "tribal_council": 8,
           "voted_for": "Dan",
           "day": 22
         }
@@ -1068,29 +644,29 @@
     },
     {
       "name": "Kelly",
-      "original_tribe": "Escameca (Blue Collar)",
-      "color": "#0B58A0",
-      "placement": "7th",
+      "original_tribe": "Escameca",
+      "tribe_color": "",
+      "placement": "7th voted out",
       "days_lasted": 19,
       "votes_against": 4,
       "voting_history": [
         {
-          "tc": 4,
+          "tribal_council": 4,
           "voted_for": "Sierra",
           "day": 11
         },
         {
-          "tc": 4,
+          "tribal_council": 4,
           "voted_for": "Lindsey",
           "day": 11
         },
         {
-          "tc": 5,
+          "tribal_council": 5,
           "voted_for": "Max",
           "day": 14
         },
         {
-          "tc": 7,
+          "tribal_council": 7,
           "voted_for": "Jenn",
           "day": 19
         }
@@ -1098,19 +674,19 @@
     },
     {
       "name": "Joaquin",
-      "original_tribe": "Masaya (White Collar)",
-      "color": "#E9CC0E",
-      "placement": "6th",
+      "original_tribe": "Masaya",
+      "tribe_color": "",
+      "placement": "6th voted out",
       "days_lasted": 16,
       "votes_against": 4,
       "voting_history": [
         {
-          "tc": 1,
+          "tribal_council": 1,
           "voted_for": "Carolyn",
           "day": 3
         },
         {
-          "tc": 6,
+          "tribal_council": 6,
           "voted_for": "Joe",
           "day": 16
         }
@@ -1118,19 +694,19 @@
     },
     {
       "name": "Max",
-      "original_tribe": "Masaya (White Collar)",
-      "color": "#E9CC0E",
-      "placement": "5th",
+      "original_tribe": "Masaya",
+      "tribe_color": "",
+      "placement": "5th voted out",
       "days_lasted": 14,
       "votes_against": 5,
       "voting_history": [
         {
-          "tc": 1,
+          "tribal_council": 1,
           "voted_for": "So",
           "day": 3
         },
         {
-          "tc": 5,
+          "tribal_council": 5,
           "voted_for": "Will",
           "day": 14
         }
@@ -1138,99 +714,39 @@
     },
     {
       "name": "Lindsey",
-      "original_tribe": "Escameca (Blue Collar)",
-      "color": "#0B58A0",
-      "placement": "4th",
+      "original_tribe": "Escameca",
+      "tribe_color": "",
+      "placement": "4th voted out",
       "days_lasted": 11,
       "votes_against": 5,
       "voting_history": [
         {
-          "tc": 4,
+          "tribal_council": 4,
           "voted_for": "Rodney",
           "day": 11
-        }
-      ]
-    },
-    {
-      "name": "Rodney",
-      "original_tribe": "Escameca (Blue Collar)",
-      "color": "#0B58A0",
-      "placement": "4th",
-      "days_lasted": 38,
-      "votes_against": 5,
-      "voting_history": [
+        },
         {
-          "tc": 4,
-          "voted_for": "Sierra",
+          "tribal_council": 4,
+          "voted_for": "",
           "day": 11
-        },
-        {
-          "tc": 6,
-          "voted_for": "Joe",
-          "day": 16
-        },
-        {
-          "tc": 7,
-          "voted_for": "Jenn",
-          "day": 19
-        },
-        {
-          "tc": 8,
-          "voted_for": "Hali",
-          "day": 22
-        },
-        {
-          "tc": 9,
-          "voted_for": "Joe",
-          "day": 24
-        },
-        {
-          "tc": 10,
-          "voted_for": "Shirin",
-          "day": 27
-        },
-        {
-          "tc": 11,
-          "voted_for": "Shirin",
-          "day": 29
-        },
-        {
-          "tc": 12,
-          "voted_for": "Mike",
-          "day": 32
-        },
-        {
-          "tc": 13,
-          "voted_for": "Carolyn",
-          "day": 35
-        },
-        {
-          "tc": 14,
-          "voted_for": "Sierra",
-          "day": 37
-        },
-        {
-          "tc": 15,
-          "voted_for": "Carolyn",
-          "day": 38
         }
       ]
     },
     {
       "name": "Nina",
-      "original_tribe": "Nagarote (No Collar)",
-      "color": "#C11E21",
-      "placement": "3rd",
+      "original_tribe": "Nagarote",
+      "tribe_color": "",
+      "placement": "3rd voted out",
       "days_lasted": 8,
       "votes_against": 4,
       "voting_history": [
         {
-          "tc": 2,
+          "tribal_council": 2,
           "voted_for": "Jenn",
           "day": 6
         },
         {
-          "tc": 3,
+          "tribal_council": 3,
           "voted_for": "Will",
           "day": 8
         }
@@ -1238,14 +754,14 @@
     },
     {
       "name": "Vince",
-      "original_tribe": "Nagarote (No Collar)",
-      "color": "#C11E21",
-      "placement": "2nd",
+      "original_tribe": "Nagarote",
+      "tribe_color": "",
+      "placement": "2nd voted out",
       "days_lasted": 6,
       "votes_against": 3,
       "voting_history": [
         {
-          "tc": 2,
+          "tribal_council": 2,
           "voted_for": "Jenn",
           "day": 6
         }
@@ -1253,14 +769,14 @@
     },
     {
       "name": "So",
-      "original_tribe": "Masaya (White Collar)",
-      "color": "#E9CC0E",
-      "placement": "1st",
+      "original_tribe": "Masaya",
+      "tribe_color": "",
+      "placement": "1st voted out",
       "days_lasted": 3,
       "votes_against": 4,
       "voting_history": [
         {
-          "tc": 1,
+          "tribal_council": 1,
           "voted_for": "Carolyn",
           "day": 3
         }

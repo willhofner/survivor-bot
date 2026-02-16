@@ -1,0 +1,886 @@
+{
+  "season": 22,
+  "season_name": "Survivor: Redemption Island",
+  "castaways": [
+    {
+      "name": "Boston Rob",
+      "original_tribe": "Ometepe",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Francesca",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Matt",
+          "day": 5
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Phillip",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Matt",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Mike",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "David",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Julie",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Ralph",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Steve",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Andrea",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Grant",
+          "day": 35
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Andrea",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Ashley",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Phillip",
+      "original_tribe": "Ometepe",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 17,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Francesca",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Kristina",
+          "day": 5
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Kristina",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Matt",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Mike",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "David",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Julie",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Ralph",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Steve",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Andrea",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Grant",
+          "day": 35
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Andrea",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Ashley",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Natalie",
+      "original_tribe": "Ometepe",
+      "tribe_color": "",
+      "placement": "2nd Runner-up",
+      "days_lasted": 39,
+      "votes_against": 1,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Kristina",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Matt",
+          "day": 5
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Kristina",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Matt",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Mike",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "David",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Julie",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Ralph",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Steve",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Andrea",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Grant",
+          "day": 35
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Andrea",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Ashley",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Ashley",
+      "original_tribe": "Ometepe",
+      "tribe_color": "",
+      "placement": "17th voted out",
+      "days_lasted": 38,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Kristina",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Matt",
+          "day": 5
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Kristina",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Matt",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Mike",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "David",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Julie",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Ralph",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Steve",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Andrea",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Grant",
+          "day": 35
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Andrea",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Phillip",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Andrea",
+      "original_tribe": "Ometepe",
+      "tribe_color": "",
+      "placement": "16th voted out",
+      "days_lasted": 37,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Kristina",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Kristina",
+          "day": 5
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Kristina",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Matt",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Mike",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "David",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Julie",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Ralph",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Steve",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Phillip",
+          "day": 32
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Boston Rob",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Grant",
+      "original_tribe": "Ometepe",
+      "tribe_color": "",
+      "placement": "15th voted out",
+      "days_lasted": 35,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Francesca",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Matt",
+          "day": 5
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Phillip",
+          "day": 11
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Matt",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Mike",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "David",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Julie",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Ralph",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Steve",
+          "day": 30
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Andrea",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Natalie",
+          "day": 35
+        }
+      ]
+    },
+    {
+      "name": "Ralph",
+      "original_tribe": "Zapatera",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 30,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Russell",
+          "day": 8
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Krista",
+          "day": 13
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Stephanie",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "David",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Grant",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Phillip",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Boston Rob",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Phillip",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Boston Rob",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "Steve",
+      "original_tribe": "Zapatera",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 30,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Russell",
+          "day": 8
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Russell",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Krista",
+          "day": 13
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Stephanie",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Sarita",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Grant",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Phillip",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Boston Rob",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Phillip",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Boston Rob",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Grant",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "Julie",
+      "original_tribe": "Zapatera",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 27,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Stephanie",
+          "day": 8
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Russell",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Krista",
+          "day": 13
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Stephanie",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Sarita",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Grant",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Phillip",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Boston Rob",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Phillip",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "David",
+      "original_tribe": "Zapatera",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 24,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Stephanie",
+          "day": 8
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Russell",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Krista",
+          "day": 13
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Sarita",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Sarita",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Grant",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Phillip",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Boston Rob",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Mike",
+      "original_tribe": "Zapatera",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 22,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Russell",
+          "day": 8
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Russell",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Krista",
+          "day": 13
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Stephanie",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Sarita",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Grant",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Phillip",
+          "day": 22
+        }
+      ]
+    },
+    {
+      "name": "Matt",
+      "original_tribe": "Ometepe",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 21,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Francesca",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Phillip",
+          "day": 5
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Steve",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Sarita",
+      "original_tribe": "Zapatera",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 18,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Stephanie",
+          "day": 8
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Russell",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Krista",
+          "day": 13
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Stephanie",
+          "day": 16
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "David",
+          "day": 18
+        }
+      ]
+    },
+    {
+      "name": "Stephanie",
+      "original_tribe": "Zapatera",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 16,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Ralph",
+          "day": 8
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Steve",
+          "day": 13
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Sarita",
+          "day": 16
+        }
+      ]
+    },
+    {
+      "name": "Krista",
+      "original_tribe": "Zapatera",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 13,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Ralph",
+          "day": 8
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Ralph",
+          "day": 8
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Steve",
+          "day": 13
+        }
+      ]
+    },
+    {
+      "name": "Kristina",
+      "original_tribe": "Ometepe",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 11,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Phillip",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Phillip",
+          "day": 5
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Phillip",
+          "day": 11
+        }
+      ]
+    },
+    {
+      "name": "Russell",
+      "original_tribe": "Zapatera",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 8,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Ralph",
+          "day": 8
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "name": "Francesca",
+      "original_tribe": "Ometepe",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Phillip",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

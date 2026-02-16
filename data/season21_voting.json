@@ -1,0 +1,856 @@
+{
+  "season": 21,
+  "season_name": "Survivor: Nicaragua",
+  "castaways": [
+    {
+      "name": "Fabio",
+      "original_tribe": "La Flor",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 2,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Brenda",
+          "day": 6
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kelly B.",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kelly B.",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Marty",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Alina",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jane",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Brenda",
+          "day": 27
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Holly",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Jane",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Dan",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Holly",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Chase",
+      "original_tribe": "La Flor",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 1,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Shannon",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Tyrone",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Yve",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Alina",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Marty",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Brenda",
+          "day": 27
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Benry",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Jane",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Dan",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Holly",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Sash",
+      "original_tribe": "La Flor",
+      "tribe_color": "",
+      "placement": "2nd Runner-up",
+      "days_lasted": 39,
+      "votes_against": 2,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Shannon",
+          "day": 6
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Marty",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kelly B.",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jill",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Alina",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Marty",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Brenda",
+          "day": 27
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Benry",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Jane",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Dan",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Holly",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Holly",
+      "original_tribe": "Espada",
+      "tribe_color": "",
+      "placement": "15th voted out",
+      "days_lasted": 38,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Wendy",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Jimmy J.",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Dan",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Tyrone",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Yve",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Alina",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Marty",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Brenda",
+          "day": 27
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Benry",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Jane",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Dan",
+          "day": 37
+        },
+        {
+          "tribal_council": 17,
+          "voted_for": "Sash",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Dan",
+      "original_tribe": "Espada",
+      "tribe_color": "",
+      "placement": "14th voted out",
+      "days_lasted": 37,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Wendy",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Jimmy J.",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Jimmy T.",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Tyrone",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Yve",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Alina",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jane",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Brenda",
+          "day": 27
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Fabio",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Jane",
+          "day": 36
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Chase",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Jane",
+      "original_tribe": "Espada",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 36,
+      "votes_against": 11,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Wendy",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Jimmy J.",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Dan",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Marty",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Marty",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Marty",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Marty",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Marty",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Brenda",
+          "day": 27
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Benry",
+          "day": 32
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Sash",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Benry",
+      "original_tribe": "La Flor",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 32,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Shannon",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Tyrone",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Yve",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Alina",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jane",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Brenda",
+          "day": 27
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Fabio",
+          "day": 32
+        }
+      ]
+    },
+    {
+      "name": "NaOnka",
+      "original_tribe": "La Flor",
+      "tribe_color": "",
+      "placement": "Quit",
+      "days_lasted": 28,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Shannon",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Tyrone",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Yve",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Alina",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Marty",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Brenda",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "Purple Kelly",
+      "original_tribe": "La Flor",
+      "tribe_color": "",
+      "placement": "Quit",
+      "days_lasted": 28,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Shannon",
+          "day": 6
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kelly B.",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kelly B.",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jill",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Alina",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Marty",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Benry",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "Brenda",
+      "original_tribe": "La Flor",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 27,
+      "votes_against": 13,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Shannon",
+          "day": 6
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kelly B.",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kelly B.",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jill",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Alina",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Marty",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "NaOnka",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "Marty",
+      "original_tribe": "Espada",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 24,
+      "votes_against": 15,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Wendy",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Jimmy J.",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Jimmy T.",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Brenda",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jane",
+          "day": 18
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Alina",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jane",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Alina",
+      "original_tribe": "La Flor",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 22,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Brenda",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Tyrone",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Yve",
+          "day": 15
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Marty",
+          "day": 22
+        }
+      ]
+    },
+    {
+      "name": "Jill",
+      "original_tribe": "Espada",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 18,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Wendy",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Jimmy J.",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Jimmy T.",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Brenda",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kelly B.",
+          "day": 15
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jane",
+          "day": 18
+        }
+      ]
+    },
+    {
+      "name": "Kelly B.",
+      "original_tribe": "La Flor",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 15,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Shannon",
+          "day": 6
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Marty",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Yve",
+      "original_tribe": "Espada",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 15,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Wendy",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Jimmy J.",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Jimmy T.",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "NaOnka",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Dan",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Tyrone",
+      "original_tribe": "Espada",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 14,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Wendy",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Jimmy J.",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Jimmy T.",
+          "day": 11
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "NaOnka",
+          "day": 14
+        }
+      ]
+    },
+    {
+      "name": "Jimmy T.",
+      "original_tribe": "Espada",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 11,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Wendy",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Jimmy J.",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Dan",
+          "day": 11
+        }
+      ]
+    },
+    {
+      "name": "Jimmy J.",
+      "original_tribe": "Espada",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 8,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Wendy",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Dan",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "name": "Shannon",
+      "original_tribe": "La Flor",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 6,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Brenda",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Wendy",
+      "original_tribe": "Espada",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Yve",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Bob Crowley",
+  "season": 17,
+  "season_name": "Survivor: Gabon",
+  "archetype": {
+    "voting_control": 3,
+    "physical_game": 8,
+    "social_capital": 6,
+    "strategic_aggression": 3
+  },
+  "signature_move": "Crafted two convincingly realistic fake Hidden Immunity Idols on Exile Island, one of which he gave to Randy Bailey who played it at tribal council -- causing Randy's humiliating blindside and cementing Bob's reputation as the craftiest older player in Survivor history.",
+  "stats": {
+    "voting_accuracy": 56,
+    "immunity_wins": 3,
+    "reward_wins": 2,
+    "jury_votes": "4-3-0",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 2,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Bob played a low-control, high-survival game defined by challenge dominance and social likability rather than strategic manipulation. After his Onion Alliance was systematically dismantled post-merge, Bob was on the wrong side of four consecutive votes but saved himself by winning three straight individual immunities, crafting fake idols to buy time, and winning the decisive fire-making tiebreaker at Final 4. He won the jury vote 4-3 over Susie largely because the Onion Alliance members on the jury rewarded his loyalty and likability over Susie's perceived coattail-riding.",
+  "fun_fact": "At 57 years old, Bob Crowley was the oldest winner in Survivor history at the time of his victory and remains one of the oldest ever, proving that a physics teacher from Maine could outlast players half his age through sheer grit, craftiness, and challenge prowess."
+}

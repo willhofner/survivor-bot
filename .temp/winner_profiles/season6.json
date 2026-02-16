@@ -1,0 +1,24 @@
+{
+  "name": "Jenna Morasca",
+  "season": 6,
+  "season_name": "Survivor: The Amazon",
+  "archetype": {
+    "voting_control": 6,
+    "physical_game": 8,
+    "social_capital": 7,
+    "strategic_aggression": 5
+  },
+  "signature_move": "Won the final two immunity challenges while visibly sick to force her way to the Final Two, then leveraged strong jury relationships to defeat Matthew 6-1 in one of the most lopsided jury votes in early Survivor history.",
+  "stats": {
+    "voting_accuracy": 82,
+    "immunity_wins": 4,
+    "reward_wins": 0,
+    "jury_votes": "6-1",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 3,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Jenna played a socially dominant game anchored by her tight alliance with Heidi Strobel, leveraging personal relationships to maintain jury favor even through strategic turbulence. She was not the primary strategic architect of the post-merge (that was Rob Cesternino), but she made critical moves like flipping on Deena and cutting Rob at Final Three. Her endgame was defined by clutch immunity wins that saved her when she was otherwise vulnerable.",
+  "fun_fact": "At 21 years old, Jenna was the youngest Sole Survivor at the time of her win, and she famously stripped down with Heidi to trade their clothes for peanut butter and chocolate during an immunity challenge."
+}

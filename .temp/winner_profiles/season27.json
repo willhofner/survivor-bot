@@ -1,0 +1,24 @@
+{
+  "name": "Tyson Apostol",
+  "season": 27,
+  "season_name": "Survivor: Blood vs. Water",
+  "archetype": {
+    "voting_control": 8,
+    "physical_game": 7,
+    "social_capital": 6,
+    "strategic_aggression": 8
+  },
+  "signature_move": "Played his hidden immunity idol at Final 5 to negate votes against him and take control of the endgame, then engineered Ciera's elimination at Final 4 despite her desperate rock-draw threat.",
+  "stats": {
+    "voting_accuracy": 82,
+    "immunity_wins": 3,
+    "reward_wins": 1,
+    "jury_votes": "7-1-0",
+    "idols_played": 1,
+    "idols_successful": 1,
+    "times_received_votes": 4,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Third time was the charm for Tyson, who shed his reputation as a sarcastic loose cannon to play a controlled, dominant game. He built the Coconut Bandits alliance with Gervase, found a hidden immunity idol, and systematically eliminated threats while maintaining enough social capital to win 7-1-0 at Final Tribal Council.",
+  "fun_fact": "Tyson is the only winner to have been voted out in a previous season due to his own strategic blunder (voting himself out in Heroes vs. Villains by switching his vote against Russell Hantz's instructions)."
+}

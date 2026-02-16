@@ -1,0 +1,686 @@
+{
+  "season": 7,
+  "season_name": "Survivor: Pearl Islands",
+  "castaways": [
+    {
+      "name": "Sandra",
+      "original_tribe": "Drake",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "Burton",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Michelle",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Trish",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Shawn",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Andrew",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Ryan O.",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jonny Fairplay",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Tijuana",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Lillian",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Burton",
+          "day": 36
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Darrah",
+          "day": 37
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Lillian",
+      "original_tribe": "Morgan",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Nicole",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Osten",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Darrah",
+          "day": 9
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Andrew",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Ryan O.",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Rupert",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Tijuana",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Christa",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Burton",
+          "day": 36
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Darrah",
+          "day": 37
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "Jonny Fairplay",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Jonny Fairplay",
+      "original_tribe": "Drake",
+      "tribe_color": "",
+      "placement": "15th voted out",
+      "days_lasted": 38,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "Burton",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Michelle",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Rupert",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Shawn",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Andrew",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Ryan O.",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Rupert",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Tijuana",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Christa",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Lillian",
+          "day": 36
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Darrah",
+          "day": 37
+        },
+        {
+          "tribal_council": 16,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Darrah",
+      "original_tribe": "Morgan",
+      "tribe_color": "",
+      "placement": "14th voted out",
+      "days_lasted": 37,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Nicole",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Ryan S.",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Lillian",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Osten",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jonny Fairplay",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Ryan O.",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Rupert",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Burton",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Christa",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Burton",
+          "day": 36
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Lillian",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Burton",
+      "original_tribe": "Drake",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 36,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "Christa",
+          "day": 12
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Andrew",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Ryan O.",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Rupert",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Tijuana",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Christa",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Lillian",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Christa",
+      "original_tribe": "Drake",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 33,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "Burton",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Michelle",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Trish",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Shawn",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Andrew",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Ryan O.",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Darrah",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Tijuana",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Lillian",
+          "day": 33
+        }
+      ]
+    },
+    {
+      "name": "Tijuana",
+      "original_tribe": "Morgan",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 30,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Nicole",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Ryan S.",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Lillian",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Osten",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jonny Fairplay",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Ryan O.",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Rupert",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Burton",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "Rupert",
+      "original_tribe": "Drake",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 27,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Michelle",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Trish",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Shawn",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Andrew",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Ryan O.",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Darrah",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "Ryan O.",
+      "original_tribe": "Morgan",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 24,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Nicole",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Ryan S.",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Lillian",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Osten",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jonny Fairplay",
+          "day": 21
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Christa",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Andrew",
+      "original_tribe": "Morgan",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 21,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Nicole",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Ryan S.",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Lillian",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Osten",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jonny Fairplay",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Shawn",
+      "original_tribe": "Drake",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 19,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "Burton",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Michelle",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Trish",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jonny Fairplay",
+          "day": 19
+        }
+      ]
+    },
+    {
+      "name": "Osten",
+      "original_tribe": "Morgan",
+      "tribe_color": "",
+      "placement": "Quit",
+      "days_lasted": 19,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Nicole",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Ryan S.",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Lillian",
+          "day": 9
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "",
+          "day": 19
+        }
+      ]
+    },
+    {
+      "name": "Trish",
+      "original_tribe": "Drake",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 18,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "Burton",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Michelle",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Rupert",
+          "day": 18
+        }
+      ]
+    },
+    {
+      "name": "Michelle",
+      "original_tribe": "Drake",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 15,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "Christa",
+          "day": 12
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Shawn",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Ryan S.",
+      "original_tribe": "Morgan",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 6,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Nicole",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Osten",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Nicole",
+      "original_tribe": "Morgan",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Ryan S.",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

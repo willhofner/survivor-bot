@@ -5,403 +5,301 @@
     {
       "challenge_id": 1,
       "episode": 1,
+      "day": null,
       "challenge_type": "Immunity and Reward",
       "outcome_type": "Tribal",
-      "day": null,
       "winners": [
-        "Solana"
-      ],
-      "losers": [
-        "Aparri",
-        "Luzon"
+        "Brice",
+        "Alexis",
+        "Morgan",
+        "LJ",
+        "Jeremiah",
+        "Jefra"
       ]
     },
     {
       "challenge_id": 2,
       "episode": 1,
+      "day": null,
       "challenge_type": "Immunity and Reward",
       "outcome_type": "Tribal",
-      "day": null,
       "winners": [
-        "Aparri"
-      ],
-      "losers": [
-        "Luzon",
-        "Solana"
+        "Cliff",
+        "Lindsey",
+        "Sarah",
+        "Trish",
+        "Woo",
+        "Tony"
       ]
     },
     {
       "challenge_id": 3,
       "episode": 2,
+      "day": null,
       "challenge_type": "Immunity and Reward",
       "outcome_type": "Tribal",
-      "day": null,
       "winners": [
-        "Aparri",
-        "Luzon"
-      ],
-      "losers": [
-        "Solana"
+        "Cliff",
+        "Lindsey",
+        "Sarah",
+        "Trish",
+        "Woo",
+        "Tony",
+        "J'Tia",
+        "Tasha",
+        "Spencer",
+        "Kass"
       ]
     },
     {
       "challenge_id": 4,
       "episode": 3,
+      "day": null,
       "challenge_type": "Reward",
       "outcome_type": "Tribal",
-      "day": null,
       "winners": [
-        "Aparri",
-        "Solana"
-      ],
-      "losers": [
-        "Luzon"
+        "Cliff",
+        "Lindsey",
+        "Sarah",
+        "Trish",
+        "Woo",
+        "Tony",
+        "Alexis",
+        "Morgan",
+        "LJ",
+        "Jeremiah",
+        "Jefra"
       ]
     },
     {
       "challenge_id": 5,
       "episode": 3,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Tribal",
-      "day": null,
       "winners": [
-        "Aparri",
-        "Solana"
-      ],
-      "losers": [
-        "Luzon"
+        "Cliff",
+        "Lindsey",
+        "Sarah",
+        "Trish",
+        "Woo",
+        "Tony",
+        "Alexis",
+        "Morgan",
+        "LJ",
+        "Jeremiah",
+        "Jefra"
       ]
     },
     {
       "challenge_id": 6,
       "episode": 4,
+      "day": null,
       "challenge_type": "Reward",
       "outcome_type": "Tribal",
-      "day": null,
       "winners": [
-        "Solana"
-      ],
-      "losers": [
-        "Aparri"
+        "Cliff",
+        "Lindsey",
+        "LJ",
+        "Jefra",
+        "Trish",
+        "Woo",
+        "Tony"
       ]
     },
     {
       "challenge_id": 7,
       "episode": 4,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Tribal",
-      "day": null,
       "winners": [
-        "Solana"
-      ],
-      "losers": [
-        "Aparri"
+        "Cliff",
+        "Lindsey",
+        "LJ",
+        "Jefra",
+        "Trish",
+        "Woo",
+        "Tony"
       ]
     },
     {
       "challenge_id": 8,
       "episode": 5,
+      "day": null,
       "challenge_type": "Reward",
       "outcome_type": "Tribal",
-      "day": null,
       "winners": [
-        "Solana"
-      ],
-      "losers": [
-        "Aparri"
+        "LJ",
+        "Jefra",
+        "Trish",
+        "Woo",
+        "Tony"
       ]
     },
     {
       "challenge_id": 9,
       "episode": 5,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Tribal",
-      "day": null,
       "winners": [
-        "Solana"
-      ],
-      "losers": [
-        "Aparri"
+        "LJ",
+        "Jefra",
+        "Trish",
+        "Woo",
+        "Tony"
       ]
     },
     {
       "challenge_id": 10,
       "episode": 6,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Individual",
-      "day": null,
       "winners": [
         "Woo"
-      ],
-      "participants": [
-        "Sarah",
-        "Morgan",
-        "LJ",
-        "Jeremiah",
-        "Jefra",
-        "Tasha",
-        "Trish",
-        "Spencer",
-        "Kass",
-        "Woo",
-        "Tony"
       ]
     },
     {
       "challenge_id": 11,
       "episode": 7,
+      "day": null,
       "challenge_type": "Reward",
       "outcome_type": "Team",
-      "day": null,
       "winners": [
         "Morgan",
         "LJ",
         "Jeremiah",
         "Jefra",
         "Spencer"
-      ],
-      "all_participants": [
-        "Morgan",
-        "LJ",
-        "Jeremiah",
-        "Jefra",
-        "Tasha",
-        "Trish",
-        "Spencer",
-        "Kass",
-        "Woo",
-        "Tony"
       ]
     },
     {
       "challenge_id": 12,
       "episode": 7,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Individual",
-      "day": null,
       "winners": [
         "Spencer"
-      ],
-      "participants": [
-        "Morgan",
-        "LJ",
-        "Jeremiah",
-        "Jefra",
-        "Tasha",
-        "Trish",
-        "Spencer",
-        "Kass",
-        "Woo",
-        "Tony"
       ]
     },
     {
       "challenge_id": 13,
       "episode": 8,
+      "day": null,
       "challenge_type": "Reward",
       "outcome_type": "Team",
-      "day": null,
       "winners": [
         "Jeremiah",
         "Spencer",
-        "Tony"
-      ],
-      "all_participants": [
-        "LJ",
-        "Jeremiah",
-        "Jefra",
-        "Tasha",
-        "Trish",
-        "Spencer",
-        "Kass",
-        "Woo",
         "Tony"
       ]
     },
     {
       "challenge_id": 14,
       "episode": 8,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Individual",
-      "day": null,
       "winners": [
         "Tasha"
-      ],
-      "participants": [
-        "LJ",
-        "Jeremiah",
-        "Jefra",
-        "Tasha",
-        "Trish",
-        "Spencer",
-        "Kass",
-        "Woo",
-        "Tony"
       ]
     },
     {
       "challenge_id": 15,
       "episode": 9,
+      "day": null,
       "challenge_type": "Reward",
       "outcome_type": "Team",
-      "day": null,
       "winners": [
         "Jeremiah",
         "Jefra",
         "Tasha",
         "Spencer"
-      ],
-      "all_participants": [
-        "Jeremiah",
-        "Jefra",
-        "Tasha",
-        "Trish",
-        "Spencer",
-        "Kass",
-        "Woo",
-        "Tony"
       ]
     },
     {
       "challenge_id": 16,
       "episode": 9,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Individual",
-      "day": null,
       "winners": [
         "Tasha"
-      ],
-      "participants": [
-        "Jeremiah",
-        "Jefra",
-        "Tasha",
-        "Trish",
-        "Spencer",
-        "Kass",
-        "Woo",
-        "Tony"
       ]
     },
     {
       "challenge_id": 17,
       "episode": 10,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Individual",
-      "day": null,
       "winners": [
         "Tasha"
-      ],
-      "participants": [
-        "Jefra",
-        "Tasha",
-        "Trish",
-        "Spencer",
-        "Kass",
-        "Woo",
-        "Tony"
       ]
     },
     {
       "challenge_id": 18,
       "episode": 11,
+      "day": null,
       "challenge_type": "Reward",
       "outcome_type": "Team",
-      "day": null,
       "winners": [
         "Spencer",
         "Kass",
         "Woo"
-      ],
-      "all_participants": [
-        "Tasha",
-        "Trish",
-        "Spencer",
-        "Kass",
-        "Woo",
-        "Tony"
       ]
     },
     {
       "challenge_id": 19,
       "episode": 11,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Individual",
-      "day": null,
       "winners": [
         "Spencer"
-      ],
-      "participants": [
-        "Tasha",
-        "Trish",
-        "Spencer",
-        "Kass",
-        "Woo",
-        "Tony"
       ]
     },
     {
       "challenge_id": 20,
       "episode": 12,
+      "day": null,
       "challenge_type": "Reward",
       "outcome_type": "Individual",
-      "day": null,
       "winners": [
-        "Tony"
-      ],
-      "participants": [
-        "Trish",
-        "Spencer",
-        "Kass",
-        "Woo",
         "Tony"
       ]
     },
     {
       "challenge_id": 21,
       "episode": 12,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Individual",
-      "day": null,
       "winners": [
         "Spencer"
-      ],
-      "participants": [
-        "Trish",
-        "Spencer",
-        "Kass",
-        "Woo",
-        "Tony"
       ]
     },
     {
       "challenge_id": 22,
       "episode": 13,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Individual",
-      "day": null,
       "winners": [
         "Kass"
-      ],
-      "participants": [
-        "Spencer",
-        "Kass",
-        "Woo",
-        "Tony"
       ]
     },
     {
       "challenge_id": 23,
       "episode": 13,
+      "day": null,
       "challenge_type": "Immunity",
       "outcome_type": "Individual",
-      "day": null,
       "winners": [
         "Woo"
-      ],
-      "participants": [
-        "Kass",
-        "Woo",
-        "Tony"
       ]
     }
   ]

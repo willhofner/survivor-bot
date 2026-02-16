@@ -1,0 +1,636 @@
+{
+  "season": 4,
+  "season_name": "Survivor: Marquesas",
+  "castaways": [
+    {
+      "name": "Vecepia",
+      "original_tribe": "Maraamu",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 2,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sarah",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Patricia",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Hunter",
+          "day": 9
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Gabriel",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Boston Rob",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "John",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Zoe",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Tammy",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Robert",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Neleh",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Neleh",
+          "day": 37
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "",
+          "day": 37
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Neleh",
+      "original_tribe": "Rotu",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "Sarah",
+          "day": 12
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Gina",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Boston Rob",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "John",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Zoe",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Tammy",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Robert",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Sean",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Kathy",
+          "day": 37
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "",
+          "day": 37
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Kathy",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Kathy",
+      "original_tribe": "Rotu",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 38,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "Sarah",
+          "day": 12
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Gina",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Zoe",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "John",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Zoe",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Tammy",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Robert",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Sean",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Neleh",
+          "day": 37
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "",
+          "day": 37
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Paschal",
+      "original_tribe": "Rotu",
+      "tribe_color": "",
+      "placement": "Eliminated",
+      "days_lasted": 37,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 4,
+          "voted_for": "Sarah",
+          "day": 12
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Gina",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Boston Rob",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "John",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Zoe",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Tammy",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Robert",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Sean",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Kathy",
+          "day": 37
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Sean",
+      "original_tribe": "Maraamu",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 36,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Sarah",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Patricia",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Hunter",
+          "day": 9
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Gabriel",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "John",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "John",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Zoe",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Tammy",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Robert",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Neleh",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Robert",
+      "original_tribe": "Rotu",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 33,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 5,
+          "voted_for": "Gabriel",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Boston Rob",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Sean",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Zoe",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Vecepia",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Sean",
+          "day": 33
+        }
+      ]
+    },
+    {
+      "name": "Tammy",
+      "original_tribe": "Rotu",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 30,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 5,
+          "voted_for": "Gabriel",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Boston Rob",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Sean",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Zoe",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Vecepia",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "Zoe",
+      "original_tribe": "Rotu",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 27,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 5,
+          "voted_for": "Gabriel",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Boston Rob",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "John",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Robert",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "John",
+      "original_tribe": "Rotu",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 24,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 5,
+          "voted_for": "Gabriel",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Boston Rob",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Sean",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Boston Rob",
+      "original_tribe": "Maraamu",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 21,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Peter",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Patricia",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Hunter",
+          "day": 9
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Gabriel",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "John",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Gina",
+      "original_tribe": "Maraamu",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 18,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Peter",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Sarah",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Sarah",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Sarah",
+          "day": 12
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Kathy",
+          "day": 18
+        }
+      ]
+    },
+    {
+      "name": "Gabriel",
+      "original_tribe": "Rotu",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 15,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 5,
+          "voted_for": "Boston Rob",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Sarah",
+      "original_tribe": "Maraamu",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 12,
+      "votes_against": 11,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Peter",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Patricia",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Hunter",
+          "day": 9
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Kathy",
+          "day": 12
+        }
+      ]
+    },
+    {
+      "name": "Hunter",
+      "original_tribe": "Maraamu",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 9,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Peter",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Sarah",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Sarah",
+          "day": 9
+        }
+      ]
+    },
+    {
+      "name": "Patricia",
+      "original_tribe": "Maraamu",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 6,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Peter",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Sarah",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Peter",
+      "original_tribe": "Maraamu",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Patricia",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

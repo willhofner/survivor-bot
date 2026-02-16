@@ -1,0 +1,596 @@
+{
+  "season": 12,
+  "season_name": "Survivor: Panama",
+  "castaways": [
+    {
+      "name": "Aras",
+      "original_tribe": "Viveros",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Melinda",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Bruce",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Nick",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Austin",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Sally",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Courtney",
+          "day": 30
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Shane",
+          "day": 33
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Danielle",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "",
+          "day": 36
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Danielle",
+      "original_tribe": "Bayoneta",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Melinda",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Bobby",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Nick",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Austin",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Sally",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Courtney",
+          "day": 30
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Shane",
+          "day": 33
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Cirie",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "",
+          "day": 36
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Terry",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Terry",
+      "original_tribe": "La Mina",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 38,
+      "votes_against": 1,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Misty",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Ruth Marie",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Dan",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Shane",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Aras",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Aras",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Aras",
+          "day": 30
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Aras",
+          "day": 33
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Cirie",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "",
+          "day": 36
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Cirie",
+      "original_tribe": "Casaya",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 36,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Tina",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Shane",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Bobby",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Nick",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Austin",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Sally",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Courtney",
+          "day": 30
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Shane",
+          "day": 33
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Danielle",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Shane",
+      "original_tribe": "La Mina",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 33,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Melinda",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Aras",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Nick",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Austin",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Sally",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Danielle",
+          "day": 30
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Danielle",
+          "day": 33
+        }
+      ]
+    },
+    {
+      "name": "Courtney",
+      "original_tribe": "Bayoneta",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 30,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Melinda",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Bobby",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Nick",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Austin",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Sally",
+          "day": 24
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Aras",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "Bruce",
+      "original_tribe": "La Mina",
+      "tribe_color": "",
+      "placement": "Medically evacuated",
+      "days_lasted": 25,
+      "votes_against": 2,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Courtney",
+          "day": 14
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Nick",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Austin",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Sally",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Sally",
+      "original_tribe": "Bayoneta",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 24,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Ruth Marie",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Ruth Marie",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Shane",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Aras",
+          "day": 21
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Aras",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Austin",
+      "original_tribe": "Viveros",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 21,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Misty",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Ruth Marie",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Dan",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Shane",
+          "day": 18
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Aras",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Nick",
+      "original_tribe": "Viveros",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 18,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Misty",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Ruth Marie",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Dan",
+          "day": 15
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Shane",
+          "day": 18
+        }
+      ]
+    },
+    {
+      "name": "Dan",
+      "original_tribe": "La Mina",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 15,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Misty",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Sally",
+          "day": 11
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Austin",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Bobby",
+      "original_tribe": "Viveros",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 14,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 2,
+          "voted_for": "Melinda",
+          "day": 6
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Bruce",
+          "day": 14
+        }
+      ]
+    },
+    {
+      "name": "Ruth Marie",
+      "original_tribe": "Casaya",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 11,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Tina",
+          "day": 3
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Misty",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Sally",
+          "day": 11
+        }
+      ]
+    },
+    {
+      "name": "Misty",
+      "original_tribe": "Bayoneta",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 8,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Ruth Marie",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "name": "Melinda",
+      "original_tribe": "Casaya",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 6,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Tina",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Shane",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Tina",
+      "original_tribe": "Casaya",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Cirie",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

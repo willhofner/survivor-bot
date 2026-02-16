@@ -1,0 +1,740 @@
+{
+  "season": 9,
+  "season_name": "Survivor: Vanuatu",
+  "challenges": [
+    {
+      "challenge_id": 1,
+      "episode": 1,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Dolly",
+        "Mia",
+        "Lisa",
+        "Leann",
+        "Ami",
+        "Julie",
+        "Eliza",
+        "Scout",
+        "Twila",
+        "Aileen",
+        "Alex",
+        "Feras",
+        "Garrick",
+        "Kelli",
+        "Kirby",
+        "Peta",
+        "Raymond",
+        "Rianna",
+        "Sarah",
+        "Scott",
+        "Tobias",
+        "Tejan",
+        "Marian",
+        "Shane",
+        "Palesa",
+        "Toni",
+        "PK",
+        "Meryl",
+        "Dante",
+        "Steffi",
+        "Chappies"
+      ]
+    },
+    {
+      "challenge_id": 2,
+      "episode": 2,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Dolly",
+        "Mia",
+        "Lisa",
+        "Leann",
+        "Ami",
+        "Julie",
+        "Eliza",
+        "Scout",
+        "Twila",
+        "Aileen",
+        "Alex",
+        "Feras",
+        "Garrick",
+        "Kelli",
+        "Kirby",
+        "Peta",
+        "Raymond",
+        "Rianna",
+        "Sarah",
+        "Scott",
+        "Tobias",
+        "Killarney",
+        "Shona",
+        "Phil",
+        "Seamus",
+        "Tevin",
+        "Felix",
+        "Tania",
+        "Pinty",
+        "Thoriso",
+        "Dino"
+      ]
+    },
+    {
+      "challenge_id": 3,
+      "episode": 2,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "John P.",
+        "Brady",
+        "Travis",
+        "John K.",
+        "Rory",
+        "Lea",
+        "Chad",
+        "Chris",
+        "Caroline",
+        "Charles",
+        "Eden",
+        "Jaden",
+        "Jessica",
+        "Kitty",
+        "Mark",
+        "Nathan",
+        "Valeria",
+        "Viola",
+        "Winna",
+        "Killarney",
+        "Shona",
+        "Phil",
+        "Seamus",
+        "Tevin",
+        "Felix",
+        "Tania",
+        "Pinty",
+        "Thoriso",
+        "Dino"
+      ]
+    },
+    {
+      "challenge_id": 4,
+      "episode": 3,
+      "day": null,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal / Individual",
+      "winners": [
+        "John K.",
+        "Aileen",
+        "Alex",
+        "Feras",
+        "Garrick",
+        "Kelli",
+        "Kirby",
+        "Peta",
+        "Raymond",
+        "Rianna",
+        "Sarah",
+        "Scott",
+        "Tobias",
+        "Tejan",
+        "Marian",
+        "Shane",
+        "Palesa",
+        "Toni",
+        "Meryl",
+        "Dante",
+        "Steffi"
+      ]
+    },
+    {
+      "challenge_id": 5,
+      "episode": 4,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Lisa",
+        "Leann",
+        "Ami",
+        "Julie",
+        "Eliza",
+        "Scout",
+        "Twila",
+        "Caroline",
+        "Charles",
+        "Eden",
+        "Jaden",
+        "Kitty",
+        "Mark",
+        "Nathan",
+        "Valeria",
+        "Viola",
+        "Winna",
+        "Tejan",
+        "Marian",
+        "Shane",
+        "Palesa",
+        "Toni",
+        "Meryl",
+        "Dante",
+        "Steffi"
+      ]
+    },
+    {
+      "challenge_id": 6,
+      "episode": 4,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Lisa",
+        "Leann",
+        "Ami",
+        "Julie",
+        "Eliza",
+        "Scout",
+        "Twila",
+        "Caroline",
+        "Charles",
+        "Eden",
+        "Jaden",
+        "Kitty",
+        "Mark",
+        "Nathan",
+        "Valeria",
+        "Viola",
+        "Winna",
+        "Killarney",
+        "Shona",
+        "Phil",
+        "Seamus",
+        "Felix",
+        "Pinty",
+        "Thoriso",
+        "Dino"
+      ]
+    },
+    {
+      "challenge_id": 7,
+      "episode": 5,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "John K.",
+        "Lea",
+        "Chad",
+        "Julie",
+        "Twila",
+        "Chris",
+        "Aileen",
+        "Alex",
+        "Feras",
+        "Garrick",
+        "Kelli",
+        "Kirby",
+        "Raymond",
+        "Rianna",
+        "Sarah",
+        "Scott",
+        "Tobias",
+        "Tejan",
+        "Marian",
+        "Shane",
+        "Palesa",
+        "Toni",
+        "Meryl",
+        "Dante",
+        "Steffi"
+      ]
+    },
+    {
+      "challenge_id": 8,
+      "episode": 5,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "John K.",
+        "Lea",
+        "Chad",
+        "Julie",
+        "Twila",
+        "Chris",
+        "Caroline",
+        "Charles",
+        "Eden",
+        "Jaden",
+        "Kitty",
+        "Mark",
+        "Nathan",
+        "Valeria",
+        "Viola",
+        "Winna",
+        "Tejan",
+        "Killarney",
+        "Toni",
+        "Felix",
+        "Steffi",
+        "Pinty",
+        "Thoriso"
+      ]
+    },
+    {
+      "challenge_id": 9,
+      "episode": 6,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "John K.",
+        "Lea",
+        "Chad",
+        "Julie",
+        "Twila",
+        "Chris",
+        "Aileen",
+        "Alex",
+        "Feras",
+        "Garrick",
+        "Kelli",
+        "Kirby",
+        "Raymond",
+        "Rianna",
+        "Sarah",
+        "Scott"
+      ]
+    },
+    {
+      "challenge_id": 10,
+      "episode": 6,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "John K.",
+        "Lea",
+        "Chad",
+        "Julie",
+        "Twila",
+        "Chris",
+        "Caroline",
+        "Charles",
+        "Eden",
+        "Jaden",
+        "Kitty",
+        "Mark",
+        "Nathan",
+        "Valeria",
+        "Viola",
+        "Winna",
+        "Phil",
+        "Marian",
+        "Shane",
+        "Palesa",
+        "Meryl",
+        "Dante",
+        "Dino"
+      ]
+    },
+    {
+      "challenge_id": 11,
+      "episode": 7,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Rory",
+        "Leann",
+        "Ami",
+        "Eliza",
+        "Scout",
+        "Aileen",
+        "Alex",
+        "Feras",
+        "Garrick",
+        "Kirby",
+        "Raymond",
+        "Rianna",
+        "Sarah",
+        "Scott",
+        "Phil",
+        "Marian",
+        "Shane",
+        "Palesa",
+        "Meryl",
+        "Dante",
+        "Dino"
+      ]
+    },
+    {
+      "challenge_id": 12,
+      "episode": 7,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "winners": [
+        "Rory",
+        "Leann",
+        "Ami",
+        "Eliza",
+        "Scout",
+        "Aileen",
+        "Alex",
+        "Feras",
+        "Garrick",
+        "Kirby",
+        "Raymond",
+        "Rianna",
+        "Sarah",
+        "Scott",
+        "Tejan",
+        "Killarney",
+        "Toni",
+        "Felix",
+        "Steffi"
+      ]
+    },
+    {
+      "challenge_id": 13,
+      "episode": 8,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "Lea",
+        "Chad",
+        "Julie",
+        "Twila",
+        "Chris",
+        "Aileen",
+        "Charles",
+        "Feras",
+        "Garrick",
+        "Kelli",
+        "Kirby",
+        "Raymond",
+        "Scott",
+        "Valeria",
+        "Winna",
+        "Tejan",
+        "Killarney",
+        "Phil",
+        "Marian",
+        "Shane",
+        "Toni",
+        "Felix",
+        "Meryl",
+        "Dante",
+        "Steffi",
+        "Dino"
+      ]
+    },
+    {
+      "challenge_id": 14,
+      "episode": 8,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Lea",
+        "Aileen",
+        "Charles",
+        "Feras",
+        "Garrick",
+        "Kelli",
+        "Kirby",
+        "Raymond",
+        "Scott",
+        "Valeria",
+        "Winna",
+        "Phil"
+      ]
+    },
+    {
+      "challenge_id": 15,
+      "episode": 9,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Leann",
+        "Alex",
+        "Caroline",
+        "Eden",
+        "Jaden",
+        "Kitty",
+        "Mark",
+        "Rianna",
+        "Meryl"
+      ]
+    },
+    {
+      "challenge_id": 16,
+      "episode": 9,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Ami",
+        "Alex",
+        "Caroline",
+        "Eden",
+        "Jaden",
+        "Kitty",
+        "Mark",
+        "Rianna",
+        "Dino"
+      ]
+    },
+    {
+      "challenge_id": 17,
+      "episode": 10,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "winners": [
+        "Chad",
+        "Ami",
+        "Eliza",
+        "Chris",
+        "Alex",
+        "Caroline",
+        "Eden",
+        "Jaden",
+        "Kitty",
+        "Mark",
+        "Rianna",
+        "Marian"
+      ]
+    },
+    {
+      "challenge_id": 18,
+      "episode": 10,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Twila",
+        "Aileen",
+        "Feras",
+        "Kirby",
+        "Phil"
+      ]
+    },
+    {
+      "challenge_id": 19,
+      "episode": 11,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Eliza",
+        "Aileen",
+        "Feras",
+        "Kelli",
+        "Kirby",
+        "Raymond",
+        "Scott",
+        "Valeria",
+        "Winna",
+        "Phil"
+      ]
+    },
+    {
+      "challenge_id": 20,
+      "episode": 11,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Ami",
+        "Caroline",
+        "Eden",
+        "Jaden",
+        "Kitty",
+        "Mark",
+        "Rianna",
+        "Phil"
+      ]
+    },
+    {
+      "challenge_id": 21,
+      "episode": 12,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Eliza",
+        "Valeria",
+        "Phil",
+        "Felix"
+      ]
+    },
+    {
+      "challenge_id": 22,
+      "episode": 12,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Chris",
+        "Winna",
+        "Phil"
+      ]
+    },
+    {
+      "challenge_id": 23,
+      "episode": 13,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Julie",
+        "Rianna",
+        "Phil"
+      ]
+    },
+    {
+      "challenge_id": 24,
+      "episode": 13,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Eliza",
+        "Mark",
+        "Marian",
+        "Shane"
+      ]
+    },
+    {
+      "challenge_id": 25,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Chris",
+        "Jaden"
+      ]
+    },
+    {
+      "challenge_id": 26,
+      "episode": 14,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Chris",
+        "Kitty",
+        "Shane"
+      ]
+    },
+    {
+      "challenge_id": 27,
+      "episode": 17,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Rianna",
+        "Dino"
+      ]
+    },
+    {
+      "challenge_id": 28,
+      "episode": 18,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Alex"
+      ]
+    },
+    {
+      "challenge_id": 29,
+      "episode": 18,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Kirby"
+      ]
+    },
+    {
+      "challenge_id": 30,
+      "episode": 19,
+      "day": null,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "winners": [
+        "Alex"
+      ]
+    },
+    {
+      "challenge_id": 31,
+      "episode": 19,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Rianna"
+      ]
+    },
+    {
+      "challenge_id": 32,
+      "episode": 20,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Kirby"
+      ]
+    },
+    {
+      "challenge_id": 33,
+      "episode": 21,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Kirby"
+      ]
+    },
+    {
+      "challenge_id": 34,
+      "episode": 22,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Mark"
+      ]
+    },
+    {
+      "challenge_id": 35,
+      "episode": 23,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Mark"
+      ]
+    },
+    {
+      "challenge_id": 36,
+      "episode": 24,
+      "day": null,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "winners": [
+        "Feras"
+      ]
+    }
+  ]
+}

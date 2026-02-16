@@ -1,0 +1,24 @@
+{
+  "name": "Amber Brkich",
+  "season": 8,
+  "season_name": "Survivor: All-Stars",
+  "archetype": {
+    "voting_control": 7,
+    "physical_game": 4,
+    "social_capital": 9,
+    "strategic_aggression": 3
+  },
+  "signature_move": "Maintained a near-invisible threat level while partnered with the season's most aggressive strategist, Rob Mariano, letting him absorb all jury resentment while she preserved genuine social bonds that ultimately won her the game 4-3.",
+  "stats": {
+    "voting_accuracy": 100,
+    "immunity_wins": 1,
+    "reward_wins": 0,
+    "jury_votes": "4-3",
+    "idols_played": 0,
+    "idols_successful": 0,
+    "times_received_votes": 6,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Amber played the quintessential 'shield' game before the term existed, aligning with Rob Mariano whose aggressive deal-breaking and betrayals drew all jury animosity while she quietly built social capital with everyone. She voted correctly at every single tribal council she attended (8 for 8), demonstrating she was always on the right side of the numbers despite Rob receiving credit for orchestrating the moves. Her 4-3 jury win over Rob proved that in a season defined by bitter betrayals of real-life friendships, the player who maintained genuine relationships beat the one who burned them all.",
+  "fun_fact": "Rob Mariano proposed to Amber on live television at the All-Stars reunion before the jury votes were even read, meaning he proposed not knowing whether he'd won or lost the million dollars to his new fiancee."
+}

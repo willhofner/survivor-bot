@@ -1,0 +1,24 @@
+{
+  "name": "Jeremy Collins",
+  "season": 31,
+  "season_name": "Survivor: Cambodia",
+  "archetype": {
+    "voting_control": 8,
+    "physical_game": 6,
+    "social_capital": 10,
+    "strategic_aggression": 7
+  },
+  "signature_move": "At the Final 6 tribal council, Jeremy played both of his hidden immunity idols simultaneously — one on himself and one on Spencer — nullifying all votes cast and forcing the elimination of Kimmi, who had been attempting to flip the game against him.",
+  "stats": {
+    "voting_accuracy": 73,
+    "immunity_wins": 1,
+    "reward_wins": 0,
+    "jury_votes": "10-0-0",
+    "idols_played": 2,
+    "idols_successful": 2,
+    "times_received_votes": 3,
+    "days_lasted": 39
+  },
+  "strategy_summary": "Jeremy played a masterful meat shield strategy, keeping bigger targets like Joe and Spencer in front of him to absorb the votes while he built unshakeable personal bonds with nearly every player. He concealed his idol finds from even his closest allies, weaponizing them at the perfect moment, and leveraged his emotional authenticity — including his devotion to his pregnant wife Val — to earn universal jury respect and a historic unanimous victory.",
+  "fun_fact": "Jeremy is one of only a handful of Survivor winners to receive a perfect unanimous jury vote, winning 10-0-0, with every single juror voting for him over both Spencer and Tasha."
+}

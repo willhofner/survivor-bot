@@ -1,0 +1,630 @@
+{
+  "season": 25,
+  "season_name": "Survivor: Philippines",
+  "castaways": [
+    {
+      "name": "Denise",
+      "original_tribe": "Matsing",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Zane",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Roxy",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Angie",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Russell",
+          "day": 10
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Dawson",
+          "day": 13
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Katie",
+          "day": 16
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jonathan",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Pete",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Artis",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Abi-Maria",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Jonathan",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Carter",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Abi-Maria",
+          "day": 36
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Malcolm",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Michael",
+      "original_tribe": "Tandang",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 8,
+          "voted_for": "Jonathan",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jeff",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Artis",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Abi-Maria",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Jonathan",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Carter",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Abi-Maria",
+          "day": 36
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Malcolm",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Lisa",
+      "original_tribe": "Tandang",
+      "tribe_color": "",
+      "placement": "2nd Runner-up",
+      "days_lasted": 39,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 8,
+          "voted_for": "Jonathan",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jeff",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jonathan",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Abi-Maria",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Jonathan",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Carter",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Abi-Maria",
+          "day": 36
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Malcolm",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Malcolm",
+      "original_tribe": "Matsing",
+      "tribe_color": "",
+      "placement": "14th voted out",
+      "days_lasted": 38,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Zane",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Roxy",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Angie",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Russell",
+          "day": 10
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Jonathan",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Pete",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Artis",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Pete",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Jonathan",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Carter",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Abi-Maria",
+          "day": 36
+        },
+        {
+          "tribal_council": 15,
+          "voted_for": "Denise",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Abi-Maria",
+      "original_tribe": "Tandang",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 36,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 8,
+          "voted_for": "Jonathan",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jeff",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jonathan",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Malcolm",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Denise",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Carter",
+          "day": 33
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Denise",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Carter",
+      "original_tribe": "Kalabaw",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 33,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 6,
+          "voted_for": "Dawson",
+          "day": 13
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Katie",
+          "day": 16
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "RC",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Pete",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Artis",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Pete",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Denise",
+          "day": 30
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Abi-Maria",
+          "day": 33
+        }
+      ]
+    },
+    {
+      "name": "Jonathan",
+      "original_tribe": "Kalabaw",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 30,
+      "votes_against": 14,
+      "voting_history": [
+        {
+          "tribal_council": 6,
+          "voted_for": "Dawson",
+          "day": 13
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Katie",
+          "day": 16
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Pete",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Abi-Maria",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Artis",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Pete",
+          "day": 27
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Denise",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "Pete",
+      "original_tribe": "Tandang",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 27,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tribal_council": 8,
+          "voted_for": "RC",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jeff",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jonathan",
+          "day": 25
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Malcolm",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "Artis",
+      "original_tribe": "Tandang",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 25,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 8,
+          "voted_for": "RC",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Jeff",
+          "day": 22
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jonathan",
+          "day": 25
+        }
+      ]
+    },
+    {
+      "name": "Jeff",
+      "original_tribe": "Kalabaw",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 22,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 6,
+          "voted_for": "Dawson",
+          "day": 13
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Katie",
+          "day": 16
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "RC",
+          "day": 19
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Pete",
+          "day": 22
+        }
+      ]
+    },
+    {
+      "name": "RC",
+      "original_tribe": "Tandang",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 19,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 8,
+          "voted_for": "Pete",
+          "day": 19
+        }
+      ]
+    },
+    {
+      "name": "Katie",
+      "original_tribe": "Kalabaw",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 16,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 6,
+          "voted_for": "Dawson",
+          "day": 13
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Jonathan",
+          "day": 16
+        }
+      ]
+    },
+    {
+      "name": "Dawson",
+      "original_tribe": "Kalabaw",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 13,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 6,
+          "voted_for": "Denise",
+          "day": 13
+        }
+      ]
+    },
+    {
+      "name": "Dana",
+      "original_tribe": "Kalabaw",
+      "tribe_color": "",
+      "placement": "Quit",
+      "days_lasted": 12,
+      "votes_against": 0,
+      "voting_history": []
+    },
+    {
+      "name": "Russell",
+      "original_tribe": "Matsing",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 10,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Zane",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Roxy",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Angie",
+          "day": 8
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Malcolm",
+          "day": 10
+        }
+      ]
+    },
+    {
+      "name": "Angie",
+      "original_tribe": "Matsing",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 8,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Zane",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Roxy",
+          "day": 6
+        },
+        {
+          "tribal_council": 3,
+          "voted_for": "Russell",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "name": "Roxy",
+      "original_tribe": "Matsing",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 6,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Zane",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Angie",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Zane",
+      "original_tribe": "Matsing",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Russell",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

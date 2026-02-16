@@ -1,0 +1,287 @@
+{% extends "base.html" %}
+
+{% block title %}All Seasons - Survivor{% endblock %}
+
+{% block content %}
+<div class="seasons-view">
+    <h1 class="text-center mb-3 survivor-title">
+        <span class="torch-large">&#x1F3DD;&#xFE0F;</span><br>
+        ALL SEASONS
+    </h1>
+    <p class="text-center subtitle mb-4">39 Seasons of Survivor — From Borneo to Island of the Idols</p>
+
+    <!-- ERA FILTER -->
+    <div class="filter-bar mb-4 text-center">
+        <button class="btn btn-filter era-btn active" onclick="filterSeasons('all', this)">All Seasons</button>
+        <button class="btn btn-filter era-btn" onclick="filterSeasons('classic', this)">Classic Era (1-7)</button>
+        <button class="btn btn-filter era-btn" onclick="filterSeasons('middle', this)">Middle Era (8-19)</button>
+        <button class="btn btn-filter era-btn" onclick="filterSeasons('modern', this)">Modern Era (20-30)</button>
+        <button class="btn btn-filter era-btn" onclick="filterSeasons('new', this)">New School (31-39)</button>
+    </div>
+
+    <!-- SEASON GRID -->
+    <div class="seasons-grid">
+        {% for s in season_summaries %}
+        <div class="season-summary-card" data-season="{{ s.season }}"
+             data-era="{% if s.season <= 7 %}classic{% elif s.season <= 19 %}middle{% elif s.season <= 30 %}modern{% else %}new{% endif %}">
+
+            <div class="season-card-header">
+                <div class="season-number-badge">{{ s.season }}</div>
+                <h3 class="season-card-name">{{ s.name }}</h3>
+                {% if s.tagline %}
+                <div class="season-tagline">{{ s.tagline }}</div>
+                {% endif %}
+            </div>
+
+            {% if s.filming_location %}
+            <div class="season-location">
+                <span class="location-icon">&#x1F4CD;</span> {{ s.filming_location }}
+            </div>
+            {% endif %}
+
+            {% if s.theme %}
+            <div class="season-theme">{{ s.theme }}</div>
+            {% endif %}
+
+            {% if s.twist %}
+            <div class="season-twist">
+                <span class="twist-label">Key Twist:</span> {{ s.twist }}
+            </div>
+            {% endif %}
+
+            {% if s.iconic_moment %}
+            <div class="season-iconic">
+                <span class="iconic-label">Iconic Moment</span>
+                <div class="iconic-text">{{ s.iconic_moment }}</div>
+            </div>
+            {% endif %}
+
+            <div class="season-card-stats">
+                <div class="scs-item">
+                    <span class="scs-val">{{ s.castaway_count }}</span>
+                    <span class="scs-label">Castaways</span>
+                </div>
+                <div class="scs-item">
+                    <span class="scs-val">{{ s.challenge_count }}</span>
+                    <span class="scs-label">Challenges</span>
+                </div>
+                <div class="scs-item">
+                    <span class="scs-val winner-text">{{ s.winner }}</span>
+                    <span class="scs-label">Winner</span>
+                </div>
+            </div>
+
+            <div class="season-card-links">
+                <a href="/tribal-councils?season={{ s.season }}" class="btn btn-sm btn-outline-survivor">Tribals</a>
+                <a href="/castaways?season={{ s.season }}" class="btn btn-sm btn-outline-survivor">Castaways</a>
+                <a href="/challenges?season={{ s.season }}" class="btn btn-sm btn-outline-survivor">Challenges</a>
+                <a href="/winner/{{ s.season }}" class="btn btn-sm btn-outline-survivor">Winner</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="back-to-top text-center mt-5">
+        <button class="btn btn-survivor" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            Back to Top &#x2191;
+        </button>
+    </div>
+</div>
+
+<style>
+.seasons-view {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.filter-bar {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.era-btn.active {
+    background: var(--torch-orange) !important;
+    color: white !important;
+    border-color: var(--torch-orange) !important;
+}
+
+.seasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 1.5rem;
+}
+
+.season-summary-card {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--bamboo);
+    border-radius: 12px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.season-summary-card:hover {
+    border-color: var(--torch-orange);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(255, 107, 53, 0.3);
+}
+
+.season-card-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.season-number-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--torch-orange);
+    color: white;
+    font-weight: bold;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+}
+
+.season-card-name {
+    color: var(--torch-orange);
+    font-size: 1.3rem;
+    margin: 0 0 0.25rem;
+}
+
+.season-tagline {
+    color: var(--sand);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.season-location {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.location-icon {
+    margin-right: 0.25rem;
+}
+
+.season-theme {
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.season-twist {
+    background: rgba(65, 105, 225, 0.15);
+    border-left: 3px solid #4169E1;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0 5px 5px 0;
+    font-size: 0.85rem;
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.twist-label {
+    color: #4169E1;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.season-iconic {
+    background: rgba(255, 215, 0, 0.1);
+    border-left: 3px solid gold;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0 5px 5px 0;
+    margin-bottom: 0.75rem;
+}
+
+.iconic-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: gold;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.iconic-text {
+    color: #fff;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.season-card-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.scs-item { text-align: center; }
+
+.scs-val {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--torch-orange);
+}
+
+.scs-val.winner-text {
+    font-size: 0.9rem;
+    color: gold;
+}
+
+.scs-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--sand);
+    letter-spacing: 0.5px;
+}
+
+.season-card-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.season-card-links .btn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .seasons-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<script>
+function filterSeasons(era, btn) {
+    document.querySelectorAll('.era-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    document.querySelectorAll('.season-summary-card').forEach(card => {
+        if (era === 'all' || card.dataset.era === era) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+</script>
+{% endblock %}

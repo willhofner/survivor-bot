@@ -1,0 +1,586 @@
+{
+  "season": 5,
+  "season_name": "Survivor: Thailand",
+  "castaways": [
+    {
+      "name": "Brian",
+      "original_tribe": "Chuay Gahn",
+      "tribe_color": "",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "John",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Tanya",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Ghandia",
+          "day": 12
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ken",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Penny",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jake",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Ted",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Helen",
+          "day": 37
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "Jan",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Clay",
+      "original_tribe": "Chuay Gahn",
+      "tribe_color": "",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "John",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Tanya",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Ghandia",
+          "day": 12
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ken",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jake",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jake",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Ted",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Helen",
+          "day": 37
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Jan",
+      "original_tribe": "Chuay Gahn",
+      "tribe_color": "",
+      "placement": "14th voted out",
+      "days_lasted": 38,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "John",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Tanya",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Clay",
+          "day": 12
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ken",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Penny",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jake",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Ted",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Helen",
+          "day": 37
+        },
+        {
+          "tribal_council": 14,
+          "voted_for": "",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Helen",
+      "original_tribe": "Chuay Gahn",
+      "tribe_color": "",
+      "placement": "13th voted out",
+      "days_lasted": 37,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Clay",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Tanya",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Ghandia",
+          "day": 12
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ken",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Penny",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jake",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Ted",
+          "day": 36
+        },
+        {
+          "tribal_council": 13,
+          "voted_for": "Jan",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Ted",
+      "original_tribe": "Chuay Gahn",
+      "tribe_color": "",
+      "placement": "12th voted out",
+      "days_lasted": 36,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "John",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Tanya",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Ghandia",
+          "day": 12
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ken",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Penny",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jake",
+          "day": 33
+        },
+        {
+          "tribal_council": 12,
+          "voted_for": "Jan",
+          "day": 36
+        }
+      ]
+    },
+    {
+      "name": "Jake",
+      "original_tribe": "Sook Jai",
+      "tribe_color": "",
+      "placement": "11th voted out",
+      "days_lasted": 33,
+      "votes_against": 7,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jed",
+          "day": 9
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Stephanie",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Robb",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Shii Ann",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Erin",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ted",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jan",
+          "day": 30
+        },
+        {
+          "tribal_council": 11,
+          "voted_for": "Jan",
+          "day": 33
+        }
+      ]
+    },
+    {
+      "name": "Penny",
+      "original_tribe": "Sook Jai",
+      "tribe_color": "",
+      "placement": "10th voted out",
+      "days_lasted": 30,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jed",
+          "day": 9
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Stephanie",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Robb",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Shii Ann",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Erin",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ted",
+          "day": 27
+        },
+        {
+          "tribal_council": 10,
+          "voted_for": "Jake",
+          "day": 30
+        }
+      ]
+    },
+    {
+      "name": "Ken",
+      "original_tribe": "Sook Jai",
+      "tribe_color": "",
+      "placement": "9th voted out",
+      "days_lasted": 27,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jed",
+          "day": 9
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Stephanie",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Robb",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Shii Ann",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Erin",
+          "day": 24
+        },
+        {
+          "tribal_council": 9,
+          "voted_for": "Ted",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "name": "Erin",
+      "original_tribe": "Sook Jai",
+      "tribe_color": "",
+      "placement": "8th voted out",
+      "days_lasted": 24,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jed",
+          "day": 9
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Stephanie",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Robb",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Shii Ann",
+          "day": 21
+        },
+        {
+          "tribal_council": 8,
+          "voted_for": "Ken",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Shii Ann",
+      "original_tribe": "Sook Jai",
+      "tribe_color": "",
+      "placement": "7th voted out",
+      "days_lasted": 21,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Jed",
+          "day": 9
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Stephanie",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Robb",
+          "day": 18
+        },
+        {
+          "tribal_council": 7,
+          "voted_for": "Penny",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Robb",
+      "original_tribe": "Sook Jai",
+      "tribe_color": "",
+      "placement": "6th voted out",
+      "days_lasted": 18,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Shii Ann",
+          "day": 9
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Shii Ann",
+          "day": 15
+        },
+        {
+          "tribal_council": 6,
+          "voted_for": "Shii Ann",
+          "day": 18
+        }
+      ]
+    },
+    {
+      "name": "Stephanie",
+      "original_tribe": "Sook Jai",
+      "tribe_color": "",
+      "placement": "5th voted out",
+      "days_lasted": 15,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Shii Ann",
+          "day": 9
+        },
+        {
+          "tribal_council": 5,
+          "voted_for": "Shii Ann",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Ghandia",
+      "original_tribe": "Chuay Gahn",
+      "tribe_color": "",
+      "placement": "4th voted out",
+      "days_lasted": 12,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "John",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Helen",
+          "day": 6
+        },
+        {
+          "tribal_council": 4,
+          "voted_for": "Clay",
+          "day": 12
+        }
+      ]
+    },
+    {
+      "name": "Jed",
+      "original_tribe": "Sook Jai",
+      "tribe_color": "",
+      "placement": "3rd voted out",
+      "days_lasted": 9,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 3,
+          "voted_for": "Shii Ann",
+          "day": 9
+        }
+      ]
+    },
+    {
+      "name": "Tanya",
+      "original_tribe": "Chuay Gahn",
+      "tribe_color": "",
+      "placement": "2nd voted out",
+      "days_lasted": 6,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "John",
+          "day": 3
+        },
+        {
+          "tribal_council": 2,
+          "voted_for": "Helen",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "John",
+      "original_tribe": "Chuay Gahn",
+      "tribe_color": "",
+      "placement": "1st voted out",
+      "days_lasted": 3,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tribal_council": 1,
+          "voted_for": "Ghandia",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}
