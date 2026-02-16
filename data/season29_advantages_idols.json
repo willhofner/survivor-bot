@@ -1,0 +1,175 @@
+{
+  "season": 29,
+  "season_name": "Survivor: San Juan del Sur - Blood vs. Water",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Coyopa",
+      "found_by": "John Rocker",
+      "day_found": 5,
+      "episode_found": 2,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "John found Coyopa's idol after seeing Jeremy's Exile Island clue in Episode 2. He followed the directions to dig at Coyopa camp and found the idol. He was voted out on Day 8 (Episode 3) in a 5-2 vote with the idol still in his pocket. John refused to play it despite holding it at tribal council."
+    },
+    {
+      "id": 2,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Hunahpu",
+      "found_by": "Keith Nale",
+      "day_found": 11,
+      "episode_found": 4,
+      "day_played": 26,
+      "episode_played": 10,
+      "played_on": "Keith Nale",
+      "played_for": "Keith Nale",
+      "votes_negated": 3,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Keith picked the urn with a clue during his second exile on Day 9 (Episode 3) and shared it with Josh. He found Hunahpu's idol in Episode 4 (approximately Day 11). Keith initially told everyone that Jeremy had the idol, but Keith actually found it himself. He played it on himself in Episode 10 ('This Is Where We Build Trust'), successfully negating 3 votes against him."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Huyopa (Merged tribe)",
+      "found_by": "Jon Misch",
+      "day_found": 19,
+      "episode_found": 8,
+      "day_played": 26,
+      "episode_played": 10,
+      "played_on": "Jon Misch",
+      "played_for": "Jon Misch",
+      "votes_negated": 4,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Jon was sent to Exile Island post-merge in Episode 8 and found the hidden immunity idol on Day 19. He told Jaclyn he had it but didn't play it immediately. After heavy prompting from both Jeff Probst and Natalie, he played it on himself on Day 26 (Episode 10), successfully negating 4 votes against him. This was the first idol played in the season."
+    },
+    {
+      "id": 4,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Huyopa (Merged tribe) - Exile Island",
+      "found_by": "Jon Misch",
+      "day_found": 27,
+      "episode_found": 11,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "Mere hours after playing his first idol on Day 26, Jon volunteered to return to Exile Island on Day 27 (Episode 11), where he promptly found another idol. This idol was hidden on Exile Island post-merge. Jon was voted out on Day 35 (Episode 13 'Let's Make a Move') with this idol in his pocket, becoming the second person this season to be eliminated while holding an unused idol. San Juan del Sur is notable for having two castaways with homophonic names (John Rocker and Jon Misch) who were both voted out with unused idols."
+    },
+    {
+      "id": 5,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Huyopa (Merged tribe) - Exile Island",
+      "found_by": "Natalie Anderson",
+      "day_found": 22,
+      "episode_found": 9,
+      "day_played": 36,
+      "episode_played": 14,
+      "played_on": "Jaclyn Schultz",
+      "played_for": "Jaclyn Schultz",
+      "votes_negated": 3,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Natalie volunteered to go to Exile Island with Baylor Wilson in Episode 6 following a Hero Duel win for Hunahpu. While on exile, Baylor shared her clue to the Hidden Immunity Idol with Natalie. Natalie found the idol and played it on Jaclyn Schultz at the Final 5 tribal council on Day 36 (Episode 14 'This Is My Time'), successfully negating 3 votes against Jaclyn. Before playing it, Natalie asked the iconic question: 'Jaclyn, did you vote for who I told you to vote for?' This blindsided Baylor Wilson, eliminating her in 5th place. Natalie is the first contestant to successfully play a Hidden Immunity Idol on another player AND win the game. She won in a 5-2-1 jury vote over Jaclyn and Missy."
+    }
+  ],
+  "fake_idols": [
+    {
+      "created_by": "Val Collins",
+      "type": "Fake Hidden Immunity Idol",
+      "episode": 2,
+      "notes": "Val made a fake idol in a secret scene after bluffing about finding two Hidden Immunity Idols to keep herself safe and deflect votes. She was voted out on Day 6 (Episode 2)."
+    },
+    {
+      "created_by": "Dale Wentworth",
+      "type": "Fake Hidden Immunity Idol",
+      "episode": 1,
+      "notes": "Dale found a decorative knick-knack from the well cover handle on Day 3 that he thought could possibly be the idol. He eventually learned that John Rocker had the real Coyopa idol, but Dale used his fake idol as leverage in the game anyway, showing it to Jon in a bold bluff to try to stay in the game."
+    }
+  ],
+  "summary": {
+    "total_advantages": 5,
+    "total_idols_found": 5,
+    "total_idols_played": 3,
+    "total_idols_not_played": 2,
+    "total_successful_idol_plays": 3,
+    "total_unsuccessful_idol_plays": 0,
+    "total_voted_out_holding": 2,
+    "total_votes_negated": 10,
+    "idols_by_player": {
+      "John Rocker": {
+        "found": 1,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Voted out Day 8 with idol in pocket. First person eliminated holding an idol this season."
+      },
+      "Keith Nale": {
+        "found": 1,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 3,
+        "notes": "Successfully played his idol on himself. Won the most individual immunity challenges in the season (3). Finished 4th place."
+      },
+      "Jon Misch": {
+        "found": 2,
+        "played": 1,
+        "not_played": 1,
+        "votes_negated": 4,
+        "notes": "Found two idols - one post-merge at Exile and another mere hours after playing his first. Successfully played one but was voted out Day 35 holding the second. One of two players with homophonic names (John/Jon) both voted out with unused idols."
+      },
+      "Natalie Anderson": {
+        "found": 1,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 3,
+        "notes": "Won the season 5-2-1 over Jaclyn and Missy. First contestant to successfully play a Hidden Immunity Idol on another player AND win the game. Her iconic idol play for Jaclyn at Final 5 blindsided Baylor and is considered one of the best idol plays in Survivor history."
+      }
+    },
+    "special_notes": [
+      "Season 29 was Blood vs. Water II, featuring pairs of loved ones split into different tribes",
+      "Exile Island returned this season (last used in Tocantins)",
+      "Pre-merge: two vases at Exile Island, only one contained a clue to an idol at the contestant's tribe camp",
+      "Post-merge: single urn with a clue to an idol hidden on Exile Island itself",
+      "The hidden immunity idol design was a broken Maya medallion",
+      "All three idol plays this season successfully negated votes (10 votes total)",
+      "Two players were voted out holding unused idols (John Rocker Day 8, Jon Misch Day 35)",
+      "Notable coincidence: John Rocker and Jon Misch have homophonic first names and both were voted out with unused idols",
+      "Natalie Anderson's idol play for Jaclyn is ranked among the best idol plays in Survivor history",
+      "This was the first season where a contestant played an idol on another player and went on to win the game",
+      "Two fake idols were created by contestants (Val Collins and Dale Wentworth)",
+      "Keith Nale initially told everyone Jeremy had the idol, but Keith had actually found it himself"
+    ]
+  },
+  "sources": [
+    "https://survivor.fandom.com/wiki/Survivor:_San_Juan_del_Sur",
+    "https://survivor.fandom.com/wiki/Hidden_Immunity_Idol",
+    "https://survivor.fandom.com/wiki/Natalie_Anderson",
+    "https://survivor.fandom.com/wiki/Jon_Misch",
+    "https://survivor.fandom.com/wiki/John_Rocker",
+    "https://survivor.fandom.com/wiki/Keith_Nale",
+    "https://survivor.fandom.com/wiki/Jaclyn_Schultz",
+    "https://en.wikipedia.org/wiki/Survivor:_San_Juan_del_Sur",
+    "https://www.truedorktimes.com/survivor/cast/jon_misch.htm",
+    "https://www.truedorktimes.com/survivor/cast/john_rocker.htm",
+    "https://www.truedorktimes.com/survivor/cast/keith_nale.htm",
+    "https://www.truedorktimes.com/survivor/cast/natalie_anderson.htm",
+    "https://www.truedorktimes.com/survivor/boxscores/s29.htm",
+    "https://www.truedorktimes.com/s29/calendar.htm",
+    "https://insidesurvivor.com/best-episode-rankings-no-61-this-is-my-time-48382",
+    "https://robhasawebsite.com/natalie-anderson-interview-survivor-san-juan-del-sur-2015-twinnie/",
+    "https://survivoroz.wordpress.com/ozpedia/seasons/survivor-san-juan-del-sur/"
+  ],
+  "research_date": "2026-02-15",
+  "researcher_notes": "Survivor: San Juan del Sur featured 5 hidden immunity idols with a 60% success rate when played (3 successful plays out of 3 total plays). All idol plays successfully negated votes, making this a very effective idol season. Natalie Anderson's iconic play for Jaclyn at Final 5 is considered one of the best strategic idol plays in Survivor history. The season is also notable for having two players with homophonic names (John Rocker and Jon Misch) who were both voted out holding unused idols. Data compiled from Survivor Wiki, True Dork Times, Inside Survivor, and episode recaps."
+}

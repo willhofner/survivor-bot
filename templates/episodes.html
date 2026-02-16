@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}Episodes - Survivor: Cagayan{% endblock %}
+
+{% block content %}
+<div class="episode-view">
+    <h1 class="text-center mb-5 survivor-title">
+        <span class="torch">🔥</span> Episode Timeline
+    </h1>
+
+    <div class="episode-nav mb-4">
+        <button id="prevEpisode" class="btn btn-outline-survivor" disabled>← Previous</button>
+        <span id="episodeCounter" class="mx-3 episode-number">Episode 1 of 13</span>
+        <button id="nextEpisode" class="btn btn-outline-survivor">Next →</button>
+    </div>
+
+    <div id="episodeContent">
+        {% for episode in episodes %}
+        <div class="episode-card {% if loop.index0 == 0 %}active{% endif %}" data-episode="{{ loop.index }}">
+            <div class="episode-header">
+                <h2>Episode {{ episode.number }}</h2>
+            </div>
+
+            {% for tc in episode.tribal_councils %}
+            <div class="tribal-council mb-4">
+                <div class="tc-header">
+                    <div class="tc-title">
+                        <span class="tc-number">Tribal Council #{{ tc.number }}</span>
+                        <span class="tc-day">Day {{ tc.day }}</span>
+                    </div>
+                    <div class="tc-tribe">{{ tc.tribe }}</div>
+                </div>
+
+                <div class="elimination-banner">
+                    <span class="torch-out">🔥💨</span>
+                    <span class="eliminated-name">{{ tc.eliminated }}</span> was voted out
+                </div>
+
+                <div class="votes-container">
+                    <h4 class="votes-header">The Votes</h4>
+                    {% for vote_group in tc.votes %}
+                    <div class="vote-row">
+                        <div class="vote-target">
+                            {{ vote_group.target }}
+                            <span class="vote-count-badge">{{ vote_group.count }} vote{% if vote_group.count != 1 %}s{% endif %}</span>
+                        </div>
+                        <div class="voters-list">
+                            {% for voter in vote_group.voters %}
+                            <span class="voter-badge">{{ voter }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                {% if tc.notes %}
+                <div class="tc-notes">
+                    <span class="notes-icon">ℹ️</span> {{ tc.notes }}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    let currentEpisode = 1;
+    const totalEpisodes = {{ episodes|length }};
+
+    function showEpisode(episodeNum) {
+        document.querySelectorAll('.episode-card').forEach(card => {
+            card.classList.remove('active');
+        });
+        document.querySelector(`[data-episode="${episodeNum}"]`).classList.add('active');
+
+        document.getElementById('episodeCounter').textContent = `Episode ${episodeNum} of ${totalEpisodes}`;
+        document.getElementById('prevEpisode').disabled = episodeNum === 1;
+        document.getElementById('nextEpisode').disabled = episodeNum === totalEpisodes;
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.getElementById('prevEpisode').addEventListener('click', () => {
+        if (currentEpisode > 1) {
+            currentEpisode--;
+            showEpisode(currentEpisode);
+        }
+    });
+
+    document.getElementById('nextEpisode').addEventListener('click', () => {
+        if (currentEpisode < totalEpisodes) {
+            currentEpisode++;
+            showEpisode(currentEpisode);
+        }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft' && currentEpisode > 1) {
+            currentEpisode--;
+            showEpisode(currentEpisode);
+        } else if (e.key === 'ArrowRight' && currentEpisode < totalEpisodes) {
+            currentEpisode++;
+            showEpisode(currentEpisode);
+        }
+    });
+</script>
+{% endblock %}

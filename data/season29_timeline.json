@@ -1,0 +1,300 @@
+{
+  "season": 29,
+  "season_name": "San Juan del Sur",
+  "subtitle": "Blood vs. Water",
+  "location": "San Juan del Sur, Nicaragua",
+  "filming_dates": {
+    "start": "2014-06-02",
+    "end": "2014-07-10"
+  },
+  "aired_dates": {
+    "premiere": "2014-09-24",
+    "finale": "2014-12-17"
+  },
+  "winner": {
+    "name": "Natalie Anderson",
+    "vote": "5-2-1",
+    "runner_up": "Jaclyn Schultz",
+    "third_place": "Missy Payne"
+  },
+  "timeline": [
+    {
+      "event_type": "tribe_formation",
+      "day": 1,
+      "date": "2014-06-02",
+      "description": "Initial tribe formation with nine pairs of loved ones split into two tribes",
+      "tribes": [
+        {
+          "name": "Coyopa",
+          "color": "orange",
+          "meaning": "Mayan warrior god",
+          "members": [
+            "Alec Christy",
+            "Baylor Wilson",
+            "Dale Wentworth",
+            "Jaclyn Schultz",
+            "John Rocker",
+            "Josh Canfield",
+            "Nadiya Anderson",
+            "Val Collins",
+            "Wes Nale"
+          ]
+        },
+        {
+          "name": "Hunahpu",
+          "color": "blue",
+          "meaning": "Mayan warrior god",
+          "members": [
+            "Drew Christy",
+            "Jeremy Collins",
+            "Jon Misch",
+            "Julie McGee",
+            "Keith Nale",
+            "Kelley Wentworth",
+            "Missy Payne",
+            "Natalie Anderson",
+            "Reed Kelly"
+          ]
+        }
+      ],
+      "impact": "18 castaways (9 loved ones pairs) divided into two tribes"
+    },
+    {
+      "event_type": "twist",
+      "day": 1,
+      "date": "2014-06-02",
+      "description": "Blood vs. Water format with Exile Island twist - pairs of loved ones split across tribes",
+      "details": {
+        "mechanic": "Nine pairs of loved ones competing against each other",
+        "exile_island": "Returns after 11-season hiatus, replacing originally planned Redemption Island",
+        "challenge_format": "Reward Challenges are one-on-one duels between loved ones",
+        "pairs": [
+          {"relationship": "Twin Sisters", "names": "Natalie & Nadiya Anderson"},
+          {"relationship": "Mother & Daughter", "names": "Missy Payne & Baylor Wilson"},
+          {"relationship": "Husband & Wife", "names": "Jeremy & Val Collins"},
+          {"relationship": "Dating Couple", "names": "John Rocker & Julie McGee"},
+          {"relationship": "Dating Couple", "names": "Jon Misch & Jaclyn Schultz"},
+          {"relationship": "Boyfriends", "names": "Josh Canfield & Reed Kelly"},
+          {"relationship": "Father & Son", "names": "Keith & Wes Nale"},
+          {"relationship": "Brothers", "names": "Drew & Alec Christy"},
+          {"relationship": "Father & Daughter", "names": "Dale & Kelley Wentworth"}
+        ]
+      },
+      "impact": "Loved ones competing against each other created unique strategic dynamics"
+    },
+    {
+      "event_type": "strategic_moment",
+      "day": 6,
+      "date": "2014-06-07",
+      "description": "John Rocker blindsided by Josh's alliance on Coyopa with idol in his pocket",
+      "tribe": "Coyopa",
+      "details": {
+        "action": "Josh orchestrated John's ouster, flipping from the men's alliance",
+        "reason": "John's verbal confrontations with other tribe after challenges made him a liability",
+        "idol_status": "John was eliminated with an unused Hidden Immunity Idol"
+      },
+      "impact": "First major blindside of the season; Josh gained control of Coyopa"
+    },
+    {
+      "event_type": "tribe_swap",
+      "day": 11,
+      "date": "2014-06-12",
+      "description": "Tribe swap redistributed remaining 14 castaways into new Coyopa and Hunahpu",
+      "tribes_after_swap": [
+        {
+          "name": "Coyopa",
+          "color": "orange",
+          "composition": "Mix of original Coyopa and Hunahpu members",
+          "notes": "Missy came into power on new Coyopa"
+        },
+        {
+          "name": "Hunahpu",
+          "color": "blue",
+          "composition": "Mix of original Coyopa and Hunahpu members",
+          "notes": "Josh and Jeremy vied for control; Hunahpu won all remaining pre-merge immunity challenges"
+        }
+      ],
+      "impact": "Power dynamics shifted; Josh and Jeremy's conflict set up but never resolved pre-merge due to immunity wins"
+    },
+    {
+      "event_type": "merge",
+      "day": 16,
+      "date": "2014-06-17",
+      "description": "Tribes merged into single tribe with 11 remaining castaways",
+      "merged_tribe_name": "Huyopa",
+      "merged_tribe_composition": {
+        "total": 11,
+        "name_origin": "Combination of Hunahpu and Coyopa"
+      },
+      "members": [
+        "Jeremy Collins",
+        "Natalie Anderson",
+        "Julie McGee",
+        "Missy Payne",
+        "Baylor Wilson",
+        "Josh Canfield",
+        "Reed Kelly",
+        "Wes Nale",
+        "Keith Nale",
+        "Alec Christy",
+        "Jon Misch",
+        "Jaclyn Schultz"
+      ],
+      "impact": "Two factions emerged: Jeremy's alliance (Jeremy, Natalie, Julie, Missy, Baylor) vs. Josh's alliance (Josh, Reed, Wes, Keith, Alec), with Jon and Jaclyn as swing votes"
+    },
+    {
+      "event_type": "quit",
+      "day": 18,
+      "date": "2014-06-19",
+      "description": "Julie McGee quit the game after trail mix scandal and missing boyfriend John Rocker",
+      "player": "Julie McGee",
+      "tribe": "Huyopa (Merged)",
+      "reason": "Trail mix hoarding scandal combined with longing for boyfriend John Rocker and backlash from his controversial elimination",
+      "impact": "Tribal Council was cancelled; gave Jon and Jaclyn time to flip to Jeremy's alliance; Josh eliminated at next vote",
+      "notable": "Only quit in Season 29; quit occurred on Day 18 of 39"
+    },
+    {
+      "event_type": "strategic_moment",
+      "day": 19,
+      "date": "2014-06-20",
+      "description": "Josh Canfield blindsided after Jon and Jaclyn flipped alliances",
+      "tribe": "Huyopa (Merged)",
+      "details": {
+        "action": "Jon and Jaclyn sided with Jeremy's alliance to eliminate Josh",
+        "context": "Julie's quit gave Jon and Jaclyn time to reconsider their alliance with Josh",
+        "vote": "Josh eliminated as strategic threat"
+      },
+      "impact": "Major power shift; Jeremy's alliance took control of the game"
+    },
+    {
+      "event_type": "strategic_moment",
+      "day": 27,
+      "date": "2014-06-28",
+      "description": "Jeremy Collins blindsided by Jon's alliance with Natalie's help",
+      "tribe": "Huyopa (Merged)",
+      "details": {
+        "action": "Jon's alliance blindsided Jeremy in a 5-3-2 vote",
+        "natalie_role": "Natalie helped vote out her closest ally Jeremy to avoid suspicion",
+        "motivation": "Natalie biding her time for the right moment to retaliate and avenge Jeremy"
+      },
+      "impact": "Jeremy eliminated as strategic threat; Natalie began planning revenge against Jon"
+    },
+    {
+      "event_type": "advantage_found",
+      "day": 28,
+      "date": "2014-06-29",
+      "description": "Natalie Anderson found Hidden Immunity Idol with Baylor's help",
+      "finder": "Natalie Anderson",
+      "idol_type": "Regular Hidden Immunity Idol",
+      "details": {
+        "method": "Drafted Baylor during reward when camp was empty, searched together"
+      },
+      "impact": "Natalie gained protection and power for upcoming moves"
+    },
+    {
+      "event_type": "strategic_moment",
+      "day": 30,
+      "date": "2014-07-01",
+      "description": "Double idol play at Tribal Council - Jon and Keith both played idols",
+      "tribe": "Huyopa (Merged)",
+      "details": {
+        "action": "Jon and Keith both played Hidden Immunity Idols at same Tribal Council",
+        "votes_negated": "Four votes against Jon and three votes against Keith were not counted",
+        "natalie_role": "Natalie implored Jon to play his idol, which saved him",
+        "keith_action": "Keith offered his idol to son Wes, who refused; Keith played it for himself",
+        "result": "Wes Nale became first castaway voted out as result of two idols being played"
+      },
+      "impact": "Wes eliminated despite both Jon and Keith safe; dramatic Tribal Council moment"
+    },
+    {
+      "event_type": "strategic_moment",
+      "day": 33,
+      "date": "2014-07-04",
+      "description": "Jon Misch blindsided by Natalie's alliance with idol in his pocket",
+      "tribe": "Huyopa (Merged)",
+      "details": {
+        "action": "Natalie spearheaded Jon's elimination in revenge for Jeremy's blindside",
+        "idol_status": "Jon was eliminated with an unused Hidden Immunity Idol",
+        "vote": "Jon blindsided at Final 6"
+      },
+      "impact": "Natalie's revenge move; Jon became second player this season eliminated with idol in pocket"
+    },
+    {
+      "event_type": "advantage_played",
+      "day": 36,
+      "date": "2014-07-07",
+      "description": "Natalie played Hidden Immunity Idol on Jaclyn to save her",
+      "tribe": "Huyopa (Merged)",
+      "details": {
+        "action": "Natalie played idol on Jaclyn, negating three votes against her",
+        "result": "Baylor Wilson eliminated instead"
+      },
+      "impact": "Natalie solidified Jaclyn's loyalty; demonstrated strategic control"
+    },
+    {
+      "event_type": "final_tribal_council",
+      "day": 39,
+      "date": "2014-07-10",
+      "description": "Final Tribal Council and jury vote",
+      "finalists": [
+        {
+          "name": "Natalie Anderson",
+          "votes": 5,
+          "jury_votes_from": ["Josh Canfield", "Jeremy Collins", "Wes Nale", "Alec Christy", "Keith Nale"]
+        },
+        {
+          "name": "Jaclyn Schultz",
+          "votes": 2,
+          "jury_votes_from": ["Jon Misch", "Reed Kelly"]
+        },
+        {
+          "name": "Missy Payne",
+          "votes": 1,
+          "jury_votes_from": ["Baylor Wilson"]
+        }
+      ],
+      "winner": "Natalie Anderson",
+      "vote_margin": "5-2-1",
+      "details": {
+        "reed_speech": "Reed eviscerated Missy's character at Final Tribal Council",
+        "jaclyn_critique": "Questioned for only making moves with others, primarily Jon",
+        "natalie_praise": "Praised for making bold moves without a loved one's support"
+      },
+      "impact": "Natalie Anderson crowned Sole Survivor and winner of $1,000,000"
+    }
+  ],
+  "season_mechanics": [
+    {
+      "mechanic": "Blood vs. Water",
+      "description": "Nine pairs of loved ones competing against each other, split across two tribes"
+    },
+    {
+      "mechanic": "Exile Island",
+      "description": "Returns after 11-season hiatus; Reward Challenges feature one-on-one duels between loved ones"
+    },
+    {
+      "mechanic": "Traditional tribe swap",
+      "description": "Day 11 swap redistributed 14 remaining castaways into new Coyopa and Hunahpu tribes"
+    },
+    {
+      "mechanic": "Hidden Immunity Idols",
+      "description": "Standard Hidden Immunity Idols available throughout the game"
+    }
+  ],
+  "notable_stats": {
+    "total_castaways": 18,
+    "quits": 1,
+    "medical_evacuations": 0,
+    "hidden_immunity_idols_found": 4,
+    "idols_played": 4,
+    "blindsides_with_idol_in_pocket": 2,
+    "days": 39,
+    "tribal_councils": 14,
+    "jury_size": 9,
+    "loved_ones_pairs": 9
+  },
+  "pre_game_notes": {
+    "original_cast_change": "Sisters So Kim and Doo Kim were originally cast but dropped out before the game began due to a medical emergency",
+    "gender_imbalance": "Resulted in uneven gender balance with 10 males and 8 females competing"
+  }
+}

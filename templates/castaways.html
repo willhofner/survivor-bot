@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}Castaways - Survivor: Cagayan{% endblock %}
+
+{% block content %}
+<div class="castaways-view">
+    <h1 class="text-center mb-5 survivor-title">
+        <span class="torch">🔥</span> The Castaways
+    </h1>
+
+    <div class="tribe-filter mb-4 text-center">
+        <button class="btn btn-filter active" data-tribe="all">All</button>
+        <button class="btn btn-filter" data-tribe="Brawn" style="background-color: #8B4513;">Brawn</button>
+        <button class="btn btn-filter" data-tribe="Brains" style="background-color: #4169E1;">Brains</button>
+        <button class="btn btn-filter" data-tribe="Beauty" style="background-color: #FF1493;">Beauty</button>
+    </div>
+
+    <div class="castaways-grid">
+        {% for castaway in castaways %}
+        <div class="castaway-card"
+             data-tribe="{{ 'Brawn' if 'Brawn' in castaway.original_tribe else 'Brains' if 'Brains' in castaway.original_tribe else 'Beauty' }}"
+             data-placement="{{ castaway.placement }}">
+            <div class="castaway-header" style="border-color: {{ castaway.color }};">
+                {% if castaway.headshot %}
+                <div class="castaway-headshot">
+                    <img src="{{ castaway.headshot }}" alt="{{ castaway.name }}" onerror="this.style.display='none'">
+                </div>
+                {% endif %}
+                <div class="castaway-placement">
+                    {% if castaway.placement == "Winner" %}
+                        <span class="crown">👑</span>
+                    {% elif castaway.placement == "Runner-up" %}
+                        <span class="medal">🥈</span>
+                    {% else %}
+                        <span class="placement-number">{{ castaway.placement }}</span>
+                    {% endif %}
+                </div>
+                <h3 class="castaway-name">{{ castaway.name }}</h3>
+                <div class="castaway-tribe" style="background-color: {{ castaway.color }};">
+                    {{ castaway.original_tribe }}
+                </div>
+            </div>
+
+            <div class="castaway-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Days:</span>
+                    <span class="stat-value">{{ castaway.days_lasted }}</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Votes Against:</span>
+                    <span class="stat-value">{{ castaway.votes_against }}</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Voting Accuracy:</span>
+                    <span class="stat-value">{{ castaway.voting_accuracy.accuracy }}%</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Challenge Wins:</span>
+                    <span class="stat-value">{{ castaway.challenge_stats.total_wins }}</span>
+                </div>
+            </div>
+
+            {% if castaway.challenge_stats.total_wins > 0 %}
+            <div class="challenge-breakdown mt-2 text-center">
+                <small>
+                    💎 {{ castaway.challenge_stats.immunity_wins }} immunity
+                    {% if castaway.challenge_stats.reward_wins > 0 %}
+                        | 🏆 {{ castaway.challenge_stats.reward_wins }} reward
+                    {% endif %}
+                </small>
+            </div>
+            {% endif %}
+
+            <button class="btn btn-sm btn-details" onclick="toggleDetails('{{ castaway.name }}')">
+                View Voting History
+            </button>
+
+            <div id="details-{{ castaway.name }}" class="voting-details" style="display: none;">
+                <h5 class="mt-3 mb-2">Voting History</h5>
+                <div class="timeline">
+                    {% for vote in castaway.voting_history %}
+                    <div class="timeline-item">
+                        <span class="timeline-day">Day {{ vote.day }}</span>
+                        <span class="timeline-vote">Voted for <strong>{{ vote.voted_for }}</strong></span>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                {% if castaway.elimination %}
+                <div class="elimination-info mt-3">
+                    <h5>Elimination</h5>
+                    <p class="mb-1">
+                        <strong>Day {{ castaway.elimination.day }}</strong>
+                        {% if castaway.elimination.tc %}
+                        (Tribal Council #{{ castaway.elimination.tc }})
+                        {% endif %}
+                    </p>
+                    {% if castaway.elimination.voted_out_by %}
+                    <p class="mb-0">
+                        Voted out by:
+                        {% for voter in castaway.elimination.voted_out_by %}
+                        <span class="voter-badge-sm">{{ voter }}</span>{% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                    </p>
+                    {% endif %}
+                    {% if castaway.elimination.notes %}
+                    <p class="text-muted mb-0"><em>{{ castaway.elimination.notes }}</em></p>
+                    {% endif %}
+                </div>
+                {% elif castaway.final_result %}
+                <div class="final-result mt-3">
+                    <h5>Final Result</h5>
+                    <p class="mb-0"><strong>{{ castaway.final_result }}</strong></p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function toggleDetails(name) {
+        const details = document.getElementById(`details-${name}`);
+        const button = event.target;
+
+        if (details.style.display === 'none') {
+            details.style.display = 'block';
+            button.textContent = 'Hide Voting History';
+        } else {
+            details.style.display = 'none';
+            button.textContent = 'View Voting History';
+        }
+    }
+
+    // Tribe filtering
+    document.querySelectorAll('.btn-filter').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+
+            const tribe = e.target.dataset.tribe;
+            document.querySelectorAll('.castaway-card').forEach(card => {
+                if (tribe === 'all' || card.dataset.tribe === tribe) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}

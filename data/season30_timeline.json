@@ -1,0 +1,325 @@
+{
+  "season": 30,
+  "season_name": "Worlds Apart",
+  "subtitle": "White Collar vs. Blue Collar vs. No Collar",
+  "location": "San Juan del Sur, Nicaragua",
+  "filming_dates": {
+    "start": "2014-08-04",
+    "end": "2014-09-11"
+  },
+  "aired_dates": {
+    "premiere": "2015-02-25",
+    "finale": "2015-05-20"
+  },
+  "winner": {
+    "name": "Mike Holloway",
+    "vote": "6-1-1",
+    "runner_up": "Carolyn Rivera and Will Sims II (tied)"
+  },
+  "timeline": [
+    {
+      "event_type": "tribe_formation",
+      "day": 1,
+      "date": "2014-08-04",
+      "description": "Initial tribe formation with three tribes based on social class and work style",
+      "tribes": [
+        {
+          "name": "Escameca",
+          "attribute": "Blue Collar",
+          "color": "blue",
+          "members": [
+            "Dan Foley",
+            "Kelly Remington",
+            "Lindsey Cascaddan",
+            "Mike Holloway",
+            "Rodney Lavoie Jr.",
+            "Sierra Dawn Thomas"
+          ]
+        },
+        {
+          "name": "Masaya",
+          "attribute": "White Collar",
+          "color": "white",
+          "members": [
+            "Carolyn Rivera",
+            "Joaquin Souberbielle",
+            "Max Dawson",
+            "Shirin Oskooi",
+            "So Kim",
+            "Tyler Fredrickson"
+          ]
+        },
+        {
+          "name": "Nagarote",
+          "attribute": "No Collar",
+          "color": "red",
+          "members": [
+            "Hali Ford",
+            "Jenn Brown",
+            "Joe Anglim",
+            "Nina Poersch",
+            "Vince Sly",
+            "Will Sims II"
+          ]
+        }
+      ],
+      "impact": "18 castaways divided into three tribes of six based on occupation: Blue Collar 'follow the rules', White Collar 'make the rules', No Collar 'break the rules'"
+    },
+    {
+      "event_type": "twist",
+      "day": 1,
+      "date": "2014-08-04",
+      "description": "Tribe Leader Decision - Leaders chose second member to make critical decision affecting tribe",
+      "details": {
+        "mechanic": "Each tribe selected a leader who chose another tribemate to make a decision together",
+        "leaders_selected": [
+          {
+            "tribe": "Escameca",
+            "leader": "Dan Foley",
+            "second": "Unknown"
+          },
+          {
+            "tribe": "Masaya",
+            "leader": "Joaquin Souberbielle",
+            "second": "So Kim"
+          },
+          {
+            "tribe": "Nagarote",
+            "leader": "Will Sims II",
+            "second": "Unknown"
+          }
+        ],
+        "choice_given": "Leaders and partners chose between large bag of beans (Honest) or smaller bag plus Hidden Immunity Idol clue (Deceive)",
+        "deception": "Joaquin and So chose Deceive but lied to tribe, claiming there was a third 'Neutral' option"
+      },
+      "impact": "Joaquin and So received idol clue but created distrust by lying about the decision options; lie exposed at first Tribal Council"
+    },
+    {
+      "event_type": "tribe_swap",
+      "day": 12,
+      "date": "2014-08-15",
+      "description": "Masaya tribe disbanded, remaining 14 castaways redistributed into two tribes of seven",
+      "tribes_after_swap": [
+        {
+          "name": "Escameca",
+          "color": "blue",
+          "members": [
+            "Dan Foley",
+            "Mike Holloway",
+            "Rodney Lavoie Jr.",
+            "Sierra Dawn Thomas",
+            "Joaquin Souberbielle",
+            "Tyler Fredrickson",
+            "Joe Anglim"
+          ],
+          "composition": "4 Blue Collar, 2 White Collar, 1 No Collar - strong physical tribe"
+        },
+        {
+          "name": "Nagarote",
+          "color": "red",
+          "members": [
+            "Carolyn Rivera",
+            "Hali Ford",
+            "Jenn Brown",
+            "Kelly Remington",
+            "Max Dawson",
+            "Shirin Oskooi",
+            "Will Sims II"
+          ],
+          "composition": "3 White Collar, 3 No Collar, 1 Blue Collar - physically weaker tribe"
+        }
+      ],
+      "eliminated_tribe": "Masaya (White Collar)",
+      "impact": "White Collar tribe dissolved; Escameca gained significant physical advantage with Joe, Joaquin, Mike, and Rodney"
+    },
+    {
+      "event_type": "strategic_moment",
+      "day": 14,
+      "date": "2014-08-17",
+      "description": "Joaquin blindsided to break up Blue Collar duo and retain Rodney's loyalty",
+      "tribe": "Escameca (Swapped)",
+      "details": {
+        "action": "Mike led Blue Collars to blindside Joaquin, who had aligned with Rodney",
+        "vote": "4-3",
+        "voters_against": "Mike, Dan, Sierra, and Joe voted out Joaquin"
+      },
+      "impact": "Broke up dangerous Rodney-Joaquin pair; kept Rodney loyal to Blue Collar alliance"
+    },
+    {
+      "event_type": "merge",
+      "day": 17,
+      "date": "2014-08-20",
+      "description": "Tribes merged into single tribe",
+      "merged_tribe_name": "Merica",
+      "merged_tribe_composition": {
+        "from_escameca": 6,
+        "from_nagarote": 6,
+        "total": 12
+      },
+      "members": [
+        "Dan Foley",
+        "Mike Holloway",
+        "Rodney Lavoie Jr.",
+        "Sierra Dawn Thomas",
+        "Tyler Fredrickson",
+        "Joe Anglim",
+        "Carolyn Rivera",
+        "Hali Ford",
+        "Jenn Brown",
+        "Shirin Oskooi",
+        "Will Sims II",
+        "Kelly Remington"
+      ],
+      "merged_tribe_color": "black",
+      "tribe_name_origin": "Mike Holloway coined the name 'Merica'",
+      "impact": "Individual game begins with 12 players; Blue Collar alliance versus No Collar core alliance with Shirin"
+    },
+    {
+      "event_type": "advantage_introduced",
+      "day": 29,
+      "date": "2014-09-01",
+      "description": "Survivor Auction with Extra Vote advantage introduced",
+      "details": {
+        "type": "Survivor Auction",
+        "advantage_type": "Extra Vote - allows player to vote twice at single Tribal Council",
+        "advantage_cost": "$480",
+        "winner": "Dan Foley",
+        "context": "Mike initially refused to pay $20 for family letter to save money for advantage, then changed mind; this turn damaged his social game and made him a target"
+      },
+      "impact": "First introduction of Extra Vote advantage in Survivor history; Mike's auction behavior turned tribe against him"
+    },
+    {
+      "event_type": "strategic_moment",
+      "day": 30,
+      "date": "2014-09-02",
+      "description": "Mike exposed Rodney's secret alliance, became primary target",
+      "tribe": "Merica (Merged)",
+      "details": {
+        "action": "Mike overheard Rodney's inner alliance plotting his blindside and publicly called them out",
+        "result": "Mike's allies turned on him, making him the main target",
+        "rodney_alliance": "Rodney had secret sub-alliance with Will, Tyler, and Carolyn to eventually take down other Blue Collars"
+      },
+      "impact": "Mike became isolated underdog; forced to win immunity challenges to survive"
+    },
+    {
+      "event_type": "strategic_moment",
+      "day": 33,
+      "date": "2014-09-05",
+      "description": "Mike played Hidden Immunity Idol, blindsided Tyler",
+      "tribe": "Merica (Merged)",
+      "details": {
+        "action": "Mike played idol, negating four votes against him",
+        "vote": "3-0 after idol play",
+        "eliminated": "Tyler Fredrickson"
+      },
+      "impact": "Mike survived elimination; took out strategic threat Tyler in blindside"
+    },
+    {
+      "event_type": "advantage_used",
+      "day": 35,
+      "date": "2014-09-07",
+      "description": "Dan used Extra Vote advantage at Final 7, but Carolyn played idol",
+      "tribe": "Merica (Merged)",
+      "details": {
+        "advantage_player": "Dan Foley",
+        "votes_cast": "Dan cast two votes for Carolyn using Extra Vote",
+        "idol_play": "Carolyn Rivera played Hidden Immunity Idol",
+        "votes_negated": 5,
+        "eliminated": "Dan Foley",
+        "episode_title": "My Word Is My Bond"
+      },
+      "impact": "Dan's advantage backfired; Carolyn's idol play sent Dan to jury; demonstrated power of immunity idol over extra vote"
+    },
+    {
+      "event_type": "strategic_moment",
+      "day": 31,
+      "date": "2014-09-03",
+      "description": "Mike began unprecedented immunity challenge run",
+      "tribe": "Merica (Merged)",
+      "details": {
+        "achievement": "Mike won 5 of last 6 immunity challenges",
+        "context": "After being targeted, Mike had to win immunity to survive",
+        "only_vulnerability": "Day 33 - played Hidden Immunity Idol instead"
+      },
+      "impact": "Mike's dominance in challenges carried him to Final Tribal Council despite being outnumbered"
+    },
+    {
+      "event_type": "twist",
+      "day": 37,
+      "date": "2014-09-09",
+      "description": "Fire-making tiebreaker challenge at Final 4",
+      "tribe": "Merica (Merged)",
+      "details": {
+        "mechanic": "Fire-making challenge to break tie",
+        "previous_use": "Last used in Survivor: Gabon (Season 17)",
+        "context": "Returned as tiebreaker method"
+      },
+      "impact": "Classic tiebreaker mechanic returned; added survival skills element to endgame"
+    },
+    {
+      "event_type": "final_tribal_council",
+      "day": 39,
+      "date": "2014-09-11",
+      "description": "Final Tribal Council and jury vote",
+      "finalists": [
+        {
+          "name": "Mike Holloway",
+          "votes": 6,
+          "voters": ["Hali Ford", "Joe Anglim", "Jenn Brown", "Shirin Oskooi", "Tyler Fredrickson", "Dan Foley"]
+        },
+        {
+          "name": "Carolyn Rivera",
+          "votes": 1,
+          "voters": ["Sierra Dawn Thomas"]
+        },
+        {
+          "name": "Will Sims II",
+          "votes": 1,
+          "voters": ["Rodney Lavoie Jr."]
+        }
+      ],
+      "winner": "Mike Holloway",
+      "vote_margin": "6-1-1",
+      "historical_note": "First season with three starting tribes to have representative from each original tribe in Final Three",
+      "impact": "Mike Holloway crowned Sole Survivor and winner of $1,000,000 after unprecedented immunity run"
+    }
+  ],
+  "season_mechanics": [
+    {
+      "mechanic": "Three-tribe division",
+      "description": "White Collar vs. Blue Collar vs. No Collar theme based on social class and work style"
+    },
+    {
+      "mechanic": "Tribe Leader Decision",
+      "description": "Leaders selected partner to make choice between Honest (more beans) or Deceive (fewer beans + idol clue)"
+    },
+    {
+      "mechanic": "Extra Vote advantage",
+      "description": "First season to introduce Extra Vote - allows player to vote twice at single Tribal Council, offered at auction"
+    },
+    {
+      "mechanic": "Traditional tribe swap",
+      "description": "Day 12 swap dissolved White Collar tribe (Masaya) and redistributed into two tribes of seven"
+    },
+    {
+      "mechanic": "Fire-making tiebreaker",
+      "description": "Return of fire-making challenge at Final 4, last used in Survivor: Gabon"
+    },
+    {
+      "mechanic": "Survivor Auction",
+      "description": "Classic auction with advantage opportunity; included family letters moment"
+    }
+  ],
+  "notable_stats": {
+    "total_castaways": 18,
+    "quits": 0,
+    "medical_evacuations": 0,
+    "hidden_immunity_idols_found": 2,
+    "extra_vote_advantages": 1,
+    "days": 39,
+    "tribal_councils": 15,
+    "jury_size": 8,
+    "immunity_wins_by_winner": 5,
+    "unique_achievement": "First season since South Pacific (Season 23) with no quits or medical evacuations"
+  }
+}

@@ -1,15 +1,24 @@
 # Roadmap
 
 ## Now (Current Focus)
-- [ ] Define product vision and core user flow
-- [ ] Choose tech stack
-- [ ] Set up initial project structure
+- [ ] **Season Analyzer 2.0** — [Spec: dev/specs/001-season-analyzer-2.md](../dev/specs/001-season-analyzer-2.md)
+  - Scrollable tribal councils view (replace paginated episodes)
+  - Voting accuracy % on castaway profiles
+  - Challenge outcomes timeline
+  - Episode grading algorithm (drama scores)
+  - Challenge beast metrics
+  - Key events timeline (swaps, merge, twists)
+  - Item/advantage tracking (idols, extra votes, etc.)
 
 ## Next (Coming Soon)
-- [ ] TBD
+- [ ] Add more seasons beyond Season 28
+- [ ] Alliance tracking (deferred for now)
+- [ ] Advanced visualizations (Sankey diagrams, network graphs)
+- [ ] Search/filter functionality
 
 ## Later (Backlog)
-- [ ] TBD
+- [ ] Deploy to production
+- [ ] Shareability features (social media cards, screenshots)
 
 ---
 
@@ -25,3 +34,8 @@
 
 ## Completed
 - [x] Project initialization with skills and folder structure (2026-02-15)
+- [x] Season 28 basic voting tracker app (2026-02-15)
+  - Landing page with season overview
+  - Episode view (paginated tribal councils)
+  - Castaway profiles with voting history
+  - Survivor-themed UI design

@@ -1,0 +1,447 @@
+{
+  "season": 29,
+  "season_name": "Survivor: San Juan del Sur",
+  "challenges": [
+    {
+      "challenge_id": 1,
+      "episode": 1,
+      "challenge_type": "Immunity and Reward",
+      "outcome_type": "Tribal",
+      "day": null,
+      "winners": [
+        "Hunahpu"
+      ],
+      "losers": [
+        "Coyopa"
+      ]
+    },
+    {
+      "challenge_id": 2,
+      "episode": 2,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "day": null,
+      "winners": [
+        "Hunahpu"
+      ],
+      "losers": [
+        "Coyopa"
+      ]
+    },
+    {
+      "challenge_id": 3,
+      "episode": 2,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "day": null,
+      "winners": [
+        "Hunahpu"
+      ],
+      "losers": [
+        "Coyopa"
+      ]
+    },
+    {
+      "challenge_id": 4,
+      "episode": 3,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "day": null,
+      "winners": [
+        "Coyopa"
+      ],
+      "losers": [
+        "Hunahpu"
+      ]
+    },
+    {
+      "challenge_id": 5,
+      "episode": 3,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "day": null,
+      "winners": [
+        "Coyopa"
+      ],
+      "losers": [
+        "Hunahpu"
+      ]
+    },
+    {
+      "challenge_id": 6,
+      "episode": 4,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "day": null,
+      "winners": [
+        "Coyopa"
+      ],
+      "losers": [
+        "Hunahpu"
+      ]
+    },
+    {
+      "challenge_id": 7,
+      "episode": 4,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "day": null,
+      "winners": [
+        "Hunahpu"
+      ],
+      "losers": [
+        "Coyopa"
+      ]
+    },
+    {
+      "challenge_id": 8,
+      "episode": 5,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "day": null,
+      "winners": [
+        "Hunahpu"
+      ],
+      "losers": [
+        "Coyopa"
+      ]
+    },
+    {
+      "challenge_id": 9,
+      "episode": 5,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "day": null,
+      "winners": [
+        "Hunahpu"
+      ],
+      "losers": [
+        "Coyopa"
+      ]
+    },
+    {
+      "challenge_id": 10,
+      "episode": 6,
+      "challenge_type": "Reward",
+      "outcome_type": "Tribal",
+      "day": null,
+      "winners": [
+        "Coyopa"
+      ],
+      "losers": [
+        "Hunahpu"
+      ]
+    },
+    {
+      "challenge_id": 11,
+      "episode": 6,
+      "challenge_type": "Immunity",
+      "outcome_type": "Tribal",
+      "day": null,
+      "winners": [
+        "Coyopa"
+      ],
+      "losers": [
+        "Hunahpu"
+      ]
+    },
+    {
+      "challenge_id": 12,
+      "episode": 7,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "day": null,
+      "winners": [
+        "Jeremy"
+      ],
+      "participants": [
+        "Jon",
+        "Jaclyn",
+        "Missy",
+        "Baylor",
+        "Natalie",
+        "Jeremy",
+        "Keith",
+        "Reed",
+        "Wes",
+        "Alec",
+        "Josh"
+      ]
+    },
+    {
+      "challenge_id": 13,
+      "episode": 8,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "day": null,
+      "winners": [
+        "Jon",
+        "Jaclyn",
+        "Missy",
+        "Baylor",
+        "Natalie"
+      ],
+      "all_participants": [
+        "Jon",
+        "Jaclyn",
+        "Missy",
+        "Baylor",
+        "Natalie",
+        "Keith",
+        "Reed",
+        "Wes",
+        "Alec",
+        "Josh"
+      ]
+    },
+    {
+      "challenge_id": 14,
+      "episode": 8,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "day": null,
+      "winners": [
+        "Keith"
+      ],
+      "participants": [
+        "Jon",
+        "Jaclyn",
+        "Missy",
+        "Baylor",
+        "Natalie",
+        "Keith",
+        "Reed",
+        "Wes",
+        "Alec",
+        "Josh"
+      ]
+    },
+    {
+      "challenge_id": 15,
+      "episode": 9,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "day": null,
+      "winners": [
+        "Jon",
+        "Jaclyn",
+        "Keith",
+        "Reed"
+      ],
+      "all_participants": [
+        "Jon",
+        "Jaclyn",
+        "Missy",
+        "Baylor",
+        "Natalie",
+        "Keith",
+        "Reed",
+        "Wes",
+        "Alec"
+      ]
+    },
+    {
+      "challenge_id": 16,
+      "episode": 9,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "day": null,
+      "winners": [
+        "Jon"
+      ],
+      "participants": [
+        "Jon",
+        "Jaclyn",
+        "Missy",
+        "Baylor",
+        "Natalie",
+        "Keith",
+        "Reed",
+        "Wes",
+        "Alec"
+      ]
+    },
+    {
+      "challenge_id": 17,
+      "episode": 10,
+      "challenge_type": "Reward",
+      "outcome_type": "Team",
+      "day": null,
+      "winners": [
+        "Missy",
+        "Baylor",
+        "Natalie"
+      ],
+      "all_participants": [
+        "Jon",
+        "Jaclyn",
+        "Missy",
+        "Baylor",
+        "Natalie",
+        "Keith",
+        "Reed",
+        "Alec"
+      ]
+    },
+    {
+      "challenge_id": 18,
+      "episode": 10,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "day": null,
+      "winners": [
+        "Natalie"
+      ],
+      "participants": [
+        "Jon",
+        "Jaclyn",
+        "Missy",
+        "Baylor",
+        "Natalie",
+        "Keith",
+        "Reed",
+        "Alec"
+      ]
+    },
+    {
+      "challenge_id": 19,
+      "episode": 11,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "day": null,
+      "winners": [
+        "Jon"
+      ],
+      "participants": [
+        "Jon",
+        "Jaclyn",
+        "Missy",
+        "Baylor",
+        "Natalie",
+        "Keith",
+        "Reed"
+      ]
+    },
+    {
+      "challenge_id": 20,
+      "episode": 11,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "day": null,
+      "winners": [
+        "Reed"
+      ],
+      "participants": [
+        "Jon",
+        "Jaclyn",
+        "Missy",
+        "Baylor",
+        "Natalie",
+        "Keith",
+        "Reed"
+      ]
+    },
+    {
+      "challenge_id": 21,
+      "episode": 12,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "day": null,
+      "winners": [
+        "Keith"
+      ],
+      "participants": [
+        "Jon",
+        "Jaclyn",
+        "Missy",
+        "Baylor",
+        "Natalie",
+        "Keith"
+      ]
+    },
+    {
+      "challenge_id": 22,
+      "episode": 12,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "day": null,
+      "winners": [
+        "Baylor"
+      ],
+      "participants": [
+        "Jon",
+        "Jaclyn",
+        "Missy",
+        "Baylor",
+        "Natalie",
+        "Keith"
+      ]
+    },
+    {
+      "challenge_id": 23,
+      "episode": 13,
+      "challenge_type": "Reward",
+      "outcome_type": "Individual",
+      "day": null,
+      "winners": [
+        "Jaclyn"
+      ],
+      "participants": [
+        "Jaclyn",
+        "Missy",
+        "Baylor",
+        "Natalie",
+        "Keith"
+      ]
+    },
+    {
+      "challenge_id": 24,
+      "episode": 13,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "day": null,
+      "winners": [
+        "Keith"
+      ],
+      "participants": [
+        "Jaclyn",
+        "Missy",
+        "Baylor",
+        "Natalie",
+        "Keith"
+      ]
+    },
+    {
+      "challenge_id": 25,
+      "episode": 14,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "day": null,
+      "winners": [
+        "Keith"
+      ],
+      "participants": [
+        "Missy",
+        "Baylor",
+        "Natalie",
+        "Keith"
+      ]
+    },
+    {
+      "challenge_id": 26,
+      "episode": 14,
+      "challenge_type": "Immunity",
+      "outcome_type": "Individual",
+      "day": null,
+      "winners": [
+        "Jaclyn"
+      ],
+      "participants": [
+        "Jaclyn",
+        "Missy",
+        "Baylor",
+        "Natalie"
+      ]
+    }
+  ]
+}

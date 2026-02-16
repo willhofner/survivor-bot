@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Key Events - Survivor: Cagayan{% endblock %}
+
+{% block content %}
+<div class="events-view">
+    <h1 class="text-center mb-5 survivor-title">
+        <span class="torch">📅</span> Season Timeline
+    </h1>
+
+    <div class="timeline-stats text-center mb-4">
+        <span class="stat-badge">{{ events|length }} Key Events</span>
+    </div>
+
+    <div class="events-timeline">
+        {% for event in events %}
+        <div class="event-card mb-4 {{ 'merge-event' if event.event_type == 'merge' else '' }}">
+            <div class="event-header">
+                <div class="event-icon">
+                    {% if event.event_type == 'tribe_formation' %}
+                        🏝️
+                    {% elif event.event_type == 'tribe_swap' %}
+                        🔄
+                    {% elif event.event_type == 'merge' %}
+                        🤝
+                    {% elif event.event_type == 'advantage_found' %}
+                        💎
+                    {% elif event.event_type == 'twist' %}
+                        🎯
+                    {% elif event.event_type == 'quit' %}
+                        🚪
+                    {% elif event.event_type == 'strategic_moment' %}
+                        🧠
+                    {% elif event.event_type == 'final_tribal_council' %}
+                        👑
+                    {% else %}
+                        ⭐
+                    {% endif %}
+                </div>
+                <div class="event-meta">
+                    <div class="event-type">{{ event.event_type|replace('_', ' ')|title }}</div>
+                    <div class="event-day">
+                        {% if event.day %}Day {{ event.day }}{% endif %}
+                        {% if event.date %} • {{ event.date }}{% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-content">
+                <h4 class="event-title">{{ event.title }}</h4>
+                <p class="event-description">{{ event.description }}</p>
+
+                {% if event.tribes_formed %}
+                <div class="tribes-formed mt-2">
+                    <strong>Tribes:</strong>
+                    {% for tribe in event.tribes_formed %}
+                    <span class="tribe-badge">{{ tribe.name }} ({{ tribe.members|length }})</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if event.players_affected %}
+                <div class="players-affected mt-2">
+                    <strong>Players:</strong> {{ event.players_affected|join(', ') }}
+                </div>
+                {% endif %}
+
+                {% if event.impact %}
+                <div class="event-impact mt-2">
+                    <em>{{ event.impact }}</em>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="back-to-top text-center mt-5">
+        <button class="btn btn-survivor" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            Back to Top ↑
+        </button>
+    </div>
+</div>
+{% endblock %}

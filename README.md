@@ -1,18 +1,26 @@
 # Survivor Bot
 
-<!-- TODO: Add project description -->
+Interactive web app to explore Survivor voting data. Currently featuring **Season 28: Cagayan**.
+
+## Features
+
+- 🔥 **Episode View** — Click through tribal councils chronologically (keyboard navigation with ←/→)
+- ⚔️ **Castaway View** — Explore each player's voting history and journey
+- 🎨 **Tribe Filtering** — Filter by Brawn, Brains, or Beauty
+- 📊 **Vote Breakdowns** — See who voted for whom at every tribal council
+- 🏝️ **Survivor-Themed UI** — Torch animations, tribal colors, tropical aesthetic
 
 ## Getting Started
 
-<!-- TODO: Add setup instructions -->
-
 ```bash
-# Installation
-TBD
+# Install dependencies
+pip3 install -r requirements.txt
 
-# Running the project
-TBD
+# Run the app
+python3 app.py
 ```
+
+Then open: **http://localhost:8000**
 
 ## Documentation
 

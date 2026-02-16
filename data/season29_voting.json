@@ -1,0 +1,1254 @@
+{
+  "season": {
+    "number": 29,
+    "name": "Survivor: San Juan del Sur",
+    "location": "San Juan del Sur, Rivas, Nicaragua",
+    "aired": "2014-09-24 - 2015-05-20",
+    "theme": "Natalie Anderson",
+    "winner": "Natalie",
+    "runner_up": "Jaclyn Schultz, Missy Payne",
+    "final_vote": "5-2-1"
+  },
+  "episodes": [
+    {
+      "number": 1,
+      "tribal_councils": [
+        {
+          "number": 1,
+          "day": 3,
+          "tribe": "Coyopa",
+          "eliminated": "Nadiya",
+          "votes": [
+            {
+              "target": "Nadiya",
+              "voters": [
+                "Alec",
+                "Baylor",
+                "Dale",
+                "John",
+                "Wes"
+              ],
+              "count": 5
+            },
+            {
+              "target": "Dale",
+              "voters": [
+                "Jaclyn",
+                "Nadiya",
+                "Val"
+              ],
+              "count": 3
+            },
+            {
+              "target": "Baylor",
+              "voters": [
+                "Josh"
+              ],
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "tribal_councils": [
+        {
+          "number": 2,
+          "day": 6,
+          "tribe": "Coyopa",
+          "eliminated": "Val",
+          "votes": [
+            {
+              "target": "Val",
+              "voters": [
+                "Alec",
+                "Baylor",
+                "Dale",
+                "Dale",
+                "John",
+                "Josh",
+                "Josh",
+                "Wes",
+                "Wes"
+              ],
+              "count": 9
+            },
+            {
+              "target": "Baylor",
+              "voters": [
+                "Alec",
+                "Jaclyn",
+                "Jaclyn",
+                "John",
+                "Val"
+              ],
+              "count": 5
+            }
+          ],
+          "notes": "Tie vote"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "tribal_councils": [
+        {
+          "number": 3,
+          "day": 8,
+          "tribe": "Coyopa",
+          "eliminated": "John",
+          "votes": [
+            {
+              "target": "John",
+              "voters": [
+                "Alec",
+                "Baylor",
+                "Jaclyn",
+                "Josh",
+                "Wes"
+              ],
+              "count": 5
+            },
+            {
+              "target": "Baylor",
+              "voters": [
+                "Dale",
+                "John"
+              ],
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "tribal_councils": [
+        {
+          "number": 4,
+          "day": 10,
+          "tribe": "Hunahpu",
+          "eliminated": "Drew",
+          "votes": [
+            {
+              "target": "Drew",
+              "voters": [
+                "Jeremy",
+                "Julie",
+                "Kelley",
+                "Missy",
+                "Natalie"
+              ],
+              "count": 5
+            },
+            {
+              "target": "Julie",
+              "voters": [
+                "Keith",
+                "Reed"
+              ],
+              "count": 2
+            },
+            {
+              "target": "Kelley",
+              "voters": [
+                "Drew"
+              ],
+              "count": 1
+            },
+            {
+              "target": "Keith",
+              "voters": [
+                "Jon"
+              ],
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "tribal_councils": [
+        {
+          "number": 5,
+          "day": 13,
+          "tribe": "Coyopa",
+          "eliminated": "Kelley",
+          "votes": [
+            {
+              "target": "Kelley",
+              "voters": [
+                "Baylor",
+                "Jaclyn",
+                "Missy"
+              ],
+              "count": 3
+            },
+            {
+              "target": "Baylor",
+              "voters": [
+                "Dale",
+                "Kelley"
+              ],
+              "count": 2
+            },
+            {
+              "target": "Dale",
+              "voters": [
+                "Jon",
+                "Keith"
+              ],
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "tribal_councils": [
+        {
+          "number": 6,
+          "day": 15,
+          "tribe": "Coyopa",
+          "eliminated": "Dale",
+          "votes": [
+            {
+              "target": "Dale",
+              "voters": [
+                "Jaclyn",
+                "Jon",
+                "Keith"
+              ],
+              "count": 3
+            },
+            {
+              "target": "Keith",
+              "voters": [
+                "Baylor",
+                "Missy"
+              ],
+              "count": 2
+            },
+            {
+              "target": "Missy",
+              "voters": [
+                "Dale"
+              ],
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "tribal_councils": [
+        {
+          "number": 8,
+          "day": 21,
+          "tribe": "Huyopa",
+          "eliminated": "Josh",
+          "votes": [
+            {
+              "target": "Josh",
+              "voters": [
+                "Baylor",
+                "Jaclyn",
+                "Jeremy",
+                "Jon",
+                "Missy",
+                "Natalie"
+              ],
+              "count": 6
+            },
+            {
+              "target": "Baylor",
+              "voters": [
+                "Alec",
+                "Josh",
+                "Keith",
+                "Reed",
+                "Wes"
+              ],
+              "count": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "tribal_councils": [
+        {
+          "number": 9,
+          "day": 24,
+          "tribe": "Huyopa",
+          "eliminated": "Jeremy",
+          "votes": [
+            {
+              "target": "Jeremy",
+              "voters": [
+                "Baylor",
+                "Jaclyn",
+                "Jon",
+                "Missy",
+                "Reed"
+              ],
+              "count": 5
+            },
+            {
+              "target": "Reed",
+              "voters": [
+                "Alec",
+                "Keith",
+                "Wes"
+              ],
+              "count": 3
+            },
+            {
+              "target": "Keith",
+              "voters": [
+                "Jeremy",
+                "Natalie"
+              ],
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "tribal_councils": [
+        {
+          "number": 10,
+          "day": 26,
+          "tribe": "Huyopa",
+          "eliminated": "Wes",
+          "votes": [
+            {
+              "target": "Jon",
+              "voters": [
+                "Alec",
+                "Keith",
+                "Reed",
+                "Wes"
+              ],
+              "count": 4
+            },
+            {
+              "target": "Keith",
+              "voters": [
+                "Baylor",
+                "Missy",
+                "Natalie"
+              ],
+              "count": 3
+            },
+            {
+              "target": "Wes",
+              "voters": [
+                "Jaclyn",
+                "Jon"
+              ],
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "tribal_councils": [
+        {
+          "number": 11,
+          "day": 29,
+          "tribe": "Huyopa",
+          "eliminated": "Reed",
+          "votes": [
+            {
+              "target": "Reed",
+              "voters": [
+                "Alec",
+                "Baylor",
+                "Jaclyn",
+                "Jon",
+                "Keith",
+                "Missy",
+                "Natalie"
+              ],
+              "count": 7
+            },
+            {
+              "target": "Missy",
+              "voters": [
+                "Reed"
+              ],
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "tribal_councils": [
+        {
+          "number": 12,
+          "day": 32,
+          "tribe": "Huyopa",
+          "eliminated": "Alec",
+          "votes": [
+            {
+              "target": "Alec",
+              "voters": [
+                "Baylor",
+                "Keith",
+                "Missy",
+                "Natalie"
+              ],
+              "count": 4
+            },
+            {
+              "target": "Keith",
+              "voters": [
+                "Alec",
+                "Jaclyn",
+                "Jon"
+              ],
+              "count": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "tribal_councils": [
+        {
+          "number": 13,
+          "day": 35,
+          "tribe": "Huyopa",
+          "eliminated": "Jon",
+          "votes": [
+            {
+              "target": "Jon",
+              "voters": [
+                "Baylor",
+                "Keith",
+                "Natalie",
+                "Natalie"
+              ],
+              "count": 4
+            },
+            {
+              "target": "Jaclyn",
+              "voters": [
+                "Baylor",
+                "Missy",
+                "Missy"
+              ],
+              "count": 3
+            },
+            {
+              "target": "Keith",
+              "voters": [
+                "Jaclyn",
+                "Jon"
+              ],
+              "count": 2
+            }
+          ],
+          "notes": "Tie vote"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "tribal_councils": [
+        {
+          "number": 14,
+          "day": 37,
+          "tribe": "Huyopa",
+          "eliminated": "Baylor",
+          "votes": [
+            {
+              "target": "Jaclyn",
+              "voters": [
+                "Baylor",
+                "Keith",
+                "Missy"
+              ],
+              "count": 3
+            },
+            {
+              "target": "Baylor",
+              "voters": [
+                "Jaclyn",
+                "Natalie"
+              ],
+              "count": 2
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "day": 38,
+          "tribe": "Huyopa",
+          "eliminated": "Keith",
+          "votes": [
+            {
+              "target": "Keith",
+              "voters": [
+                "Jaclyn",
+                "Missy",
+                "Natalie"
+              ],
+              "count": 3
+            },
+            {
+              "target": "Missy",
+              "voters": [
+                "Keith"
+              ],
+              "count": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "castaways": [
+    {
+      "name": "Natalie",
+      "original_tribe": "Hunahpu (Loved Ones)",
+      "color": "#5CD7DF",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 0,
+      "voting_history": [
+        {
+          "tc": 4,
+          "voted_for": "Drew",
+          "day": 10
+        },
+        {
+          "tc": 7,
+          "voted_for": "Josh",
+          "day": 21
+        },
+        {
+          "tc": 8,
+          "voted_for": "Keith",
+          "day": 24
+        },
+        {
+          "tc": 9,
+          "voted_for": "Keith",
+          "day": 26
+        },
+        {
+          "tc": 10,
+          "voted_for": "Reed",
+          "day": 29
+        },
+        {
+          "tc": 11,
+          "voted_for": "Alec",
+          "day": 32
+        },
+        {
+          "tc": 12,
+          "voted_for": "Jon",
+          "day": 35
+        },
+        {
+          "tc": 13,
+          "voted_for": "Baylor",
+          "day": 37
+        },
+        {
+          "tc": 14,
+          "voted_for": "Keith",
+          "day": 38
+        }
+      ],
+      "final_result": "Sole Survivor"
+    },
+    {
+      "name": "Jaclyn",
+      "original_tribe": "Coyopa (Loved Ones)",
+      "color": "#F89532",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tc": 1,
+          "voted_for": "Dale",
+          "day": 3
+        },
+        {
+          "tc": 2,
+          "voted_for": "Baylor",
+          "day": 6
+        },
+        {
+          "tc": 3,
+          "voted_for": "John",
+          "day": 8
+        },
+        {
+          "tc": 5,
+          "voted_for": "Kelley",
+          "day": 13
+        },
+        {
+          "tc": 6,
+          "voted_for": "Dale",
+          "day": 15
+        },
+        {
+          "tc": 7,
+          "voted_for": "Josh",
+          "day": 21
+        },
+        {
+          "tc": 8,
+          "voted_for": "Jeremy",
+          "day": 24
+        },
+        {
+          "tc": 9,
+          "voted_for": "Wes",
+          "day": 26
+        },
+        {
+          "tc": 10,
+          "voted_for": "Reed",
+          "day": 29
+        },
+        {
+          "tc": 11,
+          "voted_for": "Keith",
+          "day": 32
+        },
+        {
+          "tc": 12,
+          "voted_for": "Keith",
+          "day": 35
+        },
+        {
+          "tc": 13,
+          "voted_for": "Baylor",
+          "day": 37
+        },
+        {
+          "tc": 14,
+          "voted_for": "Keith",
+          "day": 38
+        }
+      ],
+      "final_result": "Runner-up"
+    },
+    {
+      "name": "Missy",
+      "original_tribe": "Hunahpu (Loved Ones)",
+      "color": "#5CD7DF",
+      "placement": "2nd Runner-up",
+      "days_lasted": 39,
+      "votes_against": 3,
+      "voting_history": [
+        {
+          "tc": 4,
+          "voted_for": "Drew",
+          "day": 10
+        },
+        {
+          "tc": 5,
+          "voted_for": "Kelley",
+          "day": 13
+        },
+        {
+          "tc": 6,
+          "voted_for": "Keith",
+          "day": 15
+        },
+        {
+          "tc": 7,
+          "voted_for": "Josh",
+          "day": 21
+        },
+        {
+          "tc": 8,
+          "voted_for": "Jeremy",
+          "day": 24
+        },
+        {
+          "tc": 9,
+          "voted_for": "Keith",
+          "day": 26
+        },
+        {
+          "tc": 10,
+          "voted_for": "Reed",
+          "day": 29
+        },
+        {
+          "tc": 11,
+          "voted_for": "Alec",
+          "day": 32
+        },
+        {
+          "tc": 12,
+          "voted_for": "Jaclyn",
+          "day": 35
+        },
+        {
+          "tc": 13,
+          "voted_for": "Jaclyn",
+          "day": 37
+        },
+        {
+          "tc": 14,
+          "voted_for": "Keith",
+          "day": 38
+        }
+      ],
+      "final_result": "2nd Runner-up"
+    },
+    {
+      "name": "Julie",
+      "original_tribe": "Hunahpu (Loved Ones)",
+      "color": "#5CD7DF",
+      "placement": "Quit",
+      "days_lasted": 18,
+      "votes_against": 2,
+      "voting_history": [
+        {
+          "tc": 4,
+          "voted_for": "Drew",
+          "day": 10
+        }
+      ]
+    },
+    {
+      "name": "Keith",
+      "original_tribe": "Hunahpu (Loved Ones)",
+      "color": "#5CD7DF",
+      "placement": "14th",
+      "days_lasted": 38,
+      "votes_against": 16,
+      "voting_history": [
+        {
+          "tc": 4,
+          "voted_for": "Julie",
+          "day": 10
+        },
+        {
+          "tc": 5,
+          "voted_for": "Dale",
+          "day": 13
+        },
+        {
+          "tc": 6,
+          "voted_for": "Dale",
+          "day": 15
+        },
+        {
+          "tc": 7,
+          "voted_for": "Baylor",
+          "day": 21
+        },
+        {
+          "tc": 8,
+          "voted_for": "Reed",
+          "day": 24
+        },
+        {
+          "tc": 9,
+          "voted_for": "Jon",
+          "day": 26
+        },
+        {
+          "tc": 10,
+          "voted_for": "Reed",
+          "day": 29
+        },
+        {
+          "tc": 11,
+          "voted_for": "Alec",
+          "day": 32
+        },
+        {
+          "tc": 12,
+          "voted_for": "Jon",
+          "day": 35
+        },
+        {
+          "tc": 13,
+          "voted_for": "Jaclyn",
+          "day": 37
+        },
+        {
+          "tc": 14,
+          "voted_for": "Missy",
+          "day": 38
+        }
+      ]
+    },
+    {
+      "name": "Baylor",
+      "original_tribe": "Coyopa (Loved Ones)",
+      "color": "#F89532",
+      "placement": "13th",
+      "days_lasted": 37,
+      "votes_against": 17,
+      "voting_history": [
+        {
+          "tc": 1,
+          "voted_for": "Nadiya",
+          "day": 3
+        },
+        {
+          "tc": 2,
+          "voted_for": "Val",
+          "day": 6
+        },
+        {
+          "tc": 3,
+          "voted_for": "John",
+          "day": 8
+        },
+        {
+          "tc": 5,
+          "voted_for": "Kelley",
+          "day": 13
+        },
+        {
+          "tc": 6,
+          "voted_for": "Keith",
+          "day": 15
+        },
+        {
+          "tc": 7,
+          "voted_for": "Josh",
+          "day": 21
+        },
+        {
+          "tc": 8,
+          "voted_for": "Jeremy",
+          "day": 24
+        },
+        {
+          "tc": 9,
+          "voted_for": "Keith",
+          "day": 26
+        },
+        {
+          "tc": 10,
+          "voted_for": "Reed",
+          "day": 29
+        },
+        {
+          "tc": 11,
+          "voted_for": "Alec",
+          "day": 32
+        },
+        {
+          "tc": 12,
+          "voted_for": "Jaclyn",
+          "day": 35
+        },
+        {
+          "tc": 12,
+          "voted_for": "Jon",
+          "day": 35
+        },
+        {
+          "tc": 13,
+          "voted_for": "Jaclyn",
+          "day": 37
+        }
+      ]
+    },
+    {
+      "name": "Jon",
+      "original_tribe": "Hunahpu (Loved Ones)",
+      "color": "#5CD7DF",
+      "placement": "12th",
+      "days_lasted": 35,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tc": 4,
+          "voted_for": "Keith",
+          "day": 10
+        },
+        {
+          "tc": 5,
+          "voted_for": "Dale",
+          "day": 13
+        },
+        {
+          "tc": 6,
+          "voted_for": "Dale",
+          "day": 15
+        },
+        {
+          "tc": 7,
+          "voted_for": "Josh",
+          "day": 21
+        },
+        {
+          "tc": 8,
+          "voted_for": "Jeremy",
+          "day": 24
+        },
+        {
+          "tc": 9,
+          "voted_for": "Wes",
+          "day": 26
+        },
+        {
+          "tc": 10,
+          "voted_for": "Reed",
+          "day": 29
+        },
+        {
+          "tc": 11,
+          "voted_for": "Keith",
+          "day": 32
+        },
+        {
+          "tc": 12,
+          "voted_for": "Keith",
+          "day": 35
+        }
+      ]
+    },
+    {
+      "name": "Alec",
+      "original_tribe": "Coyopa (Loved Ones)",
+      "color": "#F89532",
+      "placement": "11th",
+      "days_lasted": 32,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tc": 1,
+          "voted_for": "Nadiya",
+          "day": 3
+        },
+        {
+          "tc": 2,
+          "voted_for": "Baylor",
+          "day": 6
+        },
+        {
+          "tc": 2,
+          "voted_for": "Val",
+          "day": 6
+        },
+        {
+          "tc": 3,
+          "voted_for": "John",
+          "day": 8
+        },
+        {
+          "tc": 7,
+          "voted_for": "Baylor",
+          "day": 21
+        },
+        {
+          "tc": 8,
+          "voted_for": "Reed",
+          "day": 24
+        },
+        {
+          "tc": 9,
+          "voted_for": "Jon",
+          "day": 26
+        },
+        {
+          "tc": 10,
+          "voted_for": "Reed",
+          "day": 29
+        },
+        {
+          "tc": 11,
+          "voted_for": "Keith",
+          "day": 32
+        }
+      ]
+    },
+    {
+      "name": "Reed",
+      "original_tribe": "Hunahpu (Loved Ones)",
+      "color": "#5CD7DF",
+      "placement": "10th",
+      "days_lasted": 29,
+      "votes_against": 10,
+      "voting_history": [
+        {
+          "tc": 4,
+          "voted_for": "Julie",
+          "day": 10
+        },
+        {
+          "tc": 7,
+          "voted_for": "Baylor",
+          "day": 21
+        },
+        {
+          "tc": 8,
+          "voted_for": "Jeremy",
+          "day": 24
+        },
+        {
+          "tc": 9,
+          "voted_for": "Jon",
+          "day": 26
+        },
+        {
+          "tc": 10,
+          "voted_for": "Missy",
+          "day": 29
+        }
+      ]
+    },
+    {
+      "name": "Wes",
+      "original_tribe": "Coyopa (Loved Ones)",
+      "color": "#F89532",
+      "placement": "9th",
+      "days_lasted": 26,
+      "votes_against": 2,
+      "voting_history": [
+        {
+          "tc": 1,
+          "voted_for": "Nadiya",
+          "day": 3
+        },
+        {
+          "tc": 2,
+          "voted_for": "Val",
+          "day": 6
+        },
+        {
+          "tc": 3,
+          "voted_for": "John",
+          "day": 8
+        },
+        {
+          "tc": 7,
+          "voted_for": "Baylor",
+          "day": 21
+        },
+        {
+          "tc": 8,
+          "voted_for": "Reed",
+          "day": 24
+        },
+        {
+          "tc": 9,
+          "voted_for": "Jon",
+          "day": 26
+        }
+      ]
+    },
+    {
+      "name": "Jeremy",
+      "original_tribe": "Hunahpu (Loved Ones)",
+      "color": "#5CD7DF",
+      "placement": "8th",
+      "days_lasted": 24,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tc": 4,
+          "voted_for": "Drew",
+          "day": 10
+        },
+        {
+          "tc": 7,
+          "voted_for": "Josh",
+          "day": 21
+        },
+        {
+          "tc": 8,
+          "voted_for": "Keith",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "name": "Josh",
+      "original_tribe": "Coyopa (Loved Ones)",
+      "color": "#F89532",
+      "placement": "7th",
+      "days_lasted": 21,
+      "votes_against": 6,
+      "voting_history": [
+        {
+          "tc": 1,
+          "voted_for": "Baylor",
+          "day": 3
+        },
+        {
+          "tc": 2,
+          "voted_for": "Val",
+          "day": 6
+        },
+        {
+          "tc": 3,
+          "voted_for": "John",
+          "day": 8
+        },
+        {
+          "tc": 7,
+          "voted_for": "Baylor",
+          "day": 21
+        }
+      ]
+    },
+    {
+      "name": "Dale",
+      "original_tribe": "Coyopa (Loved Ones)",
+      "color": "#F89532",
+      "placement": "6th",
+      "days_lasted": 15,
+      "votes_against": 8,
+      "voting_history": [
+        {
+          "tc": 1,
+          "voted_for": "Nadiya",
+          "day": 3
+        },
+        {
+          "tc": 2,
+          "voted_for": "Val",
+          "day": 6
+        },
+        {
+          "tc": 3,
+          "voted_for": "Baylor",
+          "day": 8
+        },
+        {
+          "tc": 5,
+          "voted_for": "Baylor",
+          "day": 13
+        },
+        {
+          "tc": 6,
+          "voted_for": "Missy",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "name": "Kelley",
+      "original_tribe": "Hunahpu (Loved Ones)",
+      "color": "#5CD7DF",
+      "placement": "5th",
+      "days_lasted": 13,
+      "votes_against": 4,
+      "voting_history": [
+        {
+          "tc": 4,
+          "voted_for": "Drew",
+          "day": 10
+        },
+        {
+          "tc": 5,
+          "voted_for": "Baylor",
+          "day": 13
+        }
+      ]
+    },
+    {
+      "name": "Drew",
+      "original_tribe": "Hunahpu (Loved Ones)",
+      "color": "#5CD7DF",
+      "placement": "4th",
+      "days_lasted": 10,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tc": 4,
+          "voted_for": "Kelley",
+          "day": 10
+        }
+      ]
+    },
+    {
+      "name": "John",
+      "original_tribe": "Coyopa (Loved Ones)",
+      "color": "#F89532",
+      "placement": "3rd",
+      "days_lasted": 8,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tc": 1,
+          "voted_for": "Nadiya",
+          "day": 3
+        },
+        {
+          "tc": 2,
+          "voted_for": "Baylor",
+          "day": 6
+        },
+        {
+          "tc": 2,
+          "voted_for": "Val",
+          "day": 6
+        },
+        {
+          "tc": 3,
+          "voted_for": "Baylor",
+          "day": 8
+        }
+      ]
+    },
+    {
+      "name": "Val",
+      "original_tribe": "Coyopa (Loved Ones)",
+      "color": "#F89532",
+      "placement": "2nd",
+      "days_lasted": 6,
+      "votes_against": 9,
+      "voting_history": [
+        {
+          "tc": 1,
+          "voted_for": "Dale",
+          "day": 3
+        },
+        {
+          "tc": 2,
+          "voted_for": "Baylor",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "name": "Nadiya",
+      "original_tribe": "Coyopa (Loved Ones)",
+      "color": "#F89532",
+      "placement": "1st",
+      "days_lasted": 3,
+      "votes_against": 5,
+      "voting_history": [
+        {
+          "tc": 1,
+          "voted_for": "Dale",
+          "day": 3
+        }
+      ]
+    }
+  ]
+}

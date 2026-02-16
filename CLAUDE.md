@@ -33,10 +33,30 @@ This is non-negotiable. Update MEETING_NOTES.md as you work.
 ```
 survivor-bot/
 ├── CLAUDE.md              <- You are here (START HERE, ALWAYS)
+├── README.md              <- Project overview and quick start
+├── app.py                 <- Flask backend (routes, API)
+├── requirements.txt       <- Python dependencies (Flask)
+│
+├── data/                  <- 📊 STRUCTURED DATA
+│   └── voting_data.json  <- Season 28 voting data
+│
+├── templates/             <- 🎨 HTML TEMPLATES
+│   ├── base.html         <- Base template with nav
+│   ├── index.html        <- Landing page
+│   ├── episodes.html     <- Episode view
+│   └── castaways.html    <- Castaway profiles
+│
+├── static/                <- 📦 STATIC ASSETS
+│   ├── css/
+│   │   └── survivor.css  <- Survivor theming
+│   └── js/
+│       └── app.js        <- Frontend JS
 │
 ├── planning/              <- 📋 BUSINESS & STRATEGY
 │   ├── MEETING_NOTES.md  <- Session log, decisions, implementations
 │   ├── ROADMAP.md        <- Ideas, priorities, feedback log
+│   ├── SURVIVOR_VISION.md <- Product vision document
+│   ├── season28_voting_data.md <- Source voting data (markdown)
 │   ├── stand-ups/        <- Standup docs (numbered: 001-YYYY-MM-DD.md)
 │   ├── references/       <- UI reference images for design direction
 │   └── design-specs/     <- Design documents
@@ -80,31 +100,42 @@ survivor-bot/
 
 ## The Product Vision
 
-<!-- TODO: Fill in your product vision, one-liner, core user flow -->
-
-**One-liner**: [What is this product in one sentence?]
+**One-liner**: The complete visual history of every Survivor season — explore alliances, blindsides, and winning strategies through interactive gameplay analysis.
 
 ### What We're Really Building
 
-[Core product description]
+An interactive voting tracker that lets Survivor fans explore how each season unfolded vote-by-vote. Currently featuring **Season 28: Cagayan** with two core exploration modes:
+
+1. **Episode View** — Navigate through the season chronologically, see every tribal council and how votes broke down
+2. **Castaway View** — Deep dive into each player's game: who they voted for, when they were eliminated, their journey
+
+Future vision: All 49 seasons, alliance network graphs, blindside detection, move quality grading, player stats and comparisons.
 
 ### The Emotional Core
 
-[Why do users care? What problem does this solve?]
+Survivor fans love rewatching and analyzing seasons. We're building the ultimate reference tool for:
+- Reliving iconic blindsides and power shifts
+- Understanding player strategies and voting patterns
+- Settling debates about who made the best moves
+- Discovering patterns across seasons
 
 ### Core User Flow
 
 ```
-[Step 1] → [Step 2] → [Step 3]
+Land on home → Choose exploration mode →
+  Episodes: Click through tribal councils chronologically
+  Castaways: Click into player profiles, see voting history
 ```
 
 ---
 
 ## Current State
 
-- **Stack**: [Tech stack - e.g., Python/Flask, Node.js, etc.]
-- **Data Source**: [Where does data come from?]
-- **Server**: [localhost port or deployment info]
+- **Stack**: Python 3 + Flask, Bootstrap + Custom CSS, Vanilla JS
+- **Data Source**: survivoR R Package (GitHub) — JSON exports for all 49 seasons
+- **Server**: http://localhost:8000 (development) — **NEVER use port 5000 on macOS** (conflicts with AirPlay)
+- **Current Coverage**: Season 28 (Cagayan) only — 18 castaways, 13 episodes, 16 tribal councils
+- **Features Live**: Episode navigation, Castaway profiles, Tribe filtering, Survivor-themed UI
 
 ---
 
@@ -151,11 +182,10 @@ survivor-bot/
 
 ## Common Issues
 
-<!-- Document issues as you encounter them -->
-
 | Problem | Likely Cause | Check |
 |---------|--------------|-------|
-| TBD | TBD | TBD |
+| "Invalid response" or 403 Forbidden on localhost:5000 | **macOS AirPlay Receiver uses port 5000 by default** | Change Flask port to 8000 (or any port other than 5000). Edit `app.py`: `app.run(debug=True, port=8000)`. This is a common macOS issue. |
+| Flask app won't start | Port already in use | Run `lsof -i :8000` to check what's using the port, or try a different port |
 
 ---
 
@@ -267,37 +297,112 @@ Knowing which skill to invoke saves time and ensures the right workflow. Use thi
 
 ---
 
-## Parallelism & Subagent Usage
+## 🎯 PARALLELISM & ORCHESTRATION MANDATE
 
-**Default to aggressive parallelism.** Don't do things sequentially when they can happen simultaneously.
+**You are a conductor, not a solo performer.** Think like a project manager orchestrating a team of specialized subagents working in parallel. Your job is to maximize throughput, not do everything yourself.
+
+### The Orchestration Mindset
+
+**ALWAYS ask yourself:** "Can ANY part of this work happen in parallel?"
+
+If the answer is yes, **spawn subagents immediately**. Don't do sequential work when parallel execution is possible. Challenge yourself to break work into the smallest parallelizable units.
+
+**Examples of aggressive parallelism:**
+
+| Task | ❌ Sequential (Slow) | ✅ Parallel (Fast) |
+|------|---------------------|-------------------|
+| Explore 3 subsystems | Read file 1 → Read file 2 → Read file 3 | Spawn 3 Explore agents simultaneously |
+| Research + validate | Research feature → Run tests | Research agent + Bash agent in parallel |
+| Multi-file changes | Edit file 1 → Edit file 2 → Edit file 3 | Read all files in parallel, edit sequentially |
+| Web research + code exploration | Search web → Explore codebase | WebSearch + Explore agent simultaneously |
+| Validate multiple endpoints | Test endpoint 1 → Test endpoint 2 | Multiple Bash agents in parallel |
 
 ### When to Use Subagents (Task Tool)
 
-**Use subagents liberally.** They keep context clean, enable parallelism, and get results faster. Default to spawning subagents for:
+**Default to subagents.** If you're considering doing something yourself that takes more than 2 steps, spawn a subagent instead.
 
-1. **Codebase exploration** — Understanding how multiple systems work
-2. **Multi-part investigations** — Finding patterns across the codebase
-3. **Background tasks** — Long-running operations that don't need immediate results
-4. **Complex research** — When the answer requires deep investigation
+**Spawn subagents for:**
+
+1. **Any codebase exploration** — Even single file searches. Subagents keep context clean.
+2. **All background tasks** — Tests, builds, git operations, server starts
+3. **All research** — Web searches, documentation lookups, pattern investigations
+4. **Parallel investigations** — Multiple agents exploring different aspects simultaneously
+5. **Long-running operations** — Anything that takes >30 seconds
+6. **When uncertain** — Subagents can explore while you work on other things
 
 ### Available Subagent Types
 
 | Agent Type | When to Use | Example |
 |-----------|-------------|---------|
 | `Explore` | Fast codebase exploration, pattern searches | "Find all API endpoints" |
-| `general-purpose` | Complex research, multi-step investigations | "Understand how X works end-to-end" |
+| `general-purpose` | Complex research, multi-step investigations, web research | "Understand how X works end-to-end" |
 | `Bash` | Git operations, running tests, command execution | "Run full test suite in background" |
 | `Plan` | Design implementation strategy before coding | "Plan out the new feature architecture" |
 
-### Rules of Thumb
+### Orchestration Patterns
 
-1. **More than 2 files to explore?** → Spawn parallel Explore agents
-2. **Complex "how does X work" question?** → Spawn Explore agents for each subsystem
-3. **Multiple independent searches needed?** → One Explore agent per search pattern
-4. **Long-running validation?** → Background agent
-5. **When in doubt?** → Spawn subagents. Worst case: slightly slower. Best case: 3-5x faster.
+**Pattern 1: Fan-out exploration**
+```
+User asks: "How does the voting system work?"
+❌ Bad: Read one file at a time sequentially
+✅ Good: Spawn 3 Explore agents:
+  - Agent 1: Explore voting data structures
+  - Agent 2: Explore voting API endpoints
+  - Agent 3: Explore voting UI components
+```
 
-**Default stance: If the work can be parallelized, parallelize it.**
+**Pattern 2: Parallel validation**
+```
+After shipping feature:
+❌ Bad: Run tests → Check endpoints → Verify UI
+✅ Good: Spawn 3 agents in parallel:
+  - Agent 1: Run full test suite (background Bash agent)
+  - Agent 2: Validate API endpoints (Bash agent)
+  - Agent 3: Check UI rendering (Explore agent)
+```
+
+**Pattern 3: Research + implementation**
+```
+User asks: "Add feature X"
+❌ Bad: Research best practices → Design → Code
+✅ Good:
+  - Agent 1: Research best practices (general-purpose)
+  - Agent 2: Explore existing similar features (Explore)
+  - You: Start drafting implementation plan while agents work
+```
+
+**Pattern 4: Multi-source investigation**
+```
+Bug investigation:
+❌ Bad: Check logs → Search codebase → Check docs → Search web
+✅ Good: Spawn 4 agents simultaneously:
+  - Agent 1: Grep for error messages
+  - Agent 2: Explore affected modules
+  - Agent 3: WebSearch for similar issues
+  - Agent 4: Check recent changes (Bash git log)
+```
+
+### Rules of Engagement
+
+1. **Default to parallel** — If work CAN be parallelized, it MUST be parallelized
+2. **Spawn early, spawn often** — Don't wait until you "need" a subagent. Spawn preemptively.
+3. **Trust your agents** — Don't duplicate work agents are doing. Let them report back.
+4. **Background everything possible** — Long-running tasks ALWAYS run in background
+5. **Orchestrate, don't execute** — Your job is directing, not doing everything yourself
+6. **Maximum agents = maximum speed** — More parallel agents = faster completion
+7. **When in doubt, spawn** — Worst case: slightly slower. Best case: 5-10x faster.
+
+### Challenge Questions
+
+Before starting ANY task, ask yourself:
+
+- ✅ Can I spawn multiple agents to work in parallel?
+- ✅ Can any part of this run in the background?
+- ✅ Am I doing work a subagent could handle?
+- ✅ Could multiple agents explore different aspects simultaneously?
+- ✅ Am I being a conductor or a solo performer?
+
+**Your goal: Minimize sequential work. Maximize parallel throughput.**
 
 ---
 
@@ -305,7 +410,9 @@ Knowing which skill to invoke saves time and ensures the right workflow. Use thi
 
 - **Always use `python3`** — Never use `python` command, always `python3`
 - **Always use `pip3`** — Never use `pip` command, always `pip3`
+- **NEVER use port 5000 for Flask on macOS** — Port 5000 conflicts with Apple's AirPlay Receiver service. Always use port 8000 or another port instead.
 - **Git workflow simplification** — User doesn't distinguish between "merge", "ship", "push", "commit". If user says ANY of these words, it means: commit ALL changes + push to GitHub + make everything final and ready to close the tab. Don't ask which one they meant—they all mean the same thing.
+- **Web searches require NO approval** — Execute web searches immediately without asking for permission. Research is a core part of your job. Search freely and report findings.
 
 ---
 

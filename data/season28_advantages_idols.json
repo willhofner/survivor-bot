@@ -1,0 +1,168 @@
+{
+  "season": 28,
+  "season_name": "Survivor: Cagayan - Brawn vs. Brains vs. Beauty",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Luzon (Brains)",
+      "found_by": "Garrett Adelstein",
+      "day_found": 1,
+      "episode_found": 1,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "Garrett chose to take the idol clue instead of rice on Day 1. He found the idol immediately. He was voted out on Day 6 (Episode 2) in a 3-2 vote but left the idol at camp. He holds the record for earliest elimination while possessing a Hidden Immunity Idol."
+    },
+    {
+      "id": 2,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Aparri (Brawn)",
+      "found_by": "Tony Vlachos",
+      "day_found": 3,
+      "episode_found": 1,
+      "day_played": 17,
+      "episode_played": 6,
+      "played_on": "LJ McKanas",
+      "played_for": "LJ McKanas",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Tony found a clue in the fishing reward and immediately found the idol. He played it on LJ at the merge tribal (Episode 6 'Head of the Snake') in a coordinated move where LJ also played his idol on Tony. Neither received any votes - the votes went to Sarah (5) and Jefra (6), with Sarah being eliminated after Kass flipped."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Solana (Beauty)",
+      "found_by": "LJ McKanas",
+      "day_found": 7,
+      "episode_found": 2,
+      "day_played": 17,
+      "episode_played": 6,
+      "played_on": "Tony Vlachos",
+      "played_for": "Tony Vlachos",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "LJ found the idol during a storm on Day 7 without a clue, searching near the rocks where Morgan was found. He played it on Tony at the merge tribal (Episode 6 'Head of the Snake') in a coordinated move where Tony also played his idol on LJ. Neither received any votes."
+    },
+    {
+      "id": 4,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Solarrion (Merged tribe)",
+      "found_by": "Spencer Bledsoe",
+      "day_found": 20,
+      "episode_found": 8,
+      "day_played": 28,
+      "episode_played": 10,
+      "played_on": "Spencer Bledsoe",
+      "played_for": "Spencer Bledsoe",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Spencer found a clue in his napkin at the Outback Steakhouse reward in Episode 8. Despite Woo stealing the clue and showing it to everyone, Spencer still found the idol. He played it on himself in Episode 10 'Chaos is My Friend' but received no votes - the votes went to Jeremiah instead. Spencer later acknowledged he used it wrong and should have saved Jeremiah. Kass called him selfish for not using it to save Jeremiah."
+    },
+    {
+      "id": 5,
+      "type": "Hidden Immunity Idol with Special Powers (Tyler Perry Idol)",
+      "tribe": "Solarrion (Merged tribe)",
+      "found_by": "Tony Vlachos",
+      "day_found": 26,
+      "episode_found": 9,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Tony found this special idol without a clue on Day 26. This 'Tyler Perry Idol' could be played AFTER the votes were read (similar to Survivor: Panama and Cook Islands). Tony never had to play it but used it strategically to intimidate other players. He lied about its powers, falsely claiming it could be used at Final Four when it actually expired at Final Five. He displayed it at tribal councils (including Episode 12) to prevent people from voting against him. Tyler Perry himself said he 'wasn't happy' with how this idol was used. The idol was valid until Final Five."
+    },
+    {
+      "id": 6,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Solarrion (Merged tribe)",
+      "found_by": "Tony Vlachos",
+      "day_found": 29,
+      "episode_found": 11,
+      "day_played": 35,
+      "episode_played": 12,
+      "played_on": "Tony Vlachos",
+      "played_for": "Tony Vlachos",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Tony purchased instructions to find this idol at the Survivor Auction on Day 29. He played it on himself in Episode 12 'Straw That Broke the Camel's Back' at the Final 5 tribal council. He received no votes against him - the votes went to Trish (4) and Kass (1). Trish was blindsided and eliminated by her closest ally Tony. At this tribal, Tony also displayed his special idol to intimidate the others."
+    }
+  ],
+  "summary": {
+    "total_advantages": 6,
+    "total_idols_found": 6,
+    "total_idols_played": 4,
+    "total_idols_not_played": 2,
+    "total_successful_idol_plays": 0,
+    "total_unsuccessful_idol_plays": 4,
+    "total_voted_out_holding": 1,
+    "idols_by_player": {
+      "Tony Vlachos": {
+        "found": 3,
+        "played": 2,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Won the season. Found the most idols in Cagayan history. Used his special idol strategically as a psychological weapon rather than playing it."
+      },
+      "Spencer Bledsoe": {
+        "found": 1,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 0,
+        "notes": "Played his idol unnecessarily when he wasn't targeted."
+      },
+      "LJ McKanas": {
+        "found": 1,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 0,
+        "notes": "Played his idol on Tony in a coordinated move at the merge."
+      },
+      "Garrett Adelstein": {
+        "found": 1,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Voted out Day 6 while holding his idol at camp. Earliest elimination while possessing an idol in Survivor history."
+      }
+    },
+    "special_notes": [
+      "Season 28 featured the return of the 'Tyler Perry Idol' (also called Super Idol) which could be played AFTER votes were read",
+      "This was the first season since Cook Islands with a post-vote-reveal idol",
+      "No idol successfully negated any votes this season - all 4 plays were either unnecessary or coordinated",
+      "Tony displayed his special idol at tribal councils as psychological warfare",
+      "The merge tribal (Episode 6) featured the only time in Survivor history where two players played idols on each other simultaneously (Tony on LJ, LJ on Tony)",
+      "Garrett Adelstein holds the record for earliest boot while holding an idol (Day 6)",
+      "All three initial tribe camps had hidden idols (Luzon, Aparri, Solana)",
+      "Three additional idols were hidden post-merge",
+      "Tony won the season 8-1 over Woo, in part due to his aggressive idol finding and strategic idol bluffing"
+    ]
+  },
+  "sources": [
+    "https://survivor.fandom.com/wiki/Survivor:_Cagayan",
+    "https://survivor.fandom.com/wiki/Hidden_Immunity_Idol",
+    "https://survivor.fandom.com/wiki/Tony_Vlachos",
+    "https://survivor.fandom.com/wiki/Spencer_Bledsoe",
+    "https://survivor.fandom.com/wiki/LJ_McKanas",
+    "https://survivor.fandom.com/wiki/Garrett_Adelstein",
+    "https://www.truedorktimes.com/s28/calendar.htm",
+    "https://www.truedorktimes.com/survivor/cast/tony_vlachos.htm",
+    "https://www.truedorktimes.com/survivor/cast/spencer_bledsoe.htm",
+    "https://survivingtribal.com/2017/10/02/survivor-super-idol-better-theory-practice/",
+    "https://comicbook.com/tv-shows/news/survivor-tyler-perry-idol-twist-jeff-probst-blame/",
+    "https://en.wikipedia.org/wiki/Survivor:_Cagayan"
+  ],
+  "research_date": "2026-02-15",
+  "researcher_notes": "Complete data compiled from multiple sources including Survivor Wiki, True Dork Times, and episode recaps. All idol plays in Season 28 were unsuccessful (negated 0 votes), making this a unique season where idols were used more for psychological strategy than actual vote negation."
+}

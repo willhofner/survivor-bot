@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center hero-section">
+    <h1 class="display-3 survivor-title mb-4">
+        <span class="torch-large">🔥</span><br>
+        SURVIVOR: CAGAYAN
+    </h1>
+    <h2 class="subtitle mb-4">Brawn vs. Brains vs. Beauty</h2>
+
+    <div class="winner-announcement my-5 p-4">
+        <h3 class="mb-3">Sole Survivor</h3>
+        <div class="winner-name">TONY VLACHOS</div>
+        <p class="winner-votes">Defeated Woo Hwang 8-1</p>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-6 mb-4">
+            <a href="/episodes" class="view-card">
+                <div class="card h-100 tribal-card">
+                    <div class="card-body text-center">
+                        <div class="card-icon">📺</div>
+                        <h3 class="card-title">Episode View</h3>
+                        <p class="card-text">Navigate through 13 episodes and see every tribal council vote in chronological order</p>
+                        <div class="btn btn-survivor mt-3">Explore Episodes</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6 mb-4">
+            <a href="/castaways" class="view-card">
+                <div class="card h-100 tribal-card">
+                    <div class="card-body text-center">
+                        <div class="card-icon">⚔️</div>
+                        <h3 class="card-title">Castaway View</h3>
+                        <p class="card-text">Explore each player's journey, voting history, and ultimate fate in the game</p>
+                        <div class="btn btn-survivor mt-3">View Castaways</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="season-stats mt-5">
+        <div class="row text-center">
+            <div class="col-md-3">
+                <div class="stat-box">
+                    <div class="stat-number">18</div>
+                    <div class="stat-label">Castaways</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-box">
+                    <div class="stat-number">16</div>
+                    <div class="stat-label">Tribal Councils</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-box">
+                    <div class="stat-number">39</div>
+                    <div class="stat-label">Days</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-box">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Tribes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

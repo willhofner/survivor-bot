@@ -1,0 +1,309 @@
+{
+  "season": 28,
+  "season_name": "Cagayan",
+  "subtitle": "Brawn vs. Brains vs. Beauty",
+  "location": "Cagayan, Philippines",
+  "filming_dates": {
+    "start": "2013-07-11",
+    "end": "2013-08-18"
+  },
+  "aired_dates": {
+    "premiere": "2014-02-26",
+    "finale": "2014-05-21"
+  },
+  "winner": {
+    "name": "Tony Vlachos",
+    "vote": "8-1",
+    "runner_up": "Woo Hwang"
+  },
+  "timeline": [
+    {
+      "event_type": "tribe_formation",
+      "day": 1,
+      "date": "2013-07-11",
+      "description": "Initial tribe formation with three tribes based on dominant attributes",
+      "tribes": [
+        {
+          "name": "Aparri",
+          "attribute": "Brawn",
+          "color": "orange",
+          "members": [
+            "Cliff Robinson",
+            "Lindsey Ogle",
+            "Sarah Lacina",
+            "Tony Vlachos",
+            "Trish Hegarty",
+            "Woo Hwang"
+          ]
+        },
+        {
+          "name": "Luzon",
+          "attribute": "Brains",
+          "color": "purple",
+          "members": [
+            "David Samson",
+            "Garrett Adelstein",
+            "J'Tia Taylor",
+            "Kass McQuillen",
+            "Spencer Bledsoe",
+            "Tasha Fox"
+          ]
+        },
+        {
+          "name": "Solana",
+          "attribute": "Beauty",
+          "color": "green",
+          "members": [
+            "Alexis Maxwell",
+            "Brice Johnston",
+            "Jefra Bland",
+            "Jeremiah Wood",
+            "LJ McKanas",
+            "Morgan McLeod"
+          ]
+        }
+      ],
+      "impact": "18 castaways divided into three tribes of six"
+    },
+    {
+      "event_type": "twist",
+      "day": 1,
+      "date": "2013-07-11",
+      "description": "First Impressions twist - tribe leaders selected, weakest members sent to camp early",
+      "details": {
+        "mechanic": "Each tribe selected a leader who then designated the 'weakest' member",
+        "weakest_sent_early": [
+          {
+            "tribe": "Aparri",
+            "player": "Unknown from search results"
+          },
+          {
+            "tribe": "Luzon",
+            "player": "Garrett Adelstein"
+          },
+          {
+            "tribe": "Solana",
+            "player": "Unknown from search results"
+          }
+        ],
+        "choice_given": "Players sent early could choose between rice for the tribe or a clue to the Hidden Immunity Idol"
+      },
+      "impact": "Created early advantages and strategic dilemmas"
+    },
+    {
+      "event_type": "advantage_found",
+      "day": 1,
+      "date": "2013-07-11",
+      "description": "Hidden Immunity Idol found by castaway who chose clue over rice",
+      "details": {
+        "finder": "Garrett Adelstein (confirmed for Luzon)",
+        "location": "Underwater",
+        "method": "Chose idol clue instead of rice for tribe"
+      },
+      "impact": "Early idol in play, tribe potentially without extra rice"
+    },
+    {
+      "event_type": "tribe_swap",
+      "day": 12,
+      "date": "2013-07-21",
+      "description": "Luzon tribe disbanded, remaining 14 castaways redistributed into two tribes",
+      "tribes_after_swap": [
+        {
+          "name": "Aparri",
+          "color": "orange",
+          "members": [
+            "Sarah Lacina",
+            "Kass McQuillen",
+            "Tasha Fox",
+            "Spencer Bledsoe",
+            "Alexis Maxwell",
+            "Morgan McLeod",
+            "Jeremiah Wood"
+          ],
+          "composition": "Mix of original Brawn, Brains, and Beauty"
+        },
+        {
+          "name": "Solana",
+          "color": "green",
+          "members": [
+            "Tony Vlachos",
+            "Trish Hegarty",
+            "Cliff Robinson",
+            "Woo Hwang",
+            "Lindsey Ogle",
+            "LJ McKanas",
+            "Jefra Bland"
+          ],
+          "composition": "Mix of original Brawn and Beauty"
+        }
+      ],
+      "eliminated_tribe": "Luzon (Brains)",
+      "impact": "Luzon tribe dissolved, 14 players redistributed into new Aparri and Solana"
+    },
+    {
+      "event_type": "quit",
+      "day": 14,
+      "date": "2013-07-23",
+      "description": "Lindsey Ogle quit the game after Cliff's elimination",
+      "player": "Lindsey Ogle",
+      "tribe": "Solana (Swapped)",
+      "reason": "Rivalry with Trish Hegarty reached breaking point; quit to avoid potential physical confrontation",
+      "impact": "Only contestant in Cagayan to never receive a vote against them; reduced player count to 12",
+      "notable": "First and only quit in Season 28"
+    },
+    {
+      "event_type": "merge",
+      "day": 17,
+      "date": "2013-07-26",
+      "description": "Tribes merged into single tribe",
+      "merged_tribe_name": "Solarrion",
+      "merged_tribe_composition": {
+        "from_aparri": 6,
+        "from_solana": 5,
+        "total": 11
+      },
+      "members": [
+        "Sarah Lacina",
+        "Kass McQuillen",
+        "Tasha Fox",
+        "Spencer Bledsoe",
+        "Morgan McLeod",
+        "Jeremiah Wood",
+        "Tony Vlachos",
+        "Trish Hegarty",
+        "Woo Hwang",
+        "LJ McKanas",
+        "Jefra Bland"
+      ],
+      "location": "Aparri camp",
+      "impact": "Individual game begins with 11 players; Sarah as potential swing vote between original tribal lines"
+    },
+    {
+      "event_type": "twist",
+      "day": 17,
+      "date": "2013-07-26",
+      "description": "Special Hidden Immunity Idol with unique powers announced at merge",
+      "details": {
+        "type": "Tyler Perry Idol / Super Idol",
+        "power": "Can be played AFTER votes are read at Tribal Council",
+        "inspired_by": "Tyler Perry (celebrity Survivor fan)",
+        "clue_status": "Hidden without clue",
+        "previous_appearances": "Similar to idols in Survivor: Panama and Cook Islands"
+      },
+      "impact": "Introduction of most powerful idol type; significant strategic element",
+      "controversy": "Widely criticized by fans as too powerful"
+    },
+    {
+      "event_type": "advantage_found",
+      "day": 20,
+      "date": "2013-07-29",
+      "description": "Spencer found Hidden Immunity Idol after discovering clue at reward",
+      "finder": "Spencer Bledsoe",
+      "idol_type": "Regular Hidden Immunity Idol",
+      "impact": "Spencer gained protection heading into merge votes"
+    },
+    {
+      "event_type": "advantage_introduced",
+      "day": 29,
+      "date": "2013-08-07",
+      "description": "Survivor Auction with special advantage",
+      "details": {
+        "type": "Survivor Auction",
+        "advantage_cost": "$500",
+        "contestants": [
+          "Spencer Bledsoe",
+          "Tony Vlachos"
+        ],
+        "resolution": "Drew rocks to determine winner - Tony drew black rock and won",
+        "prize": "Clue to Hidden Immunity Idol"
+      },
+      "impact": "Tony received clue leading to Special Idol discovery"
+    },
+    {
+      "event_type": "advantage_found",
+      "day": 29,
+      "date": "2013-08-07",
+      "description": "Tony found the Special Hidden Immunity Idol (Tyler Perry Idol)",
+      "finder": "Tony Vlachos",
+      "idol_type": "Special Idol - playable after votes are read",
+      "power": "Can be used after votes are read at Tribal Council",
+      "found_after": "Winning auction advantage for idol clue",
+      "impact": "Tony possessed most powerful idol in game; used strategically as threat even when expired"
+    },
+    {
+      "event_type": "strategic_moment",
+      "day": 19,
+      "date": "2013-07-28",
+      "description": "Tony publicly announced he had a Hidden Immunity Idol, then gave it to LJ",
+      "tribe": "Solarrion (Merged)",
+      "details": {
+        "action": "Tony announced idol publicly at Tribal Council and gave it to LJ McKanas",
+        "purpose": "Build trust and demonstrate loyalty"
+      },
+      "impact": "Strategic move to solidify alliance"
+    },
+    {
+      "event_type": "strategic_moment",
+      "day": 37,
+      "date": "2013-08-15",
+      "description": "Tony's idol bluff at Final 5",
+      "details": {
+        "action": "Tony displayed both regular idol and Super Idol, claimed Super Idol would save him at Final 4",
+        "truth": "Super Idol was only valid until Final 5",
+        "result": "Successfully bluffed through Final 4 Tribal Council, then revealed idol had expired"
+      },
+      "impact": "Prevented votes against Tony; influenced jury perception positively; demonstrated strategic mastery"
+    },
+    {
+      "event_type": "final_tribal_council",
+      "day": 39,
+      "date": "2013-08-17",
+      "description": "Final Tribal Council and jury vote",
+      "finalists": [
+        {
+          "name": "Tony Vlachos",
+          "votes": 8
+        },
+        {
+          "name": "Woo Hwang",
+          "votes": 1
+        }
+      ],
+      "winner": "Tony Vlachos",
+      "vote_margin": "8-1",
+      "impact": "Tony Vlachos crowned Sole Survivor and winner of $1,000,000"
+    }
+  ],
+  "season_mechanics": [
+    {
+      "mechanic": "Three-tribe division",
+      "description": "Brawn vs. Brains vs. Beauty theme"
+    },
+    {
+      "mechanic": "First Impressions twist",
+      "description": "Tribe leaders selected weakest members who were sent to camp early with choice of rice or idol clue"
+    },
+    {
+      "mechanic": "Tyler Perry Idol / Super Idol",
+      "description": "Special Hidden Immunity Idol playable after votes are read, valid until Final 5"
+    },
+    {
+      "mechanic": "Traditional tribe swap",
+      "description": "Day 12 swap dissolved weakest tribe (Luzon) and redistributed into two tribes"
+    },
+    {
+      "mechanic": "Survivor Auction",
+      "description": "Included advantage for idol clue, determined by rock draw between bidders"
+    }
+  ],
+  "notable_stats": {
+    "total_castaways": 18,
+    "quits": 1,
+    "medical_evacuations": 0,
+    "hidden_immunity_idols_found": 3,
+    "special_idols": 1,
+    "days": 39,
+    "tribal_councils": 16,
+    "jury_size": 9
+  }
+}

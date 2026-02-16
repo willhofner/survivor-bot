@@ -1,0 +1,527 @@
+{
+  "season": {
+    "number": 28,
+    "name": "Survivor: Cagayan",
+    "location": "Cagayan, Philippines",
+    "aired": "February 26 - May 21, 2014",
+    "theme": "Brawn vs. Brains vs. Beauty",
+    "winner": "Tony Vlachos",
+    "runner_up": "Woo Hwang",
+    "final_vote": "8-1"
+  },
+  "episodes": [
+    {
+      "number": 1,
+      "tribal_councils": [
+        {
+          "number": 1,
+          "day": 3,
+          "tribe": "Luzon (Brains)",
+          "eliminated": "David",
+          "votes": [
+            {"target": "David", "voters": ["Garrett", "J'Tia", "Spencer", "Tasha"], "count": 4},
+            {"target": "J'Tia", "voters": ["David", "Kass"], "count": 2}
+          ]
+        },
+        {
+          "number": 2,
+          "day": 6,
+          "tribe": "Luzon (Brains)",
+          "eliminated": "Garrett",
+          "votes": [
+            {"target": "Garrett", "voters": ["J'Tia", "Kass", "Tasha"], "count": 3},
+            {"target": "J'Tia", "voters": ["Garrett", "Spencer"], "count": 2}
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "tribal_councils": [
+        {
+          "number": 3,
+          "day": 8,
+          "tribe": "Solana (Beauty)",
+          "eliminated": "Brice",
+          "votes": [
+            {"target": "Brice", "voters": ["Alexis", "Jefra", "Jeremiah", "LJ"], "count": 4},
+            {"target": "Morgan", "voters": ["Brice"], "count": 1}
+          ],
+          "notes": "Revote after tie"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "tribal_councils": [
+        {
+          "number": 4,
+          "day": 11,
+          "tribe": "Luzon (Brains)",
+          "eliminated": "J'Tia",
+          "votes": [
+            {"target": "J'Tia", "voters": ["Kass", "Spencer", "Tasha"], "count": 3},
+            {"target": "Spencer", "voters": ["J'Tia"], "count": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "tribal_councils": [
+        {
+          "number": 5,
+          "day": 14,
+          "tribe": "Solana (Swapped)",
+          "eliminated": "Cliff",
+          "votes": [
+            {"target": "Cliff", "voters": ["Jefra", "LJ", "Tony", "Trish"], "count": 4},
+            {"target": "LJ", "voters": ["Cliff", "Lindsey", "Woo"], "count": 3}
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "tribal_councils": [
+        {
+          "number": 7,
+          "day": 16,
+          "tribe": "Aparri (Swapped)",
+          "eliminated": "Alexis",
+          "votes": [
+            {"target": "Alexis", "voters": ["Jeremiah", "Kass", "Morgan", "Sarah", "Spencer", "Tasha"], "count": 6},
+            {"target": "Jeremiah", "voters": ["Alexis"], "count": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "tribal_councils": [
+        {
+          "number": 8,
+          "day": 19,
+          "tribe": "Solarrion (Merged)",
+          "eliminated": "Sarah",
+          "votes": [
+            {"target": "Sarah", "voters": ["Jefra", "Kass", "LJ", "Tony", "Trish", "Woo"], "count": 6},
+            {"target": "Jefra", "voters": ["Jeremiah", "Morgan", "Sarah", "Spencer", "Tasha"], "count": 5}
+          ],
+          "notes": "Merge episode"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "tribal_councils": [
+        {
+          "number": 9,
+          "day": 22,
+          "tribe": "Solarrion (Merged)",
+          "eliminated": "Morgan",
+          "votes": [
+            {"target": "Morgan", "voters": ["Jefra", "Kass", "LJ", "Tony", "Trish", "Woo"], "count": 6},
+            {"target": "Tony", "voters": ["Jeremiah", "Morgan", "Spencer", "Tasha"], "count": 4}
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "tribal_councils": [
+        {
+          "number": 10,
+          "day": 25,
+          "tribe": "Solarrion (Merged)",
+          "eliminated": "LJ",
+          "votes": [
+            {"target": "LJ", "voters": ["Jeremiah", "Spencer", "Tasha", "Tony", "Woo"], "count": 5},
+            {"target": "Jeremiah", "voters": ["Jefra", "Kass", "Trish"], "count": 3},
+            {"target": "Spencer", "voters": ["LJ"], "count": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "tribal_councils": [
+        {
+          "number": 11,
+          "day": 28,
+          "tribe": "Solarrion (Merged)",
+          "eliminated": "Jeremiah",
+          "votes": [
+            {"target": "Jeremiah", "voters": ["Jefra", "Kass", "Tony", "Trish", "Woo"], "count": 5},
+            {"target": "Woo", "voters": ["Jeremiah", "Spencer", "Tasha"], "count": 3}
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "tribal_councils": [
+        {
+          "number": 12,
+          "day": 30,
+          "tribe": "Solarrion (Merged)",
+          "eliminated": "Jefra",
+          "votes": [
+            {"target": "Jefra", "voters": ["Spencer", "Tasha", "Tony", "Woo"], "count": 4},
+            {"target": "Spencer", "voters": ["Jefra", "Kass", "Trish"], "count": 3}
+          ]
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "tribal_councils": [
+        {
+          "number": 13,
+          "day": 33,
+          "tribe": "Solarrion (Merged)",
+          "eliminated": "Tasha",
+          "votes": [
+            {"target": "Tasha", "voters": ["Kass", "Tony", "Trish", "Woo"], "count": 4},
+            {"target": "Trish", "voters": ["Tasha"], "count": 1},
+            {"target": "Tony", "voters": ["Spencer"], "count": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "tribal_councils": [
+        {
+          "number": 14,
+          "day": 36,
+          "tribe": "Solarrion (Merged)",
+          "eliminated": "Trish",
+          "votes": [
+            {"target": "Trish", "voters": ["Kass", "Spencer", "Tony", "Woo"], "count": 4},
+            {"target": "Kass", "voters": ["Trish"], "count": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "tribal_councils": [
+        {
+          "number": 15,
+          "day": 37,
+          "tribe": "Solarrion (Merged)",
+          "eliminated": "Spencer",
+          "votes": [
+            {"target": "Spencer", "voters": ["Kass", "Tony", "Woo"], "count": 3},
+            {"target": "Woo", "voters": ["Spencer"], "count": 1}
+          ]
+        },
+        {
+          "number": 16,
+          "day": 38,
+          "tribe": "Solarrion (Merged)",
+          "eliminated": "Kass",
+          "votes": [
+            {"target": "Kass", "voters": ["Woo"], "count": 1}
+          ],
+          "notes": "Final 3 - Woo voted out Kass, took Tony to Final 2"
+        }
+      ]
+    }
+  ],
+  "castaways": [
+    {
+      "name": "Tony Vlachos",
+      "original_tribe": "Aparri (Brawn)",
+      "color": "#8B4513",
+      "placement": "Winner",
+      "days_lasted": 39,
+      "votes_against": 4,
+      "voting_history": [
+        {"tc": 8, "voted_for": "Sarah", "day": 19},
+        {"tc": 9, "voted_for": "Morgan", "day": 22},
+        {"tc": 10, "voted_for": "LJ", "day": 25},
+        {"tc": 11, "voted_for": "Jeremiah", "day": 28},
+        {"tc": 12, "voted_for": "Jefra", "day": 30},
+        {"tc": 13, "voted_for": "Tasha", "day": 33},
+        {"tc": 14, "voted_for": "Trish", "day": 36},
+        {"tc": 15, "voted_for": "Spencer", "day": 37}
+      ],
+      "final_result": "Won 8-1 against Woo"
+    },
+    {
+      "name": "Woo Hwang",
+      "original_tribe": "Aparri (Brawn)",
+      "color": "#8B4513",
+      "placement": "Runner-up",
+      "days_lasted": 39,
+      "votes_against": 3,
+      "voting_history": [
+        {"tc": 5, "voted_for": "Cliff", "day": 14},
+        {"tc": 8, "voted_for": "Sarah", "day": 19},
+        {"tc": 9, "voted_for": "Morgan", "day": 22},
+        {"tc": 10, "voted_for": "LJ", "day": 25},
+        {"tc": 11, "voted_for": "Jeremiah", "day": 28},
+        {"tc": 12, "voted_for": "Jefra", "day": 30},
+        {"tc": 13, "voted_for": "Tasha", "day": 33},
+        {"tc": 14, "voted_for": "Trish", "day": 36},
+        {"tc": 15, "voted_for": "Spencer", "day": 37},
+        {"tc": 16, "voted_for": "Kass", "day": 38}
+      ],
+      "final_result": "Lost 1-8 to Tony"
+    },
+    {
+      "name": "Kass",
+      "original_tribe": "Luzon (Brains)",
+      "color": "#4169E1",
+      "placement": "3rd",
+      "days_lasted": 38,
+      "votes_against": 11,
+      "voting_history": [
+        {"tc": 1, "voted_for": "J'Tia", "day": 3},
+        {"tc": 2, "voted_for": "Garrett", "day": 6},
+        {"tc": 4, "voted_for": "J'Tia", "day": 11},
+        {"tc": 7, "voted_for": "Alexis", "day": 16},
+        {"tc": 8, "voted_for": "Sarah", "day": 19},
+        {"tc": 9, "voted_for": "Morgan", "day": 22},
+        {"tc": 10, "voted_for": "Jeremiah", "day": 25},
+        {"tc": 11, "voted_for": "Jeremiah", "day": 28},
+        {"tc": 12, "voted_for": "Spencer", "day": 30},
+        {"tc": 13, "voted_for": "Tasha", "day": 33},
+        {"tc": 14, "voted_for": "Trish", "day": 36},
+        {"tc": 15, "voted_for": "Spencer", "day": 37}
+      ],
+      "elimination": {"day": 38, "tc": 16, "voted_out_by": ["Woo"]}
+    },
+    {
+      "name": "Spencer",
+      "original_tribe": "Luzon (Brains)",
+      "color": "#4169E1",
+      "placement": "4th",
+      "days_lasted": 37,
+      "votes_against": 15,
+      "voting_history": [
+        {"tc": 1, "voted_for": "David", "day": 3},
+        {"tc": 2, "voted_for": "J'Tia", "day": 6},
+        {"tc": 4, "voted_for": "J'Tia", "day": 11},
+        {"tc": 7, "voted_for": "Alexis", "day": 16},
+        {"tc": 8, "voted_for": "Jefra", "day": 19},
+        {"tc": 9, "voted_for": "Tony", "day": 22},
+        {"tc": 10, "voted_for": "LJ", "day": 25},
+        {"tc": 11, "voted_for": "Woo", "day": 28},
+        {"tc": 12, "voted_for": "Jefra", "day": 30},
+        {"tc": 13, "voted_for": "Tony", "day": 33},
+        {"tc": 14, "voted_for": "Trish", "day": 36},
+        {"tc": 15, "voted_for": "Woo", "day": 37}
+      ],
+      "elimination": {"day": 37, "tc": 15, "voted_out_by": ["Kass", "Tony", "Woo"]}
+    },
+    {
+      "name": "Trish",
+      "original_tribe": "Aparri (Brawn)",
+      "color": "#8B4513",
+      "placement": "5th",
+      "days_lasted": 36,
+      "votes_against": 5,
+      "voting_history": [
+        {"tc": 5, "voted_for": "Cliff", "day": 14},
+        {"tc": 8, "voted_for": "Sarah", "day": 19},
+        {"tc": 9, "voted_for": "Morgan", "day": 22},
+        {"tc": 10, "voted_for": "Jeremiah", "day": 25},
+        {"tc": 11, "voted_for": "Jeremiah", "day": 28},
+        {"tc": 12, "voted_for": "Spencer", "day": 30},
+        {"tc": 13, "voted_for": "Tasha", "day": 33},
+        {"tc": 14, "voted_for": "Kass", "day": 36}
+      ],
+      "elimination": {"day": 36, "tc": 14, "voted_out_by": ["Kass", "Spencer", "Tony", "Woo"]}
+    },
+    {
+      "name": "Tasha",
+      "original_tribe": "Luzon (Brains)",
+      "color": "#4169E1",
+      "placement": "6th",
+      "days_lasted": 33,
+      "votes_against": 4,
+      "voting_history": [
+        {"tc": 1, "voted_for": "David", "day": 3},
+        {"tc": 2, "voted_for": "Garrett", "day": 6},
+        {"tc": 4, "voted_for": "J'Tia", "day": 11},
+        {"tc": 7, "voted_for": "Alexis", "day": 16},
+        {"tc": 8, "voted_for": "Jefra", "day": 19},
+        {"tc": 9, "voted_for": "Tony", "day": 22},
+        {"tc": 10, "voted_for": "LJ", "day": 25},
+        {"tc": 11, "voted_for": "Woo", "day": 28},
+        {"tc": 12, "voted_for": "Jefra", "day": 30},
+        {"tc": 13, "voted_for": "Trish", "day": 33}
+      ],
+      "elimination": {"day": 33, "tc": 13, "voted_out_by": ["Kass", "Tony", "Trish", "Woo"]}
+    },
+    {
+      "name": "Jefra",
+      "original_tribe": "Solana (Beauty)",
+      "color": "#FF1493",
+      "placement": "7th",
+      "days_lasted": 30,
+      "votes_against": 9,
+      "voting_history": [
+        {"tc": 3, "voted_for": "Brice", "day": 8},
+        {"tc": 5, "voted_for": "Cliff", "day": 14},
+        {"tc": 8, "voted_for": "Sarah", "day": 19},
+        {"tc": 9, "voted_for": "Morgan", "day": 22},
+        {"tc": 10, "voted_for": "Jeremiah", "day": 25},
+        {"tc": 11, "voted_for": "Jeremiah", "day": 28},
+        {"tc": 12, "voted_for": "Spencer", "day": 30}
+      ],
+      "elimination": {"day": 30, "tc": 12, "voted_out_by": ["Spencer", "Tasha", "Tony", "Woo"]}
+    },
+    {
+      "name": "Jeremiah",
+      "original_tribe": "Solana (Beauty)",
+      "color": "#FF1493",
+      "placement": "8th",
+      "days_lasted": 28,
+      "votes_against": 13,
+      "voting_history": [
+        {"tc": 3, "voted_for": "Brice", "day": 8},
+        {"tc": 7, "voted_for": "Alexis", "day": 16},
+        {"tc": 8, "voted_for": "Jefra", "day": 19},
+        {"tc": 9, "voted_for": "Tony", "day": 22},
+        {"tc": 10, "voted_for": "LJ", "day": 25},
+        {"tc": 11, "voted_for": "Woo", "day": 28}
+      ],
+      "elimination": {"day": 28, "tc": 11, "voted_out_by": ["Jefra", "Kass", "Tony", "Trish", "Woo"]}
+    },
+    {
+      "name": "LJ",
+      "original_tribe": "Solana (Beauty)",
+      "color": "#FF1493",
+      "placement": "9th",
+      "days_lasted": 25,
+      "votes_against": 8,
+      "voting_history": [
+        {"tc": 3, "voted_for": "Brice", "day": 8},
+        {"tc": 5, "voted_for": "Cliff", "day": 14},
+        {"tc": 8, "voted_for": "Sarah", "day": 19},
+        {"tc": 9, "voted_for": "Morgan", "day": 22},
+        {"tc": 10, "voted_for": "Spencer", "day": 25}
+      ],
+      "elimination": {"day": 25, "tc": 10, "voted_out_by": ["Jeremiah", "Spencer", "Tasha", "Tony", "Woo"]}
+    },
+    {
+      "name": "Morgan",
+      "original_tribe": "Solana (Beauty)",
+      "color": "#FF1493",
+      "placement": "10th",
+      "days_lasted": 22,
+      "votes_against": 7,
+      "voting_history": [
+        {"tc": 7, "voted_for": "Alexis", "day": 16},
+        {"tc": 8, "voted_for": "Jefra", "day": 19},
+        {"tc": 9, "voted_for": "Tony", "day": 22}
+      ],
+      "elimination": {"day": 22, "tc": 9, "voted_out_by": ["Jefra", "Kass", "LJ", "Tony", "Trish", "Woo"]}
+    },
+    {
+      "name": "Sarah",
+      "original_tribe": "Aparri (Brawn)",
+      "color": "#8B4513",
+      "placement": "11th",
+      "days_lasted": 19,
+      "votes_against": 6,
+      "voting_history": [
+        {"tc": 7, "voted_for": "Alexis", "day": 16},
+        {"tc": 8, "voted_for": "Jefra", "day": 19}
+      ],
+      "elimination": {"day": 19, "tc": 8, "voted_out_by": ["Jefra", "Kass", "LJ", "Tony", "Trish", "Woo"]}
+    },
+    {
+      "name": "Alexis",
+      "original_tribe": "Solana (Beauty)",
+      "color": "#FF1493",
+      "placement": "12th",
+      "days_lasted": 16,
+      "votes_against": 6,
+      "voting_history": [
+        {"tc": 3, "voted_for": "Brice", "day": 8},
+        {"tc": 7, "voted_for": "Jeremiah", "day": 16}
+      ],
+      "elimination": {"day": 16, "tc": 7, "voted_out_by": ["Jeremiah", "Kass", "Morgan", "Sarah", "Spencer", "Tasha"]}
+    },
+    {
+      "name": "Lindsey",
+      "original_tribe": "Aparri (Brawn)",
+      "color": "#8B4513",
+      "placement": "13th",
+      "days_lasted": 14,
+      "votes_against": 0,
+      "voting_history": [
+        {"tc": 5, "voted_for": "LJ", "day": 14}
+      ],
+      "elimination": {"day": 14, "tc": null, "voted_out_by": [], "notes": "Quit"}
+    },
+    {
+      "name": "Cliff",
+      "original_tribe": "Aparri (Brawn)",
+      "color": "#8B4513",
+      "placement": "14th",
+      "days_lasted": 14,
+      "votes_against": 4,
+      "voting_history": [
+        {"tc": 5, "voted_for": "LJ", "day": 14}
+      ],
+      "elimination": {"day": 14, "tc": 5, "voted_out_by": ["Jefra", "LJ", "Tony", "Trish"]}
+    },
+    {
+      "name": "J'Tia",
+      "original_tribe": "Luzon (Brains)",
+      "color": "#4169E1",
+      "placement": "15th",
+      "days_lasted": 11,
+      "votes_against": 8,
+      "voting_history": [
+        {"tc": 1, "voted_for": "David", "day": 3},
+        {"tc": 2, "voted_for": "Garrett", "day": 6},
+        {"tc": 4, "voted_for": "Spencer", "day": 11}
+      ],
+      "elimination": {"day": 11, "tc": 4, "voted_out_by": ["Kass", "Spencer", "Tasha"]}
+    },
+    {
+      "name": "Brice",
+      "original_tribe": "Solana (Beauty)",
+      "color": "#FF1493",
+      "placement": "16th",
+      "days_lasted": 8,
+      "votes_against": 4,
+      "voting_history": [
+        {"tc": 3, "voted_for": "Morgan", "day": 8}
+      ],
+      "elimination": {"day": 8, "tc": 3, "voted_out_by": ["Alexis", "Jefra", "Jeremiah", "LJ"]}
+    },
+    {
+      "name": "Garrett",
+      "original_tribe": "Luzon (Brains)",
+      "color": "#4169E1",
+      "placement": "17th",
+      "days_lasted": 6,
+      "votes_against": 3,
+      "voting_history": [
+        {"tc": 1, "voted_for": "David", "day": 3},
+        {"tc": 2, "voted_for": "J'Tia", "day": 6}
+      ],
+      "elimination": {"day": 6, "tc": 2, "voted_out_by": ["J'Tia", "Kass", "Tasha"]}
+    },
+    {
+      "name": "David",
+      "original_tribe": "Luzon (Brains)",
+      "color": "#4169E1",
+      "placement": "18th",
+      "days_lasted": 3,
+      "votes_against": 4,
+      "voting_history": [
+        {"tc": 1, "voted_for": "J'Tia", "day": 3}
+      ],
+      "elimination": {"day": 3, "tc": 1, "voted_out_by": ["Garrett", "J'Tia", "Spencer", "Tasha"]}
+    }
+  ]
+}

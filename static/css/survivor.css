@@ -1,0 +1,1061 @@
+/* Survivor Theme CSS */
+
+:root {
+    --brawn: #8B4513;
+    --brains: #4169E1;
+    --beauty: #FF1493;
+    --torch-orange: #FF6B35;
+    --bamboo: #D4A574;
+    --sand: #F5DEB3;
+    --ocean: #006994;
+    --jungle: #2D5016;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #2D5016 0%, #1a2f0f 100%);
+    background-attachment: fixed;
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    min-height: 100vh;
+}
+
+/* Tribal pattern overlay */
+.tribal-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 20px,
+            rgba(255, 107, 53, 0.03) 20px,
+            rgba(255, 107, 53, 0.03) 40px
+        );
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Navigation */
+.survivor-nav {
+    background: linear-gradient(90deg, #1a1a1a 0%, #3a3a3a 100%);
+    border-bottom: 3px solid var(--torch-orange);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+}
+
+.season-selector {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--torch-orange);
+    color: #fff;
+    margin-right: 1rem;
+    max-width: 250px;
+    font-size: 0.9rem;
+}
+
+.season-selector:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--torch-orange);
+    color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
+}
+
+.season-selector option {
+    background: #2a2a2a;
+    color: #fff;
+}
+
+.survivor-logo {
+    font-family: 'Trade Winds', cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--torch-orange) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+}
+
+.torch {
+    font-size: 1.2em;
+    filter: drop-shadow(0 0 5px #ff6b35);
+    animation: flicker 2s infinite;
+}
+
+.torch-large {
+    font-size: 4em;
+    filter: drop-shadow(0 0 20px #ff6b35);
+    animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links .nav-link {
+    color: var(--sand) !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.nav-links .nav-link:hover {
+    color: var(--torch-orange) !important;
+    text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+}
+
+/* Main content */
+main {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero section */
+.hero-section {
+    padding: 3rem 0;
+}
+
+.survivor-title {
+    font-family: 'Trade Winds', cursive;
+    color: var(--torch-orange);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    letter-spacing: 3px;
+}
+
+.subtitle {
+    color: var(--sand);
+    font-style: italic;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Winner announcement */
+.winner-announcement {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 165, 0, 0.2) 100%);
+    border: 3px solid gold;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+}
+
+.winner-name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    letter-spacing: 3px;
+}
+
+.winner-votes {
+    color: var(--sand);
+    font-size: 1.2rem;
+}
+
+/* Cards */
+.view-card {
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.view-card:hover {
+    transform: translateY(-10px);
+}
+
+.tribal-card {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.3) 0%, rgba(45, 80, 22, 0.3) 100%);
+    border: 2px solid var(--bamboo);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.tribal-card:hover {
+    border-color: var(--torch-orange);
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+}
+
+.card-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.btn-survivor {
+    background: linear-gradient(135deg, var(--torch-orange) 0%, #d4591f 100%);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+.btn-survivor:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+}
+
+.btn-outline-survivor {
+    background: transparent;
+    border: 2px solid var(--torch-orange);
+    color: var(--torch-orange);
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.btn-outline-survivor:hover:not(:disabled) {
+    background: var(--torch-orange);
+    color: white;
+}
+
+.btn-outline-survivor:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Stats */
+.season-stats {
+    padding: 2rem;
+}
+
+.stat-box {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--bamboo);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--torch-orange);
+}
+
+.stat-label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--sand);
+}
+
+/* Episodes view */
+.episode-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.episode-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--torch-orange);
+    min-width: 200px;
+    text-align: center;
+}
+
+.episode-card {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.episode-card.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.episode-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.2) 0%, rgba(212, 89, 31, 0.2) 100%);
+    border-radius: 10px;
+}
+
+/* Tribal Council */
+.tribal-council {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--bamboo);
+    border-radius: 10px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.tc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--torch-orange);
+}
+
+.tc-number {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--torch-orange);
+}
+
+.tc-day {
+    margin-left: 1rem;
+    color: var(--sand);
+}
+
+.tc-tribe {
+    font-style: italic;
+    color: var(--sand);
+}
+
+.elimination-banner {
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.3) 0%, rgba(139, 0, 0, 0.3) 100%);
+    border: 2px solid #ff4444;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.torch-out {
+    font-size: 1.5em;
+    margin-right: 0.5rem;
+}
+
+.eliminated-name {
+    font-weight: bold;
+    color: #ff6666;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Votes */
+.votes-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.votes-header {
+    color: var(--torch-orange);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.vote-row {
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 4px solid var(--torch-orange);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.vote-target {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--sand);
+}
+
+.vote-count-badge {
+    display: inline-block;
+    background: var(--torch-orange);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.voters-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.voter-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    border: 1px solid var(--bamboo);
+}
+
+.tc-notes {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(65, 105, 225, 0.2);
+    border-left: 4px solid #4169E1;
+    border-radius: 5px;
+    font-style: italic;
+}
+
+.notes-icon {
+    margin-right: 0.5rem;
+}
+
+/* Castaways view */
+.tribe-filter {
+    margin-bottom: 2rem;
+}
+
+.btn-filter {
+    margin: 0.25rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-filter:hover,
+.btn-filter.active {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.castaways-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.castaway-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--bamboo);
+    border-radius: 10px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+}
+
+.castaway-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.castaway-header {
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.castaway-headshot {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--torch-orange);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.castaway-headshot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.castaway-placement {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.crown {
+    filter: drop-shadow(0 0 10px gold);
+}
+
+.placement-number {
+    font-weight: bold;
+    color: var(--sand);
+}
+
+.castaway-name {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: var(--torch-orange);
+}
+
+.castaway-tribe {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: bold;
+}
+
+.castaway-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--sand);
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--torch-orange);
+}
+
+.btn-details {
+    width: 100%;
+    background: rgba(255, 107, 53, 0.3);
+    border: 1px solid var(--torch-orange);
+    color: var(--torch-orange);
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.btn-details:hover {
+    background: var(--torch-orange);
+    color: white;
+}
+
+.voting-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--bamboo);
+}
+
+.timeline {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid var(--torch-orange);
+    border-radius: 3px;
+}
+
+.timeline-day {
+    color: var(--sand);
+    font-weight: bold;
+}
+
+.timeline-vote {
+    color: #fff;
+}
+
+.elimination-info,
+.final-result {
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid #ff4444;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.voter-badge-sm {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.85rem;
+}
+
+/* Footer */
+.survivor-footer {
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 2px solid var(--torch-orange);
+    color: var(--sand);
+    margin-top: 4rem;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--torch-orange);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d4591f;
+}
+
+/* Tribal Councils View */
+.tribal-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline-stats {
+    margin-bottom: 2rem;
+}
+
+.stat-badge {
+    display: inline-block;
+    background: rgba(255, 107, 53, 0.2);
+    border: 2px solid var(--torch-orange);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin: 0 0.5rem;
+    font-weight: bold;
+}
+
+.tribal-council-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--bamboo);
+    border-radius: 10px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+}
+
+.tribal-council-card.active-card {
+    border-color: var(--torch-orange);
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+    transform: scale(1.02);
+}
+
+.tc-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--torch-orange);
+}
+
+.tc-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tc-episode {
+    color: var(--sand);
+    font-size: 0.9rem;
+}
+
+.tc-tribe-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.drama-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.drama-label {
+    color: var(--sand);
+    font-size: 0.9rem;
+}
+
+.flames {
+    font-size: 1.2rem;
+}
+
+.score-value {
+    color: var(--torch-orange);
+    font-weight: bold;
+}
+
+.back-to-top {
+    margin-top: 3rem;
+}
+
+/* Challenges View */
+.challenge-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.challenge-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--bamboo);
+    border-radius: 10px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.challenge-photo {
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border: 2px solid var(--bamboo);
+}
+
+.challenge-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.challenge-meta {
+    display: flex;
+    gap: 1rem;
+}
+
+.challenge-number {
+    font-weight: bold;
+    color: var(--torch-orange);
+}
+
+.challenge-episode, .challenge-day {
+    color: var(--sand);
+}
+
+.challenge-type-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.immunity-badge {
+    background: linear-gradient(135deg, #4169E1, #1E90FF);
+    color: white;
+}
+
+.reward-badge {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #1a1a1a;
+}
+
+.challenge-outcome {
+    margin-top: 1rem;
+}
+
+.outcome-label {
+    font-size: 0.9rem;
+    color: var(--sand);
+    margin-bottom: 0.5rem;
+}
+
+.winners {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.winner-label {
+    color: var(--torch-orange);
+    font-weight: bold;
+}
+
+.winner-badge {
+    background: rgba(255, 215, 0, 0.3);
+    border: 1px solid gold;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    color: gold;
+    font-weight: bold;
+}
+
+/* Events View */
+.events-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background: rgba(0, 0, 0, 0.4);
+    border-left: 4px solid var(--bamboo);
+    border-radius: 10px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.event-card.merge-event {
+    border-left-color: gold;
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), rgba(0, 0, 0, 0.4));
+}
+
+.event-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.event-icon {
+    font-size: 2.5rem;
+}
+
+.event-type {
+    color: var(--torch-orange);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.event-day {
+    color: var(--sand);
+    font-size: 0.9rem;
+}
+
+.event-title {
+    color: var(--torch-orange);
+    margin-bottom: 0.5rem;
+}
+
+.event-description {
+    color: #fff;
+    line-height: 1.6;
+}
+
+.tribes-formed, .players-affected {
+    margin-top: 1rem;
+    color: var(--sand);
+}
+
+.tribe-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    margin: 0.2rem;
+}
+
+.event-impact {
+    color: var(--sand);
+    font-size: 0.95rem;
+}
+
+/* Items/Advantages View */
+.items-view {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.items-summary {
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--bamboo);
+    border-radius: 10px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.summary-stat {
+    padding: 1rem;
+}
+
+.advantage-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--bamboo);
+    border-radius: 10px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.advantage-card.successful {
+    border-left: 5px solid #00ff00;
+}
+
+.advantage-card.unsuccessful {
+    border-left: 5px solid #ff4444;
+}
+
+.advantage-card.not-played {
+    border-left: 5px solid #888;
+}
+
+.advantage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.advantage-icon {
+    font-size: 3rem;
+}
+
+.advantage-meta {
+    flex: 1;
+}
+
+.advantage-type {
+    color: var(--torch-orange);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.advantage-tribe {
+    color: var(--sand);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.status-badge.success {
+    background: rgba(0, 255, 0, 0.2);
+    color: #00ff00;
+    border: 1px solid #00ff00;
+}
+
+.status-badge.fail {
+    background: rgba(255, 68, 68, 0.2);
+    color: #ff4444;
+    border: 1px solid #ff4444;
+}
+
+.status-badge.holding {
+    background: rgba(136, 136, 136, 0.2);
+    color: #888;
+    border: 1px solid #888;
+}
+
+.status-badge.not-played {
+    background: rgba(136, 136, 136, 0.2);
+    color: #888;
+    border: 1px solid #888;
+}
+
+.advantage-timeline-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.timeline-arrow {
+    color: var(--torch-orange);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.timeline-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 3px solid var(--torch-orange);
+    flex: 1;
+    min-width: 200px;
+}
+
+.timeline-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content {
+    color: #fff;
+}
+
+.timeline-content strong {
+    color: var(--torch-orange);
+}
+
+.advantage-notes {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 3px solid var(--sand);
+    color: var(--sand);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Castaway updates */
+.challenge-breakdown {
+    color: var(--sand);
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tc-header-row, .challenge-header, .event-header, .advantage-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .advantage-timeline-row {
+        flex-direction: column;
+    }
+
+    .timeline-arrow {
+        transform: rotate(90deg);
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .nav-links .nav-link {
+        font-size: 0.85rem;
+    }
+}

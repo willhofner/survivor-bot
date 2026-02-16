@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Challenges - Survivor: Cagayan{% endblock %}
+
+{% block content %}
+<div class="challenges-view">
+    <h1 class="text-center mb-5 survivor-title">
+        <span class="torch">🏆</span> Challenge Timeline
+    </h1>
+
+    <div class="timeline-stats text-center mb-4">
+        <span class="stat-badge">{{ challenges|length }} Total Challenges</span>
+    </div>
+
+    <div class="challenge-timeline">
+        {% for challenge in challenges %}
+        <div class="challenge-card mb-3">
+            <div class="challenge-header">
+                <div class="challenge-meta">
+                    <span class="challenge-number">#{{ challenge.challenge_id }}</span>
+                    <span class="challenge-episode">Episode {{ challenge.episode }}</span>
+                    {% if challenge.day %}
+                    <span class="challenge-day">Day {{ challenge.day }}</span>
+                    {% endif %}
+                </div>
+                <div class="challenge-type-badge {{ 'immunity-badge' if 'Immunity' in challenge.challenge_type else 'reward-badge' }}">
+                    {% if 'Immunity' in challenge.challenge_type and 'Reward' in challenge.challenge_type %}
+                        🏆💎 Immunity + Reward
+                    {% elif 'Immunity' in challenge.challenge_type %}
+                        💎 Immunity
+                    {% else %}
+                        🏆 Reward
+                    {% endif %}
+                </div>
+            </div>
+
+            {% if challenge.photo %}
+            <div class="challenge-photo">
+                <img src="{{ challenge.photo }}" alt="Challenge Photo" onerror="this.parentElement.style.display='none'">
+            </div>
+            {% endif %}
+
+            <div class="challenge-outcome">
+                <div class="outcome-label">{{ challenge.outcome_type }}</div>
+                <div class="winners">
+                    <span class="winner-label">Winner{% if challenge.winners|length > 1 %}s{% endif %}:</span>
+                    {% for winner in challenge.winners %}
+                    <span class="winner-badge">{{ winner }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="back-to-top text-center mt-5">
+        <button class="btn btn-survivor" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            Back to Top ↑
+        </button>
+    </div>
+</div>
+{% endblock %}

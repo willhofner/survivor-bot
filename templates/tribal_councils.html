@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Tribal Councils - Survivor: Cagayan{% endblock %}
+
+{% block content %}
+<div class="tribal-councils-view">
+    <h1 class="text-center mb-5 survivor-title">
+        <span class="torch">🔥</span> Tribal Council Timeline
+    </h1>
+
+    <div class="timeline-stats text-center mb-4">
+        <span class="stat-badge">{{ tribal_councils|length }} Tribal Councils</span>
+        <span class="stat-badge">{{ (tribal_councils|selectattr('drama_score', 'gt', 7)|list|length) }} High-Drama Councils (7+ score)</span>
+    </div>
+
+    <div class="tribal-timeline">
+        {% for tc in tribal_councils %}
+        <div class="tribal-council-card mb-4" data-tc="{{ tc.number }}">
+            <div class="tc-header-row">
+                <div class="tc-meta">
+                    <span class="tc-number">Tribal Council #{{ tc.number }}</span>
+                    <span class="tc-day">Day {{ tc.day }}</span>
+                    <span class="tc-episode">Episode {{ tc.episode_number }}</span>
+                </div>
+                <div class="drama-rating">
+                    <span class="drama-label">Drama:</span>
+                    <span class="flames">{{ tc.flame_rating }}</span>
+                    <span class="score-value">{{ tc.drama_score }}/10</span>
+                </div>
+            </div>
+
+            <div class="tc-tribe-badge">{{ tc.tribe }}</div>
+
+            <div class="elimination-banner">
+                <span class="torch-out">🔥💨</span>
+                <span class="eliminated-name">{{ tc.eliminated }}</span> was voted out
+            </div>
+
+            <div class="votes-container">
+                <h4 class="votes-header">The Votes</h4>
+                {% for vote_group in tc.votes %}
+                <div class="vote-row">
+                    <div class="vote-target">
+                        {{ vote_group.target }}
+                        <span class="vote-count-badge">{{ vote_group.count }} vote{% if vote_group.count != 1 %}s{% endif %}</span>
+                    </div>
+                    <div class="voters-list">
+                        {% for voter in vote_group.voters %}
+                        <span class="voter-badge">{{ voter }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            {% if tc.notes %}
+            <div class="tc-notes">
+                <span class="notes-icon">ℹ️</span> {{ tc.notes }}
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="back-to-top text-center mt-5">
+        <button class="btn btn-survivor" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            Back to Top ↑
+        </button>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Highlight current tribal council as you scroll
+    window.addEventListener('scroll', function() {
+        const cards = document.querySelectorAll('.tribal-council-card');
+        cards.forEach(card => {
+            const rect = card.getBoundingClientRect();
+            if (rect.top >= 0 && rect.top <= 200) {
+                card.classList.add('active-card');
+            } else {
+                card.classList.remove('active-card');
+            }
+        });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,169 @@
+{
+  "season": 30,
+  "season_name": "Survivor: Worlds Apart - White Collar vs. Blue Collar vs. No Collar",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Masaya (White Collar)",
+      "found_by": "Carolyn Rivera",
+      "day_found": 2,
+      "episode_found": 1,
+      "day_played": 35,
+      "episode_played": 13,
+      "played_on": "Carolyn Rivera",
+      "played_for": "Carolyn Rivera",
+      "votes_negated": 5,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Carolyn is tied with Kristina Kell and Sabrina Thompson for the second earliest discovery of a Hidden Immunity Idol by a woman, finding one on Day 2. She looked for the idol after seeing Joaquin and So looking for it, and she found the idol without clues. She kept this idol secret for 33 days until playing it on Day 35 in Episode 13 'My Word Is My Bond'. At that tribal, Dan used his extra vote advantage and cast both votes for Carolyn, but she successfully played her idol, negating five votes (from Dan, Dan's extra vote, Will, Rodney, and Sierra), saving herself and blindsiding Dan who was voted out instead."
+    },
+    {
+      "id": 2,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Nagarote (No Collar)",
+      "found_by": "Jenn Brown",
+      "day_found": 9,
+      "episode_found": 4,
+      "day_played": 19,
+      "episode_played": 7,
+      "played_on": "Jenn Brown",
+      "played_for": "Jenn Brown",
+      "votes_negated": 7,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Jenn, who is vegetarian, found the No Collar's idol on Day 9 in Episode 4 when the tribe decided to celebrate Will's birthday with a chicken dinner. While her tribemates were preoccupied, Jenn wandered off to get firewood and used this alone time to search for and find Nagarote's Hidden Immunity Idol. She played it at the merge tribal council in Episode 7 on Day 19. Jenn used an essential sense of perception and intuition to realize that the votes were coming to her (not Hali) and correctly played her idol. This was one of the most perfectly played idols in recent memory, voiding 7 votes (from Kelly, Dan, Mike, Rodney, Sierra, Tyler, and Carolyn). She tied the record set by Russell Hantz in Samoa for most votes negated by an idol. Kelly Remington was voted out instead. Jenn was the youngest woman to find a hidden immunity idol at the time. She lasted several more days before being voted out on Day 27."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Escameca (Blue Collar)",
+      "found_by": "Mike Holloway",
+      "day_found": 22,
+      "episode_found": 8,
+      "day_played": 32,
+      "episode_played": 12,
+      "played_on": "Mike Holloway",
+      "played_for": "Mike Holloway",
+      "votes_negated": 4,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "After Joe won a Reward Challenge in Episode 8, he received a clue to a Hidden Immunity Idol which he showed to Tyler. Mike caught them and Tyler told Mike about the clue. Though Joe could not find the idol, Mike decided to frame him by claiming that he saw Joe find it, which sidelined Joe from continuing his search. While Joe led a beach yoga session, Mike hustled and eventually found the idol wedged in a tree, finding it with tears in his eyes on approximately Day 22. To keep the target on Joe, Mike made a big show of Joe having the idol. Mike played this idol perfectly in Episode 12 'Holding On for Dear Life' on Day 32, voiding four votes against him (from Rodney, Dan, Will, and Tyler), saving himself from elimination. The majority six alliance was forced to vote out one of its own instead - Tyler Fredrickson was blindsided in a 3-0 vote (after Mike's 4 votes were negated). Mike is the first eventual Sole Survivor to use a Hidden Immunity Idol successfully in the season they won."
+    },
+    {
+      "id": 4,
+      "type": "Extra Vote Advantage",
+      "tribe": "Merica (Merged tribe)",
+      "found_by": "Dan Foley",
+      "day_found": 25,
+      "episode_found": 9,
+      "day_played": 35,
+      "episode_played": 13,
+      "played_on": "Carolyn Rivera",
+      "played_for": "Dan Foley",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Dan Foley purchased the first-ever extra vote advantage in Survivor history at the Survivor Auction on Day 25 (Episode 9). Dan, Carolyn Rivera, and Mike Holloway agreed to all spend $20 on their letters and then go head-to-head-to-head for the advantage. Mike ended up paying for his letter and lost out on the advantage to Dan. Dan paid $480 at the auction to enter and win the rock draw for the extra vote advantage. Dan's advantage was discovered when Tyler Fredrickson went through his bag, so everyone was well-aware that Dan held this advantage. Dan used it on Day 35 in Episode 13 'My Word Is My Bond', putting both of his votes on Carolyn. However, Carolyn played her Hidden Immunity Idol, negating all votes against her, and Dan was voted out instead (receiving 3 votes from Mike, Carolyn, and Sierra). This was the introduction of the extra vote mechanic to Survivor."
+    },
+    {
+      "id": 5,
+      "type": "Fake Hidden Immunity Idol",
+      "tribe": "Merica (Merged tribe)",
+      "found_by": "Joe Anglim (creator)",
+      "day_found": null,
+      "episode_found": 9,
+      "day_played": null,
+      "episode_played": 9,
+      "played_on": "Will Sims II",
+      "played_for": "Joe Anglim",
+      "votes_negated": 0,
+      "result": "unsuccessful_fake",
+      "voted_out_holding": false,
+      "notes": "Joe Anglim, using his expertise as a jewelry designer, made a fake idol using wood from a crate and pieces from his torch. Joe made a deal with Mike Holloway to give Mike the 'idol' if Mike could swing the votes in his favor to stay in the game and send Jenn Brown home. In Episode 9, Mike played Joe's fake idol on Will Sims II at Tribal Council and learned that it was indeed a fake. Nothing happened as it was not a real idol. This fake idol play is notable for Joe's craftsmanship and the attempt to deceive Mike."
+    }
+  ],
+  "summary": {
+    "total_advantages": 5,
+    "total_idols_found": 3,
+    "total_fake_idols": 1,
+    "total_extra_votes": 1,
+    "total_idols_played": 3,
+    "total_idols_not_played": 0,
+    "total_successful_idol_plays": 3,
+    "total_unsuccessful_idol_plays": 0,
+    "total_votes_negated": 16,
+    "total_voted_out_holding": 0,
+    "idols_by_player": {
+      "Mike Holloway": {
+        "found": 1,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 4,
+        "notes": "Won the season. Mike won five of the last six immunity challenges and played his hidden immunity idol on the only time he was vulnerable. He brought himself to the end alongside Will and Carolyn, and was ultimately awarded with six of the eight jury votes, becoming Sole Survivor. First eventual winner to successfully use a Hidden Immunity Idol in their winning season."
+      },
+      "Carolyn Rivera": {
+        "found": 1,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 5,
+        "notes": "Runner-up (tied for second place with Will). Found her idol on Day 2 and kept it secret for 33 days. Her successful idol play on Day 35 saved her from elimination and blindsided Dan. Second earliest idol find by a woman in Survivor history."
+      },
+      "Jenn Brown": {
+        "found": 1,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 7,
+        "notes": "Jenn's idol play at the merge tribal is considered one of the best idol plays in Survivor history. She correctly read the situation and played her idol, negating a season-high 7 votes against her. She was the youngest woman to find a hidden immunity idol at the time. Voted out on Day 27 (Episode 10)."
+      },
+      "Dan Foley": {
+        "advantages_found": 1,
+        "extra_votes": 1,
+        "played": 1,
+        "votes_negated": 0,
+        "notes": "Purchased the first-ever extra vote advantage in Survivor history at auction for $480. His advantage was discovered by Tyler going through his bag. When he attempted to use it against Carolyn on Day 35, she played her idol and he was blindsided instead. 6th member of the jury."
+      },
+      "Joe Anglim": {
+        "fake_idols_created": 1,
+        "notes": "Joe created a fake idol using his jewelry design skills, crafting it from wood and torch pieces. He gave it to Mike as part of a deal to swing votes, but Mike played it on Will and it was revealed to be fake."
+      }
+    },
+    "special_notes": [
+      "Season 30 introduced the Extra Vote advantage for the first time in Survivor history",
+      "All three real Hidden Immunity Idols found this season were played successfully, negating a total of 16 votes",
+      "This is one of the most successful idol-playing seasons - 3 for 3 on real idols",
+      "Jenn Brown's 7-vote negation tied the record set by Russell Hantz in Samoa",
+      "Carolyn kept her idol secret for 33 days - one of the longest secret idol holdings",
+      "Mike Holloway became the first eventual Sole Survivor to successfully play a Hidden Immunity Idol in their winning season",
+      "The merge tribal (Episode 7) featured Jenn's record-tying 7-vote idol play",
+      "Joe Anglim's fake idol was notable for its craftsmanship but ultimately failed to save him",
+      "Dan's extra vote advantage backfired - he cast both votes on Carolyn, who played her idol and blindsided him",
+      "All three original tribe camps had hidden idols (Masaya, Nagarote, Escameca)",
+      "Mike dominated the endgame by winning 5 of the last 6 immunity challenges",
+      "Mike won the season 6-2-0 over Carolyn and Will"
+    ]
+  },
+  "sources": [
+    "https://survivor.fandom.com/wiki/Survivor:_Worlds_Apart",
+    "https://survivor.fandom.com/wiki/Hidden_Immunity_Idol",
+    "https://survivor.fandom.com/wiki/Mike_Holloway",
+    "https://survivor.fandom.com/wiki/Carolyn_Rivera",
+    "https://survivor.fandom.com/wiki/Jenn_Brown",
+    "https://survivor.fandom.com/wiki/Extra_Vote",
+    "https://en.wikipedia.org/wiki/Survivor:_Worlds_Apart",
+    "https://www.truedorktimes.com/survivor/cast/mike_holloway.htm",
+    "https://www.truedorktimes.com/survivor/cast/carolyn_rivera.htm",
+    "https://www.truedorktimes.com/survivor/cast/jenn_brown.htm",
+    "https://www.truedorktimes.com/survivor/cast/dan_foley.htm",
+    "https://truedorktimes.com/s30/recaps/e13.htm",
+    "https://insidesurvivor.com/survivor-worlds-apart-episode-7-reds-whites-and-blues-216",
+    "https://insidesurvivor.com/survivor-worlds-apart-episode-8-cruel-intolerance-228",
+    "https://insidesurvivor.com/survivor-worlds-apart-episode-12-birthday-blues-275",
+    "https://insidesurvivor.com/survivor-worlds-apart-episode-13-the-fall-of-dan-502",
+    "https://gradientdescending.com/survivor-advantages-dataset-showcase-for-survivor/",
+    "https://survivingtribal.com/2020/10/22/survivor-worlds-apart-memorable-moments/",
+    "https://www.goldderby.com/article/2015/survivor-worlds-apart-season-30-spoilers-dan-advantage-carolyn-idol-entertainment-13579086-story/"
+  ],
+  "research_date": "2026-02-15",
+  "researcher_notes": "Complete data compiled from multiple sources including Survivor Wiki, True Dork Times, Inside Survivor, and episode recaps. Season 30: Worlds Apart had an exceptionally high success rate for idol plays - all 3 real Hidden Immunity Idols were played successfully, negating a combined 16 votes. This season also marked the introduction of the Extra Vote advantage, which was purchased by Dan Foley at the Survivor Auction. Notably, Dan's advantage backfired when Carolyn played her idol against him. Mike Holloway became the first eventual Sole Survivor to successfully use a Hidden Immunity Idol in the season they won, and he dominated the endgame with an unprecedented immunity run."
+}
