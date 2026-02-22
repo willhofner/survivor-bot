@@ -1,0 +1,235 @@
+{
+  "season": 35,
+  "season_name": "Survivor: Heroes vs. Healers vs. Hustlers",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Super Idol",
+      "tribe": "Marooning ship",
+      "found_by": "Ryan Ulrich",
+      "day_found": 1,
+      "episode_found": 1,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Ryan found a secret advantage on the ship during the marooning. It turned out to be a Super Idol (playable after votes are read) valid only at the first Tribal Council. Since the Hustlers (Yawa) won the first immunity challenge, Ryan was required to anonymously send the idol to someone on the losing tribe. He chose to give it to Chrissy Hofbeck on the Heroes (Levu) tribe, beginning their strategic alliance."
+    },
+    {
+      "id": 2,
+      "type": "Super Idol (transferred)",
+      "tribe": "Levu (Heroes)",
+      "found_by": "Chrissy Hofbeck",
+      "day_found": 3,
+      "episode_found": 1,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Chrissy found the Super Idol anonymously placed in her bag by Ryan. It was only valid at the first Tribal Council. She chose not to play it, joining the unanimous 6-1 vote to eliminate Katrina Radke. The idol expired after that tribal. Later in the game, Chrissy strategically used the expired idol as a decoy, pretending she had found a new idol to try to prevent Ben from searching for one, though Ben had already found the real idol by then."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Soko (Healers)",
+      "found_by": "Joe Mena",
+      "day_found": 4,
+      "episode_found": 2,
+      "day_played": 11,
+      "episode_played": 4,
+      "played_on": "Joe Mena",
+      "played_for": "Joe Mena",
+      "votes_negated": 2,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Joe found a clue on Day 4 but initially misread it. Cole Medders helped him locate the actual idol. Joe played the idol on himself at the Day 11 Tribal Council (Episode 4) after reading Ashley Nolan's facial expression, correctly sensing he was the target. The idol negated Alan Ball's and Ashley's votes against him, and Alan was blindsided in a 3-2 vote (with Joe's votes negated). This was a textbook successful idol play."
+    },
+    {
+      "id": 4,
+      "type": "Vote Blocker",
+      "tribe": "Reward Challenge",
+      "found_by": "Jessica Johnston",
+      "day_found": 9,
+      "episode_found": 3,
+      "day_played": 11,
+      "episode_played": 4,
+      "played_on": "Devon Pinto",
+      "played_for": "Jessica Johnston",
+      "votes_negated": 0,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Jessica found the Vote Blocker advantage hidden in a bag of potato chips after winning the Day 9 Reward Challenge. The advantage allowed her to block one player from voting at the next Tribal Council. She used it on Day 11 (Episode 4) to block Devon Pinto's vote at the Levu tribal council, preventing him from voting against her allies. Jessica immediately told Cole and Mike about the advantage, but Cole broke her trust by sharing it with Ben and Lauren."
+    },
+    {
+      "id": 5,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Soko (post-swap)",
+      "found_by": "Joe Mena",
+      "day_found": 15,
+      "episode_found": 6,
+      "day_played": 17,
+      "episode_played": 7,
+      "played_on": "Joe Mena",
+      "played_for": "Joe Mena",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Joe found a clue on Day 15 and located his second idol that same night. He played it on himself at the first post-merge Tribal Council on Day 17 (Episode 7) while voting for Chrissy. However, he received no votes, making the play a waste. The votes went against Desi (5), Joe (0), and Jessica (3), with Jessica being eliminated on the revote. Joe's aggressive idol play was noted as premature."
+    },
+    {
+      "id": 6,
+      "type": "Extra Vote",
+      "tribe": "Solewa (merged tribe)",
+      "found_by": "Lauren Rimmer",
+      "day_found": 20,
+      "episode_found": 8,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "Lauren found the Extra Vote advantage hidden in nails at the Solewa merged camp on Day 20. This variant required her to abstain from voting at the next Tribal Council in order to save the extra vote for a future council. She abstained from voting at the following tribal. However, Lauren was voted out on Day 33 (Episode 12) when Ben played his first Hidden Immunity Idol, and she was eliminated still holding the unused Extra Vote. She was the first castaway to be voted out holding the Extra Vote advantage."
+    },
+    {
+      "id": 7,
+      "type": "Hidden Immunity Idol (split idol - two halves)",
+      "tribe": "Solewa (merged tribe)",
+      "found_by": "Lauren Rimmer",
+      "day_found": 22,
+      "episode_found": 9,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Lauren found a split Hidden Immunity Idol - she obtained the first half at camp and found the second half at an immunity challenge. She became the first woman to simultaneously possess both a Hidden Immunity Idol and an advantage (the Extra Vote). In a strategic misstep, she gave one half of the idol to Mike Zahalsky to gain his trust. When Lauren was blindsided after Ben's idol play, Mike dramatically threw his half of Lauren's idol into the fire at tribal council, destroying it."
+    },
+    {
+      "id": 8,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Solewa (merged tribe)",
+      "found_by": "Ben Driebergen",
+      "day_found": 25,
+      "episode_found": 10,
+      "day_played": 33,
+      "episode_played": 12,
+      "played_on": "Ben Driebergen",
+      "played_for": "Ben Driebergen",
+      "votes_negated": 6,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Ben found his first idol during a reward challenge on Day 25. He played it on himself at the Day 33 Tribal Council (Episode 12, 'The Survivor Devil'), successfully negating 6 votes against him. The votes were redirected to Lauren Rimmer, who was eliminated. This began Ben's legendary late-game idol run that carried him to the Final Tribal Council."
+    },
+    {
+      "id": 9,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Solewa (merged tribe)",
+      "found_by": "Ben Driebergen",
+      "day_found": 36,
+      "episode_found": 13,
+      "day_played": 36,
+      "episode_played": 13,
+      "played_on": "Ben Driebergen",
+      "played_for": "Ben Driebergen",
+      "votes_negated": 4,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Ben found his second idol moments before Tribal Council on Day 36 in a frantic search with everyone watching him. He played it before the votes were read at the Episode 13 Tribal Council. The idol negated votes against him and Ashley Nolan was eliminated. The other players were stunned that Ben had found another idol under such pressure."
+    },
+    {
+      "id": 10,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Solewa (merged tribe)",
+      "found_by": "Ben Driebergen",
+      "day_found": 37,
+      "episode_found": 14,
+      "day_played": 37,
+      "episode_played": 14,
+      "played_on": "Ben Driebergen",
+      "played_for": "Ben Driebergen",
+      "votes_negated": 3,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Ben found his third idol hours after the previous Tribal Council on Day 37. He played it on himself at the final 5 Tribal Council (Episode 14, 'Million Dollar Night'), negating 3 votes. This forced a revote between Devon Pinto and Mike Zahalsky, with Mike being eliminated. Ben then won the fire-making challenge at the final 4 (the first season with the new final 4 fire-making twist) and went on to win the season 5-2-1 over Chrissy and Ryan."
+    }
+  ],
+  "summary": {
+    "total_advantages": 10,
+    "total_idols_found": 7,
+    "total_idols_played": 5,
+    "total_idols_not_played": 2,
+    "total_successful_idol_plays": 4,
+    "total_unsuccessful_idol_plays": 1,
+    "total_voted_out_holding": 1,
+    "idols_by_player": {
+      "Ben Driebergen": {
+        "found": 3,
+        "played": 3,
+        "not_played": 0,
+        "votes_negated": 13,
+        "notes": "Won the season. Found 3 consecutive idols in the endgame (Days 25, 36, 37) and played all three successfully. His idol run is one of the most remarkable in Survivor history, saving himself three consecutive tribals when he was the primary target."
+      },
+      "Joe Mena": {
+        "found": 2,
+        "played": 2,
+        "not_played": 0,
+        "votes_negated": 2,
+        "notes": "Found 2 idols pre-merge. First play was brilliant (saved himself, blindsided Alan). Second play was wasted (received no votes). Known for aggressive, confrontational idol play."
+      },
+      "Lauren Rimmer": {
+        "found": 1,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Found a split idol but gave half to Mike for trust-building. Mike threw his half in the fire after Lauren was blindsided. First woman to hold both an idol and an advantage simultaneously."
+      },
+      "Ryan Ulrich": {
+        "found": 1,
+        "played": 0,
+        "not_played": 0,
+        "votes_negated": 0,
+        "notes": "Found the Super Idol at marooning but was required to send it to the losing tribe. Gave it to Chrissy, establishing their core alliance."
+      },
+      "Chrissy Hofbeck": {
+        "found": 0,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Received the Super Idol from Ryan but chose not to play it at the first tribal. Later used the expired idol as a strategic decoy."
+      }
+    },
+    "advantages_by_player": {
+      "Jessica Johnston": {
+        "advantages": ["Vote Blocker"],
+        "notes": "Found the Vote Blocker in a chip bag on Day 9. Used it to block Devon Pinto's vote at Episode 4 tribal. Despite this, she was eliminated on Day 17."
+      },
+      "Lauren Rimmer": {
+        "advantages": ["Extra Vote"],
+        "notes": "Found the Extra Vote on Day 20. Required to abstain from one vote to activate it. Voted out holding the unused advantage on Day 33."
+      }
+    },
+    "special_notes": [
+      "Season 35 introduced the first-ever Super Idol at the marooning with a mandatory transfer rule",
+      "Ben Driebergen's three consecutive successful idol plays is one of the most impressive idol runs in Survivor history",
+      "Lauren Rimmer was the first woman to simultaneously hold a Hidden Immunity Idol and an advantage",
+      "Lauren was the first player voted out while holding an unused Extra Vote",
+      "Mike Zahalsky threw Lauren's idol half into the fire at tribal council in a dramatic moment",
+      "This was the first season to feature the final 4 fire-making challenge twist (Ben beat Devon), which became a permanent fixture",
+      "The Vote Blocker advantage (Jessica's) was a unique twist that prevented a player from voting rather than negating votes",
+      "Joe Mena wasted his second idol play by playing it when he received zero votes",
+      "Ben's win was controversial - critics argued the fire-making twist and idol abundance saved him from what would have been a 3-1 vote-out at final 4"
+    ]
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16"
+}

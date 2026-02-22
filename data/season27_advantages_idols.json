@@ -1,0 +1,49 @@
+{
+  "season": 27,
+  "season_name": "Survivor: Blood vs. Water",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Kasama (Merged tribe)",
+      "found_by": "Tyson Apostol",
+      "day_found": 19,
+      "episode_found": 7,
+      "day_played": 32,
+      "episode_played": 11,
+      "played_on": "Tyson Apostol",
+      "played_for": "Tyson Apostol",
+      "votes_negated": 3,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Tyson found his first Hidden Immunity Idol on Day 19 after the merge, using clues previously given to him by Hayden Moss and Caleb Bankston from Redemption Island duels. He found the idol buried beneath a vine tree near a waterfall and kept it secret. He played the idol on himself on Day 32 (Episode 11) at tribal council, negating 3 votes against him. This play came before the infamous rock draw at Final 6."
+    },
+    {
+      "id": 2,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Kasama (Merged tribe, re-hidden)",
+      "found_by": "Tyson Apostol",
+      "day_found": 33,
+      "episode_found": 12,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "After playing his first idol, Tyson found a second re-hidden idol on Day 33. He held onto it as insurance through the endgame but never needed to play it, as he won the Final Immunity Challenge and was never targeted at the remaining tribal councils. Tyson won the season in a 7-1-0 jury vote over Monica Culpepper and Gervase Peterson, taking the idol to the end unused."
+    }
+  ],
+  "summary": {
+    "total_advantages": 2,
+    "total_idols_found": 2,
+    "total_idols_played": 1,
+    "total_idols_not_played": 1,
+    "total_successful_idol_plays": 1,
+    "total_unsuccessful_idol_plays": 0,
+    "total_voted_out_holding": 0
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16"
+}

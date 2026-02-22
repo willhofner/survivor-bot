@@ -1,0 +1,123 @@
+{
+  "season": 31,
+  "season_name": "Survivor: Cambodia - Second Chance",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Ta Keo (hidden at Immunity Challenge)",
+      "found_by": "Kelley Wentworth",
+      "day_found": 2,
+      "episode_found": 1,
+      "day_played": 21,
+      "episode_played": 8,
+      "played_on": "Kelley Wentworth",
+      "played_for": "Kelley Wentworth",
+      "votes_negated": 9,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "One of the most iconic idol plays in Survivor history. For the first time this season, idols were hidden at challenges rather than camp. Kelley grabbed the idol during the first Immunity Challenge without anyone noticing. She played it at the Episode 8 tribal council ('You Call, We'll Haul'), negating a staggering 9 votes from Andrew Savage, Jeremy, Joe, Keith, Kelly Wiglesworth, Kimmi, Spencer, Stephen, and Tasha. Andrew Savage was blindsided with just 3 votes from Kelley, Ciera, and Abi-Maria."
+    },
+    {
+      "id": 2,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Bayon (hidden at Immunity Challenge)",
+      "found_by": "Jeremy Collins",
+      "day_found": 9,
+      "episode_found": 3,
+      "day_played": 36,
+      "episode_played": 13,
+      "played_on": "Stephen Fishbach",
+      "played_for": "Stephen Fishbach",
+      "votes_negated": 4,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Jeremy found a clue to the Hidden Immunity Idol at camp and then retrieved the idol during the Day 9 Immunity Challenge. He kept this idol secret for a long time as part of his 'meat shield' strategy. He played it on Stephen Fishbach at the Episode 13 tribal council ('Villains Have More Fun'), negating 4 votes against Stephen and saving his closest ally. This was a critical move in maintaining Jeremy's alliance structure."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Orkun (merged tribe, hidden at Reward Challenge)",
+      "found_by": "Jeremy Collins",
+      "day_found": 21,
+      "episode_found": 8,
+      "day_played": 38,
+      "episode_played": 14,
+      "played_on": "Jeremy Collins",
+      "played_for": "Jeremy Collins",
+      "votes_negated": 3,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Jeremy found his second idol during a challenge post-merge. He saved this idol for the critical Final 6 tribal council ('Lie, Cheat and Steal', Episode 14, Day 38). Both Jeremy and Kelley played idols at this tribal council, creating the first-ever null vote in Survivor history where ALL votes cast were negated. Jeremy's idol negated 3 votes against him. In the subsequent revote, the remaining eligible voters unanimously eliminated Kimmi Kappenberg."
+    },
+    {
+      "id": 4,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Orkun (merged tribe, hidden at Immunity Challenge)",
+      "found_by": "Kelley Wentworth",
+      "day_found": 29,
+      "episode_found": 12,
+      "day_played": 38,
+      "episode_played": 14,
+      "played_on": "Kelley Wentworth",
+      "played_for": "Kelley Wentworth",
+      "votes_negated": 3,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Kelley found her second idol hidden during a post-merge challenge. She played it at the same Final 6 tribal council as Jeremy ('Lie, Cheat and Steal', Episode 14, Day 38), negating 3 votes against her. This created the historic first null vote in Survivor history, as every vote cast at this tribal was negated between the two idol plays. In the revote, Kimmi Kappenberg was unanimously eliminated."
+    },
+    {
+      "id": 5,
+      "type": "Vote Steal",
+      "tribe": "Orkun (merged tribe, won at Immunity Challenge)",
+      "found_by": "Stephen Fishbach",
+      "day_found": 24,
+      "episode_found": 9,
+      "day_played": 29,
+      "episode_played": 10,
+      "played_on": "Joe Anglim",
+      "played_for": "Stephen Fishbach",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Stephen won the first-ever Vote Steal advantage in Survivor history during the 'Witches Coven' episode Immunity Challenge (Episode 9, Day 24), beating Spencer to claim the secret advantage. He used it at the Day 29 tribal council, stealing Joe Anglim's vote. Stephen cast his extra vote for Abi-Maria and his stolen vote for Joe as part of a split-vote plan. However, the move backfired catastrophically when Spencer flipped, and Stephen was blindsided in a 4-3-2 vote. He became the first player to be voted out in the same episode they used the Vote Steal."
+    }
+  ],
+  "summary": {
+    "total_advantages": 5,
+    "total_idols_found": 4,
+    "total_idols_played": 4,
+    "total_idols_not_played": 0,
+    "total_successful_idol_plays": 4,
+    "total_unsuccessful_idol_plays": 0,
+    "total_voted_out_holding": 0,
+    "idols_by_player": {
+      "Kelley Wentworth": {
+        "found": 2,
+        "played": 2,
+        "not_played": 0,
+        "votes_negated": 12,
+        "notes": "Kelley's two idol plays negated a combined 12 votes - the most in a single season at the time. Her 9-vote negate in Episode 8 remains one of the most iconic moments in Survivor history. She finished 4th place."
+      },
+      "Jeremy Collins": {
+        "found": 2,
+        "played": 2,
+        "not_played": 0,
+        "votes_negated": 7,
+        "notes": "Jeremy's idol plays were both successful - one saved his ally Stephen, the other saved himself at Final 6. His masterful idol management was a key part of his 'meat shield' strategy that earned him a unanimous 10-0-0 win."
+      }
+    },
+    "special_notes": [
+      "Season 31 was the first season where hidden immunity idols were hidden at challenges rather than at camp, making retrieval riskier",
+      "All 4 idol plays this season were successful - a rare occurrence in Survivor history",
+      "Kelley Wentworth's 9-vote negate (Episode 8) set the record for most votes negated by a single idol play",
+      "The Final 6 tribal council (Episode 14) produced the first-ever null vote in Survivor history when both Jeremy and Kelley played idols, negating all votes cast",
+      "Stephen Fishbach received the first Vote Steal advantage in Survivor history but was voted out the same episode he played it",
+      "The Vote Steal differed from Worlds Apart's Extra Vote - it removed another player's vote AND gave it to the holder",
+      "This season's strategic gameplay around advantages helped establish the modern 'advantage era' of Survivor",
+      "Jeremy Collins won unanimously 10-0-0, with his idol plays being cited as key strategic moves by the jury"
+    ]
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16"
+}

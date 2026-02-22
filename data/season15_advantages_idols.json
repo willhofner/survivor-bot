@@ -1,0 +1,92 @@
+{
+  "season": 15,
+  "season_name": "Survivor: China",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Fei Long camp",
+      "found_by": "Todd Herzog",
+      "day_found": 16,
+      "episode_found": 6,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Todd deduced the idol's location from clues distributed through the kidnapping twist. The idols were hidden in plain sight as wooden plaques on the pagoda gate outside each tribe's camp. Todd found the Fei Long idol with Amanda Kimmel's help on Day 16. Rather than keeping it for himself, Todd immediately gave the idol to James Clement as part of a strategic plan - James would use it at Zhan Hu's Tribal Council to blindside a Zhan Hu member, then retrieve the second idol from Zhan Hu's gate. Todd never personally played an idol this season but won the game with a 4-2-1 jury vote."
+    },
+    {
+      "id": 2,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Fei Long camp (given to James at Zhan Hu)",
+      "found_by": "James Clement",
+      "day_found": 17,
+      "episode_found": 6,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "James received the Fei Long idol from Todd on Day 17 as part of Todd's strategic plan. Todd instructed James to use the idol at Zhan Hu's next Tribal Council and then grab the second idol from Zhan Hu's pagoda gate. James held this idol but never played it at any Tribal Council. He was blindsided and voted out on Day 30 (Episode 10) in a 5-1-1 vote while still holding both idols, creating one of the most iconic moments in Survivor history."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Zhan Hu camp",
+      "found_by": "James Clement",
+      "day_found": 18,
+      "episode_found": 7,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "After receiving the Fei Long idol and the clue from Todd about the idol locations, James realized the same hiding spot (a wooden plaque on the pagoda gate) applied at the Zhan Hu camp. He pulled the plaque down from Zhan Hu's gate, making him the first player in Survivor history to possess two Hidden Immunity Idols simultaneously. Despite holding both idols heading into the merge, James never played either one. He was blindsided at the Episode 10 Tribal Council on Day 30, voted out 5-1-1 holding both idols - widely considered one of the biggest blunders in Survivor history."
+    }
+  ],
+  "summary": {
+    "total_advantages": 3,
+    "total_idols_found": 3,
+    "total_idols_played": 0,
+    "total_idols_not_played": 3,
+    "total_successful_idol_plays": 0,
+    "total_unsuccessful_idol_plays": 0,
+    "total_voted_out_holding": 2,
+    "idols_by_player": {
+      "Todd Herzog": {
+        "found": 1,
+        "played": 0,
+        "not_played": 0,
+        "votes_negated": 0,
+        "notes": "Found the Fei Long idol but immediately gave it to James as part of his strategic plan. Won the season 4-2-1 over Courtney Yates and Amanda Kimmel. His idol strategy demonstrated how giving away an idol can be more powerful than keeping it."
+      },
+      "James Clement": {
+        "found": 2,
+        "played": 0,
+        "not_played": 2,
+        "votes_negated": 0,
+        "notes": "First player in Survivor history to hold two idols simultaneously. Voted out on Day 30 holding both idols in what is widely considered one of the biggest blunders in Survivor history. His elimination became an iconic cautionary tale about overconfidence and the importance of playing idols."
+      }
+    },
+    "special_notes": [
+      "The idols in China were uniquely hidden in plain sight as wooden plaques on the pagoda gates at each tribe's camp",
+      "Clues were distributed through the kidnapping twist, where players visited the opposing tribe and could share clues",
+      "James Clement became the first player to hold two Hidden Immunity Idols at the same time",
+      "James being voted out holding both idols is consistently ranked as one of the top 'dumbest moves' in Survivor history",
+      "Todd Herzog's strategy of finding an idol and giving it to another player was innovative and showed the strategic depth possible with idol play",
+      "No idols were played at Tribal Council this entire season - all three went unused",
+      "This season cemented the idol's importance as a strategic tool beyond just personal protection",
+      "The unique hiding spots (in plain sight on camp structures) inspired future seasons to get more creative with idol placement"
+    ]
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16",
+  "researcher_notes": "Survivor China is one of the most memorable idol seasons despite no idols actually being played. The creative hiding spots (pagoda gate plaques), Todd's brilliant strategy of giving away an idol, and James's legendary blunder of being voted out with two idols make this a pivotal season in Survivor's idol history. The 'total_voted_out_holding' count of 2 reflects both idols that James held when eliminated."
+}

@@ -1,0 +1,51 @@
+{
+  "season": 11,
+  "season_name": "Survivor: Guatemala - The Maya Empire",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Xhakum (Merged tribe)",
+      "found_by": "Gary Hogeboom",
+      "day_found": 24,
+      "episode_found": 9,
+      "day_played": 24,
+      "episode_played": 9,
+      "played_on": "Gary Hogeboom",
+      "played_for": "Gary Hogeboom",
+      "votes_negated": 4,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "The first Hidden Immunity Idol ever found and played in Survivor history. Gary found the idol on Day 24 after observing Judd Sergeant searching in the trees and realizing Judd had lied about the clue saying the idol was 'on the ground.' Gary played it at Tribal Council in Episode 9 ('Secrets and Lies and an Idol Surprise'), negating votes against him. Bobby Jon Drinkard was eliminated instead with 6 votes, becoming the first jury member. This was a 'preventive' idol format - played before votes were cast."
+    }
+  ],
+  "summary": {
+    "total_advantages": 1,
+    "total_idols_found": 1,
+    "total_idols_played": 1,
+    "total_idols_not_played": 0,
+    "total_successful_idol_plays": 1,
+    "total_unsuccessful_idol_plays": 0,
+    "total_voted_out_holding": 0,
+    "idols_by_player": {
+      "Gary Hogeboom": {
+        "found": 1,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 4,
+        "notes": "Made Survivor history as the first player to find and successfully play a Hidden Immunity Idol. Found it without a legitimate clue by observing Judd's deceptive behavior. Was later voted out on Day 30 (Episode 12) after the idol had been used."
+      }
+    },
+    "special_notes": [
+      "Season 11 introduced the Hidden Immunity Idol, which became one of the most iconic twists in Survivor history",
+      "This was a 'preventive' idol format - the holder announced they had the idol BEFORE votes were cast, granting individual immunity for that Tribal Council",
+      "The idol was hidden at the Xhakum merged tribe camp after a clue was given to Judd as a reward challenge prize",
+      "Gary Hogeboom (who went by 'Gary Hawkins' on the show to hide his NFL career) was the first to find the idol without a proper clue",
+      "The idol was used in the same episode it was found, and was discarded after one use",
+      "Bobby Jon Drinkard was the first player eliminated as an indirect result of an idol play"
+    ]
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16",
+  "researcher_notes": "Season 11 (Guatemala) is historically significant as the debut of the Hidden Immunity Idol. Only one idol was hidden this season. The 'preventive' format (played before votes) was different from modern idol rules where idols are played after votes but before they are read."
+}

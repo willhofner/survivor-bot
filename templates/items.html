@@ -1,12 +1,25 @@
 {% extends "base.html" %}
 
-{% block title %}Advantages & Idols - Survivor: Cagayan{% endblock %}
+{% block title %}Advantages & Idols - Survivor: {{ season_name }}{% endblock %}
+
+{% block breadcrumb %}
+<div class="survivor-breadcrumb">
+    <div class="container">
+        <a href="/">Home</a>
+        <span class="separator">&#x25B6;</span>
+        <a href="/seasons">Seasons</a>
+        <span class="separator">&#x25B6;</span>
+        <span class="current">S{{ season }}: {{ season_name }} &mdash; Advantages & Idols</span>
+    </div>
+</div>
+{% endblock %}
 
 {% block content %}
 <div class="items-view">
-    <h1 class="text-center mb-5 survivor-title">
+    <h1 class="text-center mb-3 survivor-title">
         <span class="torch">💎</span> Advantages & Idols
     </h1>
+    <p class="text-center mb-4" style="color: var(--sand);">Season {{ season }}: {{ season_name }}</p>
 
     <div class="item-filter mb-4 text-center">
         <button class="btn btn-filter active" data-result="all">All</button>
@@ -21,25 +34,25 @@
         <div class="row text-center">
             <div class="col-md-3">
                 <div class="summary-stat">
-                    <div class="stat-number">{{ summary.total_idols }}</div>
-                    <div class="stat-label">Total Idols</div>
+                    <div class="stat-number">{{ summary.total_idols_found or summary.total_idols or summary.total_advantages or 0 }}</div>
+                    <div class="stat-label">Total Found</div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="summary-stat">
-                    <div class="stat-number">{{ summary.idols_played }}</div>
+                    <div class="stat-number">{{ summary.total_idols_played or summary.idols_played or 0 }}</div>
                     <div class="stat-label">Played</div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="summary-stat">
-                    <div class="stat-number">{{ summary.successful_plays }}</div>
+                    <div class="stat-number">{{ summary.total_successful_idol_plays or summary.successful_plays or 0 }}</div>
                     <div class="stat-label">Successful</div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="summary-stat">
-                    <div class="stat-number">{{ summary.voted_out_holding }}</div>
+                    <div class="stat-number">{{ summary.total_voted_out_holding or summary.voted_out_holding or 0 }}</div>
                     <div class="stat-label">Voted Out Holding</div>
                 </div>
             </div>
@@ -48,6 +61,18 @@
     {% endif %}
 
     <div class="advantages-timeline">
+        {% if not advantages %}
+        <div class="text-center py-5">
+            <p class="text-muted" style="font-size: 1.2rem;">
+                {% if season <= 10 %}
+                Hidden Immunity Idols were not introduced until Season 11 (Guatemala).<br>
+                This season had no hidden advantages or idols in play.
+                {% else %}
+                No advantages data available for this season yet.
+                {% endif %}
+            </p>
+        </div>
+        {% endif %}
         {% for advantage in advantages %}
         <div class="advantage-card mb-4 {{ 'successful' if advantage.result == 'successful' else 'unsuccessful' if advantage.result == 'unsuccessful' else 'not-played' }}"
              data-result="{% if advantage.voted_out_holding %}voted-out-holding{% else %}{{ advantage.result.replace('_', '-') if advantage.result else 'not-played' }}{% endif %}">

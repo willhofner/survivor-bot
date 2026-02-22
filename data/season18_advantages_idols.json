@@ -1,0 +1,96 @@
+{
+  "season": 18,
+  "season_name": "Survivor: Tocantins - The Brazilian Highlands",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Jalapao",
+      "found_by": "Taj Johnson-George",
+      "day_found": 10,
+      "episode_found": 4,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Taj found the Jalapao Hidden Immunity Idol after sharing Exile Island clues with her cross-tribal alliance partner Brendan. She realized the idol was hidden back at her own camp. After finding it, she gave it to Stephen Fishbach because he had pockets to carry it in. Taj is the first African-American woman to find a Hidden Immunity Idol. She was voted out at Final Four without the idol, as Stephen held it."
+    },
+    {
+      "id": 2,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Timbira",
+      "found_by": "Brendan Synnott",
+      "day_found": 10,
+      "episode_found": 4,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "Brendan found the Timbira Hidden Immunity Idol through his Exile Island alliance with Taj. They shared clues across tribal lines. However, Brendan was blindsided on Day 24 (Episode 9, 'The Biggest Fraud in the Game') in a 4-3-2 vote, becoming the first jury member. He admitted to having the idol but chose not to play it, a costly mistake. Sierra had initially helped him search for it."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol (held by Stephen)",
+      "tribe": "Jalapao / Forza (Merged)",
+      "found_by": "Stephen Fishbach",
+      "day_found": 10,
+      "episode_found": 4,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Taj gave Stephen the Jalapao idol because he had pockets to carry it. Stephen held the idol throughout the game but never played it. J.T. accidentally discovered Stephen had the idol, which led to Taj and Stephen bringing J.T. into their alliance. Stephen made it to the Final Two with the idol still in his possession, losing to J.T. in a 7-0 vote. He received only one vote against him the entire season, making the idol unnecessary."
+    }
+  ],
+  "summary": {
+    "total_advantages": 3,
+    "total_idols_found": 2,
+    "total_idols_played": 0,
+    "total_idols_not_played": 2,
+    "total_successful_idol_plays": 0,
+    "total_unsuccessful_idol_plays": 0,
+    "total_voted_out_holding": 1,
+    "idols_by_player": {
+      "Taj Johnson-George": {
+        "found": 1,
+        "played": 0,
+        "not_played": 0,
+        "votes_negated": 0,
+        "notes": "Found the Jalapao idol but immediately gave it to Stephen for safekeeping. First African-American woman to find a Hidden Immunity Idol."
+      },
+      "Brendan Synnott": {
+        "found": 1,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Found the Timbira idol through the Exile alliance but was blindsided without playing it."
+      },
+      "Stephen Fishbach": {
+        "found": 0,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Held Taj's idol the entire game and never needed to play it. Made it to Final Two."
+      }
+    },
+    "special_notes": [
+      "Both idols were found through the cross-tribal Exile Island alliance between Brendan and Taj",
+      "Neither idol was ever played at Tribal Council, making this a season with zero idol plays",
+      "The Exile Island clue system allowed players to figure out the idol was hidden back at their own camp",
+      "Brendan was voted out holding his idol - one of several Survivor players to make this costly mistake",
+      "J.T. Thomas played a 'perfect game' (no votes against, unanimous jury win) partly because his alliance controlled both idols",
+      "Stephen held the Jalapao idol from early in the game through to the Final Two without ever playing it"
+    ]
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16"
+}

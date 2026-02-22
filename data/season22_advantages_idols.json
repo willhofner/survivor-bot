@@ -1,0 +1,65 @@
+{
+  "season": 22,
+  "season_name": "Survivor: Redemption Island",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Zapatera",
+      "found_by": "Ralph Kiser",
+      "day_found": 4,
+      "episode_found": 2,
+      "day_played": 19,
+      "episode_played": 8,
+      "played_on": "Mike Chiesl",
+      "played_for": "Mike Chiesl",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Ralph found the idol on Day 4 while collecting rocks, beating Russell Hantz to it despite Russell having received the clue. At the merge tribal council on Day 19, Ralph played the idol on fellow Zapatera member Mike Chiesl, hoping the Ometepe alliance would target Mike. However, Ometepe voted for Matt Elrod instead, making the play unsuccessful. Ralph was the first contestant to play an idol on another player by verbally indicating to Jeff who it was intended for rather than physically handing it over."
+    },
+    {
+      "id": 2,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Ometepe",
+      "found_by": "Rob Mariano",
+      "day_found": 8,
+      "episode_found": 4,
+      "day_played": 21,
+      "episode_played": 8,
+      "played_on": "Rob Mariano",
+      "played_for": "Rob Mariano",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Rob found the Ometepe idol early in the game after receiving a clue. He kept the idol secret from most of his alliance. At the merge tribal council on Day 21 (Episode 8, 'This Game Respects Big Moves'), Rob played the idol on himself as a precautionary move, but no votes were cast against him. The vote went to Matt Elrod, who was blindsided. Rob went on to win the season."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Murlonio (Merged tribe)",
+      "found_by": "Andrea Boehlke",
+      "day_found": 35,
+      "episode_found": 14,
+      "day_played": 37,
+      "episode_played": 14,
+      "played_on": "Andrea Boehlke",
+      "played_for": "Andrea Boehlke",
+      "votes_negated": 4,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Andrea found a re-hidden idol near the end of the game. She played it on herself at the Final 5 tribal council on Day 37 (Episode 14, 'Seems Like a No Brainer'), negating all votes cast against her. This was a successful play. However, she was voted out at the very next tribal council."
+    }
+  ],
+  "summary": {
+    "total_advantages": 3,
+    "total_idols_found": 3,
+    "total_idols_played": 3,
+    "total_idols_not_played": 0,
+    "total_successful_idol_plays": 1,
+    "total_unsuccessful_idol_plays": 2,
+    "total_voted_out_holding": 0
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16"
+}

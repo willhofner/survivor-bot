@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+
+{% block title %}Paths to Victory - Survivor{% endblock %}
+
+{% block content %}
+<div class="paths-page">
+    <h1 class="text-center mb-3 survivor-title">
+        <span class="torch">🔥</span> Paths to Victory
+    </h1>
+    <p class="text-center mb-2" style="color: var(--sand); font-size: 1.1rem;">
+        How do you win Survivor? Explore the different strategic paths to the title of Sole Survivor.
+    </p>
+    <p class="text-center mb-5" style="color: var(--sand); font-size: 0.9rem; max-width: 700px; margin: 0 auto;">
+        Each winner took a unique path. Some dominated challenges, others controlled every vote,
+        and some flew under the radar to win it all. Click any winner to explore their game.
+    </p>
+
+    <!-- Archetype Overview -->
+    <div class="row g-4 mb-5">
+        {% for archetype, players in archetypes.items() %}
+        <div class="col-md-6 col-lg-3">
+            <div class="tribal-card p-3 h-100 text-center">
+                <h4 style="color: var(--torch-orange);">
+                    {% if archetype == 'Strategic Mastermind' %}&#x1F9E0;{% elif archetype == 'Challenge Beast' %}&#x1F4AA;{% elif archetype == 'Social Player' %}&#x1F91D;{% else %}&#x2696;{% endif %}
+                    {{ archetype }}
+                </h4>
+                <div class="stat-number" style="font-size: 2.5rem;">{{ players | length }}</div>
+                <div class="stat-label mb-3">Winners</div>
+                <div style="font-size: 0.85rem; color: var(--sand);">
+                    {% for p in players[:5] %}
+                    <a href="/winner/{{ p.season }}" style="color: var(--sand); text-decoration: none;">{{ p.name }}</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                    {% if players | length > 5 %}
+                    <br><em>+ {{ players | length - 5 }} more</em>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Interactive Scatter Plot -->
+    <div class="tribal-card p-4 mb-5">
+        <h3 class="text-center mb-3" style="color: var(--torch-orange);">Strategic vs Physical Game</h3>
+        <p class="text-center mb-3" style="color: var(--sand); font-size: 0.85rem;">
+            Each dot represents a winner. Hover to see who they are. Click to view their full profile.
+        </p>
+        <canvas id="scatterChart" height="350"></canvas>
+    </div>
+
+    <!-- Radar Comparison: Archetypes -->
+    <div class="tribal-card p-4 mb-5">
+        <h3 class="text-center mb-3" style="color: var(--torch-orange);">Average Archetype Profiles</h3>
+        <canvas id="archetypeRadar" height="300"></canvas>
+    </div>
+
+    <!-- Winner Cards: All 39 -->
+    <h3 class="text-center mb-4" style="color: var(--torch-orange);">All 39 Winners</h3>
+    <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+        <button class="btn btn-filter active" onclick="filterWinners('all', this)">All</button>
+        {% for archetype in archetypes %}
+        <button class="btn btn-filter" onclick="filterWinners('{{ archetype }}', this)">{{ archetype }}</button>
+        {% endfor %}
+    </div>
+
+    <div id="winnersGrid" class="row g-3">
+        {% for w in winners %}
+        <div class="col-6 col-md-4 col-lg-3 winner-card-item" data-archetype="{% for atype, players in archetypes.items() %}{% if w in players %}{{ atype }}{% endif %}{% endfor %}">
+            <a href="/winner/{{ w.season }}" class="text-decoration-none">
+                <div class="tribal-card p-3 h-100" style="transition: all 0.2s;">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <h5 style="color: var(--torch-orange); margin-bottom: 0.25rem; font-size: 0.95rem;">{{ w.name }}</h5>
+                            <small style="color: var(--sand);">S{{ w.season }}: {{ w.season_name }}</small>
+                        </div>
+                        <span class="badge" style="background: rgba(255,215,0,0.2); color: gold; font-size: 0.7rem;">
+                            {{ w.stats.jury_votes }}
+                        </span>
+                    </div>
+                    <div class="mt-2" style="font-size: 0.75rem; color: var(--sand);">
+                        <div class="d-flex justify-content-between">
+                            <span>Vote Control</span>
+                            <div style="width: 60%; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;">
+                                <div style="width: {{ w.archetype.voting_control * 10 }}%; height: 8px; background: var(--torch-orange);"></div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <span>Physical</span>
+                            <div style="width: 60%; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;">
+                                <div style="width: {{ w.archetype.physical_game * 10 }}%; height: 8px; background: #4169E1;"></div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <span>Social</span>
+                            <div style="width: 60%; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;">
+                                <div style="width: {{ w.archetype.social_capital * 10 }}%; height: 8px; background: #28a745;"></div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <span>Aggression</span>
+                            <div style="width: 60%; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;">
+                                <div style="width: {{ w.archetype.strategic_aggression * 10 }}%; height: 8px; background: #dc3545;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Back to top -->
+<div class="text-center back-to-top mt-4">
+    <a href="#" class="btn btn-outline-survivor btn-sm" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">Back to Top</a>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
+<script>
+const winners = {{ winners | tojson }};
+const archetypes = {{ archetypes | tojson }};
+
+// Scatter: Strategic vs Physical
+const scatterData = winners.map(w => ({
+    x: (w.archetype.voting_control + w.archetype.strategic_aggression) / 2,
+    y: w.archetype.physical_game,
+    label: w.name,
+    season: w.season
+}));
+
+const colors = {
+    'Strategic Mastermind': '#FF6B35',
+    'Challenge Beast': '#4169E1',
+    'Social Player': '#28a745',
+    'Balanced': '#FFD700'
+};
+
+// Build datasets by archetype
+const scatterDatasets = Object.entries(archetypes).map(([atype, players]) => ({
+    label: atype,
+    data: players.map(w => ({
+        x: (w.archetype.voting_control + w.archetype.strategic_aggression) / 2,
+        y: w.archetype.physical_game,
+        label: w.name,
+        season: w.season
+    })),
+    backgroundColor: colors[atype] || '#999',
+    pointRadius: 8,
+    pointHoverRadius: 12,
+}));
+
+const scatterChart = new Chart(document.getElementById('scatterChart'), {
+    type: 'scatter',
+    data: { datasets: scatterDatasets },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { position: 'bottom', labels: { color: '#F5DEB3' } },
+            tooltip: {
+                callbacks: {
+                    label: ctx => {
+                        const pt = ctx.raw;
+                        return `${pt.label} (S${pt.season}) — Strategy: ${pt.x.toFixed(1)}, Physical: ${pt.y}`;
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                title: { display: true, text: 'Strategic Game (Vote Control + Aggression / 2)', color: '#F5DEB3' },
+                min: 0, max: 10,
+                ticks: { color: '#F5DEB3' },
+                grid: { color: 'rgba(255,255,255,0.1)' }
+            },
+            y: {
+                title: { display: true, text: 'Physical Game', color: '#F5DEB3' },
+                min: 0, max: 10,
+                ticks: { color: '#F5DEB3' },
+                grid: { color: 'rgba(255,255,255,0.1)' }
+            }
+        },
+        onClick: (e, elements) => {
+            if (elements.length > 0) {
+                const pt = scatterDatasets[elements[0].datasetIndex].data[elements[0].index];
+                window.location.href = '/winner/' + pt.season;
+            }
+        }
+    }
+});
+
+// Radar: Average archetype profiles
+const archetypeLabels = ['Voting Control', 'Physical Game', 'Social Capital', 'Strategic Aggression'];
+const radarDatasets = Object.entries(archetypes).map(([atype, players]) => {
+    const n = players.length;
+    return {
+        label: atype + ` (${n})`,
+        data: [
+            players.reduce((s, p) => s + p.archetype.voting_control, 0) / n,
+            players.reduce((s, p) => s + p.archetype.physical_game, 0) / n,
+            players.reduce((s, p) => s + p.archetype.social_capital, 0) / n,
+            players.reduce((s, p) => s + p.archetype.strategic_aggression, 0) / n,
+        ],
+        borderColor: colors[atype] || '#999',
+        backgroundColor: (colors[atype] || '#999') + '33',
+        borderWidth: 2,
+        pointRadius: 4,
+    };
+});
+
+new Chart(document.getElementById('archetypeRadar'), {
+    type: 'radar',
+    data: { labels: archetypeLabels, datasets: radarDatasets },
+    options: {
+        responsive: true,
+        plugins: { legend: { position: 'bottom', labels: { color: '#F5DEB3' } } },
+        scales: {
+            r: {
+                min: 0, max: 10,
+                ticks: { color: '#F5DEB3', backdropColor: 'transparent' },
+                grid: { color: 'rgba(255,255,255,0.15)' },
+                pointLabels: { color: '#F5DEB3' }
+            }
+        }
+    }
+});
+
+// Filter winners by archetype
+function filterWinners(archetype, btn) {
+    document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    document.querySelectorAll('.winner-card-item').forEach(card => {
+        if (archetype === 'all') {
+            card.style.display = '';
+        } else {
+            card.style.display = card.dataset.archetype === archetype ? '' : 'none';
+        }
+    });
+}
+</script>
+{% endblock %}

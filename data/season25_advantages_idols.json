@@ -1,0 +1,65 @@
+{
+  "season": 25,
+  "season_name": "Survivor: Philippines",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Tandang",
+      "found_by": "Abi-Maria Gomes",
+      "day_found": 4,
+      "episode_found": 2,
+      "day_played": 30,
+      "episode_played": 10,
+      "played_on": "Abi-Maria Gomes",
+      "played_for": "Abi-Maria Gomes",
+      "votes_negated": 3,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Abi-Maria initially received a clue from RC Saint-Amour, and through Pete's manipulation discovered that the actual idol was hidden as the handle of their rice bin at the Tandang camp. She played the idol on herself at tribal council on Day 30 (Episode 10, 'Whiners Are Wieners'), successfully negating 3 votes cast against her by Carter, Jonathan, and Malcolm. Pete Yurkowski was voted out that night with 3 votes."
+    },
+    {
+      "id": 2,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Kalabaw",
+      "found_by": "Jonathan Penner",
+      "day_found": 5,
+      "episode_found": 2,
+      "day_played": 19,
+      "episode_played": 7,
+      "played_on": "Jonathan Penner",
+      "played_for": "Jonathan Penner",
+      "votes_negated": 5,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Penner found the Kalabaw idol early in the game. He played it on himself at the first post-merge tribal council on Day 19 (Episode 7, 'Not the Only Actor on This Island'), negating 5 votes cast against him by Abi-Maria, Denise, Lisa, Malcolm, and Michael. RC Saint-Amour was voted out instead with 4 votes. This was a crucial play that kept Penner alive deep into the merge."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Matsing",
+      "found_by": "Malcolm Freberg",
+      "day_found": 10,
+      "episode_found": 4,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "Malcolm found the Matsing idol after the tribe was decimated. Lisa Whelchel accidentally discovered the idol in Malcolm's belongings and initially promised secrecy in exchange for a final three deal. She later revealed its existence to others, putting a target on Malcolm. Despite his allies knowing about the idol, Malcolm chose not to play it, believing he was safe. He was voted out on Day 38 (Episode 14) in a 3-1 vote, making him one of the most notable players voted out holding an idol."
+    }
+  ],
+  "summary": {
+    "total_advantages": 3,
+    "total_idols_found": 3,
+    "total_idols_played": 2,
+    "total_idols_not_played": 1,
+    "total_successful_idol_plays": 2,
+    "total_unsuccessful_idol_plays": 0,
+    "total_voted_out_holding": 1
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16"
+}

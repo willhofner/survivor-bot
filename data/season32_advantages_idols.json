@@ -1,0 +1,130 @@
+{
+  "season": 32,
+  "season_name": "Survivor: Kaoh Rong - Brains vs. Brawn vs. Beauty",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Gondol (Beauty)",
+      "found_by": "Tai Trang",
+      "day_found": 7,
+      "episode_found": 2,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Tai found the Gondol tribe's Hidden Immunity Idol on Day 7 after persistent searching. Upon finding it, he learned about the season's Super Idol twist: two Hidden Immunity Idols could be combined to form a 'Super Idol' playable AFTER the votes are read. Tai held this idol throughout the game but never played it. He revealed it to allies including Anna Khait and Scot Pollard. Critically, at Scot's elimination (Episode 10), Tai refused to combine his idol with Jason's idol (held by Scot) to form the Super Idol, betraying his alliance and allowing Scot to be blindsided."
+    },
+    {
+      "id": 2,
+      "type": "Hidden Immunity Idol",
+      "tribe": "To Tang (Brawn)",
+      "found_by": "Kyle Jason",
+      "day_found": 4,
+      "episode_found": 2,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "Jason found the To Tang tribe's Hidden Immunity Idol early in the game, beating Scot Pollard and Alecia Holden in the search. He shared knowledge of the idol with Scot and later Tai as part of their post-merge alliance. Jason gave his idol to Scot Pollard to hold, with the plan that Scot (holding Jason's idol) and Tai (holding his own idol) could combine them into the Super Idol at tribal council. However, when Scot was voted out in Episode 10, Tai refused to play his idol to form the Super Idol, and Scot was eliminated holding Jason's idol in his pocket. The idol left the game with Scot."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Chan Loh (Brains)",
+      "found_by": "Neal Gottlieb",
+      "day_found": 10,
+      "episode_found": 3,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "Neal found the Chan Loh (Brains) tribe's Hidden Immunity Idol on Day 10, keeping it secret from most of his tribemates though he later revealed it to Aubry Bracco. Neal never had the chance to play his idol because he was medically evacuated on Day 19 due to a severe knee infection. He became the second player in Survivor history to be evacuated while holding a Hidden Immunity Idol (after Colton Cumbie in One World). His idol left the game with him."
+    },
+    {
+      "id": 4,
+      "type": "Extra Vote",
+      "tribe": "Dara (merged tribe, won at Reward Challenge)",
+      "found_by": "Tai Trang",
+      "day_found": 25,
+      "episode_found": 9,
+      "day_played": 32,
+      "episode_played": 12,
+      "played_on": "Michele Fitzgerald",
+      "played_for": "Tai Trang",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Tai won the Extra Vote advantage at a Reward Challenge on Day 25 (Episode 9, 'It's Psychological Warfare'), outlasting Aubry Bracco in the competition. The advantage allowed him to cast two votes at a single tribal council and was valid until five contestants remained. Tai used it at the Day 32 tribal council (Episode 12, 'Now's the Time to Start Scheming'), casting both his votes against Michele Fitzgerald. However, the rest of the alliance voted to eliminate Kyle Jason instead, making Tai's extra vote ineffective. Jason was voted out 4-2-1."
+    },
+    {
+      "id": 5,
+      "type": "Juror Removal",
+      "tribe": "Dara (merged tribe, won at Reward Challenge)",
+      "found_by": "Michele Fitzgerald",
+      "day_found": 38,
+      "episode_found": 14,
+      "day_played": 38,
+      "episode_played": 14,
+      "played_on": "Neal Gottlieb",
+      "played_for": "Michele Fitzgerald",
+      "votes_negated": 0,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Michele won the Juror Removal power at a Day 38 Reward Challenge (Episode 14, 'Not Going Down Without a Fight'). This unprecedented advantage allowed her to remove one member from the jury before the Final Tribal Council vote. She chose to remove Neal Gottlieb, believing he would advocate strongly for Aubry to win and vote against her. The decision proved strategically critical - it was later confirmed Neal would have voted for Aubry. Michele ultimately won the season 5-2-0 over Aubry and Tai, suggesting the Juror Removal may have been decisive in the outcome."
+    }
+  ],
+  "summary": {
+    "total_advantages": 5,
+    "total_idols_found": 3,
+    "total_idols_played": 0,
+    "total_idols_not_played": 3,
+    "total_successful_idol_plays": 0,
+    "total_unsuccessful_idol_plays": 0,
+    "total_voted_out_holding": 2,
+    "idols_by_player": {
+      "Tai Trang": {
+        "found": 1,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Tai held his Gondol idol throughout the entire game but never played it. His refusal to form the Super Idol with Scot was the season's defining strategic moment. He also held the Extra Vote advantage which he used unsuccessfully. He received 0 jury votes at Final Tribal Council."
+      },
+      "Kyle Jason": {
+        "found": 1,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Jason found the To Tang idol but gave it to Scot to hold. The idol left the game when Scot was voted out holding it in Episode 10."
+      },
+      "Neal Gottlieb": {
+        "found": 1,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Neal was medically evacuated on Day 19 while holding the Chan Loh idol. He was also removed from the jury by Michele's Juror Removal advantage."
+      }
+    },
+    "special_notes": [
+      "Season 32 featured the Super Idol twist: two Hidden Immunity Idols could be combined and played AFTER the votes were read, similar to the Tyler Perry Idol",
+      "Despite the Super Idol twist, no idol was ever played this entire season - the only season in the advantage era where this occurred",
+      "Two players were removed from the game while holding idols: Neal (medical evacuation) and Scot (voted out holding Jason's idol)",
+      "Tai's refusal to form the Super Idol for Scot at Episode 10's tribal council was the season's most pivotal moment, neutralizing the advantage entirely",
+      "The Juror Removal twist was introduced for the first and only time this season and may have changed the winner",
+      "Michele Fitzgerald won 5-2-0, with the Juror Removal of Neal potentially swinging the outcome from Aubry",
+      "The Extra Vote returned from Worlds Apart but was used ineffectively by Tai",
+      "All three original tribe camps had hidden idols (Gondol, To Tang, Chan Loh), but none were ever played at tribal council"
+    ]
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16"
+}

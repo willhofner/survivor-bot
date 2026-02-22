@@ -1,0 +1,106 @@
+{
+  "season": 14,
+  "season_name": "Survivor: Fiji",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Moto camp",
+      "found_by": "Yau-Man Chan",
+      "day_found": 15,
+      "episode_found": 6,
+      "day_played": 36,
+      "episode_played": 13,
+      "played_on": "Yau-Man Chan",
+      "played_for": "Yau-Man Chan",
+      "votes_negated": 4,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Yau-Man found the idol at Moto camp after receiving clues from Exile Island visits. He shared knowledge of the idol with his closest ally Earl Cole. At the Final 6 Tribal Council (Episode 13, 'I Wanna See If I Can Make a Deal'), Yau-Man played the idol on himself, negating 4 votes cast against him by Boo, Cassandra, Dreamz, and Stacy. Stacy Kimball was eliminated with 2 votes (from Earl and Yau-Man), becoming the first person in Survivor history to be voted out as a direct result of a Hidden Immunity Idol being played. This was the first successful idol play under the modern format (played before votes are read)."
+    },
+    {
+      "id": 2,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Ravu camp",
+      "found_by": "Mookie Lee",
+      "day_found": 22,
+      "episode_found": 8,
+      "day_played": 27,
+      "episode_played": 10,
+      "played_on": "Alex Angarita",
+      "played_for": "Alex Angarita",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Mookie found the idol at the Ravu camp with the help of his Four Horsemen alliance members Alex Angarita and Edgardo Rivera. When Mookie revealed the idol's existence to Dreamz Herd, Dreamz became upset about being kept in the dark and flipped to the opposing alliance. Feeling vulnerable, Mookie gave the idol to Alex before the Episode 10 Tribal Council ('It's a Turtle?!'). Alex became the first person to play a Hidden Immunity Idol under the modern format (before votes read) but received zero votes. The opposing alliance, tipped off by Dreamz, pivoted their votes to Edgardo, who was blindsided in a 5-3-1 vote. This was the first unsuccessful idol play in Survivor history."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Bula Bula (Merged tribe)",
+      "found_by": "Earl Cole",
+      "day_found": 31,
+      "episode_found": 12,
+      "day_played": 37,
+      "episode_played": 14,
+      "played_on": "Earl Cole",
+      "played_for": "Earl Cole",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "After the original Ravu idol was played, a new idol was rehidden. Earl found the rehidden idol on Day 31 after Boo won the Reward Challenge and sent Earl to Exile Island. Earl played the idol at the Final 4 Tribal Council (Episode 14) as it was the last opportunity to use it. He received no votes, making the play unnecessary - Boo was unanimously voted out. Earl went on to win the season with a perfect 9-0 jury vote, the first unanimous victory in Survivor history."
+    }
+  ],
+  "summary": {
+    "total_advantages": 3,
+    "total_idols_found": 3,
+    "total_idols_played": 3,
+    "total_idols_not_played": 0,
+    "total_successful_idol_plays": 1,
+    "total_unsuccessful_idol_plays": 2,
+    "total_voted_out_holding": 0,
+    "idols_by_player": {
+      "Yau-Man Chan": {
+        "found": 1,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 4,
+        "notes": "Made Survivor history with the first successful idol play under the modern format. His idol play at Final 6 directly caused Stacy Kimball's elimination. He was later voted out at Final 4 after Dreamz reneged on their car deal."
+      },
+      "Mookie Lee": {
+        "found": 1,
+        "played": 0,
+        "not_played": 0,
+        "votes_negated": 0,
+        "notes": "Found the Ravu idol but gave it to Alex before tribal. Mookie was the first person to give a Hidden Immunity Idol to another contestant. His decision to tell Dreamz about the idol backfired catastrophically."
+      },
+      "Alex Angarita": {
+        "found": 0,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 0,
+        "notes": "Received Mookie's idol and played it, but the opposing alliance outmaneuvered them by targeting Edgardo instead. First person to play an idol under the modern format and negate zero votes."
+      },
+      "Earl Cole": {
+        "found": 1,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 0,
+        "notes": "Found the rehidden idol and played it at Final 4 as a precaution (last chance to use it). Won the season with a perfect 9-0 jury vote."
+      }
+    },
+    "special_notes": [
+      "Survivor Fiji was the first season to feature the modern idol format where idols are played BEFORE votes are read (not after)",
+      "Three idols were found and played this season - two at tribal camps and one rehidden after being played",
+      "Yau-Man's play was the first successful idol play to directly eliminate another player (Stacy Kimball)",
+      "Alex's play was the first unsuccessful idol play in Survivor history (zero votes negated)",
+      "The Edgardo blindside is considered one of the greatest strategic moves in Survivor history - the majority alliance correctly predicted Alex would play the idol and redirected votes",
+      "Earl Cole became the first Sole Survivor to receive a unanimous jury vote (9-0)",
+      "This season established the precedent of idols being rehidden after being played",
+      "Mookie was the first player to transfer an idol to another player"
+    ]
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16",
+  "researcher_notes": "Survivor Fiji was a landmark season for idol gameplay. It introduced the modern idol format (played before votes read), featured the first successful idol play (Yau-Man), the first unsuccessful idol play (Alex), and the first idol transfer between players (Mookie to Alex). The strategic depth of idol play increased dramatically this season."
+}

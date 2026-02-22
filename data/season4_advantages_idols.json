@@ -1,0 +1,17 @@
+{
+  "season": 4,
+  "season_name": "Survivor: Marquesas",
+  "advantages": [],
+  "summary": {
+    "total_advantages": 0,
+    "total_idols_found": 0,
+    "total_idols_played": 0,
+    "total_idols_not_played": 0,
+    "total_successful_idol_plays": 0,
+    "total_unsuccessful_idol_plays": 0,
+    "total_voted_out_holding": 0
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16",
+  "researcher_notes": "Hidden Immunity Idols were not introduced until Season 11 (Guatemala). This season had no hidden advantages or idols in play."
+}

@@ -1,0 +1,51 @@
+{
+  "season": 12,
+  "season_name": "Survivor: Panama - Exile Island",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Exile Island",
+      "found_by": "Terry Deitz",
+      "day_found": 12,
+      "episode_found": 5,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "Terry found the idol on Exile Island after being sent there multiple times by the Casaya tribe. This was a powerful 'Super Idol' that could be played AFTER the votes were read, similar to the Cook Islands idol. Despite possessing this powerful advantage, Terry never played it. He won five consecutive individual immunity challenges, making the idol unnecessary during those tribals. He was voted out on Day 38 at the Final 3 Tribal Council (2-1 vote) when Danielle chose to take Aras to the Final 2 instead of honoring her deal with Terry. A jury poll showed 5 of 7 jurors would have voted for Terry to win had he made the Final 2."
+    }
+  ],
+  "summary": {
+    "total_advantages": 1,
+    "total_idols_found": 1,
+    "total_idols_played": 0,
+    "total_idols_not_played": 1,
+    "total_successful_idol_plays": 0,
+    "total_unsuccessful_idol_plays": 0,
+    "total_voted_out_holding": 1,
+    "idols_by_player": {
+      "Terry Deitz": {
+        "found": 1,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Terry became the first player to find a Hidden Immunity Idol and never use it before being eliminated. His challenge dominance (5 consecutive immunity wins) meant he never needed to play it until the Final 3 where it had already expired (usable until Day 36 Tribal Council)."
+      }
+    },
+    "special_notes": [
+      "Season 12 introduced the Exile Island twist, where a player was banished to a separate island with clues to the Hidden Immunity Idol",
+      "The idol was a 'Super Idol' (could be played after votes were read), making it significantly more powerful than modern idols",
+      "Terry Deitz is notable as the first player to be voted out while holding an unused idol",
+      "The Casaya tribe repeatedly sent Terry to Exile Island hoping to weaken him, but instead enabled him to find the idol",
+      "Terry won 5 consecutive individual immunity challenges, the second-longest streak in Survivor history at the time",
+      "The idol expired at the Day 36 Tribal Council, making it unusable at the Final 3 vote on Day 38"
+    ]
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16",
+  "researcher_notes": "Only one Hidden Immunity Idol was hidden this season, located on Exile Island. The Panama idol was a 'Super Idol' format, playable after votes were read. Terry's inability to use it at Final 3 (it had expired) combined with Danielle breaking her promise to take him to the Final 2 makes this one of the most tragic idol stories in Survivor history."
+}

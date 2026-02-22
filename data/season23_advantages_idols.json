@@ -1,0 +1,49 @@
+{
+  "season": 23,
+  "season_name": "Survivor: South Pacific",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Savaii",
+      "found_by": "Ozzy Lusth",
+      "day_found": 5,
+      "episode_found": 2,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Ozzy found the Savaii hidden immunity idol early in the game. When he volunteered to be voted out to go to Redemption Island (his 'trojan horse' strategy) on Day 18, he gave the idol to Cochran to hold for him. When Ozzy returned from Redemption Island at the merge, Cochran returned the idol. However, Ozzy never played the idol and was voted out a second time when Cochran flipped to Coach's alliance at the merge tribal council on Day 22. The idol was effectively wasted."
+    },
+    {
+      "id": 2,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Upolu",
+      "found_by": "Coach Wade",
+      "day_found": 7,
+      "episode_found": 3,
+      "day_played": 21,
+      "episode_played": 8,
+      "played_on": "Coach Wade",
+      "played_for": "Coach Wade",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Coach found the Upolu hidden immunity idol with help from his alliance. He shared the idol's existence with his core alliance, presenting it as a collective resource. At the merge tribal council on Day 21 (Episode 8, 'Double Agent'), Coach played the idol on himself as a precaution, but no votes were cast against him, making the play unsuccessful. The vote sent Keith Tollefson home. Coach reached Final Tribal Council but lost to Sophie Clarke in a 6-3-0 vote."
+    }
+  ],
+  "summary": {
+    "total_advantages": 2,
+    "total_idols_found": 2,
+    "total_idols_played": 1,
+    "total_idols_not_played": 1,
+    "total_successful_idol_plays": 0,
+    "total_unsuccessful_idol_plays": 1,
+    "total_voted_out_holding": 0
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16"
+}

@@ -1,0 +1,81 @@
+{
+  "season": 24,
+  "season_name": "Survivor: One World",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Manono (found by Salani member)",
+      "found_by": "Sabrina Thompson",
+      "day_found": 3,
+      "episode_found": 1,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Sabrina found the Manono tribe's hidden immunity idol but per the season's rules, she was required to give it to a member of the opposing Manono tribe before the next Tribal Council. She gave it to Colton Cumbie. The idol then became Colton's possession."
+    },
+    {
+      "id": 2,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Manono (via Sabrina)",
+      "found_by": "Colton Cumbie",
+      "day_found": 3,
+      "episode_found": 1,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "Colton received the Manono idol from Sabrina Thompson. He used the idol's power to overthrow Manono's dominant alliance and gain control of the tribe. However, Colton was medically evacuated on Day 16 (Episode 6, 'Thanks for the Souvenir') due to acute appendicitis. He chose to keep the idol as a souvenir rather than give it to anyone, despite his ally Alicia's expectation that he would pass it to her. Colton became the first person to be medically evacuated while holding a Hidden Immunity Idol."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Tikiano (Merged tribe)",
+      "found_by": "Troyzan Robertson",
+      "day_found": 17,
+      "episode_found": 7,
+      "day_played": 25,
+      "episode_played": 9,
+      "played_on": "Troyzan Robertson",
+      "played_for": "Troyzan Robertson",
+      "votes_negated": 2,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Troyzan found a hidden immunity idol after the merge. He played it on himself at tribal council on Day 25 (Episode 9, 'Go Out with a Bang'), successfully negating 2 votes against him from Chelsea Meissner and Kat Edorsson. Jay Byars was voted out that night. Despite the successful idol play, Troyzan was unable to overcome Kim's dominant alliance and was eventually voted out later in the game."
+    },
+    {
+      "id": 4,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Tikiano (Merged tribe)",
+      "found_by": "Kim Spradlin",
+      "day_found": 18,
+      "episode_found": 8,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Kim found a hidden immunity idol after the tribe switch on Day 12 and disclosed it to her closest ally Chelsea. Combined with her dominant challenge performance (winning 4 of the last 5 immunity challenges), the idol made her position virtually untouchable. She never needed to play it and won the season in a dominant 7-2-0 jury vote, taking the idol to the end unused."
+    }
+  ],
+  "summary": {
+    "total_advantages": 4,
+    "total_idols_found": 4,
+    "total_idols_played": 1,
+    "total_idols_not_played": 3,
+    "total_successful_idol_plays": 1,
+    "total_unsuccessful_idol_plays": 0,
+    "total_voted_out_holding": 1
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16"
+}

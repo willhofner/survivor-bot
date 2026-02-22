@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block title %}Returning Players - Survivor{% endblock %}
+
+{% block content %}
+<div class="returning-players-page">
+    <h1 class="text-center mb-3 survivor-title">
+        <span class="torch">🔥</span> Returning Players
+    </h1>
+    <p class="text-center mb-4" style="color: var(--sand); font-size: 1.1rem;">
+        Players who came back for more — tracking every appearance across 39 seasons
+    </p>
+
+    <!-- Quick Stats -->
+    <div class="row text-center g-3 mb-5">
+        <div class="col-6 col-md-3">
+            <div class="stat-box">
+                <div class="stat-number">{{ players | length }}</div>
+                <div class="stat-label">Returning Players</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="stat-box">
+                <div class="stat-number">{{ players | selectattr('times_played') | map(attribute='times_played') | max | default(0) }}</div>
+                <div class="stat-label">Most Appearances</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="stat-box">
+                <div class="stat-number">{{ players | selectattr('total_days') | map(attribute='total_days') | max | default(0) }}</div>
+                <div class="stat-label">Most Days Played</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="stat-box">
+                <div class="stat-number">{{ players | selectattr('best_finish', 'equalto', 'Winner') | list | length }}</div>
+                <div class="stat-label">Won on Return</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="text-center mb-4">
+        <div class="btn-group" role="group">
+            <button class="btn btn-filter active" onclick="filterPlayers('all')">All</button>
+            <button class="btn btn-filter" onclick="filterPlayers('4+')">4+ Appearances</button>
+            <button class="btn btn-filter" onclick="filterPlayers('3')">3 Appearances</button>
+            <button class="btn btn-filter" onclick="filterPlayers('2')">2 Appearances</button>
+            <button class="btn btn-filter" onclick="filterPlayers('winners')">Won on Return</button>
+        </div>
+    </div>
+
+    <!-- Sort -->
+    <div class="text-center mb-4">
+        <select id="sortSelect" class="form-select form-select-sm season-selector d-inline-block" style="width: auto;" onchange="sortPlayers(this.value)">
+            <option value="days">Sort by Total Days</option>
+            <option value="appearances">Sort by Appearances</option>
+            <option value="name">Sort by Name</option>
+        </select>
+    </div>
+
+    <!-- Player Cards -->
+    <div id="playersGrid" class="row g-4">
+        {% for player in players %}
+        <div class="col-md-6 col-lg-4 player-card-wrapper"
+             data-times="{{ player.times_played }}"
+             data-days="{{ player.total_days }}"
+             data-name="{{ player.name }}"
+             data-best="{{ player.best_finish }}">
+            <div class="tribal-card p-3 h-100">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <div>
+                        <h4 style="color: var(--torch-orange); margin-bottom: 0.25rem;">
+                            {{ player.nickname or player.name }}
+                        </h4>
+                        {% if player.nickname and player.nickname != player.name %}
+                        <small style="color: var(--sand);">{{ player.full_name or player.name }}</small>
+                        {% endif %}
+                    </div>
+                    <span class="badge" style="background: var(--torch-orange); font-size: 0.9rem;">
+                        {{ player.times_played }}x
+                    </span>
+                </div>
+
+                <div class="d-flex gap-2 mb-3" style="flex-wrap: wrap;">
+                    <span class="badge" style="background: rgba(255,215,0,0.2); color: gold; border: 1px solid gold;">
+                        {{ player.total_days }} days
+                    </span>
+                    {% if player.best_finish == 'Winner' %}
+                    <span class="badge" style="background: rgba(255,215,0,0.3); color: gold; border: 1px solid gold;">Winner</span>
+                    {% else %}
+                    <span class="badge" style="background: rgba(255,255,255,0.1); color: var(--sand); border: 1px solid var(--bamboo);">Best: {{ player.best_finish }}</span>
+                    {% endif %}
+                </div>
+
+                <!-- Season appearances -->
+                <div class="appearances-list">
+                    {% for app in player.appearances %}
+                    <div class="d-flex justify-content-between align-items-center py-1 px-2 mb-1 rounded" style="background: rgba(255,255,255,0.05); font-size: 0.85rem;">
+                        <a href="/castaways?season={{ app.season }}" style="color: var(--sand); text-decoration: none;">
+                            S{{ app.season }}: {{ app.season_name }}
+                        </a>
+                        <span style="color: {% if app.placement == 'Winner' %}gold{% elif 'Runner' in (app.placement or '') %}silver{% else %}var(--sand){% endif %};">
+                            {{ app.placement }}
+                        </span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Back to top -->
+<div class="text-center back-to-top">
+    <a href="#" class="btn btn-outline-survivor btn-sm" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">Back to Top</a>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function filterPlayers(filter) {
+    document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+
+    document.querySelectorAll('.player-card-wrapper').forEach(card => {
+        const times = parseInt(card.dataset.times);
+        const best = card.dataset.best;
+        let show = false;
+
+        if (filter === 'all') show = true;
+        else if (filter === '4+') show = times >= 4;
+        else if (filter === '3') show = times === 3;
+        else if (filter === '2') show = times === 2;
+        else if (filter === 'winners') show = best === 'Winner';
+
+        card.style.display = show ? '' : 'none';
+    });
+}
+
+function sortPlayers(by) {
+    const grid = document.getElementById('playersGrid');
+    const cards = Array.from(grid.querySelectorAll('.player-card-wrapper'));
+
+    cards.sort((a, b) => {
+        if (by === 'days') return parseInt(b.dataset.days) - parseInt(a.dataset.days);
+        if (by === 'appearances') return parseInt(b.dataset.times) - parseInt(a.dataset.times);
+        if (by === 'name') return a.dataset.name.localeCompare(b.dataset.name);
+        return 0;
+    });
+
+    cards.forEach(card => grid.appendChild(card));
+}
+</script>
+{% endblock %}

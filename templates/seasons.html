@@ -71,6 +71,15 @@
                 </div>
             </div>
 
+            {% if s.similar_seasons %}
+            <div class="season-similar">
+                <span class="similar-label">If you liked this, try:</span>
+                {% for rec in s.similar_seasons %}
+                <a href="/castaways?season={{ rec.season }}" class="similar-link">S{{ rec.season }}</a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </div>
+            {% endif %}
+
             <div class="season-card-links">
                 <a href="/tribal-councils?season={{ s.season }}" class="btn btn-sm btn-outline-survivor">Tribals</a>
                 <a href="/castaways?season={{ s.season }}" class="btn btn-sm btn-outline-survivor">Castaways</a>
@@ -263,6 +272,31 @@
 .season-card-links .btn {
     font-size: 0.75rem;
     padding: 0.3rem 0.8rem;
+}
+
+.season-similar {
+    text-align: center;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.similar-label {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.similar-link {
+    color: var(--torch-orange);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.similar-link:hover {
+    color: gold;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {

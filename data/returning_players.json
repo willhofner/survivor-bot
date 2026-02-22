@@ -1,0 +1,2188 @@
+{
+  "returning_players": [
+    {
+      "name": "Ozzy Lusth",
+      "full_name": "Oscar Lusth",
+      "appearances": [
+        {
+          "season": 13,
+          "season_name": "Cook Islands",
+          "placement": "Runner-Up",
+          "days": 39
+        },
+        {
+          "season": 16,
+          "season_name": "Micronesia",
+          "placement": "9th",
+          "days": 27
+        },
+        {
+          "season": 23,
+          "season_name": "South Pacific",
+          "placement": "4th",
+          "days": 38
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "12th",
+          "days": 24
+        }
+      ],
+      "total_days": 128,
+      "best_finish": "Runner-Up",
+      "times_played": 4,
+      "nickname": "Ozzy"
+    },
+    {
+      "name": "Cirie Fields",
+      "full_name": "Cirie Fields",
+      "appearances": [
+        {
+          "season": 12,
+          "season_name": "Panama",
+          "placement": "4th",
+          "days": 36
+        },
+        {
+          "season": 16,
+          "season_name": "Micronesia",
+          "placement": "3rd",
+          "days": 38
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "17th",
+          "days": 11
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "6th",
+          "days": 36
+        }
+      ],
+      "total_days": 121,
+      "best_finish": "3rd",
+      "times_played": 4,
+      "nickname": "Cirie"
+    },
+    {
+      "name": "Boston Rob",
+      "full_name": "Rob Mariano",
+      "appearances": [
+        {
+          "season": 4,
+          "season_name": "Marquesas",
+          "placement": "10th",
+          "days": 21
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "Runner-Up",
+          "days": 39
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "13th",
+          "days": 18
+        },
+        {
+          "season": 22,
+          "season_name": "Redemption Island",
+          "placement": "Winner",
+          "days": 39
+        }
+      ],
+      "total_days": 117,
+      "best_finish": "Winner",
+      "times_played": 4,
+      "nickname": "Boston Rob"
+    },
+    {
+      "name": "Parvati Shallow",
+      "full_name": "Parvati Shallow",
+      "appearances": [
+        {
+          "season": 13,
+          "season_name": "Cook Islands",
+          "placement": "6th",
+          "days": 36
+        },
+        {
+          "season": 16,
+          "season_name": "Micronesia",
+          "placement": "Winner",
+          "days": 39
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "Runner-Up",
+          "days": 39
+        }
+      ],
+      "total_days": 114,
+      "best_finish": "Winner",
+      "times_played": 3,
+      "nickname": "Parvati"
+    },
+    {
+      "name": "Aubry Bracco",
+      "full_name": "Aubry Bracco",
+      "appearances": [
+        {
+          "season": 32,
+          "season_name": "Kaoh Rong",
+          "placement": "Runner-Up",
+          "days": 39
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "5th",
+          "days": 37
+        },
+        {
+          "season": 38,
+          "season_name": "Edge of Extinction",
+          "placement": "16th",
+          "days": 35
+        }
+      ],
+      "total_days": 111,
+      "best_finish": "Runner-Up",
+      "times_played": 3,
+      "nickname": null
+    },
+    {
+      "name": "Amanda Kimmel",
+      "full_name": "Amanda Kimmel",
+      "appearances": [
+        {
+          "season": 15,
+          "season_name": "China",
+          "placement": "3rd",
+          "days": 39
+        },
+        {
+          "season": 16,
+          "season_name": "Micronesia",
+          "placement": "Runner-Up",
+          "days": 39
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "9th",
+          "days": 30
+        }
+      ],
+      "total_days": 108,
+      "best_finish": "Runner-Up",
+      "times_played": 3,
+      "nickname": null
+    },
+    {
+      "name": "Rupert Boneham",
+      "full_name": "Rupert Boneham",
+      "appearances": [
+        {
+          "season": 7,
+          "season_name": "Pearl Islands",
+          "placement": "8th",
+          "days": 27
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "4th",
+          "days": 37
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "6th",
+          "days": 36
+        },
+        {
+          "season": 27,
+          "season_name": "Blood vs. Water",
+          "placement": "20th",
+          "days": 4
+        }
+      ],
+      "total_days": 104,
+      "best_finish": "4th",
+      "times_played": 4,
+      "nickname": "Rupert"
+    },
+    {
+      "name": "Andrea Boehlke",
+      "full_name": "Andrea Boehlke",
+      "appearances": [
+        {
+          "season": 22,
+          "season_name": "Redemption Island",
+          "placement": "5th",
+          "days": 37
+        },
+        {
+          "season": 26,
+          "season_name": "Caramoan",
+          "placement": "7th",
+          "days": 33
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "8th",
+          "days": 33
+        }
+      ],
+      "total_days": 103,
+      "best_finish": "5th",
+      "times_played": 3,
+      "nickname": null
+    },
+    {
+      "name": "Colby Donaldson",
+      "full_name": "Colby Donaldson",
+      "appearances": [
+        {
+          "season": 2,
+          "season_name": "The Australian Outback",
+          "placement": "Runner-Up",
+          "days": 42
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "12th",
+          "days": 19
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "5th",
+          "days": 37
+        }
+      ],
+      "total_days": 98,
+      "best_finish": "Runner-Up",
+      "times_played": 3,
+      "nickname": "Colby"
+    },
+    {
+      "name": "Coach Wade",
+      "full_name": "Benjamin Wade",
+      "appearances": [
+        {
+          "season": 18,
+          "season_name": "Tocantins",
+          "placement": "5th",
+          "days": 36
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "12th",
+          "days": 21
+        },
+        {
+          "season": 23,
+          "season_name": "South Pacific",
+          "placement": "Runner-Up",
+          "days": 39
+        }
+      ],
+      "total_days": 96,
+      "best_finish": "Runner-Up",
+      "times_played": 3,
+      "nickname": "Coach"
+    },
+    {
+      "name": "Sandra Diaz-Twine",
+      "full_name": "Sandra Diaz-Twine",
+      "appearances": [
+        {
+          "season": 7,
+          "season_name": "Pearl Islands",
+          "placement": "Winner",
+          "days": 39
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "Winner",
+          "days": 39
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "15th",
+          "days": 16
+        }
+      ],
+      "total_days": 94,
+      "best_finish": "Winner",
+      "times_played": 3,
+      "nickname": "Sandra"
+    },
+    {
+      "name": "Joe Anglim",
+      "full_name": "Joe Anglim",
+      "appearances": [
+        {
+          "season": 30,
+          "season_name": "Worlds Apart",
+          "placement": "10th",
+          "days": 24
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "8th",
+          "days": 32
+        },
+        {
+          "season": 38,
+          "season_name": "Edge of Extinction",
+          "placement": "14th",
+          "days": 35
+        }
+      ],
+      "total_days": 91,
+      "best_finish": "8th",
+      "times_played": 3,
+      "nickname": "Joey Amazing"
+    },
+    {
+      "name": "Jerri Manthey",
+      "full_name": "Jerri Manthey",
+      "appearances": [
+        {
+          "season": 2,
+          "season_name": "The Australian Outback",
+          "placement": "8th",
+          "days": 27
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "10th",
+          "days": 24
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "4th",
+          "days": 38
+        }
+      ],
+      "total_days": 89,
+      "best_finish": "4th",
+      "times_played": 3,
+      "nickname": "Jerri"
+    },
+    {
+      "name": "Russell Hantz",
+      "full_name": "Russell Hantz",
+      "appearances": [
+        {
+          "season": 19,
+          "season_name": "Samoa",
+          "placement": "Runner-Up",
+          "days": 39
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "3rd",
+          "days": 39
+        },
+        {
+          "season": 22,
+          "season_name": "Redemption Island",
+          "placement": "17th",
+          "days": 10
+        }
+      ],
+      "total_days": 88,
+      "best_finish": "Runner-Up",
+      "times_played": 3,
+      "nickname": null
+    },
+    {
+      "name": "Kelley Wentworth",
+      "full_name": "Kelley Wentworth",
+      "appearances": [
+        {
+          "season": 29,
+          "season_name": "San Juan del Sur",
+          "placement": "14th",
+          "days": 13
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "4th",
+          "days": 38
+        },
+        {
+          "season": 38,
+          "season_name": "Edge of Extinction",
+          "placement": "10th",
+          "days": 35
+        }
+      ],
+      "total_days": 86,
+      "best_finish": "4th",
+      "times_played": 3,
+      "nickname": "Wentworth"
+    },
+    {
+      "name": "Tina Wesson",
+      "full_name": "Tina Wesson",
+      "appearances": [
+        {
+          "season": 2,
+          "season_name": "The Australian Outback",
+          "placement": "Winner",
+          "days": 42
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "18th",
+          "days": 3
+        },
+        {
+          "season": 27,
+          "season_name": "Blood vs. Water",
+          "placement": "4th",
+          "days": 38
+        }
+      ],
+      "total_days": 83,
+      "best_finish": "Winner",
+      "times_played": 3,
+      "nickname": null
+    },
+    {
+      "name": "Tyson Apostol",
+      "full_name": "Tyson Apostol",
+      "appearances": [
+        {
+          "season": 18,
+          "season_name": "Tocantins",
+          "placement": "8th",
+          "days": 27
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "15th",
+          "days": 15
+        },
+        {
+          "season": 27,
+          "season_name": "Blood vs. Water",
+          "placement": "Winner",
+          "days": 39
+        }
+      ],
+      "total_days": 81,
+      "best_finish": "Winner",
+      "times_played": 3,
+      "nickname": "Tyson"
+    },
+    {
+      "name": "Malcolm Freberg",
+      "full_name": "Malcolm Freberg",
+      "appearances": [
+        {
+          "season": 25,
+          "season_name": "Philippines",
+          "placement": "4th",
+          "days": 38
+        },
+        {
+          "season": 26,
+          "season_name": "Caramoan",
+          "placement": "9th",
+          "days": 30
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "17th",
+          "days": 11
+        }
+      ],
+      "total_days": 79,
+      "best_finish": "4th",
+      "times_played": 3,
+      "nickname": "Malcolm"
+    },
+    {
+      "name": "J.T. Thomas",
+      "full_name": "James Thomas Jr.",
+      "appearances": [
+        {
+          "season": 18,
+          "season_name": "Tocantins",
+          "placement": "Winner",
+          "days": 39
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "10th",
+          "days": 27
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "16th",
+          "days": 13
+        }
+      ],
+      "total_days": 79,
+      "best_finish": "Winner",
+      "times_played": 3,
+      "nickname": "J.T."
+    },
+    {
+      "name": "Jonathan Penner",
+      "full_name": "Jonathan Penner",
+      "appearances": [
+        {
+          "season": 13,
+          "season_name": "Cook Islands",
+          "placement": "7th",
+          "days": 33
+        },
+        {
+          "season": 16,
+          "season_name": "Micronesia",
+          "placement": "15th",
+          "days": 15
+        },
+        {
+          "season": 25,
+          "season_name": "Philippines",
+          "placement": "7th",
+          "days": 30
+        }
+      ],
+      "total_days": 78,
+      "best_finish": "7th",
+      "times_played": 3,
+      "nickname": "Penner"
+    },
+    {
+      "name": "Tai Trang",
+      "full_name": "Tai Trang",
+      "appearances": [
+        {
+          "season": 32,
+          "season_name": "Kaoh Rong",
+          "placement": "3rd",
+          "days": 39
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "4th",
+          "days": 38
+        }
+      ],
+      "total_days": 77,
+      "best_finish": "3rd",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "James Clement",
+      "full_name": "James Clement",
+      "appearances": [
+        {
+          "season": 15,
+          "season_name": "China",
+          "placement": "7th",
+          "days": 30
+        },
+        {
+          "season": 16,
+          "season_name": "Micronesia",
+          "placement": "7th",
+          "days": 31
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "14th",
+          "days": 15
+        }
+      ],
+      "total_days": 76,
+      "best_finish": "7th",
+      "times_played": 3,
+      "nickname": null
+    },
+    {
+      "name": "Spencer Bledsoe",
+      "full_name": "Spencer Bledsoe",
+      "appearances": [
+        {
+          "season": 28,
+          "season_name": "Cagayan",
+          "placement": "4th",
+          "days": 37
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "Runner-Up",
+          "days": 39
+        }
+      ],
+      "total_days": 76,
+      "best_finish": "Runner-Up",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Stephenie LaGrossa",
+      "full_name": "Stephenie LaGrossa",
+      "appearances": [
+        {
+          "season": 10,
+          "season_name": "Palau",
+          "placement": "7th",
+          "days": 30
+        },
+        {
+          "season": 11,
+          "season_name": "Guatemala",
+          "placement": "Runner-Up",
+          "days": 39
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "19th",
+          "days": 6
+        }
+      ],
+      "total_days": 75,
+      "best_finish": "Runner-Up",
+      "times_played": 3,
+      "nickname": "Stephenie"
+    },
+    {
+      "name": "Keith Nale",
+      "full_name": "Keith Nale",
+      "appearances": [
+        {
+          "season": 29,
+          "season_name": "San Juan del Sur",
+          "placement": "4th",
+          "days": 38
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "5th",
+          "days": 37
+        }
+      ],
+      "total_days": 75,
+      "best_finish": "4th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Tom Buchanan",
+      "full_name": "Tom Buchanan",
+      "appearances": [
+        {
+          "season": 3,
+          "season_name": "Africa",
+          "placement": "4th",
+          "days": 37
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "5th",
+          "days": 36
+        }
+      ],
+      "total_days": 73,
+      "best_finish": "4th",
+      "times_played": 2,
+      "nickname": "Big Tom"
+    },
+    {
+      "name": "David Wright",
+      "full_name": "David Wright",
+      "appearances": [
+        {
+          "season": 33,
+          "season_name": "Millennials vs. Gen X",
+          "placement": "4th",
+          "days": 38
+        },
+        {
+          "season": 38,
+          "season_name": "Edge of Extinction",
+          "placement": "11th",
+          "days": 35
+        }
+      ],
+      "total_days": 73,
+      "best_finish": "4th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Amber Mariano",
+      "full_name": "Amber Brkich Mariano",
+      "appearances": [
+        {
+          "season": 2,
+          "season_name": "The Australian Outback",
+          "placement": "6th",
+          "days": 33
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "Winner",
+          "days": 39
+        }
+      ],
+      "total_days": 72,
+      "best_finish": "Winner",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Danielle DiLorenzo",
+      "full_name": "Danielle DiLorenzo",
+      "appearances": [
+        {
+          "season": 12,
+          "season_name": "Panama",
+          "placement": "Runner-Up",
+          "days": 39
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "7th",
+          "days": 33
+        }
+      ],
+      "total_days": 72,
+      "best_finish": "Runner-Up",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Tasha Fox",
+      "full_name": "Tasha Fox",
+      "appearances": [
+        {
+          "season": 28,
+          "season_name": "Cagayan",
+          "placement": "6th",
+          "days": 33
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "Runner-Up",
+          "days": 39
+        }
+      ],
+      "total_days": 72,
+      "best_finish": "Runner-Up",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Candice Cody",
+      "full_name": "Candice Woodcock Cody",
+      "appearances": [
+        {
+          "season": 13,
+          "season_name": "Cook Islands",
+          "placement": "8th",
+          "days": 30
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "8th",
+          "days": 31
+        },
+        {
+          "season": 27,
+          "season_name": "Blood vs. Water",
+          "placement": "16th",
+          "days": 11
+        }
+      ],
+      "total_days": 72,
+      "best_finish": "8th",
+      "times_played": 3,
+      "nickname": null
+    },
+    {
+      "name": "Erik Reichenbach",
+      "full_name": "Erik Reichenbach",
+      "appearances": [
+        {
+          "season": 16,
+          "season_name": "Micronesia",
+          "placement": "5th",
+          "days": 36
+        },
+        {
+          "season": 26,
+          "season_name": "Caramoan",
+          "placement": "5th",
+          "days": 36
+        }
+      ],
+      "total_days": 72,
+      "best_finish": "5th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Abi-Maria Gomes",
+      "full_name": "Abi-Maria Gomes",
+      "appearances": [
+        {
+          "season": 25,
+          "season_name": "Philippines",
+          "placement": "5th",
+          "days": 36
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "7th",
+          "days": 35
+        }
+      ],
+      "total_days": 71,
+      "best_finish": "5th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "John Cochran",
+      "full_name": "John Cochran",
+      "appearances": [
+        {
+          "season": 23,
+          "season_name": "South Pacific",
+          "placement": "8th",
+          "days": 31
+        },
+        {
+          "season": 26,
+          "season_name": "Caramoan",
+          "placement": "Winner",
+          "days": 39
+        }
+      ],
+      "total_days": 70,
+      "best_finish": "Winner",
+      "times_played": 2,
+      "nickname": "Cochran"
+    },
+    {
+      "name": "Troyzan Robertson",
+      "full_name": "Troy Robertson",
+      "appearances": [
+        {
+          "season": 24,
+          "season_name": "One World",
+          "placement": "8th",
+          "days": 30
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "3rd",
+          "days": 39
+        }
+      ],
+      "total_days": 69,
+      "best_finish": "3rd",
+      "times_played": 2,
+      "nickname": "Troyzan"
+    },
+    {
+      "name": "Gervase Peterson",
+      "full_name": "Gervase Peterson",
+      "appearances": [
+        {
+          "season": 1,
+          "season_name": "Borneo",
+          "placement": "7th",
+          "days": 30
+        },
+        {
+          "season": 27,
+          "season_name": "Blood vs. Water",
+          "placement": "3rd",
+          "days": 39
+        }
+      ],
+      "total_days": 69,
+      "best_finish": "3rd",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Sierra Dawn Thomas",
+      "full_name": "Sierra Dawn Thomas",
+      "appearances": [
+        {
+          "season": 30,
+          "season_name": "Worlds Apart",
+          "placement": "5th",
+          "days": 37
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "9th",
+          "days": 32
+        }
+      ],
+      "total_days": 69,
+      "best_finish": "5th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Stephen Fishbach",
+      "full_name": "Stephen Fishbach",
+      "appearances": [
+        {
+          "season": 18,
+          "season_name": "Tocantins",
+          "placement": "Runner-Up",
+          "days": 39
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "9th",
+          "days": 29
+        }
+      ],
+      "total_days": 68,
+      "best_finish": "Runner-Up",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Phillip Sheppard",
+      "full_name": "Phillip Sheppard",
+      "appearances": [
+        {
+          "season": 22,
+          "season_name": "Redemption Island",
+          "placement": "Runner-Up",
+          "days": 39
+        },
+        {
+          "season": 26,
+          "season_name": "Caramoan",
+          "placement": "10th",
+          "days": 28
+        }
+      ],
+      "total_days": 67,
+      "best_finish": "Runner-Up",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Dawn Meehan",
+      "full_name": "Dawn Meehan",
+      "appearances": [
+        {
+          "season": 23,
+          "season_name": "South Pacific",
+          "placement": "10th",
+          "days": 28
+        },
+        {
+          "season": 26,
+          "season_name": "Caramoan",
+          "placement": "Runner-Up",
+          "days": 39
+        }
+      ],
+      "total_days": 67,
+      "best_finish": "Runner-Up",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Ciera Eastin",
+      "full_name": "Ciera Eastin",
+      "appearances": [
+        {
+          "season": 27,
+          "season_name": "Blood vs. Water",
+          "placement": "5th",
+          "days": 37
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "10th",
+          "days": 26
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "20th",
+          "days": 3
+        }
+      ],
+      "total_days": 66,
+      "best_finish": "5th",
+      "times_played": 3,
+      "nickname": null
+    },
+    {
+      "name": "Kathy Vavrick-O'Brien",
+      "full_name": "Kathy Vavrick-O'Brien",
+      "appearances": [
+        {
+          "season": 4,
+          "season_name": "Marquesas",
+          "placement": "3rd",
+          "days": 38
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "8th",
+          "days": 28
+        }
+      ],
+      "total_days": 66,
+      "best_finish": "3rd",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Lex van den Berghe",
+      "full_name": "Lex van den Berghe",
+      "appearances": [
+        {
+          "season": 3,
+          "season_name": "Africa",
+          "placement": "3rd",
+          "days": 38
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "9th",
+          "days": 27
+        }
+      ],
+      "total_days": 65,
+      "best_finish": "3rd",
+      "times_played": 2,
+      "nickname": "Lex"
+    },
+    {
+      "name": "Jenna Lewis",
+      "full_name": "Jenna Lewis",
+      "appearances": [
+        {
+          "season": 1,
+          "season_name": "Borneo",
+          "placement": "8th",
+          "days": 27
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "3rd",
+          "days": 38
+        }
+      ],
+      "total_days": 65,
+      "best_finish": "3rd",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Aras Baskauskas",
+      "full_name": "Aras Baskauskas",
+      "appearances": [
+        {
+          "season": 12,
+          "season_name": "Panama",
+          "placement": "Winner",
+          "days": 39
+        },
+        {
+          "season": 27,
+          "season_name": "Blood vs. Water",
+          "placement": "11th",
+          "days": 25
+        }
+      ],
+      "total_days": 64,
+      "best_finish": "Winner",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Courtney Yates",
+      "full_name": "Courtney Yates",
+      "appearances": [
+        {
+          "season": 15,
+          "season_name": "China",
+          "placement": "Runner-Up",
+          "days": 39
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "11th",
+          "days": 24
+        }
+      ],
+      "total_days": 63,
+      "best_finish": "Runner-Up",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Kelly Wiglesworth",
+      "full_name": "Kelly Wiglesworth",
+      "appearances": [
+        {
+          "season": 1,
+          "season_name": "Borneo",
+          "placement": "Runner-Up",
+          "days": 39
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "11th",
+          "days": 24
+        }
+      ],
+      "total_days": 63,
+      "best_finish": "Runner-Up",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Jeremy Collins",
+      "full_name": "Jeremy Collins",
+      "appearances": [
+        {
+          "season": 29,
+          "season_name": "San Juan del Sur",
+          "placement": "10th",
+          "days": 24
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "Winner",
+          "days": 39
+        }
+      ],
+      "total_days": 63,
+      "best_finish": "Winner",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Laura Morett",
+      "full_name": "Laura Morett",
+      "appearances": [
+        {
+          "season": 19,
+          "season_name": "Samoa",
+          "placement": "10th",
+          "days": 27
+        },
+        {
+          "season": 27,
+          "season_name": "Blood vs. Water",
+          "placement": "6th",
+          "days": 36
+        }
+      ],
+      "total_days": 63,
+      "best_finish": "6th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Brenda Lowe",
+      "full_name": "Brenda Lowe",
+      "appearances": [
+        {
+          "season": 21,
+          "season_name": "Nicaragua",
+          "placement": "10th",
+          "days": 27
+        },
+        {
+          "season": 26,
+          "season_name": "Caramoan",
+          "placement": "6th",
+          "days": 36
+        }
+      ],
+      "total_days": 63,
+      "best_finish": "6th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Zeke Smith",
+      "full_name": "Zeke Smith",
+      "appearances": [
+        {
+          "season": 33,
+          "season_name": "Millennials vs. Gen X",
+          "placement": "9th",
+          "days": 33
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "10th",
+          "days": 29
+        }
+      ],
+      "total_days": 62,
+      "best_finish": "9th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Eliza Orlins",
+      "full_name": "Eliza Orlins",
+      "appearances": [
+        {
+          "season": 9,
+          "season_name": "Vanuatu",
+          "placement": "4th",
+          "days": 37
+        },
+        {
+          "season": 16,
+          "season_name": "Micronesia",
+          "placement": "10th",
+          "days": 24
+        }
+      ],
+      "total_days": 61,
+      "best_finish": "4th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Ethan Zohn",
+      "full_name": "Ethan Zohn",
+      "appearances": [
+        {
+          "season": 3,
+          "season_name": "Africa",
+          "placement": "Winner",
+          "days": 39
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "11th",
+          "days": 21
+        }
+      ],
+      "total_days": 60,
+      "best_finish": "Winner",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Sarah Lacina",
+      "full_name": "Sarah Lacina",
+      "appearances": [
+        {
+          "season": 28,
+          "season_name": "Cagayan",
+          "placement": "11th",
+          "days": 19
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "Winner",
+          "days": 39
+        }
+      ],
+      "total_days": 58,
+      "best_finish": "Winner",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Kass McQuillen",
+      "full_name": "Kassandra McQuillen",
+      "appearances": [
+        {
+          "season": 28,
+          "season_name": "Cagayan",
+          "placement": "3rd",
+          "days": 38
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "13th",
+          "days": 19
+        }
+      ],
+      "total_days": 57,
+      "best_finish": "3rd",
+      "times_played": 2,
+      "nickname": "Chaos Kass"
+    },
+    {
+      "name": "Michael Skupin",
+      "full_name": "Michael Skupin",
+      "appearances": [
+        {
+          "season": 2,
+          "season_name": "The Australian Outback",
+          "placement": "11th",
+          "days": 17
+        },
+        {
+          "season": 25,
+          "season_name": "Philippines",
+          "placement": "Runner-Up",
+          "days": 39
+        }
+      ],
+      "total_days": 56,
+      "best_finish": "Runner-Up",
+      "times_played": 2,
+      "nickname": "Skupin"
+    },
+    {
+      "name": "Woo Hwang",
+      "full_name": "Yung Hwang",
+      "appearances": [
+        {
+          "season": 28,
+          "season_name": "Cagayan",
+          "placement": "Runner-Up",
+          "days": 39
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "14th",
+          "days": 16
+        }
+      ],
+      "total_days": 55,
+      "best_finish": "Runner-Up",
+      "times_played": 2,
+      "nickname": "Woo"
+    },
+    {
+      "name": "Corinne Kaplan",
+      "full_name": "Corinne Kaplan",
+      "appearances": [
+        {
+          "season": 17,
+          "season_name": "Gabon",
+          "placement": "7th",
+          "days": 33
+        },
+        {
+          "season": 26,
+          "season_name": "Caramoan",
+          "placement": "12th",
+          "days": 22
+        }
+      ],
+      "total_days": 55,
+      "best_finish": "7th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Michaela Bradshaw",
+      "full_name": "Michaela Bradshaw",
+      "appearances": [
+        {
+          "season": 33,
+          "season_name": "Millennials vs. Gen X",
+          "placement": "14th",
+          "days": 20
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "7th",
+          "days": 35
+        }
+      ],
+      "total_days": 55,
+      "best_finish": "7th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Ami Cusack",
+      "full_name": "Ami Cusack",
+      "appearances": [
+        {
+          "season": 9,
+          "season_name": "Vanuatu",
+          "placement": "6th",
+          "days": 33
+        },
+        {
+          "season": 16,
+          "season_name": "Micronesia",
+          "placement": "11th",
+          "days": 21
+        }
+      ],
+      "total_days": 54,
+      "best_finish": "6th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Alicia Calaway",
+      "full_name": "Alicia Calaway",
+      "appearances": [
+        {
+          "season": 2,
+          "season_name": "The Australian Outback",
+          "placement": "9th",
+          "days": 24
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "7th",
+          "days": 30
+        }
+      ],
+      "total_days": 54,
+      "best_finish": "7th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Shii Ann Huang",
+      "full_name": "Shii Ann Huang",
+      "appearances": [
+        {
+          "season": 5,
+          "season_name": "Thailand",
+          "placement": "10th",
+          "days": 21
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "6th",
+          "days": 33
+        }
+      ],
+      "total_days": 54,
+      "best_finish": "6th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Richard Hatch",
+      "full_name": "Richard Hatch",
+      "appearances": [
+        {
+          "season": 1,
+          "season_name": "Borneo",
+          "placement": "Winner",
+          "days": 39
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "14th",
+          "days": 15
+        }
+      ],
+      "total_days": 54,
+      "best_finish": "Winner",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Susan Hawk",
+      "full_name": "Susan Hawk",
+      "appearances": [
+        {
+          "season": 1,
+          "season_name": "Borneo",
+          "placement": "4th",
+          "days": 37
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "13th",
+          "days": 17
+        }
+      ],
+      "total_days": 54,
+      "best_finish": "4th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Tom Westman",
+      "full_name": "Tom Westman",
+      "appearances": [
+        {
+          "season": 10,
+          "season_name": "Palau",
+          "placement": "Winner",
+          "days": 39
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "16th",
+          "days": 14
+        }
+      ],
+      "total_days": 53,
+      "best_finish": "Winner",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Monica Culpepper",
+      "full_name": "Monica Culpepper",
+      "appearances": [
+        {
+          "season": 24,
+          "season_name": "One World",
+          "placement": "14th",
+          "days": 14
+        },
+        {
+          "season": 27,
+          "season_name": "Blood vs. Water",
+          "placement": "Runner-Up",
+          "days": 39
+        }
+      ],
+      "total_days": 53,
+      "best_finish": "Runner-Up",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Brad Culpepper",
+      "full_name": "Brad Culpepper",
+      "appearances": [
+        {
+          "season": 27,
+          "season_name": "Blood vs. Water",
+          "placement": "15th",
+          "days": 14
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "Runner-Up",
+          "days": 39
+        }
+      ],
+      "total_days": 53,
+      "best_finish": "Runner-Up",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Terry Deitz",
+      "full_name": "Terry Deitz",
+      "appearances": [
+        {
+          "season": 12,
+          "season_name": "Panama",
+          "placement": "3rd",
+          "days": 38
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "15th",
+          "days": 13
+        }
+      ],
+      "total_days": 51,
+      "best_finish": "3rd",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Kimmi Kappenberg",
+      "full_name": "Kimmi Kappenberg",
+      "appearances": [
+        {
+          "season": 2,
+          "season_name": "The Australian Outback",
+          "placement": "12th",
+          "days": 15
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "6th",
+          "days": 36
+        }
+      ],
+      "total_days": 51,
+      "best_finish": "6th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Rob Cesternino",
+      "full_name": "Rob Cesternino",
+      "appearances": [
+        {
+          "season": 6,
+          "season_name": "The Amazon",
+          "placement": "3rd",
+          "days": 38
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "15th",
+          "days": 12
+        }
+      ],
+      "total_days": 50,
+      "best_finish": "3rd",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Jeff Varner",
+      "full_name": "Jeff Varner",
+      "appearances": [
+        {
+          "season": 2,
+          "season_name": "The Australian Outback",
+          "placement": "10th",
+          "days": 21
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "17th",
+          "days": 11
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "14th",
+          "days": 18
+        }
+      ],
+      "total_days": 50,
+      "best_finish": "10th",
+      "times_played": 3,
+      "nickname": null
+    },
+    {
+      "name": "Debbie Wanner",
+      "full_name": "Debbie Wanner",
+      "appearances": [
+        {
+          "season": 32,
+          "season_name": "Kaoh Rong",
+          "placement": "9th",
+          "days": 24
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "11th",
+          "days": 26
+        }
+      ],
+      "total_days": 50,
+      "best_finish": "9th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Kat Edorsson",
+      "full_name": "Kat Edorsson",
+      "appearances": [
+        {
+          "season": 24,
+          "season_name": "One World",
+          "placement": "7th",
+          "days": 33
+        },
+        {
+          "season": 27,
+          "season_name": "Blood vs. Water",
+          "placement": "14th",
+          "days": 17
+        }
+      ],
+      "total_days": 50,
+      "best_finish": "7th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Brandon Hantz",
+      "full_name": "Brandon Hantz",
+      "appearances": [
+        {
+          "season": 23,
+          "season_name": "South Pacific",
+          "placement": "6th",
+          "days": 36
+        },
+        {
+          "season": 26,
+          "season_name": "Caramoan",
+          "placement": "15th",
+          "days": 13
+        }
+      ],
+      "total_days": 49,
+      "best_finish": "6th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Jenna Morasca",
+      "full_name": "Jenna Morasca",
+      "appearances": [
+        {
+          "season": 6,
+          "season_name": "The Amazon",
+          "placement": "Winner",
+          "days": 39
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "16th",
+          "days": 9
+        }
+      ],
+      "total_days": 48,
+      "best_finish": "Winner",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Yau-Man Chan",
+      "full_name": "Yau-Man Chan",
+      "appearances": [
+        {
+          "season": 14,
+          "season_name": "Fiji",
+          "placement": "4th",
+          "days": 38
+        },
+        {
+          "season": 16,
+          "season_name": "Micronesia",
+          "placement": "18th",
+          "days": 8
+        }
+      ],
+      "total_days": 46,
+      "best_finish": "4th",
+      "times_played": 2,
+      "nickname": "Yau-Man"
+    },
+    {
+      "name": "Monica Padilla",
+      "full_name": "Monica Padilla",
+      "appearances": [
+        {
+          "season": 19,
+          "season_name": "Samoa",
+          "placement": "7th",
+          "days": 33
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "16th",
+          "days": 13
+        }
+      ],
+      "total_days": 46,
+      "best_finish": "7th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Tony Vlachos",
+      "full_name": "Tony Vlachos",
+      "appearances": [
+        {
+          "season": 28,
+          "season_name": "Cagayan",
+          "placement": "Winner",
+          "days": 39
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "19th",
+          "days": 6
+        }
+      ],
+      "total_days": 45,
+      "best_finish": "Winner",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Bobby Jon Drinkard",
+      "full_name": "Bobby Jon Drinkard",
+      "appearances": [
+        {
+          "season": 10,
+          "season_name": "Palau",
+          "placement": "10th",
+          "days": 21
+        },
+        {
+          "season": 11,
+          "season_name": "Guatemala",
+          "placement": "9th",
+          "days": 24
+        }
+      ],
+      "total_days": 45,
+      "best_finish": "9th",
+      "times_played": 2,
+      "nickname": "Bobby Jon"
+    },
+    {
+      "name": "Peih-Gee Law",
+      "full_name": "Peih-Gee Law",
+      "appearances": [
+        {
+          "season": 15,
+          "season_name": "China",
+          "placement": "5th",
+          "days": 36
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "18th",
+          "days": 9
+        }
+      ],
+      "total_days": 45,
+      "best_finish": "5th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Rudy Boesch",
+      "full_name": "Rudy Boesch",
+      "appearances": [
+        {
+          "season": 1,
+          "season_name": "Borneo",
+          "placement": "3rd",
+          "days": 38
+        },
+        {
+          "season": 8,
+          "season_name": "All-Stars",
+          "placement": "17th",
+          "days": 6
+        }
+      ],
+      "total_days": 44,
+      "best_finish": "3rd",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Hali Ford",
+      "full_name": "Hali Ford",
+      "appearances": [
+        {
+          "season": 30,
+          "season_name": "Worlds Apart",
+          "placement": "11th",
+          "days": 22
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "13th",
+          "days": 21
+        }
+      ],
+      "total_days": 43,
+      "best_finish": "11th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Andrew Savage",
+      "full_name": "Andrew Savage",
+      "appearances": [
+        {
+          "season": 7,
+          "season_name": "Pearl Islands",
+          "placement": "10th",
+          "days": 21
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "12th",
+          "days": 21
+        }
+      ],
+      "total_days": 42,
+      "best_finish": "10th",
+      "times_played": 2,
+      "nickname": "Savage"
+    },
+    {
+      "name": "Sugar Kiper",
+      "full_name": "Jessica Kiper",
+      "appearances": [
+        {
+          "season": 17,
+          "season_name": "Gabon",
+          "placement": "3rd",
+          "days": 39
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "20th",
+          "days": 3
+        }
+      ],
+      "total_days": 42,
+      "best_finish": "3rd",
+      "times_played": 2,
+      "nickname": "Sugar"
+    },
+    {
+      "name": "Jonny Fairplay",
+      "full_name": "Jon Dalton",
+      "appearances": [
+        {
+          "season": 7,
+          "season_name": "Pearl Islands",
+          "placement": "3rd",
+          "days": 38
+        },
+        {
+          "season": 16,
+          "season_name": "Micronesia",
+          "placement": "20th",
+          "days": 3
+        }
+      ],
+      "total_days": 41,
+      "best_finish": "3rd",
+      "times_played": 2,
+      "nickname": "Jonny Fairplay"
+    },
+    {
+      "name": "Randy Bailey",
+      "full_name": "Randy Bailey",
+      "appearances": [
+        {
+          "season": 17,
+          "season_name": "Gabon",
+          "placement": "8th",
+          "days": 30
+        },
+        {
+          "season": 20,
+          "season_name": "Heroes vs. Villains",
+          "placement": "18th",
+          "days": 8
+        }
+      ],
+      "total_days": 38,
+      "best_finish": "8th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Shirin Oskooi",
+      "full_name": "Shirin Oskooi",
+      "appearances": [
+        {
+          "season": 30,
+          "season_name": "Worlds Apart",
+          "placement": "8th",
+          "days": 29
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "19th",
+          "days": 6
+        }
+      ],
+      "total_days": 35,
+      "best_finish": "8th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Vytas Baskauskas",
+      "full_name": "Vytas Baskauskas",
+      "appearances": [
+        {
+          "season": 27,
+          "season_name": "Blood vs. Water",
+          "placement": "10th",
+          "days": 27
+        },
+        {
+          "season": 31,
+          "season_name": "Cambodia",
+          "placement": "20th",
+          "days": 3
+        }
+      ],
+      "total_days": 30,
+      "best_finish": "10th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Russell Swan",
+      "full_name": "Russell Swan",
+      "appearances": [
+        {
+          "season": 19,
+          "season_name": "Samoa",
+          "placement": "14th",
+          "days": 15
+        },
+        {
+          "season": 25,
+          "season_name": "Philippines",
+          "placement": "15th",
+          "days": 10
+        }
+      ],
+      "total_days": 25,
+      "best_finish": "14th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Caleb Reynolds",
+      "full_name": "Caleb Reynolds",
+      "appearances": [
+        {
+          "season": 32,
+          "season_name": "Kaoh Rong",
+          "placement": "15th",
+          "days": 9
+        },
+        {
+          "season": 34,
+          "season_name": "Game Changers",
+          "placement": "18th",
+          "days": 9
+        }
+      ],
+      "total_days": 18,
+      "best_finish": "15th",
+      "times_played": 2,
+      "nickname": null
+    },
+    {
+      "name": "Francesca Hogi",
+      "full_name": "Francesca Hogi",
+      "appearances": [
+        {
+          "season": 22,
+          "season_name": "Redemption Island",
+          "placement": "18th",
+          "days": 6
+        },
+        {
+          "season": 26,
+          "season_name": "Caramoan",
+          "placement": "20th",
+          "days": 3
+        }
+      ],
+      "total_days": 9,
+      "best_finish": "18th",
+      "times_played": 2,
+      "nickname": null
+    }
+  ],
+  "metadata": {
+    "description": "All returning/multi-season Survivor players from seasons 1-39",
+    "total_returning_players": 91,
+    "seasons_covered": "1-39",
+    "sorted_by": "total_days descending",
+    "last_updated": "2026-02-20",
+    "notes": "Only includes appearances within seasons 1-39. Players who also appeared on season 40+ are only tracked for their seasons 1-39 appearances."
+  }
+}

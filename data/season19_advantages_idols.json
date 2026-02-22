@@ -1,0 +1,90 @@
+{
+  "season": 19,
+  "season_name": "Survivor: Samoa",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Foa Foa",
+      "found_by": "Russell Hantz",
+      "day_found": 2,
+      "episode_found": 1,
+      "day_played": 21,
+      "episode_played": 8,
+      "played_on": "Russell Hantz",
+      "played_for": "Russell Hantz",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Russell Hantz revolutionized Survivor by finding Hidden Immunity Idols without clues. He found the first Foa Foa idol by simply searching the camp area methodically. He played it on himself at the first merged Tribal Council on Day 21 (Episode 8, 'All Hell Breaks Loose'), but no votes were cast against him - the vote went 10-2 to eliminate Erik Cardona. Russell's idol play was a preemptive move that proved unnecessary."
+    },
+    {
+      "id": 2,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Aiga (Merged tribe, re-hidden)",
+      "found_by": "Russell Hantz",
+      "day_found": 22,
+      "episode_found": 9,
+      "day_played": 24,
+      "episode_played": 9,
+      "played_on": "Russell Hantz",
+      "played_for": "Russell Hantz",
+      "votes_negated": 7,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "After his first idol was played, the idol was re-hidden. Russell found the re-hidden idol without clues before the next Tribal Council, again through sheer determination and searching. He played it on himself on Day 24 (Episode 9, 'Tastes Like Chicken'), negating 7 votes cast against him by Brett, Dave, John, Kelly, Laura, Monica, and Shambo. With all votes against Russell nullified, Kelly Sharbaugh was eliminated 4-0 by the Foa Foa four. This is one of the most impactful idol plays in Survivor history."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Galu",
+      "found_by": "Erik Cardona",
+      "day_found": 15,
+      "episode_found": 6,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "Erik found the Galu tribe's Hidden Immunity Idol through clues from Exile Island. He was voted out on Day 21 (Episode 8) at the first merged Tribal Council in a 10-2 vote. He did not play the idol, likely feeling safe given Galu's 8-4 numbers advantage over Foa Foa. His elimination while holding the idol marked the beginning of Galu's collapse."
+    }
+  ],
+  "summary": {
+    "total_advantages": 3,
+    "total_idols_found": 3,
+    "total_idols_played": 2,
+    "total_idols_not_played": 1,
+    "total_successful_idol_plays": 1,
+    "total_unsuccessful_idol_plays": 1,
+    "total_voted_out_holding": 1,
+    "idols_by_player": {
+      "Russell Hantz": {
+        "found": 2,
+        "played": 2,
+        "not_played": 0,
+        "votes_negated": 7,
+        "notes": "Revolutionized idol-finding by locating multiple idols without any clues. His Episode 9 idol play negating 7 votes is one of the most impactful in Survivor history. Lost the jury vote 7-2-0 to Natalie White despite dominant gameplay."
+      },
+      "Erik Cardona": {
+        "found": 1,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Found the Galu idol through Exile Island clues but was blindsided at the merge without playing it."
+      }
+    },
+    "special_notes": [
+      "Russell Hantz became the first player in Survivor history to find Hidden Immunity Idols without receiving clues",
+      "Russell's idol play in Episode 9 negating 7 votes was one of the most impactful idol plays in Survivor history at that time",
+      "The Foa Foa Four overcame an 8-4 numbers deficit at the merge, largely due to Russell's idol plays",
+      "Both of Russell's idol finds were accomplished through systematic camp searches rather than clue-hunting",
+      "Erik Cardona was voted out holding the Galu idol at the first merged Tribal Council",
+      "Idols were usable until the Day 36 Tribal Council",
+      "Russell's aggressive idol-hunting strategy changed how future Survivor players approached the game"
+    ]
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16"
+}

@@ -1159,6 +1159,216 @@ body[data-theme="dark"] .survivor-footer {
     opacity: 1;
 }
 
+/* Back to Top FAB */
+.back-to-top-fab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--torch-orange);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.back-to-top-fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+}
+
+/* Spoiler-Free Mode */
+body.spoiler-free .spoiler,
+body.spoiler-free .winner-name,
+body.spoiler-free .castaway-placement .crown,
+body.spoiler-free [data-placement="Winner"] .castaway-name,
+body.spoiler-free .winner-announcement {
+    filter: blur(8px);
+    transition: filter 0.3s;
+    cursor: pointer;
+}
+
+body.spoiler-free .spoiler:hover,
+body.spoiler-free .winner-name:hover,
+body.spoiler-free .castaway-placement .crown:hover,
+body.spoiler-free [data-placement="Winner"] .castaway-name:hover,
+body.spoiler-free .winner-announcement:hover {
+    filter: blur(0);
+}
+
+/* Breadcrumb */
+.survivor-breadcrumb {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid rgba(212, 165, 116, 0.2);
+}
+
+.survivor-breadcrumb a {
+    color: var(--sand);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.survivor-breadcrumb a:hover {
+    color: var(--torch-orange);
+}
+
+.survivor-breadcrumb .separator {
+    color: var(--bamboo);
+    margin: 0 0.5rem;
+    font-size: 0.75rem;
+}
+
+.survivor-breadcrumb .current {
+    color: var(--torch-orange);
+    font-size: 0.85rem;
+}
+
+/* Loading Skeleton */
+.skeleton {
+    background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.skeleton-text {
+    height: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.skeleton-card {
+    height: 200px;
+}
+
+/* Page Load Animation */
+main {
+    animation: pageIn 0.4s ease-out;
+}
+
+@keyframes pageIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Staggered Card Entrance */
+.view-card,
+.castaway-card,
+.tribal-council-card,
+.challenge-card,
+.event-card,
+.advantage-card,
+.season-summary-card {
+    animation: cardIn 0.4s ease-out both;
+}
+
+.view-card:nth-child(1), .castaway-card:nth-child(1) { animation-delay: 0.05s; }
+.view-card:nth-child(2), .castaway-card:nth-child(2) { animation-delay: 0.1s; }
+.view-card:nth-child(3), .castaway-card:nth-child(3) { animation-delay: 0.15s; }
+.view-card:nth-child(4), .castaway-card:nth-child(4) { animation-delay: 0.2s; }
+.view-card:nth-child(5), .castaway-card:nth-child(5) { animation-delay: 0.25s; }
+.view-card:nth-child(6), .castaway-card:nth-child(6) { animation-delay: 0.3s; }
+
+@keyframes cardIn {
+    from { opacity: 0; transform: translateY(16px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgba(255, 107, 53, 0.2);
+    border-top: 3px solid var(--torch-orange);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.loading-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Smooth Table Row Hover */
+.table-dark tbody tr {
+    transition: background-color 0.2s;
+}
+
+.table-dark tbody tr:hover {
+    background-color: rgba(255, 107, 53, 0.15) !important;
+}
+
+/* Stat Box Counter Animation */
+.stat-number {
+    transition: transform 0.3s;
+}
+
+.stat-box:hover .stat-number {
+    transform: scale(1.08);
+}
+
+/* Card Border Glow on Hover */
+.tribal-card,
+.castaway-card,
+.season-summary-card {
+    transition: all 0.3s ease;
+}
+
+/* Smooth Expand/Collapse */
+.voting-details {
+    animation: expandIn 0.3s ease-out;
+}
+
+@keyframes expandIn {
+    from { opacity: 0; max-height: 0; }
+    to { opacity: 1; max-height: 2000px; }
+}
+
+/* Quiz Styles */
+.quiz-option:hover:not([style*="pointer-events: none"]) {
+    border-color: var(--torch-orange) !important;
+    background: rgba(255, 107, 53, 0.1) !important;
+}
+
+/* Progress bar */
+.progress {
+    border-radius: 3px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .tc-header-row, .challenge-header, .event-header, .advantage-header {
@@ -1182,5 +1392,73 @@ body[data-theme="dark"] .survivor-footer {
 
     .nav-links .nav-link {
         font-size: 0.85rem;
+    }
+
+    .survivor-title {
+        font-size: 1.8rem !important;
+    }
+
+    .castaways-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .season-selector {
+        max-width: 140px !important;
+        font-size: 0.8rem;
+    }
+
+    .stat-box {
+        padding: 0.75rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .back-to-top-fab {
+        bottom: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .survivor-breadcrumb {
+        font-size: 0.75rem;
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+    }
+
+    .winner-name {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .survivor-logo {
+        font-size: 1.1rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.75rem !important;
+    }
+
+    .castaway-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .challenge-filter .btn-filter,
+    .item-filter .btn-filter {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.8rem;
+    }
+}
+
+/* Tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .castaways-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

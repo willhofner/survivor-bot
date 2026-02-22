@@ -2,8 +2,13 @@ from flask import Flask, render_template, jsonify, request
 from collections import Counter
 import json
 import os
+import re
+import random
 
 app = Flask(__name__)
+
+# Jinja2 filter for JSON serialization in templates
+app.jinja_env.filters['tojson_safe'] = lambda v: json.dumps(v)
 
 # Available seasons
 AVAILABLE_SEASONS = list(range(1, 40))
@@ -142,38 +147,56 @@ def load_season_data(season_num):
 
     return data
 
+# Load player nicknames
+player_nicknames = {}
+try:
+    with open('data/player_nicknames.json', 'r') as f:
+        player_nicknames = json.load(f).get('nicknames', {})
+except (FileNotFoundError, json.JSONDecodeError):
+    pass
+
+# Load famous quotes
+famous_quotes = []
+try:
+    with open('data/famous_quotes.json', 'r') as f:
+        famous_quotes = json.load(f).get('quotes', [])
+except (FileNotFoundError, json.JSONDecodeError):
+    pass
+
 # Load all seasons at startup
 seasons_data = {}
 for season in AVAILABLE_SEASONS:
     seasons_data[season] = load_season_data(season)
 
 # Helper functions
-def calculate_voting_accuracy(castaway_name, voting_data):
-    """Calculate voting accuracy for a castaway"""
+def calculate_voting_accuracy(castaway_name, voting_data, tribal_councils=None):
+    """Calculate voting accuracy for a castaway using tribal council elimination data."""
     castaway = next((c for c in voting_data['castaways'] if c['name'] == castaway_name), None)
     if not castaway or not castaway.get('voting_history'):
         return {'correct': 0, 'total': 0, 'accuracy': 0}
 
-    # Check if we have detailed episode data (old format)
-    if 'episodes' not in voting_data:
-        # New format doesn't have detailed vote breakdowns yet
-        # Return placeholder until we build full tribal council data
-        total_votes = len(castaway['voting_history'])
+    total_votes = len([v for v in castaway['voting_history'] if v.get('voted_for')])
+    if total_votes == 0:
+        return {'correct': 0, 'total': 0, 'accuracy': 0}
+
+    # Build elimination map from tribal councils (reconstructed or from episodes)
+    elimination_map = {}
+    if tribal_councils:
+        for tc in tribal_councils:
+            elimination_map[tc['number']] = tc.get('eliminated', '')
+    elif 'episodes' in voting_data:
+        for episode in voting_data['episodes']:
+            for tc in episode['tribal_councils']:
+                elimination_map[tc['number']] = tc['eliminated']
+
+    if not elimination_map:
         return {'correct': 0, 'total': total_votes, 'accuracy': 0}
 
     correct_votes = 0
-    total_votes = len(castaway['voting_history'])
-
-    # Build elimination map
-    elimination_map = {}
-    for episode in voting_data['episodes']:
-        for tc in episode['tribal_councils']:
-            elimination_map[tc['number']] = tc['eliminated']
-
     for vote in castaway['voting_history']:
         tc_num = vote.get('tc', vote.get('tribal_council', 0))
         voted_for = vote.get('voted_for', vote.get('vote', ''))
-        if tc_num in elimination_map and voted_for == elimination_map[tc_num]:
+        if voted_for and tc_num in elimination_map and voted_for == elimination_map[tc_num]:
             correct_votes += 1
 
     accuracy = round((correct_votes / total_votes * 100), 1) if total_votes > 0 else 0
@@ -233,19 +256,138 @@ def get_flame_rating(score):
     half_flame = '🔥½' if (score - full_flames) >= 0.5 else ''
     return '🔥' * full_flames + half_flame
 
+def reconstruct_tribal_councils(voting_data, advantages_data):
+    """Reconstruct tribal council data from castaway voting histories when episodes data is missing."""
+    castaways = voting_data.get('castaways', [])
+    if not castaways:
+        return []
+
+    # Build elimination order from placement strings
+    eliminations = []
+    for c in castaways:
+        placement = c.get('placement', '')
+        match = re.match(r'(\d+)(?:st|nd|rd|th)\s+voted\s+out', placement, re.IGNORECASE)
+        if match:
+            eliminations.append((int(match.group(1)), c['name']))
+    eliminations.sort(key=lambda x: x[0])
+    eliminated_names = [name for _, name in eliminations]
+
+    # Collect all votes grouped by TC number
+    tc_votes = {}
+    for castaway in castaways:
+        for vote in castaway.get('voting_history', []):
+            tc_num = vote.get('tribal_council', 0)
+            if tc_num == 0:
+                continue
+            if tc_num not in tc_votes:
+                tc_votes[tc_num] = []
+            target = vote.get('voted_for', '')
+            if target:
+                tc_votes[tc_num].append({
+                    'voter': castaway['name'],
+                    'target': target,
+                    'day': vote.get('day', 0),
+                    'tribe': castaway.get('original_tribe', 'Unknown')
+                })
+
+    if not tc_votes:
+        return []
+
+    # Build tribal councils in order
+    tribal_councils = []
+    sorted_tc_nums = sorted(tc_votes.keys())
+    elim_idx = 0
+
+    for tc_num in sorted_tc_nums:
+        votes = tc_votes[tc_num]
+        if not votes:
+            continue
+
+        day = votes[0]['day']
+
+        # Count votes per target
+        vote_counts = {}
+        vote_voters = {}
+        for v in votes:
+            t = v['target']
+            vote_counts[t] = vote_counts.get(t, 0) + 1
+            vote_voters.setdefault(t, []).append(v['voter'])
+
+        # Build vote groups sorted by count descending
+        vote_groups = []
+        for target, count in sorted(vote_counts.items(), key=lambda x: -x[1]):
+            vote_groups.append({
+                'target': target,
+                'count': count,
+                'voters': vote_voters[target]
+            })
+
+        # Determine who was eliminated
+        # Primary: use elimination order (most reliable)
+        # Fallback: person with the most votes
+        eliminated = 'Unknown'
+        if elim_idx < len(eliminated_names):
+            # Check if the expected elimination is among the vote targets
+            expected = eliminated_names[elim_idx]
+            if expected in vote_counts:
+                eliminated = expected
+                elim_idx += 1
+            elif vote_groups:
+                # Idol may have been played — the majority target survived
+                # Check if the majority target is NOT in our elimination list at this position
+                # Use the next elimination that matches a target at this TC
+                found = False
+                for i in range(elim_idx, min(elim_idx + 3, len(eliminated_names))):
+                    if eliminated_names[i] in vote_counts:
+                        eliminated = eliminated_names[i]
+                        # Reorder elimination list
+                        eliminated_names.pop(i)
+                        eliminated_names.insert(elim_idx, eliminated)
+                        elim_idx += 1
+                        found = True
+                        break
+                if not found:
+                    eliminated = vote_groups[0]['target']
+                    elim_idx += 1
+        elif vote_groups:
+            eliminated = vote_groups[0]['target']
+
+        # Determine tribe from voters
+        tribe_counts = {}
+        for v in votes:
+            t = v['tribe']
+            tribe_counts[t] = tribe_counts.get(t, 0) + 1
+        tribe = max(tribe_counts, key=tribe_counts.get) if tribe_counts else 'Unknown'
+
+        # Estimate episode number
+        episode_number = tc_num
+
+        tc_data = {
+            'number': tc_num,
+            'day': day,
+            'episode_number': episode_number,
+            'tribe': tribe,
+            'eliminated': eliminated,
+            'votes': vote_groups,
+            'notes': ''
+        }
+
+        # Calculate drama score
+        tc_data['drama_score'] = round(calculate_episode_grade(tc_data, advantages_data), 1)
+        tc_data['flame_rating'] = get_flame_rating(tc_data['drama_score'])
+
+        tribal_councils.append(tc_data)
+
+    return tribal_councils
+
+
 # Enrich data for all seasons
 for season_num, season_data in seasons_data.items():
     voting_data = season_data['voting']
     challenge_data = season_data['challenges']
     advantages_data = season_data['advantages']
 
-    # Add headshot URLs to castaways
-    for castaway in voting_data['castaways']:
-        castaway['voting_accuracy'] = calculate_voting_accuracy(castaway['name'], voting_data)
-        castaway['challenge_stats'] = calculate_challenge_beast_metrics(castaway['name'], challenge_data)
-        castaway['headshot'] = season_data['headshots'].get(castaway['name'], '')
-
-    # Calculate grades for all tribal councils (if episodes data exists)
+    # Build tribal councils first (needed for voting accuracy)
     all_tribal_councils = []
     if 'episodes' in voting_data:
         for episode in voting_data['episodes']:
@@ -254,9 +396,17 @@ for season_num, season_data in seasons_data.items():
                 tc['drama_score'] = calculate_episode_grade(tc, advantages_data)
                 tc['flame_rating'] = get_flame_rating(tc['drama_score'])
                 all_tribal_councils.append(tc)
-
-    # Store enriched tribal councils
+    else:
+        all_tribal_councils = reconstruct_tribal_councils(voting_data, advantages_data)
     season_data['tribal_councils'] = all_tribal_councils
+
+    # Add computed stats to castaways (uses tribal councils for voting accuracy)
+    for castaway in voting_data['castaways']:
+        castaway['voting_accuracy'] = calculate_voting_accuracy(
+            castaway['name'], voting_data, tribal_councils=all_tribal_councils)
+        castaway['challenge_stats'] = calculate_challenge_beast_metrics(castaway['name'], challenge_data)
+        castaway['headshot'] = season_data['headshots'].get(castaway['name'], '')
+        castaway['nickname'] = player_nicknames.get(castaway['name'], '')
 
     # Add challenge photos
     challenge_photos_map = season_data['challenge_photos'].get('challenge_photos', {})
@@ -269,6 +419,92 @@ for season_num, season_data in seasons_data.items():
             challenge['photo'] = photo_urls[idx]
         else:
             challenge['photo'] = ''
+
+# --- PRE-COMPUTED STATS ---
+
+def precompute_hall_of_fame():
+    """Pre-compute Hall of Fame stats at startup for performance"""
+    all_castaways = []
+    champions = []
+
+    for season_num, season_data in seasons_data.items():
+        voting_data = season_data['voting']
+        for castaway in voting_data['castaways']:
+            castaway_record = castaway.copy()
+            castaway_record['season'] = season_num
+            castaway_record['season_name'] = SEASON_NAMES[season_num]
+            if castaway.get('placement') == 'Winner':
+                champions.append(castaway_record)
+            all_castaways.append(castaway_record)
+
+    individual_records = {
+        'highest_voting_accuracy_champion': max(champions, key=lambda c: c.get('voting_accuracy', {}).get('accuracy', 0)) if champions else None,
+        'lowest_voting_accuracy_champion': min(champions, key=lambda c: c.get('voting_accuracy', {}).get('accuracy', 0)) if champions else None,
+        'most_challenge_wins': max(all_castaways, key=lambda c: c.get('challenge_stats', {}).get('total_wins', 0)),
+        'most_challenge_wins_champion': max(champions, key=lambda c: c.get('challenge_stats', {}).get('total_wins', 0)) if champions else None,
+        'least_challenge_wins_champion': min(champions, key=lambda c: c.get('challenge_stats', {}).get('total_wins', 0)) if champions else None,
+        'most_votes_received_champion': max(champions, key=lambda c: c.get('votes_against', 0)) if champions else None,
+        'least_votes_received_champion': min(champions, key=lambda c: c.get('votes_against', 0)) if champions else None,
+    }
+
+    idol_records = []
+    for season_num, season_data in seasons_data.items():
+        for adv in season_data['advantages'].get('advantages', []):
+            idol_records.append({**adv, 'season': season_num, 'season_name': SEASON_NAMES[season_num]})
+
+    most_votes_nullified = max(idol_records, key=lambda x: x.get('votes_negated', 0)) if idol_records else None
+
+    successful_plays_by_player = Counter()
+    for idol in idol_records:
+        if idol.get('result') == 'successful':
+            player = idol.get('found_by') or idol.get('played_for')
+            if player:
+                successful_plays_by_player[player] += 1
+    most_successful_idol_player = max(successful_plays_by_player.items(), key=lambda x: x[1]) if successful_plays_by_player else (None, 0)
+
+    idols_by_season = Counter()
+    items_by_season = Counter()
+    for idol in idol_records:
+        if idol.get('day_played'):
+            idols_by_season[idol['season']] += 1
+        items_by_season[idol['season']] += 1
+
+    most_idols_played_season = max(idols_by_season.items(), key=lambda x: x[1]) if idols_by_season else (None, 0)
+    most_items_season = max(items_by_season.items(), key=lambda x: x[1]) if items_by_season else (None, 0)
+
+    season_records = {}
+    for season_num, season_data in seasons_data.items():
+        advantages = season_data['advantages'].get('advantages', [])
+        voting_data = season_data['voting']
+        votes_nullified = sum(adv.get('votes_negated', 0) for adv in advantages)
+        voted_out_holding = sum(1 for adv in advantages if adv.get('voted_out_holding'))
+        all_vote_targets = set()
+        for episode in voting_data.get('episodes', []):
+            for tc in episode.get('tribal_councils', []):
+                for vote_group in tc.get('votes', []):
+                    all_vote_targets.add(vote_group.get('target'))
+        season_records[season_num] = {
+            'season': season_num,
+            'season_name': SEASON_NAMES[season_num],
+            'items_played': len([a for a in advantages if a.get('day_played')]),
+            'votes_nullified': votes_nullified,
+            'voted_out_holding': voted_out_holding,
+            'players_receiving_votes': len(all_vote_targets)
+        }
+
+    return {
+        'individual_records': individual_records,
+        'most_votes_nullified': most_votes_nullified,
+        'most_successful_idol_player': most_successful_idol_player,
+        'most_idols_played_season': most_idols_played_season,
+        'most_items_season': most_items_season,
+        'season_records': season_records,
+        'all_castaways': all_castaways,
+        'idol_records': idol_records,
+    }
+
+hall_of_fame_cache = precompute_hall_of_fame()
+
 
 def get_season_param(default=28):
     """Safely parse season query parameter"""
@@ -287,13 +523,15 @@ def index():
     total_castaways = sum(len(sd['voting']['castaways']) for sd in seasons_data.values())
     total_challenges = sum(len(sd['challenges']['challenges']) for sd in seasons_data.values())
     featured = random.choice(winner_profiles) if winner_profiles else None
+    quote = random.choice(famous_quotes) if famous_quotes else None
     return render_template('index.html',
                          seasons=AVAILABLE_SEASONS,
                          season_names=SEASON_NAMES,
                          total_castaways=total_castaways,
                          total_challenges=total_challenges,
                          winner_count=len(winner_profiles),
-                         featured_winner=featured)
+                         featured_winner=featured,
+                         quote=quote)
 
 @app.route('/tribal-councils')
 def tribal_councils():
@@ -384,107 +622,14 @@ def get_castaway(season, name):
 
 @app.route('/hall-of-fame')
 def hall_of_fame():
-    """Hall of Fame - all-time records across all seasons"""
-
-    # Calculate individual records
-    all_castaways = []
-    champions = []
-
-    for season_num, season_data in seasons_data.items():
-        voting_data = season_data['voting']
-        challenge_data = season_data['challenges']
-        advantages_data = season_data['advantages']
-
-        for castaway in voting_data['castaways']:
-            # Add season context
-            castaway_record = castaway.copy()
-            castaway_record['season'] = season_num
-            castaway_record['season_name'] = SEASON_NAMES[season_num]
-
-            # Track champions separately
-            if castaway.get('placement') == 'Winner':
-                champions.append(castaway_record)
-
-            all_castaways.append(castaway_record)
-
-    # Calculate individual records
-    individual_records = {
-        'highest_voting_accuracy_champion': max(champions, key=lambda c: c.get('voting_accuracy', {}).get('accuracy', 0)) if champions else None,
-        'lowest_voting_accuracy_champion': min(champions, key=lambda c: c.get('voting_accuracy', {}).get('accuracy', 0)) if champions else None,
-        'most_challenge_wins': max(all_castaways, key=lambda c: c.get('challenge_stats', {}).get('total_wins', 0)),
-        'most_challenge_wins_champion': max(champions, key=lambda c: c.get('challenge_stats', {}).get('total_wins', 0)) if champions else None,
-        'least_challenge_wins_champion': min(champions, key=lambda c: c.get('challenge_stats', {}).get('total_wins', 0)) if champions else None,
-        'most_votes_received_champion': max(champions, key=lambda c: c.get('votes_against', 0)) if champions else None,
-        'least_votes_received_champion': min(champions, key=lambda c: c.get('votes_against', 0)) if champions else None,
-    }
-
-    # Calculate idol/advantage records
-    idol_records = []
-    for season_num, season_data in seasons_data.items():
-        advantages = season_data['advantages'].get('advantages', [])
-        for adv in advantages:
-            idol_records.append({
-                **adv,
-                'season': season_num,
-                'season_name': SEASON_NAMES[season_num]
-            })
-
-    # Most votes nullified by a single idol
-    most_votes_nullified = max(idol_records, key=lambda x: x.get('votes_negated', 0)) if idol_records else None
-
-    # Most successful idol plays by a player
-    successful_plays_by_player = Counter()
-    for idol in idol_records:
-        if idol.get('result') == 'successful':
-            player = idol.get('found_by') or idol.get('played_for')
-            if player:
-                successful_plays_by_player[player] += 1
-
-    most_successful_idol_player = max(successful_plays_by_player.items(), key=lambda x: x[1]) if successful_plays_by_player else (None, 0)
-
-    # Most idols played in a season
-    idols_by_season = Counter()
-    items_by_season = Counter()
-    for idol in idol_records:
-        if idol.get('day_played'):
-            idols_by_season[idol['season']] += 1
-        items_by_season[idol['season']] += 1
-
-    most_idols_played_season = max(idols_by_season.items(), key=lambda x: x[1]) if idols_by_season else (None, 0)
-    most_items_season = max(items_by_season.items(), key=lambda x: x[1]) if items_by_season else (None, 0)
-
-    # Season records
-    season_records = {}
-    for season_num, season_data in seasons_data.items():
-        advantages = season_data['advantages'].get('advantages', [])
-        voting_data = season_data['voting']
-
-        votes_nullified = sum(adv.get('votes_negated', 0) for adv in advantages)
-        voted_out_holding = sum(1 for adv in advantages if adv.get('voted_out_holding'))
-
-        # Count unique players who received votes
-        all_vote_targets = set()
-        for episode in voting_data.get('episodes', []):
-            for tc in episode.get('tribal_councils', []):
-                for vote_group in tc.get('votes', []):
-                    all_vote_targets.add(vote_group.get('target'))
-
-        season_records[season_num] = {
-            'season': season_num,
-            'season_name': SEASON_NAMES[season_num],
-            'items_played': len([a for a in advantages if a.get('day_played')]),
-            'votes_nullified': votes_nullified,
-            'voted_out_holding': voted_out_holding,
-            'players_receiving_votes': len(all_vote_targets)
-        }
-
+    """Hall of Fame - all-time records across all seasons (pre-computed)"""
     return render_template('hall_of_fame.html',
-                         individual_records=individual_records,
-                         most_votes_nullified=most_votes_nullified,
-                         most_successful_idol_player=most_successful_idol_player,
-                         most_idols_played_season=most_idols_played_season,
-                         most_items_season=most_items_season,
-                         season_records=season_records,
+                         individual_records=hall_of_fame_cache['individual_records'],
+                         most_votes_nullified=hall_of_fame_cache['most_votes_nullified'],
+                         most_successful_idol_player=hall_of_fame_cache['most_successful_idol_player'],
+                         most_idols_played_season=hall_of_fame_cache['most_idols_played_season'],
+                         most_items_season=hall_of_fame_cache['most_items_season'],
+                         season_records=hall_of_fame_cache['season_records'],
                          seasons=AVAILABLE_SEASONS,
                          season_names=SEASON_NAMES)
 
@@ -569,6 +714,9 @@ def seasons_overview():
         winner_name = winner['name'] if winner else 'Unknown'
 
         summary = SEASON_SUMMARIES.get(season_num, {})
+        recs = SEASON_RECOMMENDATIONS.get(season_num, [])
+        rec_names = [{'season': r, 'name': SEASON_NAMES.get(r, '')} for r in recs[:3]]
+
         season_summaries.append({
             'season': season_num,
             'name': SEASON_NAMES[season_num],
@@ -580,6 +728,7 @@ def seasons_overview():
             'twist': summary.get('twist', ''),
             'iconic_moment': summary.get('iconic_moment', ''),
             'filming_location': summary.get('filming_location', ''),
+            'similar_seasons': rec_names,
         })
 
     return render_template('seasons.html',
@@ -657,6 +806,550 @@ def analytics():
 
 # --- GLOBAL SEARCH API ---
 
+@app.route('/quiz')
+def quiz():
+    """Survivor IQ Quiz page"""
+    quiz_data = {}
+    try:
+        with open('data/quiz_questions.json', 'r') as f:
+            quiz_data = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        quiz_data = {"categories": []}
+
+    return render_template('quiz.html',
+                         quiz_data=quiz_data,
+                         seasons=AVAILABLE_SEASONS,
+                         season_names=SEASON_NAMES)
+
+
+@app.route('/returning-players')
+def returning_players():
+    """Returning players tracking across seasons"""
+    players_data = []
+    try:
+        with open('data/returning_players.json', 'r') as f:
+            data = json.load(f)
+            players_data = data.get('returning_players', [])
+    except (FileNotFoundError, json.JSONDecodeError):
+        players_data = []
+
+    return render_template('returning_players.html',
+                         players=players_data,
+                         seasons=AVAILABLE_SEASONS,
+                         season_names=SEASON_NAMES)
+
+
+@app.route('/paths-to-victory')
+def paths_to_victory():
+    """Interactive Paths to Victory — explore how each winner won"""
+    archetypes = {}
+    for p in winner_profiles:
+        a = p.get('archetype', {})
+        scores = {
+            'Strategic Mastermind': a.get('voting_control', 0) + a.get('strategic_aggression', 0),
+            'Challenge Beast': a.get('physical_game', 0) * 2,
+            'Social Player': a.get('social_capital', 0) * 2,
+        }
+        primary = max(scores, key=scores.get)
+        vals = [a.get('voting_control', 0), a.get('physical_game', 0),
+                a.get('social_capital', 0), a.get('strategic_aggression', 0)]
+        if max(vals) - min(vals) <= 3:
+            primary = 'Balanced'
+        archetypes.setdefault(primary, []).append(p)
+
+    return render_template('paths_to_victory.html',
+                         winners=winner_profiles,
+                         archetypes=archetypes,
+                         seasons=AVAILABLE_SEASONS,
+                         season_names=SEASON_NAMES)
+
+
+@app.route('/challenge-performance')
+def challenge_performance():
+    """Cross-season challenge performance analysis"""
+    # Per-season challenge stats
+    season_challenge_stats = []
+    top_performers = []
+
+    for s in AVAILABLE_SEASONS:
+        sd = seasons_data[s]
+        challenges = sd['challenges']['challenges']
+        castaways = sd['voting']['castaways']
+
+        immunity_challenges = [c for c in challenges if 'Immunity' in c.get('challenge_type', '')]
+        reward_challenges = [c for c in challenges if 'Reward' in c.get('challenge_type', '') and c.get('challenge_type') != 'Immunity']
+
+        # Find top challenge performer in this season
+        performer_wins = {}
+        for c in challenges:
+            for w in c.get('winners', []):
+                performer_wins[w] = performer_wins.get(w, 0) + 1
+        if performer_wins:
+            top_name = max(performer_wins, key=performer_wins.get)
+            top_performers.append({
+                'name': top_name,
+                'season': s,
+                'season_name': SEASON_NAMES[s],
+                'wins': performer_wins[top_name],
+            })
+
+        season_challenge_stats.append({
+            'season': s,
+            'name': SEASON_NAMES[s],
+            'total': len(challenges),
+            'immunity': len(immunity_challenges),
+            'reward': len(reward_challenges),
+        })
+
+    # Sort top performers by wins
+    top_performers.sort(key=lambda x: -x['wins'])
+
+    # Winner challenge wins from profiles
+    winner_challenge_data = []
+    for p in winner_profiles:
+        winner_challenge_data.append({
+            'season': p['season'],
+            'name': p['name'],
+            'immunity_wins': p['stats'].get('immunity_wins', 0),
+            'reward_wins': p['stats'].get('reward_wins', 0),
+            'total_wins': p['stats'].get('immunity_wins', 0) + p['stats'].get('reward_wins', 0),
+        })
+
+    return render_template('challenge_performance.html',
+                         season_challenge_stats=season_challenge_stats,
+                         top_performers=top_performers[:20],
+                         winner_challenge_data=winner_challenge_data,
+                         seasons=AVAILABLE_SEASONS,
+                         season_names=SEASON_NAMES)
+
+
+@app.route('/advantages-timeline')
+def advantages_timeline():
+    """Cross-season advantages timeline visualization"""
+    all_advantages = []
+    for season_num in AVAILABLE_SEASONS:
+        season_data = seasons_data[season_num]
+        for adv in season_data['advantages'].get('advantages', []):
+            all_advantages.append({
+                **adv,
+                'season': season_num,
+                'season_name': SEASON_NAMES[season_num],
+            })
+
+    # Group by type
+    type_counts = Counter()
+    for adv in all_advantages:
+        adv_type = adv.get('type', adv.get('advantage_type', 'Unknown'))
+        type_counts[adv_type] += 1
+
+    # Per-season counts
+    season_counts = {}
+    for s in AVAILABLE_SEASONS:
+        advs = seasons_data[s]['advantages'].get('advantages', [])
+        season_counts[s] = {
+            'total': len(advs),
+            'played': sum(1 for a in advs if a.get('day_played') or a.get('played_day')),
+            'successful': sum(1 for a in advs if a.get('result') == 'successful'),
+            'votes_negated': sum(a.get('votes_negated', 0) for a in advs),
+        }
+
+    return render_template('advantages_timeline.html',
+                         all_advantages=all_advantages,
+                         type_counts=dict(type_counts.most_common()),
+                         season_counts=season_counts,
+                         seasons=AVAILABLE_SEASONS,
+                         season_names=SEASON_NAMES)
+
+
+@app.route('/voting-patterns')
+def voting_patterns():
+    """FTC vote distribution and voting pattern analysis"""
+    # Collect FTC data from winner profiles
+    ftc_data = []
+    for p in winner_profiles:
+        ftc_data.append({
+            'season': p['season'],
+            'season_name': p.get('season_name', SEASON_NAMES.get(p['season'], '')),
+            'winner': p['name'],
+            'jury_votes': p['stats'].get('jury_votes', ''),
+            'voting_accuracy': p['stats'].get('voting_accuracy', 0),
+            'votes_against': p['stats'].get('times_received_votes', p['stats'].get('votes_against', 0)),
+        })
+
+    # Voting accuracy distribution
+    accuracy_buckets = {'90-100%': 0, '80-89%': 0, '70-79%': 0, '60-69%': 0, '<60%': 0}
+    for p in winner_profiles:
+        acc = p['stats'].get('voting_accuracy', 0)
+        if acc >= 90:
+            accuracy_buckets['90-100%'] += 1
+        elif acc >= 80:
+            accuracy_buckets['80-89%'] += 1
+        elif acc >= 70:
+            accuracy_buckets['70-79%'] += 1
+        elif acc >= 60:
+            accuracy_buckets['60-69%'] += 1
+        else:
+            accuracy_buckets['<60%'] += 1
+
+    return render_template('voting_patterns.html',
+                         ftc_data=ftc_data,
+                         accuracy_buckets=accuracy_buckets,
+                         winners=winner_profiles,
+                         seasons=AVAILABLE_SEASONS,
+                         season_names=SEASON_NAMES)
+
+
+# --- GLOBAL SEARCH & API ---
+
+@app.route('/compare-seasons')
+def compare_seasons():
+    """Compare two seasons side-by-side"""
+    season_stats = []
+    for s in AVAILABLE_SEASONS:
+        sd = seasons_data[s]
+        castaways = sd['voting']['castaways']
+        challenges = sd['challenges']['challenges']
+        advantages = sd['advantages'].get('advantages', [])
+        tcs = sd['tribal_councils']
+        winner = next((p for p in winner_profiles if p['season'] == s), None)
+
+        # Calculate aggregate stats
+        total_votes_cast = sum(len(c.get('voting_history', [])) for c in castaways)
+        avg_drama = round(sum(tc.get('drama_score', 5) for tc in tcs) / max(len(tcs), 1), 1)
+        idols_played = sum(1 for a in advantages if a.get('day_played') or a.get('played_day'))
+        votes_negated = sum(a.get('votes_negated', 0) for a in advantages)
+
+        season_stats.append({
+            'season': s,
+            'name': SEASON_NAMES[s],
+            'castaway_count': len(castaways),
+            'challenge_count': len(challenges),
+            'tribal_count': len(tcs),
+            'advantage_count': len(advantages),
+            'idols_played': idols_played,
+            'votes_negated': votes_negated,
+            'avg_drama': avg_drama,
+            'total_votes_cast': total_votes_cast,
+            'winner': winner['name'] if winner else 'Unknown',
+            'winner_archetype': winner.get('archetype', {}) if winner else {},
+            'winner_stats': winner.get('stats', {}) if winner else {},
+            'filming_location': SEASON_SUMMARIES.get(s, {}).get('filming_location', ''),
+            'tagline': SEASON_SUMMARIES.get(s, {}).get('tagline', ''),
+        })
+
+    return render_template('compare_seasons.html',
+                         season_stats=season_stats,
+                         seasons=AVAILABLE_SEASONS,
+                         season_names=SEASON_NAMES)
+
+
+# Season recommendations — similar seasons based on shared traits
+SEASON_RECOMMENDATIONS = {
+    1: [3, 2, 9],     # Early social games
+    2: [1, 3, 10],    # Classic survival
+    3: [1, 2, 11],    # African adventure, early era
+    4: [13, 31, 33],  # Power shifts, strategic evolution
+    5: [24, 22, 21],  # Dominant winners
+    6: [15, 28, 37],  # Strategic gameplay
+    7: [16, 20, 28],  # Iconic characters, big moves
+    8: [20, 31, 34],  # All-Stars returnee seasons
+    9: [18, 25, 11],  # Underdog stories
+    10: [35, 30, 22], # Dominant tribe, immunity runs
+    11: [25, 18, 9],  # Under-the-radar winners
+    12: [13, 7, 28],  # Idol gameplay beginnings
+    13: [31, 7, 4],   # Underdog tribe comeback
+    14: [15, 24, 33], # Strategic dominance
+    15: [28, 6, 37],  # Strategic masterclasses
+    16: [20, 7, 31],  # All-time great gameplay
+    17: [21, 30, 39], # Chaotic, unpredictable
+    18: [3, 25, 37],  # Likable winners, social games
+    19: [28, 20, 35], # Aggressive idol play
+    20: [16, 8, 31],  # All-Stars, legendary moves
+    21: [17, 30, 39], # Underestimated winners
+    22: [5, 24, 23],  # Dominant winners
+    23: [22, 27, 8],  # Returning player dynamics
+    24: [5, 22, 26],  # Dominant winner control
+    25: [9, 18, 37],  # Underdog comebacks
+    26: [8, 31, 34],  # Returnee seasons, strategic
+    27: [29, 20, 23], # Blood vs Water family dynamics
+    28: [15, 37, 20], # Elite strategic play
+    29: [27, 37, 33], # Blood vs Water, revenge arcs
+    30: [10, 35, 19], # Immunity runs
+    31: [20, 16, 28], # All-Stars strategic depth
+    32: [25, 18, 37], # Underdog winners
+    33: [37, 29, 31], # Modern strategic gameplay
+    34: [8, 20, 31],  # Game Changers, returnees
+    35: [30, 19, 36], # Idol-heavy, twists
+    36: [35, 34, 33], # Ghost Island, advantage era
+    37: [28, 15, 33], # Elite strategic play, David vs Goliath
+    38: [22, 23, 34], # Controversial twists
+    39: [17, 38, 35], # Controversial seasons
+}
+
+
+@app.route('/alliances')
+def alliances():
+    """Alliance tracking and voting bloc network diagrams"""
+    season = get_season_param()
+    sd = seasons_data[season]
+    castaways = sd['voting']['castaways']
+    tcs = sd['tribal_councils']
+
+    # Build vote map: tc_number -> {voter_name: target}
+    tc_vote_map = {}
+    for castaway in castaways:
+        for vote in castaway.get('voting_history', []):
+            tc_num = vote.get('tribal_council', vote.get('tc', 0))
+            if tc_num == 0:
+                continue
+            target = vote.get('voted_for', vote.get('vote', ''))
+            if target:
+                tc_vote_map.setdefault(tc_num, {})[castaway['name']] = target
+
+    # Count co-votes (same target at same tribal council)
+    co_votes = {}
+    shared_tcs = {}
+    for tc_num, voters in tc_vote_map.items():
+        voter_list = list(voters.items())
+        for i in range(len(voter_list)):
+            for j in range(i + 1, len(voter_list)):
+                name_a, target_a = voter_list[i]
+                name_b, target_b = voter_list[j]
+                pair = tuple(sorted([name_a, name_b]))
+                shared_tcs[pair] = shared_tcs.get(pair, 0) + 1
+                if target_a == target_b:
+                    co_votes[pair] = co_votes.get(pair, 0) + 1
+
+    # Build node data
+    tribe_set = set()
+    nodes = []
+    for c in castaways:
+        tribe = c.get('original_tribe', 'Unknown')
+        tribe_set.add(tribe)
+        nodes.append({
+            'name': c['name'],
+            'tribe': tribe,
+            'placement': c.get('placement', ''),
+            'is_winner': c.get('placement') == 'Winner',
+        })
+
+    # Build edges
+    edges = []
+    for pair, count in co_votes.items():
+        total = shared_tcs.get(pair, 1)
+        rate = round(count / total * 100, 1) if total > 0 else 0
+        if count >= 2:
+            edges.append({
+                'source': pair[0],
+                'target': pair[1],
+                'co_votes': count,
+                'total_shared': total,
+                'rate': rate,
+            })
+    edges.sort(key=lambda x: -x['co_votes'])
+
+    # Top voting pairs
+    top_pairs = edges[:25]
+
+    # Detect voting blocs: groups of 3+ players who all co-voted frequently
+    strong_threshold = max(3, len(tcs) // 4) if tcs else 3
+    blocs = []
+    strong_pairs = {pair: count for pair, count in co_votes.items() if count >= strong_threshold}
+    # Build adjacency from strong pairs
+    adj = {}
+    for (a, b), count in strong_pairs.items():
+        adj.setdefault(a, set()).add(b)
+        adj.setdefault(b, set()).add(a)
+    # Find cliques (groups where everyone is connected)
+    visited_blocs = set()
+    for player in adj:
+        neighbors = adj[player]
+        for n in neighbors:
+            common = neighbors & adj.get(n, set())
+            bloc = frozenset({player, n} | common)
+            if len(bloc) >= 3 and bloc not in visited_blocs:
+                # Verify it's a real clique (all pairs connected)
+                bloc_list = list(bloc)
+                is_clique = True
+                for ii in range(len(bloc_list)):
+                    for jj in range(ii + 1, len(bloc_list)):
+                        if bloc_list[jj] not in adj.get(bloc_list[ii], set()):
+                            is_clique = False
+                            break
+                    if not is_clique:
+                        break
+                if is_clique:
+                    visited_blocs.add(bloc)
+                    avg_strength = sum(co_votes.get(tuple(sorted([bloc_list[ii], bloc_list[jj]])), 0)
+                                       for ii in range(len(bloc_list))
+                                       for jj in range(ii + 1, len(bloc_list))) / max(1, len(bloc_list) * (len(bloc_list) - 1) // 2)
+                    blocs.append({
+                        'members': sorted(bloc_list),
+                        'size': len(bloc_list),
+                        'avg_strength': round(avg_strength, 1),
+                    })
+    blocs.sort(key=lambda x: (-x['size'], -x['avg_strength']))
+
+    # Tribe colors
+    tribes = sorted(tribe_set)
+
+    return render_template('alliances.html',
+        nodes=nodes,
+        edges=edges[:60],
+        top_pairs=top_pairs,
+        blocs=blocs[:10],
+        tribes=tribes,
+        season=season,
+        season_name=SEASON_NAMES[season],
+        seasons=AVAILABLE_SEASONS,
+        season_names=SEASON_NAMES)
+
+
+@app.route('/power-rankings')
+def power_rankings():
+    """Episode-by-episode power ranking timeline"""
+    season = get_season_param()
+    sd = seasons_data[season]
+    castaways = sd['voting']['castaways']
+    tcs = sd['tribal_councils']
+    challenges = sd['challenges']['challenges']
+
+    # Build per-player timeline: at each tribal council, compute a "power score"
+    # Power score factors: votes received (penalty), challenge wins (bonus), voting accuracy (bonus)
+
+    # Build map of tc_num -> eliminated person
+    eliminated_at = {}
+    for tc in tcs:
+        eliminated_at[tc['number']] = tc.get('eliminated', '')
+
+    # Build map of tc_num -> who voted for whom
+    tc_votes_received = {}  # tc_num -> {target: count}
+    tc_vote_map = {}
+    for c in castaways:
+        for vote in c.get('voting_history', []):
+            tc_num = vote.get('tribal_council', vote.get('tc', 0))
+            if tc_num == 0:
+                continue
+            target = vote.get('voted_for', '')
+            if target:
+                tc_votes_received.setdefault(tc_num, {})
+                tc_votes_received[tc_num][target] = tc_votes_received[tc_num].get(target, 0) + 1
+                tc_vote_map.setdefault(tc_num, {})[c['name']] = target
+
+    # Challenge wins per player up to each point
+    challenge_wins_by_tc = {}  # player -> cumulative wins at each tc
+    challenge_list = sorted(challenges, key=lambda c: c.get('episode', c.get('day', 0)))
+    tc_days = {tc['number']: tc.get('day', 0) for tc in tcs}
+
+    sorted_tc_nums = sorted(tc_votes_received.keys())
+    if not sorted_tc_nums:
+        sorted_tc_nums = sorted(tc['number'] for tc in tcs) if tcs else []
+
+    # Track cumulative challenge wins per player
+    cumulative_wins = {}
+    challenge_idx = 0
+
+    # Build power scores for each player at each TC
+    player_timelines = {}
+    eliminated_players = set()
+
+    for tc_num in sorted_tc_nums:
+        tc_day = tc_days.get(tc_num, 0)
+
+        # Count challenge wins up to this day
+        while challenge_idx < len(challenge_list):
+            ch = challenge_list[challenge_idx]
+            ch_day = ch.get('day', ch.get('episode', 0)) or 0
+            if ch_day > tc_day and tc_day > 0:
+                break
+            for winner in ch.get('winners', []):
+                cumulative_wins[winner] = cumulative_wins.get(winner, 0) + 1
+            challenge_idx += 1
+
+        votes_at_tc = tc_votes_received.get(tc_num, {})
+        votes_cast = tc_vote_map.get(tc_num, {})
+        eliminated = eliminated_at.get(tc_num, '')
+
+        for c in castaways:
+            name = c['name']
+            if name in eliminated_players:
+                continue
+
+            # Power score components
+            votes_received = votes_at_tc.get(name, 0)
+            ch_wins = cumulative_wins.get(name, 0)
+            voted_correctly = 1 if (name in votes_cast and votes_cast[name] == eliminated) else 0
+
+            # Power score: higher = more powerful
+            score = 50  # base
+            score -= votes_received * 8  # penalty for receiving votes
+            score += ch_wins * 5  # bonus for challenge wins
+            score += voted_correctly * 3  # bonus for correct vote
+            score = max(5, min(100, score))
+
+            player_timelines.setdefault(name, []).append({
+                'tc': tc_num,
+                'score': score,
+                'votes_received': votes_received,
+                'voted_correctly': voted_correctly,
+            })
+
+        if eliminated:
+            eliminated_players.add(eliminated)
+
+    # Sort players by final power score (or placement)
+    placement_order = {}
+    for c in castaways:
+        p = c.get('placement', '')
+        if p == 'Winner':
+            placement_order[c['name']] = 0
+        elif 'Runner' in p:
+            placement_order[c['name']] = 1
+        else:
+            match = re.match(r'(\d+)', p)
+            placement_order[c['name']] = int(match.group(1)) if match else 99
+
+    sorted_players = sorted(player_timelines.keys(), key=lambda n: placement_order.get(n, 99))
+
+    # Build chart-ready data
+    timeline_data = []
+    for name in sorted_players:
+        tribe = next((c.get('original_tribe', 'Unknown') for c in castaways if c['name'] == name), 'Unknown')
+        placement = next((c.get('placement', '') for c in castaways if c['name'] == name), '')
+        timeline_data.append({
+            'name': name,
+            'tribe': tribe,
+            'placement': placement,
+            'is_winner': placement == 'Winner',
+            'data': player_timelines[name],
+        })
+
+    return render_template('power_rankings.html',
+        timeline_data=timeline_data,
+        tc_labels=['TC' + str(tc) for tc in sorted_tc_nums],
+        season=season,
+        season_name=SEASON_NAMES[season],
+        seasons=AVAILABLE_SEASONS,
+        season_names=SEASON_NAMES)
+
+
+@app.route('/api/season-recommendations/<int:season>')
+def season_recommendations(season):
+    """Get season recommendations based on similar seasons"""
+    if season not in SEASON_RECOMMENDATIONS:
+        return jsonify([])
+    recs = []
+    for rec_season in SEASON_RECOMMENDATIONS[season]:
+        summary = SEASON_SUMMARIES.get(rec_season, {})
+        recs.append({
+            'season': rec_season,
+            'name': SEASON_NAMES.get(rec_season, ''),
+            'tagline': summary.get('tagline', ''),
+            'theme': summary.get('theme', ''),
+        })
+    return jsonify(recs)
+
+
 @app.route('/api/search')
 def global_search():
     """Search across all castaways in all seasons"""
@@ -676,6 +1369,49 @@ def global_search():
                     'url': f'/castaways?season={season_num}'
                 })
     return jsonify(results[:20])
+
+
+@app.route('/api/random-quote')
+def random_quote():
+    """Return a random famous Survivor quote"""
+    if not famous_quotes:
+        return jsonify({'error': 'No quotes available'}), 404
+    quote = random.choice(famous_quotes)
+    return jsonify(quote)
+
+
+@app.route('/api/random-player')
+def random_player():
+    """Return a random castaway from any season"""
+    season_num = random.choice(AVAILABLE_SEASONS)
+    castaways = seasons_data[season_num]['voting']['castaways']
+    if not castaways:
+        return jsonify({'error': 'No castaways found'}), 404
+    castaway = random.choice(castaways)
+    return jsonify({
+        'name': castaway['name'],
+        'season': season_num,
+        'season_name': SEASON_NAMES[season_num],
+        'placement': castaway.get('placement', 'Unknown'),
+        'url': f'/castaways?season={season_num}'
+    })
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    """Custom 404 page"""
+    return render_template('404.html',
+                         seasons=AVAILABLE_SEASONS,
+                         season_names=SEASON_NAMES), 404
+
+
+@app.errorhandler(500)
+def internal_error(e):
+    """Custom 500 page"""
+    return render_template('500.html',
+                         seasons=AVAILABLE_SEASONS,
+                         season_names=SEASON_NAMES), 500
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000)

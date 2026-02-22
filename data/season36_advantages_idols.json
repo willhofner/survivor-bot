@@ -1,0 +1,316 @@
+{
+  "season": 36,
+  "season_name": "Survivor: Ghost Island",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Legacy Advantage",
+      "tribe": "Ghost Island",
+      "found_by": "Jacob Derwin",
+      "day_found": 3,
+      "episode_found": 1,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Originally Sierra Dawn Thomas's Legacy Advantage from Season 34 (Game Changers), repurposed as a Ghost Island relic. Jacob found it when exiled to Ghost Island after Malolo lost the Day 3 immunity challenge. The twist required him to immediately will it to a member of the opposing Naviti tribe. Jacob chose Morgan Ricke as the recipient. Jacob was voted out on Day 6 without ever using it."
+    },
+    {
+      "id": 2,
+      "type": "Legacy Advantage (transferred)",
+      "tribe": "Naviti",
+      "found_by": "Morgan Ricke",
+      "day_found": 4,
+      "episode_found": 2,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Morgan received the Legacy Advantage from Jacob Derwin, finding it in her bag. The advantage granted immunity at either the final 13 or final 6. However, Morgan was voted out on Day 9 (Episode 3). Upon her elimination, she willed the Legacy Advantage to Domenick Abbate."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Naviti",
+      "found_by": "Domenick Abbate",
+      "day_found": 3,
+      "episode_found": 1,
+      "day_played": 38,
+      "episode_played": 13,
+      "played_on": "Domenick Abbate",
+      "played_for": "Domenick Abbate",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "On Night 3, Domenick searched for and found a Hidden Immunity Idol at the Naviti camp. He also crafted a fake idol from this find. Domenick held the real idol for nearly the entire game, finally playing it on himself at the finale (Episode 13, Day 38). It negated no votes against him. He became the first player to simultaneously hold the Legacy Advantage and a Hidden Immunity Idol."
+    },
+    {
+      "id": 4,
+      "type": "Legacy Advantage (second transfer)",
+      "tribe": "Naviti (from Morgan)",
+      "found_by": "Domenick Abbate",
+      "day_found": 10,
+      "episode_found": 3,
+      "day_played": 22,
+      "episode_played": 7,
+      "played_on": "Domenick Abbate",
+      "played_for": "Domenick Abbate",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Domenick received the Legacy Advantage after Morgan Ricke was voted out on Day 9, finding it in his bag the following morning. He played it at the first merged tribal council on Day 22 (Episode 7), choosing the final 13 option. However, Domenick received no votes that tribal, making the play unnecessary. The votes went against Chris Noble and Libby Vincek."
+    },
+    {
+      "id": 5,
+      "type": "Hidden Immunity Idol (James Clement's idol from China)",
+      "tribe": "Malolo camp",
+      "found_by": "Michael Yerger",
+      "day_found": 7,
+      "episode_found": 3,
+      "day_played": 14,
+      "episode_played": 5,
+      "played_on": "Stephanie Johnson",
+      "played_for": "Stephanie Johnson",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "A Ghost Island relic: one of the two idols James Clement infamously failed to play in Survivor: China (Season 15), resulting in his blindside. Michael and Brendan found it together at the Malolo camp after the tribe swap on Day 7. Michael played it on Stephanie Johnson at the Day 14 Tribal Council (Episode 5), but Stephanie received no votes. Brendan Shapiro was eliminated instead in a 5-1 vote."
+    },
+    {
+      "id": 6,
+      "type": "Hidden Immunity Idol (Ozzy's fake idol from Micronesia, repurposed as real)",
+      "tribe": "Malolo camp",
+      "found_by": "Michael Yerger",
+      "day_found": 16,
+      "episode_found": 6,
+      "day_played": 19,
+      "episode_played": 8,
+      "played_on": "Michael Yerger",
+      "played_for": "Michael Yerger",
+      "votes_negated": 7,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "A Ghost Island relic: the fake idol Ozzy Lusth crafted in Survivor: Micronesia (Season 16), which fooled Jason Siska. In Ghost Island, it was repurposed as a real, playable Hidden Immunity Idol. Michael found it at the Malolo camp. He played it on himself at the Day 19 merge tribal (Episode 8, 'The Sea Slug Slugger'), spectacularly negating 7 votes against him. The remaining votes eliminated Libby Vincek. Michael was the youngest player (18 years old) to find a Hidden Immunity Idol."
+    },
+    {
+      "id": 7,
+      "type": "Hidden Immunity Idol (Andrea's unplayed idol from Caramoan)",
+      "tribe": "Naviti camp",
+      "found_by": "Domenick Abbate",
+      "day_found": 4,
+      "episode_found": 1,
+      "day_played": 36,
+      "episode_played": 12,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "A Ghost Island relic: the idol Andrea Boehlke never played in Survivor: Caramoan (Season 26). This was actually Domenick's fake idol - he crafted it to look real and gave it to Chris Noble on Day 4, claiming it was the real deal. Chris was suspicious but kept it. This was a strategic fake, not a real advantage. Domenick later bluffed with it at tribal council on Day 36 (Episode 12), handing it to Jeff Probst before the vote and claiming it was real, which scared Sebastian into not playing his Extra Vote."
+    },
+    {
+      "id": 8,
+      "type": "Hidden Immunity Idol (J.T.'s idol from Game Changers)",
+      "tribe": "Ghost Island",
+      "found_by": "Chris Noble",
+      "day_found": 20,
+      "episode_found": 7,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "A Ghost Island relic: the idol J.T. Thomas failed to bring to Tribal Council in Season 34 (Game Changers). Chris found it at Ghost Island on Day 20 during the merge feast when a note in his buff directed him there. The idol was only good at the next Tribal Council, but a game of chance allowed him to extend its life. Chris extended it once but lost his vote on the second attempt. Despite holding the idol, Chris never played it and was voted out on Day 22 (Episode 7) in a dramatic blindside orchestrated by Domenick, with the idol still in his pocket."
+    },
+    {
+      "id": 9,
+      "type": "Hidden Immunity Idol (Erik Reichenbach's immunity necklace from Micronesia)",
+      "tribe": "Yanuya (reward challenge)",
+      "found_by": "Wendell Holland",
+      "day_found": 18,
+      "episode_found": 6,
+      "day_played": 38,
+      "episode_played": 13,
+      "played_on": "Laurel Johnson",
+      "played_for": "Laurel Johnson",
+      "votes_negated": 1,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "A Ghost Island relic: the immunity necklace Erik Reichenbach famously gave away in Survivor: Micronesia (Season 16), leading to his blindside. It was repurposed as a Hidden Immunity Idol. Wendell found it after winning the Day 18 Reward Challenge on the Yanuya tribe. He played it on Laurel Johnson at the final 5 tribal council on Day 38 (Episode 13) to solidify their bond, negating 1 vote against her. Donathan Hurley was eliminated that night."
+    },
+    {
+      "id": 10,
+      "type": "Hidden Immunity Idol (Tai and Scot's idol halves from Kaoh Rong)",
+      "tribe": "Lavita camp (merged tribe)",
+      "found_by": "Donathan Hurley",
+      "day_found": 25,
+      "episode_found": 9,
+      "day_played": 29,
+      "episode_played": 10,
+      "played_on": "Donathan Hurley",
+      "played_for": "Donathan Hurley",
+      "votes_negated": 1,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "A Ghost Island relic: the two idol halves from Survivor: Kaoh Rong (Season 32) that Tai Trang and Scot Pollard held. Donathan first found one powerless half (Scot's) under the shelter, then located the matching half (Tai's) to complete the functional idol. He was forced to reveal the find to tribemates who saw him searching. Donathan played the combined idol on himself at the Day 29 split tribal council (Episode 10), negating 1 vote. His ally Jenna Bowman was blindsided instead after Donathan refused her pleas to play it on her."
+    },
+    {
+      "id": 11,
+      "type": "Extra Vote (Sarah's vote steal from Game Changers, repurposed)",
+      "tribe": "Ghost Island",
+      "found_by": "Kellyn Bevilaqua",
+      "day_found": 18,
+      "episode_found": 6,
+      "day_played": 29,
+      "episode_played": 10,
+      "played_on": null,
+      "played_for": "Kellyn Bevilaqua",
+      "votes_negated": 0,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "A Ghost Island relic: Sarah Lacina's vote steal/advantage from Season 34 (Game Changers), repurposed as an Extra Vote. Kellyn received it after visiting Ghost Island on Day 18. She used it at the Day 29 double elimination split tribal council (Episode 10), casting two votes for Laurel Johnson to split votes with the group targeting Michael Yerger. Michael was eliminated in the end. The Extra Vote was then put back in play for another castaway to find."
+    },
+    {
+      "id": 12,
+      "type": "Extra Vote (recycled from Kellyn)",
+      "tribe": "Ghost Island",
+      "found_by": "Sebastian Noel",
+      "day_found": 33,
+      "episode_found": 11,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "After Kellyn's Extra Vote was used on Day 29, it was put back into play on Ghost Island. Sebastian found it on Day 33. He planned to use it at the final 6 to blindside Domenick, but Angela revealed his plan. At tribal council, Domenick bluffed by handing his fake idol to Jeff Probst, claiming it was real. Sebastian fell for the trick and chose not to play his Extra Vote. He was voted out on Day 36 (Episode 12) still holding the advantage, the victim of Domenick's masterful bluff."
+    },
+    {
+      "id": 13,
+      "type": "Challenge Advantage (Malcolm's advantage from Philippines)",
+      "tribe": "Ghost Island",
+      "found_by": "Wendell Holland",
+      "day_found": 35,
+      "episode_found": 12,
+      "day_played": 36,
+      "episode_played": 12,
+      "played_on": null,
+      "played_for": "Wendell Holland",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "A Ghost Island relic: Malcolm Freberg's challenge advantage from Survivor: Philippines (Season 25). Wendell obtained it when he voluntarily sent himself to Ghost Island during the Family Visit twist on Day 35. The advantage gave him a second chance at the Day 36 immunity challenge. Despite using the advantage, Wendell did not win the immunity challenge, making the play unsuccessful."
+    },
+    {
+      "id": 14,
+      "type": "Fake Idol (Jay Starrett's fake idol from Millennials vs Gen X)",
+      "tribe": "Lavita camp (merged tribe)",
+      "found_by": "Unknown",
+      "day_found": null,
+      "episode_found": null,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "A Ghost Island relic: the fake idol Jay Starrett played in Survivor: Millennials vs. Gen X (Season 33), originally crafted by David Wright. It was placed at the Lavita camp but remained fake and non-functional in Ghost Island as well. It served as a trap/decoy rather than a usable advantage. No player is known to have found or played this item."
+    }
+  ],
+  "summary": {
+    "total_advantages": 14,
+    "total_idols_found": 7,
+    "total_idols_played": 5,
+    "total_idols_not_played": 2,
+    "total_successful_idol_plays": 3,
+    "total_unsuccessful_idol_plays": 2,
+    "total_voted_out_holding": 2,
+    "idols_by_player": {
+      "Domenick Abbate": {
+        "found": 1,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 0,
+        "notes": "Runner-up (lost in first-ever tied Final Tribal Council jury vote, 5-5, with Laurel's vote breaking the tie for Wendell). Found his idol on Night 3 and held it the entire game. Also crafted a highly effective fake idol that fooled Chris Noble and later Sebastian."
+      },
+      "Michael Yerger": {
+        "found": 2,
+        "played": 2,
+        "not_played": 0,
+        "votes_negated": 7,
+        "notes": "Found two Ghost Island relics (James Clement's idol, Ozzy's fake-turned-real idol). First play was unsuccessful (played on Stephanie, she got no votes). Second play was spectacular, negating 7 votes. Youngest player (18) to find an idol."
+      },
+      "Wendell Holland": {
+        "found": 1,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 1,
+        "notes": "Won the season. Found Erik Reichenbach's immunity necklace repurposed as an idol. Played it on ally Laurel Johnson at final 5 to solidify their bond."
+      },
+      "Chris Noble": {
+        "found": 1,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Found J.T.'s idol from Game Changers on Ghost Island. Voted out holding it on Day 22 in a blindside orchestrated by his rival Domenick."
+      },
+      "Donathan Hurley": {
+        "found": 1,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 1,
+        "notes": "Found the combined Tai/Scot idol halves from Kaoh Rong. Played it on himself at the split tribal, refusing to share it with his ally Jenna who was eliminated instead."
+      }
+    },
+    "advantages_by_player": {
+      "Jacob Derwin": {
+        "advantages": ["Legacy Advantage (original finder)"],
+        "notes": "Found the Legacy Advantage on Ghost Island but was required to immediately will it to an opposing tribe member. Chose Morgan Ricke. Voted out Day 6."
+      },
+      "Morgan Ricke": {
+        "advantages": ["Legacy Advantage (received from Jacob)"],
+        "notes": "Received the Legacy Advantage from Jacob. Voted out Day 9 and willed it to Domenick Abbate."
+      },
+      "Domenick Abbate": {
+        "advantages": ["Legacy Advantage (received from Morgan)"],
+        "notes": "Received and played the Legacy Advantage at the merge tribal. Received no votes, making the play unnecessary."
+      },
+      "Kellyn Bevilaqua": {
+        "advantages": ["Extra Vote"],
+        "notes": "Received the Extra Vote from Ghost Island on Day 18. Used it at the Day 29 split tribal to cast two votes for Laurel, helping eliminate Michael."
+      },
+      "Sebastian Noel": {
+        "advantages": ["Extra Vote (recycled)"],
+        "notes": "Found the recycled Extra Vote on Day 33. Voted out holding it after Domenick's fake idol bluff scared him into not playing it."
+      },
+      "Wendell Holland": {
+        "advantages": ["Challenge Advantage"],
+        "notes": "Obtained Malcolm's challenge advantage from Ghost Island. Used it at the Day 36 immunity challenge but still lost."
+      }
+    },
+    "special_notes": [
+      "Ghost Island's central theme was 'reversing the curse' of failed advantages from previous seasons",
+      "Ghost Island relics came from Seasons 15 (China), 16 (Micronesia), 25 (Philippines), 26 (Caramoan), 32 (Kaoh Rong), 33 (Millennials vs Gen X), and 34 (Game Changers)",
+      "Some relics were repurposed (Ozzy's fake idol became real, Erik's necklace became an idol) while others remained unchanged (Jay's fake idol stayed fake)",
+      "The Legacy Advantage passed through THREE players (Jacob → Morgan → Domenick) before being played",
+      "The Extra Vote was recycled: Kellyn used it on Day 29, then it was re-hidden for Sebastian to find on Day 33",
+      "Domenick crafted one of the most effective fake idols in Survivor history, fooling both Chris Noble and Sebastian Noel",
+      "The season ended with the first-ever tied Final Tribal Council jury vote (5-5 between Wendell and Domenick), with Laurel's vote breaking the tie",
+      "Michael Yerger (18) became the youngest player to find a Hidden Immunity Idol",
+      "Chris Noble's game of chance on Ghost Island allowed him to extend his idol's shelf life but cost him his vote on the second attempt",
+      "Several Ghost Island visits yielded no advantages - players sometimes 'lost' the game of chance and got nothing"
+    ]
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16"
+}

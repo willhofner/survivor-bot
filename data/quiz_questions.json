@@ -1,0 +1,2237 @@
+{
+  "categories": [
+    {
+      "name": "Winners & Final Tribal",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Who was the first winner of Survivor?",
+          "options": [
+            "Richard Hatch",
+            "Tina Wesson",
+            "Ethan Zohn",
+            "Vecepia Towery"
+          ],
+          "correct": 0,
+          "difficulty": "easy",
+          "season": 1,
+          "fun_fact": "Richard famously competed naked in the final immunity challenge and won with a 4-3 jury vote over Kelly Wiglesworth."
+        },
+        {
+          "id": 2,
+          "question": "Who won Survivor: Heroes vs. Villains?",
+          "options": [
+            "Russell Hantz",
+            "Parvati Shallow",
+            "Sandra Diaz-Twine",
+            "Jerri Manthey"
+          ],
+          "correct": 2,
+          "difficulty": "easy",
+          "season": 20,
+          "fun_fact": "Sandra became the first two-time winner in Survivor history, having also won Pearl Islands (Season 7)."
+        },
+        {
+          "id": 3,
+          "question": "Who won Survivor: Cagayan?",
+          "options": [
+            "Spencer Bledsoe",
+            "Tony Vlachos",
+            "Woo Hwang",
+            "Kass McQuillen"
+          ],
+          "correct": 1,
+          "difficulty": "easy",
+          "season": 28,
+          "fun_fact": "Tony built a spy shack near the camp water well to eavesdrop on other players conversations."
+        },
+        {
+          "id": 4,
+          "question": "Which winner won by a unanimous jury vote in their first appearance, receiving every single vote?",
+          "options": [
+            "Kim Spradlin",
+            "Earl Cole",
+            "Jeremy Collins",
+            "Cochran"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 14,
+          "fun_fact": "Earl Cole's unanimous 9-0-0 victory in Fiji was the first unanimous win in Survivor history."
+        },
+        {
+          "id": 5,
+          "question": "Who won the second season of Survivor, The Australian Outback?",
+          "options": [
+            "Colby Donaldson",
+            "Tina Wesson",
+            "Keith Famie",
+            "Elisabeth Filarski"
+          ],
+          "correct": 1,
+          "difficulty": "easy",
+          "season": 2,
+          "fun_fact": "Colby famously chose to take Tina to the Final 2 instead of the less-liked Keith Famie, costing himself the win in what he called a move based on integrity."
+        },
+        {
+          "id": 6,
+          "question": "In what season did the mandatory fire-making challenge at Final 4 debut?",
+          "options": [
+            "Season 33: Millennials vs. Gen X",
+            "Season 34: Game Changers",
+            "Season 35: Heroes vs. Healers vs. Hustlers",
+            "Season 36: Ghost Island"
+          ],
+          "correct": 2,
+          "difficulty": "medium",
+          "season": 35,
+          "fun_fact": "Starting in Season 35, the final 4 immunity challenge loser could no longer be voted out. The two non-immune, non-saved players competed in fire-making."
+        },
+        {
+          "id": 7,
+          "question": "Which winner is known for the \"anybody but me\" strategy?",
+          "options": [
+            "Sandra Diaz-Twine",
+            "Vecepia Towery",
+            "Amber Brkich",
+            "Danni Boatwright"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 7,
+          "fun_fact": "Sandra's strategy of deflecting the target onto anyone else became her signature approach and worked in two separate winning seasons."
+        },
+        {
+          "id": 8,
+          "question": "Who is the youngest person to ever win Survivor?",
+          "options": [
+            "Fabio Birza",
+            "Sophie Clarke",
+            "Jenna Morasca",
+            "Parvati Shallow"
+          ],
+          "correct": 2,
+          "difficulty": "hard",
+          "season": 6,
+          "fun_fact": "Jenna Morasca was 21 years old when she won Survivor: The Amazon, making her the youngest winner in show history."
+        },
+        {
+          "id": 9,
+          "question": "In Survivor: Tocantins, who defeated Stephen Fishbach to win the title of Sole Survivor?",
+          "options": [
+            "Coach Wade",
+            "Erinn Lobdell",
+            "J.T. Thomas",
+            "Taj Johnson-George"
+          ],
+          "correct": 2,
+          "difficulty": "medium",
+          "season": 18,
+          "fun_fact": "J.T. played what many consider the perfect game: winning unanimously after never receiving a single vote against him all season."
+        },
+        {
+          "id": 10,
+          "question": "Who won Survivor: Micronesia - Fans vs. Favorites?",
+          "options": [
+            "Cirie Fields",
+            "Amanda Kimmel",
+            "Parvati Shallow",
+            "Natalie Bolton"
+          ],
+          "correct": 2,
+          "difficulty": "easy",
+          "season": 16,
+          "fun_fact": "Parvati's Black Widow Brigade alliance is considered one of the most dominant alliances in Survivor history."
+        },
+        {
+          "id": 11,
+          "question": "What was the jury vote count in the Survivor: Borneo finale?",
+          "options": [
+            "4-3",
+            "5-2",
+            "6-1",
+            "7-0"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 1,
+          "fun_fact": "Richard Hatch won 4-3 over Kelly Wiglesworth, with Greg Buis famously asking both finalists to pick a number between 1 and 10 to decide his vote."
+        },
+        {
+          "id": 12,
+          "question": "Who is the oldest person to win Survivor?",
+          "options": [
+            "Tom Westman",
+            "Bob Crowley",
+            "Mike Holloway",
+            "Yul Kwon"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 17,
+          "fun_fact": "Bob Crowley was 57 years old when he won Survivor: Gabon, making him the oldest winner in show history."
+        },
+        {
+          "id": 13,
+          "question": "Who won Survivor: Cambodia - Second Chance?",
+          "options": [
+            "Spencer Bledsoe",
+            "Kelley Wentworth",
+            "Jeremy Collins",
+            "Kimmi Kappenberg"
+          ],
+          "correct": 2,
+          "difficulty": "easy",
+          "season": 31,
+          "fun_fact": "Jeremy revealed at Final Tribal Council that his wife Val was pregnant, which moved several jurors and contributed to his unanimous 10-0-0 win."
+        },
+        {
+          "id": 14,
+          "question": "Which winner was voted out on Day 8 and returned from Edge of Extinction to win?",
+          "options": [
+            "Rick Devens",
+            "Chris Underwood",
+            "Gavin Whitson",
+            "Victoria Baamonde"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 38,
+          "fun_fact": "Chris Underwood was voted out on Day 8, returned on Day 35, and won the game 4 days later, making it the most controversial win in Survivor history."
+        },
+        {
+          "id": 15,
+          "question": "Which female winner won 4 individual immunity challenges during her winning season?",
+          "options": [
+            "Kim Spradlin",
+            "Parvati Shallow",
+            "Denise Stapley",
+            "Natalie Anderson"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": 24,
+          "fun_fact": "Kim Spradlin dominated One World both strategically and physically in what many call one of the most dominant winning games ever."
+        },
+        {
+          "id": 16,
+          "question": "Who won Survivor: David vs. Goliath?",
+          "options": [
+            "Mike White",
+            "Nick Wilson",
+            "Davie Rickenbacker",
+            "Christian Hubicki"
+          ],
+          "correct": 1,
+          "difficulty": "easy",
+          "season": 37,
+          "fun_fact": "Nick created named alliances with almost every player in the game, including The Rockstars, The Mason-Dixon Line, and The Thoroughbreds."
+        },
+        {
+          "id": 17,
+          "question": "Who won Survivor: Samoa despite being overshadowed by Russell Hantz's edit?",
+          "options": [
+            "Mick Trimming",
+            "Natalie White",
+            "Jaison Robinson",
+            "Brett Clouser"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 19,
+          "fun_fact": "Natalie's under-the-radar social game defeated Russell Hantz's aggressive strategic game 7-2, proving social bonds often trump flashy moves."
+        },
+        {
+          "id": 18,
+          "question": "Which winner gave up immunity at the Final 4 Tribal Council and made fire to earn their way to FTC?",
+          "options": [
+            "Ben Driebergen",
+            "Chris Underwood",
+            "Wendell Holland",
+            "Nick Wilson"
+          ],
+          "correct": 1,
+          "difficulty": "hard",
+          "season": 38,
+          "fun_fact": "Chris gave up immunity and made fire against Rick Devens, a bold move that impressed the jury and helped him win the title."
+        },
+        {
+          "id": 19,
+          "question": "Who won Survivor: Ghost Island in the first-ever jury vote tiebreaker?",
+          "options": [
+            "Domenick Abbate",
+            "Wendell Holland",
+            "Laurel Johnson",
+            "Sebastian Noel"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 36,
+          "fun_fact": "Wendell and Domenick tied 5-5, with Laurel casting the deciding vote for Wendell. It is the only time a jury vote has gone to a tiebreaker."
+        },
+        {
+          "id": 20,
+          "question": "Which Survivor winner had previously been on The Amazing Race before winning Survivor?",
+          "options": [
+            "Ethan Zohn",
+            "Amber Brkich",
+            "Rob Mariano",
+            "Natalie Anderson"
+          ],
+          "correct": 3,
+          "difficulty": "hard",
+          "season": 29,
+          "fun_fact": "Natalie Anderson and her twin sister Nadiya competed on The Amazing Race Season 21 before Natalie won Survivor: San Juan del Sur."
+        },
+        {
+          "id": 21,
+          "question": "On which season did Boston Rob Mariano finally win Survivor on his fourth attempt?",
+          "options": [
+            "Season 8: All-Stars",
+            "Season 20: Heroes vs. Villains",
+            "Season 22: Redemption Island",
+            "Season 39: Island of the Idols"
+          ],
+          "correct": 2,
+          "difficulty": "easy",
+          "season": 22,
+          "fun_fact": "Rob played in Marquesas, All-Stars, Heroes vs. Villains, and finally won Redemption Island, controlling the game from start to finish."
+        },
+        {
+          "id": 22,
+          "question": "Who won Survivor: Kaoh Rong (Season 32)?",
+          "options": [
+            "Aubry Bracco",
+            "Michele Fitzgerald",
+            "Tai Trang",
+            "Cydney Gillon"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 32,
+          "fun_fact": "Michele's win over fan-favorite Aubry sparked one of the biggest debates in Survivor history about whether social play or strategic play should be more valued."
+        },
+        {
+          "id": 23,
+          "question": "Who won Survivor: Palau?",
+          "options": [
+            "Stephenie LaGrossa",
+            "Tom Westman",
+            "Ian Rosenberger",
+            "Katie Gallagher"
+          ],
+          "correct": 1,
+          "difficulty": "easy",
+          "season": 10,
+          "fun_fact": "Tom Westman, a NYC firefighter, won 5 individual immunity challenges and dominated both the physical and strategic game."
+        }
+      ]
+    },
+    {
+      "name": "Iconic Moments",
+      "questions": [
+        {
+          "id": 24,
+          "question": "Who fell into the campfire in Survivor: The Australian Outback?",
+          "options": [
+            "Colby Donaldson",
+            "Michael Skupin",
+            "Keith Famie",
+            "Rodger Bingham"
+          ],
+          "correct": 1,
+          "difficulty": "easy",
+          "season": 2,
+          "fun_fact": "Michael Skupin passed out and fell hands-first into the fire on Day 17, resulting in severe burns and the first medical evacuation in Survivor history."
+        },
+        {
+          "id": 25,
+          "question": "Who told the \"dead grandmother\" lie in Survivor: Pearl Islands?",
+          "options": [
+            "Rupert Boneham",
+            "Burton Roberts",
+            "Jon \"Jonny Fairplay\" Dalton",
+            "Andrew Savage"
+          ],
+          "correct": 2,
+          "difficulty": "easy",
+          "season": 7,
+          "fun_fact": "Jonny Fairplay's friend Thunder D visited during the loved ones visit and confirmed his grandmother had died. She was actually alive and in on the scheme."
+        },
+        {
+          "id": 26,
+          "question": "Which castaway gave up individual immunity and was immediately voted out in Micronesia?",
+          "options": [
+            "Jason Siska",
+            "Erik Reichenbach",
+            "James Clement",
+            "Ozzy Lusth"
+          ],
+          "correct": 1,
+          "difficulty": "easy",
+          "season": 16,
+          "fun_fact": "Erik was convinced by Cirie, Natalie, Amanda, and Parvati to give up the immunity necklace. Jeff Probst called it one of the dumbest moves in Survivor history."
+        },
+        {
+          "id": 27,
+          "question": "Who gave the famous \"Rats and Snakes\" speech at the first-ever Final Tribal Council?",
+          "options": [
+            "Greg Buis",
+            "Sue Hawk",
+            "Rudy Boesch",
+            "Colleen Haskell"
+          ],
+          "correct": 1,
+          "difficulty": "easy",
+          "season": 1,
+          "fun_fact": "Sue Hawk's speech comparing Kelly to a rat and Richard to a snake is considered the most iconic jury speech in Survivor history."
+        },
+        {
+          "id": 28,
+          "question": "Which castaway was famously voted out with two hidden immunity idols in their pocket?",
+          "options": [
+            "Ozzy Lusth",
+            "James Clement",
+            "Malcolm Freberg",
+            "Andrea Boehlke"
+          ],
+          "correct": 1,
+          "difficulty": "easy",
+          "season": 15,
+          "fun_fact": "James Clement was voted out at Final 7 in China while holding two hidden immunity idols, one of the biggest blunders in Survivor history."
+        },
+        {
+          "id": 29,
+          "question": "In which season did the famous mutiny occur where Candice and Penner switched tribes?",
+          "options": [
+            "Season 7: Pearl Islands",
+            "Season 13: Cook Islands",
+            "Season 20: Heroes vs. Villains",
+            "Season 27: Blood vs. Water"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 13,
+          "fun_fact": "Candice and Penner mutinied from Aitu to Raro, but the remaining Aitu Four (Yul, Ozzy, Becky, Sundra) went on one of the greatest underdog runs in Survivor history."
+        },
+        {
+          "id": 30,
+          "question": "Who was the first person to be eliminated from Survivor?",
+          "options": [
+            "Sonja Christopher",
+            "B.B. Andersen",
+            "Debb Eaton",
+            "Diane Ogden"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 1,
+          "fun_fact": "Sonja Christopher, a 63-year-old retired musician, was the first person voted out of Survivor. She tripped during the first immunity challenge."
+        },
+        {
+          "id": 31,
+          "question": "What iconic prop did Rupert Boneham wear throughout Pearl Islands?",
+          "options": [
+            "A cowboy hat",
+            "A tie-dye shirt",
+            "Face paint",
+            "A bandana"
+          ],
+          "correct": 1,
+          "difficulty": "easy",
+          "season": 7,
+          "fun_fact": "Rupert's tie-dye shirt became so iconic that it was essentially his brand. He was so beloved by fans that he won a  million viewer vote during All-Stars."
+        },
+        {
+          "id": 32,
+          "question": "In which season did Coach Wade tell his famous story about being captured by Amazonian natives?",
+          "options": [
+            "Season 18: Tocantins",
+            "Season 20: Heroes vs. Villains",
+            "Season 23: South Pacific",
+            "Season 26: Caramoan"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 18,
+          "fun_fact": "Coach's story about being kidnapped while kayaking was met with extreme skepticism by his tribemates, particularly Stephen Fishbach and J.T. Thomas."
+        },
+        {
+          "id": 33,
+          "question": "What did Russell Hantz do to sabotage his tribe in Samoa?",
+          "options": [
+            "Dumped the rice",
+            "Burned socks and emptied canteens",
+            "Poisoned the water",
+            "Destroyed the fishing net"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 19,
+          "fun_fact": "Russell dumped water from canteens, burned socks, and hid the machete to create chaos at camp while forming alliances with everyone."
+        },
+        {
+          "id": 34,
+          "question": "In Heroes vs. Villains, what costly mistake did Tyson make that led to his own elimination?",
+          "options": [
+            "Told Russell his plan",
+            "Switched his vote against the agreed-upon plan",
+            "Gave up immunity",
+            "Played his idol on the wrong person"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 20,
+          "fun_fact": "Tyson changed his vote from Russell to Parvati, splitting the vote incorrectly and allowing Russell to idol out Tyson. It is considered one of the worst strategic blunders ever."
+        },
+        {
+          "id": 35,
+          "question": "Which season featured the Outcasts twist, where previously voted-out players returned?",
+          "options": [
+            "Season 7: Pearl Islands",
+            "Season 19: Samoa",
+            "Season 22: Redemption Island",
+            "Season 38: Edge of Extinction"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 7,
+          "fun_fact": "Burton Roberts and Lill Morris returned via the Outcast twist. It was so controversial that producers did not repeat the exact format for years."
+        },
+        {
+          "id": 36,
+          "question": "Who sat out of the final immunity challenge in Borneo, confident he would be taken to the end?",
+          "options": [
+            "Rudy Boesch",
+            "Richard Hatch",
+            "Kelly Wiglesworth",
+            "Sue Hawk"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 1,
+          "fun_fact": "Richard deliberately stepped off during the Final 3 immunity challenge, knowing whoever won would take him. Kelly won and took Richard, proving his read correct."
+        },
+        {
+          "id": 37,
+          "question": "Which two players quit simultaneously in Survivor: Nicaragua?",
+          "options": [
+            "Janu and Osten",
+            "NaOnka Mixon and Kelly Shinn",
+            "Holly and Dan",
+            "Brenda and Chase"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 21,
+          "fun_fact": "NaOnka and Purple Kelly quit at the same Tribal Council, the only time two players have quit simultaneously. Both were still allowed on the jury."
+        },
+        {
+          "id": 38,
+          "question": "In which season did a player famously say \"It's a f***ing stick!\" about a fake idol?",
+          "options": [
+            "Season 16: Micronesia",
+            "Season 17: Gabon",
+            "Season 19: Samoa",
+            "Season 21: Nicaragua"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": 16,
+          "fun_fact": "Eliza Orlins said this when Jason Siska gave her the fake idol Ozzy had carved from a stick. She played it anyway in desperation, and Jeff confirmed it was not a real idol."
+        },
+        {
+          "id": 39,
+          "question": "Who won the  million America's Tribal Council fan vote in All-Stars?",
+          "options": [
+            "Boston Rob",
+            "Rupert Boneham",
+            "Colby Donaldson",
+            "Ethan Zohn"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 8,
+          "fun_fact": "Rupert Boneham was so popular with viewers that he won the additional  million fan vote during the All-Stars reunion, separate from the game prize."
+        },
+        {
+          "id": 40,
+          "question": "Which castaway was blindsided in one of the most emotional Tribal Councils ever during Game Changers?",
+          "options": [
+            "Malcolm Freberg",
+            "Sandra Diaz-Twine",
+            "Cirie Fields",
+            "Ozzy Lusth"
+          ],
+          "correct": 2,
+          "difficulty": "hard",
+          "season": 34,
+          "fun_fact": "Cirie was eliminated at the Final 6 without receiving a single vote, as all other players were immune through idols and advantages. It is called \"Advantagegeddon.\""
+        },
+        {
+          "id": 41,
+          "question": "In which season did Jenna Morasca quit to be with her sick mother?",
+          "options": [
+            "Season 6: The Amazon",
+            "Season 8: All-Stars",
+            "Season 16: Micronesia",
+            "Season 20: Heroes vs. Villains"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 8,
+          "fun_fact": "Jenna's mother was battling cancer, and Jenna felt compelled to leave the game. Her mother passed away just 8 days after Jenna returned home."
+        },
+        {
+          "id": 42,
+          "question": "What was the name of the chicken that became a mascot on Survivor: China?",
+          "options": [
+            "Henrietta",
+            "Margaret",
+            "Mark",
+            "No chicken was a mascot in China"
+          ],
+          "correct": 3,
+          "difficulty": "hard",
+          "season": 15,
+          "fun_fact": "The famous Survivor chicken was actually Mark the Chicken from Kaoh Rong (Season 32), who Tai Trang bonded with and kept as a pet, refusing to let the tribe eat him."
+        },
+        {
+          "id": 43,
+          "question": "Who said \"I'm against you, Russell\" during the Samoa Final Tribal Council?",
+          "options": [
+            "Shambo Waters",
+            "Laura Morett",
+            "Natalie White",
+            "Erik Cardona"
+          ],
+          "correct": 2,
+          "difficulty": "hard",
+          "season": 19,
+          "fun_fact": "Natalie's firm stance against Russell at FTC was part of her quiet social game that contrasted sharply with Russell's aggressive gameplay and contributed to her win."
+        },
+        {
+          "id": 44,
+          "question": "Which Tribal Council featured the first-ever joint tribal where two tribes voted together?",
+          "options": [
+            "Season 34: Game Changers",
+            "Season 35: HHH",
+            "Season 36: Ghost Island",
+            "Season 28: Cagayan"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": 34,
+          "fun_fact": "In Game Changers, Mana and Nuku attended tribal together. Malcolm Freberg was blindsided when the other tribe targeted him, unable to defend himself."
+        },
+        {
+          "id": 45,
+          "question": "Who collapsed from heat exhaustion during a challenge in Kaoh Rong, requiring emergency medical care?",
+          "options": [
+            "Tai Trang",
+            "Caleb Reynolds",
+            "Neal Gottlieb",
+            "Debbie Wanner"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 32,
+          "fun_fact": "Caleb Reynolds was airlifted out after collapsing during a grueling reward challenge in extreme heat. Two other players also needed medical attention at the same time."
+        }
+      ]
+    },
+    {
+      "name": "Hidden Immunity Idols",
+      "questions": [
+        {
+          "id": 46,
+          "question": "In which season were hidden immunity idols first introduced?",
+          "options": [
+            "Season 9: Vanuatu",
+            "Season 11: Guatemala",
+            "Season 12: Panama",
+            "Season 14: Fiji"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 11,
+          "fun_fact": "Gary Hogeboom found and played the first hidden immunity idol in Guatemala, setting a precedent for every future season."
+        },
+        {
+          "id": 47,
+          "question": "Who played two hidden immunity idols at the same Tribal Council in Heroes vs. Villains?",
+          "options": [
+            "Sandra Diaz-Twine",
+            "Parvati Shallow",
+            "Amanda Kimmel",
+            "Russell Hantz"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 20,
+          "fun_fact": "Parvati played one idol on Jerri and one on Sandra at the merge Tribal Council, blindsiding JT's alliance in one of the most iconic idol plays ever."
+        },
+        {
+          "id": 48,
+          "question": "What is the \"idol nullifier\" and in which season was it first used?",
+          "options": [
+            "Cancels an idol play, Season 37",
+            "A fake idol planted by production, Season 35",
+            "Steals someone's idol, Season 34",
+            "Expires all active idols, Season 30"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 37,
+          "fun_fact": "Carl Boudreaux used the idol nullifier in David vs. Goliath to cancel Dan Rengering's idol play, sending Dan home in a shocking blindside."
+        },
+        {
+          "id": 49,
+          "question": "Who found hidden immunity idols without any clues, changing how players searched for them?",
+          "options": [
+            "Russell Hantz",
+            "Tony Vlachos",
+            "Ben Driebergen",
+            "Tai Trang"
+          ],
+          "correct": 0,
+          "difficulty": "easy",
+          "season": 19,
+          "fun_fact": "Russell Hantz found idols without clues in both Samoa and Heroes vs. Villains, fundamentally changing how players searched for idols in future seasons."
+        },
+        {
+          "id": 50,
+          "question": "In Survivor: Cagayan, what was Tony Vlachos's special idol nicknamed?",
+          "options": [
+            "The God Idol",
+            "The Super Idol",
+            "The Tyler Perry Idol",
+            "The Power Idol"
+          ],
+          "correct": 2,
+          "difficulty": "medium",
+          "season": 28,
+          "fun_fact": "Named after Tyler Perry who reportedly suggested the idea, this idol could be played AFTER votes were read. Tony never had to use it."
+        },
+        {
+          "id": 51,
+          "question": "What was unique about Yul Kwon's hidden immunity idol in Cook Islands?",
+          "options": [
+            "It could be played after votes were read",
+            "It was hidden on Exile Island",
+            "It was valid through the Final 3",
+            "All of the above"
+          ],
+          "correct": 3,
+          "difficulty": "medium",
+          "season": 13,
+          "fun_fact": "Yul's God Idol could be played after votes were read and was valid through Final 3, making it perhaps the most powerful idol ever. He used it as a strategic threat without actually playing it."
+        },
+        {
+          "id": 52,
+          "question": "Ozzy Lusth carved a fake idol out of what material in Micronesia?",
+          "options": [
+            "Coconut shell",
+            "A stick",
+            "Clay",
+            "A rock"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 16,
+          "fun_fact": "Ozzy carved a face into a stick and wrapped it in string. Jason Siska found it and believed it was a real idol, playing it at Tribal Council to his embarrassment."
+        },
+        {
+          "id": 53,
+          "question": "How many votes did Kelley Wentworth negate with her idol play at the Final 9 in Cambodia?",
+          "options": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "correct": 3,
+          "difficulty": "hard",
+          "season": 31,
+          "fun_fact": "All 9 other players voted for Kelley, but her idol negated every single vote. Andrew Savage was eliminated on the revote, leading to his shocked reaction."
+        },
+        {
+          "id": 54,
+          "question": "In which season did three hidden immunity idols get played at a single Tribal Council?",
+          "options": [
+            "Season 30: Worlds Apart",
+            "Season 34: Game Changers",
+            "Season 28: Cagayan",
+            "Season 35: HHH"
+          ],
+          "correct": 1,
+          "difficulty": "hard",
+          "season": 34,
+          "fun_fact": "At the Final 6 in Game Changers, Tai played two idols and Troyzan played one, leaving only Sarah (with immunity) safe through normal means."
+        },
+        {
+          "id": 55,
+          "question": "In which season did Ben Driebergen find and play idols at three consecutive Tribal Councils?",
+          "options": [
+            "Season 33: Millennials vs. Gen X",
+            "Season 35: Heroes vs. Healers vs. Hustlers",
+            "Season 36: Ghost Island",
+            "Season 37: David vs. Goliath"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 35,
+          "fun_fact": "Ben found idols at the Final 7, 6, and 5 Tribal Councils, saving himself each time when he was the obvious target."
+        },
+        {
+          "id": 56,
+          "question": "What happened to the idol that JT gave to Russell in Heroes vs. Villains?",
+          "options": [
+            "Russell played it for himself",
+            "Russell gave it to Parvati who played it on someone",
+            "Russell never used it",
+            "Russell played it on Sandra"
+          ],
+          "correct": 1,
+          "difficulty": "hard",
+          "season": 20,
+          "fun_fact": "JT wrote Russell a letter with the idol, believing Russell was in danger. Russell gave it to Parvati, who used it at the merge to blindside JT's own alliance."
+        },
+        {
+          "id": 57,
+          "question": "Who found a hidden immunity idol during a challenge while no one was looking?",
+          "options": [
+            "Kelley Wentworth",
+            "Joe Anglim",
+            "Malcolm Freberg",
+            "Andrea Boehlke"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 31,
+          "fun_fact": "During a challenge in Cambodia, Kelley grabbed an idol from the underside of the challenge platform while no one was looking, one of the most clutch idol finds ever."
+        },
+        {
+          "id": 58,
+          "question": "What is a \"Super Idol\" as seen in Kaoh Rong?",
+          "options": [
+            "An idol that gives you two extra votes",
+            "Two idol halves combined into one that can be played after votes are read",
+            "An idol that lasts for two Tribal Councils",
+            "An idol that lets you steal someone's vote"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 32,
+          "fun_fact": "In Kaoh Rong, two regular idol halves could be combined into a Super Idol playable after the vote. Tai had one half but refused to combine it with Scot's."
+        },
+        {
+          "id": 59,
+          "question": "In David vs. Goliath, who played a hidden immunity idol on Christian Hubicki to save him?",
+          "options": [
+            "Nick Wilson",
+            "Davie Rickenbacker",
+            "Dan Rengering",
+            "Gabby Pascuzzi"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 37,
+          "fun_fact": "Davie played his idol on Christian, saving him from what would have been a blindside. It was a key moment that shifted the game dynamics."
+        },
+        {
+          "id": 60,
+          "question": "Who was the first person to play a hidden immunity idol correctly on someone else?",
+          "options": [
+            "Russell Hantz in Samoa",
+            "Parvati Shallow in HvV",
+            "Tom Westman in HvV",
+            "Amanda Kimmel in China"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": 19,
+          "fun_fact": "Russell's idol play for Parvati in Samoa set a precedent for playing idols on others as a strategic move."
+        },
+        {
+          "id": 61,
+          "question": "In the split vote strategy, why does an alliance divide their votes between two people?",
+          "options": [
+            "To confuse the other alliance",
+            "To flush or neutralize a potential idol play",
+            "To make Tribal more exciting",
+            "To prevent a unanimous vote"
+          ],
+          "correct": 1,
+          "difficulty": "easy",
+          "season": null,
+          "fun_fact": "Split voting became essential strategy as hidden immunity idols became more common. An alliance splits votes so the target still goes home even if they play an idol."
+        },
+        {
+          "id": 62,
+          "question": "Who found two hidden immunity idols in China, only to go home holding both?",
+          "options": [
+            "Todd Herzog",
+            "Amanda Kimmel",
+            "James Clement",
+            "Peih-Gee Law"
+          ],
+          "correct": 2,
+          "difficulty": "easy",
+          "season": 15,
+          "fun_fact": "James was given both idols by Todd as part of his alliance strategy, but was blindsided before he could use either one."
+        },
+        {
+          "id": 63,
+          "question": "In which season did a contestant find an idol clue during a reward feast hidden in their napkin?",
+          "options": [
+            "Season 15: China",
+            "Season 16: Micronesia",
+            "Season 28: Cagayan",
+            "Season 32: Kaoh Rong"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": 15,
+          "fun_fact": "In China, idol clues were hidden in elaborately decorated items given to contestants during rewards, requiring sharp observation skills."
+        },
+        {
+          "id": 64,
+          "question": "How many hidden immunity idols did Russell Hantz find across Samoa and Heroes vs. Villains?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "correct": 2,
+          "difficulty": "hard",
+          "season": null,
+          "fun_fact": "Russell found 5 total idols across his two most famous seasons, revolutionizing the way players approach idol hunting."
+        },
+        {
+          "id": 65,
+          "question": "What was the \"Three Amigos\" idol play in Caramoan?",
+          "options": [
+            "Three people each played an idol on themselves at the same Tribal",
+            "An alliance named after a movie",
+            "A challenge name",
+            "Three people shared one idol"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 26,
+          "fun_fact": "Malcolm played two idols (one on himself, one on Eddie) and Reynold played his own. All three were safe, and they redirected votes to eliminate Phillip Sheppard."
+        },
+        {
+          "id": 66,
+          "question": "Who found a hidden idol inside a coconut on Ghost Island?",
+          "options": [
+            "Domenick Abbate",
+            "Wendell Holland",
+            "Michael Yerger",
+            "Kellyn Bechtold"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": 36,
+          "fun_fact": "Ghost Island featured cursed items from previous seasons that could be \"reversed.\" Many hidden advantages and idols were tied to famous Survivor moments."
+        },
+        {
+          "id": 67,
+          "question": "Hidden immunity idols must be played at what point during Tribal Council?",
+          "options": [
+            "Before the vote",
+            "After the vote but before Jeff reads them",
+            "After Jeff reads the votes",
+            "Any time during Tribal"
+          ],
+          "correct": 1,
+          "difficulty": "easy",
+          "season": null,
+          "fun_fact": "Jeff always asks \"if anyone has a hidden immunity idol and would like to play it, now would be the time to do so\" after votes are cast but before reading them."
+        }
+      ]
+    },
+    {
+      "name": "Challenge Beasts",
+      "questions": [
+        {
+          "id": 68,
+          "question": "Who holds the record for most individual immunity challenge wins in a single season (Seasons 1-39)?",
+          "options": [
+            "Ozzy Lusth",
+            "Terry Deitz",
+            "Colby Donaldson",
+            "Tom Westman"
+          ],
+          "correct": 1,
+          "difficulty": "hard",
+          "season": 12,
+          "fun_fact": "Terry Deitz won 5 individual immunity challenges in Panama, keeping himself safe when he was consistently targeted post-merge."
+        },
+        {
+          "id": 69,
+          "question": "Which castaway is widely considered the greatest challenge competitor in Survivor history?",
+          "options": [
+            "Ozzy Lusth",
+            "Joe Anglim",
+            "Malcolm Freberg",
+            "Colby Donaldson"
+          ],
+          "correct": 0,
+          "difficulty": "easy",
+          "season": 13,
+          "fun_fact": "Ozzy dominated physical challenges across four seasons (Cook Islands, Micronesia, South Pacific, Game Changers) and holds the record for most career immunity wins."
+        },
+        {
+          "id": 70,
+          "question": "In which season did Joe Anglim first appear and go on his impressive immunity run?",
+          "options": [
+            "Season 30: Worlds Apart",
+            "Season 31: Cambodia",
+            "Season 38: Edge of Extinction",
+            "Season 33: Millennials vs. Gen X"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 30,
+          "fun_fact": "Joe won multiple individual immunities in Worlds Apart and was voted out immediately after losing immunity, showing how much of a threat he was."
+        },
+        {
+          "id": 71,
+          "question": "Who famously stood on a buoy for nearly 12 hours in the final immunity challenge of Palau?",
+          "options": [
+            "Tom Westman and Katie Gallagher",
+            "Tom Westman and Ian Rosenberger",
+            "Ian Rosenberger and Stephenie LaGrossa",
+            "Tom Westman and Stephenie LaGrossa"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 10,
+          "fun_fact": "Ian eventually stepped down and asked to be voted out, sacrificing the game for his friendship with Tom. It is one of the most emotional moments in Survivor history."
+        },
+        {
+          "id": 72,
+          "question": "Which female contestant holds the record for most individual immunity wins in a single season (tied)?",
+          "options": [
+            "Kim Spradlin",
+            "Chrissy Hofbeck",
+            "Kelly Wiglesworth",
+            "Both A and B"
+          ],
+          "correct": 3,
+          "difficulty": "hard",
+          "season": null,
+          "fun_fact": "Both Kim Spradlin (One World) and Chrissy Hofbeck (HHH) won 4 individual immunities, sharing the single-season record for women."
+        },
+        {
+          "id": 73,
+          "question": "What type of challenge is the Survivor Auction?",
+          "options": [
+            "An immunity challenge",
+            "A reward challenge where players bid on items",
+            "A tribal council twist",
+            "An endurance challenge"
+          ],
+          "correct": 1,
+          "difficulty": "easy",
+          "season": null,
+          "fun_fact": "Strategic players often save all their money for a game advantage. The auction has been a fan-favorite recurring event throughout Survivor history."
+        },
+        {
+          "id": 74,
+          "question": "Tom Westman won how many individual immunity challenges in Palau?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "correct": 2,
+          "difficulty": "medium",
+          "season": 10,
+          "fun_fact": "Tom's 5 individual immunity wins helped him dominate the post-merge game and he is widely considered one of the best all-around winners."
+        },
+        {
+          "id": 75,
+          "question": "Which challenge involves contestants laying under a metal grate as the tide rises?",
+          "options": [
+            "Last Gasp",
+            "Rising Tide",
+            "Water Torture",
+            "The Drowning Pool"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": null,
+          "fun_fact": "Last Gasp requires breathing through smaller and smaller air gaps as water rises. It is considered one of Survivor's most psychologically intense challenges."
+        },
+        {
+          "id": 76,
+          "question": "In the classic Loved Ones challenge, what do players compete for?",
+          "options": [
+            "A trip to a resort",
+            "Time with a visiting family member or friend",
+            "An extra vote at Tribal Council",
+            "A clue to a hidden idol"
+          ],
+          "correct": 1,
+          "difficulty": "easy",
+          "season": null,
+          "fun_fact": "The Loved Ones challenge is consistently one of the most emotional moments each season, often bringing even the toughest players to tears."
+        },
+        {
+          "id": 77,
+          "question": "Which season first introduced Exile Island?",
+          "options": [
+            "Season 9: Vanuatu",
+            "Season 12: Panama - Exile Island",
+            "Season 13: Cook Islands",
+            "Season 17: Gabon"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 12,
+          "fun_fact": "Exile Island sent one player to a desolate island between challenges, where they could search for hidden immunity idol clues. It was named in the season's subtitle."
+        },
+        {
+          "id": 78,
+          "question": "Which season had the most medical evacuations during challenges and gameplay?",
+          "options": [
+            "Season 2: Australian Outback",
+            "Season 15: China",
+            "Season 32: Kaoh Rong",
+            "Season 38: Edge of Extinction"
+          ],
+          "correct": 2,
+          "difficulty": "medium",
+          "season": 32,
+          "fun_fact": "Kaoh Rong had 3 medical evacuations: Caleb Reynolds (heat exhaustion), Neal Gottlieb (infected knee), and Joe del Campo (intestinal blockage)."
+        },
+        {
+          "id": 79,
+          "question": "What was the \"Gross Food Challenge\" in early Survivor seasons?",
+          "options": [
+            "Eating local delicacies like balut, grubs, and tarantulas",
+            "Cooking challenge judged by Jeff",
+            "Eating challenge for most food in 5 minutes",
+            "A team cooking competition"
+          ],
+          "correct": 0,
+          "difficulty": "easy",
+          "season": null,
+          "fun_fact": "The Gross Food Challenge featured balut (fertilized duck eggs), tarantulas, sea slugs, and live grubs. It was a fan-favorite recurring challenge in early seasons."
+        },
+        {
+          "id": 80,
+          "question": "Who won the most individual immunity challenges across all their Survivor appearances?",
+          "options": [
+            "Ozzy Lusth",
+            "Rob Mariano",
+            "Tom Westman",
+            "Terry Deitz"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": null,
+          "fun_fact": "Ozzy's challenge dominance across four seasons gives him the most career individual immunity wins in Survivor history."
+        },
+        {
+          "id": 81,
+          "question": "What is the \"Hands on a Hard Idol\" endurance challenge?",
+          "options": [
+            "Players keep one hand on a wooden totem; last to let go wins",
+            "Players hold onto a rope over water",
+            "Players balance on a narrow beam",
+            "Players hold a bucket of water overhead"
+          ],
+          "correct": 0,
+          "difficulty": "easy",
+          "season": null,
+          "fun_fact": "This endurance challenge has appeared in multiple seasons and is one of the show's most grueling tests of willpower."
+        },
+        {
+          "id": 82,
+          "question": "Which contestant won individual immunity at age 57, the oldest winner of an immunity challenge?",
+          "options": [
+            "Bob Crowley",
+            "Randy Bailey",
+            "Joe del Campo",
+            "Rudy Boesch"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": 17,
+          "fun_fact": "Bob Crowley won 3 individual immunity challenges in Gabon and went on to become the oldest Sole Survivor in the show's history."
+        },
+        {
+          "id": 83,
+          "question": "Which season featured a tribe that lost every single pre-merge immunity challenge?",
+          "options": [
+            "Season 10: Palau",
+            "Season 19: Samoa",
+            "Season 22: Redemption Island",
+            "Season 24: One World"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 10,
+          "fun_fact": "The Ulong tribe in Palau lost every immunity challenge, being reduced to just Stephenie LaGrossa, who was absorbed into the Koror tribe."
+        },
+        {
+          "id": 84,
+          "question": "Who is known for his signature \"Ozzy necklace\" of individual immunity wins across multiple seasons?",
+          "options": [
+            "Ozzy Lusth",
+            "Joe Anglim",
+            "Terry Deitz",
+            "Mike Holloway"
+          ],
+          "correct": 0,
+          "difficulty": "easy",
+          "season": null,
+          "fun_fact": "Ozzy's immunity necklace became almost synonymous with his name, as he so frequently won individual immunity in every season he played."
+        },
+        {
+          "id": 85,
+          "question": "In which season did the final immunity challenge famously involve standing on narrow poles in the ocean?",
+          "options": [
+            "Season 1: Borneo",
+            "Season 10: Palau",
+            "Season 13: Cook Islands",
+            "Season 16: Micronesia"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 10,
+          "fun_fact": "The Palau finale challenge lasted almost 12 hours between Tom and Ian standing on buoys, making it the longest challenge in Survivor history."
+        },
+        {
+          "id": 86,
+          "question": "What is the record for most consecutive individual immunity wins in a single season?",
+          "options": [
+            "4",
+            "5",
+            "6",
+            "7"
+          ],
+          "correct": 1,
+          "difficulty": "hard",
+          "season": 12,
+          "fun_fact": "Terry Deitz won 5 consecutive individual immunity challenges in Panama, the longest winning streak in Survivor history through Season 39."
+        },
+        {
+          "id": 87,
+          "question": "Which player won 4 individual immunity challenges in Worlds Apart?",
+          "options": [
+            "Joe Anglim",
+            "Mike Holloway",
+            "Rodney Lavoie Jr.",
+            "Tyler Fredrickson"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 30,
+          "fun_fact": "Mike Holloway went on an immunity run in the final stretch of Worlds Apart, saving himself from elimination and winning the game."
+        },
+        {
+          "id": 88,
+          "question": "Kelly Wiglesworth won how many of the last 5 individual immunity challenges in Borneo?",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "correct": 2,
+          "difficulty": "hard",
+          "season": 1,
+          "fun_fact": "Kelly's immunity run kept her safe during the endgame, though she ultimately lost to Richard Hatch in the Final Tribal Council 4-3."
+        }
+      ]
+    },
+    {
+      "name": "Strategic Moves",
+      "questions": [
+        {
+          "id": 89,
+          "question": "What is a \"blindside\" in Survivor?",
+          "options": [
+            "When a contestant is voted out unexpectedly",
+            "When someone finds an idol",
+            "When tribes are swapped",
+            "When the merge happens"
+          ],
+          "correct": 0,
+          "difficulty": "easy",
+          "season": null,
+          "fun_fact": "The term blindside has become so popular in Survivor that it is now commonly used in everyday language to describe unexpected betrayals."
+        },
+        {
+          "id": 90,
+          "question": "Who created the first formal voting alliance in Survivor?",
+          "options": [
+            "Richard Hatch",
+            "Sue Hawk",
+            "Tina Wesson",
+            "Brian Heidik"
+          ],
+          "correct": 0,
+          "difficulty": "easy",
+          "season": 1,
+          "fun_fact": "Richard formed the Tagi Four with Sue, Rudy, and Kelly. It was the first formal alliance in Survivor history and forever changed the game."
+        },
+        {
+          "id": 91,
+          "question": "What strategy did Cirie Fields use to convince Erik to give up immunity in Micronesia?",
+          "options": [
+            "She threatened him",
+            "She had allies peer-pressure him",
+            "She promised a final 3 deal",
+            "She told him it would redeem his character with the jury"
+          ],
+          "correct": 3,
+          "difficulty": "medium",
+          "season": 16,
+          "fun_fact": "Cirie masterminded the plan by having Natalie tell Erik that giving up immunity would prove his honor to the jury. It is considered her finest strategic moment."
+        },
+        {
+          "id": 92,
+          "question": "What is the \"Pagonging\" strategy?",
+          "options": [
+            "A challenge type",
+            "Systematically eliminating the opposing tribe after the merge",
+            "A type of alliance",
+            "A voting pattern to split votes"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 1,
+          "fun_fact": "Named after the Pagong tribe from Borneo, who were systematically voted out one by one by the Tagi alliance after the merge."
+        },
+        {
+          "id": 93,
+          "question": "Who executed the Black Widow Brigade strategy in Micronesia?",
+          "options": [
+            "Amanda, Cirie, Parvati, and Natalie",
+            "Parvati, Amanda, Cirie, and Alexis",
+            "Sandra, Courtney, Parvati, and Danielle",
+            "Parvati, Amanda, Natalie, and Alexis"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 16,
+          "fun_fact": "The Black Widow Brigade systematically eliminated the male players using charm, manipulation, and strategic blindsides. It is considered one of the most dominant alliances ever."
+        },
+        {
+          "id": 94,
+          "question": "What was Boston Rob's \"buddy system\" in Redemption Island?",
+          "options": [
+            "Players paired up for challenges",
+            "No one could talk to outsiders without an ally present",
+            "Two players shared immunity",
+            "Alliance members voted in pairs"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 22,
+          "fun_fact": "Rob prevented any side deals or flipping by ensuring no one in his alliance could talk to outsiders without a buddy present, giving him total control of information."
+        },
+        {
+          "id": 95,
+          "question": "Who made the controversial move of voting out their own mother in Blood vs. Water?",
+          "options": [
+            "Ciera Eastin",
+            "Vytas Baskauskas",
+            "Katie Collins",
+            "Laura Morett"
+          ],
+          "correct": 0,
+          "difficulty": "easy",
+          "season": 27,
+          "fun_fact": "Ciera voted out her mother Laura at Tribal Council to prove loyalty to her alliance. Jeff Probst has cited it as one of the boldest moves in Survivor history."
+        },
+        {
+          "id": 96,
+          "question": "In Game Changers, what happened to Cirie Fields at the Final 6?",
+          "options": [
+            "She was voted out unanimously",
+            "She was eliminated without a single vote against her due to advantages",
+            "She quit the game",
+            "She was medevaced"
+          ],
+          "correct": 1,
+          "difficulty": "hard",
+          "season": 34,
+          "fun_fact": "Every other player at the Final 6 was immune through idols or advantages, so Cirie was eliminated by default without receiving a vote. Fans call it Advantagegeddon."
+        },
+        {
+          "id": 97,
+          "question": "Who coined the phrase \"voting blocs\" to describe fluid alliances?",
+          "options": [
+            "Stephen Fishbach",
+            "Spencer Bledsoe",
+            "Zeke Smith",
+            "David Wright"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": 31,
+          "fun_fact": "Stephen popularized voting blocs in Cambodia, where players form temporary alliances for single votes rather than committing to one rigid alliance."
+        },
+        {
+          "id": 98,
+          "question": "Who is credited with introducing the \"meat shield\" strategy?",
+          "options": [
+            "Jeremy Collins",
+            "Tony Vlachos",
+            "Boston Rob",
+            "Russell Hantz"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 31,
+          "fun_fact": "Jeremy kept bigger threats like Joe and Spencer in the game ahead of him so they would be targeted first, calling them his meat shields."
+        },
+        {
+          "id": 99,
+          "question": "In which season did \"Stick to the plan!\" accidentally blow up an alliance's strategy at Tribal?",
+          "options": [
+            "Season 27: Blood vs. Water",
+            "Season 29: San Juan del Sur",
+            "Season 33: Millennials vs. Gen X",
+            "Season 35: HHH"
+          ],
+          "correct": 1,
+          "difficulty": "hard",
+          "season": 29,
+          "fun_fact": "Keith Nale blurted out \"Stick to the plan!\" at Tribal Council, accidentally revealing his alliance was planning a blindside and nearly blowing up his own game."
+        },
+        {
+          "id": 100,
+          "question": "What is \"Survivor jury management\"?",
+          "options": [
+            "Picking the jury members",
+            "Playing to ensure jury votes at Final Tribal",
+            "Managing idol plays",
+            "Counting votes before Tribal"
+          ],
+          "correct": 1,
+          "difficulty": "easy",
+          "season": null,
+          "fun_fact": "Jury management is voting people out while maintaining enough goodwill that they will vote for you at the end. Kim Spradlin and Earl Cole are considered masters."
+        },
+        {
+          "id": 101,
+          "question": "What strategic advantage is the \"Extra Vote\"?",
+          "options": [
+            "Cast two votes at one Tribal Council",
+            "Cancel someone else's vote",
+            "Gain immunity",
+            "Vote at a Tribal you are not attending"
+          ],
+          "correct": 0,
+          "difficulty": "easy",
+          "season": 31,
+          "fun_fact": "The Extra Vote was first introduced in Cambodia (Season 31), allowing a player to cast two votes at a single Tribal Council."
+        },
+        {
+          "id": 102,
+          "question": "Who orchestrated the \"Three Amigos\" triple idol play in Caramoan?",
+          "options": [
+            "Malcolm, Reynold, and Eddie",
+            "Cochran, Dawn, and Andrea",
+            "Phillip, Brenda, and Erik",
+            "Malcolm, Andrea, and Cochran"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 26,
+          "fun_fact": "Malcolm played two idols (one on himself, one on Eddie), and Reynold played his own. All three were safe and they redirected votes to eliminate Phillip Sheppard."
+        },
+        {
+          "id": 103,
+          "question": "What is the \"Coconut Bandits\" alliance?",
+          "options": [
+            "An alliance in One World",
+            "Tyson and Gervase sneaking coconuts in Blood vs. Water",
+            "A tribe in Cook Islands",
+            "An alliance in Fiji"
+          ],
+          "correct": 1,
+          "difficulty": "hard",
+          "season": 27,
+          "fun_fact": "Tyson and Gervase secretly ate extra coconuts while everyone else was starving, bonding over their covert snacking."
+        },
+        {
+          "id": 104,
+          "question": "What does it mean when a player is called a \"goat\" in Survivor?",
+          "options": [
+            "They are tough and resilient",
+            "They are a non-threat brought to the end because they cannot win",
+            "They are the leader of an alliance",
+            "They found a hidden idol"
+          ],
+          "correct": 1,
+          "difficulty": "easy",
+          "season": null,
+          "fun_fact": "Being a goat is usually negative in Survivor, meaning someone is dragged to Final Tribal because they have no chance of winning, like Phillip Sheppard or Will Sims."
+        },
+        {
+          "id": 105,
+          "question": "Who orchestrated the blindside of Marcus in Gabon, flipping the game?",
+          "options": [
+            "Sugar Kiper",
+            "Kenny Hoang",
+            "Crystal Cox",
+            "Matty Whitmore"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": 17,
+          "fun_fact": "Sugar played a chaotic but influential game in Gabon, using her idol and emotional gameplay to repeatedly shift the balance of power."
+        },
+        {
+          "id": 106,
+          "question": "What strategic innovation did Tony Vlachos bring to Cagayan with his \"spy shack\"?",
+          "options": [
+            "He hid idols there",
+            "He eavesdropped on camp conversations from a hidden shelter",
+            "He stored food there",
+            "He held secret alliance meetings"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 28,
+          "fun_fact": "Tony built a hidden shelter near the water well to listen to private conversations, gaining crucial intelligence about other players' plans."
+        },
+        {
+          "id": 107,
+          "question": "In which season did someone use a \"vote steal\" advantage for the first time?",
+          "options": [
+            "Season 30: Worlds Apart",
+            "Season 31: Cambodia",
+            "Season 33: Millennials vs. Gen X",
+            "Season 34: Game Changers"
+          ],
+          "correct": 2,
+          "difficulty": "hard",
+          "season": 33,
+          "fun_fact": "The vote steal was first found by Stephen Fishbach in Cambodia but he was voted out the same tribal he used it. Adam Klein used it more successfully in MvGX."
+        },
+        {
+          "id": 108,
+          "question": "What does \"playing from the bottom\" mean in Survivor?",
+          "options": [
+            "Being in the minority alliance and trying to survive",
+            "Performing poorly in challenges",
+            "Having the worst camp life",
+            "Being the youngest player"
+          ],
+          "correct": 0,
+          "difficulty": "easy",
+          "season": null,
+          "fun_fact": "Players like Chris Daugherty (Vanuatu) and Danni Boatwright (Guatemala) are famous for playing from the bottom and winning despite being outnumbered."
+        },
+        {
+          "id": 109,
+          "question": "Who flipped at the merge in Cook Islands, only to have the Aitu Four come back and dominate?",
+          "options": [
+            "Candice Woodcock and Jonathan Penner",
+            "Yul Kwon and Becky Lee",
+            "Ozzy Lusth and Sundra Oakley",
+            "Nate Gonzalez and Adam Gentry"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 13,
+          "fun_fact": "Candice and Penner mutinied to the larger Raro tribe, but the Aitu Four overcame the numbers disadvantage in one of Survivor's greatest underdog stories."
+        },
+        {
+          "id": 110,
+          "question": "What is a \"split tribal\" or \"double tribal council\"?",
+          "options": [
+            "When two tribes go to Tribal together and vote out one person",
+            "When two people are voted out in one episode",
+            "When Tribal Council is held at camp",
+            "When the jury votes twice"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 34,
+          "fun_fact": "Joint tribals became a recurring twist, most famously used in Game Changers when two tribes voted together and blindsided Malcolm Freberg."
+        }
+      ]
+    },
+    {
+      "name": "Season Knowledge",
+      "questions": [
+        {
+          "id": 111,
+          "question": "Where was the first season of Survivor filmed?",
+          "options": [
+            "The Australian Outback",
+            "Pulau Tiga, Borneo",
+            "The Amazon Rainforest",
+            "Marquesas Islands"
+          ],
+          "correct": 1,
+          "difficulty": "easy",
+          "season": 1,
+          "fun_fact": "Pulau Tiga is a small island off the coast of Malaysian Borneo. The filming beach became a tourist attraction after the show aired."
+        },
+        {
+          "id": 112,
+          "question": "What was the theme of Season 28: Cagayan?",
+          "options": [
+            "Fans vs. Favorites",
+            "Blood vs. Water",
+            "Brains vs. Brawn vs. Beauty",
+            "Heroes vs. Villains"
+          ],
+          "correct": 2,
+          "difficulty": "easy",
+          "season": 28,
+          "fun_fact": "Cagayan is widely considered one of the best seasons in Survivor history, featuring Tony Vlachos and some of the most unpredictable Tribal Councils ever."
+        },
+        {
+          "id": 113,
+          "question": "Which season was the first to feature any returning players?",
+          "options": [
+            "Season 8: All-Stars",
+            "Season 11: Guatemala",
+            "Season 16: Micronesia",
+            "Season 20: Heroes vs. Villains"
+          ],
+          "correct": 1,
+          "difficulty": "hard",
+          "season": 11,
+          "fun_fact": "Guatemala featured Bobby Jon and Stephenie returning from Palau, making it the first season with returning players. All-Stars was the first all-returnee season."
+        },
+        {
+          "id": 114,
+          "question": "In which country was Survivor: Africa filmed?",
+          "options": [
+            "South Africa",
+            "Kenya",
+            "Tanzania",
+            "Mozambique"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 3,
+          "fun_fact": "Season 3 was filmed in the Shaba National Reserve in Kenya, where contestants dealt with lions, elephants, and extreme heat."
+        },
+        {
+          "id": 115,
+          "question": "What controversial twist divided tribes by ethnicity in Season 13: Cook Islands?",
+          "options": [
+            "Battle of the Races",
+            "Ethnic Division",
+            "Heritage Tribes",
+            "Tribes divided by ethnicity into four groups"
+          ],
+          "correct": 3,
+          "difficulty": "medium",
+          "season": 13,
+          "fun_fact": "Cook Islands divided tribes into African-American, Asian-American, Hispanic, and Caucasian groups. The twist was dropped after the first swap."
+        },
+        {
+          "id": 116,
+          "question": "Which season featured the \"Medallion of Power\" twist?",
+          "options": [
+            "Season 19: Samoa",
+            "Season 21: Nicaragua",
+            "Season 22: Redemption Island",
+            "Season 24: One World"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 21,
+          "fun_fact": "The Medallion of Power gave one tribe a challenge advantage but was so unpopular that it was abandoned partway through the season."
+        },
+        {
+          "id": 117,
+          "question": "What was the twist in Survivor: One World?",
+          "options": [
+            "Both tribes lived on the same beach",
+            "Players could swap tribes at will",
+            "There was no merge",
+            "Players competed individually from day one"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 24,
+          "fun_fact": "In One World, both tribes shared a single beach, creating unique social dynamics as players interacted with the opposing tribe daily."
+        },
+        {
+          "id": 118,
+          "question": "What was the Redemption Island twist?",
+          "options": [
+            "An island where voted-out players dueled to re-enter the game",
+            "An island with hidden idols",
+            "A reward challenge location",
+            "An island where tribes swap members"
+          ],
+          "correct": 0,
+          "difficulty": "easy",
+          "season": 22,
+          "fun_fact": "Redemption Island appeared in Seasons 22, 23, and 27. Voted-out players competed in duels, with the winner staying for a chance to re-enter."
+        },
+        {
+          "id": 119,
+          "question": "What was the theme of Season 39: Island of the Idols?",
+          "options": [
+            "Two Survivor legends served as mentors on a separate island",
+            "Players competed on an island filled with hidden idols",
+            "Former winners returned to compete",
+            "Tribes were divided by age"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 39,
+          "fun_fact": "Boston Rob and Sandra lived on the Island of the Idols, where visiting players were taught skills and offered tests in exchange for advantages."
+        },
+        {
+          "id": 120,
+          "question": "Which two seasons were filmed back-to-back with Russell Hantz cast on the second before the first aired?",
+          "options": [
+            "Seasons 1 and 2",
+            "Seasons 19 and 20",
+            "Seasons 28 and 29",
+            "Seasons 32 and 33"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 19,
+          "fun_fact": "Samoa and Heroes vs. Villains were filmed back-to-back. Russell was cast on HvV before Samoa aired, so players had no idea about his gameplay."
+        },
+        {
+          "id": 121,
+          "question": "In which season was Edge of Extinction introduced?",
+          "options": [
+            "Season 36: Ghost Island",
+            "Season 37: David vs. Goliath",
+            "Season 38: Edge of Extinction",
+            "Season 39: Island of the Idols"
+          ],
+          "correct": 2,
+          "difficulty": "easy",
+          "season": 38,
+          "fun_fact": "Edge of Extinction allowed voted-out players to stay on a desolate island and compete for a chance to re-enter. Chris Underwood used it to win the season."
+        },
+        {
+          "id": 122,
+          "question": "What twist debuted in Season 3: Africa?",
+          "options": [
+            "Hidden immunity idols",
+            "Tribe swap",
+            "Exile Island",
+            "The merge feast"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 3,
+          "fun_fact": "The Africa tribe swap was the first time players were forced to switch tribes, completely upending alliance dynamics. Silas Gaither was the first swap victim."
+        },
+        {
+          "id": 123,
+          "question": "In which season were tribes divided into Heroes and Villains?",
+          "options": [
+            "Season 8: All-Stars",
+            "Season 16: Micronesia",
+            "Season 20: Heroes vs. Villains",
+            "Season 34: Game Changers"
+          ],
+          "correct": 2,
+          "difficulty": "easy",
+          "season": 20,
+          "fun_fact": "Heroes vs. Villains is consistently rated the greatest season of Survivor by fans and features an all-star cast sorted by their reputations."
+        },
+        {
+          "id": 124,
+          "question": "How many days does a standard season of Survivor last (Seasons 1-39)?",
+          "options": [
+            "30 days",
+            "36 days",
+            "39 days",
+            "42 days"
+          ],
+          "correct": 2,
+          "difficulty": "easy",
+          "season": null,
+          "fun_fact": "For Seasons 1-39, the standard length was 39 days. Starting with Season 41, the game was shortened to 26 days."
+        },
+        {
+          "id": 125,
+          "question": "In what year did the first season of Survivor premiere?",
+          "options": [
+            "1998",
+            "1999",
+            "2000",
+            "2001"
+          ],
+          "correct": 2,
+          "difficulty": "easy",
+          "season": 1,
+          "fun_fact": "Survivor: Borneo premiered on May 31, 2000, and became a cultural phenomenon. The finale drew over 51 million viewers."
+        },
+        {
+          "id": 126,
+          "question": "What was the original show that Survivor was based on?",
+          "options": [
+            "Expedition Robinson",
+            "Castaway",
+            "Stranded",
+            "Island of the Lost"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": null,
+          "fun_fact": "Survivor was based on the Swedish show Expedition Robinson, which premiered in 1997. Mark Burnett adapted the format for US audiences."
+        },
+        {
+          "id": 127,
+          "question": "Which season had the most contestants at the start (20 players)?",
+          "options": [
+            "Season 13: Cook Islands",
+            "Season 33: Millennials vs. Gen X",
+            "Season 28: Cagayan",
+            "Season 38: Edge of Extinction"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 13,
+          "fun_fact": "Cook Islands started with 20 contestants divided into four tribes of five, the most in any season through Season 39."
+        },
+        {
+          "id": 128,
+          "question": "What were the names of the two original tribes in Survivor: Borneo?",
+          "options": [
+            "Tagi and Pagong",
+            "Drake and Morgan",
+            "Koror and Ulong",
+            "Mogo Mogo and Chapera"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 1,
+          "fun_fact": "Tagi (yellow) and Pagong (orange) merged to form Rattana. The Pagong tribe became famous for being systematically eliminated after the merge."
+        },
+        {
+          "id": 129,
+          "question": "Which Survivor season was subtitled Blood vs. Water and featured returning players with their loved ones?",
+          "options": [
+            "Season 25",
+            "Season 26",
+            "Season 27",
+            "Season 29"
+          ],
+          "correct": 2,
+          "difficulty": "medium",
+          "season": 27,
+          "fun_fact": "Season 27 featured returning players with loved ones. Season 29 used the same Blood vs. Water format but with all new players."
+        },
+        {
+          "id": 130,
+          "question": "Which season was set in the Pearl Islands of Panama and featured a pirate theme?",
+          "options": [
+            "Season 7: Pearl Islands",
+            "Season 12: Panama",
+            "Season 5: Thailand",
+            "Season 9: Vanuatu"
+          ],
+          "correct": 0,
+          "difficulty": "easy",
+          "season": 7,
+          "fun_fact": "Pearl Islands featured a pirate theme with tribes raiding a local village for supplies. It introduced fan-favorites Rupert Boneham and Jonny Fairplay."
+        },
+        {
+          "id": 131,
+          "question": "Which season first used the \"Fans vs. Favorites\" format?",
+          "options": [
+            "Season 14: Fiji",
+            "Season 16: Micronesia",
+            "Season 22: Redemption Island",
+            "Season 26: Caramoan"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 16,
+          "fun_fact": "Micronesia pitted 10 new fans against 10 returning favorites. The format was used again in Caramoan (Season 26). Both were won by Favorites."
+        },
+        {
+          "id": 132,
+          "question": "Survivor moved to a permanent filming location in Fiji starting with which season?",
+          "options": [
+            "Season 14: Fiji",
+            "Season 28: Cagayan",
+            "Season 33: Millennials vs. Gen X",
+            "Season 35: HHH"
+          ],
+          "correct": 2,
+          "difficulty": "medium",
+          "season": 33,
+          "fun_fact": "After filming in Fiji once for Season 14, Survivor returned permanently starting with Season 33 due to favorable production conditions and tax incentives."
+        }
+      ]
+    },
+    {
+      "name": "Firsts & Records",
+      "questions": [
+        {
+          "id": 133,
+          "question": "Who was the first two-time winner of Survivor?",
+          "options": [
+            "Boston Rob",
+            "Parvati Shallow",
+            "Sandra Diaz-Twine",
+            "Tony Vlachos"
+          ],
+          "correct": 2,
+          "difficulty": "easy",
+          "season": 20,
+          "fun_fact": "Sandra won Pearl Islands (Season 7) and Heroes vs. Villains (Season 20), proving her anybody-but-me strategy works across eras."
+        },
+        {
+          "id": 134,
+          "question": "Who was the first person to play a hidden immunity idol?",
+          "options": [
+            "Gary Hogeboom",
+            "Yul Kwon",
+            "Terry Deitz",
+            "Cao Boi Bui"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 11,
+          "fun_fact": "Gary Hogeboom (who went by Gary Hawkins to hide his NFL career) played the first hidden immunity idol in Guatemala."
+        },
+        {
+          "id": 135,
+          "question": "Who holds the record for most days played across all Survivor seasons (through Season 39)?",
+          "options": [
+            "Ozzy Lusth",
+            "Boston Rob Mariano",
+            "Cirie Fields",
+            "Parvati Shallow"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": null,
+          "fun_fact": "Ozzy has played 128 total days across his four seasons, the most in Survivor history through Season 39."
+        },
+        {
+          "id": 136,
+          "question": "Who was the first person to be medically evacuated from Survivor?",
+          "options": [
+            "Michael Skupin",
+            "Colton Cumbie",
+            "Joe del Campo",
+            "Bruce Kanegai"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 2,
+          "fun_fact": "Michael Skupin fell into the campfire in The Australian Outback, resulting in the show's first medevac on Day 17."
+        },
+        {
+          "id": 137,
+          "question": "Who was the first contestant to win without ever receiving a vote against them?",
+          "options": [
+            "J.T. Thomas",
+            "Earl Cole",
+            "Cochran",
+            "Tom Westman"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": 18,
+          "fun_fact": "J.T. Thomas played a perfect game in Tocantins: no votes against, won final immunity, and received every jury vote unanimously."
+        },
+        {
+          "id": 138,
+          "question": "Who was the first unanimous winner (receiving all jury votes)?",
+          "options": [
+            "J.T. Thomas",
+            "Earl Cole",
+            "Tom Westman",
+            "Kim Spradlin"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 14,
+          "fun_fact": "Earl Cole won Fiji 9-0-0 over Dreamz and Cassandra, the first unanimous jury vote in Survivor history."
+        },
+        {
+          "id": 139,
+          "question": "What was the first season to have a Final 3 instead of a Final 2?",
+          "options": [
+            "Season 12: Panama",
+            "Season 13: Cook Islands",
+            "Season 14: Fiji",
+            "Season 15: China"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 13,
+          "fun_fact": "Cook Islands introduced the Final 3 format, which became the standard for most subsequent seasons and changed endgame strategy significantly."
+        },
+        {
+          "id": 140,
+          "question": "Who was the first person to quit Survivor?",
+          "options": [
+            "Osten Taylor",
+            "Janu Tornell",
+            "Sue Hawk",
+            "Lindsey Ogle"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": 7,
+          "fun_fact": "Osten asked to be voted out in Pearl Islands. Jeff did not snuff his torch traditionally, instead simply telling him to go."
+        },
+        {
+          "id": 141,
+          "question": "Who was the first player voted out first in two separate seasons?",
+          "options": [
+            "Francesca Hogi",
+            "Rupert Boneham",
+            "Tina Wesson",
+            "Vytas Baskauskas"
+          ],
+          "correct": 0,
+          "difficulty": "medium",
+          "season": 26,
+          "fun_fact": "Francesca was the first boot in both Redemption Island (Season 22) and Caramoan (Season 26), the only player to be first out twice."
+        },
+        {
+          "id": 142,
+          "question": "Who was the first person to return from Redemption Island and re-enter the main game?",
+          "options": [
+            "Matt Elrod",
+            "Andrea Boehlke",
+            "Ozzy Lusth",
+            "Laura Morett"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": 22,
+          "fun_fact": "Matt won numerous duels on Redemption Island and returned to the game, only to be immediately sent back by Boston Rob's alliance."
+        },
+        {
+          "id": 143,
+          "question": "How many seasons featured the Fans vs. Favorites format (through Season 39)?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": null,
+          "fun_fact": "Fans vs. Favorites appeared in Season 16 (Micronesia) and Season 26 (Caramoan). Both were won by Favorites: Parvati and Cochran."
+        },
+        {
+          "id": 144,
+          "question": "What is the record for most votes negated by a single idol play?",
+          "options": [
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "correct": 2,
+          "difficulty": "hard",
+          "season": 31,
+          "fun_fact": "Kelley Wentworth's idol play at the Final 9 in Cambodia negated 9 votes, the most ever negated by a single idol play."
+        },
+        {
+          "id": 145,
+          "question": "Who was the first person to find a hidden immunity idol on Exile Island?",
+          "options": [
+            "Gary Hogeboom",
+            "Terry Deitz",
+            "Yul Kwon",
+            "Ozzy Lusth"
+          ],
+          "correct": 1,
+          "difficulty": "hard",
+          "season": 12,
+          "fun_fact": "Terry found the idol on Exile Island in Panama and kept it as insurance throughout the post-merge, though he never played it since he kept winning immunity."
+        },
+        {
+          "id": 146,
+          "question": "Who was the first person voted out while holding a valid hidden immunity idol?",
+          "options": [
+            "Ozzy Lusth",
+            "James Clement",
+            "Jason Siska",
+            "Eliza Orlins"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 15,
+          "fun_fact": "James went home with two idols in his pocket during China, setting the standard for worst idol misplays in Survivor history."
+        },
+        {
+          "id": 147,
+          "question": "Which winner was the first to also win the fan favorite (Sprint Player of the Season) award?",
+          "options": [
+            "Yul Kwon",
+            "J.T. Thomas",
+            "Ozzy Lusth",
+            "Malcolm Freberg"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": 13,
+          "fun_fact": "Yul won both Sole Survivor and the fan favorite award in Cook Islands, reflecting his popularity as a strategic and likeable player."
+        },
+        {
+          "id": 148,
+          "question": "Who was the first person voted out of Survivor: All-Stars (the first all-returnee season)?",
+          "options": [
+            "Richard Hatch",
+            "Tina Wesson",
+            "Rudy Boesch",
+            "Jenna Morasca"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 8,
+          "fun_fact": "Tina Wesson, the Season 2 winner, was the first person voted out of All-Stars, showing that previous winners were immediate targets."
+        },
+        {
+          "id": 149,
+          "question": "What is the closest jury vote in Survivor history (through Season 39)?",
+          "options": [
+            "4-3 (multiple seasons)",
+            "5-5 tie broken by third finalist (Ghost Island)",
+            "5-4 (multiple seasons)",
+            "Both A and B"
+          ],
+          "correct": 3,
+          "difficulty": "hard",
+          "season": null,
+          "fun_fact": "Several seasons had 4-3 votes (Borneo, Australian Outback, Marquesas) and Ghost Island had the first-ever 5-5 tie broken by Laurel's vote."
+        },
+        {
+          "id": 150,
+          "question": "Who holds the record for appearing in the most seasons of Survivor (through Season 39)?",
+          "options": [
+            "Russell Hantz (3 seasons)",
+            "Ozzy Lusth (4 seasons)",
+            "Rob Mariano (4 seasons)",
+            "Both B and C"
+          ],
+          "correct": 3,
+          "difficulty": "medium",
+          "season": null,
+          "fun_fact": "Both Ozzy (13, 16, 23, 34) and Boston Rob (4, 8, 20, 22) played 4 times through Season 39. Rob finally won on his fourth attempt."
+        },
+        {
+          "id": 151,
+          "question": "What is the fewest days a winner spent in the main game (excluding Edge of Extinction time)?",
+          "options": [
+            "27 days",
+            "30 days",
+            "35 days",
+            "39 days"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": 38,
+          "fun_fact": "Chris Underwood was voted out Day 8 and returned Day 35, spending only about 12 active game days. Most of his 39-day experience was on Edge of Extinction."
+        },
+        {
+          "id": 152,
+          "question": "Which season was the first where the winner was decided by a jury of more than 7 people?",
+          "options": [
+            "Season 10: Palau",
+            "Season 13: Cook Islands",
+            "Season 15: China",
+            "Season 19: Samoa"
+          ],
+          "correct": 1,
+          "difficulty": "hard",
+          "season": 13,
+          "fun_fact": "Cook Islands introduced the Final 3, which also expanded the jury. As seasons progressed, jury sizes grew larger with some exceeding 10 members."
+        },
+        {
+          "id": 153,
+          "question": "How many Survivor winners through Season 39 won unanimously (every jury vote)?",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "correct": 1,
+          "difficulty": "hard",
+          "season": null,
+          "fun_fact": "Through Season 39, three winners won unanimously: Earl Cole (Fiji, 9-0-0), J.T. Thomas (Tocantins, 7-0), and Jeremy Collins (Cambodia, 10-0-0)."
+        },
+        {
+          "id": 154,
+          "question": "Who was the first African-American winner of Survivor?",
+          "options": [
+            "Earl Cole",
+            "Vecepia Towery",
+            "Jeremy Collins",
+            "Wendell Holland"
+          ],
+          "correct": 1,
+          "difficulty": "medium",
+          "season": 4,
+          "fun_fact": "Vecepia Towery won Survivor: Marquesas (Season 4), becoming the first African-American Sole Survivor."
+        },
+        {
+          "id": 155,
+          "question": "What is the record for most tribal councils attended in a single season?",
+          "options": [
+            "13",
+            "15",
+            "16",
+            "18"
+          ],
+          "correct": 2,
+          "difficulty": "hard",
+          "season": null,
+          "fun_fact": "Some players in later seasons with large casts attended upward of 15-16 tribal councils in a single season, far more than early seasons."
+        },
+        {
+          "id": 156,
+          "question": "Who holds the record for most career challenge wins (individual and team combined)?",
+          "options": [
+            "Ozzy Lusth",
+            "Boston Rob Mariano",
+            "Tom Westman",
+            "Joe Anglim"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": null,
+          "fun_fact": "Ozzy's four seasons of play gave him the most total challenge wins of any player, combining individual immunities, tribal immunities, and reward wins."
+        },
+        {
+          "id": 157,
+          "question": "Who was the first Survivor contestant to be voted out and later return in the same season?",
+          "options": [
+            "Burton Roberts (Pearl Islands)",
+            "Matt Elrod (Redemption Island)",
+            "Ozzy Lusth (South Pacific)",
+            "Lill Morris (Pearl Islands)"
+          ],
+          "correct": 0,
+          "difficulty": "hard",
+          "season": 7,
+          "fun_fact": "Burton and Lill both returned via the Outcast twist in Pearl Islands, the first time voted-out players re-entered the game in the same season."
+        }
+      ]
+    }
+  ]
+}

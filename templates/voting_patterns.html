@@ -1,0 +1,196 @@
+{% extends "base.html" %}
+
+{% block title %}Voting Patterns - Survivor{% endblock %}
+
+{% block content %}
+<div class="voting-patterns-page">
+    <h1 class="text-center mb-3 survivor-title">
+        <span class="torch">🔥</span> Voting Patterns & FTC Analysis
+    </h1>
+    <p class="text-center mb-4" style="color: var(--sand); font-size: 1.1rem;">
+        How winners voted, how juries voted, and what the numbers reveal
+    </p>
+
+    <!-- Voting Accuracy Distribution -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div class="tribal-card p-4 h-100">
+                <h4 class="text-center mb-3" style="color: var(--torch-orange);">Winner Voting Accuracy Distribution</h4>
+                <canvas id="accuracyChart" height="250"></canvas>
+                <p class="text-center mt-2" style="color: var(--sand); font-size: 0.85rem;">
+                    How often did winners vote with the majority?
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="tribal-card p-4 h-100">
+                <h4 class="text-center mb-3" style="color: var(--torch-orange);">Voting Accuracy Over Time</h4>
+                <canvas id="accuracyTimeline" height="250"></canvas>
+                <p class="text-center mt-2" style="color: var(--sand); font-size: 0.85rem;">
+                    Are modern winners more or less accurate voters?
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Votes Against Winners -->
+    <div class="tribal-card p-4 mb-5">
+        <h4 class="text-center mb-3" style="color: var(--torch-orange);">Votes Against Winners (Threat Level)</h4>
+        <canvas id="votesAgainstChart" height="300"></canvas>
+        <p class="text-center mt-2" style="color: var(--sand); font-size: 0.85rem;">
+            How many votes did each winner receive throughout their winning season?
+        </p>
+    </div>
+
+    <!-- FTC Data Table -->
+    <div class="tribal-card p-4 mb-5">
+        <h3 class="text-center mb-3" style="color: var(--torch-orange);">Final Tribal Council Results</h3>
+        <div class="table-responsive">
+            <table class="table table-dark table-hover sortable">
+                <thead>
+                    <tr>
+                        <th style="color: var(--torch-orange);">Season</th>
+                        <th style="color: var(--torch-orange);">Winner</th>
+                        <th style="color: var(--torch-orange);">Jury Vote</th>
+                        <th style="color: var(--torch-orange);">Voting Accuracy</th>
+                        <th style="color: var(--torch-orange);">Votes Against</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ftc in ftc_data %}
+                    <tr>
+                        <td>S{{ ftc.season }}: {{ ftc.season_name }}</td>
+                        <td><a href="/winner/{{ ftc.season }}" style="color: var(--torch-orange); text-decoration: none;">{{ ftc.winner }}</a></td>
+                        <td>{{ ftc.jury_votes }}</td>
+                        <td>{{ ftc.voting_accuracy }}%</td>
+                        <td>{{ ftc.votes_against }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Key Insights -->
+    <div class="tribal-card p-4 mb-5">
+        <h3 class="text-center mb-4" style="color: var(--torch-orange);">Key Insights</h3>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="stat-box text-center">
+                    <div class="stat-number" style="font-size: 2rem;">
+                        {% if winners %}
+                        {% set total_acc = [] %}
+                        {% for w in winners %}{% if total_acc.append(w.stats.voting_accuracy) %}{% endif %}{% endfor %}
+                        {{ (total_acc | sum / total_acc | length) | round(1) }}%
+                        {% else %}0%{% endif %}
+                    </div>
+                    <div class="stat-label">Avg Winner Voting Accuracy</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-box text-center">
+                    <div class="stat-number" style="font-size: 2rem;">
+                        {% if winners %}
+                        {% set total_va = [] %}
+                        {% for w in winners %}{% if total_va.append(w.stats.get('times_received_votes', w.stats.get('votes_against', 0))) %}{% endif %}{% endfor %}
+                        {{ (total_va | sum / total_va | length) | round(1) }}
+                        {% else %}0{% endif %}
+                    </div>
+                    <div class="stat-label">Avg Votes Against Winner</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-box text-center">
+                    <div class="stat-number" style="font-size: 2rem;">
+                        {{ accuracy_buckets.get('90-100%', 0) }}
+                    </div>
+                    <div class="stat-label">Winners with 90%+ Accuracy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Back to top -->
+<div class="text-center back-to-top">
+    <a href="#" class="btn btn-outline-survivor btn-sm" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">Back to Top</a>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
+<script>
+const ftcData = {{ ftc_data | tojson }};
+const accuracyBuckets = {{ accuracy_buckets | tojson }};
+
+// Voting accuracy distribution bar chart
+new Chart(document.getElementById('accuracyChart'), {
+    type: 'bar',
+    data: {
+        labels: Object.keys(accuracyBuckets),
+        datasets: [{
+            label: 'Number of Winners',
+            data: Object.values(accuracyBuckets),
+            backgroundColor: ['#28a745', '#4169E1', '#FFD700', '#FF6B35', '#dc3545'],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { ticks: { color: '#F5DEB3', stepSize: 1 }, grid: { color: 'rgba(255,255,255,0.1)' } },
+            x: { ticks: { color: '#F5DEB3' }, grid: { display: false } }
+        }
+    }
+});
+
+// Voting accuracy timeline
+const sortedFTC = [...ftcData].sort((a,b) => a.season - b.season);
+new Chart(document.getElementById('accuracyTimeline'), {
+    type: 'line',
+    data: {
+        labels: sortedFTC.map(f => 'S' + f.season),
+        datasets: [{
+            label: 'Voting Accuracy %',
+            data: sortedFTC.map(f => f.voting_accuracy),
+            borderColor: '#FF6B35',
+            backgroundColor: 'rgba(255, 107, 53, 0.1)',
+            fill: true,
+            tension: 0.3,
+            pointRadius: 3
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { labels: { color: '#F5DEB3' } } },
+        scales: {
+            y: { min: 40, max: 100, ticks: { color: '#F5DEB3' }, grid: { color: 'rgba(255,255,255,0.1)' } },
+            x: { ticks: { color: '#F5DEB3', maxRotation: 45 }, grid: { display: false } }
+        }
+    }
+});
+
+// Votes against winners bar chart
+new Chart(document.getElementById('votesAgainstChart'), {
+    type: 'bar',
+    data: {
+        labels: sortedFTC.map(f => f.winner.split(' ')[0]),
+        datasets: [{
+            label: 'Votes Against',
+            data: sortedFTC.map(f => f.votes_against),
+            backgroundColor: sortedFTC.map(f => f.votes_against <= 2 ? 'rgba(40, 167, 69, 0.6)' : f.votes_against <= 5 ? 'rgba(255, 193, 7, 0.6)' : 'rgba(220, 53, 69, 0.6)'),
+            borderWidth: 0
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { ticks: { color: '#F5DEB3' }, grid: { color: 'rgba(255,255,255,0.1)' } },
+            x: { ticks: { color: '#F5DEB3', maxRotation: 45, font: { size: 9 } }, grid: { display: false } }
+        }
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,352 @@
+{% extends "base.html" %}
+
+{% block title %}Compare Seasons - Survivor{% endblock %}
+
+{% block content %}
+<div class="compare-seasons-page">
+    <h1 class="text-center mb-3 survivor-title">
+        <span class="torch">&#x2694;&#xFE0F;</span> Compare Seasons
+    </h1>
+    <p class="text-center mb-4" style="color: var(--sand); font-size: 1.1rem;">
+        Select two seasons to compare side-by-side
+    </p>
+
+    <!-- Season Selectors -->
+    <div class="row g-3 mb-4 justify-content-center">
+        <div class="col-md-4">
+            <label class="form-label" style="color: var(--torch-orange);">Season A</label>
+            <select id="seasonA" class="form-select" onchange="updateComparison()">
+                {% for stat in season_stats %}
+                <option value="{{ stat.season }}" {% if stat.season == 28 %}selected{% endif %}>
+                    S{{ stat.season }}: {{ stat.name }}
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-1 d-flex align-items-end justify-content-center">
+            <span style="font-size: 2rem; color: var(--torch-orange);">vs</span>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label" style="color: var(--torch-orange);">Season B</label>
+            <select id="seasonB" class="form-select" onchange="updateComparison()">
+                {% for stat in season_stats %}
+                <option value="{{ stat.season }}" {% if stat.season == 20 %}selected{% endif %}>
+                    S{{ stat.season }}: {{ stat.name }}
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+
+    <!-- Quick Compare Presets -->
+    <div class="text-center mb-4">
+        <span style="color: var(--sand); font-size: 0.85rem; margin-right: 0.5rem;">Quick:</span>
+        <button class="btn btn-sm btn-outline-survivor" onclick="setSeasons(1, 39)">First vs Last</button>
+        <button class="btn btn-sm btn-outline-survivor" onclick="setSeasons(28, 20)">Cagayan vs HvV</button>
+        <button class="btn btn-sm btn-outline-survivor" onclick="setSeasons(7, 16)">Pearl Islands vs Micronesia</button>
+        <button class="btn btn-sm btn-outline-survivor" onclick="setSeasons(15, 37)">China vs DvG</button>
+    </div>
+
+    <!-- Side-by-Side Comparison -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-5">
+            <div class="tribal-card p-4 h-100" id="cardA">
+                <h3 class="text-center" style="color: var(--torch-orange);" id="nameA">Loading...</h3>
+                <div class="text-center mb-3" style="color: var(--sand); font-style: italic;" id="taglineA"></div>
+                <div class="comparison-stats" id="statsA"></div>
+            </div>
+        </div>
+        <div class="col-md-2 d-flex flex-column align-items-center justify-content-center">
+            <div id="comparisonIndicators" class="comparison-indicators"></div>
+        </div>
+        <div class="col-md-5">
+            <div class="tribal-card p-4 h-100" id="cardB">
+                <h3 class="text-center" style="color: var(--torch-orange);" id="nameB">Loading...</h3>
+                <div class="text-center mb-3" style="color: var(--sand); font-style: italic;" id="taglineB"></div>
+                <div class="comparison-stats" id="statsB"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Radar Chart Comparison -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div class="tribal-card p-4 h-100">
+                <h4 class="text-center mb-3" style="color: var(--torch-orange);">Winner Archetype Comparison</h4>
+                <canvas id="archetypeRadar" height="300"></canvas>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="tribal-card p-4 h-100">
+                <h4 class="text-center mb-3" style="color: var(--torch-orange);">Season Stats Comparison</h4>
+                <canvas id="statsBar" height="300"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="tribal-card p-4 mb-5">
+        <h4 class="text-center mb-3" style="color: var(--torch-orange);">If You Liked These Seasons...</h4>
+        <div class="row g-3" id="recommendations">
+            <p class="text-center" style="color: var(--sand);">Select seasons above to see recommendations</p>
+        </div>
+    </div>
+
+    <!-- Full Season Stats Table -->
+    <div class="tribal-card p-4 mb-5">
+        <h4 class="text-center mb-3" style="color: var(--torch-orange);">All Seasons At a Glance</h4>
+        <div class="table-responsive">
+            <table class="table table-dark table-hover sortable">
+                <thead>
+                    <tr>
+                        <th style="color: var(--torch-orange);">Season</th>
+                        <th style="color: var(--torch-orange);">Castaways</th>
+                        <th style="color: var(--torch-orange);">Challenges</th>
+                        <th style="color: var(--torch-orange);">Tribals</th>
+                        <th style="color: var(--torch-orange);">Advantages</th>
+                        <th style="color: var(--torch-orange);">Idols Played</th>
+                        <th style="color: var(--torch-orange);">Votes Negated</th>
+                        <th style="color: var(--torch-orange);">Avg Drama</th>
+                        <th style="color: var(--torch-orange);">Winner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for s in season_stats %}
+                    <tr>
+                        <td>S{{ s.season }}: {{ s.name }}</td>
+                        <td>{{ s.castaway_count }}</td>
+                        <td>{{ s.challenge_count }}</td>
+                        <td>{{ s.tribal_count }}</td>
+                        <td>{{ s.advantage_count }}</td>
+                        <td>{{ s.idols_played }}</td>
+                        <td>{{ s.votes_negated }}</td>
+                        <td>{{ s.avg_drama }}</td>
+                        <td><a href="/winner/{{ s.season }}" style="color: gold; text-decoration: none;">{{ s.winner }}</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+.compare-seasons-page { max-width: 1400px; margin: 0 auto; }
+
+.comparison-stats .stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.comparison-stats .stat-label { color: var(--sand); font-size: 0.9rem; }
+.comparison-stats .stat-value { color: #fff; font-weight: bold; font-size: 1.1rem; }
+.comparison-stats .stat-value.winner-highlight { color: #28a745; }
+
+.comparison-indicators {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.comparison-indicators .indicator {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #fff;
+}
+.indicator.left { background: #FF6B35; }
+.indicator.right { background: #4169E1; }
+.indicator.tie { background: #6c757d; }
+
+.rec-card {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid var(--bamboo);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+.rec-card:hover {
+    border-color: var(--torch-orange);
+    transform: translateY(-2px);
+}
+.rec-card a { color: var(--torch-orange); text-decoration: none; }
+
+@media (max-width: 768px) {
+    .comparison-indicators { flex-direction: row; }
+}
+</style>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
+<script>
+const allStats = {{ season_stats | tojson }};
+let radarChart = null;
+let barChart = null;
+
+function getSeasonData(num) {
+    return allStats.find(s => s.season === num);
+}
+
+function setSeasons(a, b) {
+    document.getElementById('seasonA').value = a;
+    document.getElementById('seasonB').value = b;
+    updateComparison();
+}
+
+function buildStatRow(label, value) {
+    return `<div class="stat-row"><span class="stat-label">${label}</span><span class="stat-value">${value}</span></div>`;
+}
+
+function updateComparison() {
+    const aNum = parseInt(document.getElementById('seasonA').value);
+    const bNum = parseInt(document.getElementById('seasonB').value);
+    const a = getSeasonData(aNum);
+    const b = getSeasonData(bNum);
+    if (!a || !b) return;
+
+    // Update headers
+    document.getElementById('nameA').textContent = `S${a.season}: ${a.name}`;
+    document.getElementById('nameB').textContent = `S${b.season}: ${b.name}`;
+    document.getElementById('taglineA').textContent = a.tagline || '';
+    document.getElementById('taglineB').textContent = b.tagline || '';
+
+    // Stats
+    const fields = [
+        ['Castaways', 'castaway_count'],
+        ['Challenges', 'challenge_count'],
+        ['Tribal Councils', 'tribal_count'],
+        ['Advantages', 'advantage_count'],
+        ['Idols Played', 'idols_played'],
+        ['Votes Negated', 'votes_negated'],
+        ['Avg Drama Score', 'avg_drama'],
+        ['Winner', 'winner'],
+    ];
+
+    let statsA = '', statsB = '', indicators = '';
+    fields.forEach(([label, key]) => {
+        const va = a[key], vb = b[key];
+        statsA += buildStatRow(label, va);
+        statsB += buildStatRow(label, vb);
+        if (key !== 'winner' && typeof va === 'number') {
+            if (va > vb) indicators += '<div class="indicator left">&#x25C0;</div>';
+            else if (vb > va) indicators += '<div class="indicator right">&#x25B6;</div>';
+            else indicators += '<div class="indicator tie">=</div>';
+        } else {
+            indicators += '<div class="indicator tie">-</div>';
+        }
+    });
+
+    document.getElementById('statsA').innerHTML = statsA;
+    document.getElementById('statsB').innerHTML = statsB;
+    document.getElementById('comparisonIndicators').innerHTML = indicators;
+
+    // Radar chart — winner archetypes
+    const aArch = a.winner_archetype || {};
+    const bArch = b.winner_archetype || {};
+    const radarLabels = ['Voting Control', 'Physical Game', 'Social Capital', 'Strategic Aggression'];
+    const radarA = [aArch.voting_control || 0, aArch.physical_game || 0, aArch.social_capital || 0, aArch.strategic_aggression || 0];
+    const radarB = [bArch.voting_control || 0, bArch.physical_game || 0, bArch.social_capital || 0, bArch.strategic_aggression || 0];
+
+    if (radarChart) radarChart.destroy();
+    radarChart = new Chart(document.getElementById('archetypeRadar'), {
+        type: 'radar',
+        data: {
+            labels: radarLabels,
+            datasets: [
+                {
+                    label: `S${a.season}: ${a.winner}`,
+                    data: radarA,
+                    borderColor: '#FF6B35',
+                    backgroundColor: 'rgba(255, 107, 53, 0.2)',
+                    pointBackgroundColor: '#FF6B35',
+                },
+                {
+                    label: `S${b.season}: ${b.winner}`,
+                    data: radarB,
+                    borderColor: '#4169E1',
+                    backgroundColor: 'rgba(65, 105, 225, 0.2)',
+                    pointBackgroundColor: '#4169E1',
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            scales: { r: { min: 0, max: 10, ticks: { color: '#F5DEB3', stepSize: 2 }, grid: { color: 'rgba(255,255,255,0.1)' }, pointLabels: { color: '#F5DEB3' } } },
+            plugins: { legend: { labels: { color: '#F5DEB3' } } }
+        }
+    });
+
+    // Bar chart — season stats
+    const barLabels = ['Castaways', 'Challenges', 'Tribals', 'Advantages', 'Idols Played', 'Votes Negated'];
+    const barA = [a.castaway_count, a.challenge_count, a.tribal_count, a.advantage_count, a.idols_played, a.votes_negated];
+    const barB = [b.castaway_count, b.challenge_count, b.tribal_count, b.advantage_count, b.idols_played, b.votes_negated];
+
+    if (barChart) barChart.destroy();
+    barChart = new Chart(document.getElementById('statsBar'), {
+        type: 'bar',
+        data: {
+            labels: barLabels,
+            datasets: [
+                { label: `S${a.season}`, data: barA, backgroundColor: 'rgba(255, 107, 53, 0.7)', borderWidth: 0 },
+                { label: `S${b.season}`, data: barB, backgroundColor: 'rgba(65, 105, 225, 0.7)', borderWidth: 0 }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { labels: { color: '#F5DEB3' } } },
+            scales: {
+                y: { ticks: { color: '#F5DEB3' }, grid: { color: 'rgba(255,255,255,0.1)' } },
+                x: { ticks: { color: '#F5DEB3' }, grid: { display: false } }
+            }
+        }
+    });
+
+    // Recommendations
+    loadRecommendations(aNum, bNum);
+}
+
+function loadRecommendations(a, b) {
+    const container = document.getElementById('recommendations');
+    Promise.all([
+        fetch(`/api/season-recommendations/${a}`).then(r => r.json()),
+        fetch(`/api/season-recommendations/${b}`).then(r => r.json())
+    ]).then(([recsA, recsB]) => {
+        // Combine and deduplicate
+        const seen = new Set([a, b]);
+        const all = [];
+        [...recsA, ...recsB].forEach(r => {
+            if (!seen.has(r.season)) {
+                seen.add(r.season);
+                all.push(r);
+            }
+        });
+        if (all.length === 0) {
+            container.innerHTML = '<p class="text-center" style="color: var(--sand);">No recommendations available</p>';
+            return;
+        }
+        container.innerHTML = all.slice(0, 6).map(r => `
+            <div class="col-md-4 col-6">
+                <div class="rec-card">
+                    <a href="/castaways?season=${r.season}">
+                        <div style="font-size: 1.5rem; font-weight: bold;">S${r.season}</div>
+                        <div style="color: #fff; font-size: 0.95rem;">${r.name}</div>
+                        <div style="color: var(--sand); font-size: 0.8rem; font-style: italic;">${r.tagline}</div>
+                    </a>
+                </div>
+            </div>
+        `).join('');
+    });
+}
+
+// Initialize on load
+updateComparison();
+</script>
+{% endblock %}

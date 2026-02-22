@@ -1,0 +1,321 @@
+{% extends "base.html" %}
+
+{% block title %}Alliances - Survivor: {{ season_name }}{% endblock %}
+
+{% block content %}
+<div class="alliances-page">
+    <h1 class="text-center mb-3 survivor-title">
+        <span class="torch">&#x1F91D;</span> Alliance Network
+    </h1>
+    <p class="text-center mb-2" style="color: var(--sand); font-size: 1.1rem;">
+        S{{ season }}: {{ season_name }} — Who voted together?
+    </p>
+    <p class="text-center mb-4" style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">
+        Nodes = players (colored by tribe). Lines = co-votes (thicker = voted together more often). Drag to rearrange.
+    </p>
+
+    <!-- Network Graph -->
+    <div class="tribal-card p-3 mb-5" style="position: relative;">
+        <div id="network-container" style="width: 100%; height: 550px; overflow: hidden;">
+            <canvas id="networkCanvas" style="width: 100%; height: 100%;"></canvas>
+        </div>
+        <div id="tooltip" style="display:none; position:absolute; background:rgba(0,0,0,0.9); border:1px solid var(--torch-orange); border-radius:6px; padding:8px 12px; color:#fff; font-size:0.8rem; pointer-events:none; z-index:10;"></div>
+    </div>
+
+    <!-- Detected Alliances / Voting Blocs -->
+    {% if blocs %}
+    <div class="tribal-card p-4 mb-5">
+        <h3 class="text-center mb-3" style="color: var(--torch-orange);">Detected Voting Blocs</h3>
+        <p class="text-center mb-3" style="color: var(--sand); font-size: 0.85rem;">
+            Groups of 3+ players who consistently voted together
+        </p>
+        <div class="row g-3 justify-content-center">
+            {% for bloc in blocs %}
+            <div class="col-md-4">
+                <div class="stat-box p-3">
+                    <div style="font-size: 1.2rem; color: var(--torch-orange); font-weight: bold; margin-bottom: 0.5rem;">
+                        {{ bloc.size }}-Person Bloc
+                    </div>
+                    <div style="font-size: 0.95rem; color: #fff; margin-bottom: 0.3rem;">
+                        {% for m in bloc.members %}{{ m }}{% if not loop.last %}, {% endif %}{% endfor %}
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--sand);">
+                        Avg co-votes: {{ bloc.avg_strength }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Top Voting Pairs -->
+    <div class="tribal-card p-4 mb-5">
+        <h3 class="text-center mb-3" style="color: var(--torch-orange);">Top Voting Pairs</h3>
+        <div class="table-responsive">
+            <table class="table table-dark table-hover sortable">
+                <thead>
+                    <tr>
+                        <th style="color: var(--torch-orange);">Rank</th>
+                        <th style="color: var(--torch-orange);">Player A</th>
+                        <th style="color: var(--torch-orange);">Player B</th>
+                        <th style="color: var(--torch-orange);">Co-Votes</th>
+                        <th style="color: var(--torch-orange);">Shared TCs</th>
+                        <th style="color: var(--torch-orange);">Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pair in top_pairs %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td><strong>{{ pair.source }}</strong></td>
+                        <td><strong>{{ pair.target }}</strong></td>
+                        <td>{{ pair.co_votes }}</td>
+                        <td>{{ pair.total_shared }}</td>
+                        <td>{{ pair.rate }}%</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Co-Voting Heatmap -->
+    <div class="tribal-card p-4 mb-5">
+        <h4 class="text-center mb-3" style="color: var(--torch-orange);">Co-Voting Strength Chart</h4>
+        <canvas id="coVoteBar" height="280"></canvas>
+    </div>
+</div>
+
+<div class="text-center back-to-top">
+    <a href="#" class="btn btn-outline-survivor btn-sm" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">Back to Top</a>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
+<script>
+const nodes = {{ nodes | tojson }};
+const edges = {{ edges | tojson }};
+const tribes = {{ tribes | tojson }};
+
+// Tribe color palette
+const tribeColors = {};
+const palette = [
+    '#FF6B35', '#4169E1', '#28a745', '#FFD700', '#E91E63',
+    '#00BCD4', '#9C27B0', '#FF9800', '#795548', '#607D8B'
+];
+tribes.forEach((t, i) => { tribeColors[t] = palette[i % palette.length]; });
+
+// --- Canvas-based Force-Directed Network ---
+const container = document.getElementById('network-container');
+const canvas = document.getElementById('networkCanvas');
+const ctx = canvas.getContext('2d');
+const tooltip = document.getElementById('tooltip');
+
+// Set canvas size
+function resizeCanvas() {
+    canvas.width = container.clientWidth;
+    canvas.height = container.clientHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', () => { resizeCanvas(); simulate(); });
+
+// Initialize node positions
+const width = canvas.width;
+const height = canvas.height;
+const nodeMap = {};
+nodes.forEach((n, i) => {
+    const angle = (2 * Math.PI * i) / nodes.length;
+    n.x = width / 2 + (width * 0.35) * Math.cos(angle);
+    n.y = height / 2 + (height * 0.35) * Math.sin(angle);
+    n.vx = 0;
+    n.vy = 0;
+    n.radius = n.is_winner ? 14 : 8;
+    nodeMap[n.name] = n;
+});
+
+// Map edges to node references
+const edgeObjs = edges.map(e => ({
+    source: nodeMap[e.source],
+    target: nodeMap[e.target],
+    co_votes: e.co_votes,
+    rate: e.rate,
+})).filter(e => e.source && e.target);
+
+// Force simulation
+function simulate() {
+    for (let iter = 0; iter < 200; iter++) {
+        // Repulsion between all nodes
+        for (let i = 0; i < nodes.length; i++) {
+            for (let j = i + 1; j < nodes.length; j++) {
+                let dx = nodes[j].x - nodes[i].x;
+                let dy = nodes[j].y - nodes[i].y;
+                let dist = Math.sqrt(dx * dx + dy * dy) || 1;
+                let force = 1200 / (dist * dist);
+                let fx = (dx / dist) * force;
+                let fy = (dy / dist) * force;
+                nodes[i].vx -= fx;
+                nodes[i].vy -= fy;
+                nodes[j].vx += fx;
+                nodes[j].vy += fy;
+            }
+        }
+
+        // Attraction along edges
+        edgeObjs.forEach(e => {
+            let dx = e.target.x - e.source.x;
+            let dy = e.target.y - e.source.y;
+            let dist = Math.sqrt(dx * dx + dy * dy) || 1;
+            let strength = 0.01 * e.co_votes;
+            let fx = dx * strength;
+            let fy = dy * strength;
+            e.source.vx += fx;
+            e.source.vy += fy;
+            e.target.vx -= fx;
+            e.target.vy -= fy;
+        });
+
+        // Center gravity
+        nodes.forEach(n => {
+            n.vx += (width / 2 - n.x) * 0.005;
+            n.vy += (height / 2 - n.y) * 0.005;
+        });
+
+        // Apply velocity with damping
+        nodes.forEach(n => {
+            n.vx *= 0.85;
+            n.vy *= 0.85;
+            n.x += n.vx;
+            n.y += n.vy;
+            // Keep in bounds
+            n.x = Math.max(30, Math.min(width - 30, n.x));
+            n.y = Math.max(30, Math.min(height - 30, n.y));
+        });
+    }
+    draw();
+}
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw edges
+    edgeObjs.forEach(e => {
+        ctx.beginPath();
+        ctx.moveTo(e.source.x, e.source.y);
+        ctx.lineTo(e.target.x, e.target.y);
+        const maxVotes = Math.max(...edgeObjs.map(e2 => e2.co_votes));
+        const alpha = 0.15 + 0.6 * (e.co_votes / maxVotes);
+        ctx.strokeStyle = `rgba(255, 107, 53, ${alpha})`;
+        ctx.lineWidth = 1 + (e.co_votes / maxVotes) * 5;
+        ctx.stroke();
+    });
+
+    // Draw nodes
+    nodes.forEach(n => {
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
+        ctx.fillStyle = tribeColors[n.tribe] || '#888';
+        ctx.fill();
+        if (n.is_winner) {
+            ctx.strokeStyle = '#FFD700';
+            ctx.lineWidth = 3;
+            ctx.stroke();
+        } else {
+            ctx.strokeStyle = 'rgba(255,255,255,0.3)';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+        }
+
+        // Label
+        ctx.fillStyle = '#fff';
+        ctx.font = n.is_winner ? 'bold 11px sans-serif' : '9px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(n.name, n.x, n.y - n.radius - 4);
+    });
+}
+
+simulate();
+
+// Drag interaction
+let dragNode = null;
+let offsetX = 0, offsetY = 0;
+
+canvas.addEventListener('mousedown', e => {
+    const rect = canvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+    dragNode = nodes.find(n => Math.sqrt((n.x - mx) ** 2 + (n.y - my) ** 2) < n.radius + 4);
+    if (dragNode) { offsetX = dragNode.x - mx; offsetY = dragNode.y - my; }
+});
+
+canvas.addEventListener('mousemove', e => {
+    const rect = canvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+
+    if (dragNode) {
+        dragNode.x = mx + offsetX;
+        dragNode.y = my + offsetY;
+        draw();
+    }
+
+    // Tooltip
+    const hovered = nodes.find(n => Math.sqrt((n.x - mx) ** 2 + (n.y - my) ** 2) < n.radius + 4);
+    if (hovered) {
+        const connections = edgeObjs.filter(e2 => e2.source === hovered || e2.target === hovered);
+        const allies = connections.map(e2 => {
+            const other = e2.source === hovered ? e2.target : e2.source;
+            return `${other.name} (${e2.co_votes} co-votes)`;
+        }).slice(0, 5);
+        tooltip.innerHTML = `<strong>${hovered.name}</strong><br>Tribe: ${hovered.tribe}<br>${hovered.placement}<br>${allies.length ? '<br>Top allies:<br>' + allies.join('<br>') : 'No strong alliances'}`;
+        tooltip.style.display = 'block';
+        tooltip.style.left = (e.clientX - container.getBoundingClientRect().left + 15) + 'px';
+        tooltip.style.top = (e.clientY - container.getBoundingClientRect().top - 10) + 'px';
+    } else {
+        tooltip.style.display = 'none';
+    }
+});
+
+canvas.addEventListener('mouseup', () => { dragNode = null; });
+canvas.addEventListener('mouseleave', () => { dragNode = null; tooltip.style.display = 'none'; });
+
+// --- Co-Voting Bar Chart ---
+const topPairs = {{ top_pairs | tojson }};
+if (topPairs.length > 0) {
+    new Chart(document.getElementById('coVoteBar'), {
+        type: 'bar',
+        data: {
+            labels: topPairs.slice(0, 15).map(p => p.source.split(' ')[0] + ' & ' + p.target.split(' ')[0]),
+            datasets: [{
+                label: 'Co-Votes',
+                data: topPairs.slice(0, 15).map(p => p.co_votes),
+                backgroundColor: topPairs.slice(0, 15).map((p, i) =>
+                    `rgba(255, 107, 53, ${0.4 + 0.6 * (1 - i / 15)})`
+                ),
+                borderWidth: 0,
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        afterLabel: (ctx) => {
+                            const p = topPairs[ctx.dataIndex];
+                            return `Rate: ${p.rate}% (${p.co_votes}/${p.total_shared} shared TCs)`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: { ticks: { color: '#F5DEB3', stepSize: 1 }, grid: { color: 'rgba(255,255,255,0.1)' } },
+                y: { ticks: { color: '#F5DEB3', font: { size: 10 } }, grid: { display: false } }
+            }
+        }
+    });
+}
+</script>
+{% endblock %}

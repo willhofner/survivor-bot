@@ -1,0 +1,89 @@
+{
+  "season": 17,
+  "season_name": "Survivor: Gabon - Earth's Last Eden",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Exile Island",
+      "found_by": "Sugar Kiper",
+      "day_found": 9,
+      "episode_found": 3,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Sugar was sent to Exile Island in Episode 3 and found the Hidden Immunity Idol on her first visit. She was sent to Exile multiple times throughout the season. She held the idol throughout the entire game but never needed to play it. She made it to the Final Three, where she received zero jury votes, finishing as the second runner-up. The idol gave her significant strategic leverage as competing alliances fought for her loyalty."
+    },
+    {
+      "id": 2,
+      "type": "Fake Hidden Immunity Idol",
+      "tribe": "Nobag (Merged tribe)",
+      "found_by": "Bob Crowley",
+      "day_found": 27,
+      "episode_found": 9,
+      "day_played": 30,
+      "episode_played": 10,
+      "played_on": "Randy Bailey",
+      "played_for": "Randy Bailey",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Bob crafted a convincing fake Hidden Immunity Idol after being sent to Exile Island. Sugar devised a plan for Bob to give the fake idol to Randy Bailey, knowing Randy would try to play it. At Tribal Council on Day 30 (Episode 10), Randy played the fake idol, and Jeff Probst declared it was not a real idol. Randy was voted out 5-3 while Sugar laughed loudly at his humiliation. One of the most memorable fake idol moments in Survivor."
+    },
+    {
+      "id": 3,
+      "type": "Fake Hidden Immunity Idol",
+      "tribe": "Nobag (Merged tribe)",
+      "found_by": "Bob Crowley",
+      "day_found": 31,
+      "episode_found": 11,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Bob crafted a second fake idol in an attempt to save himself and his last alliance member, Corinne Kaplan. While the fake idol did not save Corinne (who was voted out 4-3 in Episode 12), it did influence the voting dynamics. Bob went on to win the season with a 4-3-0 jury vote."
+    }
+  ],
+  "summary": {
+    "total_advantages": 3,
+    "total_idols_found": 1,
+    "total_idols_played": 0,
+    "total_idols_not_played": 1,
+    "total_successful_idol_plays": 0,
+    "total_unsuccessful_idol_plays": 0,
+    "total_voted_out_holding": 0,
+    "idols_by_player": {
+      "Sugar Kiper": {
+        "found": 1,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Held the only real idol the entire game but never played it. Made it to Final Three."
+      },
+      "Bob Crowley": {
+        "found": 0,
+        "played": 0,
+        "not_played": 0,
+        "votes_negated": 0,
+        "notes": "Never found a real idol but crafted two convincing fake idols. Won the season."
+      }
+    },
+    "special_notes": [
+      "Gabon was a relatively low-idol season with only one real Hidden Immunity Idol found",
+      "Sugar held the only real idol for the entire game and never played it",
+      "Bob Crowley's two fake idols were more strategically impactful than the real idol",
+      "Randy Bailey's fake idol play is one of the most memorable moments in Survivor history",
+      "Sugar orchestrated Randy's humiliation by suggesting Bob give him the fake idol",
+      "A second real idol may have been hidden during the tribe swap but was never confirmed as found"
+    ]
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16"
+}

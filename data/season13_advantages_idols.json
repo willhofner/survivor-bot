@@ -1,0 +1,52 @@
+{
+  "season": 13,
+  "season_name": "Survivor: Cook Islands",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol (God Idol)",
+      "tribe": "Exile Island",
+      "found_by": "Yul Kwon",
+      "day_found": 5,
+      "episode_found": 2,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Yul found the idol on Exile Island on Day 5 by solving the clues leading to a broken compass, which was revealed as the Hidden Immunity Idol. This was a 'God Idol' or 'Super Idol' - it could be played AFTER the votes were read, making it the most powerful idol format in Survivor history. Yul never played the idol at Tribal Council but used it as an extraordinarily effective strategic weapon. He revealed it to Jonathan Penner at the merge to convince him to flip from the Rarotonga majority to the Aitu Four alliance, a move that changed the entire course of the game. He also publicly revealed the idol at the Survivor Auction. Yul took the idol all the way to the Final Tribal Council and won the game 5-4-0 over Ozzy Lusth."
+    }
+  ],
+  "summary": {
+    "total_advantages": 1,
+    "total_idols_found": 1,
+    "total_idols_played": 0,
+    "total_idols_not_played": 1,
+    "total_successful_idol_plays": 0,
+    "total_unsuccessful_idol_plays": 0,
+    "total_voted_out_holding": 0,
+    "idols_by_player": {
+      "Yul Kwon": {
+        "found": 1,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Won the season with the idol still in his possession. Used the idol as a strategic leverage tool rather than playing it defensively. His revelation of the idol to Jonathan Penner to force a flip is considered one of the greatest strategic moves in Survivor history. The Aitu Four's comeback from a 4-to-8 minority at the merge is one of the most iconic underdog stories in the show."
+      }
+    },
+    "special_notes": [
+      "Only one Hidden Immunity Idol was hidden this season, located on Exile Island",
+      "This was the last season to feature the 'God Idol' or 'Super Idol' format (playable after votes were read) until Season 28's Tyler Perry Idol",
+      "Yul's strategic use of the idol without ever playing it is considered one of the most effective idol strategies in Survivor history",
+      "The idol was used to convince Jonathan Penner to flip alliances at the merge, turning a 4-8 minority into a majority",
+      "Cook Islands featured the famous 'Aitu Four' alliance (Yul, Ozzy, Becky, Sundra) who overcame a 4-8 deficit after the mutiny",
+      "At the Final Four, Yul offered the idol to Becky Lee for the tiebreaker fire-making challenge, but she declined",
+      "This season is often cited in debates about whether the God Idol format is too powerful, as Yul was essentially immune the entire game"
+    ]
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16",
+  "researcher_notes": "Cook Islands featured only one idol, but its impact was enormous. The 'God Idol' format (playable after votes read) meant Yul was essentially immune whenever he attended Tribal Council. Combined with his strategic brilliance in using it as leverage, the idol played a pivotal role in one of the greatest underdog stories in Survivor. This was the last standard 'God Idol' until the Tyler Perry Idol returned in Season 28."
+}

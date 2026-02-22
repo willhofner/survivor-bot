@@ -1,0 +1,112 @@
+{
+  "season": 16,
+  "season_name": "Survivor: Micronesia - Fans vs. Favorites",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Exile Island",
+      "found_by": "Ozzy Lusth",
+      "day_found": 14,
+      "episode_found": 5,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "Ozzy found the Hidden Immunity Idol on Exile Island and crafted a fake idol (a stick wrapped in a napkin) to replace it. He was blindsided by the Black Widow Brigade on Day 27 (Episode 10, 'I Promise...') in a 5-4 vote with the real idol still in his pocket. One of the most iconic blindsides in Survivor history."
+    },
+    {
+      "id": 2,
+      "type": "Fake Hidden Immunity Idol",
+      "tribe": "Exile Island",
+      "found_by": "Jason Siska",
+      "day_found": 19,
+      "episode_found": 7,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "Jason found the fake idol (stick) that Ozzy had planted on Exile Island and genuinely believed it was real. He gave it to Eliza Orlins, who immediately recognized it as fake ('It's a f***ing stick!'). Eliza played it at Tribal Council on Day 24 (Episode 9) to expose that Ozzy had the real idol. Jeff confirmed it was not a real idol. This is one of the most memorable moments in Survivor history."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Exile Island (re-hidden after Ozzy's exit)",
+      "found_by": "Jason Siska",
+      "day_found": 28,
+      "episode_found": 10,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "After Ozzy's elimination, the idol was re-hidden on Exile Island. Jason found the real idol on a subsequent Exile visit. However, he was lulled into a false sense of security by the Black Widow Brigade, who promised he was safe. He chose not to play it at Tribal Council on Day 30 (Episode 11) and was blindsided in a 4-3-1 vote while holding the genuine idol in his pocket."
+    },
+    {
+      "id": 4,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Exile Island (re-hidden after Jason's exit)",
+      "found_by": "Amanda Kimmel",
+      "day_found": 31,
+      "episode_found": 12,
+      "day_played": 31,
+      "episode_played": 12,
+      "played_on": "Amanda Kimmel",
+      "played_for": "Amanda Kimmel",
+      "votes_negated": 4,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Amanda found the re-hidden idol on Exile Island just before Tribal Council in Episode 12 ('I'm Gonna Fix Her!'). She played it on herself at Tribal Council on Day 31, negating 4 votes cast against her. With the votes nullified, the remaining votes sent Alexis Jones home instead. This was the only successful idol play of the season."
+    }
+  ],
+  "summary": {
+    "total_advantages": 4,
+    "total_idols_found": 4,
+    "total_idols_played": 1,
+    "total_idols_not_played": 3,
+    "total_successful_idol_plays": 1,
+    "total_unsuccessful_idol_plays": 0,
+    "total_voted_out_holding": 2,
+    "idols_by_player": {
+      "Ozzy Lusth": {
+        "found": 1,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Found the first idol and crafted a famous fake to replace it. Blindsided with idol in pocket - one of Survivor's most iconic moments."
+      },
+      "Jason Siska": {
+        "found": 1,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "First found Ozzy's fake idol (the stick), then found the real re-hidden idol but was blindsided without playing it."
+      },
+      "Amanda Kimmel": {
+        "found": 1,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 4,
+        "notes": "Found the idol on Exile Island and played it successfully to save herself, sending Alexis home."
+      }
+    },
+    "special_notes": [
+      "This season introduced the mechanic of only one idol hidden on Exile Island at a time, re-hidden after each play or exit",
+      "Ozzy's fake idol (a stick) became one of the most iconic props in Survivor history",
+      "Two players were voted out holding real idols (Ozzy and Jason), an unusually high number",
+      "Eliza Orlins played Ozzy's fake idol at Tribal Council to expose that Ozzy had the real one",
+      "The Black Widow Brigade alliance successfully manipulated both Ozzy and Jason into not playing their idols",
+      "Amanda's idol play in Episode 12 was the only successful play of the season"
+    ]
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16"
+}

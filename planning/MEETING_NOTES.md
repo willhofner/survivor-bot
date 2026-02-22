@@ -4,6 +4,239 @@ Session-by-session log of conversations, decisions, and implementations.
 
 ---
 
+## 2026-02-22 — Overnight Session #4: Alliances, Power Rankings, Nicknames, Quotes, Polish
+
+### Features Shipped
+
+**Alliance Network Diagrams** (`/alliances?season=N`)
+- Interactive canvas-based force-directed network graph (no external library)
+- Nodes = players (colored by tribe), edges = co-voting frequency (thicker = more co-votes)
+- Drag-to-rearrange, hover tooltips with ally details
+- Winner nodes highlighted with gold border
+- Automatic voting bloc detection (3+ player cliques who voted together)
+- Top voting pairs table (sortable)
+- Co-voting strength horizontal bar chart (Chart.js)
+- Works across all 39 seasons
+
+**Power Ranking Timeline** (`/power-rankings?season=N`)
+- Episode-by-episode power scores for every player
+- Score formula: base 50, -8 per vote received, +5 per challenge win, +3 per correct vote
+- Chart.js multi-line chart with one line per player (click legend to toggle)
+- Winner highlighted in gold, top 8 players shown by default
+- Winner spotlight section with separate chart and key stats
+- Final standings table (sortable) with placement, peak score, final score
+
+**Player Nicknames**
+- `data/player_nicknames.json` with 90+ nickname mappings
+- Nicknames displayed on castaway cards (e.g., Tony = "The King of the Jungle")
+- Loaded at startup and enriched into castaway data
+
+**Famous Quotes**
+- `data/famous_quotes.json` with 40 iconic Survivor quotes
+- `/api/random-quote` API endpoint
+- Random quote displayed on index page with speaker attribution
+- Season-specific quotes linked to their season number
+
+**Loading States & Animated Transitions**
+- Page load fade-in animation (CSS `pageIn`)
+- Staggered card entrance animations (first 6 cards animate in sequence)
+- Loading spinner overlay for page transitions (triggered on internal link clicks)
+- Smooth table row hover highlights
+- Stat number scale effect on hover
+- Voting history expand/collapse animation
+
+**Error Handling**
+- Custom 404 page ("THE TRIBE HAS SPOKEN")
+- Custom 500 page ("MEDICAL EVACUATION")
+- Error handlers registered on Flask app
+
+**Index Page Updates**
+- Added Alliance Networks and Power Rankings feature cards
+- Famous quote block with random quote on each page load
+
+### Files Created
+- `templates/alliances.html` — Alliance network with force graph + chart
+- `templates/power_rankings.html` — Power score timeline + tables
+- `templates/404.html` — Custom 404 error page
+- `templates/500.html` — Custom 500 error page
+- `data/player_nicknames.json` — 90+ player nickname mappings
+- `data/famous_quotes.json` — 40 iconic Survivor quotes
+
+### Files Modified
+- `app.py` — Added `/alliances`, `/power-rankings`, `/api/random-quote` routes; error handlers; nickname/quote loading; enriched castaway data with nicknames
+- `templates/base.html` — Added Alliances/Power Rankings to nav; loading overlay; season selector redirect list updated
+- `templates/index.html` — Added Alliance/Power Rankings cards; famous quote section
+- `templates/castaways.html` — Nickname display under player names
+- `static/css/survivor.css` — Page load animations, card entrance stagger, loading spinner, table hover, stat hover effects, expand/collapse animation
+- `static/js/app.js` — Page transition loading overlay JS
+- `tests/test_app.py` — 10 new tests
+
+### Tests
+- **59 tests, all passing** (was 49 at start of session)
+- New: alliances (default + season), power rankings (default + season), random quote API, custom 404, alliances content, power rankings content, castaways nicknames, index feature cards
+
+---
+
+## 2026-02-20 — Overnight Session #3: Compare Seasons, Challenge Performance, Season Recs
+
+### Features Shipped
+
+**Season-to-Season Comparison Tool** (`/compare-seasons`)
+- Side-by-side comparison of any two seasons with stat rows and winner indicators
+- Winner archetype radar chart overlay (orange vs blue)
+- Season stats grouped bar chart
+- Quick compare presets (First vs Last, Cagayan vs HvV, etc.)
+- Season recommendations section pulling from API
+- Full season stats sortable table (all 39 seasons)
+
+**Challenge Performance Analysis** (`/challenge-performance`)
+- Challenges per season stacked bar chart (immunity vs reward)
+- Winner individual immunity wins bar chart (color-coded by performance)
+- Winner challenge wins distribution doughnut chart
+- Immunity wins over time trend line
+- Top 20 challenge performers table (sortable)
+- Winner challenge stats table (sortable)
+
+**Season Recommendations Engine**
+- `SEASON_RECOMMENDATIONS` dict with curated similar seasons for all 39 seasons
+- `/api/season-recommendations/<season>` API endpoint
+- "If you liked this, try..." links on each season card in `/seasons`
+- Recommendations integrated into compare-seasons page
+
+**Index Page Expansion**
+- Added Compare Seasons, Paths to Victory, and Challenges feature cards
+- Third row of exploration cards on homepage
+
+### Files Created
+- `templates/compare_seasons.html` — Season comparison with Chart.js
+- `templates/challenge_performance.html` — Challenge performance analysis
+
+### Files Modified
+- `app.py` — Added `/compare-seasons`, `/challenge-performance`, `/api/season-recommendations/<season>` routes; `SEASON_RECOMMENDATIONS` dict; added `similar_seasons` to seasons overview data
+- `templates/base.html` — Added Compare Seasons and Challenge Performance to Analysis dropdown
+- `templates/seasons.html` — Added "If you liked this, try..." section to each season card with CSS
+- `templates/index.html` — Added third row of feature cards
+- `tests/test_app.py` — Added 4 new tests (compare-seasons, challenge-performance, recommendations API)
+
+### Tests
+- **49 tests, all passing** (was 45 at start of session)
+- New tests: `test_compare_seasons`, `test_challenge_performance`, `test_season_recommendations_api`, `test_season_recommendations_invalid`
+
+### Documentation Updated
+- `planning/ROADMAP.md` — Moved completed items, updated priorities
+- `planning/MEETING_NOTES.md` — This entry
+
+### Deployment Note
+- Heroku CLI not installed on this machine — Procfile and runtime.txt are ready
+- Deployment skipped per overnight instructions (skip items that can't be completed)
+
+---
+
+## 2026-02-16 — Advantages/Idols Data: Seasons 37-39 (Pre-Pandemic Modern Era)
+
+### Data Files Created
+- **Season 37 (David vs Goliath)** — `data/season37_advantages_idols.json` — 8 advantages (6 idols + Idol Nullifier + Vote Steal). Dan Rengering found 2 idols; played first unnecessarily on Angelina, second was nullified by Carl's Idol Nullifier (first ever use). Davie's idol play on Christian negated 7 votes at the merge — one of the most iconic plays ever. Nick found Vote Steal and an idol. The Episode 9 triple-advantage tribal (idol + nullifier + vote steal) is considered one of the greatest strategic sequences in Survivor history. Nick Wilson won 7-3-0.
+- **Season 38 (Edge of Extinction)** — `data/season38_advantages_idols.json` — 8 advantages (5 idols + Advantage Menu + 2 Extra Votes). Rick Devens set the record with 4 idols possessed in a single season (1 from EoE return, 3 found). All 4 idol plays this season were successful (11 total votes negated). Ron Clark's Advantage Menu expired unused — first advantage to expire due to tribe immunity. Extra Votes found on Edge of Extinction and transferred between players. Chris Underwood won 9-4-0 controversially after returning from extinction Day 35.
+- **Season 39 (Island of the Idols)** — `data/season39_advantages_idols.json` — 16 advantages (most advantage-heavy pre-pandemic season). Featured IoI twist with tests from Boston Rob and Sandra. Kellee Kim set record for most idols found by a woman (3) — voted out holding 2. Karishma's 7-vote negation was a dramatic highlight. Dean won Idol Nullifier via coin toss, nullified Janet's idol at F5. Three players voted out holding idols (Vince, Jamal, Kellee). Tommy won 8-0-2 without any advantages.
+
+### Research Notes
+- Seasons 37-39 represent the peak of the "advantage era" before the pandemic pause
+- Season 37 introduced the Idol Nullifier (returned in S39)
+- Season 38's Edge of Extinction twist created new advantage dynamics (advantages found on EoE, half-idols for returnees)
+- Season 39's Island of the Idols introduced test-based advantage acquisition with failure penalties (lost votes)
+- Researched via Survivor Wiki (fandom.com) player pages, episode pages, advantage-specific pages, and season pages
+
+---
+
+## 2026-02-16 — Advantages/Idols Data: Seasons 34-36 (Game Changers, HvHvH, Ghost Island)
+
+### Data Files Created
+- **Season 34 (Game Changers)** — `data/season34_advantages_idols.json` — 8 advantages. One of the most advantage-heavy seasons ever. Tai found 3 idols (season record at the time). Sierra's Legacy Advantage found Day 1, willed to Sarah who played it at F6. Sarah also found Vote Steal at reward bench, used it to blindside Michaela. Debbie chose Extra Vote from Cochran's Advantage Menu on Exile. J.T. infamously left his idol at camp and was blindsided. The F6 tribal saw 4 advantages played simultaneously (Sarah's Legacy, Troyzan's idol, both of Tai's remaining idols), eliminating Cirie by default with 0 votes against her.
+- **Season 35 (Heroes vs Healers vs Hustlers)** — `data/season35_advantages_idols.json` — 10 advantages. Ben Driebergen's legendary 3-idol run (Days 25, 36, 37) saved him three consecutive tribals, negating 13 total votes. Joe Mena found 2 pre-merge idols (first successful, second wasted). Ryan found Super Idol at marooning, gave to Chrissy (not played, expired). Jessica's Vote Blocker blocked Devon's vote. Lauren found both Extra Vote AND split idol but was voted out holding the Extra Vote when Ben played his first idol. Mike threw Lauren's idol half into the fire. First season with F4 fire-making twist.
+- **Season 36 (Ghost Island)** — `data/season36_advantages_idols.json` — 14 advantages. The most advantage-rich file yet. Ghost Island relics from 7 past seasons (China, Micronesia, Philippines, Caramoan, Kaoh Rong, MvGX, Game Changers). Legacy Advantage passed through 3 players (Jacob→Morgan→Domenick). Michael Yerger found James Clement's idol AND Ozzy's fake-turned-real idol, with the second play negating 7 votes. Wendell found Erik's necklace (repurposed as idol), played it on Laurel at F5. Donathan assembled Tai/Scot's split idol halves. Extra Vote was recycled (Kellyn used it, then Sebastian found it but was bluffed into not playing it by Domenick's fake idol). First-ever tied FTC jury vote (5-5, Wendell won).
+
+### Research Notes
+- These three seasons represent the peak of the "advantage era" in Survivor
+- Season 34's F6 tribal (Cirie's default elimination) is one of the most debated moments in Survivor history
+- Season 35's fire-making twist became a permanent fixture starting this season
+- Season 36's Ghost Island relics created a unique connection to 7 previous seasons
+- Domenick's fake idol strategy (fooling both Chris Noble and Sebastian) was one of the most effective fake idol deployments ever
+- Researched via Survivor Wiki player pages, advantage-specific pages (Vote Steal, Legacy Advantage, Extra Vote), and season overview pages
+
+---
+
+## 2026-02-16 — Advantages/Idols Data: Seasons 21-27 (Nicaragua through Blood vs Water)
+
+### Data Files Created
+- **Season 21 (Nicaragua)** — `data/season21_advantages_idols.json` — 5 advantages (4 idols + Medallion of Power). Marty found Espada idol, gave it to Sash under blackmail deal. Sash played it successfully at F5 (1 vote negated). NaOnka found La Flor idol with Brenda, gave it to Chase before quitting — first player to find idol then quit. Chase played it unsuccessfully (0 votes negated). Medallion of Power unique to this season.
+- **Season 22 (Redemption Island)** — `data/season22_advantages_idols.json` — 3 idols. Ralph found Zapatera idol on Day 4 (beat Russell to it), played it unsuccessfully on Mike at merge (wrong target). Rob found Ometepe idol, played it on himself at merge but wasn't targeted (unsuccessful). Andrea found re-hidden idol, played it successfully at F5 (negated 4 votes).
+- **Season 23 (South Pacific)** — `data/season23_advantages_idols.json` — 2 idols only. Ozzy found Savaii idol, gave it to Cochran for his Redemption Island gambit, but never played it after returning. Coach found Upolu idol, played it on himself at merge but wasn't targeted (unsuccessful). Low-idol season.
+- **Season 24 (One World)** — `data/season24_advantages_idols.json` — 4 idols. Sabrina found Manono idol, had to give it to Colton (cross-tribe rule). Colton medically evacuated holding it (first medevac with idol). Troyzan played idol successfully at merge (2 votes negated). Kim found idol but never played it — won the season with idol unused.
+- **Season 25 (Philippines)** — `data/season25_advantages_idols.json` — 3 idols (one per starting tribe). First season with 3 tribes each having an idol. Penner's successful play negated 5 votes at merge. Abi-Maria successfully negated 3 votes. Malcolm found Matsing idol but was voted out holding it on Day 38.
+- **Season 26 (Caramoan)** — `data/season26_advantages_idols.json` — 5 idols, 4 plays (3 successful). ICONIC season for idol plays. Reynold found 2 idols (fastest ever at the time). Malcolm's legendary double idol tribal: played one on himself (2 votes negated) and gave second to Eddie (4 votes negated), blindsiding Phillip 4-0-0 in first "live" tribal council. Andrea voted out holding idol — first woman to be voted out with idol.
+- **Season 27 (Blood vs Water)** — `data/season27_advantages_idols.json` — 2 idols, both found by Tyson. First idol played successfully (3 votes negated) before the famous rock draw at F6. Second idol taken to end unused as Tyson won the season 7-1-0.
+
+### Research Notes
+- Seasons 21-27 bridge the "classic idol era" to the "modern advantage era"
+- Season 21 introduced the Medallion of Power (never used again)
+- Season 26's double idol tribal council is one of the most iconic moments in Survivor history
+- Season 25 was the first to have 3 starting tribes each with their own idol
+- Season 27's idol clue distribution via Redemption Island duels was a unique mechanic
+- Researched via Survivor Wiki (fandom.com) player pages, episode pages, and season pages
+
+---
+
+## 2026-02-16 — Advantages/Idols Data: Seasons 16-20 (Pivotal Idol Era)
+
+### Data Files Created
+- **Season 16 (Micronesia)** — `data/season16_advantages_idols.json` — 4 advantages (3 real idols + 1 fake). Ozzy blindsided with idol in pocket (Day 27). Jason Siska found Ozzy's fake idol stick, then found real re-hidden idol but was also blindsided holding it. Amanda's successful idol play (4 votes negated) was the only successful play of the season. Eliza played the fake stick idol at tribal to expose Ozzy.
+- **Season 17 (Gabon)** — `data/season17_advantages_idols.json` — 3 advantages (1 real idol + 2 fake). Sugar found the only real idol on her first Exile visit, held it entire game, never played it. Bob Crowley crafted 2 fake idols; Randy Bailey's fake idol play is iconic. Low-idol season.
+- **Season 18 (Tocantins)** — `data/season18_advantages_idols.json` — 3 advantages (2 real idols, 1 held by Stephen). Zero idol plays all season. Taj found Jalapao idol via Exile alliance with Brendan, gave it to Stephen. Brendan found Timbira idol but was blindsided holding it. Stephen held idol to Final Two without playing.
+- **Season 19 (Samoa)** — `data/season19_advantages_idols.json` — 3 idols. Russell Hantz revolutionized idol-finding (no clues). His Episode 9 play negated 7 votes (one of the most impactful ever). Erik Cardona voted out holding Galu idol at merge. Foa Foa Four overcame 8-4 deficit largely via Russell's idols.
+- **Season 20 (Heroes vs. Villains)** — `data/season20_advantages_idols.json` — 6 idols, 5 plays (3 successful). MASSIVE idol season. Tom's successful play blindsided Cirie (3 votes negated). Russell found Villains idol, played it on Parvati to eliminate Tyson (4 votes negated). J.T. gave his idol to Russell (worst move ever). Parvati's double idol play on Jerri and Sandra (5 votes negated on Jerri) eliminated J.T. Russell found post-merge idol but wasted it. Most idol-impactful season ever.
+
+### Research Notes
+- Seasons 16-20 represent the pivotal evolution of idol strategy in Survivor
+- Season 16 showed idols could be used offensively (fake idols, blindsides while holding)
+- Season 19 was a turning point: Russell proved you don't need clues to find idols
+- Season 20 is arguably the most idol-defined season in history with 5 plays in a single season
+- Parvati's double idol play (S20E10) is widely considered the greatest single move in Survivor history
+- J.T.'s idol gift to Russell is widely considered the worst move in Survivor history
+
+---
+
+## 2026-02-16 — Advantages/Idols Data: Seasons 31-33 (Advantage Era)
+
+### Data Files Created
+- **Season 31 (Cambodia)** — `data/season31_advantages_idols.json` — 5 advantages: 4 Hidden Immunity Idols + 1 Vote Steal. Kelley Wentworth's iconic 9-vote negate (Ep 8). Jeremy Collins played 2 idols successfully (one for Stephen, one for himself). First-ever null vote when both Kelley and Jeremy played idols at same tribal (Ep 14). Stephen Fishbach received first Vote Steal but was voted out same episode. All 4 idol plays were successful.
+- **Season 32 (Kaoh Rong)** — `data/season32_advantages_idols.json` — 5 advantages: 3 idols + Extra Vote + Juror Removal. Super Idol twist (combine 2 idols, play after votes read) but never formed because Tai refused to save Scot. NO idols played all season. Neal evacuated holding idol, Scot voted out holding Jason's idol. Michele's Juror Removal of Neal may have changed the winner.
+- **Season 33 (Millennials vs Gen X)** — `data/season33_advantages_idols.json` — 9 advantages: 5 real idols + 1 fake idol + Legacy Advantage + Reward Steal + Legacy Advantage (inherited). First-ever Legacy Advantage introduced. David Wright played idol for Jessica (5 votes negated) and crafted fake idol that fooled Jay. Adam Klein misplayed both his idols but won unanimously. Ken McNickle first to use Legacy Advantage.
+
+### Research Notes
+- These three seasons mark the beginning of the "advantage era" with increasing complexity of game advantages
+- Season 31 was first to hide idols at challenges rather than camp
+- Season 32's Super Idol twist was effectively neutralized by Tai's betrayal of Scot/Jason
+- Season 33 introduced Legacy Advantage and Reward Steal, plus saw one of the best fake idol plays ever
+- Researched via Survivor Wiki (fandom.com) player pages, episode pages, and advantage-specific pages
+
+---
+
+## 2026-02-16 — Advantages/Idols Data: Seasons 11-15
+
+### Data Files Created
+- **Season 11 (Guatemala)** — `data/season11_advantages_idols.json` — First-ever Hidden Immunity Idol. Gary Hogeboom found and played it successfully (Episode 9, Day 24). 1 idol total.
+- **Season 12 (Panama)** — `data/season12_advantages_idols.json` — Terry Deitz found the Super Idol on Exile Island. Never played it, voted out at Final 3 holding it. 1 idol total.
+- **Season 13 (Cook Islands)** — `data/season13_advantages_idols.json` — Yul Kwon's God Idol (playable after votes read). Never played but used as strategic leverage to flip Jonathan Penner. Won the game holding it. 1 idol total.
+- **Season 14 (Fiji)** — `data/season14_advantages_idols.json` — First modern idol format (played before votes read). 3 idols: Yau-Man (successful, negated 4 votes), Mookie/Alex (unsuccessful, 0 votes negated), Earl (unsuccessful, precautionary play at F4).
+- **Season 15 (China)** — `data/season15_advantages_idols.json` — 3 idols, none played. Todd found one and gave it to James. James found the second. James voted out holding both idols — one of the biggest blunders in Survivor history.
+
+### Research Notes
+- Seasons 11-13 used "Super Idol" / "God Idol" format (playable after votes read)
+- Season 14 (Fiji) was the transition to modern format (played before votes read, after discussion but before reveal)
+- Researched via Survivor Wiki (fandom.com) with cross-referencing of player pages, episode pages, and season overview pages
+
+---
+
 ## 2026-02-16 — Overnight Session #2: Winners Hall, Comparison, Analytics, Seasons Page
 
 ### Features Shipped

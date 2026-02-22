@@ -1,0 +1,155 @@
+{
+  "season": 20,
+  "season_name": "Survivor: Heroes vs. Villains",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Heroes",
+      "found_by": "Tom Westman",
+      "day_found": 10,
+      "episode_found": 3,
+      "day_played": 11,
+      "episode_played": 4,
+      "played_on": "Tom Westman",
+      "played_for": "Tom Westman",
+      "votes_negated": 3,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Tom found the idol clue in a jar of beans on Day 10, but J.T. read the clue aloud and the whole tribe started searching. Tom found it first but was caught by Amanda. He played it on himself at Tribal Council on Day 11 (Episode 4, 'Tonight, We Make Our Move'), negating 3 votes from Amanda, Candice, and Cirie. J.T. flipped to vote with Tom and Colby, blindsiding Cirie Fields 3-0 (after negated votes). Tom was still voted out at the next Tribal Council on Day 14."
+    },
+    {
+      "id": 2,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Villains",
+      "found_by": "Russell Hantz",
+      "day_found": 6,
+      "episode_found": 2,
+      "day_played": 15,
+      "episode_played": 6,
+      "played_on": "Parvati Shallow",
+      "played_for": "Parvati Shallow",
+      "votes_negated": 4,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Russell found the Villains' first Hidden Immunity Idol without clues, continuing his Samoa strategy. At the Double Tribal Council on Day 15 (Episode 6, 'Banana Etiquette'), Russell gave the idol to Parvati at Tribal Council. She played it, negating 4 votes against her (from Coach, Courtney, Jerri, and Tyson). Tyson had fatally deviated from Rob's vote-splitting plan by switching his vote from Russell to Parvati, resulting in Tyson being eliminated 3-2-0. One of the most pivotal idol plays in Survivor history."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Heroes (re-hidden)",
+      "found_by": "J.T. Thomas",
+      "day_found": 16,
+      "episode_found": 7,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": false,
+      "notes": "J.T. found the Heroes' second Hidden Immunity Idol after a Reward Challenge clue. He then made what many consider the worst strategic move in Survivor history: believing the Villains had an all-female alliance, he wrote a note and wrapped it with the idol, handing it to Russell Hantz during an Immunity Challenge on Day 22. J.T. assumed Russell would use it to save himself and join the Heroes post-merge. Instead, Russell kept it for his own alliance. J.T. was voted out on Day 27 after Parvati's double idol play. Jeff Probst dubbed this move 'the worst in Survivor history,' and at the reunion, Russell read J.T.'s note aloud."
+    },
+    {
+      "id": 4,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Villains (re-hidden)",
+      "found_by": "Parvati Shallow",
+      "day_found": 22,
+      "episode_found": 8,
+      "day_played": 27,
+      "episode_played": 10,
+      "played_on": "Jerri Manthey",
+      "played_for": "Jerri Manthey",
+      "votes_negated": 5,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Parvati found the clue during a Reward Challenge and shared it with Danielle DiLorenzo. The two women woke up early the next day and found the Villains' second idol near the roots of a tree, deliberately keeping Russell unaware. At the first post-merge Tribal Council on Day 27 (Episode 10, 'Going Down in Flames'), Parvati executed her famous double idol play, giving this idol to Jerri to negate all 5 Heroes' votes cast against her. Combined with the idol played on Sandra, this eliminated J.T. Thomas 5-0."
+    },
+    {
+      "id": 5,
+      "type": "Hidden Immunity Idol (J.T.'s idol, given to Russell)",
+      "tribe": "Villains (originally Heroes)",
+      "found_by": "Russell Hantz",
+      "day_found": 22,
+      "episode_found": 8,
+      "day_played": 27,
+      "episode_played": 10,
+      "played_on": "Sandra Diaz-Twine",
+      "played_for": "Sandra Diaz-Twine",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "This was J.T.'s idol that he gave to Russell. Russell gave it to Parvati as part of their alliance. At the first post-merge Tribal Council on Day 27 (Episode 10, 'Going Down in Flames'), Parvati played this idol on Sandra as the second half of her famous double idol play. No votes had been cast against Sandra by the Heroes, so the idol negated 0 votes. However, the combined double play on both Jerri and Sandra ensured all Villains were protected and J.T. was eliminated."
+    },
+    {
+      "id": 6,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Yin Yang (Merged tribe, re-hidden)",
+      "found_by": "Russell Hantz",
+      "day_found": 29,
+      "episode_found": 11,
+      "day_played": 30,
+      "episode_played": 11,
+      "played_on": "Russell Hantz",
+      "played_for": "Russell Hantz",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "After the merge idol was re-hidden, Russell found it quickly. Danielle obtained the clue, and Russell located the idol within seconds by a stream ('I pick up a rock, after being there five seconds, there it is'). He played it on himself at Tribal Council on Day 30 (Episode 11, 'Jumping Ship'), but received zero votes. Candice had flipped to the Villains and Sandra stayed with them, so the Heroes voted for Parvati (3 votes) while the Villains voted for Amanda (6 votes). Amanda was eliminated 6-3. Russell's premature idol play was a strategic miscalculation."
+    }
+  ],
+  "summary": {
+    "total_advantages": 6,
+    "total_idols_found": 6,
+    "total_idols_played": 5,
+    "total_idols_not_played": 1,
+    "total_successful_idol_plays": 3,
+    "total_unsuccessful_idol_plays": 2,
+    "total_voted_out_holding": 0,
+    "idols_by_player": {
+      "Russell Hantz": {
+        "found": 3,
+        "played": 2,
+        "not_played": 0,
+        "votes_negated": 4,
+        "notes": "Found three idols in HvV (first Villains idol, received J.T.'s idol, found post-merge idol). Played the first on Parvati (successful, negating 4 votes), and the post-merge idol on himself (unsuccessful, 0 votes). Gave J.T.'s idol to Parvati for the double play. Lost the jury vote 6-3-0 to Sandra."
+      },
+      "Parvati Shallow": {
+        "found": 1,
+        "played": 2,
+        "not_played": 0,
+        "votes_negated": 5,
+        "notes": "Found one idol with Danielle. Executed the famous double idol play at the merge Tribal, playing one idol on Jerri (5 votes negated) and one on Sandra (0 votes negated). One of the most iconic moves in Survivor history. Finished as runner-up."
+      },
+      "Tom Westman": {
+        "found": 1,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 3,
+        "notes": "Found the first Heroes idol and played it successfully to blindside Cirie. Still voted out at the next Tribal Council."
+      },
+      "J.T. Thomas": {
+        "found": 1,
+        "played": 0,
+        "not_played": 0,
+        "votes_negated": 0,
+        "notes": "Found the second Heroes idol but gave it to Russell Hantz in what is widely considered the worst move in Survivor history. The idol was used against him in Parvati's double play."
+      }
+    },
+    "special_notes": [
+      "Heroes vs. Villains is one of the most idol-heavy seasons in Survivor history with 6 idols found and 5 idol plays",
+      "Parvati's double idol play in Episode 10 is widely considered the greatest single move in Survivor history",
+      "J.T. giving his idol to Russell is considered the worst move in Survivor history",
+      "Russell found 3 idols in HvV (plus 2 in Samoa), establishing himself as the greatest idol-finder in Survivor history at that time",
+      "Tom Westman's idol play on Day 11 blindsided Cirie Fields, a major strategic player",
+      "The Tyson vote-out in Episode 6 was caused by Tyson deviating from the vote-split plan after Russell's idol play on Parvati",
+      "Three of the five idol plays were successful (Tom's, Russell's on Parvati, Parvati's on Jerri)",
+      "Sandra Diaz-Twine won the season despite having an idol played on her unnecessarily (Parvati's double play)",
+      "No player was voted out while holding an idol this season, a rarity for such an idol-heavy season",
+      "The season featured all returning players, many of whom had extensive experience with idol mechanics"
+    ]
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16"
+}

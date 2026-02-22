@@ -1,0 +1,193 @@
+{
+  "season": 34,
+  "season_name": "Survivor: Game Changers - Mamanuca Islands",
+  "advantages": [
+    {
+      "id": 1,
+      "type": "Legacy Advantage",
+      "tribe": "Marooning ship",
+      "found_by": "Sierra Dawn Thomas",
+      "day_found": 1,
+      "episode_found": 1,
+      "day_played": 36,
+      "episode_played": 13,
+      "played_on": "Sarah Lacina",
+      "played_for": "Sarah Lacina",
+      "votes_negated": 3,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "Sierra found the Legacy Advantage hidden on the boat during the marooning on Day 1. It granted immunity at either the final 13 or final 6. Sierra held it until she was voted out on Day 32 (Episode 11), when she willed it to Sarah Lacina. Sarah played it at the infamous final 6 tribal council on Day 36, negating 3 votes against her and contributing to Cirie's default elimination."
+    },
+    {
+      "id": 2,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Nuku",
+      "found_by": "J.T. Thomas",
+      "day_found": 5,
+      "episode_found": 2,
+      "day_played": null,
+      "episode_played": null,
+      "played_on": null,
+      "played_for": null,
+      "votes_negated": 0,
+      "result": "not_played",
+      "voted_out_holding": true,
+      "notes": "J.T. found a Hidden Immunity Idol at the Nuku camp early in the game. However, in one of the biggest blunders in Survivor history, he left the idol back at camp and did not bring it to Tribal Council on Day 13 (Episode 5). Sandra correctly surmised J.T.'s betrayal at the joint tribal council and led the charge to blindside him 5-1. He was voted out holding the idol at camp."
+    },
+    {
+      "id": 3,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Tavua",
+      "found_by": "Troyzan Robertson",
+      "day_found": 7,
+      "episode_found": 3,
+      "day_played": 36,
+      "episode_played": 13,
+      "played_on": "Troyzan Robertson",
+      "played_for": "Troyzan Robertson",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "After the first tribe swap to Tavua on Day 7, Troyzan found a clue and subsequently located the idol during an immunity challenge while no one was looking. He held the idol for nearly the entire game, finally playing it at the final 6 tribal council on Day 36 (Night 36). He played it on himself but received no votes. Combined with Sarah's Legacy Advantage and Tai's two idols, this left Cirie as the only unprotected player."
+    },
+    {
+      "id": 4,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Nuku (challenge venue)",
+      "found_by": "Tai Trang",
+      "day_found": 9,
+      "episode_found": 4,
+      "day_played": 11,
+      "episode_played": 5,
+      "played_on": "Sierra Dawn Thomas",
+      "played_for": "Sierra Dawn Thomas",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Tai found his first idol hidden at a challenge venue. At the joint tribal council on Day 11 (Episode 5), Tai gave this idol to Sierra Dawn Thomas in a strategic move to protect the Mana alliance. Sierra received no votes, but the play forced the opposing alliance's votes onto Malcolm Freberg, who was blindsided 5-1. While the idol negated 0 votes against Sierra directly, it was a pivotal strategic move that eliminated Malcolm."
+    },
+    {
+      "id": 5,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Mana (post-swap)",
+      "found_by": "Tai Trang",
+      "day_found": 18,
+      "episode_found": 7,
+      "day_played": 36,
+      "episode_played": 13,
+      "played_on": "Tai Trang",
+      "played_for": "Tai Trang",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Tai found his second idol at the Mana camp after the second tribe swap. He held this idol until the final 6 tribal council on Day 36, where he played it on himself. He received no votes. This idol was one of four advantages played at the historic final 6 tribal, contributing to Cirie's default elimination."
+    },
+    {
+      "id": 6,
+      "type": "Hidden Immunity Idol",
+      "tribe": "Maku Maku (merged tribe)",
+      "found_by": "Tai Trang",
+      "day_found": 30,
+      "episode_found": 10,
+      "day_played": 36,
+      "episode_played": 13,
+      "played_on": "Aubry Bracco",
+      "played_for": "Aubry Bracco",
+      "votes_negated": 0,
+      "result": "unsuccessful",
+      "voted_out_holding": false,
+      "notes": "Tai found his third idol post-merge, making him the first player ever to find three idols in a single season. At the final 6 tribal council on Day 36, Brad Culpepper convinced Tai to play this idol on Aubry Bracco. She received no votes. This was the third of Tai's idols played at the same tribal council (one on himself, one on Aubry), and part of the four-advantage avalanche that eliminated Cirie by default."
+    },
+    {
+      "id": 7,
+      "type": "Extra Vote",
+      "tribe": "Exile Island (ship)",
+      "found_by": "Debbie Wanner",
+      "day_found": 14,
+      "episode_found": 6,
+      "day_played": 24,
+      "episode_played": 8,
+      "played_on": null,
+      "played_for": "Debbie Wanner",
+      "votes_negated": 0,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "After the second tribe swap on Day 14, Debbie was sent to Exile Island on a yacht, where Survivor: Caramoan winner John Cochran offered her an Advantage Menu with three choices: a fake idol kit, an Extra Vote, or a challenge advantage. Debbie chose the Extra Vote. She used it on Day 24 (Episode 8) to cast two votes against Ozzy Lusth, helping ensure his elimination. While Ozzy may have gone home regardless, the extra vote provided insurance for the majority."
+    },
+    {
+      "id": 8,
+      "type": "Vote Steal",
+      "tribe": "Reward Challenge (sit-out bench)",
+      "found_by": "Sarah Lacina",
+      "day_found": 25,
+      "episode_found": 9,
+      "day_played": 35,
+      "episode_played": 12,
+      "played_on": "Tai Trang",
+      "played_for": "Sarah Lacina",
+      "votes_negated": 0,
+      "result": "successful",
+      "voted_out_holding": false,
+      "notes": "A 'secret advantage' scroll was placed by the sit-out bench at the Day 25 Reward Challenge. While Michaela Bradshaw sat out and failed to notice it, Sarah Lacina spotted and secretly claimed it. The advantage allowed her to steal another player's vote. Sarah used it on Day 35 (Episode 12) to steal Tai's vote, then orchestrated a 4-2-1 blindside of Michaela Bradshaw. This was a masterful play that demonstrated Sarah's strategic dominance."
+    }
+  ],
+  "summary": {
+    "total_advantages": 8,
+    "total_idols_found": 5,
+    "total_idols_played": 5,
+    "total_idols_not_played": 0,
+    "total_successful_idol_plays": 0,
+    "total_unsuccessful_idol_plays": 5,
+    "total_voted_out_holding": 1,
+    "idols_by_player": {
+      "Tai Trang": {
+        "found": 3,
+        "played": 3,
+        "not_played": 0,
+        "votes_negated": 0,
+        "notes": "First player to find three idols in a single season. Played all three: one on Sierra at the joint tribal (Episode 5), one on himself and one on Aubry at the final 6 (Episode 13). None negated any votes, but the joint tribal play was strategically devastating."
+      },
+      "Troyzan Robertson": {
+        "found": 1,
+        "played": 1,
+        "not_played": 0,
+        "votes_negated": 0,
+        "notes": "Found his idol early at a challenge on Day 7 and held it the entire game until the final 6 tribal. Played it on himself unnecessarily."
+      },
+      "J.T. Thomas": {
+        "found": 1,
+        "played": 0,
+        "not_played": 1,
+        "votes_negated": 0,
+        "notes": "Found an idol but infamously left it at camp and didn't bring it to the Tribal Council where he was voted out. One of the biggest blunders in Survivor history."
+      }
+    },
+    "advantages_by_player": {
+      "Sarah Lacina": {
+        "advantages": ["Legacy Advantage (from Sierra)", "Vote Steal"],
+        "notes": "Won the season. Masterfully used both advantages: the Vote Steal to blindside Michaela on Day 35, and the Legacy Advantage for immunity at the final 6. Her advantage play was central to her winning game."
+      },
+      "Sierra Dawn Thomas": {
+        "advantages": ["Legacy Advantage (original finder)"],
+        "notes": "Found the Legacy Advantage on Day 1 but was voted out on Day 32 before she could use it. Willed it to Sarah Lacina."
+      },
+      "Debbie Wanner": {
+        "advantages": ["Extra Vote"],
+        "notes": "Chose the Extra Vote from the Advantage Menu on Exile Island. Used it to help vote out Ozzy on Day 24."
+      }
+    },
+    "special_notes": [
+      "Season 34 featured the most advantages in play at a single tribal council in Survivor history at that time",
+      "The final 6 tribal council (Day 36) saw FOUR advantages played: Sarah's Legacy Advantage, Troyzan's idol on himself, Tai's idol on himself, and Tai's idol on Aubry",
+      "Cirie Fields was eliminated by DEFAULT without receiving a single vote - she was the only player not immune or protected by an idol/advantage",
+      "This was the first time a player (Cirie) was eliminated solely because everyone else was immune",
+      "Tai Trang set the record for most idols found in a single season (3)",
+      "J.T. Thomas was voted out after leaving his idol at camp - a catastrophic blunder",
+      "The joint tribal council (Episode 5) where Tai gave his idol to Sierra resulted in Malcolm's blindside despite Malcolm receiving no idol protection",
+      "Sarah Lacina's strategic use of the Vote Steal and Legacy Advantage was a masterclass in advantage management",
+      "Debbie's Advantage Menu (offered by Cochran on Exile) was a new twist offering choice between a fake idol kit, Extra Vote, or challenge advantage"
+    ]
+  },
+  "sources": ["Survivor Wiki"],
+  "research_date": "2026-02-16"
+}

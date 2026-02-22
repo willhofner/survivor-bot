@@ -38,22 +38,37 @@ survivor-bot/
 ├── requirements.txt       <- Python dependencies (Flask)
 │
 ├── data/                  <- 📊 STRUCTURED DATA
-│   └── voting_data.json  <- Season 28 voting data
+│   ├── voting_data.json  <- Season 28 voting data
+│   ├── player_nicknames.json <- 90+ player nickname mappings
+│   ├── famous_quotes.json <- 40 iconic Survivor quotes
+│   ├── quiz_questions.json <- Survivor IQ Quiz questions
+│   └── returning_players.json <- Multi-season returning players
 │
 ├── templates/             <- 🎨 HTML TEMPLATES
-│   ├── base.html         <- Base template with collapsible nav, search, dark mode
+│   ├── base.html         <- Base template with collapsible nav, search, dark mode, spoiler toggle
 │   ├── index.html        <- Landing page (project homepage)
 │   ├── tribal_councils.html <- Scrollable tribal councils
-│   ├── castaways.html    <- Castaway profiles (no filters)
+│   ├── castaways.html    <- Castaway profiles with filtering & sorting
 │   ├── challenges.html   <- Challenge timeline with filtering
 │   ├── events.html       <- Season timeline
 │   ├── items.html        <- Advantages/idols with filtering
 │   ├── winners.html      <- Winners Hall gallery with radar charts
 │   ├── winner_profile.html <- Individual winner profiles
 │   ├── compare.html      <- Winner comparison (2-4 side-by-side)
-│   ├── seasons.html      <- All seasons overview with summaries
+│   ├── compare_seasons.html <- Season-to-season comparison with charts
+│   ├── seasons.html      <- All seasons overview with summaries & recommendations
 │   ├── analytics.html    <- Data visualizations and era analysis
-│   └── hall_of_fame.html <- All-time records across all seasons
+│   ├── hall_of_fame.html <- All-time records across all seasons
+│   ├── quiz.html         <- Survivor IQ Quiz (157 questions, 7 categories)
+│   ├── returning_players.html <- Returning players tracking across seasons
+│   ├── advantages_timeline.html <- Cross-season advantages timeline
+│   ├── voting_patterns.html <- FTC analysis and voting trends
+│   ├── paths_to_victory.html <- Interactive strategy maps for winners
+│   ├── challenge_performance.html <- Challenge stats and winner performance
+│   ├── alliances.html     <- Alliance network diagrams with force graph
+│   ├── power_rankings.html <- Episode-by-episode power score timeline
+│   ├── 404.html           <- Custom 404 error page
+│   └── 500.html           <- Custom 500 error page
 │
 ├── static/                <- 📦 STATIC ASSETS
 │   ├── css/
@@ -162,20 +177,36 @@ Land on home → Choose exploration mode →
 - **Current Coverage**: Seasons 1-39 (all classic Survivor seasons)
 - **Features Live**:
   - Tribal Councils timeline (per season)
-  - Castaway profiles with voting accuracy & challenge stats (per season)
+  - Castaway profiles with voting accuracy & challenge stats, advanced filtering/sorting (per season)
   - Challenge timeline with filtering (per season)
   - Season events timeline (per season)
   - Items/Advantages tracking with filtering (per season)
   - Winners Hall — gallery of all 39 winners with radar charts & archetype bars
   - Individual winner profiles with strategic analysis
   - Winner comparison — side-by-side with overlapping radar charts (2-4 winners)
-  - Seasons overview — all 39 seasons with summaries, twists, iconic moments
+  - Season-to-season comparison with stats, radar, and bar charts
+  - Seasons overview — all 39 seasons with summaries, twists, iconic moments, recommendations
   - Analytics — era comparison radar, trend lines, archetype distribution, scatter plots
+  - Paths to Victory — interactive scatter plot and radar by archetype
+  - Voting Patterns — FTC analysis, accuracy distribution, votes against
+  - Advantages Timeline — cross-season advantages with Chart.js visualizations
+  - Challenge Performance — challenge stats, winner immunity wins, top performers
   - Hall of Fame with all-time records (sortable tables)
+  - Survivor IQ Quiz (157 questions, 7 categories)
+  - Returning Players tracker (91 multi-season players)
+  - Season recommendations ("If you liked this, try...")
   - Global player search (nav bar)
-  - Dark mode toggle
-  - Responsive nav with mobile hamburger menu
-  - Castaway headshots with fallback initials
+  - Dark mode toggle + Spoiler-free mode
+  - Responsive nav with mobile hamburger menu, breadcrumbs
+  - Back-to-top FAB on all pages
+  - Random Player/Season buttons
+  - Alliance Network Diagrams — force-directed graph, voting blocs, co-voting charts
+  - Power Ranking Timeline — episode-by-episode power scores, winner spotlight
+  - Player nicknames (90+ mappings) on castaway cards
+  - Famous quotes (40 quotes) with random quote on homepage
+  - Loading states, page transitions, card entrance animations
+  - Custom 404/500 error pages
+  - 59 unit tests (all passing)
 
 ---
 
@@ -211,9 +242,21 @@ Land on home → Choose exploration mode →
 | `/seasons` | GET | All seasons overview with summaries and twists |
 | `/analytics` | GET | Data visualizations: era analysis, trends, scatter plots |
 | `/hall-of-fame` | GET | All-time records across all available seasons |
+| `/quiz` | GET | Survivor IQ Quiz page |
+| `/returning-players` | GET | Returning players tracking across seasons |
+| `/advantages-timeline` | GET | Cross-season advantages timeline |
+| `/voting-patterns` | GET | FTC analysis and voting pattern trends |
+| `/paths-to-victory` | GET | Interactive strategy maps for winners |
+| `/challenge-performance` | GET | Challenge stats and winner performance analysis |
+| `/compare-seasons` | GET | Season-to-season comparison with charts |
 | `/api/episode/<season>/<episode_num>` | GET | JSON data for specific episode |
 | `/api/castaway/<season>/<name>` | GET | JSON data for specific castaway |
 | `/api/search?q=<query>` | GET | Global player search across all seasons |
+| `/api/random-player` | GET | Random castaway from any season |
+| `/api/season-recommendations/<season>` | GET | Similar season recommendations |
+| `/api/random-quote` | GET | Random famous Survivor quote |
+| `/alliances?season=N` | GET | Alliance network diagrams for season N |
+| `/power-rankings?season=N` | GET | Power ranking timeline for season N |
 
 ---
 

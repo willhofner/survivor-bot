@@ -1,12 +1,25 @@
 {% extends "base.html" %}
 
-{% block title %}Tribal Councils - Survivor: Cagayan{% endblock %}
+{% block title %}Tribal Councils - Survivor: {{ season_name }}{% endblock %}
+
+{% block breadcrumb %}
+<div class="survivor-breadcrumb">
+    <div class="container">
+        <a href="/">Home</a>
+        <span class="separator">&#x25B6;</span>
+        <a href="/seasons">Seasons</a>
+        <span class="separator">&#x25B6;</span>
+        <span class="current">S{{ season }}: {{ season_name }} &mdash; Tribal Councils</span>
+    </div>
+</div>
+{% endblock %}
 
 {% block content %}
 <div class="tribal-councils-view">
-    <h1 class="text-center mb-5 survivor-title">
+    <h1 class="text-center mb-3 survivor-title">
         <span class="torch">🔥</span> Tribal Council Timeline
     </h1>
+    <p class="text-center mb-4" style="color: var(--sand);">Season {{ season }}: {{ season_name }}</p>
 
     <div class="timeline-stats text-center mb-4">
         <span class="stat-badge">{{ tribal_councils|length }} Tribal Councils</span>

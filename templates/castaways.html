@@ -1,17 +1,56 @@
 {% extends "base.html" %}
 
-{% block title %}Castaways - Survivor: Cagayan{% endblock %}
+{% block title %}Castaways - Survivor: {{ season_name }}{% endblock %}
+
+{% block breadcrumb %}
+<div class="survivor-breadcrumb">
+    <div class="container">
+        <a href="/">Home</a>
+        <span class="separator">&#x25B6;</span>
+        <a href="/seasons">Seasons</a>
+        <span class="separator">&#x25B6;</span>
+        <span class="current">S{{ season }}: {{ season_name }} &mdash; Castaways</span>
+    </div>
+</div>
+{% endblock %}
 
 {% block content %}
 <div class="castaways-view">
-    <h1 class="text-center mb-5 survivor-title">
+    <h1 class="text-center mb-3 survivor-title">
         <span class="torch">🔥</span> The Castaways
     </h1>
+    <p class="text-center mb-4" style="color: var(--sand);">Season {{ season }}: {{ season_name }}</p>
 
-    <div class="castaways-grid">
+    <!-- Advanced Filters -->
+    <div class="text-center mb-4">
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+            <button class="btn btn-filter active" onclick="filterCastaways('all', this)">All</button>
+            <button class="btn btn-filter" onclick="filterCastaways('winner', this)">Winner</button>
+            <button class="btn btn-filter" onclick="filterCastaways('finalist', this)">Finalists</button>
+            <button class="btn btn-filter" onclick="filterCastaways('jury', this)">Jury</button>
+            <button class="btn btn-filter" onclick="filterCastaways('prejury', this)">Pre-Jury</button>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+            <select id="sortCastaways" class="form-select form-select-sm season-selector d-inline-block" style="width: auto;" onchange="sortCastaways(this.value)">
+                <option value="default">Sort by Placement</option>
+                <option value="accuracy">Sort by Voting Accuracy</option>
+                <option value="challenges">Sort by Challenge Wins</option>
+                <option value="votes">Sort by Votes Against (fewest)</option>
+                <option value="days">Sort by Days Lasted</option>
+                <option value="name">Sort by Name</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="castawaysGrid" class="castaways-grid">
         {% for castaway in castaways %}
         <div class="castaway-card"
-             data-placement="{{ castaway.placement }}">
+             data-placement="{{ castaway.placement }}"
+             data-accuracy="{{ castaway.voting_accuracy.accuracy }}"
+             data-challenges="{{ castaway.challenge_stats.total_wins }}"
+             data-votes="{{ castaway.votes_against }}"
+             data-days="{{ castaway.days_lasted }}"
+             data-name="{{ castaway.name }}">
             <div class="castaway-header" style="border-color: {{ castaway.color }};">
                 <div class="castaway-headshot">
                     {% if castaway.headshot %}
@@ -24,14 +63,21 @@
                 </div>
                 <div class="castaway-placement">
                     {% if castaway.placement == "Winner" %}
-                        <span class="crown">👑</span>
+                        <span class="crown spoiler">👑</span>
                     {% elif castaway.placement == "Runner-up" %}
                         <span class="medal">🥈</span>
+                    {% elif castaway.placement == "2nd Runner-up" %}
+                        <span class="medal">🥉</span>
                     {% else %}
                         <span class="placement-number">{{ castaway.placement }}</span>
                     {% endif %}
                 </div>
                 <h3 class="castaway-name">{{ castaway.name }}</h3>
+                {% if castaway.nickname %}
+                <div style="color: var(--sand); font-style: italic; font-size: 0.8rem; margin-top: -2px;">
+                    "{{ castaway.nickname }}"
+                </div>
+                {% endif %}
                 <div class="castaway-tribe" style="background-color: {{ castaway.color }};">
                     {{ castaway.original_tribe }}
                 </div>
@@ -67,11 +113,11 @@
             </div>
             {% endif %}
 
-            <button class="btn btn-sm btn-details" onclick="toggleDetails('{{ castaway.name }}')">
+            <button class="btn btn-sm btn-details" onclick="toggleDetails(this)">
                 View Voting History
             </button>
 
-            <div id="details-{{ castaway.name }}" class="voting-details" style="display: none;">
+            <div class="voting-details" style="display: none;">
                 <h5 class="mt-3 mb-2">Voting History</h5>
                 <div class="timeline">
                     {% for vote in castaway.voting_history %}
@@ -118,17 +164,52 @@
 
 {% block scripts %}
 <script>
-    function toggleDetails(name) {
-        const details = document.getElementById(`details-${name}`);
-        const button = event.target;
+    function toggleDetails(btn) {
+        const card = btn.closest('.castaway-card');
+        const details = card.querySelector('.voting-details');
 
         if (details.style.display === 'none') {
             details.style.display = 'block';
-            button.textContent = 'Hide Voting History';
+            btn.textContent = 'Hide Voting History';
         } else {
             details.style.display = 'none';
-            button.textContent = 'View Voting History';
+            btn.textContent = 'View Voting History';
         }
+    }
+
+    function filterCastaways(filter, btn) {
+        document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        document.querySelectorAll('.castaway-card').forEach(card => {
+            const placement = card.dataset.placement || '';
+            const days = parseInt(card.dataset.days) || 0;
+            let show = false;
+
+            if (filter === 'all') show = true;
+            else if (filter === 'winner') show = placement === 'Winner';
+            else if (filter === 'finalist') show = placement === 'Winner' || placement === 'Runner-up' || placement === '2nd Runner-up';
+            else if (filter === 'jury') show = days >= 25 && !['Winner', 'Runner-up', '2nd Runner-up'].includes(placement);
+            else if (filter === 'prejury') show = days < 25 && !['Winner', 'Runner-up'].includes(placement);
+
+            card.style.display = show ? '' : 'none';
+        });
+    }
+
+    function sortCastaways(by) {
+        const grid = document.getElementById('castawaysGrid');
+        const cards = Array.from(grid.querySelectorAll('.castaway-card'));
+
+        cards.sort((a, b) => {
+            if (by === 'accuracy') return parseFloat(b.dataset.accuracy) - parseFloat(a.dataset.accuracy);
+            if (by === 'challenges') return parseInt(b.dataset.challenges) - parseInt(a.dataset.challenges);
+            if (by === 'votes') return parseInt(a.dataset.votes) - parseInt(b.dataset.votes);
+            if (by === 'days') return parseInt(b.dataset.days) - parseInt(a.dataset.days);
+            if (by === 'name') return a.dataset.name.localeCompare(b.dataset.name);
+            return 0;
+        });
+
+        cards.forEach(card => grid.appendChild(card));
     }
 </script>
 {% endblock %}

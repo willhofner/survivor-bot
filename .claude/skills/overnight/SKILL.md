@@ -139,6 +139,34 @@ Task({ subagent_type: "general-purpose", prompt: "...", description: "Build B" }
 - Task orchestration and progress tracking
 - Reading sub-agent outputs and deciding next steps
 
+### Agent Quality Standards
+
+**CRITICAL: Parallelism enables BETTER work, not shortcuts.**
+
+When spawning agents, hold them to HIGH standards. Quality > speed. The goal is to produce study-worthy research and production-ready code.
+
+**For research agents:**
+- Give specific instructions about depth and format
+- Request structured output (JSON, markdown tables, specific schema)
+- Ask agents to save results to files for easy consumption
+- Example: "Research all 39 Survivor winners. For EACH winner, create a detailed profile including: strategic archetype (4-axis classification), signature move, voting accuracy %, challenge dominance, social capital assessment. Save results as JSON file with schema: {name, season, archetype: {voting_control: 1-10, physical: 1-10, social: 1-10, aggression: 1-10}, signature_move, stats: {...}}. Be thorough - this should be study-worthy analysis."
+
+**For implementation agents:**
+- Provide clear acceptance criteria
+- Request testing and validation
+- Ask for documentation of decisions made
+- Example: "Build Hall of Fame page. Must include: top 10 voting accuracy records, top 5 challenge beasts, most idols played successfully. Test with all available seasons (1-39). Document any edge cases or data quality issues you encounter."
+
+**Aggressive parallelism WHEN appropriate:**
+- Research tasks that are naturally parallel (e.g., 39 agents researching 39 winners simultaneously)
+- Independent feature builds
+- Multi-source investigations
+
+**But maintain standards:**
+- Better to have 10 agents producing excellent work than 100 producing shallow summaries
+- Each agent should produce deliverable-quality output
+- Delegate the full task, not just pieces (let agents do complete work)
+
 ### Decision-Making Protocol
 
 When facing a design, architecture, or direction decision:
@@ -162,6 +190,23 @@ If you encounter a permission prompt during autonomous execution:
 2. **Document it** — note in your summary that you needed manual approval for [specific tool/action]
 3. **Suggest a fix** — if you know why the prompt appeared, recommend how to prevent it next time
 4. **Continue autonomously** — once approved, don't ask again for similar actions
+
+### Bash Command Patterns (Avoiding Permission Prompts)
+
+**Safe patterns (execute directly with Bash tool):**
+- File operations: `ls`, `cat`, `head`, `tail`, `wc`, `stat`
+- Downloads: `curl`, `wget` (direct file downloads)
+- Processing: `python3 script.py`, `node script.js`
+- Searching: `grep`, `find` (with simple patterns)
+- Background processes: `python3 app.py &` (with run_in_background: true)
+- Git status checks: `git status`, `git log`, `git diff`
+
+**Use Task tool instead (delegate to Bash agent):**
+- `git clone` — spawns permission prompts, delegate to agent
+- Complex multi-step workflows — better orchestrated by agent
+- Long-running data processing — delegate so main context stays clean
+
+**The principle:** Simple, direct commands are safe. Complex workflows or git clones should be delegated.
 
 ### Force-Stop Conditions
 

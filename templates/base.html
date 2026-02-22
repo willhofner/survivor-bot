@@ -43,18 +43,36 @@
                             <li><a class="dropdown-item" href="/items?season={{ current_season }}">Items</a></li>
                         </ul>
                     </li>
-                    <!-- Global pages -->
-                    <li class="nav-item"><a class="nav-link" href="/winners">Winners</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/compare">Compare</a></li>
+                    <!-- Analysis dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Analysis</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="/winners">Winners Hall</a></li>
+                            <li><a class="dropdown-item" href="/compare">Compare Winners</a></li>
+                            <li><a class="dropdown-item" href="/compare-seasons">Compare Seasons</a></li>
+                            <li><a class="dropdown-item" href="/analytics">Analytics</a></li>
+                            <li><a class="dropdown-item" href="/paths-to-victory">Paths to Victory</a></li>
+                            <li><a class="dropdown-item" href="/voting-patterns">Voting Patterns</a></li>
+                            <li><a class="dropdown-item" href="/challenge-performance">Challenge Performance</a></li>
+                            <li><a class="dropdown-item" href="/advantages-timeline">Advantages Timeline</a></li>
+                            <li><a class="dropdown-item" href="/alliances?season={{ current_season }}">Alliances</a></li>
+                            <li><a class="dropdown-item" href="/power-rankings?season={{ current_season }}">Power Rankings</a></li>
+                            <li><hr class="dropdown-divider" style="border-color: var(--bamboo);"></li>
+                            <li><a class="dropdown-item" href="/returning-players">Returning Players</a></li>
+                            <li><a class="dropdown-item" href="/hall-of-fame">Records</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="/seasons">Seasons</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/analytics">Analytics</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/hall-of-fame">Records</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/quiz">Quiz</a></li>
                     <!-- Search -->
                     <li class="nav-item">
                         <div class="nav-search-container" style="position: relative;">
                             <input type="text" id="globalSearch" class="form-control form-control-sm" placeholder="Search players..." style="background: rgba(255,255,255,0.1); border: 1px solid var(--bamboo); color: #fff; width: 160px; font-size: 0.8rem;" oninput="handleGlobalSearch(this.value)">
                             <div id="searchResults" class="search-dropdown" style="display:none;"></div>
                         </div>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-sm theme-toggle" onclick="toggleSpoilerMode()" title="Toggle spoiler-free mode">&#x1F648;</button>
                     </li>
                     <li class="nav-item">
                         <button class="btn btn-sm theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#x1F319;</button>
@@ -66,24 +84,41 @@
 
     <div class="tribal-pattern"></div>
 
+    <!-- Loading overlay for page transitions -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="text-center">
+            <div class="loading-spinner"></div>
+            <div style="color: var(--sand); margin-top: 1rem; font-size: 0.9rem;">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    {% block breadcrumb %}{% endblock %}
+
     <main class="container my-5">
         {% block content %}{% endblock %}
     </main>
 
+    <!-- Back to Top FAB -->
+    <button id="backToTopBtn" class="back-to-top-fab" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top" style="display:none;">
+        &#x2191;
+    </button>
+
     <footer class="text-center py-4 survivor-footer">
         <p class="mb-0">Survivor Bot &mdash; The Complete Visual History of Survivor</p>
+        <p class="mb-0" style="font-size: 0.75rem; color: rgba(245,222,179,0.5); margin-top: 0.25rem;">
+            39 Seasons &bull; Data from survivoR Package
+        </p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function changeSeason(seasonNum) {
             const currentPath = window.location.pathname;
-            // Only add season param to pages that use it
-            const seasonPages = ['/tribal-councils', '/castaways', '/challenges', '/events', '/items'];
+            const seasonPages = ['/tribal-councils', '/castaways', '/challenges', '/events', '/items', '/alliances', '/power-rankings'];
             if (seasonPages.some(p => currentPath.startsWith(p))) {
                 window.location.href = currentPath + '?season=' + seasonNum;
             } else {
-                // Navigate to castaways for the selected season
                 window.location.href = '/castaways?season=' + seasonNum;
             }
         }
@@ -127,18 +162,39 @@
             const next = current === 'dark' ? 'jungle' : 'dark';
             body.setAttribute('data-theme', next);
             localStorage.setItem('survivor-theme', next);
-            document.querySelector('.theme-toggle').textContent = next === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
+            document.querySelectorAll('.theme-toggle')[1].textContent = next === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
         }
 
-        // Restore theme from localStorage
+        // Spoiler-free mode
+        function toggleSpoilerMode() {
+            const body = document.body;
+            body.classList.toggle('spoiler-free');
+            const active = body.classList.contains('spoiler-free');
+            localStorage.setItem('survivor-spoiler-free', active ? 'true' : 'false');
+            document.querySelectorAll('.theme-toggle')[0].textContent = active ? '\uD83D\uDE48' : '\uD83D\uDE49';
+        }
+
+        // Restore theme and spoiler mode from localStorage
         (function() {
             const saved = localStorage.getItem('survivor-theme');
             if (saved) {
                 document.body.setAttribute('data-theme', saved);
-                const btn = document.querySelector('.theme-toggle');
+                const btn = document.querySelectorAll('.theme-toggle')[1];
                 if (btn) btn.textContent = saved === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
             }
+            const spoiler = localStorage.getItem('survivor-spoiler-free');
+            if (spoiler === 'true') {
+                document.body.classList.add('spoiler-free');
+                const btn = document.querySelectorAll('.theme-toggle')[0];
+                if (btn) btn.textContent = '\uD83D\uDE48';
+            }
         })();
+
+        // Back to top button - show on scroll
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('backToTopBtn');
+            if (btn) btn.style.display = window.scrollY > 400 ? 'flex' : 'none';
+        });
     </script>
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
     {% block scripts %}{% endblock %}
