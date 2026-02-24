@@ -4,6 +4,47 @@ Session-by-session log of conversations, decisions, and implementations.
 
 ---
 
+## 2026-02-24 — Idol Strategy: Bug Fixes & God Idol Separation
+
+### Bug Fixes
+- **Fixed broken Overview tab**: `tojson_safe` Jinja filter was HTML-escaping JSON output (`&#34;` instead of `"`), breaking Chart.js data inside `<script>` tags. Fixed by wrapping with `Markup()` from markupsafe.
+- **Fixed tab header readability**: Bootstrap nav-tabs had white active backgrounds by default. Added dark-themed CSS overrides (transparent background, torch-orange active border, proper hover states).
+
+### God Idol Separation
+- **Separated God Idol (Post-Vote Read) into its own distinct type** in Idol Types catalog — previously lumped in with "Super Idol / Tyler Perry Idol"
+- **Removed God Idol from strategy analysis**: Strategy stats (self vs ally, duration, secrecy) now exclude God/Super Idols since they operate on fundamentally different strategic principles
+- **Replaced God Idol examples in Strategies tab** with standard idol examples: Malcolm's Three Amigos (S26), Mike Holloway threatening to play (S30), Dan Rengering publicly targeted (S37)
+- **Reworked Rule #6** from "Best Idol Is the One You Never Play" (which was about Yul/Tony God Idols) to "An Idol in Your Pocket Is Still a Weapon" (about standard idol threat value with Carolyn/Mike examples)
+- **Replaced Yul Kwon in Best Plays #10** (was specifically about God Idol leverage) with David Wright saving Jessica Lewis (S33) — a standard idol play
+- **Updated final verdict** to remove Super Idol reference
+- Added 2 new tests (God Idol in type catalog, God Idol not in strategies section). 66 total, all passing.
+
+---
+
+## 2026-02-24 — Idol Strategy Analysis Page (Initial Build)
+
+### New Feature: Idol Strategy Guide (`/idol-strategy`)
+- **Comprehensive cross-season idol analysis** covering all 39 seasons (151 advantages, ~130 real idols)
+- **Five tabbed sections**: Overview, Idol Types, Strategies, Best & Worst, Conclusions
+- **Overview tab**: Idols Per Season bar chart, Play Outcomes doughnut, Self vs. Ally stacked bar, Duration distribution chart, Top Finders table, Most Votes Negated table
+- **Idol Types tab**: Detailed catalog of 5 idol types (Standard HII, Super/Tyler Perry, Split, Legacy, Temporary) + Fake Idols + Idol Nullifier — each with rules, strategy tips, and "If You Find This" advice
+- **Strategies tab**: Four strategic dimensions analyzed (Timing, Target, Secrecy, Outcome) with data-driven comparisons, examples, and verdicts
+- **Best & Worst tab**: Top 10 greatest idol plays (Parvati's double play, Wentworth's 9-vote negation, etc.) and 8 worst blunders (James with two idols, J.T. to Russell, etc.)
+- **Conclusions tab**: "The 7 Rules of Idol Play" — opinionated, data-driven strategy guide + "Strategies to Avoid" section
+- Four Chart.js visualizations: idols per season, outcomes doughnut, self vs ally, duration distribution
+- 5 new tests added (65 total, all passing)
+
+### Navigation Changes
+- Renamed "Explore > Items" to "Explore > Idols" (page itself unchanged as requested)
+- Added "Analysis > Idol Strategy" link in Analysis dropdown
+
+### Research Process
+- Spawned 4 parallel research agents to investigate idol types, notable plays, best/worst plays, and codebase structure
+- Aggregated data from all 39 `season*_advantages_idols.json` files
+- Key stats: 59.1% idol play success rate, average 10-day hold time, 55 successful plays, 25 players voted out holding idols
+
+---
+
 ## 2026-02-23 — Bug Fixes, Records Overhaul, Visual Theme Revamp
 
 ### Bugs Fixed

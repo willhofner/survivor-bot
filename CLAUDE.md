@@ -67,6 +67,7 @@ survivor-bot/
 │   ├── challenge_performance.html <- Challenge stats and winner performance
 │   ├── alliances.html     <- Alliance network diagrams with force graph
 │   ├── power_rankings.html <- Episode-by-episode power score timeline
+│   ├── idol_strategy.html <- Cross-season idol strategy analysis with charts
 │   ├── 404.html           <- Custom 404 error page
 │   └── 500.html           <- Custom 500 error page
 │
@@ -206,7 +207,8 @@ Land on home → Choose exploration mode →
   - Famous quotes (40 quotes) with random quote on homepage
   - Loading states, page transitions, card entrance animations
   - Custom 404/500 error pages
-  - 59 unit tests (all passing)
+  - Idol Strategy analysis — cross-season idol usage, types, strategies, best/worst plays, conclusions
+  - 65 unit tests (all passing)
 
 ---
 
@@ -235,7 +237,8 @@ Land on home → Choose exploration mode →
 | `/castaways?season=N` | GET | Castaway profiles with stats for season N |
 | `/challenges?season=N` | GET | Challenge timeline with filtering for season N |
 | `/events?season=N` | GET | Season events timeline for season N |
-| `/items?season=N` | GET | Advantages/idols tracking with filtering for season N |
+| `/items?season=N` | GET | Idols tracking with filtering for season N |
+| `/idol-strategy` | GET | Comprehensive idol strategy analysis across all seasons |
 | `/winners` | GET | Winners Hall gallery with radar charts and archetype bars |
 | `/winner/<season>` | GET | Individual winner profile with strategic analysis |
 | `/compare` | GET | Winner comparison view (2-4 side-by-side) |

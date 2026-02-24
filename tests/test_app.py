@@ -308,6 +308,43 @@ class TestRoutes:
         assert b'Alliance Networks' in resp.data  # New feature card
         assert b'Power Rankings' in resp.data  # New feature card
 
+    def test_idol_strategy_page(self, client):
+        resp = client.get('/idol-strategy')
+        assert resp.status_code == 200
+        assert b'Idol Strategy Guide' in resp.data
+        assert b'idolsPerSeasonChart' in resp.data
+
+    def test_idol_strategy_has_best_plays(self, client):
+        resp = client.get('/idol-strategy')
+        assert resp.status_code == 200
+        assert b'Parvati Shallow' in resp.data
+        assert b'Kelley Wentworth' in resp.data
+
+    def test_idol_strategy_has_conclusions(self, client):
+        resp = client.get('/idol-strategy')
+        assert resp.status_code == 200
+        assert b'The 7 Rules of Idol Play' in resp.data
+
+    def test_idol_strategy_has_type_catalog(self, client):
+        resp = client.get('/idol-strategy')
+        assert resp.status_code == 200
+        assert b'Standard Hidden Immunity Idol' in resp.data
+        assert b'God Idol (Post-Vote Read)' in resp.data
+
+    def test_idol_strategy_god_idol_not_in_strategies(self, client):
+        """God Idol strategies should not bleed into standard idol analysis"""
+        resp = client.get('/idol-strategy')
+        html = resp.data.decode()
+        # The strategies tab should not reference Tyler Perry or Super Idol
+        strategies_section = html.split('TAB 3: STRATEGIES')[1].split('TAB 4:')[0]
+        assert 'Tyler Perry' not in strategies_section
+        assert 'Super Idol' not in strategies_section
+
+    def test_nav_shows_idols_not_items(self, client):
+        resp = client.get('/idol-strategy')
+        assert b'>Idols</a>' in resp.data
+        assert b'/idol-strategy' in resp.data
+
 
 # --- Data Integrity Tests ---
 

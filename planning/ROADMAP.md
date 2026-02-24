@@ -31,6 +31,7 @@
 - Player nicknames (SHIPPED)
 - Famous quotes (SHIPPED)
 - Animated transitions (SHIPPED)
+- Idol Strategy analysis page (SHIPPED)
 
 ---
 

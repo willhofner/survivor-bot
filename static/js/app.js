@@ -1,5 +1,33 @@
 // Survivor Bot - Main JavaScript
 
+// Torch cursor trail — fire particles follow the mouse
+(function() {
+    // Skip on touch devices
+    if ('ontouchstart' in window) return;
+
+    const embers = ['\uD83D\uDD25', '\u2728', '\uD83D\uDD25'];
+    let lastSpawn = 0;
+
+    document.addEventListener('mousemove', function(e) {
+        const now = Date.now();
+        if (now - lastSpawn < 50) return; // throttle: ~20 particles/sec
+        lastSpawn = now;
+
+        const particle = document.createElement('span');
+        particle.className = 'torch-particle';
+        particle.textContent = embers[Math.floor(Math.random() * embers.length)];
+        particle.style.left = e.clientX + (Math.random() * 10 - 5) + 'px';
+        particle.style.top = e.clientY + (Math.random() * 10 - 5) + 'px';
+        particle.style.fontSize = (12 + Math.random() * 10) + 'px';
+        document.body.appendChild(particle);
+
+        // Self-cleanup after animation
+        particle.addEventListener('animationend', function() {
+            particle.remove();
+        });
+    });
+})();
+
 // Page transition loading overlay
 document.addEventListener('DOMContentLoaded', function() {
     // Show loading on internal link clicks

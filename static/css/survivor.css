@@ -1,5 +1,27 @@
 /* Survivor Theme CSS — Tropical Sunset */
 
+/* Torch cursor trail */
+.torch-particle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 99999;
+    font-size: 16px;
+    line-height: 1;
+    user-select: none;
+    animation: torch-fade 0.6s ease-out forwards;
+}
+
+@keyframes torch-fade {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -100%) scale(0.3);
+    }
+}
+
 :root {
     --brawn: #C2703E;
     --brains: #5B8DEF;
@@ -1214,6 +1236,35 @@ body.spoiler-free .castaway-placement .crown:hover,
 body.spoiler-free [data-placement="Winner"] .castaway-name:hover,
 body.spoiler-free .winner-announcement:hover {
     filter: blur(0);
+}
+
+/* Nav Tabs — dark theme override */
+.nav-tabs {
+    border-bottom-color: var(--bamboo);
+}
+
+.nav-tabs .nav-link {
+    background: transparent;
+    border: 1px solid transparent;
+    border-bottom: 2px solid transparent;
+    color: var(--sand);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+}
+
+.nav-tabs .nav-link:hover {
+    background: rgba(255, 107, 53, 0.1);
+    border-color: transparent;
+    border-bottom-color: var(--torch-glow);
+    color: var(--torch-orange);
+}
+
+.nav-tabs .nav-link.active {
+    background: rgba(255, 107, 53, 0.15);
+    border-color: var(--bamboo) var(--bamboo) transparent;
+    border-bottom: 2px solid var(--torch-orange);
+    color: var(--torch-orange);
 }
 
 /* Breadcrumb */

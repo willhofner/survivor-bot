@@ -7,8 +7,9 @@ import random
 
 app = Flask(__name__)
 
-# Jinja2 filter for JSON serialization in templates
-app.jinja_env.filters['tojson_safe'] = lambda v: json.dumps(v)
+# Jinja2 filter for JSON serialization in templates (Markup prevents HTML-escaping in <script> blocks)
+from markupsafe import Markup
+app.jinja_env.filters['tojson_safe'] = lambda v: Markup(json.dumps(v))
 
 # Available seasons
 AVAILABLE_SEASONS = list(range(1, 40))
@@ -1412,6 +1413,275 @@ def random_player():
         'placement': castaway.get('placement', 'Unknown'),
         'url': f'/castaways?season={season_num}'
     })
+
+
+@app.route('/idol-strategy')
+def idol_strategy():
+    """Idol Strategy analysis — comprehensive cross-season idol usage analysis"""
+    all_idols = []
+    for s in AVAILABLE_SEASONS:
+        sd = seasons_data[s]
+        for adv in sd['advantages'].get('advantages', []):
+            idol = adv.copy()
+            idol['season'] = s
+            idol['season_name'] = SEASON_NAMES[s]
+            all_idols.append(idol)
+
+    # Filter to idol-type items only (exclude Extra Vote, Vote Steal, etc.)
+    idol_types = {'Hidden Immunity Idol', 'Hidden Immunity Idol with Special Powers (Tyler Perry Idol)',
+                  'Super Idol', 'Super Idol (transferred)', 'Hidden Immunity Idol (God Idol)',
+                  'Hidden Immunity Idol (split idol - two halves)',
+                  'Hidden Immunity Idol (held by Stephen)',
+                  'Hidden Immunity Idol (J.T.\'s idol, given to Russell)',
+                  'Hidden Immunity Idol (Island of the Idols - temporary)',
+                  'Legacy Advantage', 'Legacy Advantage (transferred)',
+                  'Fake Hidden Immunity Idol'}
+    idols_only = [i for i in all_idols if i.get('type', '') in idol_types
+                  or 'Immunity Idol' in i.get('type', '')
+                  or 'Super Idol' in i.get('type', '')
+                  or 'Legacy Advantage' in i.get('type', '')]
+    non_idol_advantages = [i for i in all_idols if i not in idols_only]
+
+    # Separate real idols from fakes
+    fake_idols = [i for i in idols_only if 'Fake' in i.get('type', '')]
+    real_idols = [i for i in idols_only if 'Fake' not in i.get('type', '')]
+
+    # Classify God/Super Idols early — these have fundamentally different strategy
+    # (played AFTER votes read) so they get their own type and are excluded from strategy analysis
+    def is_god_idol(idol):
+        t = idol.get('type', '')
+        return ('God Idol' in t or 'Tyler Perry' in t or 'Special Powers' in t or 'Super Idol' in t)
+
+    standard_idols = [i for i in real_idols if not is_god_idol(i)]
+
+    # === CORE STATS (all idols) ===
+    played = [i for i in real_idols if i.get('day_played')]
+    not_played = [i for i in real_idols if not i.get('day_played')]
+    successful = [i for i in played if i.get('result') == 'successful']
+    unsuccessful = [i for i in played if i.get('result') == 'unsuccessful']
+    voted_out_holding = [i for i in real_idols if i.get('voted_out_holding')]
+
+    total_votes_negated = sum(i.get('votes_negated', 0) for i in real_idols)
+
+    # === STRATEGY STATS (standard idols only — excludes God/Super Idols) ===
+    std_played = [i for i in standard_idols if i.get('day_played')]
+
+    # Self vs. other plays (standard idols only)
+    self_plays = [i for i in std_played if i.get('played_on') == i.get('found_by')]
+    ally_plays = [i for i in std_played if i.get('played_on') and i.get('played_on') != i.get('found_by')]
+    self_successful = [i for i in self_plays if i.get('result') == 'successful']
+    ally_successful = [i for i in ally_plays if i.get('result') == 'successful']
+
+    # Holding duration (standard idols only)
+    durations = []
+    for i in std_played:
+        df = i.get('day_found') or 0
+        dp = i.get('day_played') or 0
+        if df > 0 and dp > 0:
+            durations.append({'days': dp - df, 'player': i.get('found_by', ''), 'season': i['season'],
+                              'season_name': i['season_name'], 'result': i.get('result', '')})
+    durations.sort(key=lambda x: -x['days'])
+
+    # Duration buckets for chart
+    duration_buckets = {'Same day': 0, '1-3 days': 0, '4-7 days': 0, '8-14 days': 0, '15-21 days': 0, '22+ days': 0}
+    for d in durations:
+        days = d['days']
+        if days == 0:
+            duration_buckets['Same day'] += 1
+        elif days <= 3:
+            duration_buckets['1-3 days'] += 1
+        elif days <= 7:
+            duration_buckets['4-7 days'] += 1
+        elif days <= 14:
+            duration_buckets['8-14 days'] += 1
+        elif days <= 21:
+            duration_buckets['15-21 days'] += 1
+        else:
+            duration_buckets['22+ days'] += 1
+
+    # Top idol finders
+    finders = {}
+    for i in real_idols:
+        name = i.get('found_by', '')
+        if name:
+            if name not in finders:
+                finders[name] = {'name': name, 'found': 0, 'played': 0, 'successful': 0,
+                                 'votes_negated': 0, 'seasons': set()}
+            finders[name]['found'] += 1
+            finders[name]['seasons'].add(i['season'])
+            if i.get('day_played'):
+                finders[name]['played'] += 1
+                if i.get('result') == 'successful':
+                    finders[name]['successful'] += 1
+            finders[name]['votes_negated'] += i.get('votes_negated', 0)
+    # Convert sets to lists for template
+    for f in finders.values():
+        f['seasons'] = sorted(f['seasons'])
+        f['season_count'] = len(f['seasons'])
+    top_finders = sorted(finders.values(), key=lambda x: -x['found'])[:15]
+
+    # Most votes negated single play
+    top_negations = sorted(
+        [i for i in played if i.get('votes_negated', 0) > 0],
+        key=lambda x: -x.get('votes_negated', 0)
+    )[:10]
+
+    # Per-season idol stats for chart
+    season_idol_stats = []
+    for s in AVAILABLE_SEASONS:
+        sd = seasons_data[s]
+        advs = sd['advantages'].get('advantages', [])
+        season_real = [a for a in advs if 'Immunity Idol' in a.get('type', '')
+                       or 'Super Idol' in a.get('type', '')
+                       or 'Legacy Advantage' in a.get('type', '')]
+        season_real = [a for a in season_real if 'Fake' not in a.get('type', '')]
+        season_played = [a for a in season_real if a.get('day_played')]
+        season_successful = [a for a in season_played if a.get('result') == 'successful']
+        season_idol_stats.append({
+            'season': s,
+            'name': SEASON_NAMES[s],
+            'found': len(season_real),
+            'played': len(season_played),
+            'successful': len(season_successful),
+            'votes_negated': sum(a.get('votes_negated', 0) for a in season_real),
+            'voted_out_holding': sum(1 for a in season_real if a.get('voted_out_holding')),
+        })
+
+    # Idol types catalog
+    type_catalog = {}
+    for i in real_idols:
+        t = i.get('type', 'Unknown')
+        # Normalize type names — God Idol is its own category
+        if is_god_idol(i):
+            norm = 'God Idol (Post-Vote Read)'
+        elif 'split idol' in t.lower():
+            norm = 'Split Idol (Two Halves)'
+        elif 'Legacy Advantage' in t:
+            norm = 'Legacy Advantage'
+        elif 'temporary' in t.lower() or 'Island of the Idols' in t:
+            norm = 'Temporary Idol'
+        elif t == 'Hidden Immunity Idol':
+            norm = 'Standard Hidden Immunity Idol'
+        else:
+            norm = 'Standard Hidden Immunity Idol'
+        if norm not in type_catalog:
+            type_catalog[norm] = {'name': norm, 'count': 0, 'seasons': set(), 'played': 0, 'successful': 0}
+        type_catalog[norm]['count'] += 1
+        type_catalog[norm]['seasons'].add(i['season'])
+        if i.get('day_played'):
+            type_catalog[norm]['played'] += 1
+            if i.get('result') == 'successful':
+                type_catalog[norm]['successful'] += 1
+    for tc in type_catalog.values():
+        tc['seasons'] = sorted(tc['seasons'])
+
+    # Notable plays data (best and worst)
+    best_plays = [
+        {'rank': 1, 'player': 'Parvati Shallow', 'season': 20, 'season_name': 'Heroes vs. Villains',
+         'description': 'Double idol play — played idols on Jerri (5 votes negated) and Sandra, eliminating J.T. in the greatest strategic move in Survivor history.',
+         'votes_negated': 5, 'target': 'Jerri Manthey & Sandra', 'category': 'Played on Ally'},
+        {'rank': 2, 'player': 'Kelley Wentworth', 'season': 31, 'season_name': 'Cambodia',
+         'description': 'Negated all-time record 9 votes, blindsiding Andrew Savage. Grabbed idol during an immunity challenge — nobody knew she had it.',
+         'votes_negated': 9, 'target': 'Self', 'category': 'Secret Play'},
+        {'rank': 3, 'player': 'Russell Hantz', 'season': 19, 'season_name': 'Samoa',
+         'description': 'Negated 7 votes when Foa Foa was outnumbered 8-4. Found idol without clues — revolutionary. Cracked the Galu majority.',
+         'votes_negated': 7, 'target': 'Self', 'category': 'Underdog Save'},
+        {'rank': 4, 'player': 'Davie Rickenbacker', 'season': 37, 'season_name': 'David vs. Goliath',
+         'description': 'Saved Christian Hubicki at the merge by negating 7 votes. Blindsided John Hennigan. Part of an epic triple-advantage sequence.',
+         'votes_negated': 7, 'target': 'Christian Hubicki', 'category': 'Played on Ally'},
+        {'rank': 5, 'player': 'Ben Driebergen', 'season': 35, 'season_name': 'Heroes vs. Healers vs. Hustlers',
+         'description': 'Three consecutive idol plays (6+4+3 = 13 votes negated). Only player to survive 3 straight tribals as primary target via idol alone.',
+         'votes_negated': 13, 'target': 'Self (x3)', 'category': 'Consecutive Saves'},
+        {'rank': 6, 'player': 'Natalie Anderson', 'season': 29, 'season_name': 'San Juan del Sur',
+         'description': '"Jaclyn, did you vote for who I told you to vote for?" Played on ally at F5, blindsided Baylor. First to play on ally AND win.',
+         'votes_negated': 3, 'target': 'Jaclyn Schultz', 'category': 'Played on Ally'},
+        {'rank': 7, 'player': 'Jenn Brown', 'season': 30, 'season_name': 'Worlds Apart',
+         'description': 'Perfect read at the merge — negated 7 votes. No Collar alliance was outnumbered but survived. Cleanest self-save idol play ever.',
+         'votes_negated': 7, 'target': 'Self', 'category': 'Perfect Read'},
+        {'rank': 8, 'player': 'Carolyn Rivera', 'season': 30, 'season_name': 'Worlds Apart',
+         'description': 'Kept idol secret for 33 days — one of the longest holds. Negated 5 votes including Dan\'s Extra Vote. Patient mastery.',
+         'votes_negated': 5, 'target': 'Self', 'category': 'Long Hold'},
+        {'rank': 9, 'player': 'Jeremy Collins', 'season': 31, 'season_name': 'Cambodia',
+         'description': 'Played idol on ally Stephen Fishbach to maintain meat shield strategy. Later played second idol on himself at F6.',
+         'votes_negated': 4, 'target': 'Stephen Fishbach', 'category': 'Played on Ally'},
+        {'rank': 10, 'player': 'David Wright', 'season': 33, 'season_name': 'Millennials vs. Gen X',
+         'description': 'Saved Jessica Lewis at a pre-merge tribal, negating 5 votes and blindsiding Lucy Huang. Playing for an ally this early was extremely bold and cemented his alliance for the rest of the game.',
+         'votes_negated': 5, 'target': 'Jessica Lewis', 'category': 'Played on Ally'},
+    ]
+
+    worst_plays = [
+        {'rank': 1, 'player': 'James Clement', 'season': 15, 'season_name': 'China',
+         'description': 'Blindsided holding TWO idols. First player to hold two simultaneously. Overconfident in the majority alliance.',
+         'type': 'Voted Out Holding'},
+        {'rank': 2, 'player': 'J.T. Thomas', 'season': 20, 'season_name': 'Heroes vs. Villains',
+         'description': 'Gave his idol to Russell Hantz believing the Villains had an all-female alliance. The idol was used against him. "Worst move in Survivor history."',
+         'type': 'Gave to Enemy'},
+        {'rank': 3, 'player': 'Ozzy Lusth', 'season': 16, 'season_name': 'Micronesia',
+         'description': 'Blindsided 5-4 by the Black Widow Brigade with idol in pocket. Made a fake (the famous "stick") but never played the real one.',
+         'type': 'Voted Out Holding'},
+        {'rank': 4, 'player': 'Garrett Adelstein', 'season': 28, 'season_name': 'Cagayan',
+         'description': 'Found idol Day 1, voted out Day 6 — LEFT THE IDOL AT CAMP. Earliest elimination while possessing an idol.',
+         'type': 'Left at Camp'},
+        {'rank': 5, 'player': 'J.T. Thomas', 'season': 34, 'season_name': 'Game Changers',
+         'description': 'Found an idol at Nuku camp but left it behind when going to tribal. Blindsided by Sandra. Two seasons, two catastrophic idol failures.',
+         'type': 'Left at Camp'},
+        {'rank': 6, 'player': 'Tony & LJ', 'season': 28, 'season_name': 'Cagayan',
+         'description': 'Played idols on EACH OTHER at the merge tribal — neither received any votes. Two idols wasted simultaneously for zero votes negated.',
+         'type': 'Double Waste'},
+        {'rank': 7, 'player': 'Jason Siska', 'season': 16, 'season_name': 'Micronesia',
+         'description': 'Already fooled by Ozzy\'s fake idol stick, then found the REAL re-hidden idol and STILL didn\'t play it. Blindsided by Black Widow Brigade.',
+         'type': 'Voted Out Holding'},
+        {'rank': 8, 'player': 'Lauren O\'Connell', 'season': 38, 'season_name': 'Edge of Extinction',
+         'description': 'Held idol 30 days, then was manipulated into playing it on Chris Underwood (back 1 day from Edge). Voted out next tribal. Chris won the season.',
+         'type': 'Manipulated'},
+    ]
+
+    # Strategy dimension data
+    strategy_self_rate = round(len(self_successful) / max(len(self_plays), 1) * 100, 1)
+    strategy_ally_rate = round(len(ally_successful) / max(len(ally_plays), 1) * 100, 1)
+    avg_duration = round(sum(d['days'] for d in durations) / max(len(durations), 1), 1) if durations else 0
+
+    return render_template('idol_strategy.html',
+                         # Core stats
+                         total_real_idols=len(real_idols),
+                         total_played=len(played),
+                         total_successful=len(successful),
+                         total_unsuccessful=len(unsuccessful),
+                         total_not_played=len(not_played),
+                         total_voted_out_holding=len(voted_out_holding),
+                         total_votes_negated=total_votes_negated,
+                         success_rate=round(len(successful) / max(len(played), 1) * 100, 1),
+                         # Self vs ally
+                         self_plays_count=len(self_plays),
+                         ally_plays_count=len(ally_plays),
+                         self_success_rate=strategy_self_rate,
+                         ally_success_rate=strategy_ally_rate,
+                         self_successful_count=len(self_successful),
+                         ally_successful_count=len(ally_successful),
+                         # Duration
+                         avg_duration=avg_duration,
+                         duration_buckets=duration_buckets,
+                         longest_holds=durations[:8],
+                         # Top finders
+                         top_finders=top_finders,
+                         # Top negations
+                         top_negations=top_negations,
+                         # Per-season stats
+                         season_idol_stats=season_idol_stats,
+                         # Type catalog
+                         type_catalog=sorted(type_catalog.values(), key=lambda x: -x['count']),
+                         # Notable plays
+                         best_plays=best_plays,
+                         worst_plays=worst_plays,
+                         # Fake idols
+                         fake_idols=fake_idols,
+                         # Non-idol advantages count
+                         non_idol_count=len(non_idol_advantages),
+                         # All idols for detailed exploration
+                         all_idols=real_idols,
+                         # Standard template vars
+                         seasons=AVAILABLE_SEASONS,
+                         season_names=SEASON_NAMES)
 
 
 @app.errorhandler(404)

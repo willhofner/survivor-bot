@@ -1,0 +1,809 @@
+{% extends "base.html" %}
+
+{% block title %}Idol Strategy — Survivor Bot{% endblock %}
+
+{% block breadcrumb %}
+<nav class="breadcrumb-nav" style="background: rgba(0,0,0,0.3); padding: 0.5rem 1rem;">
+    <div class="container">
+        <a href="/">Home</a> &rsaquo; Analysis &rsaquo; <strong>Idol Strategy</strong>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="text-center mb-5">
+    <h1 style="font-family: 'Cinzel', serif; color: var(--torch-orange); font-size: 2.5rem;">
+        Idol Strategy Guide
+    </h1>
+    <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto;">
+        How to find, hold, and play a Hidden Immunity Idol. Lessons from {{ total_real_idols }} idols across 39 seasons.
+    </p>
+</div>
+
+<!-- Quick Stats Bar -->
+<div class="row g-3 mb-5">
+    <div class="col-6 col-md-3">
+        <div class="stat-card text-center" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: var(--torch-orange);">{{ total_real_idols }}</div>
+            <div style="color: var(--text-secondary); font-size: 0.85rem;">Idols Found</div>
+        </div>
+    </div>
+    <div class="col-6 col-md-3">
+        <div class="stat-card text-center" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #4ADE80;">{{ success_rate }}%</div>
+            <div style="color: var(--text-secondary); font-size: 0.85rem;">Play Success Rate</div>
+        </div>
+    </div>
+    <div class="col-6 col-md-3">
+        <div class="stat-card text-center" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #60A5FA;">{{ total_votes_negated }}</div>
+            <div style="color: var(--text-secondary); font-size: 0.85rem;">Total Votes Negated</div>
+        </div>
+    </div>
+    <div class="col-6 col-md-3">
+        <div class="stat-card text-center" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #F87171;">{{ total_voted_out_holding }}</div>
+            <div style="color: var(--text-secondary); font-size: 0.85rem;">Voted Out Holding</div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation Tabs -->
+<ul class="nav nav-tabs mb-4" id="idolTabs" role="tablist">
+    <li class="nav-item"><a class="nav-link active" id="overview-tab" data-bs-toggle="tab" href="#overview" role="tab">Overview</a></li>
+    <li class="nav-item"><a class="nav-link" id="types-tab" data-bs-toggle="tab" href="#types" role="tab">Idol Types</a></li>
+    <li class="nav-item"><a class="nav-link" id="strategies-tab" data-bs-toggle="tab" href="#strategies" role="tab">Strategies</a></li>
+    <li class="nav-item"><a class="nav-link" id="bestworst-tab" data-bs-toggle="tab" href="#bestworst" role="tab">Best & Worst</a></li>
+    <li class="nav-item"><a class="nav-link" id="conclusions-tab" data-bs-toggle="tab" href="#conclusions" role="tab">Conclusions</a></li>
+</ul>
+
+<div class="tab-content" id="idolTabContent">
+
+<!-- ═══════════════ TAB 1: OVERVIEW ═══════════════ -->
+<div class="tab-pane fade show active" id="overview" role="tabpanel">
+
+    <!-- Idols Per Season Chart -->
+    <div class="row g-4 mb-5">
+        <div class="col-lg-8">
+            <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
+                <h3 style="color: var(--torch-orange); font-size: 1.3rem; margin-bottom: 1rem;">Idols Per Season</h3>
+                <canvas id="idolsPerSeasonChart" height="280"></canvas>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
+                <h3 style="color: var(--torch-orange); font-size: 1.3rem; margin-bottom: 1rem;">Play Outcomes</h3>
+                <canvas id="outcomesDoughnut" height="250"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Self vs Ally + Duration Charts -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
+                <h3 style="color: var(--torch-orange); font-size: 1.3rem; margin-bottom: 1rem;">Self vs. Ally Plays</h3>
+                <div class="row text-center mb-3">
+                    <div class="col-6">
+                        <div style="font-size: 2rem; font-weight: bold; color: #60A5FA;">{{ self_plays_count }}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.8rem;">Played on Self</div>
+                        <div style="color: #4ADE80; font-size: 0.9rem;">{{ self_success_rate }}% success</div>
+                    </div>
+                    <div class="col-6">
+                        <div style="font-size: 2rem; font-weight: bold; color: #C084FC;">{{ ally_plays_count }}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.8rem;">Played on Ally</div>
+                        <div style="color: #4ADE80; font-size: 0.9rem;">{{ ally_success_rate }}% success</div>
+                    </div>
+                </div>
+                <canvas id="selfVsAllyChart" height="200"></canvas>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
+                <h3 style="color: var(--torch-orange); font-size: 1.3rem; margin-bottom: 1rem;">How Long Do Players Hold Idols?</h3>
+                <div class="text-center mb-3">
+                    <span style="font-size: 2rem; font-weight: bold; color: var(--sand);">{{ avg_duration }}</span>
+                    <span style="color: var(--text-secondary);"> days average</span>
+                </div>
+                <canvas id="durationChart" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Idol Finders -->
+    <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem;">
+        <h3 style="color: var(--torch-orange); font-size: 1.3rem; margin-bottom: 1rem;">Top Idol Finders (All Time)</h3>
+        <div class="table-responsive">
+            <table class="table table-dark table-hover" style="--bs-table-bg: transparent; --bs-table-hover-bg: rgba(255,255,255,0.05);">
+                <thead style="color: var(--torch-orange);">
+                    <tr><th>#</th><th>Player</th><th>Found</th><th>Played</th><th>Successful</th><th>Votes Negated</th><th>Seasons</th></tr>
+                </thead>
+                <tbody>
+                    {% for f in top_finders %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td style="color: var(--sand); font-weight: bold;">{{ f.name }}</td>
+                        <td>{{ f.found }}</td>
+                        <td>{{ f.played }}</td>
+                        <td>
+                            {% if f.successful > 0 %}
+                            <span style="color: #4ADE80;">{{ f.successful }}</span>
+                            {% else %}
+                            <span style="color: var(--text-secondary);">0</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ f.votes_negated }}</td>
+                        <td style="color: var(--text-secondary); font-size: 0.85rem;">
+                            {% for s in f.seasons %}S{{ s }}{% if not loop.last %}, {% endif %}{% endfor %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Most Votes Negated -->
+    <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem;">
+        <h3 style="color: var(--torch-orange); font-size: 1.3rem; margin-bottom: 1rem;">Most Votes Negated (Single Play)</h3>
+        <div class="table-responsive">
+            <table class="table table-dark table-hover" style="--bs-table-bg: transparent; --bs-table-hover-bg: rgba(255,255,255,0.05);">
+                <thead style="color: var(--torch-orange);">
+                    <tr><th>#</th><th>Player</th><th>Season</th><th>Played On</th><th>Votes Negated</th></tr>
+                </thead>
+                <tbody>
+                    {% for n in top_negations %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td style="color: var(--sand); font-weight: bold;">{{ n.found_by }}</td>
+                        <td>S{{ n.season }}: {{ n.season_name }}</td>
+                        <td>{{ n.played_on or n.found_by }}</td>
+                        <td style="font-weight: bold; color: #4ADE80; font-size: 1.2rem;">{{ n.votes_negated }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════ TAB 2: IDOL TYPES ═══════════════ -->
+<div class="tab-pane fade" id="types" role="tabpanel">
+    <div class="mb-4">
+        <p style="color: var(--text-secondary); font-size: 1rem;">
+            If you find yourself on the island, here are the different idol types you might encounter. The standard HII is by far the most common, but knowing the variants could save your game.
+        </p>
+    </div>
+
+    <!-- Type Cards -->
+    {% set type_descriptions = {
+        'Standard Hidden Immunity Idol': {
+            'icon': '🏝️',
+            'rules': 'Played after votes are cast but BEFORE they are read. Negates all votes against the holder or target. Single-use.',
+            'first_season': 14,
+            'first_name': 'Fiji',
+            'power': 'Medium',
+            'strategy': 'The bread and butter of Survivor. 100+ found across 39 seasons. Can be played on yourself or an ally.',
+            'tip': 'This is what you will almost certainly find. The key decision: play it on yourself or use it to build trust by saving an ally.'
+        },
+        'God Idol (Post-Vote Read)': {
+            'icon': '⚡',
+            'rules': 'Can be played AFTER votes are read. You see exactly how many votes you received before deciding to play. A fundamentally different weapon than the standard idol.',
+            'first_season': 12,
+            'first_name': 'Panama',
+            'power': 'Very High',
+            'strategy': 'Eliminates all guesswork. Most effective as leverage rather than playing it — Yul (S13) convinced Penner to flip by showing his, Tony (S28) displayed his as a psychological weapon. Both won their seasons without ever needing to play it. The God Idol operates on completely different strategic principles than the standard idol — its threat value alone can control the game.',
+            'tip': 'If you find this, you have a nuclear weapon. The optimal strategy is to reveal it and use the threat to prevent people from voting against you. Save it as long as possible — every round it exists in your pocket is a round nobody dares target you.'
+        },
+        'Split Idol (Two Halves)': {
+            'icon': '🔗',
+            'rules': 'Idol comes in two pieces. Both halves must be combined to be playable. Sometimes both are found by one player; other times each half goes to different players.',
+            'first_season': 32,
+            'first_name': 'Kaoh Rong',
+            'power': 'Variable',
+            'strategy': 'Creates a trust dynamic — if you give half to someone, they can betray you. Tai (S32) refused to combine his half with Scot, blindsiding him.',
+            'tip': 'Never give your half away unless you completely trust the other person. If someone gives you half, you have enormous leverage.'
+        },
+        'Legacy Advantage': {
+            'icon': '📜',
+            'rules': 'Grants immunity at a specific predetermined tribal (usually F13 or F6). Must be willed to another player if voted out.',
+            'first_season': 33,
+            'first_name': 'Millennials vs. Gen X',
+            'power': 'Low-Medium',
+            'strategy': 'No flexibility in timing — you can only use it once, at a fixed point. The "willed upon elimination" mechanic creates drama.',
+            'tip': 'Less powerful than a standard idol since you cannot choose when to play it. Use it as a bargaining chip if possible.'
+        },
+        'Temporary Idol': {
+            'icon': '⏳',
+            'rules': 'Functions like a standard HII but expires after 1-3 tribal councils instead of lasting until Final 5.',
+            'first_season': 39,
+            'first_name': 'Island of the Idols',
+            'power': 'Low',
+            'strategy': 'Creates urgency — you must decide quickly whether to play or risk it expiring. Less leverage since opponents know the clock is ticking.',
+            'tip': 'Play it early rather than letting it expire worthless. A temporary idol in the pocket is just a souvenir.'
+        }
+    } %}
+
+    {% for tc in type_catalog %}
+    {% set desc = type_descriptions.get(tc.name, {}) %}
+    <div class="advantage-card mb-4" style="border-left: 5px solid var(--torch-orange);">
+        <div class="advantage-header">
+            <div class="advantage-icon">{{ desc.get('icon', '💎') }}</div>
+            <div class="advantage-meta">
+                <h4 class="advantage-type" style="font-size: 1.3rem;">{{ tc.name }}</h4>
+                <div class="advantage-tribe">
+                    {{ tc.count }} found across {{ tc.seasons|length }} seasons
+                    {% if desc.get('first_season') %} &bull; First: S{{ desc.first_season }} ({{ desc.first_name }}){% endif %}
+                </div>
+            </div>
+            <div>
+                {% if desc.get('power') %}
+                <span class="status-badge {% if desc.power == 'Very High' %}success{% elif desc.power == 'Medium' %}holding{% else %}fail{% endif %}">
+                    {{ desc.power }} Power
+                </span>
+                {% endif %}
+            </div>
+        </div>
+        {% if desc %}
+        <div style="padding: 1rem 1.5rem;">
+            <div class="mb-2">
+                <strong style="color: var(--sand);">Rules:</strong>
+                <span style="color: var(--text-secondary);">{{ desc.rules }}</span>
+            </div>
+            <div class="mb-2">
+                <strong style="color: var(--sand);">Strategy:</strong>
+                <span style="color: var(--text-secondary);">{{ desc.strategy }}</span>
+            </div>
+            <div class="advantage-notes" style="border-left: 3px solid var(--torch-orange); margin-top: 0.75rem;">
+                <strong style="color: var(--torch-orange);">If You Find This:</strong> {{ desc.tip }}
+            </div>
+        </div>
+        {% endif %}
+        <div style="padding: 0 1.5rem 1rem;">
+            <small style="color: var(--text-secondary);">
+                Played {{ tc.played }} times &bull; Successful {{ tc.successful }} times
+                ({{ (tc.successful / tc.played * 100)|round(0)|int if tc.played > 0 else 0 }}%)
+                &bull; Seasons: {% for s in tc.seasons %}S{{ s }}{% if not loop.last %}, {% endif %}{% endfor %}
+            </small>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- Fake Idols Brief -->
+    <div class="advantage-card mb-4" style="border-left: 5px solid #9CA3AF;">
+        <div class="advantage-header">
+            <div class="advantage-icon">🎭</div>
+            <div class="advantage-meta">
+                <h4 class="advantage-type" style="font-size: 1.3rem; color: #9CA3AF;">Fake Idols</h4>
+                <div class="advantage-tribe">{{ fake_idols|length }} documented fakes across all seasons</div>
+            </div>
+        </div>
+        <div style="padding: 1rem 1.5rem; color: var(--text-secondary);">
+            <p>Player-crafted imitations designed to deceive. When played at tribal, Jeff declares "This is NOT a hidden immunity idol." Notable fakes include Ozzy's iconic stick (S16 — "It's a f***ing stick!"), Bob Crowley's two convincing fakes (S17), and David Wright planting a fake for Jay to find (S33).</p>
+            <p style="margin-bottom: 0;"><strong style="color: var(--sand);">Bottom line:</strong> Fake idols have never saved their creator from elimination. They're fun theater but not a reliable strategy. The most effective use is Domenick (S36) who bluffed with a fake at tribal, scaring Sebastian out of using his Extra Vote — psychological warfare, not protection.</p>
+        </div>
+    </div>
+
+    <!-- Idol Nullifier -->
+    <div class="advantage-card mb-4" style="border-left: 5px solid #F87171;">
+        <div class="advantage-header">
+            <div class="advantage-icon">🚫</div>
+            <div class="advantage-meta">
+                <h4 class="advantage-type" style="font-size: 1.3rem; color: #F87171;">Idol Nullifier (Counter-Advantage)</h4>
+                <div class="advantage-tribe">Appeared in S37 (David vs. Goliath) and S39 (Island of the Idols)</div>
+            </div>
+        </div>
+        <div style="padding: 1rem 1.5rem; color: var(--text-secondary);">
+            <p>The anti-idol. The holder writes a target's name while voting; if that person plays an idol, the Nullifier cancels it entirely. First used by Carl Boudreaux (S37) to nullify Dan Rengering's idol in an iconic triple-advantage play.</p>
+            <p style="margin-bottom: 0;"><strong style="color: var(--sand);">If you're on the island:</strong> The existence of Nullifiers means no idol is 100% safe anymore. Be aware that if someone knows you have an idol, they may have the means to cancel it.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════ TAB 3: STRATEGIES ═══════════════ -->
+<div class="tab-pane fade" id="strategies" role="tabpanel">
+    <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 2rem;">
+        Four strategic dimensions define how every idol is used. Understanding each one is essential for maximizing your idol's impact.
+    </p>
+
+    <!-- Strategy 1: Timing -->
+    <div class="advantage-card mb-4" style="border-left: 5px solid #60A5FA;">
+        <div style="padding: 1.5rem;">
+            <h3 style="color: #60A5FA; margin-bottom: 0.5rem;">
+                <span style="font-size: 1.5rem; margin-right: 0.5rem;">&#9201;</span>
+                Strategy 1: When to Play (Timing)
+            </h3>
+            <p style="color: var(--text-secondary);">Average hold time is <strong style="color: var(--sand);">{{ avg_duration }} days</strong>. But the distribution is bimodal — players either play quickly or hold for a very long time.</p>
+
+            <div class="row g-3 mt-2 mb-3">
+                <div class="col-md-6">
+                    <div style="background: rgba(96,165,250,0.1); border-radius: 8px; padding: 1rem;">
+                        <h5 style="color: #60A5FA;">Quick Players (0-3 days)</h5>
+                        <ul style="color: var(--text-secondary); margin-bottom: 0;">
+                            <li><strong>Gary Hogeboom</strong> (S11) — Found and played same episode. First idol play ever.</li>
+                            <li><strong>Tom Westman</strong> (S20) — Found Day 10, played Day 11. Blindsided Cirie.</li>
+                            <li><strong>Russell Hantz</strong> (S19) — Found idol #2, played within 3 days, negated 7 votes.</li>
+                        </ul>
+                        <div class="advantage-notes mt-2" style="border-left-color: #60A5FA;">
+                            <strong>Verdict:</strong> Quick plays are often forced — you're in immediate danger. Success rate is solid because urgency correlates with actually being targeted.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div style="background: rgba(192,132,252,0.1); border-radius: 8px; padding: 1rem;">
+                        <h5 style="color: #C084FC;">Patient Holders (20+ days)</h5>
+                        <ul style="color: var(--text-secondary); margin-bottom: 0;">
+                            <li><strong>Carolyn Rivera</strong> (S30) — Held 33 days. Negated 5 votes including Extra Vote.</li>
+                            <li><strong>Lauren O'Connell</strong> (S38) — Held 30 days. Gave it to Chris (mistake).</li>
+                            <li><strong>Troyzan Robertson</strong> (S34) — Held 29 days. Played at F6, 0 votes negated.</li>
+                        </ul>
+                        <div class="advantage-notes mt-2" style="border-left-color: #C084FC;">
+                            <strong>Verdict:</strong> Patience is powerful — if you read the vote correctly. The risk: you go home holding it. James Clement is the cautionary tale.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Longest Holds -->
+            <h5 style="color: var(--sand); margin-top: 1.5rem;">Longest Idol Holds Before Playing</h5>
+            <div class="table-responsive">
+                <table class="table table-dark table-sm" style="--bs-table-bg: transparent;">
+                    <thead style="color: var(--torch-orange);"><tr><th>Player</th><th>Season</th><th>Days Held</th><th>Result</th></tr></thead>
+                    <tbody>
+                        {% for h in longest_holds %}
+                        <tr>
+                            <td style="color: var(--sand);">{{ h.player }}</td>
+                            <td>S{{ h.season }}: {{ h.season_name }}</td>
+                            <td style="font-weight: bold;">{{ h.days }} days</td>
+                            <td>
+                                {% if h.result == 'successful' %}
+                                <span style="color: #4ADE80;">Successful</span>
+                                {% else %}
+                                <span style="color: #F87171;">Wasted</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Strategy 2: Target -->
+    <div class="advantage-card mb-4" style="border-left: 5px solid #C084FC;">
+        <div style="padding: 1.5rem;">
+            <h3 style="color: #C084FC; margin-bottom: 0.5rem;">
+                <span style="font-size: 1.5rem; margin-right: 0.5rem;">&#127919;</span>
+                Strategy 2: Who to Play It On (Target)
+            </h3>
+            <p style="color: var(--text-secondary);">
+                <strong style="color: var(--sand);">{{ self_plays_count }}</strong> played on self ({{ self_success_rate }}% success) vs.
+                <strong style="color: var(--sand);">{{ ally_plays_count }}</strong> played on ally ({{ ally_success_rate }}% success).
+            </p>
+
+            <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                    <div style="background: rgba(96,165,250,0.1); border-radius: 8px; padding: 1rem;">
+                        <h5 style="color: #60A5FA;">Playing on Yourself</h5>
+                        <p style="color: var(--text-secondary);">The default move. Self-preservation first. Most idol plays in history are self-plays, and the success rate is respectable.</p>
+                        <p style="color: var(--text-secondary); margin-bottom: 0;">
+                            <strong>When it works best:</strong> You KNOW you're the target. Russell (S19), Jenn Brown (S30), Kelley Wentworth (S31) — all had strong social reads confirming they were going home.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div style="background: rgba(192,132,252,0.1); border-radius: 8px; padding: 1rem;">
+                        <h5 style="color: #C084FC;">Playing on an Ally</h5>
+                        <p style="color: var(--text-secondary);">Higher risk, higher reward. Juries reward bold plays for others. Parvati (S20), Natalie (S29), Davie (S37) — these are top-tier legendary plays.</p>
+                        <p style="color: var(--text-secondary); margin-bottom: 0;">
+                            <strong>When it works best:</strong> You have reliable intel that your ally is targeted, AND you have backup protection for yourself. Natalie played for Jaclyn at F5 and won the game because of it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="advantage-notes mt-3">
+                <strong style="color: var(--torch-orange);">The Data Says:</strong> Playing on an ally produces the most iconic moments in Survivor history and can win you the game. But the worst idol play ever (J.T. giving his idol to Russell) is also an "ally" play gone catastrophically wrong. The difference is information quality.
+            </div>
+        </div>
+    </div>
+
+    <!-- Strategy 3: Secrecy -->
+    <div class="advantage-card mb-4" style="border-left: 5px solid #FBBF24;">
+        <div style="padding: 1.5rem;">
+            <h3 style="color: #FBBF24; margin-bottom: 0.5rem;">
+                <span style="font-size: 1.5rem; margin-right: 0.5rem;">&#129296;</span>
+                Strategy 3: Secret vs. Public (Information)
+            </h3>
+            <p style="color: var(--text-secondary);">Knowledge of your idol is a weapon — but it cuts both ways.</p>
+
+            <div class="row g-3 mt-2">
+                <div class="col-md-4">
+                    <div style="background: rgba(251,191,36,0.1); border-radius: 8px; padding: 1rem; height: 100%;">
+                        <h5 style="color: #FBBF24;">Keep It Secret</h5>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                            The opposition can't plan around what they don't know. Secret idols produce more successful plays because the surprise factor prevents vote-splitting.
+                        </p>
+                        <p style="color: #4ADE80; font-weight: bold; font-size: 0.85rem; margin-bottom: 0;">
+                            Examples: Wentworth (S31), Carolyn (S30), Amanda (S16)
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div style="background: rgba(251,191,36,0.05); border-radius: 8px; padding: 1rem; height: 100%;">
+                        <h5 style="color: #FBBF24;">Share With One Ally</h5>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                            Builds trust with your closest ally. They can help you read the vote and know when to play. But if they flip or leak, you're in trouble.
+                        </p>
+                        <p style="color: #60A5FA; font-weight: bold; font-size: 0.85rem; margin-bottom: 0;">
+                            Examples: Natalie + Baylor (S29), Parvati + Danielle (S20)
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div style="background: rgba(248,113,113,0.1); border-radius: 8px; padding: 1rem; height: 100%;">
+                        <h5 style="color: #F87171;">Go Public</h5>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                            Use the idol as a psychological weapon. Intimidate people into not voting for you. Extremely risky with a standard idol — opponents can split votes or deploy Nullifiers.
+                        </p>
+                        <p style="color: #F87171; font-weight: bold; font-size: 0.85rem; margin-bottom: 0;">
+                            Examples: Malcolm's Three Amigos (S26), Mike Holloway threatening to play (S30), Dan Rengering publicly targeted (S37)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="advantage-notes mt-3">
+                <strong style="color: var(--torch-orange);">The Data Says:</strong> Secret is overwhelmingly superior for standard idols. Every person who knows about your idol is a potential leak. When your idol is public, opponents split votes, redirect to your allies, or deploy Nullifiers. Malcolm's Three Amigos play (S26) forced a dramatic tribal but he was still voted out two rounds later. Dan Rengering (S37) was publicly known to have an idol and was specifically targeted with a Nullifier. Keep it secret.
+            </div>
+        </div>
+    </div>
+
+    <!-- Strategy 4: Success vs. Waste -->
+    <div class="advantage-card mb-4" style="border-left: 5px solid #4ADE80;">
+        <div style="padding: 1.5rem;">
+            <h3 style="color: #4ADE80; margin-bottom: 0.5rem;">
+                <span style="font-size: 1.5rem; margin-right: 0.5rem;">&#9989;</span>
+                Strategy 4: Successful vs. Wasted (Outcome)
+            </h3>
+            <p style="color: var(--text-secondary);">
+                <strong style="color: #4ADE80;">{{ total_successful }}</strong> successful plays vs.
+                <strong style="color: #F87171;">{{ total_unsuccessful }}</strong> wasted plays across all seasons.
+                That's a <strong style="color: var(--sand);">{{ success_rate }}%</strong> success rate.
+            </p>
+
+            <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                    <div style="background: rgba(74,222,128,0.1); border-radius: 8px; padding: 1rem;">
+                        <h5 style="color: #4ADE80;">What Successful Plays Have in Common</h5>
+                        <ul style="color: var(--text-secondary); margin-bottom: 0;">
+                            <li>Player had <strong>confirmed intelligence</strong> they were targeted</li>
+                            <li>Strong social reads — not just paranoia</li>
+                            <li>Often played at high-stakes tribals (merge, F5-F7)</li>
+                            <li>Frequently kept <strong>secret</strong> until the moment of play</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div style="background: rgba(248,113,113,0.1); border-radius: 8px; padding: 1rem;">
+                        <h5 style="color: #F87171;">What Wasted Plays Have in Common</h5>
+                        <ul style="color: var(--text-secondary); margin-bottom: 0;">
+                            <li>Played <strong>preemptively out of fear</strong>, not confirmed intel</li>
+                            <li>Played on the wrong person (ally wasn't actually targeted)</li>
+                            <li>Opponent anticipated the play and redirected votes</li>
+                            <li>Idol was <strong>public knowledge</strong>, allowing counter-strategies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════ TAB 4: BEST & WORST ═══════════════ -->
+<div class="tab-pane fade" id="bestworst" role="tabpanel">
+
+    <!-- Best Plays -->
+    <h2 style="color: #4ADE80; font-family: 'Cinzel', serif; margin-bottom: 1.5rem;">
+        Top 10 Greatest Idol Plays
+    </h2>
+    {% for play in best_plays %}
+    <div class="advantage-card successful mb-3">
+        <div style="padding: 1.25rem;">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+                <div>
+                    <span style="color: #4ADE80; font-weight: bold; font-size: 1.3rem;">#{{ play.rank }}</span>
+                    <span style="color: var(--sand); font-weight: bold; font-size: 1.1rem; margin-left: 0.5rem;">{{ play.player }}</span>
+                    <span style="color: var(--text-secondary); font-size: 0.9rem;"> — S{{ play.season }}: {{ play.season_name }}</span>
+                </div>
+                <span class="status-badge success" style="font-size: 0.75rem;">{{ play.category }}</span>
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">{{ play.description }}</p>
+            {% if play.votes_negated > 0 %}
+            <small style="color: #4ADE80;">{{ play.votes_negated }} votes negated</small>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- Worst Plays -->
+    <h2 style="color: #F87171; font-family: 'Cinzel', serif; margin-top: 3rem; margin-bottom: 1.5rem;">
+        Worst Idol Blunders
+    </h2>
+    {% for play in worst_plays %}
+    <div class="advantage-card unsuccessful mb-3">
+        <div style="padding: 1.25rem;">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+                <div>
+                    <span style="color: #F87171; font-weight: bold; font-size: 1.3rem;">#{{ play.rank }}</span>
+                    <span style="color: var(--sand); font-weight: bold; font-size: 1.1rem; margin-left: 0.5rem;">{{ play.player }}</span>
+                    <span style="color: var(--text-secondary); font-size: 0.9rem;"> — S{{ play.season }}: {{ play.season_name }}</span>
+                </div>
+                <span class="status-badge fail" style="font-size: 0.75rem;">{{ play.type }}</span>
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 0;">{{ play.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- ═══════════════ TAB 5: CONCLUSIONS ═══════════════ -->
+<div class="tab-pane fade" id="conclusions" role="tabpanel">
+    <div class="text-center mb-4">
+        <h2 style="color: var(--torch-orange); font-family: 'Cinzel', serif;">The 7 Rules of Idol Play</h2>
+        <p style="color: var(--text-secondary);">Data-driven conclusions from {{ total_real_idols }} idols across 39 seasons of Survivor.</p>
+    </div>
+
+    <!-- Rule 1 -->
+    <div class="advantage-card mb-4" style="border-left: 5px solid #F87171;">
+        <div style="padding: 1.5rem;">
+            <h3 style="color: #F87171;">Rule #1: ALWAYS Bring Your Idol to Tribal</h3>
+            <p style="color: var(--text-secondary);">
+                This sounds obvious, but <strong>Garrett Adelstein</strong> (S28) and <strong>J.T. Thomas</strong> (S34) were both voted out because they left their idols at camp. An idol in your bag at camp is just a souvenir. An idol in your pocket at tribal is a lifeline.
+            </p>
+            <p style="color: var(--torch-orange); margin-bottom: 0; font-weight: bold;">
+                No exceptions. Ever.
+            </p>
+        </div>
+    </div>
+
+    <!-- Rule 2 -->
+    <div class="advantage-card mb-4" style="border-left: 5px solid #FBBF24;">
+        <div style="padding: 1.5rem;">
+            <h3 style="color: #FBBF24;">Rule #2: Keep It Secret As Long As Possible</h3>
+            <p style="color: var(--text-secondary);">
+                Secret idols produce dramatically better outcomes than public ones. When your idol is public, opponents split votes, redirect to allies, or deploy Nullifiers. <strong>Kelley Wentworth</strong> grabbed her idol at a challenge with nobody watching — then negated a record 9 votes. <strong>Carolyn Rivera</strong> kept hers hidden for 33 days. Both produced devastating blindsides.
+            </p>
+            <p style="color: var(--text-secondary); margin-bottom: 0;">
+                Every person who knows is a potential leak. Share with <strong>at most one</strong> trusted ally. Malcolm (S26) revealed his idol publicly at tribal and was hunted down two rounds later. Dan Rengering (S37) was publicly known and got Nullified. Secret idols change the game; public idols put a target on your back.
+            </p>
+        </div>
+    </div>
+
+    <!-- Rule 3 -->
+    <div class="advantage-card mb-4" style="border-left: 5px solid #60A5FA;">
+        <div style="padding: 1.5rem;">
+            <h3 style="color: #60A5FA;">Rule #3: Play When You KNOW, Not When You FEEL</h3>
+            <p style="color: var(--text-secondary);">
+                The majority of wasted idol plays come from paranoia, not from bad luck. Players play their idol "just in case" and waste it on a round they weren't even targeted. <strong>Spencer Bledsoe</strong> (S28), <strong>Tony & LJ</strong> (S28), and dozens of others burned idols because they felt nervous — not because they had confirmed intel.
+            </p>
+            <p style="color: var(--text-secondary); margin-bottom: 0;">
+                Contrast with <strong>Jenn Brown</strong> (S30) who correctly read the room and played it perfectly, or <strong>Russell</strong> (S19) who knew he was dead without it. <strong>Social reads are more valuable than the idol itself.</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- Rule 4 -->
+    <div class="advantage-card mb-4" style="border-left: 5px solid #4ADE80;">
+        <div style="padding: 1.5rem;">
+            <h3 style="color: #4ADE80;">Rule #4: Never Go Home With an Idol in Your Pocket</h3>
+            <p style="color: var(--text-secondary);">
+                <strong>{{ total_voted_out_holding }} players</strong> across 39 seasons were voted out while holding an idol. James Clement went home with TWO. Playing an idol "unnecessarily" is infinitely better than getting your torch snuffed while holding one.
+            </p>
+            <p style="color: var(--text-secondary); margin-bottom: 0;">
+                If it's the last round your idol is valid — play it. If you're on the bottom and have any doubt — play it. A wasted idol is embarrassing; going home holding one is legacy-defining (in the worst way).
+            </p>
+        </div>
+    </div>
+
+    <!-- Rule 5 -->
+    <div class="advantage-card mb-4" style="border-left: 5px solid #C084FC;">
+        <div style="padding: 1.5rem;">
+            <h3 style="color: #C084FC;">Rule #5: Playing on an Ally Is the Highest-Risk, Highest-Reward Move</h3>
+            <p style="color: var(--text-secondary);">
+                Parvati's double play, Natalie's F5 play on Jaclyn, Davie saving Christian — these are the most celebrated moves in Survivor history. Juries reward bold plays for others. Natalie won because of her idol play on Jaclyn. But <strong>J.T. giving his idol to Russell</strong> is the worst move ever.
+            </p>
+            <p style="color: var(--text-secondary); margin-bottom: 0;">
+                <strong>The dividing line:</strong> Do you have reliable information about who's being targeted? If yes, playing on an ally can win you the game. If you're guessing, keep it for yourself.
+            </p>
+        </div>
+    </div>
+
+    <!-- Rule 6 -->
+    <div class="advantage-card mb-4" style="border-left: 5px solid var(--torch-orange);">
+        <div style="padding: 1.5rem;">
+            <h3 style="color: var(--torch-orange);">Rule #6: An Idol in Your Pocket Is Still a Weapon</h3>
+            <p style="color: var(--text-secondary);">
+                Even without playing it, an idol shapes the game around you. <strong>Carolyn Rivera</strong> (S30) held hers for 33 days — her opponents spent weeks uncertain whether she had one, which changed how they voted. <strong>Mike Holloway</strong> (S30) openly threatened to play his idol, forcing the majority to redirect their vote and fracture their alliance. The mere possibility of an idol play creates chaos in the opposing alliance.
+            </p>
+            <p style="color: var(--text-secondary); margin-bottom: 0;">
+                An idol's <strong>threat value</strong> can be worth more than actually playing it. If people are too scared to vote for you because of your idol, you've already won the round — and you still have it for next time. But unlike the God Idol (where going public is the strategy), a standard idol's threat value works best when people <em>suspect</em> you have it but aren't sure.
+            </p>
+        </div>
+    </div>
+
+    <!-- Rule 7 -->
+    <div class="advantage-card mb-4" style="border-left: 5px solid #34D399;">
+        <div style="padding: 1.5rem;">
+            <h3 style="color: #34D399;">Rule #7: Invest in Social Reads, Not Just Idol Hunting</h3>
+            <p style="color: var(--text-secondary);">
+                Every great idol play was powered by a great social read. Parvati knew exactly where the Heroes' votes were going. Davie read the room at the merge. Jenn Brown knew she, not Hali, was the target. Meanwhile, every wasted play came from someone who didn't know where the votes were going.
+            </p>
+            <p style="color: var(--text-secondary); margin-bottom: 0;">
+                <strong>The ultimate idol strategy:</strong> An idol amplifies your social game. If you have strong relationships and good information, an idol is devastating. If you're socially isolated and guessing, an idol is just a shiny object you'll probably waste.
+            </p>
+        </div>
+    </div>
+
+    <!-- Final Verdict Box -->
+    <div style="background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(239,68,68,0.1)); border: 2px solid var(--torch-orange); border-radius: 16px; padding: 2rem; margin-top: 2rem; text-align: center;">
+        <h3 style="color: var(--torch-orange); font-family: 'Cinzel', serif; margin-bottom: 1rem;">The Most Effective Idol Strategy</h3>
+        <p style="color: var(--sand); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+            Find it early. Tell nobody. Read the room obsessively. Play it only when you have confirmed intelligence that you or your closest ally is going home. The idol amplifies your social game — without good reads, it's just a shiny object you'll waste. And for the love of the game — bring it to tribal council.
+        </p>
+    </div>
+
+    <!-- Strategies to Avoid -->
+    <div style="background: rgba(248,113,113,0.08); border: 1px solid rgba(248,113,113,0.3); border-radius: 12px; padding: 2rem; margin-top: 2rem;">
+        <h3 style="color: #F87171; margin-bottom: 1rem;">Strategies to Avoid</h3>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <ul style="color: var(--text-secondary);">
+                    <li><strong>Playing preemptively out of paranoia</strong> — The #1 cause of wasted idols</li>
+                    <li><strong>Giving your idol to someone you don't fully trust</strong> — J.T. to Russell, Lauren to Chris</li>
+                    <li><strong>Leaving your idol at camp</strong> — Garrett, J.T. in Game Changers</li>
+                    <li><strong>Overconfidence in the majority</strong> — James, Ozzy, Jason Siska</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul style="color: var(--text-secondary);">
+                    <li><strong>Coordinated idol swaps with loose allies</strong> — Tony & LJ burned 2 idols for 0 votes</li>
+                    <li><strong>Relying on a fake idol</strong> — They've never actually worked for the creator</li>
+                    <li><strong>Holding it to the very end "just because"</strong> — Playing it wrong is better than never playing it</li>
+                    <li><strong>Announcing your idol to the entire tribe</strong> — Enables vote splits and Nullifiers</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div><!-- end tab-content -->
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+    const chartColors = {
+        orange: '#F59E0B',
+        green: '#4ADE80',
+        red: '#F87171',
+        blue: '#60A5FA',
+        purple: '#C084FC',
+        gray: '#9CA3AF',
+        sand: '#F5DEB3',
+    };
+
+    // Idols Per Season Bar Chart
+    const seasonStats = {{ season_idol_stats|tojson_safe }};
+    new Chart(document.getElementById('idolsPerSeasonChart'), {
+        type: 'bar',
+        data: {
+            labels: seasonStats.map(s => 'S' + s.season),
+            datasets: [
+                {
+                    label: 'Found',
+                    data: seasonStats.map(s => s.found),
+                    backgroundColor: 'rgba(245,158,11,0.6)',
+                    borderColor: chartColors.orange,
+                    borderWidth: 1,
+                },
+                {
+                    label: 'Successful Plays',
+                    data: seasonStats.map(s => s.successful),
+                    backgroundColor: 'rgba(74,222,128,0.6)',
+                    borderColor: chartColors.green,
+                    borderWidth: 1,
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { labels: { color: chartColors.sand } } },
+            scales: {
+                x: { ticks: { color: chartColors.gray, font: { size: 9 } }, grid: { color: 'rgba(255,255,255,0.05)' } },
+                y: { ticks: { color: chartColors.gray }, grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true }
+            }
+        }
+    });
+
+    // Outcomes Doughnut
+    new Chart(document.getElementById('outcomesDoughnut'), {
+        type: 'doughnut',
+        data: {
+            labels: ['Successful', 'Wasted', 'Not Played', 'Voted Out Holding'],
+            datasets: [{
+                data: [{{ total_successful }}, {{ total_unsuccessful }}, {{ total_not_played }}, {{ total_voted_out_holding }}],
+                backgroundColor: [chartColors.green, chartColors.red, chartColors.gray, chartColors.purple],
+                borderWidth: 0,
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'bottom', labels: { color: chartColors.sand, font: { size: 11 }, padding: 12 } }
+            }
+        }
+    });
+
+    // Self vs Ally Bar Chart
+    new Chart(document.getElementById('selfVsAllyChart'), {
+        type: 'bar',
+        data: {
+            labels: ['Played on Self', 'Played on Ally'],
+            datasets: [
+                {
+                    label: 'Successful',
+                    data: [{{ self_successful_count }}, {{ ally_successful_count }}],
+                    backgroundColor: chartColors.green,
+                },
+                {
+                    label: 'Wasted',
+                    data: [{{ self_plays_count - self_successful_count }}, {{ ally_plays_count - ally_successful_count }}],
+                    backgroundColor: chartColors.red,
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { labels: { color: chartColors.sand } } },
+            scales: {
+                x: { stacked: true, ticks: { color: chartColors.gray }, grid: { display: false } },
+                y: { stacked: true, ticks: { color: chartColors.gray }, grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true }
+            }
+        }
+    });
+
+    // Duration Distribution Chart
+    const durationBuckets = {{ duration_buckets|tojson_safe }};
+    new Chart(document.getElementById('durationChart'), {
+        type: 'bar',
+        data: {
+            labels: Object.keys(durationBuckets),
+            datasets: [{
+                label: 'Idol Plays',
+                data: Object.values(durationBuckets),
+                backgroundColor: [
+                    chartColors.green,
+                    chartColors.blue,
+                    chartColors.orange,
+                    chartColors.purple,
+                    chartColors.red,
+                    '#F472B6',
+                ],
+                borderWidth: 0,
+                borderRadius: 4,
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { display: false } },
+            scales: {
+                x: { ticks: { color: chartColors.gray, font: { size: 10 } }, grid: { display: false } },
+                y: { ticks: { color: chartColors.gray }, grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true }
+            }
+        }
+    });
+
+    // Tab styling is handled by CSS (survivor.css .nav-tabs rules)
+</script>
+{% endblock %}
