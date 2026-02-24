@@ -4,6 +4,33 @@ Session-by-session log of conversations, decisions, and implementations.
 
 ---
 
+## 2026-02-23 — Bug Fixes, Records Overhaul, Visual Theme Revamp
+
+### Bugs Fixed
+- **Individual Immunity Wins**: Challenge stats now only count individual challenges (filters by `outcome_type == "Individual"`). Team/tribal wins no longer inflate immunity or reward win counts on player stat sheets.
+- **Hall of Fame Ties**: Records page now shows ALL tied record holders instead of just the first one. Added `find_all_max()` / `find_all_min()` helper functions. Tied records display with dividers and a "X-way tie" badge.
+
+### New Features
+- **Individual Immunity Wins Record**: Added two new record cards to Hall of Fame — "Most Individual Immunity Wins (All Players)" and "Most Individual Immunity Wins (Champion)"
+- Updated all existing record card titles to clarify "Individual" challenge wins
+
+### Visual Theme Revamp
+- Complete CSS overhaul from dark/dreary jungle green to warm tropical sunset palette
+- New background: deep purple-to-warm sunset gradient (replaces dark forest green)
+- New CSS variables: `--card-bg`, `--card-border`, `--text-primary`, `--text-secondary`, `--torch-glow`, `--sunset-deep/mid/warm`
+- Cards use warm semi-transparent purple tones with enhanced borders
+- Brighter, more vivid accent colors throughout (warmer oranges, softer greens/reds)
+- Nav and footer updated to match new palette
+- Dark mode theme also updated (richer dark tones instead of flat black)
+- All existing functionality and responsive design preserved
+
+### Tests
+- Updated existing challenge metrics test to include `outcome_type` field
+- Added new `test_excludes_team_wins` test
+- All 60 tests passing
+
+---
+
 ## 2026-02-22 — Overnight Session #4: Alliances, Power Rankings, Nicknames, Quotes, Polish
 
 ### Features Shipped

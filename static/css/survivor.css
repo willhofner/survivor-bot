@@ -1,14 +1,22 @@
-/* Survivor Theme CSS */
+/* Survivor Theme CSS — Tropical Sunset */
 
 :root {
-    --brawn: #8B4513;
-    --brains: #4169E1;
-    --beauty: #FF1493;
+    --brawn: #C2703E;
+    --brains: #5B8DEF;
+    --beauty: #FF5CAD;
     --torch-orange: #FF6B35;
-    --bamboo: #D4A574;
-    --sand: #F5DEB3;
-    --ocean: #006994;
-    --jungle: #2D5016;
+    --torch-glow: #FF8C42;
+    --bamboo: #E8C896;
+    --sand: #FFF1DC;
+    --ocean: #2190B5;
+    --jungle: #3D8B37;
+    --card-bg: rgba(30, 20, 45, 0.65);
+    --card-border: rgba(232, 200, 150, 0.35);
+    --text-primary: #FFFFFF;
+    --text-secondary: #FFE8C8;
+    --sunset-deep: #1A0F2E;
+    --sunset-mid: #2D1845;
+    --sunset-warm: #3D1E52;
 }
 
 * {
@@ -16,9 +24,9 @@
 }
 
 body {
-    background: linear-gradient(135deg, #2D5016 0%, #1a2f0f 100%);
+    background: linear-gradient(160deg, #1A0F2E 0%, #2D1845 40%, #3A1540 70%, #451A35 100%);
     background-attachment: fixed;
-    color: #fff;
+    color: var(--text-primary);
     font-family: 'Cinzel', serif;
     min-height: 100vh;
 }
@@ -35,8 +43,8 @@ body {
             45deg,
             transparent,
             transparent 20px,
-            rgba(255, 107, 53, 0.03) 20px,
-            rgba(255, 107, 53, 0.03) 40px
+            rgba(255, 140, 66, 0.04) 20px,
+            rgba(255, 140, 66, 0.04) 40px
         );
     pointer-events: none;
     z-index: -1;
@@ -44,15 +52,15 @@ body {
 
 /* Navigation */
 .survivor-nav {
-    background: linear-gradient(90deg, #1a1a1a 0%, #3a3a3a 100%);
+    background: linear-gradient(90deg, #1A0F2E 0%, #2A1540 50%, #1A0F2E 100%);
     border-bottom: 3px solid var(--torch-orange);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 20px rgba(255, 107, 53, 0.15);
     padding: 1rem 2rem;
 }
 
 .season-selector {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid var(--torch-orange);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--torch-glow);
     color: #fff;
     margin-right: 1rem;
     max-width: 250px;
@@ -60,14 +68,14 @@ body {
 }
 
 .season-selector:focus {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.12);
     border-color: var(--torch-orange);
     color: #fff;
-    box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.3);
 }
 
 .season-selector option {
-    background: #2a2a2a;
+    background: #1A0F2E;
     color: #fff;
 }
 
@@ -76,19 +84,19 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--torch-orange) !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 0 20px rgba(255, 107, 53, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.6);
     letter-spacing: 2px;
 }
 
 .torch {
     font-size: 1.2em;
-    filter: drop-shadow(0 0 5px #ff6b35);
+    filter: drop-shadow(0 0 8px rgba(255, 107, 53, 0.6));
     animation: flicker 2s infinite;
 }
 
 .torch-large {
     font-size: 4em;
-    filter: drop-shadow(0 0 20px #ff6b35);
+    filter: drop-shadow(0 0 30px rgba(255, 107, 53, 0.6));
     animation: flicker 2s infinite;
 }
 
@@ -98,7 +106,7 @@ body {
 }
 
 .survivor-nav .nav-link {
-    color: var(--sand) !important;
+    color: var(--text-secondary) !important;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
@@ -109,21 +117,22 @@ body {
 
 .survivor-nav .nav-link:hover {
     color: var(--torch-orange) !important;
-    text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+    text-shadow: 0 0 12px rgba(255, 107, 53, 0.6);
 }
 
 .survivor-nav .dropdown-menu-dark {
-    background: #1a1a1a;
-    border: 1px solid var(--torch-orange);
+    background: #1A0F2E;
+    border: 1px solid var(--torch-glow);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .survivor-nav .dropdown-item {
-    color: var(--sand);
+    color: var(--text-secondary);
     font-size: 0.85rem;
 }
 
 .survivor-nav .dropdown-item:hover {
-    background: rgba(255, 107, 53, 0.3);
+    background: rgba(255, 107, 53, 0.2);
     color: var(--torch-orange);
 }
 
@@ -149,35 +158,35 @@ main {
 .survivor-title {
     font-family: 'Trade Winds', cursive;
     color: var(--torch-orange);
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 30px rgba(255, 107, 53, 0.3), 3px 3px 6px rgba(0, 0, 0, 0.7);
     letter-spacing: 3px;
 }
 
 .subtitle {
-    color: var(--sand);
+    color: var(--text-secondary);
     font-style: italic;
     font-size: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Winner announcement */
 .winner-announcement {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 165, 0, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 140, 66, 0.15) 100%);
     border: 3px solid gold;
     border-radius: 15px;
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.25);
 }
 
 .winner-name {
     font-size: 3rem;
     font-weight: bold;
     color: gold;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.4), 2px 2px 8px rgba(0, 0, 0, 0.7);
     letter-spacing: 3px;
 }
 
 .winner-votes {
-    color: var(--sand);
+    color: var(--text-secondary);
     font-size: 1.2rem;
 }
 
@@ -193,17 +202,17 @@ main {
 }
 
 .tribal-card {
-    background: linear-gradient(135deg, rgba(139, 69, 19, 0.3) 0%, rgba(45, 80, 22, 0.3) 100%);
-    border: 2px solid var(--bamboo);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(194, 112, 62, 0.2) 0%, rgba(61, 139, 55, 0.15) 100%);
+    border: 2px solid var(--card-border);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
     color: #fff;
     transition: all 0.3s;
 }
 
 .tribal-card:hover {
     border-color: var(--torch-orange);
-    box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+    box-shadow: 0 0 25px rgba(255, 107, 53, 0.4);
 }
 
 .card-icon {
@@ -212,7 +221,7 @@ main {
 }
 
 .btn-survivor {
-    background: linear-gradient(135deg, var(--torch-orange) 0%, #d4591f 100%);
+    background: linear-gradient(135deg, var(--torch-orange) 0%, #E85D1C 100%);
     border: none;
     color: white;
     font-weight: bold;
@@ -220,13 +229,14 @@ main {
     border-radius: 25px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
     transition: all 0.3s;
 }
 
 .btn-survivor:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+    box-shadow: 0 6px 25px rgba(255, 107, 53, 0.6);
+    color: white;
 }
 
 .btn-outline-survivor {
@@ -243,6 +253,7 @@ main {
 .btn-outline-survivor:hover:not(:disabled) {
     background: var(--torch-orange);
     color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
 }
 
 .btn-outline-survivor:disabled {
@@ -257,10 +268,10 @@ main {
 
 .stat-box {
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid var(--bamboo);
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
 }
 
 .stat-number {
@@ -272,7 +283,7 @@ main {
 .stat-label {
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--sand);
+    color: var(--text-secondary);
 }
 
 /* Episodes view */
@@ -282,9 +293,9 @@ main {
     align-items: center;
     gap: 2rem;
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
+    background: var(--card-bg);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
 }
 
 .episode-number {
@@ -313,17 +324,17 @@ main {
     text-align: center;
     margin-bottom: 2rem;
     padding: 2rem;
-    background: linear-gradient(135deg, rgba(255, 107, 53, 0.2) 0%, rgba(212, 89, 31, 0.2) 100%);
-    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(255, 140, 66, 0.1) 100%);
+    border-radius: 12px;
 }
 
 /* Tribal Council */
 .tribal-council {
-    background: rgba(0, 0, 0, 0.4);
-    border: 2px solid var(--bamboo);
-    border-radius: 10px;
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 12px;
     padding: 2rem;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
 }
 
 .tc-header {
@@ -343,17 +354,17 @@ main {
 
 .tc-day {
     margin-left: 1rem;
-    color: var(--sand);
+    color: var(--text-secondary);
 }
 
 .tc-tribe {
     font-style: italic;
-    color: var(--sand);
+    color: var(--text-secondary);
 }
 
 .elimination-banner {
-    background: linear-gradient(90deg, rgba(255, 0, 0, 0.3) 0%, rgba(139, 0, 0, 0.3) 100%);
-    border: 2px solid #ff4444;
+    background: linear-gradient(90deg, rgba(255, 50, 50, 0.2) 0%, rgba(180, 30, 30, 0.2) 100%);
+    border: 2px solid #ff5555;
     border-radius: 8px;
     padding: 1.5rem;
     text-align: center;
@@ -368,13 +379,13 @@ main {
 
 .eliminated-name {
     font-weight: bold;
-    color: #ff6666;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    color: #ff7777;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* Votes */
 .votes-container {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.04);
     border-radius: 8px;
     padding: 1.5rem;
 }
@@ -386,7 +397,7 @@ main {
 }
 
 .vote-row {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.05);
     border-left: 4px solid var(--torch-orange);
     padding: 1rem;
     margin-bottom: 1rem;
@@ -397,7 +408,7 @@ main {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: var(--sand);
+    color: var(--text-secondary);
 }
 
 .vote-count-badge {
@@ -417,18 +428,18 @@ main {
 }
 
 .voter-badge {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
     padding: 0.4rem 0.8rem;
     border-radius: 5px;
     font-size: 0.9rem;
-    border: 1px solid var(--bamboo);
+    border: 1px solid var(--card-border);
 }
 
 .tc-notes {
     margin-top: 1rem;
     padding: 1rem;
-    background: rgba(65, 105, 225, 0.2);
-    border-left: 4px solid #4169E1;
+    background: rgba(91, 141, 239, 0.12);
+    border-left: 4px solid var(--brains);
     border-radius: 5px;
     font-style: italic;
 }
@@ -445,9 +456,9 @@ main {
 .btn-filter {
     margin: 0.25rem;
     padding: 0.5rem 1.5rem;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     color: white;
     font-weight: bold;
     transition: all 0.3s;
@@ -456,7 +467,7 @@ main {
 .btn-filter:hover,
 .btn-filter.active {
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 18px rgba(255, 140, 66, 0.4);
 }
 
 .castaways-grid {
@@ -466,17 +477,18 @@ main {
 }
 
 .castaway-card {
-    background: rgba(0, 0, 0, 0.4);
-    border: 2px solid var(--bamboo);
-    border-radius: 10px;
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 12px;
     padding: 1.5rem;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     transition: all 0.3s;
 }
 
 .castaway-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 35px rgba(255, 107, 53, 0.2);
+    border-color: var(--torch-glow);
 }
 
 .castaway-header {
@@ -494,7 +506,7 @@ main {
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid var(--torch-orange);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
 .castaway-headshot img {
@@ -509,12 +521,12 @@ main {
 }
 
 .crown {
-    filter: drop-shadow(0 0 10px gold);
+    filter: drop-shadow(0 0 12px gold);
 }
 
 .placement-number {
     font-weight: bold;
-    color: var(--sand);
+    color: var(--text-secondary);
 }
 
 .castaway-name {
@@ -540,16 +552,16 @@ main {
 }
 
 .stat-item {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.06);
     padding: 0.75rem;
-    border-radius: 5px;
+    border-radius: 8px;
     text-align: center;
 }
 
 .stat-label {
     display: block;
     font-size: 0.8rem;
-    color: var(--sand);
+    color: var(--text-secondary);
     margin-bottom: 0.25rem;
 }
 
@@ -562,11 +574,11 @@ main {
 
 .btn-details {
     width: 100%;
-    background: rgba(255, 107, 53, 0.3);
+    background: rgba(255, 107, 53, 0.15);
     border: 1px solid var(--torch-orange);
     color: var(--torch-orange);
     padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: all 0.3s;
 }
 
@@ -578,7 +590,7 @@ main {
 .voting-details {
     margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 2px solid var(--bamboo);
+    border-top: 2px solid var(--card-border);
 }
 
 .timeline {
@@ -592,13 +604,13 @@ main {
     justify-content: space-between;
     padding: 0.75rem;
     margin-bottom: 0.5rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.04);
     border-left: 3px solid var(--torch-orange);
     border-radius: 3px;
 }
 
 .timeline-day {
-    color: var(--sand);
+    color: var(--text-secondary);
     font-weight: bold;
 }
 
@@ -608,14 +620,14 @@ main {
 
 .elimination-info,
 .final-result {
-    background: rgba(255, 0, 0, 0.2);
-    border: 1px solid #ff4444;
+    background: rgba(255, 50, 50, 0.12);
+    border: 1px solid #ff5555;
     border-radius: 5px;
     padding: 1rem;
 }
 
 .voter-badge-sm {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.12);
     padding: 0.2rem 0.5rem;
     border-radius: 3px;
     font-size: 0.85rem;
@@ -623,9 +635,9 @@ main {
 
 /* Footer */
 .survivor-footer {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(26, 15, 46, 0.9);
     border-top: 2px solid var(--torch-orange);
-    color: var(--sand);
+    color: var(--text-secondary);
     margin-top: 4rem;
 }
 
@@ -635,7 +647,7 @@ main {
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(26, 15, 46, 0.5);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -644,7 +656,7 @@ main {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #d4591f;
+    background: var(--torch-glow);
 }
 
 /* Tribal Councils View */
@@ -659,7 +671,7 @@ main {
 
 .stat-badge {
     display: inline-block;
-    background: rgba(255, 107, 53, 0.2);
+    background: rgba(255, 107, 53, 0.15);
     border: 2px solid var(--torch-orange);
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -668,17 +680,17 @@ main {
 }
 
 .tribal-council-card {
-    background: rgba(0, 0, 0, 0.4);
-    border: 2px solid var(--bamboo);
-    border-radius: 10px;
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 12px;
     padding: 2rem;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     transition: all 0.3s;
 }
 
 .tribal-council-card.active-card {
     border-color: var(--torch-orange);
-    box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+    box-shadow: 0 0 25px rgba(255, 107, 53, 0.4);
     transform: scale(1.02);
 }
 
@@ -698,13 +710,13 @@ main {
 }
 
 .tc-episode {
-    color: var(--sand);
+    color: var(--text-secondary);
     font-size: 0.9rem;
 }
 
 .tc-tribe-badge {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     padding: 0.5rem 1rem;
     border-radius: 5px;
     margin-bottom: 1rem;
@@ -718,7 +730,7 @@ main {
 }
 
 .drama-label {
-    color: var(--sand);
+    color: var(--text-secondary);
     font-size: 0.9rem;
 }
 
@@ -742,11 +754,11 @@ main {
 }
 
 .challenge-card {
-    background: rgba(0, 0, 0, 0.4);
-    border: 2px solid var(--bamboo);
-    border-radius: 10px;
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 12px;
     padding: 1.5rem;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
 }
 
 .challenge-header {
@@ -762,7 +774,7 @@ main {
     overflow: hidden;
     border-radius: 8px;
     margin: 1rem 0;
-    border: 2px solid var(--bamboo);
+    border: 2px solid var(--card-border);
 }
 
 .challenge-photo img {
@@ -783,7 +795,7 @@ main {
 }
 
 .challenge-episode, .challenge-day {
-    color: var(--sand);
+    color: var(--text-secondary);
 }
 
 .challenge-type-badge {
@@ -793,7 +805,7 @@ main {
 }
 
 .immunity-badge {
-    background: linear-gradient(135deg, #4169E1, #1E90FF);
+    background: linear-gradient(135deg, #5B8DEF, #3A6FE0);
     color: white;
 }
 
@@ -808,7 +820,7 @@ main {
 
 .outcome-label {
     font-size: 0.9rem;
-    color: var(--sand);
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
 }
 
@@ -825,7 +837,7 @@ main {
 }
 
 .winner-badge {
-    background: rgba(255, 215, 0, 0.3);
+    background: rgba(255, 215, 0, 0.2);
     border: 1px solid gold;
     padding: 0.3rem 0.8rem;
     border-radius: 5px;
@@ -840,16 +852,16 @@ main {
 }
 
 .event-card {
-    background: rgba(0, 0, 0, 0.4);
-    border-left: 4px solid var(--bamboo);
-    border-radius: 10px;
+    background: var(--card-bg);
+    border-left: 4px solid var(--card-border);
+    border-radius: 12px;
     padding: 2rem;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
 }
 
 .event-card.merge-event {
     border-left-color: gold;
-    background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), rgba(0, 0, 0, 0.4));
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.08), var(--card-bg));
 }
 
 .event-header {
@@ -871,7 +883,7 @@ main {
 }
 
 .event-day {
-    color: var(--sand);
+    color: var(--text-secondary);
     font-size: 0.9rem;
 }
 
@@ -887,19 +899,19 @@ main {
 
 .tribes-formed, .players-affected {
     margin-top: 1rem;
-    color: var(--sand);
+    color: var(--text-secondary);
 }
 
 .tribe-badge {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     padding: 0.3rem 0.8rem;
     border-radius: 5px;
     margin: 0.2rem;
 }
 
 .event-impact {
-    color: var(--sand);
+    color: var(--text-secondary);
     font-size: 0.95rem;
 }
 
@@ -910,11 +922,11 @@ main {
 }
 
 .items-summary {
-    background: rgba(0, 0, 0, 0.3);
-    border: 2px solid var(--bamboo);
-    border-radius: 10px;
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 12px;
     padding: 2rem;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
 }
 
 .summary-stat {
@@ -922,23 +934,23 @@ main {
 }
 
 .advantage-card {
-    background: rgba(0, 0, 0, 0.4);
-    border: 2px solid var(--bamboo);
-    border-radius: 10px;
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 12px;
     padding: 2rem;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
 }
 
 .advantage-card.successful {
-    border-left: 5px solid #00ff00;
+    border-left: 5px solid #4ADE80;
 }
 
 .advantage-card.unsuccessful {
-    border-left: 5px solid #ff4444;
+    border-left: 5px solid #F87171;
 }
 
 .advantage-card.not-played {
-    border-left: 5px solid #888;
+    border-left: 5px solid #9CA3AF;
 }
 
 .advantage-header {
@@ -965,7 +977,7 @@ main {
 }
 
 .advantage-tribe {
-    color: var(--sand);
+    color: var(--text-secondary);
     font-size: 0.9rem;
     font-style: italic;
 }
@@ -978,27 +990,27 @@ main {
 }
 
 .status-badge.success {
-    background: rgba(0, 255, 0, 0.2);
-    color: #00ff00;
-    border: 1px solid #00ff00;
+    background: rgba(74, 222, 128, 0.15);
+    color: #4ADE80;
+    border: 1px solid #4ADE80;
 }
 
 .status-badge.fail {
-    background: rgba(255, 68, 68, 0.2);
-    color: #ff4444;
-    border: 1px solid #ff4444;
+    background: rgba(248, 113, 113, 0.15);
+    color: #F87171;
+    border: 1px solid #F87171;
 }
 
 .status-badge.holding {
-    background: rgba(136, 136, 136, 0.2);
-    color: #888;
-    border: 1px solid #888;
+    background: rgba(156, 163, 175, 0.15);
+    color: #9CA3AF;
+    border: 1px solid #9CA3AF;
 }
 
 .status-badge.not-played {
-    background: rgba(136, 136, 136, 0.2);
-    color: #888;
-    border: 1px solid #888;
+    background: rgba(156, 163, 175, 0.15);
+    color: #9CA3AF;
+    border: 1px solid #9CA3AF;
 }
 
 .advantage-timeline-row {
@@ -1016,7 +1028,7 @@ main {
 }
 
 .timeline-item {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.04);
     padding: 1rem;
     border-radius: 5px;
     border-left: 3px solid var(--torch-orange);
@@ -1038,28 +1050,28 @@ main {
 }
 
 .advantage-notes {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.04);
     padding: 1rem;
     border-radius: 5px;
-    border-left: 3px solid var(--sand);
-    color: var(--sand);
+    border-left: 3px solid var(--text-secondary);
+    color: var(--text-secondary);
     font-size: 0.95rem;
     line-height: 1.6;
 }
 
 /* Castaway updates */
 .challenge-breakdown {
-    color: var(--sand);
+    color: var(--text-secondary);
     font-size: 0.9rem;
 }
 
 /* Dark Theme */
 body[data-theme="dark"] {
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    background: linear-gradient(160deg, #0A0A0F 0%, #12101E 40%, #15101F 70%, #0F0A14 100%);
 }
 
 body[data-theme="dark"] .survivor-nav {
-    background: linear-gradient(90deg, #0a0a0a 0%, #1a1a2e 100%);
+    background: linear-gradient(90deg, #0A0A0F 0%, #15101E 50%, #0A0A0F 100%);
 }
 
 body[data-theme="dark"] .tribal-pattern {
@@ -1070,13 +1082,13 @@ body[data-theme="dark"] .tribal-pattern {
 }
 
 body[data-theme="dark"] .survivor-footer {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(10, 10, 15, 0.9);
 }
 
 /* Theme Toggle */
 .theme-toggle {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid var(--bamboo);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--card-border);
     color: #fff;
     font-size: 1rem;
     padding: 0.25rem 0.5rem;
@@ -1086,7 +1098,7 @@ body[data-theme="dark"] .survivor-footer {
 }
 
 .theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.15);
     transform: scale(1.1);
 }
 
@@ -1097,13 +1109,13 @@ body[data-theme="dark"] .survivor-footer {
     left: 0;
     right: 0;
     min-width: 280px;
-    background: #1a1a1a;
-    border: 1px solid var(--torch-orange);
+    background: #1A0F2E;
+    border: 1px solid var(--torch-glow);
     border-radius: 8px;
     max-height: 400px;
     overflow-y: auto;
     z-index: 1000;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
     margin-top: 0.25rem;
 }
 
@@ -1112,12 +1124,12 @@ body[data-theme="dark"] .survivor-footer {
     padding: 0.75rem 1rem;
     color: #fff;
     text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     transition: background 0.2s;
 }
 
 .search-item:hover {
-    background: rgba(255, 107, 53, 0.2);
+    background: rgba(255, 107, 53, 0.15);
     color: var(--torch-orange);
 }
 
@@ -1128,7 +1140,7 @@ body[data-theme="dark"] .survivor-footer {
 .search-meta {
     display: block;
     font-size: 0.75rem;
-    color: var(--sand);
+    color: var(--text-secondary);
     margin-top: 0.2rem;
 }
 
@@ -1172,7 +1184,7 @@ body[data-theme="dark"] .survivor-footer {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -1182,7 +1194,7 @@ body[data-theme="dark"] .survivor-footer {
 
 .back-to-top-fab:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+    box-shadow: 0 6px 25px rgba(255, 107, 53, 0.6);
 }
 
 /* Spoiler-Free Mode */
@@ -1206,13 +1218,13 @@ body.spoiler-free .winner-announcement:hover {
 
 /* Breadcrumb */
 .survivor-breadcrumb {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(26, 15, 46, 0.6);
     padding: 0.5rem 1rem;
-    border-bottom: 1px solid rgba(212, 165, 116, 0.2);
+    border-bottom: 1px solid rgba(232, 200, 150, 0.15);
 }
 
 .survivor-breadcrumb a {
-    color: var(--sand);
+    color: var(--text-secondary);
     text-decoration: none;
     font-size: 0.85rem;
 }
@@ -1222,7 +1234,7 @@ body.spoiler-free .winner-announcement:hover {
 }
 
 .survivor-breadcrumb .separator {
-    color: var(--bamboo);
+    color: var(--card-border);
     margin: 0 0.5rem;
     font-size: 0.75rem;
 }
@@ -1234,7 +1246,7 @@ body.spoiler-free .winner-announcement:hover {
 
 /* Loading Skeleton */
 .skeleton {
-    background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 75%);
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
     background-size: 200% 100%;
     animation: shimmer 1.5s infinite;
     border-radius: 4px;
@@ -1304,7 +1316,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(26, 15, 46, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1329,7 +1341,7 @@ main {
 }
 
 .table-dark tbody tr:hover {
-    background-color: rgba(255, 107, 53, 0.15) !important;
+    background-color: rgba(255, 107, 53, 0.12) !important;
 }
 
 /* Stat Box Counter Animation */

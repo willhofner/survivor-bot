@@ -10,6 +10,42 @@
     </h1>
     <p class="text-center subtitle mb-5">All-Time Records Across All Seasons</p>
 
+    {# Macro for displaying a record card that handles ties (list of holders) #}
+    {% macro record_card(icon, title, holders, value_template, detail_template=none) %}
+    <div class="col-md-6">
+        <div class="record-card">
+            <div class="record-icon">{{ icon }}</div>
+            <h4 class="record-title">{{ title }}</h4>
+            {% if holders %}
+                {% for holder in holders %}
+                <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
+                    {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
+                    <div class="record-holder">
+                        {{ holder.name }}
+                    </div>
+                    <div class="record-value">
+                        {{ value_template(holder) }}
+                    </div>
+                    <div class="record-season">
+                        Season {{ holder.season }}: {{ holder.season_name }}
+                    </div>
+                    {% if detail_template %}
+                    <div class="record-details">
+                        {{ detail_template(holder) }}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+                {% if holders|length > 1 %}
+                <div class="tie-badge">{{ holders|length }}-way tie</div>
+                {% endif %}
+            {% else %}
+                <p class="text-muted">No data available</p>
+            {% endif %}
+        </div>
+    </div>
+    {% endmacro %}
+
     <!-- INDIVIDUAL RECORDS -->
     <section class="mb-5">
         <h2 class="section-title mb-4">
@@ -17,151 +53,211 @@
         </h2>
 
         <div class="row g-4">
-            <!-- Champion Voting Accuracy -->
+            <!-- Champion Voting Accuracy - Highest -->
             <div class="col-md-6">
                 <div class="record-card">
                     <div class="record-icon">🎯</div>
                     <h4 class="record-title">Highest Voting Accuracy (Champion)</h4>
                     {% if individual_records.highest_voting_accuracy_champion %}
-                    <div class="record-holder">
-                        {{ individual_records.highest_voting_accuracy_champion.name }}
-                    </div>
-                    <div class="record-value">
-                        {{ individual_records.highest_voting_accuracy_champion.voting_accuracy.accuracy }}%
-                    </div>
-                    <div class="record-season">
-                        Season {{ individual_records.highest_voting_accuracy_champion.season }}: {{ individual_records.highest_voting_accuracy_champion.season_name }}
-                    </div>
-                    <div class="record-details">
-                        {{ individual_records.highest_voting_accuracy_champion.voting_accuracy.correct }}/{{ individual_records.highest_voting_accuracy_champion.voting_accuracy.total }} votes correct
-                    </div>
+                        {% for holder in individual_records.highest_voting_accuracy_champion %}
+                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
+                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
+                            <div class="record-holder">{{ holder.name }}</div>
+                            <div class="record-value">{{ holder.voting_accuracy.accuracy }}%</div>
+                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
+                            <div class="record-details">{{ holder.voting_accuracy.correct }}/{{ holder.voting_accuracy.total }} votes correct</div>
+                        </div>
+                        {% endfor %}
+                        {% if individual_records.highest_voting_accuracy_champion|length > 1 %}
+                        <div class="tie-badge">{{ individual_records.highest_voting_accuracy_champion|length }}-way tie</div>
+                        {% endif %}
                     {% else %}
                     <p class="text-muted">No data available</p>
                     {% endif %}
                 </div>
             </div>
 
+            <!-- Champion Voting Accuracy - Lowest -->
             <div class="col-md-6">
                 <div class="record-card">
                     <div class="record-icon">🎯</div>
                     <h4 class="record-title">Lowest Voting Accuracy (Champion)</h4>
                     {% if individual_records.lowest_voting_accuracy_champion %}
-                    <div class="record-holder">
-                        {{ individual_records.lowest_voting_accuracy_champion.name }}
-                    </div>
-                    <div class="record-value">
-                        {{ individual_records.lowest_voting_accuracy_champion.voting_accuracy.accuracy }}%
-                    </div>
-                    <div class="record-season">
-                        Season {{ individual_records.lowest_voting_accuracy_champion.season }}: {{ individual_records.lowest_voting_accuracy_champion.season_name }}
-                    </div>
-                    <div class="record-details">
-                        {{ individual_records.lowest_voting_accuracy_champion.voting_accuracy.correct }}/{{ individual_records.lowest_voting_accuracy_champion.voting_accuracy.total }} votes correct
-                    </div>
+                        {% for holder in individual_records.lowest_voting_accuracy_champion %}
+                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
+                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
+                            <div class="record-holder">{{ holder.name }}</div>
+                            <div class="record-value">{{ holder.voting_accuracy.accuracy }}%</div>
+                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
+                            <div class="record-details">{{ holder.voting_accuracy.correct }}/{{ holder.voting_accuracy.total }} votes correct</div>
+                        </div>
+                        {% endfor %}
+                        {% if individual_records.lowest_voting_accuracy_champion|length > 1 %}
+                        <div class="tie-badge">{{ individual_records.lowest_voting_accuracy_champion|length }}-way tie</div>
+                        {% endif %}
                     {% else %}
                     <p class="text-muted">No data available</p>
                     {% endif %}
                 </div>
             </div>
 
-            <!-- Challenge Wins -->
+            <!-- Individual Immunity Wins (All Players) -->
             <div class="col-md-6">
                 <div class="record-card">
-                    <div class="record-icon">💪</div>
-                    <h4 class="record-title">Most Challenge Wins (All Players)</h4>
-                    <div class="record-holder">
-                        {{ individual_records.most_challenge_wins.name }}
-                    </div>
-                    <div class="record-value">
-                        {{ individual_records.most_challenge_wins.challenge_stats.total_wins }} wins
-                    </div>
-                    <div class="record-season">
-                        Season {{ individual_records.most_challenge_wins.season }}: {{ individual_records.most_challenge_wins.season_name }}
-                    </div>
-                    <div class="record-details">
-                        💎 {{ individual_records.most_challenge_wins.challenge_stats.immunity_wins }} immunity | 🏆 {{ individual_records.most_challenge_wins.challenge_stats.reward_wins }} reward
-                    </div>
+                    <div class="record-icon">💎</div>
+                    <h4 class="record-title">Most Individual Immunity Wins (All Players)</h4>
+                    {% if individual_records.most_immunity_wins %}
+                        {% for holder in individual_records.most_immunity_wins %}
+                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
+                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
+                            <div class="record-holder">{{ holder.name }}</div>
+                            <div class="record-value">{{ holder.challenge_stats.immunity_wins }} wins</div>
+                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
+                        </div>
+                        {% endfor %}
+                        {% if individual_records.most_immunity_wins|length > 1 %}
+                        <div class="tie-badge">{{ individual_records.most_immunity_wins|length }}-way tie</div>
+                        {% endif %}
+                    {% else %}
+                    <p class="text-muted">No data available</p>
+                    {% endif %}
                 </div>
             </div>
 
+            <!-- Individual Immunity Wins (Champion) -->
+            <div class="col-md-6">
+                <div class="record-card">
+                    <div class="record-icon">💎</div>
+                    <h4 class="record-title">Most Individual Immunity Wins (Champion)</h4>
+                    {% if individual_records.most_immunity_wins_champion %}
+                        {% for holder in individual_records.most_immunity_wins_champion %}
+                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
+                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
+                            <div class="record-holder">{{ holder.name }}</div>
+                            <div class="record-value">{{ holder.challenge_stats.immunity_wins }} wins</div>
+                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
+                        </div>
+                        {% endfor %}
+                        {% if individual_records.most_immunity_wins_champion|length > 1 %}
+                        <div class="tie-badge">{{ individual_records.most_immunity_wins_champion|length }}-way tie</div>
+                        {% endif %}
+                    {% else %}
+                    <p class="text-muted">No data available</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Challenge Wins (All Players) -->
             <div class="col-md-6">
                 <div class="record-card">
                     <div class="record-icon">💪</div>
-                    <h4 class="record-title">Most Challenge Wins (Champion)</h4>
+                    <h4 class="record-title">Most Individual Challenge Wins (All Players)</h4>
+                    {% if individual_records.most_challenge_wins %}
+                        {% for holder in individual_records.most_challenge_wins %}
+                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
+                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
+                            <div class="record-holder">{{ holder.name }}</div>
+                            <div class="record-value">{{ holder.challenge_stats.total_wins }} wins</div>
+                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
+                            <div class="record-details">💎 {{ holder.challenge_stats.immunity_wins }} immunity | 🏆 {{ holder.challenge_stats.reward_wins }} reward</div>
+                        </div>
+                        {% endfor %}
+                        {% if individual_records.most_challenge_wins|length > 1 %}
+                        <div class="tie-badge">{{ individual_records.most_challenge_wins|length }}-way tie</div>
+                        {% endif %}
+                    {% else %}
+                    <p class="text-muted">No data available</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Challenge Wins (Champion) -->
+            <div class="col-md-6">
+                <div class="record-card">
+                    <div class="record-icon">💪</div>
+                    <h4 class="record-title">Most Individual Challenge Wins (Champion)</h4>
                     {% if individual_records.most_challenge_wins_champion %}
-                    <div class="record-holder">
-                        {{ individual_records.most_challenge_wins_champion.name }}
-                    </div>
-                    <div class="record-value">
-                        {{ individual_records.most_challenge_wins_champion.challenge_stats.total_wins }} wins
-                    </div>
-                    <div class="record-season">
-                        Season {{ individual_records.most_challenge_wins_champion.season }}: {{ individual_records.most_challenge_wins_champion.season_name }}
-                    </div>
-                    <div class="record-details">
-                        💎 {{ individual_records.most_challenge_wins_champion.challenge_stats.immunity_wins }} immunity | 🏆 {{ individual_records.most_challenge_wins_champion.challenge_stats.reward_wins }} reward
-                    </div>
+                        {% for holder in individual_records.most_challenge_wins_champion %}
+                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
+                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
+                            <div class="record-holder">{{ holder.name }}</div>
+                            <div class="record-value">{{ holder.challenge_stats.total_wins }} wins</div>
+                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
+                            <div class="record-details">💎 {{ holder.challenge_stats.immunity_wins }} immunity | 🏆 {{ holder.challenge_stats.reward_wins }} reward</div>
+                        </div>
+                        {% endfor %}
+                        {% if individual_records.most_challenge_wins_champion|length > 1 %}
+                        <div class="tie-badge">{{ individual_records.most_challenge_wins_champion|length }}-way tie</div>
+                        {% endif %}
                     {% else %}
                     <p class="text-muted">No data available</p>
                     {% endif %}
                 </div>
             </div>
 
+            <!-- Fewest Challenge Wins (Champion) -->
             <div class="col-md-6">
                 <div class="record-card">
                     <div class="record-icon">💪</div>
-                    <h4 class="record-title">Fewest Challenge Wins (Champion)</h4>
+                    <h4 class="record-title">Fewest Individual Challenge Wins (Champion)</h4>
                     {% if individual_records.least_challenge_wins_champion %}
-                    <div class="record-holder">
-                        {{ individual_records.least_challenge_wins_champion.name }}
-                    </div>
-                    <div class="record-value">
-                        {{ individual_records.least_challenge_wins_champion.challenge_stats.total_wins }} wins
-                    </div>
-                    <div class="record-season">
-                        Season {{ individual_records.least_challenge_wins_champion.season }}: {{ individual_records.least_challenge_wins_champion.season_name }}
-                    </div>
+                        {% for holder in individual_records.least_challenge_wins_champion %}
+                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
+                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
+                            <div class="record-holder">{{ holder.name }}</div>
+                            <div class="record-value">{{ holder.challenge_stats.total_wins }} wins</div>
+                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
+                        </div>
+                        {% endfor %}
+                        {% if individual_records.least_challenge_wins_champion|length > 1 %}
+                        <div class="tie-badge">{{ individual_records.least_challenge_wins_champion|length }}-way tie</div>
+                        {% endif %}
                     {% else %}
                     <p class="text-muted">No data available</p>
                     {% endif %}
                 </div>
             </div>
 
-            <!-- Votes Received -->
+            <!-- Votes Received - Most -->
             <div class="col-md-6">
                 <div class="record-card">
                     <div class="record-icon">🗳️</div>
                     <h4 class="record-title">Most Votes Received (Champion)</h4>
                     {% if individual_records.most_votes_received_champion %}
-                    <div class="record-holder">
-                        {{ individual_records.most_votes_received_champion.name }}
-                    </div>
-                    <div class="record-value">
-                        {{ individual_records.most_votes_received_champion.votes_against }} votes
-                    </div>
-                    <div class="record-season">
-                        Season {{ individual_records.most_votes_received_champion.season }}: {{ individual_records.most_votes_received_champion.season_name }}
-                    </div>
+                        {% for holder in individual_records.most_votes_received_champion %}
+                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
+                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
+                            <div class="record-holder">{{ holder.name }}</div>
+                            <div class="record-value">{{ holder.votes_against }} votes</div>
+                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
+                        </div>
+                        {% endfor %}
+                        {% if individual_records.most_votes_received_champion|length > 1 %}
+                        <div class="tie-badge">{{ individual_records.most_votes_received_champion|length }}-way tie</div>
+                        {% endif %}
                     {% else %}
                     <p class="text-muted">No data available</p>
                     {% endif %}
                 </div>
             </div>
 
+            <!-- Votes Received - Fewest -->
             <div class="col-md-6">
                 <div class="record-card">
                     <div class="record-icon">🗳️</div>
                     <h4 class="record-title">Fewest Votes Received (Champion)</h4>
                     {% if individual_records.least_votes_received_champion %}
-                    <div class="record-holder">
-                        {{ individual_records.least_votes_received_champion.name }}
-                    </div>
-                    <div class="record-value">
-                        {{ individual_records.least_votes_received_champion.votes_against }} votes
-                    </div>
-                    <div class="record-season">
-                        Season {{ individual_records.least_votes_received_champion.season }}: {{ individual_records.least_votes_received_champion.season_name }}
-                    </div>
+                        {% for holder in individual_records.least_votes_received_champion %}
+                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
+                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
+                            <div class="record-holder">{{ holder.name }}</div>
+                            <div class="record-value">{{ holder.votes_against }} votes</div>
+                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
+                        </div>
+                        {% endfor %}
+                        {% if individual_records.least_votes_received_champion|length > 1 %}
+                        <div class="tie-badge">{{ individual_records.least_votes_received_champion|length }}-way tie</div>
+                        {% endif %}
                     {% else %}
                     <p class="text-muted">No data available</p>
                     {% endif %}
@@ -359,6 +455,30 @@
 .record-details {
     color: #fff;
     font-size: 0.9rem;
+}
+
+.record-entry.record-tied {
+    margin-top: 0.5rem;
+}
+
+.tie-divider {
+    width: 40%;
+    height: 1px;
+    background: var(--bamboo);
+    margin: 0.75rem auto;
+    opacity: 0.5;
+}
+
+.tie-badge {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 215, 0, 0.2);
+    border: 1px solid gold;
+    border-radius: 12px;
+    color: gold;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
 .table-dark {

@@ -73,9 +73,9 @@ class TestChallengeMetrics:
     def test_basic_counting(self):
         data = {
             'challenges': [
-                {'challenge_type': 'Immunity', 'winners': ['Alice', 'Bob']},
-                {'challenge_type': 'Reward', 'winners': ['Alice']},
-                {'challenge_type': 'Immunity and Reward', 'winners': ['Carol']},
+                {'challenge_type': 'Immunity', 'outcome_type': 'Individual', 'winners': ['Alice', 'Bob']},
+                {'challenge_type': 'Reward', 'outcome_type': 'Individual', 'winners': ['Alice']},
+                {'challenge_type': 'Immunity and Reward', 'outcome_type': 'Individual', 'winners': ['Carol']},
             ]
         }
         result = calculate_challenge_beast_metrics('Alice', data)
@@ -83,8 +83,21 @@ class TestChallengeMetrics:
         assert result['reward_wins'] == 1
         assert result['total_wins'] == 2
 
+    def test_excludes_team_wins(self):
+        data = {
+            'challenges': [
+                {'challenge_type': 'Immunity', 'outcome_type': 'Tribal', 'winners': ['Alice', 'Bob', 'Carol']},
+                {'challenge_type': 'Immunity', 'outcome_type': 'Individual', 'winners': ['Alice']},
+                {'challenge_type': 'Reward', 'outcome_type': 'Team', 'winners': ['Alice', 'Bob']},
+            ]
+        }
+        result = calculate_challenge_beast_metrics('Alice', data)
+        assert result['immunity_wins'] == 1
+        assert result['reward_wins'] == 0
+        assert result['total_wins'] == 1
+
     def test_no_wins(self):
-        data = {'challenges': [{'challenge_type': 'Immunity', 'winners': ['Bob']}]}
+        data = {'challenges': [{'challenge_type': 'Immunity', 'outcome_type': 'Individual', 'winners': ['Bob']}]}
         result = calculate_challenge_beast_metrics('Alice', data)
         assert result['total_wins'] == 0
 

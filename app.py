@@ -203,15 +203,16 @@ def calculate_voting_accuracy(castaway_name, voting_data, tribal_councils=None):
     return {'correct': correct_votes, 'total': total_votes, 'accuracy': accuracy}
 
 def calculate_challenge_beast_metrics(castaway_name, challenge_data):
-    """Calculate challenge wins for a castaway"""
+    """Calculate challenge wins for a castaway (individual challenges only for immunity)"""
     immunity_wins = 0
     reward_wins = 0
 
     for challenge in challenge_data['challenges']:
         if castaway_name in challenge.get('winners', []):
-            if 'Immunity' in challenge['challenge_type']:
+            outcome = challenge.get('outcome_type', '')
+            if 'Immunity' in challenge['challenge_type'] and outcome == 'Individual':
                 immunity_wins += 1
-            if 'Reward' in challenge['challenge_type'] and challenge['challenge_type'] != 'Immunity':
+            if 'Reward' in challenge['challenge_type'] and challenge['challenge_type'] != 'Immunity' and outcome == 'Individual':
                 reward_wins += 1
 
     return {
@@ -422,6 +423,20 @@ for season_num, season_data in seasons_data.items():
 
 # --- PRE-COMPUTED STATS ---
 
+def find_all_max(items, key_func):
+    """Find ALL items that share the maximum value (handles ties)"""
+    if not items:
+        return []
+    max_val = max(key_func(item) for item in items)
+    return [item for item in items if key_func(item) == max_val]
+
+def find_all_min(items, key_func):
+    """Find ALL items that share the minimum value (handles ties)"""
+    if not items:
+        return []
+    min_val = min(key_func(item) for item in items)
+    return [item for item in items if key_func(item) == min_val]
+
 def precompute_hall_of_fame():
     """Pre-compute Hall of Fame stats at startup for performance"""
     all_castaways = []
@@ -438,13 +453,15 @@ def precompute_hall_of_fame():
             all_castaways.append(castaway_record)
 
     individual_records = {
-        'highest_voting_accuracy_champion': max(champions, key=lambda c: c.get('voting_accuracy', {}).get('accuracy', 0)) if champions else None,
-        'lowest_voting_accuracy_champion': min(champions, key=lambda c: c.get('voting_accuracy', {}).get('accuracy', 0)) if champions else None,
-        'most_challenge_wins': max(all_castaways, key=lambda c: c.get('challenge_stats', {}).get('total_wins', 0)),
-        'most_challenge_wins_champion': max(champions, key=lambda c: c.get('challenge_stats', {}).get('total_wins', 0)) if champions else None,
-        'least_challenge_wins_champion': min(champions, key=lambda c: c.get('challenge_stats', {}).get('total_wins', 0)) if champions else None,
-        'most_votes_received_champion': max(champions, key=lambda c: c.get('votes_against', 0)) if champions else None,
-        'least_votes_received_champion': min(champions, key=lambda c: c.get('votes_against', 0)) if champions else None,
+        'highest_voting_accuracy_champion': find_all_max(champions, lambda c: c.get('voting_accuracy', {}).get('accuracy', 0)),
+        'lowest_voting_accuracy_champion': find_all_min(champions, lambda c: c.get('voting_accuracy', {}).get('accuracy', 0)),
+        'most_challenge_wins': find_all_max(all_castaways, lambda c: c.get('challenge_stats', {}).get('total_wins', 0)),
+        'most_challenge_wins_champion': find_all_max(champions, lambda c: c.get('challenge_stats', {}).get('total_wins', 0)),
+        'least_challenge_wins_champion': find_all_min(champions, lambda c: c.get('challenge_stats', {}).get('total_wins', 0)),
+        'most_immunity_wins': find_all_max(all_castaways, lambda c: c.get('challenge_stats', {}).get('immunity_wins', 0)),
+        'most_immunity_wins_champion': find_all_max(champions, lambda c: c.get('challenge_stats', {}).get('immunity_wins', 0)),
+        'most_votes_received_champion': find_all_max(champions, lambda c: c.get('votes_against', 0)),
+        'least_votes_received_champion': find_all_min(champions, lambda c: c.get('votes_against', 0)),
     }
 
     idol_records = []
