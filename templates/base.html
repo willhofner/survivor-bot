@@ -78,6 +78,9 @@
                     <li class="nav-item">
                         <button class="btn btn-sm theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#x1F319;</button>
                     </li>
+                    <li class="nav-item">
+                        <button id="torchToggle" class="btn btn-sm theme-toggle" onclick="toggleTorchCursor()" title="Toggle torch cursor">&#x1F525;</button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -188,6 +191,11 @@
                 document.body.classList.add('spoiler-free');
                 const btn = document.querySelectorAll('.theme-toggle')[0];
                 if (btn) btn.textContent = '\uD83D\uDE48';
+            }
+            const torch = localStorage.getItem('survivor-torch');
+            if (torch === 'false') {
+                const btn = document.getElementById('torchToggle');
+                if (btn) btn.textContent = '\u26AB';
             }
         })();
 
