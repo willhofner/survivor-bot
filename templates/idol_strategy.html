@@ -56,6 +56,7 @@
     <li class="nav-item"><a class="nav-link" id="strategies-tab" data-bs-toggle="tab" href="#strategies" role="tab">Strategies</a></li>
     <li class="nav-item"><a class="nav-link" id="bestworst-tab" data-bs-toggle="tab" href="#bestworst" role="tab">Best & Worst</a></li>
     <li class="nav-item"><a class="nav-link" id="conclusions-tab" data-bs-toggle="tab" href="#conclusions" role="tab">Conclusions</a></li>
+    <li class="nav-item"><a class="nav-link" id="advantages-tab" data-bs-toggle="tab" href="#advantages" role="tab">Advantages Evolution</a></li>
 </ul>
 
 <div class="tab-content" id="idolTabContent">
@@ -179,7 +180,7 @@
     <!-- Type Cards -->
     {% set type_descriptions = {
         'Standard Hidden Immunity Idol': {
-            'icon': '🏝️',
+            'icon': 'Standard',
             'rules': 'Played after votes are cast but BEFORE they are read. Negates all votes against the holder or target. Single-use.',
             'first_season': 14,
             'first_name': 'Fiji',
@@ -188,7 +189,7 @@
             'tip': 'This is what you will almost certainly find. The key decision: play it on yourself or use it to build trust by saving an ally.'
         },
         'God Idol (Post-Vote Read)': {
-            'icon': '⚡',
+            'icon': 'God',
             'rules': 'Can be played AFTER votes are read. You see exactly how many votes you received before deciding to play. A fundamentally different weapon than the standard idol.',
             'first_season': 12,
             'first_name': 'Panama',
@@ -197,7 +198,7 @@
             'tip': 'If you find this, you have a nuclear weapon. The optimal strategy is to reveal it and use the threat to prevent people from voting against you. Save it as long as possible — every round it exists in your pocket is a round nobody dares target you.'
         },
         'Split Idol (Two Halves)': {
-            'icon': '🔗',
+            'icon': 'Split',
             'rules': 'Idol comes in two pieces. Both halves must be combined to be playable. Sometimes both are found by one player; other times each half goes to different players.',
             'first_season': 32,
             'first_name': 'Kaoh Rong',
@@ -206,7 +207,7 @@
             'tip': 'Never give your half away unless you completely trust the other person. If someone gives you half, you have enormous leverage.'
         },
         'Legacy Advantage': {
-            'icon': '📜',
+            'icon': 'Legacy',
             'rules': 'Grants immunity at a specific predetermined tribal (usually F13 or F6). Must be willed to another player if voted out.',
             'first_season': 33,
             'first_name': 'Millennials vs. Gen X',
@@ -215,7 +216,7 @@
             'tip': 'Less powerful than a standard idol since you cannot choose when to play it. Use it as a bargaining chip if possible.'
         },
         'Temporary Idol': {
-            'icon': '⏳',
+            'icon': 'Temp',
             'rules': 'Functions like a standard HII but expires after 1-3 tribal councils instead of lasting until Final 5.',
             'first_season': 39,
             'first_name': 'Island of the Idols',
@@ -229,7 +230,7 @@
     {% set desc = type_descriptions.get(tc.name, {}) %}
     <div class="advantage-card mb-4" style="border-left: 5px solid var(--torch-orange);">
         <div class="advantage-header">
-            <div class="advantage-icon">{{ desc.get('icon', '💎') }}</div>
+            <div class="advantage-icon">{{ icon('idol', '28') }}</div>
             <div class="advantage-meta">
                 <h4 class="advantage-type" style="font-size: 1.3rem;">{{ tc.name }}</h4>
                 <div class="advantage-tribe">
@@ -273,7 +274,7 @@
     <!-- Fake Idols Brief -->
     <div class="advantage-card mb-4" style="border-left: 5px solid #9CA3AF;">
         <div class="advantage-header">
-            <div class="advantage-icon">🎭</div>
+            <div class="advantage-icon">{{ icon('idol', '28') }}</div>
             <div class="advantage-meta">
                 <h4 class="advantage-type" style="font-size: 1.3rem; color: #9CA3AF;">Fake Idols</h4>
                 <div class="advantage-tribe">{{ fake_idols|length }} documented fakes across all seasons</div>
@@ -288,7 +289,7 @@
     <!-- Idol Nullifier -->
     <div class="advantage-card mb-4" style="border-left: 5px solid #F87171;">
         <div class="advantage-header">
-            <div class="advantage-icon">🚫</div>
+            <div class="advantage-icon">{{ icon('target', '28') }}</div>
             <div class="advantage-meta">
                 <h4 class="advantage-type" style="font-size: 1.3rem; color: #F87171;">Idol Nullifier (Counter-Advantage)</h4>
                 <div class="advantage-tribe">Appeared in S37 (David vs. Goliath) and S39 (Island of the Idols)</div>
@@ -677,6 +678,137 @@
     </div>
 </div>
 
+<!-- TAB 6: Advantages Evolution (merged from advantages-timeline page) -->
+<div class="tab-pane fade" id="advantages" role="tabpanel">
+    <h2 class="text-center mb-4" style="color: var(--torch-orange);">The Evolution of Advantages</h2>
+    <p class="text-center mb-4" style="color: var(--text-secondary); max-width: 700px; margin: 0 auto;">
+        From zero advantages in Season 1 to advantage overload in modern Survivor — how idols and twists reshaped the game.
+    </p>
+
+    <!-- Summary Stats -->
+    <div class="row text-center g-3 mb-5">
+        <div class="col-6 col-md-3">
+            <div class="stat-box">
+                <div class="stat-number">{{ total_all_advantages }}</div>
+                <div class="stat-label">Total Advantages</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="stat-box">
+                <div class="stat-number">{{ adv_type_counts | length }}</div>
+                <div class="stat-label">Advantage Types</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="stat-box">
+                <div class="stat-number">{{ total_votes_negated }}</div>
+                <div class="stat-label">Votes Negated</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="stat-box">
+                <div class="stat-number">{{ total_successful }}</div>
+                <div class="stat-label">Successful Plays</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart: Advantages per Season -->
+    <div class="tribal-card p-4 mb-5">
+        <h3 class="text-center mb-3" style="color: var(--torch-orange);">Advantages Per Season</h3>
+        <canvas id="advPerSeasonChart" height="300"></canvas>
+    </div>
+
+    <!-- Chart: Votes Negated + Type Distribution -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div class="tribal-card p-4 h-100">
+                <h4 class="text-center mb-3" style="color: var(--torch-orange);">Votes Negated Per Season</h4>
+                <canvas id="advVotesNegatedChart" height="250"></canvas>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="tribal-card p-4 h-100">
+                <h4 class="text-center mb-3" style="color: var(--torch-orange);">Advantage Types Distribution</h4>
+                <canvas id="advTypeChart" height="250"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Era Breakdown -->
+    <div class="tribal-card p-4 mb-5">
+        <h3 class="text-center mb-4" style="color: var(--torch-orange);">The Advantage Eras</h3>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="stat-box text-center">
+                    <h5 style="color: var(--sand);">No Idols Era (S1-10)</h5>
+                    <div class="stat-number" style="font-size: 2rem;">
+                        {% set early = [] %}
+                        {% for s in range(1, 11) %}{% if s in adv_season_counts %}{% if early.append(adv_season_counts[s].total) %}{% endif %}{% endif %}{% endfor %}
+                        {{ early | sum }}
+                    </div>
+                    <div class="stat-label">Total Advantages</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-box text-center">
+                    <h5 style="color: var(--sand);">Idol Era (S11-28)</h5>
+                    <div class="stat-number" style="font-size: 2rem;">
+                        {% set mid = [] %}
+                        {% for s in range(11, 29) %}{% if s in adv_season_counts %}{% if mid.append(adv_season_counts[s].total) %}{% endif %}{% endif %}{% endfor %}
+                        {{ mid | sum }}
+                    </div>
+                    <div class="stat-label">Total Advantages</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-box text-center">
+                    <h5 style="color: var(--sand);">Advantage Overload (S29-39)</h5>
+                    <div class="stat-number" style="font-size: 2rem;">
+                        {% set late = [] %}
+                        {% for s in range(29, 40) %}{% if s in adv_season_counts %}{% if late.append(adv_season_counts[s].total) %}{% endif %}{% endif %}{% endfor %}
+                        {{ late | sum }}
+                    </div>
+                    <div class="stat-label">Total Advantages</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Season-by-Season Table -->
+    <div class="tribal-card p-4 mb-5">
+        <h3 class="text-center mb-3" style="color: var(--torch-orange);">Season-by-Season Breakdown</h3>
+        <div class="table-responsive">
+            <table class="table table-dark table-hover sortable">
+                <thead>
+                    <tr>
+                        <th style="color: var(--torch-orange);">Season</th>
+                        <th style="color: var(--torch-orange);">Name</th>
+                        <th style="color: var(--torch-orange);">Total</th>
+                        <th style="color: var(--torch-orange);">Played</th>
+                        <th style="color: var(--torch-orange);">Successful</th>
+                        <th style="color: var(--torch-orange);">Votes Negated</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for s in seasons %}
+                    {% if s in adv_season_counts %}
+                    <tr>
+                        <td>{{ s }}</td>
+                        <td><a href="/items?season={{ s }}" style="color: var(--sand); text-decoration: none;">{{ season_names[s] }}</a></td>
+                        <td>{{ adv_season_counts[s].total }}</td>
+                        <td>{{ adv_season_counts[s].played }}</td>
+                        <td>{{ adv_season_counts[s].successful }}</td>
+                        <td>{{ adv_season_counts[s].votes_negated }}</td>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
 </div><!-- end tab-content -->
 {% endblock %}
 
@@ -805,5 +937,86 @@
     });
 
     // Tab styling is handled by CSS (survivor.css .nav-tabs rules)
+
+    // === ADVANTAGES EVOLUTION CHARTS ===
+    const advSeasonCounts = {{ adv_season_counts|tojson_safe }};
+    const advTypeCounts = {{ adv_type_counts|tojson_safe }};
+    const advSeasons = Object.keys(advSeasonCounts).sort((a,b) => parseInt(a) - parseInt(b));
+
+    // Initialize charts when tab is shown (Chart.js needs visible canvas)
+    document.getElementById('advantages-tab').addEventListener('shown.bs.tab', function() {
+        if (window._advChartsInit) return;
+        window._advChartsInit = true;
+
+        new Chart(document.getElementById('advPerSeasonChart'), {
+            type: 'bar',
+            data: {
+                labels: advSeasons.map(s => 'S' + s),
+                datasets: [{
+                    label: 'Total Advantages',
+                    data: advSeasons.map(s => advSeasonCounts[s].total),
+                    backgroundColor: 'rgba(255, 107, 53, 0.6)',
+                    borderColor: 'rgba(255, 107, 53, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'Successfully Played',
+                    data: advSeasons.map(s => advSeasonCounts[s].successful),
+                    backgroundColor: 'rgba(40, 167, 69, 0.6)',
+                    borderColor: 'rgba(40, 167, 69, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { labels: { color: chartColors.sand } } },
+                scales: {
+                    y: { ticks: { color: chartColors.gray }, grid: { color: 'rgba(255,255,255,0.1)' } },
+                    x: { ticks: { color: chartColors.gray, maxRotation: 45, font: { size: 9 } }, grid: { display: false } }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('advVotesNegatedChart'), {
+            type: 'line',
+            data: {
+                labels: advSeasons.map(s => 'S' + s),
+                datasets: [{
+                    label: 'Votes Negated',
+                    data: advSeasons.map(s => advSeasonCounts[s].votes_negated),
+                    borderColor: 'gold',
+                    backgroundColor: 'rgba(255, 215, 0, 0.1)',
+                    fill: true,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { labels: { color: chartColors.sand } } },
+                scales: {
+                    y: { ticks: { color: chartColors.gray }, grid: { color: 'rgba(255,255,255,0.1)' } },
+                    x: { ticks: { color: chartColors.gray, maxRotation: 45, font: { size: 9 } }, grid: { display: false } }
+                }
+            }
+        });
+
+        const advTypeLabels = Object.keys(advTypeCounts);
+        const advTypeValues = Object.values(advTypeCounts);
+        const advTypeColors = ['#FF6B35', '#4169E1', '#FFD700', '#00ff00', '#FF1493', '#00CED1', '#FF4444', '#9370DB', '#20B2AA', '#FF69B4'];
+        new Chart(document.getElementById('advTypeChart'), {
+            type: 'doughnut',
+            data: {
+                labels: advTypeLabels,
+                datasets: [{
+                    data: advTypeValues,
+                    backgroundColor: advTypeColors.slice(0, advTypeLabels.length),
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { position: 'bottom', labels: { color: chartColors.sand, font: { size: 10 } } } }
+            }
+        });
+    });
 </script>
 {% endblock %}

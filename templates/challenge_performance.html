@@ -3,9 +3,10 @@
 {% block title %}Challenge Performance - Survivor{% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="challenge-perf-page">
     <h1 class="text-center mb-3 survivor-title">
-        <span class="torch">&#x1F3CB;&#xFE0F;</span> Challenge Performance Analysis
+        <span class="torch">{{ icon('dumbbell', '32') }}</span> Challenge Performance Analysis
     </h1>
     <p class="text-center mb-4" style="color: var(--sand); font-size: 1.1rem;">
         Challenge counts, top performers, and winner challenge performance across all 39 seasons

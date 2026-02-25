@@ -1,0 +1,13 @@
+{# In-page season selector for season-specific pages #}
+<div class="season-selector-inline mb-4">
+    <div class="d-flex justify-content-center align-items-center gap-3">
+        <label for="pageSeasonSelector" style="color: var(--sand); font-weight: bold; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;">Season:</label>
+        <select id="pageSeasonSelector" class="form-select season-selector-page" onchange="window.location.href='{{ request.path }}?season=' + this.value">
+            {% for s in seasons %}
+            <option value="{{ s }}" {% if s == season %}selected{% endif %}>
+                S{{ s }}: {{ season_names[s] }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+</div>

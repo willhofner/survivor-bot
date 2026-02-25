@@ -3,9 +3,10 @@
 {% block title %}Compare Winners - Survivor{% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="compare-view">
     <h1 class="text-center mb-3 survivor-title">
-        <span class="torch-large">&#x2694;&#xFE0F;</span><br>
+        <span class="torch-large">{{ icon('crossed-swords', '64') }}</span><br>
         WINNER COMPARISON
     </h1>
     <p class="text-center subtitle mb-4">Select 2-4 winners to compare their strategic profiles side-by-side</p>
@@ -103,7 +104,7 @@
 
     <!-- EMPTY STATE -->
     <div id="emptyState" class="text-center py-5">
-        <div style="font-size: 4rem; margin-bottom: 1rem;">&#x2694;&#xFE0F;</div>
+        <div style="margin-bottom: 1rem;">{{ icon('crossed-swords', '64') }}</div>
         <p class="text-muted" style="font-size: 1.2rem;">Select at least two winners above to compare their games</p>
     </div>
 </div>

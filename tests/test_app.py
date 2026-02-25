@@ -130,15 +130,15 @@ class TestEpisodeGrade:
 class TestFlameRating:
     def test_low_score(self):
         result = get_flame_rating(3.0)
-        assert result.count('🔥') == 3
+        assert result.count('\u25A0') == 3  # filled squares
 
     def test_half_flame(self):
         result = get_flame_rating(5.5)
-        assert '½' in result
+        assert '\u25B2' in result  # triangle for half
 
     def test_max_score(self):
         result = get_flame_rating(10.0)
-        assert result.count('🔥') == 10
+        assert result.count('\u25A0') == 10  # 10 filled squares
 
 
 # --- Route Tests ---
@@ -153,8 +153,8 @@ class TestRoutes:
     def test_returning_players(self, client):
         assert client.get('/returning-players').status_code == 200
 
-    def test_advantages_timeline(self, client):
-        assert client.get('/advantages-timeline').status_code == 200
+    def test_advantages_timeline_removed(self, client):
+        assert client.get('/advantages-timeline').status_code == 404
 
     def test_challenge_performance(self, client):
         assert client.get('/challenge-performance').status_code == 200
@@ -174,8 +174,8 @@ class TestRoutes:
     def test_seasons(self, client):
         assert client.get('/seasons').status_code == 200
 
-    def test_analytics(self, client):
-        assert client.get('/analytics').status_code == 200
+    def test_analytics_removed(self, client):
+        assert client.get('/analytics').status_code == 404
 
     def test_hall_of_fame(self, client):
         assert client.get('/hall-of-fame').status_code == 200
@@ -264,11 +264,11 @@ class TestRoutes:
     def test_alliances_season(self, client):
         assert client.get('/alliances?season=20').status_code == 200
 
-    def test_power_rankings_default(self, client):
-        assert client.get('/power-rankings').status_code == 200
+    def test_power_rankings_removed(self, client):
+        assert client.get('/power-rankings').status_code == 404
 
-    def test_power_rankings_season(self, client):
-        assert client.get('/power-rankings?season=7').status_code == 200
+    def test_power_rankings_season_removed(self, client):
+        assert client.get('/power-rankings?season=7').status_code == 404
 
     def test_random_quote_api(self, client):
         resp = client.get('/api/random-quote')
@@ -288,11 +288,10 @@ class TestRoutes:
         assert b'Alliance Network' in resp.data
         assert b'Top Voting Pairs' in resp.data
 
-    def test_power_rankings_has_chart(self, client):
-        resp = client.get('/power-rankings?season=28')
+    def test_idol_strategy_has_advantages_tab(self, client):
+        resp = client.get('/idol-strategy')
         assert resp.status_code == 200
-        assert b'Power Score Timeline' in resp.data
-        assert b'powerChart' in resp.data
+        assert b'Advantages Evolution' in resp.data
 
     def test_castaways_have_nicknames(self, client):
         resp = client.get('/castaways?season=28')
@@ -300,13 +299,12 @@ class TestRoutes:
         # Tony should have "The King of the Jungle" nickname
         assert b'The King of the Jungle' in resp.data
 
-    def test_index_has_quote(self, client):
-        # Quotes are random, so just check the quote container is rendered
+    def test_index_has_feature_cards(self, client):
         resp = client.get('/')
         assert resp.status_code == 200
-        # The quote section should be present (might not always have a quote due to randomness)
-        assert b'Alliance Networks' in resp.data  # New feature card
-        assert b'Power Rankings' in resp.data  # New feature card
+        assert b'Alliance Networks' in resp.data
+        assert b'Winners Hall' in resp.data
+        assert b'Idol Strategy' in resp.data
 
     def test_idol_strategy_page(self, client):
         resp = client.get('/idol-strategy')
@@ -340,9 +338,9 @@ class TestRoutes:
         assert 'Tyler Perry' not in strategies_section
         assert 'Super Idol' not in strategies_section
 
-    def test_nav_shows_idols_not_items(self, client):
+    def test_nav_shows_idol_strategy(self, client):
         resp = client.get('/idol-strategy')
-        assert b'>Idols</a>' in resp.data
+        assert b'Idol Strategy' in resp.data
         assert b'/idol-strategy' in resp.data
 
 

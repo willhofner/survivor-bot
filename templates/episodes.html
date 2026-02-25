@@ -3,9 +3,10 @@
 {% block title %}Episodes - Survivor: Cagayan{% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="episode-view">
     <h1 class="text-center mb-5 survivor-title">
-        <span class="torch">🔥</span> Episode Timeline
+        <span class="torch">{{ icon('torch', '32') }}</span> Episode Timeline
     </h1>
 
     <div class="episode-nav mb-4">
@@ -32,7 +33,7 @@
                 </div>
 
                 <div class="elimination-banner">
-                    <span class="torch-out">🔥💨</span>
+                    <span class="torch-out">{{ icon('snuff', '20') }}</span>
                     <span class="eliminated-name">{{ tc.eliminated }}</span> was voted out
                 </div>
 
@@ -55,7 +56,7 @@
 
                 {% if tc.notes %}
                 <div class="tc-notes">
-                    <span class="notes-icon">ℹ️</span> {{ tc.notes }}
+                    <span class="notes-icon" style="color: var(--torch-orange);">*</span> {{ tc.notes }}
                 </div>
                 {% endif %}
             </div>

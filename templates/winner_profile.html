@@ -3,6 +3,7 @@
 {% block title %}{{ winner.name }} - Season {{ winner.season }} Winner{% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="winner-profile-view">
     <div class="back-nav mb-4">
         <a href="/winners" class="btn btn-outline-survivor btn-sm">&larr; Back to Winners Hall</a>
@@ -12,7 +13,7 @@
         <!-- LEFT COLUMN: Identity + Radar -->
         <div class="col-lg-5">
             <div class="profile-hero">
-                <div class="profile-crown">👑</div>
+                <div class="profile-crown">{{ icon('crown', '64') }}</div>
                 <h1 class="profile-name">{{ winner.name }}</h1>
                 <div class="profile-season">{{ winner.season_name }}</div>
                 <div class="profile-season-num">Season {{ winner.season }} Winner</div>
@@ -54,7 +55,7 @@
             <div class="profile-section">
                 <h3 class="profile-section-title">Signature Move</h3>
                 <div class="signature-highlight">
-                    <span class="signature-icon">⚡</span>
+                    <span class="signature-icon" style="color: gold;">&#9733;</span>
                     {{ winner.signature_move }}
                 </div>
             </div>
@@ -64,42 +65,42 @@
                 <h3 class="profile-section-title">Game Statistics</h3>
                 <div class="game-stats-grid">
                     <div class="gs-item">
-                        <div class="gs-icon">🗳️</div>
+                        <div class="gs-icon">{{ icon('ballot', '24') }}</div>
                         <div class="gs-value">{{ winner.stats.jury_votes }}</div>
                         <div class="gs-label">Jury Vote</div>
                     </div>
                     <div class="gs-item">
-                        <div class="gs-icon">💎</div>
+                        <div class="gs-icon">{{ icon('necklace', '24') }}</div>
                         <div class="gs-value">{{ winner.stats.immunity_wins }}</div>
                         <div class="gs-label">Immunity Wins</div>
                     </div>
                     <div class="gs-item">
-                        <div class="gs-icon">🏆</div>
+                        <div class="gs-icon">{{ icon('trophy', '24') }}</div>
                         <div class="gs-value">{{ winner.stats.reward_wins }}</div>
                         <div class="gs-label">Reward Wins</div>
                     </div>
                     <div class="gs-item">
-                        <div class="gs-icon">📅</div>
+                        <div class="gs-icon">{{ icon('timeline', '24') }}</div>
                         <div class="gs-value">{{ winner.stats.days_lasted }}</div>
                         <div class="gs-label">Days Lasted</div>
                     </div>
                     <div class="gs-item">
-                        <div class="gs-icon">🎯</div>
+                        <div class="gs-icon">{{ icon('target', '24') }}</div>
                         <div class="gs-value">{{ winner.stats.voting_accuracy }}%</div>
                         <div class="gs-label">Voting Accuracy</div>
                     </div>
                     <div class="gs-item">
-                        <div class="gs-icon">🛡️</div>
+                        <div class="gs-icon">{{ icon('person', '24') }}</div>
                         <div class="gs-value">{{ winner.stats.times_received_votes }}</div>
                         <div class="gs-label">Votes Received</div>
                     </div>
                     <div class="gs-item">
-                        <div class="gs-icon">🗡️</div>
+                        <div class="gs-icon">{{ icon('idol', '24') }}</div>
                         <div class="gs-value">{{ winner.stats.idols_played }}</div>
                         <div class="gs-label">Idols Played</div>
                     </div>
                     <div class="gs-item">
-                        <div class="gs-icon">✅</div>
+                        <div class="gs-icon">{{ icon('idol', '24') }}</div>
                         <div class="gs-value">{{ winner.stats.idols_successful }}</div>
                         <div class="gs-label">Idols Successful</div>
                     </div>
@@ -111,7 +112,7 @@
             <div class="profile-section">
                 <h3 class="profile-section-title">Did You Know?</h3>
                 <div class="fun-fact">
-                    <span class="ff-icon">💡</span>
+                    <span class="ff-icon" style="color: var(--torch-orange);">&#9679;</span>
                     {{ winner.fun_fact }}
                 </div>
             </div>

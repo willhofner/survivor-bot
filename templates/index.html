@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="text-center hero-section">
     <h1 class="display-3 survivor-title mb-3">
-        <span class="torch-large">&#x1F525;</span><br>
+        <span class="torch-large">{{ icon('torch', '64') }}</span><br>
         SURVIVOR BOT
     </h1>
     <h2 class="subtitle mb-2">The Complete Visual History of Survivor</h2>
@@ -43,13 +44,13 @@
     </div>
 </div>
 
-<!-- EXPLORE SECTIONS -->
+<!-- STRATEGY & STATS -->
 <div class="row g-4 mb-5">
     <div class="col-md-4">
         <a href="/winners" class="view-card">
             <div class="card h-100 tribal-card">
                 <div class="card-body text-center">
-                    <div class="card-icon">&#x1F451;</div>
+                    <div class="card-icon">{{ icon('crown', '48') }}</div>
                     <h3 class="card-title">Winners Hall</h3>
                     <p class="card-text">Strategic profiles of all 39 winners with radar charts, archetype ratings, and signature moves</p>
                     <div class="btn btn-survivor mt-3">Explore Winners</div>
@@ -61,7 +62,7 @@
         <a href="/compare" class="view-card">
             <div class="card h-100 tribal-card">
                 <div class="card-body text-center">
-                    <div class="card-icon">&#x2694;&#xFE0F;</div>
+                    <div class="card-icon">{{ icon('crossed-swords', '48') }}</div>
                     <h3 class="card-title">Compare Winners</h3>
                     <p class="card-text">Side-by-side comparison with overlapping radar charts, head-to-head stats, and strategy breakdowns</p>
                     <div class="btn btn-survivor mt-3">Compare Now</div>
@@ -70,13 +71,13 @@
         </a>
     </div>
     <div class="col-md-4">
-        <a href="/analytics" class="view-card">
+        <a href="/paths-to-victory" class="view-card">
             <div class="card h-100 tribal-card">
                 <div class="card-body text-center">
-                    <div class="card-icon">&#x1F4CA;</div>
-                    <h3 class="card-title">Analytics</h3>
-                    <p class="card-text">Era comparisons, archetype trends, immunity and idol analysis — how the game has evolved</p>
-                    <div class="btn btn-survivor mt-3">View Analytics</div>
+                    <div class="card-icon">{{ icon('map', '48') }}</div>
+                    <h3 class="card-title">Paths to Victory</h3>
+                    <p class="card-text">How each winner won — strategic archetypes, era trends, and the evolution of winning strategies</p>
+                    <div class="btn btn-survivor mt-3">Explore Paths</div>
                 </div>
             </div>
         </a>
@@ -85,10 +86,58 @@
 
 <div class="row g-4 mb-5">
     <div class="col-md-3">
+        <a href="/idol-strategy" class="view-card">
+            <div class="card h-100 tribal-card">
+                <div class="card-body text-center">
+                    <div class="card-icon">{{ icon('idol', '48') }}</div>
+                    <h3 class="card-title" style="font-size: 1.1rem;">Idol Strategy</h3>
+                    <p class="card-text" style="font-size: 0.85rem;">Complete idol analysis — types, strategies, best plays, and the evolution of advantages</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a href="/challenge-performance" class="view-card">
+            <div class="card h-100 tribal-card">
+                <div class="card-body text-center">
+                    <div class="card-icon">{{ icon('dumbbell', '48') }}</div>
+                    <h3 class="card-title" style="font-size: 1.1rem;">Challenge Performance</h3>
+                    <p class="card-text" style="font-size: 0.85rem;">Challenge stats, winner immunity wins, and top performers</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a href="/voting-patterns" class="view-card">
+            <div class="card h-100 tribal-card">
+                <div class="card-body text-center">
+                    <div class="card-icon">{{ icon('ballot', '48') }}</div>
+                    <h3 class="card-title" style="font-size: 1.1rem;">Voting Patterns</h3>
+                    <p class="card-text" style="font-size: 0.85rem;">FTC analysis and voting trends</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a href="/hall-of-fame" class="view-card">
+            <div class="card h-100 tribal-card">
+                <div class="card-body text-center">
+                    <div class="card-icon">{{ icon('trophy', '48') }}</div>
+                    <h3 class="card-title" style="font-size: 1.1rem;">Hall of Fame</h3>
+                    <p class="card-text" style="font-size: 0.85rem;">All-time records across all seasons</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<!-- SEASON EXPLORER -->
+<div class="row g-4 mb-5">
+    <div class="col-md-3">
         <a href="/seasons" class="view-card">
             <div class="card h-100 tribal-card">
                 <div class="card-body text-center">
-                    <div class="card-icon">&#x1F3DD;&#xFE0F;</div>
+                    <div class="card-icon">{{ icon('island', '48') }}</div>
                     <h3 class="card-title" style="font-size: 1.1rem;">All Seasons</h3>
                     <p class="card-text" style="font-size: 0.85rem;">Browse 39 seasons with summaries, twists, and iconic moments</p>
                 </div>
@@ -99,7 +148,7 @@
         <a href="/castaways?season=28" class="view-card">
             <div class="card h-100 tribal-card">
                 <div class="card-body text-center">
-                    <div class="card-icon">&#x2694;&#xFE0F;</div>
+                    <div class="card-icon">{{ icon('person', '48') }}</div>
                     <h3 class="card-title" style="font-size: 1.1rem;">Castaways</h3>
                     <p class="card-text" style="font-size: 0.85rem;">Player profiles with voting accuracy and challenge stats</p>
                 </div>
@@ -110,7 +159,7 @@
         <a href="/tribal-councils?season=28" class="view-card">
             <div class="card h-100 tribal-card">
                 <div class="card-body text-center">
-                    <div class="card-icon">&#x1F525;</div>
+                    <div class="card-icon">{{ icon('torch', '48') }}</div>
                     <h3 class="card-title" style="font-size: 1.1rem;">Tribal Councils</h3>
                     <p class="card-text" style="font-size: 0.85rem;">Every vote, every blindside, every torch snuffed</p>
                 </div>
@@ -118,72 +167,25 @@
         </a>
     </div>
     <div class="col-md-3">
-        <a href="/hall-of-fame" class="view-card">
+        <a href="/alliances?season=28" class="view-card">
             <div class="card h-100 tribal-card">
                 <div class="card-body text-center">
-                    <div class="card-icon">&#x1F3C6;</div>
-                    <h3 class="card-title" style="font-size: 1.1rem;">Records</h3>
-                    <p class="card-text" style="font-size: 0.85rem;">All-time records across all seasons</p>
+                    <div class="card-icon">{{ icon('handshake', '48') }}</div>
+                    <h3 class="card-title" style="font-size: 1.1rem;">Alliance Networks</h3>
+                    <p class="card-text" style="font-size: 0.85rem;">Interactive voting bloc diagrams — see who voted together</p>
                 </div>
             </div>
         </a>
     </div>
 </div>
 
-<!-- NEW FEATURES ROW -->
-<div class="row g-4 mb-5">
-    <div class="col-md-3">
-        <a href="/quiz" class="view-card">
-            <div class="card h-100 tribal-card">
-                <div class="card-body text-center">
-                    <div class="card-icon">&#x1F9E0;</div>
-                    <h3 class="card-title" style="font-size: 1.1rem;">Survivor IQ Quiz</h3>
-                    <p class="card-text" style="font-size: 0.85rem;">Test your knowledge across 39 seasons</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-md-3">
-        <a href="/returning-players" class="view-card">
-            <div class="card h-100 tribal-card">
-                <div class="card-body text-center">
-                    <div class="card-icon">&#x1F504;</div>
-                    <h3 class="card-title" style="font-size: 1.1rem;">Returning Players</h3>
-                    <p class="card-text" style="font-size: 0.85rem;">Track every multi-season player</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-md-3">
-        <a href="/advantages-timeline" class="view-card">
-            <div class="card h-100 tribal-card">
-                <div class="card-body text-center">
-                    <div class="card-icon">&#x1F4C8;</div>
-                    <h3 class="card-title" style="font-size: 1.1rem;">Advantages Timeline</h3>
-                    <p class="card-text" style="font-size: 0.85rem;">The evolution of idols and advantages</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-md-3">
-        <a href="/voting-patterns" class="view-card">
-            <div class="card h-100 tribal-card">
-                <div class="card-body text-center">
-                    <div class="card-icon">&#x1F5F3;&#xFE0F;</div>
-                    <h3 class="card-title" style="font-size: 1.1rem;">Voting Patterns</h3>
-                    <p class="card-text" style="font-size: 0.85rem;">FTC analysis and voting trends</p>
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-
+<!-- MORE FEATURES -->
 <div class="row g-4 mb-5">
     <div class="col-md-4">
         <a href="/compare-seasons" class="view-card">
             <div class="card h-100 tribal-card">
                 <div class="card-body text-center">
-                    <div class="card-icon">&#x2696;&#xFE0F;</div>
+                    <div class="card-icon">{{ icon('scales', '48') }}</div>
                     <h3 class="card-title" style="font-size: 1.1rem;">Compare Seasons</h3>
                     <p class="card-text" style="font-size: 0.85rem;">Side-by-side season comparison with stats and charts</p>
                 </div>
@@ -191,49 +193,23 @@
         </a>
     </div>
     <div class="col-md-4">
-        <a href="/paths-to-victory" class="view-card">
+        <a href="/returning-players" class="view-card">
             <div class="card h-100 tribal-card">
                 <div class="card-body text-center">
-                    <div class="card-icon">&#x1F5FA;&#xFE0F;</div>
-                    <h3 class="card-title" style="font-size: 1.1rem;">Paths to Victory</h3>
-                    <p class="card-text" style="font-size: 0.85rem;">How each winner won — strategic archetypes mapped</p>
+                    <div class="card-icon">{{ icon('arrows-cycle', '48') }}</div>
+                    <h3 class="card-title" style="font-size: 1.1rem;">Returning Players</h3>
+                    <p class="card-text" style="font-size: 0.85rem;">Track every multi-season player</p>
                 </div>
             </div>
         </a>
     </div>
     <div class="col-md-4">
-        <a href="/challenges?season=28" class="view-card">
+        <a href="/quiz" class="view-card">
             <div class="card h-100 tribal-card">
                 <div class="card-body text-center">
-                    <div class="card-icon">&#x1F3CB;&#xFE0F;</div>
-                    <h3 class="card-title" style="font-size: 1.1rem;">Challenges</h3>
-                    <p class="card-text" style="font-size: 0.85rem;">Challenge timelines, winners, and performance</p>
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-
-<!-- NEW: Alliances & Power Rankings -->
-<div class="row g-4 mb-5">
-    <div class="col-md-6">
-        <a href="/alliances?season=28" class="view-card">
-            <div class="card h-100 tribal-card">
-                <div class="card-body text-center">
-                    <div class="card-icon">&#x1F91D;</div>
-                    <h3 class="card-title" style="font-size: 1.1rem;">Alliance Networks</h3>
-                    <p class="card-text" style="font-size: 0.85rem;">Interactive voting bloc diagrams — see who voted together</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-md-6">
-        <a href="/power-rankings?season=28" class="view-card">
-            <div class="card h-100 tribal-card">
-                <div class="card-body text-center">
-                    <div class="card-icon">&#x1F4CA;</div>
-                    <h3 class="card-title" style="font-size: 1.1rem;">Power Rankings</h3>
-                    <p class="card-text" style="font-size: 0.85rem;">Episode-by-episode power scores for every player</p>
+                    <div class="card-icon">{{ icon('brain', '48') }}</div>
+                    <h3 class="card-title" style="font-size: 1.1rem;">Survivor IQ Quiz</h3>
+                    <p class="card-text" style="font-size: 0.85rem;">Test your knowledge across 39 seasons</p>
                 </div>
             </div>
         </a>
@@ -243,10 +219,10 @@
 <!-- RANDOM PLAYER -->
 <div class="text-center mb-5">
     <button class="btn btn-outline-survivor me-2" onclick="goToRandomPlayer()">
-        &#x1F3B2; Random Season
+        {{ icon('dice', '18') }} Random Season
     </button>
     <button class="btn btn-outline-survivor" onclick="discoverRandomPlayer()">
-        &#x1F3AF; Random Player
+        {{ icon('target', '18') }} Random Player
     </button>
 </div>
 

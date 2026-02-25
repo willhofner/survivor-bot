@@ -3,8 +3,9 @@
 {% block title %}Page Not Found - Survivor{% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="text-center" style="padding: 4rem 1rem;">
-    <div style="font-size: 6rem; margin-bottom: 1rem;">&#x1F525;</div>
+    <div style="margin-bottom: 1rem;">{{ icon('snuff', '96') }}</div>
     <h1 class="survivor-title" style="font-size: 3rem;">THE TRIBE HAS SPOKEN</h1>
     <p style="color: var(--sand); font-size: 1.2rem; margin: 1.5rem 0;">
         This page has been voted out. It doesn't exist (or was eliminated).

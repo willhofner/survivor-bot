@@ -6,20 +6,23 @@
 <div class="survivor-breadcrumb">
     <div class="container">
         <a href="/">Home</a>
-        <span class="separator">&#x25B6;</span>
+        <span class="separator">&#9656;</span>
         <a href="/seasons">Seasons</a>
-        <span class="separator">&#x25B6;</span>
+        <span class="separator">&#9656;</span>
         <span class="current">S{{ season }}: {{ season_name }} &mdash; Events</span>
     </div>
 </div>
 {% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="events-view">
     <h1 class="text-center mb-3 survivor-title">
-        <span class="torch">📅</span> Season Timeline
+        <span class="torch">{{ icon('timeline', '32') }}</span> Season Timeline
     </h1>
     <p class="text-center mb-4" style="color: var(--sand);">Season {{ season }}: {{ season_name }}</p>
+
+    {% include '_season_selector.html' %}
 
     <div class="timeline-stats text-center mb-4">
         <span class="stat-badge">{{ events|length }} Key Events</span>
@@ -31,23 +34,23 @@
             <div class="event-header">
                 <div class="event-icon">
                     {% if event.event_type == 'tribe_formation' %}
-                        🏝️
+                        {{ icon('island', '24') }}
                     {% elif event.event_type == 'tribe_swap' %}
-                        🔄
+                        {{ icon('arrows-cycle', '24') }}
                     {% elif event.event_type == 'merge' %}
-                        🤝
+                        {{ icon('handshake', '24') }}
                     {% elif event.event_type == 'advantage_found' %}
-                        💎
+                        {{ icon('idol', '24') }}
                     {% elif event.event_type == 'twist' %}
-                        🎯
+                        {{ icon('target', '24') }}
                     {% elif event.event_type == 'quit' %}
-                        🚪
+                        {{ icon('snuff', '24') }}
                     {% elif event.event_type == 'strategic_moment' %}
-                        🧠
+                        {{ icon('brain', '24') }}
                     {% elif event.event_type == 'final_tribal_council' %}
-                        👑
+                        {{ icon('crown', '24') }}
                     {% else %}
-                        ⭐
+                        {{ icon('torch', '24') }}
                     {% endif %}
                 </div>
                 <div class="event-meta">

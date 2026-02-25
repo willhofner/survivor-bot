@@ -3,13 +3,16 @@
 {% block title %}Alliances - Survivor: {{ season_name }}{% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="alliances-page">
     <h1 class="text-center mb-3 survivor-title">
-        <span class="torch">&#x1F91D;</span> Alliance Network
+        <span class="torch">{{ icon('handshake', '32') }}</span> Alliance Network
     </h1>
     <p class="text-center mb-2" style="color: var(--sand); font-size: 1.1rem;">
         S{{ season }}: {{ season_name }} — Who voted together?
     </p>
+
+    {% include '_season_selector.html' %}
     <p class="text-center mb-4" style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">
         Nodes = players (colored by tribe). Lines = co-votes (thicker = voted together more often). Drag to rearrange.
     </p>

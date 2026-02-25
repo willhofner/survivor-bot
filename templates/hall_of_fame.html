@@ -3,9 +3,10 @@
 {% block title %}Hall of Fame - Survivor{% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="hall-of-fame-view">
     <h1 class="text-center mb-5 survivor-title">
-        <span class="torch-large">🏆</span><br>
+        <span class="torch-large">{{ icon('trophy', '64') }}</span><br>
         HALL OF FAME
     </h1>
     <p class="text-center subtitle mb-5">All-Time Records Across All Seasons</p>
@@ -49,14 +50,14 @@
     <!-- INDIVIDUAL RECORDS -->
     <section class="mb-5">
         <h2 class="section-title mb-4">
-            <span class="torch">⚔️</span> Individual Records
+            <span class="torch">{{ icon('crossed-swords', '28') }}</span> Individual Records
         </h2>
 
         <div class="row g-4">
             <!-- Champion Voting Accuracy - Highest -->
             <div class="col-md-6">
                 <div class="record-card">
-                    <div class="record-icon">🎯</div>
+                    <div class="record-icon">{{ icon('target', '36') }}</div>
                     <h4 class="record-title">Highest Voting Accuracy (Champion)</h4>
                     {% if individual_records.highest_voting_accuracy_champion %}
                         {% for holder in individual_records.highest_voting_accuracy_champion %}
@@ -80,7 +81,7 @@
             <!-- Champion Voting Accuracy - Lowest -->
             <div class="col-md-6">
                 <div class="record-card">
-                    <div class="record-icon">🎯</div>
+                    <div class="record-icon">{{ icon('target', '36') }}</div>
                     <h4 class="record-title">Lowest Voting Accuracy (Champion)</h4>
                     {% if individual_records.lowest_voting_accuracy_champion %}
                         {% for holder in individual_records.lowest_voting_accuracy_champion %}
@@ -104,7 +105,7 @@
             <!-- Individual Immunity Wins (All Players) -->
             <div class="col-md-6">
                 <div class="record-card">
-                    <div class="record-icon">💎</div>
+                    <div class="record-icon">{{ icon('necklace', '36') }}</div>
                     <h4 class="record-title">Most Individual Immunity Wins (All Players)</h4>
                     {% if individual_records.most_immunity_wins %}
                         {% for holder in individual_records.most_immunity_wins %}
@@ -127,7 +128,7 @@
             <!-- Individual Immunity Wins (Champion) -->
             <div class="col-md-6">
                 <div class="record-card">
-                    <div class="record-icon">💎</div>
+                    <div class="record-icon">{{ icon('necklace', '36') }}</div>
                     <h4 class="record-title">Most Individual Immunity Wins (Champion)</h4>
                     {% if individual_records.most_immunity_wins_champion %}
                         {% for holder in individual_records.most_immunity_wins_champion %}
@@ -150,7 +151,7 @@
             <!-- Challenge Wins (All Players) -->
             <div class="col-md-6">
                 <div class="record-card">
-                    <div class="record-icon">💪</div>
+                    <div class="record-icon">{{ icon('dumbbell', '36') }}</div>
                     <h4 class="record-title">Most Individual Challenge Wins (All Players)</h4>
                     {% if individual_records.most_challenge_wins %}
                         {% for holder in individual_records.most_challenge_wins %}
@@ -159,7 +160,7 @@
                             <div class="record-holder">{{ holder.name }}</div>
                             <div class="record-value">{{ holder.challenge_stats.total_wins }} wins</div>
                             <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
-                            <div class="record-details">💎 {{ holder.challenge_stats.immunity_wins }} immunity | 🏆 {{ holder.challenge_stats.reward_wins }} reward</div>
+                            <div class="record-details">{{ holder.challenge_stats.immunity_wins }} immunity | {{ holder.challenge_stats.reward_wins }} reward</div>
                         </div>
                         {% endfor %}
                         {% if individual_records.most_challenge_wins|length > 1 %}
@@ -174,7 +175,7 @@
             <!-- Challenge Wins (Champion) -->
             <div class="col-md-6">
                 <div class="record-card">
-                    <div class="record-icon">💪</div>
+                    <div class="record-icon">{{ icon('dumbbell', '36') }}</div>
                     <h4 class="record-title">Most Individual Challenge Wins (Champion)</h4>
                     {% if individual_records.most_challenge_wins_champion %}
                         {% for holder in individual_records.most_challenge_wins_champion %}
@@ -183,7 +184,7 @@
                             <div class="record-holder">{{ holder.name }}</div>
                             <div class="record-value">{{ holder.challenge_stats.total_wins }} wins</div>
                             <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
-                            <div class="record-details">💎 {{ holder.challenge_stats.immunity_wins }} immunity | 🏆 {{ holder.challenge_stats.reward_wins }} reward</div>
+                            <div class="record-details">{{ holder.challenge_stats.immunity_wins }} immunity | {{ holder.challenge_stats.reward_wins }} reward</div>
                         </div>
                         {% endfor %}
                         {% if individual_records.most_challenge_wins_champion|length > 1 %}
@@ -198,7 +199,7 @@
             <!-- Fewest Challenge Wins (Champion) -->
             <div class="col-md-6">
                 <div class="record-card">
-                    <div class="record-icon">💪</div>
+                    <div class="record-icon">{{ icon('dumbbell', '36') }}</div>
                     <h4 class="record-title">Fewest Individual Challenge Wins (Champion)</h4>
                     {% if individual_records.least_challenge_wins_champion %}
                         {% for holder in individual_records.least_challenge_wins_champion %}
@@ -221,7 +222,7 @@
             <!-- Votes Received - Most -->
             <div class="col-md-6">
                 <div class="record-card">
-                    <div class="record-icon">🗳️</div>
+                    <div class="record-icon">{{ icon('ballot', '36') }}</div>
                     <h4 class="record-title">Most Votes Received (Champion)</h4>
                     {% if individual_records.most_votes_received_champion %}
                         {% for holder in individual_records.most_votes_received_champion %}
@@ -244,7 +245,7 @@
             <!-- Votes Received - Fewest -->
             <div class="col-md-6">
                 <div class="record-card">
-                    <div class="record-icon">🗳️</div>
+                    <div class="record-icon">{{ icon('ballot', '36') }}</div>
                     <h4 class="record-title">Fewest Votes Received (Champion)</h4>
                     {% if individual_records.least_votes_received_champion %}
                         {% for holder in individual_records.least_votes_received_champion %}
@@ -269,13 +270,13 @@
     <!-- IDOL/ADVANTAGE RECORDS -->
     <section class="mb-5">
         <h2 class="section-title mb-4">
-            <span class="torch">💎</span> Idol & Advantage Records
+            <span class="torch">{{ icon('idol', '28') }}</span> Idol & Advantage Records
         </h2>
 
         <div class="row g-4">
             <div class="col-md-6">
                 <div class="record-card">
-                    <div class="record-icon">💎</div>
+                    <div class="record-icon">{{ icon('necklace', '36') }}</div>
                     <h4 class="record-title">Most Votes Nullified (Single Idol)</h4>
                     {% if most_votes_nullified %}
                     <div class="record-holder">
@@ -298,7 +299,7 @@
 
             <div class="col-md-6">
                 <div class="record-card">
-                    <div class="record-icon">💎</div>
+                    <div class="record-icon">{{ icon('necklace', '36') }}</div>
                     <h4 class="record-title">Most Successful Idol Plays (Player)</h4>
                     {% if most_successful_idol_player[0] %}
                     <div class="record-holder">
@@ -315,7 +316,7 @@
 
             <div class="col-md-6">
                 <div class="record-card">
-                    <div class="record-icon">💎</div>
+                    <div class="record-icon">{{ icon('necklace', '36') }}</div>
                     <h4 class="record-title">Most Idols Played (Single Season)</h4>
                     {% if most_idols_played_season[0] %}
                     <div class="record-value">
@@ -332,7 +333,7 @@
 
             <div class="col-md-6">
                 <div class="record-card">
-                    <div class="record-icon">💎</div>
+                    <div class="record-icon">{{ icon('necklace', '36') }}</div>
                     <h4 class="record-title">Most Items Found (Single Season)</h4>
                     {% if most_items_season[0] %}
                     <div class="record-value">
@@ -352,7 +353,7 @@
     <!-- SEASON RECORDS -->
     <section class="mb-5">
         <h2 class="section-title mb-4">
-            <span class="torch">📊</span> Season Records
+            <span class="torch">{{ icon('chart', '28') }}</span> Season Records
         </h2>
 
         <div class="table-responsive">

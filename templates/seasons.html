@@ -3,9 +3,10 @@
 {% block title %}All Seasons - Survivor{% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="seasons-view">
     <h1 class="text-center mb-3 survivor-title">
-        <span class="torch-large">&#x1F3DD;&#xFE0F;</span><br>
+        <span class="torch-large">{{ icon('island', '64') }}</span><br>
         ALL SEASONS
     </h1>
     <p class="text-center subtitle mb-4">39 Seasons of Survivor — From Borneo to Island of the Idols</p>
@@ -35,7 +36,7 @@
 
             {% if s.filming_location %}
             <div class="season-location">
-                <span class="location-icon">&#x1F4CD;</span> {{ s.filming_location }}
+                <span class="location-icon" style="color: var(--torch-orange);">&#9679;</span> {{ s.filming_location }}
             </div>
             {% endif %}
 
@@ -92,7 +93,7 @@
 
     <div class="back-to-top text-center mt-5">
         <button class="btn btn-survivor" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-            Back to Top &#x2191;
+            Back to Top
         </button>
     </div>
 </div>

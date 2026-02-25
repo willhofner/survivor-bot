@@ -6,20 +6,23 @@
 <div class="survivor-breadcrumb">
     <div class="container">
         <a href="/">Home</a>
-        <span class="separator">&#x25B6;</span>
+        <span class="separator">&#9656;</span>
         <a href="/seasons">Seasons</a>
-        <span class="separator">&#x25B6;</span>
+        <span class="separator">&#9656;</span>
         <span class="current">S{{ season }}: {{ season_name }} &mdash; Tribal Councils</span>
     </div>
 </div>
 {% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="tribal-councils-view">
     <h1 class="text-center mb-3 survivor-title">
-        <span class="torch">🔥</span> Tribal Council Timeline
+        <span class="torch">{{ icon('torch', '32') }}</span> Tribal Council Timeline
     </h1>
     <p class="text-center mb-4" style="color: var(--sand);">Season {{ season }}: {{ season_name }}</p>
+
+    {% include '_season_selector.html' %}
 
     <div class="timeline-stats text-center mb-4">
         <span class="stat-badge">{{ tribal_councils|length }} Tribal Councils</span>
@@ -45,7 +48,7 @@
             <div class="tc-tribe-badge">{{ tc.tribe }}</div>
 
             <div class="elimination-banner">
-                <span class="torch-out">🔥💨</span>
+                <span class="torch-out">{{ icon('snuff', '20') }}</span>
                 <span class="eliminated-name">{{ tc.eliminated }}</span> was voted out
             </div>
 
@@ -68,7 +71,7 @@
 
             {% if tc.notes %}
             <div class="tc-notes">
-                <span class="notes-icon">ℹ️</span> {{ tc.notes }}
+                <span class="notes-icon" style="color: var(--torch-orange);">*</span> {{ tc.notes }}
             </div>
             {% endif %}
         </div>

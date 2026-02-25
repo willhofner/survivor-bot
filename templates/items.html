@@ -6,25 +6,28 @@
 <div class="survivor-breadcrumb">
     <div class="container">
         <a href="/">Home</a>
-        <span class="separator">&#x25B6;</span>
+        <span class="separator">&#9656;</span>
         <a href="/seasons">Seasons</a>
-        <span class="separator">&#x25B6;</span>
+        <span class="separator">&#9656;</span>
         <span class="current">S{{ season }}: {{ season_name }} &mdash; Advantages & Idols</span>
     </div>
 </div>
 {% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="items-view">
     <h1 class="text-center mb-3 survivor-title">
-        <span class="torch">💎</span> Advantages & Idols
+        <span class="torch">{{ icon('idol', '32') }}</span> Advantages & Idols
     </h1>
     <p class="text-center mb-4" style="color: var(--sand);">Season {{ season }}: {{ season_name }}</p>
 
+    {% include '_season_selector.html' %}
+
     <div class="item-filter mb-4 text-center">
         <button class="btn btn-filter active" data-result="all">All</button>
-        <button class="btn btn-filter" data-result="successful">✓ Successful</button>
-        <button class="btn btn-filter" data-result="unsuccessful">✗ Unsuccessful</button>
+        <button class="btn btn-filter" data-result="successful">Successful</button>
+        <button class="btn btn-filter" data-result="unsuccessful">Unsuccessful</button>
         <button class="btn btn-filter" data-result="not-played">Not Played</button>
         <button class="btn btn-filter" data-result="voted-out-holding">Voted Out Holding</button>
     </div>
@@ -77,16 +80,16 @@
         <div class="advantage-card mb-4 {{ 'successful' if advantage.result == 'successful' else 'unsuccessful' if advantage.result == 'unsuccessful' else 'not-played' }}"
              data-result="{% if advantage.voted_out_holding %}voted-out-holding{% else %}{{ advantage.result.replace('_', '-') if advantage.result else 'not-played' }}{% endif %}">
             <div class="advantage-header">
-                <div class="advantage-icon">💎</div>
+                <div class="advantage-icon">{{ icon('idol', '24') }}</div>
                 <div class="advantage-meta">
                     <h3 class="advantage-type">{{ advantage.type }}</h3>
                     <div class="advantage-tribe">{{ advantage.tribe }}</div>
                 </div>
                 <div class="advantage-status">
                     {% if advantage.result == 'successful' %}
-                        <span class="status-badge success">✓ Successful</span>
+                        <span class="status-badge success">Successful</span>
                     {% elif advantage.result == 'unsuccessful' %}
-                        <span class="status-badge fail">✗ Unsuccessful</span>
+                        <span class="status-badge fail">Unsuccessful</span>
                     {% elif advantage.voted_out_holding %}
                         <span class="status-badge holding">Voted Out Holding</span>
                     {% else %}
@@ -97,7 +100,7 @@
 
             <div class="advantage-timeline-row">
                 <div class="timeline-item">
-                    <div class="timeline-icon">🔍</div>
+                    <div class="timeline-icon">{{ icon('search', '18') }}</div>
                     <div class="timeline-content">
                         <strong>Found</strong><br>
                         {{ advantage.found_by }} (Day {{ advantage.day_found }}, Ep {{ advantage.episode_found }})
@@ -107,7 +110,7 @@
                 {% if advantage.day_played %}
                 <div class="timeline-arrow">→</div>
                 <div class="timeline-item">
-                    <div class="timeline-icon">🎯</div>
+                    <div class="timeline-icon">{{ icon('target', '18') }}</div>
                     <div class="timeline-content">
                         <strong>Played</strong><br>
                         Day {{ advantage.day_played }}, Episode {{ advantage.episode_played }}
@@ -120,7 +123,7 @@
                 <div class="timeline-arrow">→</div>
                 <div class="timeline-item">
                     <div class="timeline-icon">
-                        {% if advantage.result == 'successful' %}✓{% else %}✗{% endif %}
+                        {% if advantage.result == 'successful' %}<span style="color: #28a745; font-weight: bold;">&#10003;</span>{% else %}<span style="color: #dc3545; font-weight: bold;">&#10007;</span>{% endif %}
                     </div>
                     <div class="timeline-content">
                         <strong>Result</strong><br>

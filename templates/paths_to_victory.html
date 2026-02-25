@@ -3,9 +3,10 @@
 {% block title %}Paths to Victory - Survivor{% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="paths-page">
     <h1 class="text-center mb-3 survivor-title">
-        <span class="torch">🔥</span> Paths to Victory
+        {{ icon('map', '32') }} Paths to Victory
     </h1>
     <p class="text-center mb-2" style="color: var(--sand); font-size: 1.1rem;">
         How do you win Survivor? Explore the different strategic paths to the title of Sole Survivor.
@@ -21,7 +22,7 @@
         <div class="col-md-6 col-lg-3">
             <div class="tribal-card p-3 h-100 text-center">
                 <h4 style="color: var(--torch-orange);">
-                    {% if archetype == 'Strategic Mastermind' %}&#x1F9E0;{% elif archetype == 'Challenge Beast' %}&#x1F4AA;{% elif archetype == 'Social Player' %}&#x1F91D;{% else %}&#x2696;{% endif %}
+                    {% if archetype == 'Strategic Mastermind' %}{{ icon('brain', '24') }}{% elif archetype == 'Challenge Beast' %}{{ icon('dumbbell', '24') }}{% elif archetype == 'Social Player' %}{{ icon('handshake', '24') }}{% else %}{{ icon('scales', '24') }}{% endif %}
                     {{ archetype }}
                 </h4>
                 <div class="stat-number" style="font-size: 2.5rem;">{{ players | length }}</div>
@@ -107,6 +108,77 @@
             </a>
         </div>
         {% endfor %}
+    </div>
+</div>
+
+    <!-- ERA ANALYSIS (merged from analytics page) -->
+    <hr style="border-color: var(--bamboo); margin: 3rem 0;">
+    <h2 class="text-center mb-4" style="color: var(--torch-orange);">How Winning Has Evolved</h2>
+    <p class="text-center mb-4" style="color: var(--sand); font-size: 0.95rem; max-width: 700px; margin: 0 auto;">
+        The game has changed. Compare how winning strategies shifted across five eras of Survivor.
+    </p>
+
+    <!-- Era Radar Chart -->
+    <div class="tribal-card p-4 mb-5">
+        <h3 class="text-center mb-3" style="color: var(--torch-orange);">Era Comparison Radar</h3>
+        <canvas id="eraRadarChart" height="300"></canvas>
+    </div>
+
+    <!-- Era Averages Table -->
+    <div class="tribal-card p-4 mb-5">
+        <h3 class="text-center mb-3" style="color: var(--torch-orange);">Era Averages</h3>
+        <div class="table-responsive">
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th style="color: var(--torch-orange);">Era</th>
+                        <th style="color: var(--torch-orange);">Winners</th>
+                        <th style="color: var(--torch-orange);">Avg Vote Control</th>
+                        <th style="color: var(--torch-orange);">Avg Physical</th>
+                        <th style="color: var(--torch-orange);">Avg Social</th>
+                        <th style="color: var(--torch-orange);">Avg Aggression</th>
+                        <th style="color: var(--torch-orange);">Avg Immunity</th>
+                        <th style="color: var(--torch-orange);">Avg Idols</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for era_name, stats in era_stats.items() %}
+                    <tr>
+                        <td style="color: var(--sand);">{{ era_name }}</td>
+                        <td>{{ stats.count }}</td>
+                        <td>{{ stats.avg_voting_control }}</td>
+                        <td>{{ stats.avg_physical }}</td>
+                        <td>{{ stats.avg_social }}</td>
+                        <td>{{ stats.avg_aggression }}</td>
+                        <td>{{ stats.avg_immunity }}</td>
+                        <td>{{ stats.avg_idols }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Strategic Aggression Trend -->
+    <div class="tribal-card p-4 mb-5">
+        <h3 class="text-center mb-3" style="color: var(--torch-orange);">Strategic Aggression Over Time</h3>
+        <canvas id="aggressionTrendChart" height="250"></canvas>
+    </div>
+
+    <!-- Archetype Distribution -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div class="tribal-card p-4 h-100">
+                <h4 class="text-center mb-3" style="color: var(--torch-orange);">Winner Archetype Distribution</h4>
+                <canvas id="archetypeDistPie" height="250"></canvas>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="tribal-card p-4 h-100">
+                <h4 class="text-center mb-3" style="color: var(--torch-orange);">Archetype Breakdown</h4>
+                <canvas id="archetypeDistBar" height="250"></canvas>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -239,5 +311,112 @@ function filterWinners(archetype, btn) {
         }
     });
 }
+
+// === ERA ANALYSIS CHARTS (merged from analytics page) ===
+const eraStats = {{ era_stats | tojson }};
+const winnerTimeline = {{ winner_timeline | tojson }};
+const archetypeDist = {{ archetype_dist | tojson }};
+
+const eraColors = ['#FF6B35', '#FFD700', '#4169E1', '#28a745', '#FF1493'];
+
+// Era Comparison Radar
+const eraNames = Object.keys(eraStats);
+const eraRadarDatasets = eraNames.map((era, i) => ({
+    label: era,
+    data: [
+        eraStats[era].avg_voting_control,
+        eraStats[era].avg_physical,
+        eraStats[era].avg_social,
+        eraStats[era].avg_aggression,
+    ],
+    borderColor: eraColors[i],
+    backgroundColor: eraColors[i] + '22',
+    borderWidth: 2,
+    pointRadius: 3,
+}));
+
+new Chart(document.getElementById('eraRadarChart'), {
+    type: 'radar',
+    data: {
+        labels: ['Vote Control', 'Physical', 'Social', 'Aggression'],
+        datasets: eraRadarDatasets
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { position: 'bottom', labels: { color: '#F5DEB3', font: { size: 11 } } } },
+        scales: {
+            r: {
+                min: 0, max: 10,
+                ticks: { color: '#F5DEB3', backdropColor: 'transparent' },
+                grid: { color: 'rgba(255,255,255,0.15)' },
+                pointLabels: { color: '#F5DEB3' }
+            }
+        }
+    }
+});
+
+// Strategic Aggression Trend
+new Chart(document.getElementById('aggressionTrendChart'), {
+    type: 'line',
+    data: {
+        labels: winnerTimeline.map(w => 'S' + w.season),
+        datasets: [{
+            label: 'Strategic Aggression',
+            data: winnerTimeline.map(w => w.strategic_aggression),
+            borderColor: '#FF1493',
+            backgroundColor: 'rgba(255,20,147,0.1)',
+            fill: true,
+            tension: 0.3
+        }, {
+            label: 'Vote Control',
+            data: winnerTimeline.map(w => w.voting_control),
+            borderColor: '#FF6B35',
+            backgroundColor: 'rgba(255,107,53,0.1)',
+            fill: false,
+            tension: 0.3
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { labels: { color: '#F5DEB3' } } },
+        scales: {
+            y: { min: 0, max: 10, ticks: { color: '#F5DEB3' }, grid: { color: 'rgba(255,255,255,0.1)' } },
+            x: { ticks: { color: '#F5DEB3', maxRotation: 45, font: { size: 9 } }, grid: { display: false } }
+        }
+    }
+});
+
+// Archetype Distribution Charts
+const distLabels = Object.keys(archetypeDist);
+const distValues = Object.values(archetypeDist);
+const distColors = ['#FF6B35', '#4169E1', '#28a745', '#FFD700'];
+
+new Chart(document.getElementById('archetypeDistPie'), {
+    type: 'doughnut',
+    data: {
+        labels: distLabels,
+        datasets: [{ data: distValues, backgroundColor: distColors, borderWidth: 0 }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { position: 'bottom', labels: { color: '#F5DEB3' } } }
+    }
+});
+
+new Chart(document.getElementById('archetypeDistBar'), {
+    type: 'bar',
+    data: {
+        labels: distLabels,
+        datasets: [{ data: distValues, backgroundColor: distColors, borderWidth: 0, borderRadius: 4 }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { ticks: { color: '#F5DEB3' }, grid: { color: 'rgba(255,255,255,0.1)' }, beginAtZero: true },
+            x: { ticks: { color: '#F5DEB3' }, grid: { display: false } }
+        }
+    }
+});
 </script>
 {% endblock %}

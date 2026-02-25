@@ -1,0 +1,202 @@
+{# SVG Icon System — Survivor-themed inline icons #}
+{# Usage: {% from "_icons.html" import icon %} then {{ icon('torch') }} #}
+
+{% macro icon(name, size='24', cls='') %}
+{% if name == 'torch' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2c-2 3-4 5.5-4 8a4 4 0 0 0 8 0c0-2.5-2-5-4-8z" fill="#FF6B35" stroke="#FF8C42"/>
+  <path d="M12 5c-1 1.5-2 3-2 4.5a2 2 0 0 0 4 0c0-1.5-1-3-2-4.5z" fill="#FFD700" stroke="none"/>
+  <line x1="12" y1="14" x2="12" y2="22" stroke="#8B6914" stroke-width="2.5"/>
+  <line x1="10" y1="22" x2="14" y2="22" stroke="#8B6914" stroke-width="2"/>
+</svg>
+{% elif name == 'crown' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M2 18h20L19 8l-4 4-3-6-3 6-4-4-3 10z" fill="rgba(255,215,0,0.3)" stroke="gold"/>
+  <line x1="2" y1="20" x2="22" y2="20" stroke="gold" stroke-width="2"/>
+</svg>
+{% elif name == 'crossed-swords' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="4" y1="20" x2="20" y2="4" stroke="var(--torch-orange)"/>
+  <polyline points="18,4 20,4 20,6" stroke="var(--torch-orange)"/>
+  <line x1="20" y1="20" x2="4" y2="4" stroke="var(--torch-orange)"/>
+  <polyline points="6,4 4,4 4,6" stroke="var(--torch-orange)"/>
+  <line x1="6" y1="18" x2="8" y2="16" stroke="var(--torch-orange)" stroke-width="2"/>
+  <line x1="16" y1="18" x2="18" y2="16" stroke="var(--torch-orange)" stroke-width="2" transform="scale(-1,1) translate(-24,0)"/>
+</svg>
+{% elif name == 'island' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M13 5c0 0-1-3 1-4 0 2 3 3 3 3s-2 1-2 3" stroke="#3D8B37" fill="none"/>
+  <path d="M14 7c2-1 5 0 5 0s-1-4-3-5" stroke="#3D8B37" fill="rgba(61,139,55,0.3)"/>
+  <path d="M14 7c-2-1-4 0-5 1" stroke="#3D8B37" fill="none"/>
+  <line x1="13" y1="5" x2="13" y2="16" stroke="#8B6914" stroke-width="1.5"/>
+  <ellipse cx="12" cy="17" rx="8" ry="3" fill="rgba(232,200,150,0.3)" stroke="var(--bamboo, #E8C896)"/>
+  <path d="M2 20c2-1 4-1 6 0s4 1 6 0 4-1 6 0" stroke="var(--ocean, #2190B5)" fill="none"/>
+</svg>
+{% elif name == 'trophy' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 2h8v8a4 4 0 0 1-8 0V2z" fill="rgba(255,215,0,0.2)" stroke="gold"/>
+  <path d="M8 4H5a1 1 0 0 0-1 1v1a3 3 0 0 0 3 3h1" stroke="gold"/>
+  <path d="M16 4h3a1 1 0 0 1 1 1v1a3 3 0 0 1-3 3h-1" stroke="gold"/>
+  <line x1="12" y1="14" x2="12" y2="18" stroke="gold"/>
+  <rect x="8" y="18" width="8" height="2" rx="1" fill="rgba(255,215,0,0.3)" stroke="gold"/>
+</svg>
+{% elif name == 'brain' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2a5 5 0 0 0-4.5 2.8A4 4 0 0 0 4 9a4 4 0 0 0 1.5 3.1A4.5 4.5 0 0 0 8 16.5V20h8v-3.5a4.5 4.5 0 0 0 2.5-4.4A4 4 0 0 0 20 9a4 4 0 0 0-3.5-4.2A5 5 0 0 0 12 2z" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)"/>
+  <line x1="12" y1="8" x2="12" y2="16" stroke="var(--torch-orange)" stroke-width="1"/>
+  <path d="M9 12c0-1 1-2 3-2s3 1 3 2" stroke="var(--torch-orange)" fill="none"/>
+  <line x1="9" y1="20" x2="15" y2="20" stroke="var(--torch-orange)"/>
+  <line x1="10" y1="22" x2="14" y2="22" stroke="var(--torch-orange)"/>
+</svg>
+{% elif name == 'handshake' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M2 11l4-4 4 2 3-3 4 2 5-4" stroke="var(--torch-orange)" fill="none"/>
+  <path d="M8 9l4 4 4-2 4 4" stroke="var(--torch-orange)" fill="none"/>
+  <path d="M2 11l4 6 6-2 5 3 5-5" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.1)"/>
+</svg>
+{% elif name == 'ballot' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="3" width="18" height="18" rx="2" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.1)"/>
+  <path d="M8 3v4h8V3" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)"/>
+  <line x1="8" y1="11" x2="16" y2="11" stroke="var(--torch-orange)"/>
+  <line x1="8" y1="14" x2="13" y2="14" stroke="var(--torch-orange)"/>
+  <line x1="8" y1="17" x2="14" y2="17" stroke="var(--torch-orange)"/>
+</svg>
+{% elif name == 'dumbbell' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="2" y="9" width="4" height="6" rx="1" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.2)"/>
+  <rect x="18" y="9" width="4" height="6" rx="1" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.2)"/>
+  <line x1="6" y1="12" x2="18" y2="12" stroke="var(--torch-orange)" stroke-width="2"/>
+  <rect x="5" y="7" width="2" height="10" rx="0.5" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)"/>
+  <rect x="17" y="7" width="2" height="10" rx="0.5" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)"/>
+</svg>
+{% elif name == 'necklace' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 3c0 0-2 6-2 10a8 8 0 0 0 16 0c0-4-2-10-2-10" stroke="var(--bamboo, #E8C896)" fill="none"/>
+  <circle cx="12" cy="17" r="3" stroke="gold" fill="rgba(255,215,0,0.3)"/>
+  <circle cx="12" cy="17" r="1" fill="gold"/>
+</svg>
+{% elif name == 'arrows-cycle' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M17 1l4 4-4 4" stroke="var(--torch-orange)"/>
+  <path d="M3 11V9a4 4 0 0 1 4-4h14" stroke="var(--torch-orange)"/>
+  <path d="M7 23l-4-4 4-4" stroke="var(--torch-orange)"/>
+  <path d="M21 13v2a4 4 0 0 1-4 4H3" stroke="var(--torch-orange)"/>
+</svg>
+{% elif name == 'target' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10" stroke="var(--torch-orange)"/>
+  <circle cx="12" cy="12" r="6" stroke="var(--torch-orange)"/>
+  <circle cx="12" cy="12" r="2" fill="var(--torch-orange)" stroke="var(--torch-orange)"/>
+</svg>
+{% elif name == 'dice' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="3" width="18" height="18" rx="3" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.1)"/>
+  <circle cx="8" cy="8" r="1.5" fill="var(--torch-orange)"/>
+  <circle cx="16" cy="8" r="1.5" fill="var(--torch-orange)"/>
+  <circle cx="12" cy="12" r="1.5" fill="var(--torch-orange)"/>
+  <circle cx="8" cy="16" r="1.5" fill="var(--torch-orange)"/>
+  <circle cx="16" cy="16" r="1.5" fill="var(--torch-orange)"/>
+</svg>
+{% elif name == 'map' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3V6z" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.1)"/>
+  <line x1="9" y1="3" x2="9" y2="18" stroke="var(--torch-orange)"/>
+  <line x1="15" y1="6" x2="15" y2="21" stroke="var(--torch-orange)"/>
+</svg>
+{% elif name == 'sun' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="5" stroke="#FFD700" fill="rgba(255,215,0,0.3)"/>
+  <line x1="12" y1="1" x2="12" y2="4" stroke="#FFD700"/>
+  <line x1="12" y1="20" x2="12" y2="23" stroke="#FFD700"/>
+  <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" stroke="#FFD700"/>
+  <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" stroke="#FFD700"/>
+  <line x1="1" y1="12" x2="4" y2="12" stroke="#FFD700"/>
+  <line x1="20" y1="12" x2="23" y2="12" stroke="#FFD700"/>
+  <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" stroke="#FFD700"/>
+  <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" stroke="#FFD700"/>
+</svg>
+{% elif name == 'moon' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="#C0C0FF" fill="rgba(192,192,255,0.2)"/>
+</svg>
+{% elif name == 'eye-open' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" stroke="var(--sand, #FFF1DC)"/>
+  <circle cx="12" cy="12" r="3" stroke="var(--sand, #FFF1DC)" fill="rgba(255,241,220,0.2)"/>
+</svg>
+{% elif name == 'eye-closed' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94" stroke="var(--sand, #FFF1DC)"/>
+  <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19" stroke="var(--sand, #FFF1DC)"/>
+  <line x1="1" y1="1" x2="23" y2="23" stroke="var(--sand, #FFF1DC)"/>
+</svg>
+{% elif name == 'arrow-up' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="12" y1="19" x2="12" y2="5"/>
+  <polyline points="5 12 12 5 19 12"/>
+</svg>
+{% elif name == 'chevron-right' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="9 6 15 12 9 18"/>
+</svg>
+{% elif name == 'person' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="7" r="4" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)"/>
+  <path d="M5.5 21a6.5 6.5 0 0 1 13 0" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.1)"/>
+</svg>
+{% elif name == 'timeline' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="12" y1="2" x2="12" y2="22" stroke="var(--torch-orange)"/>
+  <circle cx="12" cy="6" r="2" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.2)"/>
+  <line x1="14" y1="6" x2="20" y2="6" stroke="var(--torch-orange)"/>
+  <circle cx="12" cy="12" r="2" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.2)"/>
+  <line x1="10" y1="12" x2="4" y2="12" stroke="var(--torch-orange)"/>
+  <circle cx="12" cy="18" r="2" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.2)"/>
+  <line x1="14" y1="18" x2="20" y2="18" stroke="var(--torch-orange)"/>
+</svg>
+{% elif name == 'scales' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="12" y1="2" x2="12" y2="22" stroke="var(--torch-orange)"/>
+  <line x1="4" y1="6" x2="20" y2="6" stroke="var(--torch-orange)" stroke-width="2"/>
+  <path d="M4 6l-2 8h8L8 6" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)"/>
+  <path d="M16 6l-2 8h8l-2-8" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)"/>
+  <rect x="9" y="20" width="6" height="2" rx="1" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.2)"/>
+</svg>
+{% elif name == 'search' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="11" cy="11" r="8"/>
+  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+</svg>
+{% elif name == 'snuff' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 4c-1 1.5-2 3-2 4.5a2 2 0 0 0 4 0c0-1.5-1-3-2-4.5z" fill="rgba(255,107,53,0.3)" stroke="#FF6B35" stroke-dasharray="2 2"/>
+  <line x1="12" y1="12" x2="12" y2="22" stroke="#8B6914" stroke-width="2"/>
+  <line x1="10" y1="22" x2="14" y2="22" stroke="#8B6914" stroke-width="2"/>
+  <path d="M8 6l-3-2M16 6l3-2M9 3l-2-1M15 3l2-1" stroke="rgba(150,150,150,0.5)" stroke-width="1"/>
+</svg>
+{% elif name == 'chart' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="3" y1="20" x2="21" y2="20" stroke="var(--torch-orange)"/>
+  <rect x="5" y="12" width="3" height="8" fill="rgba(255,107,53,0.3)" stroke="var(--torch-orange)"/>
+  <rect x="10" y="6" width="3" height="14" fill="rgba(255,107,53,0.3)" stroke="var(--torch-orange)"/>
+  <rect x="15" y="10" width="3" height="10" fill="rgba(255,107,53,0.3)" stroke="var(--torch-orange)"/>
+</svg>
+{% elif name == 'fire-off' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="8" stroke="rgba(150,150,150,0.5)" fill="rgba(150,150,150,0.1)"/>
+  <line x1="6" y1="6" x2="18" y2="18" stroke="rgba(150,150,150,0.5)" stroke-width="2"/>
+</svg>
+{% elif name == 'idol' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2l2.5 5h5.5l-4.5 3.5 1.5 5.5L12 13l-5 3 1.5-5.5L4 7h5.5z" fill="rgba(255,215,0,0.25)" stroke="gold"/>
+  <circle cx="12" cy="8.5" r="1.5" fill="gold"/>
+</svg>
+{% elif name == 'challenge' %}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 15l4-8 4 4 4-6 4 10" stroke="var(--torch-orange)" fill="none" stroke-width="2"/>
+  <line x1="2" y1="20" x2="22" y2="20" stroke="var(--torch-orange)"/>
+  <circle cx="8" cy="7" r="2" stroke="gold" fill="rgba(255,215,0,0.3)"/>
+</svg>
+{% endif %}
+{% endmacro %}

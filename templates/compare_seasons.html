@@ -3,9 +3,10 @@
 {% block title %}Compare Seasons - Survivor{% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="compare-seasons-page">
     <h1 class="text-center mb-3 survivor-title">
-        <span class="torch">&#x2694;&#xFE0F;</span> Compare Seasons
+        <span class="torch">{{ icon('scales', '32') }}</span> Compare Seasons
     </h1>
     <p class="text-center mb-4" style="color: var(--sand); font-size: 1.1rem;">
         Select two seasons to compare side-by-side

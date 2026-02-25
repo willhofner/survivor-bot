@@ -34,8 +34,7 @@
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             glow.style.opacity = '0';
         }
-        const btn = document.getElementById('torchToggle');
-        if (btn) btn.textContent = torchEnabled ? '\uD83D\uDD25' : '\u26AB';
+        if (typeof updateTorchIcon === 'function') updateTorchIcon(torchEnabled);
     };
 
     document.addEventListener('mousemove', function(e) {

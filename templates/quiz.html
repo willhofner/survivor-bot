@@ -3,9 +3,10 @@
 {% block title %}Survivor IQ Quiz{% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="quiz-page">
     <h1 class="text-center mb-3 survivor-title">
-        <span class="torch">🔥</span> Survivor IQ Quiz
+        <span class="torch">{{ icon('brain', '32') }}</span> Survivor IQ Quiz
     </h1>
     <p class="text-center mb-4" style="color: var(--sand); font-size: 1.1rem;">
         Test your Survivor knowledge across 39 seasons

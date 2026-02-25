@@ -3,9 +3,10 @@
 {% block title %}Returning Players - Survivor{% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="returning-players-page">
     <h1 class="text-center mb-3 survivor-title">
-        <span class="torch">🔥</span> Returning Players
+        {{ icon('arrows-cycle', '32') }} Returning Players
     </h1>
     <p class="text-center mb-4" style="color: var(--sand); font-size: 1.1rem;">
         Players who came back for more — tracking every appearance across 39 seasons
@@ -69,13 +70,22 @@
              data-best="{{ player.best_finish }}">
             <div class="tribal-card p-3 h-100">
                 <div class="d-flex justify-content-between align-items-start mb-2">
-                    <div>
+                    <div class="d-flex align-items-center gap-2">
+                        {% if player.headshot %}
+                        <div class="rp-headshot">
+                            <img src="{{ player.headshot }}" alt="{{ player.name }}"
+                                 loading="lazy" decoding="async"
+                                 onerror="this.parentElement.style.display='none'">
+                        </div>
+                        {% endif %}
+                        <div>
                         <h4 style="color: var(--torch-orange); margin-bottom: 0.25rem;">
                             {{ player.nickname or player.name }}
                         </h4>
                         {% if player.nickname and player.nickname != player.name %}
                         <small style="color: var(--sand);">{{ player.full_name or player.name }}</small>
                         {% endif %}
+                        </div>
                     </div>
                     <span class="badge" style="background: var(--torch-orange); font-size: 0.9rem;">
                         {{ player.times_played }}x

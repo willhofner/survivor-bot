@@ -253,10 +253,11 @@ def calculate_episode_grade(tribal_council, advantages_data):
     return min(score, 10.0)
 
 def get_flame_rating(score):
-    """Convert score to flame emoji rating"""
-    full_flames = int(score)
-    half_flame = '🔥½' if (score - full_flames) >= 0.5 else ''
-    return '🔥' * full_flames + half_flame
+    """Convert score to a visual bar rating (no emojis)"""
+    full = int(score)
+    half = 1 if (score - full) >= 0.5 else 0
+    empty = 10 - full - half
+    return '\u25A0' * full + ('\u25B2' if half else '') + '\u25A1' * empty
 
 def reconstruct_tribal_councils(voting_data, advantages_data):
     """Reconstruct tribal council data from castaway voting histories when episodes data is missing."""
@@ -687,8 +688,29 @@ def get_winner_aggregate_stats(profiles):
 def winners():
     """Winners Hall - gallery of all season winners with strategic profiles"""
     avg_stats = get_winner_aggregate_stats(winner_profiles)
+    # Add headshot URLs to winner profiles
+    winners_with_headshots = []
+    for w in winner_profiles:
+        w_copy = w.copy()
+        season_headshots = seasons_data.get(w['season'], {}).get('headshots', {})
+        # Try full name, first name, last name, then known aliases
+        name = w['name']
+        parts = name.split()
+        hs = (season_headshots.get(name, '') or
+              season_headshots.get(parts[0], '') or
+              season_headshots.get(parts[-1] if len(parts) > 1 else '', '') or
+              season_headshots.get(player_nicknames.get(name, ''), ''))
+        # Fallback: case-insensitive partial match on any headshot key
+        if not hs:
+            name_lower = name.lower()
+            for hk, hv in season_headshots.items():
+                if hk.lower() in name_lower or name_lower in hk.lower():
+                    hs = hv
+                    break
+        w_copy['headshot'] = hs
+        winners_with_headshots.append(w_copy)
     return render_template('winners.html',
-                         winners=winner_profiles,
+                         winners=winners_with_headshots,
                          avg_stats=avg_stats,
                          seasons=AVAILABLE_SEASONS,
                          season_names=SEASON_NAMES)
@@ -754,74 +776,6 @@ def seasons_overview():
                          seasons=AVAILABLE_SEASONS,
                          season_names=SEASON_NAMES)
 
-@app.route('/analytics')
-def analytics():
-    """Data visualizations and era analysis"""
-    # Compute era stats for winners
-    eras = {
-        'Classic (1-7)': [p for p in winner_profiles if 1 <= p['season'] <= 7],
-        'Golden Age (8-14)': [p for p in winner_profiles if 8 <= p['season'] <= 14],
-        'Strategy Era (15-20)': [p for p in winner_profiles if 15 <= p['season'] <= 20],
-        'Modern (21-28)': [p for p in winner_profiles if 21 <= p['season'] <= 28],
-        'New School (29-39)': [p for p in winner_profiles if 29 <= p['season'] <= 39],
-    }
-
-    era_stats = {}
-    for era_name, profiles in eras.items():
-        if not profiles:
-            continue
-        n = len(profiles)
-        era_stats[era_name] = {
-            'count': n,
-            'avg_voting_control': round(sum(p['archetype']['voting_control'] for p in profiles) / n, 1),
-            'avg_physical': round(sum(p['archetype']['physical_game'] for p in profiles) / n, 1),
-            'avg_social': round(sum(p['archetype']['social_capital'] for p in profiles) / n, 1),
-            'avg_aggression': round(sum(p['archetype']['strategic_aggression'] for p in profiles) / n, 1),
-            'avg_immunity': round(sum(p['stats']['immunity_wins'] for p in profiles) / n, 1),
-            'avg_idols': round(sum(p['stats']['idols_played'] for p in profiles) / n, 1),
-            'avg_days': round(sum(p['stats']['days_lasted'] for p in profiles) / n, 1),
-        }
-
-    # Per-season winner data for line charts
-    winner_timeline = []
-    for p in winner_profiles:
-        winner_timeline.append({
-            'season': p['season'],
-            'name': p['name'],
-            'voting_control': p['archetype']['voting_control'],
-            'physical_game': p['archetype']['physical_game'],
-            'social_capital': p['archetype']['social_capital'],
-            'strategic_aggression': p['archetype']['strategic_aggression'],
-            'immunity_wins': p['stats']['immunity_wins'],
-            'idols_played': p['stats']['idols_played'],
-            'voting_accuracy': p['stats']['voting_accuracy'],
-        })
-
-    # Archetype distribution for pie/bar chart
-    archetype_dist = {'Strategist': 0, 'Physical': 0, 'Social': 0, 'Balanced': 0}
-    for p in winner_profiles:
-        a = p['archetype']
-        max_val = max(a['voting_control'], a['physical_game'], a['social_capital'], a['strategic_aggression'])
-        if a['voting_control'] == max_val or a['strategic_aggression'] == max_val:
-            if abs(a['voting_control'] - a['physical_game']) <= 1 and abs(a['social_capital'] - a['physical_game']) <= 1:
-                archetype_dist['Balanced'] += 1
-            else:
-                archetype_dist['Strategist'] += 1
-        elif a['physical_game'] == max_val:
-            archetype_dist['Physical'] += 1
-        elif a['social_capital'] == max_val:
-            archetype_dist['Social'] += 1
-        else:
-            archetype_dist['Balanced'] += 1
-
-    return render_template('analytics.html',
-                         era_stats=era_stats,
-                         winner_timeline=winner_timeline,
-                         archetype_dist=archetype_dist,
-                         winners=winner_profiles,
-                         seasons=AVAILABLE_SEASONS,
-                         season_names=SEASON_NAMES)
-
 # --- GLOBAL SEARCH API ---
 
 @app.route('/quiz')
@@ -851,6 +805,19 @@ def returning_players():
     except (FileNotFoundError, json.JSONDecodeError):
         players_data = []
 
+    # Attach headshot from first appearance
+    for player in players_data:
+        headshot = ''
+        for app_info in player.get('appearances', []):
+            s = app_info.get('season')
+            if s and s in seasons_data:
+                pname = player.get('name', '')
+                hs = seasons_data[s]['headshots'].get(pname, '') or seasons_data[s]['headshots'].get(pname.split()[0] if pname else '', '')
+                if hs:
+                    headshot = hs
+                    break
+        player['headshot'] = headshot
+
     return render_template('returning_players.html',
                          players=players_data,
                          seasons=AVAILABLE_SEASONS,
@@ -875,9 +842,68 @@ def paths_to_victory():
             primary = 'Balanced'
         archetypes.setdefault(primary, []).append(p)
 
+    # Era analysis data (merged from analytics)
+    eras = {
+        'Classic (1-7)': [p for p in winner_profiles if 1 <= p['season'] <= 7],
+        'Golden Age (8-14)': [p for p in winner_profiles if 8 <= p['season'] <= 14],
+        'Strategy Era (15-20)': [p for p in winner_profiles if 15 <= p['season'] <= 20],
+        'Modern (21-28)': [p for p in winner_profiles if 21 <= p['season'] <= 28],
+        'New School (29-39)': [p for p in winner_profiles if 29 <= p['season'] <= 39],
+    }
+    era_stats = {}
+    for era_name, profiles in eras.items():
+        if not profiles:
+            continue
+        n = len(profiles)
+        era_stats[era_name] = {
+            'count': n,
+            'avg_voting_control': round(sum(p['archetype']['voting_control'] for p in profiles) / n, 1),
+            'avg_physical': round(sum(p['archetype']['physical_game'] for p in profiles) / n, 1),
+            'avg_social': round(sum(p['archetype']['social_capital'] for p in profiles) / n, 1),
+            'avg_aggression': round(sum(p['archetype']['strategic_aggression'] for p in profiles) / n, 1),
+            'avg_immunity': round(sum(p['stats']['immunity_wins'] for p in profiles) / n, 1),
+            'avg_idols': round(sum(p['stats']['idols_played'] for p in profiles) / n, 1),
+            'avg_days': round(sum(p['stats']['days_lasted'] for p in profiles) / n, 1),
+        }
+
+    # Per-season winner timeline for line charts
+    winner_timeline = []
+    for p in winner_profiles:
+        winner_timeline.append({
+            'season': p['season'],
+            'name': p['name'],
+            'voting_control': p['archetype']['voting_control'],
+            'physical_game': p['archetype']['physical_game'],
+            'social_capital': p['archetype']['social_capital'],
+            'strategic_aggression': p['archetype']['strategic_aggression'],
+            'immunity_wins': p['stats']['immunity_wins'],
+            'idols_played': p['stats']['idols_played'],
+            'voting_accuracy': p['stats']['voting_accuracy'],
+        })
+
+    # Archetype distribution
+    archetype_dist = {'Strategist': 0, 'Physical': 0, 'Social': 0, 'Balanced': 0}
+    for p in winner_profiles:
+        a = p['archetype']
+        max_val = max(a['voting_control'], a['physical_game'], a['social_capital'], a['strategic_aggression'])
+        if a['voting_control'] == max_val or a['strategic_aggression'] == max_val:
+            if abs(a['voting_control'] - a['physical_game']) <= 1 and abs(a['social_capital'] - a['physical_game']) <= 1:
+                archetype_dist['Balanced'] += 1
+            else:
+                archetype_dist['Strategist'] += 1
+        elif a['physical_game'] == max_val:
+            archetype_dist['Physical'] += 1
+        elif a['social_capital'] == max_val:
+            archetype_dist['Social'] += 1
+        else:
+            archetype_dist['Balanced'] += 1
+
     return render_template('paths_to_victory.html',
                          winners=winner_profiles,
                          archetypes=archetypes,
+                         era_stats=era_stats,
+                         winner_timeline=winner_timeline,
+                         archetype_dist=archetype_dist,
                          seasons=AVAILABLE_SEASONS,
                          season_names=SEASON_NAMES)
 
@@ -941,42 +967,6 @@ def challenge_performance():
                          season_names=SEASON_NAMES)
 
 
-@app.route('/advantages-timeline')
-def advantages_timeline():
-    """Cross-season advantages timeline visualization"""
-    all_advantages = []
-    for season_num in AVAILABLE_SEASONS:
-        season_data = seasons_data[season_num]
-        for adv in season_data['advantages'].get('advantages', []):
-            all_advantages.append({
-                **adv,
-                'season': season_num,
-                'season_name': SEASON_NAMES[season_num],
-            })
-
-    # Group by type
-    type_counts = Counter()
-    for adv in all_advantages:
-        adv_type = adv.get('type', adv.get('advantage_type', 'Unknown'))
-        type_counts[adv_type] += 1
-
-    # Per-season counts
-    season_counts = {}
-    for s in AVAILABLE_SEASONS:
-        advs = seasons_data[s]['advantages'].get('advantages', [])
-        season_counts[s] = {
-            'total': len(advs),
-            'played': sum(1 for a in advs if a.get('day_played') or a.get('played_day')),
-            'successful': sum(1 for a in advs if a.get('result') == 'successful'),
-            'votes_negated': sum(a.get('votes_negated', 0) for a in advs),
-        }
-
-    return render_template('advantages_timeline.html',
-                         all_advantages=all_advantages,
-                         type_counts=dict(type_counts.most_common()),
-                         season_counts=season_counts,
-                         seasons=AVAILABLE_SEASONS,
-                         season_names=SEASON_NAMES)
 
 
 @app.route('/voting-patterns')
@@ -1223,132 +1213,6 @@ def alliances():
         season_names=SEASON_NAMES)
 
 
-@app.route('/power-rankings')
-def power_rankings():
-    """Episode-by-episode power ranking timeline"""
-    season = get_season_param()
-    sd = seasons_data[season]
-    castaways = sd['voting']['castaways']
-    tcs = sd['tribal_councils']
-    challenges = sd['challenges']['challenges']
-
-    # Build per-player timeline: at each tribal council, compute a "power score"
-    # Power score factors: votes received (penalty), challenge wins (bonus), voting accuracy (bonus)
-
-    # Build map of tc_num -> eliminated person
-    eliminated_at = {}
-    for tc in tcs:
-        eliminated_at[tc['number']] = tc.get('eliminated', '')
-
-    # Build map of tc_num -> who voted for whom
-    tc_votes_received = {}  # tc_num -> {target: count}
-    tc_vote_map = {}
-    for c in castaways:
-        for vote in c.get('voting_history', []):
-            tc_num = vote.get('tribal_council', vote.get('tc', 0))
-            if tc_num == 0:
-                continue
-            target = vote.get('voted_for', '')
-            if target:
-                tc_votes_received.setdefault(tc_num, {})
-                tc_votes_received[tc_num][target] = tc_votes_received[tc_num].get(target, 0) + 1
-                tc_vote_map.setdefault(tc_num, {})[c['name']] = target
-
-    # Challenge wins per player up to each point
-    challenge_wins_by_tc = {}  # player -> cumulative wins at each tc
-    challenge_list = sorted(challenges, key=lambda c: c.get('episode', c.get('day', 0)))
-    tc_days = {tc['number']: tc.get('day', 0) for tc in tcs}
-
-    sorted_tc_nums = sorted(tc_votes_received.keys())
-    if not sorted_tc_nums:
-        sorted_tc_nums = sorted(tc['number'] for tc in tcs) if tcs else []
-
-    # Track cumulative challenge wins per player
-    cumulative_wins = {}
-    challenge_idx = 0
-
-    # Build power scores for each player at each TC
-    player_timelines = {}
-    eliminated_players = set()
-
-    for tc_num in sorted_tc_nums:
-        tc_day = tc_days.get(tc_num, 0)
-
-        # Count challenge wins up to this day
-        while challenge_idx < len(challenge_list):
-            ch = challenge_list[challenge_idx]
-            ch_day = ch.get('day', ch.get('episode', 0)) or 0
-            if ch_day > tc_day and tc_day > 0:
-                break
-            for winner in ch.get('winners', []):
-                cumulative_wins[winner] = cumulative_wins.get(winner, 0) + 1
-            challenge_idx += 1
-
-        votes_at_tc = tc_votes_received.get(tc_num, {})
-        votes_cast = tc_vote_map.get(tc_num, {})
-        eliminated = eliminated_at.get(tc_num, '')
-
-        for c in castaways:
-            name = c['name']
-            if name in eliminated_players:
-                continue
-
-            # Power score components
-            votes_received = votes_at_tc.get(name, 0)
-            ch_wins = cumulative_wins.get(name, 0)
-            voted_correctly = 1 if (name in votes_cast and votes_cast[name] == eliminated) else 0
-
-            # Power score: higher = more powerful
-            score = 50  # base
-            score -= votes_received * 8  # penalty for receiving votes
-            score += ch_wins * 5  # bonus for challenge wins
-            score += voted_correctly * 3  # bonus for correct vote
-            score = max(5, min(100, score))
-
-            player_timelines.setdefault(name, []).append({
-                'tc': tc_num,
-                'score': score,
-                'votes_received': votes_received,
-                'voted_correctly': voted_correctly,
-            })
-
-        if eliminated:
-            eliminated_players.add(eliminated)
-
-    # Sort players by final power score (or placement)
-    placement_order = {}
-    for c in castaways:
-        p = c.get('placement', '')
-        if p == 'Winner':
-            placement_order[c['name']] = 0
-        elif 'Runner' in p:
-            placement_order[c['name']] = 1
-        else:
-            match = re.match(r'(\d+)', p)
-            placement_order[c['name']] = int(match.group(1)) if match else 99
-
-    sorted_players = sorted(player_timelines.keys(), key=lambda n: placement_order.get(n, 99))
-
-    # Build chart-ready data
-    timeline_data = []
-    for name in sorted_players:
-        tribe = next((c.get('original_tribe', 'Unknown') for c in castaways if c['name'] == name), 'Unknown')
-        placement = next((c.get('placement', '') for c in castaways if c['name'] == name), '')
-        timeline_data.append({
-            'name': name,
-            'tribe': tribe,
-            'placement': placement,
-            'is_winner': placement == 'Winner',
-            'data': player_timelines[name],
-        })
-
-    return render_template('power_rankings.html',
-        timeline_data=timeline_data,
-        tc_labels=['TC' + str(tc) for tc in sorted_tc_nums],
-        season=season,
-        season_name=SEASON_NAMES[season],
-        seasons=AVAILABLE_SEASONS,
-        season_names=SEASON_NAMES)
 
 
 @app.route('/api/season-recommendations/<int:season>')
@@ -1641,6 +1505,23 @@ def idol_strategy():
     strategy_ally_rate = round(len(ally_successful) / max(len(ally_plays), 1) * 100, 1)
     avg_duration = round(sum(d['days'] for d in durations) / max(len(durations), 1), 1) if durations else 0
 
+    # === ADVANTAGES EVOLUTION DATA (merged from advantages-timeline) ===
+    all_advantages = all_idols  # already loaded above — all advantages across all seasons
+    adv_type_counts = Counter()
+    for adv in all_advantages:
+        adv_type = adv.get('type', adv.get('advantage_type', 'Unknown'))
+        adv_type_counts[adv_type] += 1
+
+    adv_season_counts = {}
+    for s in AVAILABLE_SEASONS:
+        advs = seasons_data[s]['advantages'].get('advantages', [])
+        adv_season_counts[s] = {
+            'total': len(advs),
+            'played': sum(1 for a in advs if a.get('day_played') or a.get('played_day')),
+            'successful': sum(1 for a in advs if a.get('result') == 'successful'),
+            'votes_negated': sum(a.get('votes_negated', 0) for a in advs),
+        }
+
     return render_template('idol_strategy.html',
                          # Core stats
                          total_real_idols=len(real_idols),
@@ -1679,6 +1560,10 @@ def idol_strategy():
                          non_idol_count=len(non_idol_advantages),
                          # All idols for detailed exploration
                          all_idols=real_idols,
+                         # Advantages evolution data (merged from advantages-timeline)
+                         adv_type_counts=dict(adv_type_counts.most_common()),
+                         adv_season_counts=adv_season_counts,
+                         total_all_advantages=len(all_advantages),
                          # Standard template vars
                          seasons=AVAILABLE_SEASONS,
                          season_names=SEASON_NAMES)

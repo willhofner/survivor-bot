@@ -4,6 +4,43 @@ Session-by-session log of conversations, decisions, and implementations.
 
 ---
 
+## 2026-02-25 — Site Restructuring: Icons, Nav, Page Consolidation
+
+### Emoji Removal & Custom SVG Icon System
+- **Created `templates/_icons.html`**: Jinja2 macro library with ~28 inline SVG icons (torch, crown, trophy, brain, handshake, ballot, dumbbell, necklace, island, etc.)
+- **Replaced all emojis** across 20+ template files — zero emojis remain in active templates
+- **`get_flame_rating()` in app.py**: Changed from fire emojis to Unicode block characters (filled/empty squares)
+- **JS toggle buttons**: Switched from emoji textContent swaps to dual-element SVG icon display toggling
+
+### Navigation Restructuring
+- **Removed global season selector** from nav bar (was confusing for non-season pages)
+- **New nav groups**: Season Explorer | Strategy & Stats | Seasons & Records | Quiz
+- **Created `templates/_season_selector.html`**: In-page season dropdown for 6 season-specific pages
+- **Added season selector** to: tribal_councils, castaways, challenges, events, items, alliances
+
+### Page Consolidation
+- **Merged Advantages Timeline → Idol Strategy**: Added 6th "Advantages Evolution" tab with charts
+- **Merged Analytics → Paths to Victory**: Added era radar, era table, aggression trend, archetype charts
+- **Deleted Power Rankings**: Too niche, data available elsewhere
+- **Deleted 3 templates**: advantages_timeline.html, analytics.html, power_rankings.html
+- **Deleted 3 routes**: /analytics, /advantages-timeline, /power-rankings
+
+### Headshots Integration
+- **Winners Hall**: All 39 winners now have headshots (80x80, gold border)
+- **Returning Players**: Headshot thumbnails from first appearance season
+- **Fixed name matching**: Full name → first name → case-insensitive partial match fallback
+
+### Index Page
+- Removed cards for deleted pages
+- All card icons replaced with SVG icons
+- Updated layout to match new nav grouping
+
+### Tests
+- Updated 10 failing tests (deleted routes now check 404, flame rating checks updated, nav assertions updated)
+- **All 66 tests passing**
+
+---
+
 ## 2026-02-24 — Castaway Headshots: All 39 Seasons
 
 ### Self-Hosted Face-Cropped Headshots

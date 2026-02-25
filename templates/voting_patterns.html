@@ -3,9 +3,10 @@
 {% block title %}Voting Patterns - Survivor{% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="voting-patterns-page">
     <h1 class="text-center mb-3 survivor-title">
-        <span class="torch">🔥</span> Voting Patterns & FTC Analysis
+        <span class="torch">{{ icon('ballot', '32') }}</span> Voting Patterns & FTC Analysis
     </h1>
     <p class="text-center mb-4" style="color: var(--sand); font-size: 1.1rem;">
         How winners voted, how juries voted, and what the numbers reveal

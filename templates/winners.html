@@ -3,9 +3,10 @@
 {% block title %}Winners Hall - Survivor{% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="winners-view">
     <h1 class="text-center mb-3 survivor-title">
-        <span class="torch-large">👑</span><br>
+        {{ icon('crown', '48') }}<br>
         WINNERS HALL
     </h1>
     <p class="text-center subtitle mb-4">Decoding the Paths to Victory Across {{ winners|length }} Seasons</p>
@@ -77,6 +78,13 @@
 
             <div class="winner-card-header">
                 <div class="winner-season-badge">S{{ winner.season }}</div>
+                {% if winner.headshot %}
+                <div class="winner-headshot">
+                    <img src="{{ winner.headshot }}" alt="{{ winner.name }}"
+                         loading="lazy" decoding="async"
+                         onerror="this.parentElement.style.display='none'">
+                </div>
+                {% endif %}
                 <h3 class="winner-name">{{ winner.name }}</h3>
                 <div class="winner-season-name">{{ winner.season_name }}</div>
             </div>

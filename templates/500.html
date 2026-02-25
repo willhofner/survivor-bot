@@ -3,8 +3,9 @@
 {% block title %}Server Error - Survivor{% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="text-center" style="padding: 4rem 1rem;">
-    <div style="font-size: 6rem; margin-bottom: 1rem;">&#x1F3DD;&#xFE0F;</div>
+    <div style="margin-bottom: 1rem;">{{ icon('island', '96') }}</div>
     <h1 class="survivor-title" style="font-size: 3rem;">MEDICAL EVACUATION</h1>
     <p style="color: var(--sand); font-size: 1.2rem; margin: 1.5rem 0;">
         Something went wrong on the island. Our team is working on it.

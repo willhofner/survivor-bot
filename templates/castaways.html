@@ -6,20 +6,23 @@
 <div class="survivor-breadcrumb">
     <div class="container">
         <a href="/">Home</a>
-        <span class="separator">&#x25B6;</span>
+        <span class="separator">&#9656;</span>
         <a href="/seasons">Seasons</a>
-        <span class="separator">&#x25B6;</span>
+        <span class="separator">&#9656;</span>
         <span class="current">S{{ season }}: {{ season_name }} &mdash; Castaways</span>
     </div>
 </div>
 {% endblock %}
 
 {% block content %}
+{% from "_icons.html" import icon %}
 <div class="castaways-view">
     <h1 class="text-center mb-3 survivor-title">
-        <span class="torch">🔥</span> The Castaways
+        <span class="torch">{{ icon('person', '32') }}</span> The Castaways
     </h1>
     <p class="text-center mb-4" style="color: var(--sand);">Season {{ season }}: {{ season_name }}</p>
+
+    {% include '_season_selector.html' %}
 
     <!-- Advanced Filters -->
     <div class="text-center mb-4">
@@ -65,11 +68,11 @@
                 </div>
                 <div class="castaway-placement">
                     {% if castaway.placement == "Winner" %}
-                        <span class="crown spoiler">👑</span>
+                        <span class="crown spoiler">{{ icon('crown', '20') }}</span>
                     {% elif castaway.placement == "Runner-up" %}
-                        <span class="medal">🥈</span>
+                        <span class="medal" style="color: silver; font-weight: bold;">2nd</span>
                     {% elif castaway.placement == "2nd Runner-up" %}
-                        <span class="medal">🥉</span>
+                        <span class="medal" style="color: #cd7f32; font-weight: bold;">3rd</span>
                     {% else %}
                         <span class="placement-number">{{ castaway.placement }}</span>
                     {% endif %}
@@ -107,9 +110,9 @@
             {% if castaway.challenge_stats.total_wins > 0 %}
             <div class="challenge-breakdown mt-2 text-center">
                 <small>
-                    💎 {{ castaway.challenge_stats.immunity_wins }} immunity
+                    {{ icon('necklace', '14') }} {{ castaway.challenge_stats.immunity_wins }} immunity
                     {% if castaway.challenge_stats.reward_wins > 0 %}
-                        | 🏆 {{ castaway.challenge_stats.reward_wins }} reward
+                        | {{ icon('trophy', '14') }} {{ castaway.challenge_stats.reward_wins }} reward
                     {% endif %}
                 </small>
             </div>
