@@ -55,6 +55,8 @@
                 <div class="castaway-headshot">
                     {% if castaway.headshot %}
                     <img src="{{ castaway.headshot }}" alt="{{ castaway.name }}"
+                         loading="lazy" decoding="async" width="300" height="450"
+                         referrerpolicy="no-referrer"
                          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     {% endif %}
                     <div class="headshot-fallback" style="display: {% if not castaway.headshot %}flex{% else %}none{% endif %}; width: 100%; height: 100%; align-items: center; justify-content: center; background: {{ castaway.color }}; font-size: 2.5rem; font-weight: bold; color: white;">

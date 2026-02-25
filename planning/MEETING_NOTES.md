@@ -4,6 +4,27 @@ Session-by-session log of conversations, decisions, and implementations.
 
 ---
 
+## 2026-02-24 — Castaway Headshots: All 39 Seasons
+
+### Self-Hosted Face-Cropped Headshots
+- **Moved from hotlinked to self-hosted images**: Fandom CDN blocks hotlinking via Referer header. Downloaded all images locally to `static/images/castaways/s{N}/`.
+- **DNN face detection for auto-cropping**: Initially used Haar Cascades (2001 algorithm) which missed faces or cropped to torsos. Switched to OpenCV's DNN ResNet SSD face detector — 99-100% confidence on all faces tested.
+- **Pipeline**: Download 600px portrait from wiki → DNN face detection → crop 300x300 square centered on face → save as WebP (~8-17KB each).
+- **S28 (Cagayan)**: All 18 headshots complete, face-centered, verified.
+- **S29 (San Juan del Sur)**: All 18 headshots complete, face-centered, verified.
+- **S1-S39 batch processing complete**: Master script (`.temp/process_all_headshots.py`) processed all 37 remaining seasons via MediaWiki `allimages` API. **674 headshots** across all 39 seasons — 0 fallback crops, 0 failed downloads, 100% DNN face detection success.
+- **Coverage**: ~95% of all castaways matched. S35 (Heroes vs. Healers vs. Hustlers) lowest at 8/18 due to wiki naming. "Boston Rob" and "Cochran" consistently unmatched (wiki uses real names).
+- **Debugging journey**: Fixed 5 bugs across iterations — wrong data accessor, Fandom 403s (missing User-Agent), underscore/space filename parsing, stale script cache (agents ran old version), portrait filter rejecting all images.
+
+### Technical Decisions
+- **Data source**: Survivor Wiki (Fandom) — CBS promotional photos, 3840x5760 originals, CORS-friendly, MediaWiki API for URL lookups.
+- **Image format**: WebP at quality 85, 300x300 square crops, ~8-17KB each.
+- **Template changes**: Added `loading="lazy"`, `decoding="async"`, `referrerpolicy="no-referrer"` to img tags in castaways.html.
+- **Name matching**: Voting data uses first-name-only for most players. Wiki `allimages` API returns full filenames (`S28_Tony_Vlachos.jpg`) which we match by first name.
+- **Dependencies added**: `opencv-python-headless` (face detection), DNN model files in `.temp/`.
+
+---
+
 ## 2026-02-24 — Idol Strategy: Bug Fixes & God Idol Separation
 
 ### Bug Fixes
