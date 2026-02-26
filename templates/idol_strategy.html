@@ -12,7 +12,7 @@
 
 {% block content %}
 <!-- Hero Section -->
-<div class="text-center mb-5">
+<div class="text-center mb-4">
     <h1 style="font-family: 'Cinzel', serif; color: var(--torch-orange); font-size: 2.5rem;">
         Idol Strategy Guide
     </h1>
@@ -22,7 +22,7 @@
 </div>
 
 <!-- Quick Stats Bar -->
-<div class="row g-3 mb-5">
+<div class="row g-3 mb-4">
     <div class="col-6 col-md-3">
         <div class="stat-card text-center" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
             <div style="font-size: 2.5rem; font-weight: bold; color: var(--torch-orange);">{{ total_real_idols }}</div>
@@ -65,7 +65,7 @@
 <div class="tab-pane fade show active" id="overview" role="tabpanel">
 
     <!-- Idols Per Season Chart -->
-    <div class="row g-4 mb-5">
+    <div class="row g-4 mb-4">
         <div class="col-lg-8">
             <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
                 <h3 style="color: var(--torch-orange); font-size: 1.3rem; margin-bottom: 1rem;">Idols Per Season</h3>
@@ -81,7 +81,7 @@
     </div>
 
     <!-- Self vs Ally + Duration Charts -->
-    <div class="row g-4 mb-5">
+    <div class="row g-4 mb-4">
         <div class="col-md-6">
             <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
                 <h3 style="color: var(--torch-orange); font-size: 1.3rem; margin-bottom: 1rem;">Self vs. Ally Plays</h3>
@@ -113,7 +113,7 @@
     </div>
 
     <!-- Top Idol Finders -->
-    <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem;">
+    <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
         <h3 style="color: var(--torch-orange); font-size: 1.3rem; margin-bottom: 1rem;">Top Idol Finders (All Time)</h3>
         <div class="table-responsive">
             <table class="table table-dark table-hover" style="--bs-table-bg: transparent; --bs-table-hover-bg: rgba(255,255,255,0.05);">
@@ -146,7 +146,7 @@
     </div>
 
     <!-- Most Votes Negated -->
-    <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem;">
+    <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
         <h3 style="color: var(--torch-orange); font-size: 1.3rem; margin-bottom: 1rem;">Most Votes Negated (Single Play)</h3>
         <div class="table-responsive">
             <table class="table table-dark table-hover" style="--bs-table-bg: transparent; --bs-table-hover-bg: rgba(255,255,255,0.05);">
@@ -304,7 +304,7 @@
 
 <!-- ═══════════════ TAB 3: STRATEGIES ═══════════════ -->
 <div class="tab-pane fade" id="strategies" role="tabpanel">
-    <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 2rem;">
+    <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 1.5rem;">
         Four strategic dimensions define how every idol is used. Understanding each one is essential for maximizing your idol's impact.
     </p>
 
@@ -528,7 +528,7 @@
     {% endfor %}
 
     <!-- Worst Plays -->
-    <h2 style="color: #F87171; font-family: 'Cinzel', serif; margin-top: 3rem; margin-bottom: 1.5rem;">
+    <h2 style="color: #F87171; font-family: 'Cinzel', serif; margin-top: 2rem; margin-bottom: 1rem;">
         Worst Idol Blunders
     </h2>
     {% for play in worst_plays %}
@@ -647,7 +647,7 @@
     </div>
 
     <!-- Final Verdict Box -->
-    <div style="background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(239,68,68,0.1)); border: 2px solid var(--torch-orange); border-radius: 16px; padding: 2rem; margin-top: 2rem; text-align: center;">
+    <div style="background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(239,68,68,0.1)); border: 2px solid var(--torch-orange); border-radius: 16px; padding: 1.5rem; margin-top: 1.5rem; text-align: center;">
         <h3 style="color: var(--torch-orange); font-family: 'Cinzel', serif; margin-bottom: 1rem;">The Most Effective Idol Strategy</h3>
         <p style="color: var(--sand); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
             Find it early. Tell nobody. Read the room obsessively. Play it only when you have confirmed intelligence that you or your closest ally is going home. The idol amplifies your social game — without good reads, it's just a shiny object you'll waste. And for the love of the game — bring it to tribal council.
@@ -655,7 +655,7 @@
     </div>
 
     <!-- Strategies to Avoid -->
-    <div style="background: rgba(248,113,113,0.08); border: 1px solid rgba(248,113,113,0.3); border-radius: 12px; padding: 2rem; margin-top: 2rem;">
+    <div style="background: rgba(248,113,113,0.08); border: 1px solid rgba(248,113,113,0.3); border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem;">
         <h3 style="color: #F87171; margin-bottom: 1rem;">Strategies to Avoid</h3>
         <div class="row g-3">
             <div class="col-md-6">
@@ -686,7 +686,7 @@
     </p>
 
     <!-- Summary Stats -->
-    <div class="row text-center g-3 mb-5">
+    <div class="row text-center g-3 mb-4">
         <div class="col-6 col-md-3">
             <div class="stat-box">
                 <div class="stat-number">{{ total_all_advantages }}</div>
@@ -714,21 +714,21 @@
     </div>
 
     <!-- Chart: Advantages per Season -->
-    <div class="tribal-card p-4 mb-5">
+    <div class="tribal-card p-3 mb-4">
         <h3 class="text-center mb-3" style="color: var(--torch-orange);">Advantages Per Season</h3>
         <canvas id="advPerSeasonChart" height="300"></canvas>
     </div>
 
     <!-- Chart: Votes Negated + Type Distribution -->
-    <div class="row g-4 mb-5">
+    <div class="row g-4 mb-4">
         <div class="col-md-6">
-            <div class="tribal-card p-4 h-100">
+            <div class="tribal-card p-3 h-100">
                 <h4 class="text-center mb-3" style="color: var(--torch-orange);">Votes Negated Per Season</h4>
                 <canvas id="advVotesNegatedChart" height="250"></canvas>
             </div>
         </div>
         <div class="col-md-6">
-            <div class="tribal-card p-4 h-100">
+            <div class="tribal-card p-3 h-100">
                 <h4 class="text-center mb-3" style="color: var(--torch-orange);">Advantage Types Distribution</h4>
                 <canvas id="advTypeChart" height="250"></canvas>
             </div>
@@ -736,7 +736,7 @@
     </div>
 
     <!-- Era Breakdown -->
-    <div class="tribal-card p-4 mb-5">
+    <div class="tribal-card p-3 mb-4">
         <h3 class="text-center mb-4" style="color: var(--torch-orange);">The Advantage Eras</h3>
         <div class="row g-3">
             <div class="col-md-4">
@@ -776,7 +776,7 @@
     </div>
 
     <!-- Season-by-Season Table -->
-    <div class="tribal-card p-4 mb-5">
+    <div class="tribal-card p-3 mb-4">
         <h3 class="text-center mb-3" style="color: var(--torch-orange);">Season-by-Season Breakdown</h3>
         <div class="table-responsive">
             <table class="table table-dark table-hover sortable">
@@ -953,25 +953,36 @@
             data: {
                 labels: advSeasons.map(s => 'S' + s),
                 datasets: [{
-                    label: 'Total Advantages',
-                    data: advSeasons.map(s => advSeasonCounts[s].total),
-                    backgroundColor: 'rgba(255, 107, 53, 0.6)',
-                    borderColor: 'rgba(255, 107, 53, 1)',
+                    label: 'Successful Plays',
+                    data: advSeasons.map(s => advSeasonCounts[s].successful),
+                    backgroundColor: 'rgba(74, 222, 128, 0.7)',
+                    borderColor: 'rgba(74, 222, 128, 1)',
                     borderWidth: 1
                 }, {
-                    label: 'Successfully Played',
-                    data: advSeasons.map(s => advSeasonCounts[s].successful),
-                    backgroundColor: 'rgba(40, 167, 69, 0.6)',
-                    borderColor: 'rgba(40, 167, 69, 1)',
+                    label: 'Unsuccessful / Not Played',
+                    data: advSeasons.map(s => advSeasonCounts[s].total - advSeasonCounts[s].successful),
+                    backgroundColor: 'rgba(248, 113, 113, 0.5)',
+                    borderColor: 'rgba(248, 113, 113, 1)',
                     borderWidth: 1
                 }]
             },
             options: {
                 responsive: true,
-                plugins: { legend: { labels: { color: chartColors.sand } } },
+                plugins: {
+                    legend: { labels: { color: chartColors.sand } },
+                    tooltip: {
+                        callbacks: {
+                            afterBody: function(context) {
+                                const idx = context[0].dataIndex;
+                                const s = advSeasons[idx];
+                                return 'Total: ' + advSeasonCounts[s].total;
+                            }
+                        }
+                    }
+                },
                 scales: {
-                    y: { ticks: { color: chartColors.gray }, grid: { color: 'rgba(255,255,255,0.1)' } },
-                    x: { ticks: { color: chartColors.gray, maxRotation: 45, font: { size: 9 } }, grid: { display: false } }
+                    y: { stacked: true, ticks: { color: chartColors.gray }, grid: { color: 'rgba(255,255,255,0.1)' }, beginAtZero: true },
+                    x: { stacked: true, ticks: { color: chartColors.gray, maxRotation: 45, font: { size: 9 } }, grid: { display: false } }
                 }
             }
         });

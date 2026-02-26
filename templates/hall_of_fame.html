@@ -11,258 +11,93 @@
     </h1>
     <p class="text-center subtitle mb-5">All-Time Records Across All Seasons</p>
 
-    {# Macro for displaying a record card that handles ties (list of holders) #}
-    {% macro record_card(icon, title, holders, value_template, detail_template=none) %}
-    <div class="col-md-6">
-        <div class="record-card">
-            <div class="record-icon">{{ icon }}</div>
-            <h4 class="record-title">{{ title }}</h4>
-            {% if holders %}
-                {% for holder in holders %}
-                <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
-                    {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
-                    <div class="record-holder">
-                        {{ holder.name }}
-                    </div>
-                    <div class="record-value">
-                        {{ value_template(holder) }}
-                    </div>
-                    <div class="record-season">
-                        Season {{ holder.season }}: {{ holder.season_name }}
-                    </div>
-                    {% if detail_template %}
-                    <div class="record-details">
-                        {{ detail_template(holder) }}
-                    </div>
-                    {% endif %}
-                </div>
-                {% endfor %}
-                {% if holders|length > 1 %}
-                <div class="tie-badge">{{ holders|length }}-way tie</div>
-                {% endif %}
-            {% else %}
-                <p class="text-muted">No data available</p>
-            {% endif %}
-        </div>
-    </div>
-    {% endmacro %}
-
-    <!-- INDIVIDUAL RECORDS -->
+    <!-- INDIVIDUAL RECORDS — Horizontal card carousel -->
     <section class="mb-5">
         <h2 class="section-title mb-4">
             <span class="torch">{{ icon('crossed-swords', '28') }}</span> Individual Records
         </h2>
 
-        <div class="row g-4">
-            <!-- Champion Voting Accuracy - Highest -->
-            <div class="col-md-6">
-                <div class="record-card">
-                    <div class="record-icon">{{ icon('target', '36') }}</div>
-                    <h4 class="record-title">Highest Voting Accuracy (Champion)</h4>
-                    {% if individual_records.highest_voting_accuracy_champion %}
-                        {% for holder in individual_records.highest_voting_accuracy_champion %}
-                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
-                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
-                            <div class="record-holder">{{ holder.name }}</div>
-                            <div class="record-value">{{ holder.voting_accuracy.accuracy }}%</div>
-                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
-                            <div class="record-details">{{ holder.voting_accuracy.correct }}/{{ holder.voting_accuracy.total }} votes correct</div>
-                        </div>
-                        {% endfor %}
-                        {% if individual_records.highest_voting_accuracy_champion|length > 1 %}
-                        <div class="tie-badge">{{ individual_records.highest_voting_accuracy_champion|length }}-way tie</div>
-                        {% endif %}
-                    {% else %}
-                    <p class="text-muted">No data available</p>
-                    {% endif %}
+        <div class="hof-carousel-container">
+            {% set all_records = [
+                ('target', 'Highest Voting Accuracy (Champion)', individual_records.highest_voting_accuracy_champion, 'voting_accuracy_high'),
+                ('target', 'Lowest Voting Accuracy (Champion)', individual_records.lowest_voting_accuracy_champion, 'voting_accuracy_low'),
+                ('necklace', 'Most Individual Immunity Wins (All)', individual_records.most_immunity_wins, 'immunity_all'),
+                ('necklace', 'Most Individual Immunity Wins (Champion)', individual_records.most_immunity_wins_champion, 'immunity_champ'),
+                ('dumbbell', 'Most Challenge Wins (All)', individual_records.most_challenge_wins, 'challenge_all'),
+                ('dumbbell', 'Most Challenge Wins (Champion)', individual_records.most_challenge_wins_champion, 'challenge_champ'),
+                ('dumbbell', 'Fewest Challenge Wins (Champion)', individual_records.least_challenge_wins_champion, 'challenge_least'),
+                ('ballot', 'Most Votes Received (Champion)', individual_records.most_votes_received_champion, 'votes_most'),
+                ('ballot', 'Fewest Votes Received (Champion)', individual_records.least_votes_received_champion, 'votes_least')
+            ] %}
+
+            <!-- Navigation controls -->
+            <div class="hof-nav">
+                <button class="hof-nav-btn hof-prev" onclick="hofNavigate(-1)" title="Previous record">
+                    {{ icon('chevron-left', '24') }}
+                </button>
+                <div class="hof-counter">
+                    <span id="hofCurrent">1</span> / <span id="hofTotal">{{ all_records|length }}</span>
                 </div>
+                <button class="hof-nav-btn hof-next" onclick="hofNavigate(1)" title="Next record">
+                    {{ icon('chevron-right', '24') }}
+                </button>
             </div>
 
-            <!-- Champion Voting Accuracy - Lowest -->
-            <div class="col-md-6">
-                <div class="record-card">
-                    <div class="record-icon">{{ icon('target', '36') }}</div>
-                    <h4 class="record-title">Lowest Voting Accuracy (Champion)</h4>
-                    {% if individual_records.lowest_voting_accuracy_champion %}
-                        {% for holder in individual_records.lowest_voting_accuracy_champion %}
-                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
-                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
-                            <div class="record-holder">{{ holder.name }}</div>
-                            <div class="record-value">{{ holder.voting_accuracy.accuracy }}%</div>
-                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
-                            <div class="record-details">{{ holder.voting_accuracy.correct }}/{{ holder.voting_accuracy.total }} votes correct</div>
+            <!-- Record cards — only one visible at a time -->
+            <div class="hof-cards-wrapper">
+                {% for icon_name, title, holders, card_id in all_records %}
+                <div class="hof-card {% if loop.first %}active{% endif %}" data-card-index="{{ loop.index0 }}">
+                    <div class="hof-card-icon">{{ icon(icon_name, '48') }}</div>
+                    <h3 class="hof-card-title">{{ title }}</h3>
+
+                    {% if holders %}
+                    <div class="hof-holders">
+                        {% for holder in holders %}
+                        <div class="hof-holder {% if holders|length > 1 %}hof-tied{% endif %}">
+                            {% if holder.headshot %}
+                            <div class="hof-headshot">
+                                <img src="{{ holder.headshot }}" alt="{{ holder.name }}" loading="lazy" decoding="async"
+                                     onerror="this.parentElement.style.display='none'">
+                            </div>
+                            {% endif %}
+                            <div class="hof-holder-info">
+                                <div class="hof-holder-name">{{ holder.name }}</div>
+                                <div class="hof-holder-value">
+                                    {% if 'voting_accuracy' in card_id %}
+                                        {{ holder.voting_accuracy.accuracy }}%
+                                        <small class="hof-detail">{{ holder.voting_accuracy.correct }}/{{ holder.voting_accuracy.total }} votes</small>
+                                    {% elif 'immunity' in card_id %}
+                                        {{ holder.challenge_stats.immunity_wins }} wins
+                                    {% elif 'challenge' in card_id %}
+                                        {{ holder.challenge_stats.total_wins }} wins
+                                        <small class="hof-detail">{{ holder.challenge_stats.immunity_wins }} immunity | {{ holder.challenge_stats.reward_wins }} reward</small>
+                                    {% elif 'votes' in card_id %}
+                                        {{ holder.votes_against }} votes
+                                    {% endif %}
+                                </div>
+                                <div class="hof-holder-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
+                            </div>
                         </div>
-                        {% endfor %}
-                        {% if individual_records.lowest_voting_accuracy_champion|length > 1 %}
-                        <div class="tie-badge">{{ individual_records.lowest_voting_accuracy_champion|length }}-way tie</div>
+                        {% if not loop.last and holders|length > 1 %}
+                        <div class="hof-tie-divider"></div>
                         {% endif %}
+                        {% endfor %}
+                        {% if holders|length > 1 %}
+                        <div class="hof-tie-badge">{{ holders|length }}-way tie</div>
+                        {% endif %}
+                    </div>
                     {% else %}
                     <p class="text-muted">No data available</p>
                     {% endif %}
                 </div>
+                {% endfor %}
             </div>
 
-            <!-- Individual Immunity Wins (All Players) -->
-            <div class="col-md-6">
-                <div class="record-card">
-                    <div class="record-icon">{{ icon('necklace', '36') }}</div>
-                    <h4 class="record-title">Most Individual Immunity Wins (All Players)</h4>
-                    {% if individual_records.most_immunity_wins %}
-                        {% for holder in individual_records.most_immunity_wins %}
-                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
-                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
-                            <div class="record-holder">{{ holder.name }}</div>
-                            <div class="record-value">{{ holder.challenge_stats.immunity_wins }} wins</div>
-                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
-                        </div>
-                        {% endfor %}
-                        {% if individual_records.most_immunity_wins|length > 1 %}
-                        <div class="tie-badge">{{ individual_records.most_immunity_wins|length }}-way tie</div>
-                        {% endif %}
-                    {% else %}
-                    <p class="text-muted">No data available</p>
-                    {% endif %}
-                </div>
-            </div>
-
-            <!-- Individual Immunity Wins (Champion) -->
-            <div class="col-md-6">
-                <div class="record-card">
-                    <div class="record-icon">{{ icon('necklace', '36') }}</div>
-                    <h4 class="record-title">Most Individual Immunity Wins (Champion)</h4>
-                    {% if individual_records.most_immunity_wins_champion %}
-                        {% for holder in individual_records.most_immunity_wins_champion %}
-                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
-                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
-                            <div class="record-holder">{{ holder.name }}</div>
-                            <div class="record-value">{{ holder.challenge_stats.immunity_wins }} wins</div>
-                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
-                        </div>
-                        {% endfor %}
-                        {% if individual_records.most_immunity_wins_champion|length > 1 %}
-                        <div class="tie-badge">{{ individual_records.most_immunity_wins_champion|length }}-way tie</div>
-                        {% endif %}
-                    {% else %}
-                    <p class="text-muted">No data available</p>
-                    {% endif %}
-                </div>
-            </div>
-
-            <!-- Challenge Wins (All Players) -->
-            <div class="col-md-6">
-                <div class="record-card">
-                    <div class="record-icon">{{ icon('dumbbell', '36') }}</div>
-                    <h4 class="record-title">Most Individual Challenge Wins (All Players)</h4>
-                    {% if individual_records.most_challenge_wins %}
-                        {% for holder in individual_records.most_challenge_wins %}
-                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
-                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
-                            <div class="record-holder">{{ holder.name }}</div>
-                            <div class="record-value">{{ holder.challenge_stats.total_wins }} wins</div>
-                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
-                            <div class="record-details">{{ holder.challenge_stats.immunity_wins }} immunity | {{ holder.challenge_stats.reward_wins }} reward</div>
-                        </div>
-                        {% endfor %}
-                        {% if individual_records.most_challenge_wins|length > 1 %}
-                        <div class="tie-badge">{{ individual_records.most_challenge_wins|length }}-way tie</div>
-                        {% endif %}
-                    {% else %}
-                    <p class="text-muted">No data available</p>
-                    {% endif %}
-                </div>
-            </div>
-
-            <!-- Challenge Wins (Champion) -->
-            <div class="col-md-6">
-                <div class="record-card">
-                    <div class="record-icon">{{ icon('dumbbell', '36') }}</div>
-                    <h4 class="record-title">Most Individual Challenge Wins (Champion)</h4>
-                    {% if individual_records.most_challenge_wins_champion %}
-                        {% for holder in individual_records.most_challenge_wins_champion %}
-                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
-                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
-                            <div class="record-holder">{{ holder.name }}</div>
-                            <div class="record-value">{{ holder.challenge_stats.total_wins }} wins</div>
-                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
-                            <div class="record-details">{{ holder.challenge_stats.immunity_wins }} immunity | {{ holder.challenge_stats.reward_wins }} reward</div>
-                        </div>
-                        {% endfor %}
-                        {% if individual_records.most_challenge_wins_champion|length > 1 %}
-                        <div class="tie-badge">{{ individual_records.most_challenge_wins_champion|length }}-way tie</div>
-                        {% endif %}
-                    {% else %}
-                    <p class="text-muted">No data available</p>
-                    {% endif %}
-                </div>
-            </div>
-
-            <!-- Fewest Challenge Wins (Champion) -->
-            <div class="col-md-6">
-                <div class="record-card">
-                    <div class="record-icon">{{ icon('dumbbell', '36') }}</div>
-                    <h4 class="record-title">Fewest Individual Challenge Wins (Champion)</h4>
-                    {% if individual_records.least_challenge_wins_champion %}
-                        {% for holder in individual_records.least_challenge_wins_champion %}
-                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
-                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
-                            <div class="record-holder">{{ holder.name }}</div>
-                            <div class="record-value">{{ holder.challenge_stats.total_wins }} wins</div>
-                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
-                        </div>
-                        {% endfor %}
-                        {% if individual_records.least_challenge_wins_champion|length > 1 %}
-                        <div class="tie-badge">{{ individual_records.least_challenge_wins_champion|length }}-way tie</div>
-                        {% endif %}
-                    {% else %}
-                    <p class="text-muted">No data available</p>
-                    {% endif %}
-                </div>
-            </div>
-
-            <!-- Votes Received - Most -->
-            <div class="col-md-6">
-                <div class="record-card">
-                    <div class="record-icon">{{ icon('ballot', '36') }}</div>
-                    <h4 class="record-title">Most Votes Received (Champion)</h4>
-                    {% if individual_records.most_votes_received_champion %}
-                        {% for holder in individual_records.most_votes_received_champion %}
-                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
-                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
-                            <div class="record-holder">{{ holder.name }}</div>
-                            <div class="record-value">{{ holder.votes_against }} votes</div>
-                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
-                        </div>
-                        {% endfor %}
-                        {% if individual_records.most_votes_received_champion|length > 1 %}
-                        <div class="tie-badge">{{ individual_records.most_votes_received_champion|length }}-way tie</div>
-                        {% endif %}
-                    {% else %}
-                    <p class="text-muted">No data available</p>
-                    {% endif %}
-                </div>
-            </div>
-
-            <!-- Votes Received - Fewest -->
-            <div class="col-md-6">
-                <div class="record-card">
-                    <div class="record-icon">{{ icon('ballot', '36') }}</div>
-                    <h4 class="record-title">Fewest Votes Received (Champion)</h4>
-                    {% if individual_records.least_votes_received_champion %}
-                        {% for holder in individual_records.least_votes_received_champion %}
-                        <div class="record-entry {% if not loop.first %}record-tied{% endif %}">
-                            {% if not loop.first %}<div class="tie-divider"></div>{% endif %}
-                            <div class="record-holder">{{ holder.name }}</div>
-                            <div class="record-value">{{ holder.votes_against }} votes</div>
-                            <div class="record-season">Season {{ holder.season }}: {{ holder.season_name }}</div>
-                        </div>
-                        {% endfor %}
-                        {% if individual_records.least_votes_received_champion|length > 1 %}
-                        <div class="tie-badge">{{ individual_records.least_votes_received_champion|length }}-way tie</div>
-                        {% endif %}
-                    {% else %}
-                    <p class="text-muted">No data available</p>
-                    {% endif %}
-                </div>
+            <!-- Dot indicators -->
+            <div class="hof-dots">
+                {% for icon_name, title, holders, card_id in all_records %}
+                <button class="hof-dot {% if loop.first %}active{% endif %}" onclick="hofGoTo({{ loop.index0 }})" title="{{ title }}"></button>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -404,6 +239,204 @@
     margin-bottom: 2rem;
 }
 
+/* ═══ Carousel ═══ */
+.hof-carousel-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hof-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hof-nav-btn {
+    background: rgba(255, 107, 53, 0.15);
+    border: 2px solid var(--torch-orange);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--torch-orange);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.hof-nav-btn:hover {
+    background: rgba(255, 107, 53, 0.3);
+    transform: scale(1.1);
+}
+
+.hof-counter {
+    color: var(--sand);
+    font-size: 1rem;
+    font-weight: bold;
+    min-width: 60px;
+    text-align: center;
+}
+
+.hof-cards-wrapper {
+    position: relative;
+    min-height: 320px;
+}
+
+.hof-card {
+    display: none;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--bamboo);
+    border-radius: 16px;
+    padding: 2rem 2.5rem;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    animation: hofFadeIn 0.3s ease;
+}
+
+.hof-card.active {
+    display: block;
+}
+
+@keyframes hofFadeIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.hof-card-icon {
+    margin-bottom: 1rem;
+}
+
+.hof-card-title {
+    color: var(--sand);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+/* ═══ Holder display ═══ */
+.hof-holders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hof-holder {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 107, 53, 0.05);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.hof-holder.hof-tied {
+    border-left: 3px solid gold;
+}
+
+.hof-headshot {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--torch-orange);
+}
+
+.hof-headshot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hof-holder-info {
+    text-align: left;
+    flex: 1;
+}
+
+.hof-holder-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--torch-orange);
+    line-height: 1.2;
+}
+
+.hof-holder-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: gold;
+    line-height: 1.2;
+    margin: 0.25rem 0;
+}
+
+.hof-detail {
+    display: block;
+    font-size: 0.8rem;
+    color: #fff;
+    font-weight: normal;
+}
+
+.hof-holder-season {
+    color: var(--sand);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.hof-tie-divider {
+    width: 60%;
+    height: 1px;
+    background: var(--bamboo);
+    opacity: 0.4;
+    margin: 0.25rem 0;
+}
+
+.hof-tie-badge {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.3rem 1rem;
+    background: rgba(255, 215, 0, 0.2);
+    border: 1px solid gold;
+    border-radius: 12px;
+    color: gold;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* ═══ Dot indicators ═══ */
+.hof-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.hof-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--bamboo);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 0;
+}
+
+.hof-dot.active {
+    background: var(--torch-orange);
+    border-color: var(--torch-orange);
+    transform: scale(1.3);
+}
+
+.hof-dot:hover {
+    border-color: var(--torch-orange);
+}
+
+/* ═══ Original record cards (for idol section) ═══ */
 .record-card {
     background: rgba(0, 0, 0, 0.4);
     border: 2px solid var(--bamboo);
@@ -458,30 +491,6 @@
     font-size: 0.9rem;
 }
 
-.record-entry.record-tied {
-    margin-top: 0.5rem;
-}
-
-.tie-divider {
-    width: 40%;
-    height: 1px;
-    background: var(--bamboo);
-    margin: 0.75rem auto;
-    opacity: 0.5;
-}
-
-.tie-badge {
-    display: inline-block;
-    margin-top: 0.75rem;
-    padding: 0.25rem 0.75rem;
-    background: rgba(255, 215, 0, 0.2);
-    border: 1px solid gold;
-    border-radius: 12px;
-    color: gold;
-    font-size: 0.8rem;
-    font-weight: bold;
-}
-
 .table-dark {
     background: rgba(0, 0, 0, 0.4);
     border: 2px solid var(--bamboo);
@@ -504,5 +513,59 @@
 .table-dark tbody tr:hover {
     background: rgba(255, 107, 53, 0.2);
 }
+
+/* Responsive */
+@media (max-width: 576px) {
+    .hof-holder {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+    .hof-holder-info {
+        text-align: center;
+    }
+    .hof-holder-name { font-size: 1.2rem; }
+    .hof-holder-value { font-size: 1.6rem; }
+    .hof-card { padding: 1.5rem 1rem; }
+}
 </style>
+
+<script>
+let hofCurrentIndex = 0;
+const hofCards = document.querySelectorAll('.hof-card');
+const hofDots = document.querySelectorAll('.hof-dot');
+const hofTotal = hofCards.length;
+
+function hofNavigate(direction) {
+    hofGoTo((hofCurrentIndex + direction + hofTotal) % hofTotal);
+}
+
+function hofGoTo(index) {
+    hofCards[hofCurrentIndex].classList.remove('active');
+    hofDots[hofCurrentIndex].classList.remove('active');
+
+    hofCurrentIndex = index;
+
+    hofCards[hofCurrentIndex].classList.add('active');
+    hofDots[hofCurrentIndex].classList.add('active');
+    document.getElementById('hofCurrent').textContent = hofCurrentIndex + 1;
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') hofNavigate(-1);
+    if (e.key === 'ArrowRight') hofNavigate(1);
+});
+
+// Touch swipe support
+let hofTouchStartX = 0;
+const hofWrapper = document.querySelector('.hof-cards-wrapper');
+if (hofWrapper) {
+    hofWrapper.addEventListener('touchstart', e => { hofTouchStartX = e.touches[0].clientX; });
+    hofWrapper.addEventListener('touchend', e => {
+        const diff = hofTouchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) hofNavigate(diff > 0 ? 1 : -1);
+    });
+}
+</script>
 {% endblock %}

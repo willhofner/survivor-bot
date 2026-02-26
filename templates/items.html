@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Advantages & Idols - Survivor: {{ season_name }}{% endblock %}
+{% block title %}Idols - Survivor: {{ season_name }}{% endblock %}
 
 {% block breadcrumb %}
 <div class="survivor-breadcrumb">
@@ -9,7 +9,7 @@
         <span class="separator">&#9656;</span>
         <a href="/seasons">Seasons</a>
         <span class="separator">&#9656;</span>
-        <span class="current">S{{ season }}: {{ season_name }} &mdash; Advantages & Idols</span>
+        <span class="current">S{{ season }}: {{ season_name }} &mdash; Idols</span>
     </div>
 </div>
 {% endblock %}
@@ -18,7 +18,7 @@
 {% from "_icons.html" import icon %}
 <div class="items-view">
     <h1 class="text-center mb-3 survivor-title">
-        <span class="torch">{{ icon('idol', '32') }}</span> Advantages & Idols
+        <span class="torch">{{ icon('idol', '32') }}</span> Idols
     </h1>
     <p class="text-center mb-4" style="color: var(--sand);">Season {{ season }}: {{ season_name }}</p>
 
@@ -98,8 +98,8 @@
                 </div>
             </div>
 
-            <div class="advantage-timeline-row">
-                <div class="timeline-item">
+            <div class="advantage-timeline-row" style="display: flex; gap: 0; align-items: stretch;">
+                <div class="timeline-item" style="flex: 1; min-width: 0; {% if not advantage.day_played %}max-width: 33.33%;{% endif %}">
                     <div class="timeline-icon">{{ icon('search', '18') }}</div>
                     <div class="timeline-content">
                         <strong>Found</strong><br>
@@ -108,8 +108,8 @@
                 </div>
 
                 {% if advantage.day_played %}
-                <div class="timeline-arrow">→</div>
-                <div class="timeline-item">
+                <div class="timeline-arrow" style="flex: 0 0 auto;">→</div>
+                <div class="timeline-item" style="flex: 1; min-width: 0;">
                     <div class="timeline-icon">{{ icon('target', '18') }}</div>
                     <div class="timeline-content">
                         <strong>Played</strong><br>
@@ -120,8 +120,8 @@
                     </div>
                 </div>
 
-                <div class="timeline-arrow">→</div>
-                <div class="timeline-item">
+                <div class="timeline-arrow" style="flex: 0 0 auto;">→</div>
+                <div class="timeline-item" style="flex: 1; min-width: 0;">
                     <div class="timeline-icon">
                         {% if advantage.result == 'successful' %}<span style="color: #28a745; font-weight: bold;">&#10003;</span>{% else %}<span style="color: #dc3545; font-weight: bold;">&#10007;</span>{% endif %}
                     </div>

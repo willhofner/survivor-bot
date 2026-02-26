@@ -192,9 +192,6 @@ class TestRoutes:
     def test_challenges(self, client):
         assert client.get('/challenges?season=1').status_code == 200
 
-    def test_events(self, client):
-        assert client.get('/events?season=28').status_code == 200
-
     def test_items(self, client):
         assert client.get('/items?season=28').status_code == 200
 

@@ -50,8 +50,7 @@ survivor-bot/
 │   ├── tribal_councils.html <- Scrollable tribal councils
 │   ├── castaways.html    <- Castaway profiles with filtering & sorting
 │   ├── challenges.html   <- Challenge timeline with filtering
-│   ├── events.html       <- Season timeline
-│   ├── items.html        <- Advantages/idols with filtering
+│   ├── items.html        <- Idols with filtering
 │   ├── winners.html      <- Winners Hall gallery with radar charts
 │   ├── winner_profile.html <- Individual winner profiles
 │   ├── compare.html      <- Winner comparison (2-4 side-by-side)
@@ -180,8 +179,7 @@ Land on home → Choose exploration mode →
   - Tribal Councils timeline (per season)
   - Castaway profiles with voting accuracy & challenge stats, advanced filtering/sorting (per season)
   - Challenge timeline with filtering (per season)
-  - Season events timeline (per season)
-  - Items/Advantages tracking with filtering (per season)
+  - Idols tracking with filtering (per season)
   - Winners Hall — gallery of all 39 winners with radar charts & archetype bars
   - Individual winner profiles with strategic analysis
   - Winner comparison — side-by-side with overlapping radar charts (2-4 winners)
@@ -236,7 +234,6 @@ Land on home → Choose exploration mode →
 | `/tribal-councils?season=N` | GET | Scrollable tribal councils timeline for season N |
 | `/castaways?season=N` | GET | Castaway profiles with stats for season N |
 | `/challenges?season=N` | GET | Challenge timeline with filtering for season N |
-| `/events?season=N` | GET | Season events timeline for season N |
 | `/items?season=N` | GET | Idols tracking with filtering for season N |
 | `/idol-strategy` | GET | Comprehensive idol strategy analysis across all seasons |
 | `/winners` | GET | Winners Hall gallery with radar charts and archetype bars |

@@ -3,200 +3,474 @@
 
 {% macro icon(name, size='24', cls='') %}
 {% if name == 'torch' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M12 2c-2 3-4 5.5-4 8a4 4 0 0 0 8 0c0-2.5-2-5-4-8z" fill="#FF6B35" stroke="#FF8C42"/>
-  <path d="M12 5c-1 1.5-2 3-2 4.5a2 2 0 0 0 4 0c0-1.5-1-3-2-4.5z" fill="#FFD700" stroke="none"/>
+{# Detailed Survivor torch with layered flame, wrapped handle, and base #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Outer flame #}
+  <path d="M12 1c-3 3.5-5 6.5-5 9.5a5 5 0 0 0 10 0c0-3-2-6-5-9.5z" fill="url(#flameGrad)" stroke="#FF6B35" stroke-width="1"/>
+  {# Inner flame core #}
+  <path d="M12 4c-1.5 2-3 4-3 6a3 3 0 0 0 6 0c0-2-1.5-4-3-6z" fill="#FFD700" stroke="none" opacity="0.9"/>
+  {# Hot center #}
+  <path d="M12 6.5c-0.8 1-1.5 2.2-1.5 3.3a1.5 1.5 0 0 0 3 0c0-1.1-0.7-2.3-1.5-3.3z" fill="#FFF5CC" stroke="none" opacity="0.7"/>
+  {# Torch bowl #}
+  <path d="M9.5 12.5h5l0.5 1.5h-6z" fill="#8B6914" stroke="#6B4F0A" stroke-width="0.8"/>
+  {# Handle wrap marks #}
   <line x1="12" y1="14" x2="12" y2="22" stroke="#8B6914" stroke-width="2.5"/>
-  <line x1="10" y1="22" x2="14" y2="22" stroke="#8B6914" stroke-width="2"/>
+  <line x1="11" y1="15.5" x2="13" y2="15.5" stroke="#A07D1A" stroke-width="0.6"/>
+  <line x1="11" y1="17.5" x2="13" y2="17.5" stroke="#A07D1A" stroke-width="0.6"/>
+  <line x1="11" y1="19.5" x2="13" y2="19.5" stroke="#A07D1A" stroke-width="0.6"/>
+  {# Base stand #}
+  <path d="M10 22h4l0.5 1h-5z" fill="#8B6914" stroke="#6B4F0A" stroke-width="0.5"/>
+  <defs><linearGradient id="flameGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FF4500"/><stop offset="40%" stop-color="#FF6B35"/><stop offset="100%" stop-color="#FF8C42"/></linearGradient></defs>
 </svg>
 {% elif name == 'crown' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M2 18h20L19 8l-4 4-3-6-3 6-4-4-3 10z" fill="rgba(255,215,0,0.3)" stroke="gold"/>
-  <line x1="2" y1="20" x2="22" y2="20" stroke="gold" stroke-width="2"/>
+{# Tribal crown with jewels and ornate points #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Crown body with tall points #}
+  <path d="M3 17h18L19.5 7l-3.5 4.5L12 4 8 11.5 4.5 7 3 17z" fill="url(#crownGrad)" stroke="gold" stroke-width="1.3"/>
+  {# Crown band #}
+  <path d="M3 17h18v2.5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V17z" fill="rgba(255,215,0,0.5)" stroke="gold" stroke-width="1"/>
+  {# Band detail line #}
+  <line x1="4" y1="18.5" x2="20" y2="18.5" stroke="#DAA520" stroke-width="0.8"/>
+  {# Center jewel #}
+  <circle cx="12" cy="14" r="1.5" fill="#FF4444" stroke="gold" stroke-width="0.8"/>
+  {# Side jewels #}
+  <circle cx="7.5" cy="14.5" r="1" fill="#4169E1" stroke="gold" stroke-width="0.6"/>
+  <circle cx="16.5" cy="14.5" r="1" fill="#4169E1" stroke="gold" stroke-width="0.6"/>
+  {# Top point jewels #}
+  <circle cx="12" cy="5.5" r="0.8" fill="gold" stroke="none"/>
+  <circle cx="4.5" cy="8" r="0.6" fill="gold" stroke="none"/>
+  <circle cx="19.5" cy="8" r="0.6" fill="gold" stroke="none"/>
+  <defs><linearGradient id="crownGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(255,215,0,0.6)"/><stop offset="100%" stop-color="rgba(255,215,0,0.2)"/></linearGradient></defs>
 </svg>
 {% elif name == 'crossed-swords' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <line x1="4" y1="20" x2="20" y2="4" stroke="var(--torch-orange)"/>
-  <polyline points="18,4 20,4 20,6" stroke="var(--torch-orange)"/>
-  <line x1="20" y1="20" x2="4" y2="4" stroke="var(--torch-orange)"/>
-  <polyline points="6,4 4,4 4,6" stroke="var(--torch-orange)"/>
-  <line x1="6" y1="18" x2="8" y2="16" stroke="var(--torch-orange)" stroke-width="2"/>
-  <line x1="16" y1="18" x2="18" y2="16" stroke="var(--torch-orange)" stroke-width="2" transform="scale(-1,1) translate(-24,0)"/>
+{# Survivor machetes crossed — the tool of the island #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Machete 1 — top-right to bottom-left #}
+  <path d="M19 2l-1 1.5 0.5 1L5 18l-1.5 1.5L5 21l1.5-1.5L20 6l1-0.5L22 4z" fill="rgba(192,192,192,0.2)" stroke="#C0C0C0" stroke-width="1.2"/>
+  <path d="M4 19.5l2-2" stroke="#8B6914" stroke-width="2.5"/>
+  <line x1="3.5" y1="21" x2="5" y2="19.5" stroke="#6B4F0A" stroke-width="1.5"/>
+  {# Machete 2 — top-left to bottom-right #}
+  <path d="M5 2l1 1.5-0.5 1L19 18l1.5 1.5L19 21l-1.5-1.5L4 6l-1-0.5L2 4z" fill="rgba(192,192,192,0.15)" stroke="#C0C0C0" stroke-width="1.2"/>
+  <path d="M20 19.5l-2-2" stroke="#8B6914" stroke-width="2.5"/>
+  <line x1="20.5" y1="21" x2="19" y2="19.5" stroke="#6B4F0A" stroke-width="1.5"/>
+  {# Blade shine #}
+  <line x1="8" y1="7" x2="16" y2="15" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
+  <line x1="16" y1="7" x2="8" y2="15" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
 </svg>
 {% elif name == 'island' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M13 5c0 0-1-3 1-4 0 2 3 3 3 3s-2 1-2 3" stroke="#3D8B37" fill="none"/>
-  <path d="M14 7c2-1 5 0 5 0s-1-4-3-5" stroke="#3D8B37" fill="rgba(61,139,55,0.3)"/>
-  <path d="M14 7c-2-1-4 0-5 1" stroke="#3D8B37" fill="none"/>
-  <line x1="13" y1="5" x2="13" y2="16" stroke="#8B6914" stroke-width="1.5"/>
-  <ellipse cx="12" cy="17" rx="8" ry="3" fill="rgba(232,200,150,0.3)" stroke="var(--bamboo, #E8C896)"/>
-  <path d="M2 20c2-1 4-1 6 0s4 1 6 0 4-1 6 0" stroke="var(--ocean, #2190B5)" fill="none"/>
+{# Tropical island with detailed palm tree, sand, and ocean #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Palm trunk — curved with texture #}
+  <path d="M11 17V8c0-1 0.5-3 1-4" stroke="#8B6914" stroke-width="2" fill="none"/>
+  <line x1="10.8" y1="10" x2="11.2" y2="10" stroke="#6B4F0A" stroke-width="0.5"/>
+  <line x1="10.8" y1="12" x2="11.2" y2="12" stroke="#6B4F0A" stroke-width="0.5"/>
+  <line x1="10.8" y1="14" x2="11.2" y2="14" stroke="#6B4F0A" stroke-width="0.5"/>
+  {# Palm fronds — spread out realistically #}
+  <path d="M12 4c2-1 5 0 6.5 1.5" stroke="#2D7D2D" stroke-width="1.5" fill="none"/>
+  <path d="M12 4c1.5 0 4 1.5 5 3.5" stroke="#3D8B37" stroke-width="1.3" fill="none"/>
+  <path d="M12 4c-2-1-5 0-6.5 1.5" stroke="#2D7D2D" stroke-width="1.5" fill="none"/>
+  <path d="M12 4c-1.5 0-4 1.5-5 3.5" stroke="#3D8B37" stroke-width="1.3" fill="none"/>
+  <path d="M12 4c0.5-1 1 1 1.5 2.5" stroke="#3D8B37" stroke-width="1" fill="none"/>
+  {# Coconuts #}
+  <circle cx="11.5" cy="5.5" r="0.7" fill="#8B6914" stroke="#6B4F0A" stroke-width="0.4"/>
+  <circle cx="12.5" cy="5.8" r="0.6" fill="#8B6914" stroke="#6B4F0A" stroke-width="0.4"/>
+  {# Island sand — raised mound #}
+  <ellipse cx="12" cy="18" rx="9" ry="2.5" fill="rgba(232,200,150,0.4)" stroke="var(--bamboo, #E8C896)" stroke-width="1"/>
+  {# Ocean waves #}
+  <path d="M1 21c2-1 4-1 6 0s4 1 6 0 4-1 6 0" stroke="var(--ocean, #2190B5)" stroke-width="1.3" fill="none"/>
+  <path d="M3 22.5c1.5-0.7 3-0.7 4.5 0s3 0.7 4.5 0 3-0.7 4.5 0" stroke="var(--ocean, #2190B5)" stroke-width="0.8" fill="none" opacity="0.5"/>
 </svg>
 {% elif name == 'trophy' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M8 2h8v8a4 4 0 0 1-8 0V2z" fill="rgba(255,215,0,0.2)" stroke="gold"/>
-  <path d="M8 4H5a1 1 0 0 0-1 1v1a3 3 0 0 0 3 3h1" stroke="gold"/>
-  <path d="M16 4h3a1 1 0 0 1 1 1v1a3 3 0 0 1-3 3h-1" stroke="gold"/>
-  <line x1="12" y1="14" x2="12" y2="18" stroke="gold"/>
-  <rect x="8" y="18" width="8" height="2" rx="1" fill="rgba(255,215,0,0.3)" stroke="gold"/>
+{# Detailed winner trophy with shine and ornate base #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Cup body #}
+  <path d="M7 2h10v7c0 3.5-2.2 6-5 6s-5-2.5-5-6V2z" fill="url(#trophyGrad)" stroke="gold" stroke-width="1.2"/>
+  {# Cup shine #}
+  <path d="M9 4v5c0 2 1 3.5 2.5 4" stroke="rgba(255,255,255,0.3)" stroke-width="0.8" fill="none"/>
+  {# Left handle #}
+  <path d="M7 4H5c-1 0-2 0.5-2 2v1c0 2.5 1.5 4 3.5 4H7" stroke="gold" stroke-width="1.2" fill="rgba(255,215,0,0.15)"/>
+  {# Right handle #}
+  <path d="M17 4h2c1 0 2 0.5 2 2v1c0 2.5-1.5 4-3.5 4H17" stroke="gold" stroke-width="1.2" fill="rgba(255,215,0,0.15)"/>
+  {# Stem #}
+  <line x1="12" y1="15" x2="12" y2="18" stroke="gold" stroke-width="1.5"/>
+  {# Base platform — layered #}
+  <rect x="8" y="18" width="8" height="1.5" rx="0.5" fill="rgba(255,215,0,0.4)" stroke="gold" stroke-width="0.8"/>
+  <rect x="7" y="19.5" width="10" height="2" rx="0.5" fill="rgba(255,215,0,0.3)" stroke="gold" stroke-width="0.8"/>
+  {# Star on cup #}
+  <path d="M12 5l0.7 1.5h1.6l-1.3 1 0.5 1.6L12 8.2l-1.5 0.9 0.5-1.6-1.3-1h1.6z" fill="gold" stroke="none" opacity="0.8"/>
+  <defs><linearGradient id="trophyGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgba(255,215,0,0.4)"/><stop offset="50%" stop-color="rgba(255,215,0,0.2)"/><stop offset="100%" stop-color="rgba(255,215,0,0.35)"/></linearGradient></defs>
 </svg>
 {% elif name == 'brain' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M12 2a5 5 0 0 0-4.5 2.8A4 4 0 0 0 4 9a4 4 0 0 0 1.5 3.1A4.5 4.5 0 0 0 8 16.5V20h8v-3.5a4.5 4.5 0 0 0 2.5-4.4A4 4 0 0 0 20 9a4 4 0 0 0-3.5-4.2A5 5 0 0 0 12 2z" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)"/>
-  <line x1="12" y1="8" x2="12" y2="16" stroke="var(--torch-orange)" stroke-width="1"/>
-  <path d="M9 12c0-1 1-2 3-2s3 1 3 2" stroke="var(--torch-orange)" fill="none"/>
-  <line x1="9" y1="20" x2="15" y2="20" stroke="var(--torch-orange)"/>
-  <line x1="10" y1="22" x2="14" y2="22" stroke="var(--torch-orange)"/>
+{# Strategic brain with circuit-like patterns — tribal intelligence #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Brain outline — two hemispheres #}
+  <path d="M12 3c-2.5 0-4.5 1-5.5 2.5C5 6.5 4 8 4 10c0 1.5 0.5 2.5 1.5 3.5 0 1.5 0.5 3 1.5 4V20h3v-1.5" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.12)"/>
+  <path d="M12 3c2.5 0 4.5 1 5.5 2.5C19 6.5 20 8 20 10c0 1.5-0.5 2.5-1.5 3.5 0 1.5-0.5 3-1.5 4V20h-3v-1.5" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.12)"/>
+  {# Center line #}
+  <line x1="12" y1="3" x2="12" y2="18.5" stroke="var(--torch-orange)" stroke-width="0.8" opacity="0.6"/>
+  {# Brain folds — left side #}
+  <path d="M6 8c1.5 0 3 0.5 4 1.5" stroke="var(--torch-orange)" stroke-width="0.7" fill="none" opacity="0.5"/>
+  <path d="M5.5 11c2 0.5 3.5 0 5-1" stroke="var(--torch-orange)" stroke-width="0.7" fill="none" opacity="0.5"/>
+  <path d="M7 14c1 0 2.5-0.5 3.5-1.5" stroke="var(--torch-orange)" stroke-width="0.7" fill="none" opacity="0.5"/>
+  {# Brain folds — right side #}
+  <path d="M18 8c-1.5 0-3 0.5-4 1.5" stroke="var(--torch-orange)" stroke-width="0.7" fill="none" opacity="0.5"/>
+  <path d="M18.5 11c-2 0.5-3.5 0-5-1" stroke="var(--torch-orange)" stroke-width="0.7" fill="none" opacity="0.5"/>
+  <path d="M17 14c-1 0-2.5-0.5-3.5-1.5" stroke="var(--torch-orange)" stroke-width="0.7" fill="none" opacity="0.5"/>
+  {# Brainstem #}
+  <line x1="9" y1="20" x2="15" y2="20" stroke="var(--torch-orange)" stroke-width="1.2"/>
+  <line x1="10" y1="22" x2="14" y2="22" stroke="var(--torch-orange)" stroke-width="1.2"/>
+  {# Strategic glow dots #}
+  <circle cx="9" cy="7" r="0.6" fill="var(--torch-orange)" opacity="0.6"/>
+  <circle cx="15" cy="7" r="0.6" fill="var(--torch-orange)" opacity="0.6"/>
+  <circle cx="12" cy="11" r="0.6" fill="var(--torch-orange)" opacity="0.8"/>
 </svg>
 {% elif name == 'handshake' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M2 11l4-4 4 2 3-3 4 2 5-4" stroke="var(--torch-orange)" fill="none"/>
-  <path d="M8 9l4 4 4-2 4 4" stroke="var(--torch-orange)" fill="none"/>
-  <path d="M2 11l4 6 6-2 5 3 5-5" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.1)"/>
+{# Alliance handshake — two hands clasping #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Left arm #}
+  <path d="M2 14l3-3 2.5 0.5" stroke="var(--torch-orange)" stroke-width="1.5"/>
+  {# Right arm #}
+  <path d="M22 10l-3 3-2.5-0.5" stroke="var(--torch-orange)" stroke-width="1.5"/>
+  {# Left hand fingers wrapping right #}
+  <path d="M7.5 11.5L10 10c1-0.5 2 0 2.5 0.5l1 1c0.5 0.5 1 1 0.5 1.5l-3 3c-0.5 0.5-1.5 0.5-2 0l-2-2" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)" stroke-width="1.2"/>
+  {# Right hand fingers wrapping left #}
+  <path d="M16.5 12.5L14 14c-0.5 0.5-0.5 1 0 1.5l1 1" stroke="var(--torch-orange)" fill="none" stroke-width="1.2"/>
+  {# Finger details #}
+  <path d="M9 14.5l1-1" stroke="var(--torch-orange)" stroke-width="0.8" opacity="0.7"/>
+  <path d="M10 15.5l1-1" stroke="var(--torch-orange)" stroke-width="0.8" opacity="0.7"/>
+  {# Alliance flame above — pact sealed with fire #}
+  <path d="M12 5c-0.8 1-1.5 2-1.5 3a1.5 1.5 0 0 0 3 0c0-1-0.7-2-1.5-3z" fill="rgba(255,107,53,0.4)" stroke="#FF6B35" stroke-width="0.8"/>
+  <path d="M12 6.2c-0.4 0.5-0.7 1.1-0.7 1.6a0.7 0.7 0 0 0 1.4 0c0-0.5-0.3-1.1-0.7-1.6z" fill="#FFD700" stroke="none" opacity="0.8"/>
 </svg>
 {% elif name == 'ballot' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <rect x="3" y="3" width="18" height="18" rx="2" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.1)"/>
-  <path d="M8 3v4h8V3" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)"/>
-  <line x1="8" y1="11" x2="16" y2="11" stroke="var(--torch-orange)"/>
-  <line x1="8" y1="14" x2="13" y2="14" stroke="var(--torch-orange)"/>
-  <line x1="8" y1="17" x2="14" y2="17" stroke="var(--torch-orange)"/>
+{# Survivor voting parchment with quill writing #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Parchment scroll body #}
+  <path d="M5 3c-1 0-2 0.5-2 1.5v15c0 1 1 1.5 2 1.5h14c1 0 2-0.5 2-1.5v-15c0-1-1-1.5-2-1.5z" fill="rgba(245,222,179,0.15)" stroke="var(--torch-orange)" stroke-width="1.2"/>
+  {# Parchment top curl #}
+  <path d="M3 4.5c0-1 1-2 2.5-2h13c1.5 0 2.5 1 2.5 2" stroke="var(--torch-orange)" stroke-width="0.8" fill="none"/>
+  {# Written name — the vote #}
+  <line x1="7" y1="9" x2="17" y2="9" stroke="var(--torch-orange)" stroke-width="1.5" opacity="0.8"/>
+  {# Underline emphasis #}
+  <line x1="7" y1="10.5" x2="15" y2="10.5" stroke="var(--torch-orange)" stroke-width="0.6" opacity="0.4"/>
+  {# Additional text lines #}
+  <line x1="7" y1="13" x2="14" y2="13" stroke="var(--torch-orange)" stroke-width="0.5" opacity="0.3"/>
+  <line x1="7" y1="15" x2="12" y2="15" stroke="var(--torch-orange)" stroke-width="0.5" opacity="0.3"/>
+  {# Quill pen — angled, writing #}
+  <path d="M17 14l2.5-7c0.3-0.8 0.8-1 1-0.5l0.2 0.5c0.2 0.5-0.2 0.8-0.5 1.6l-2.5 7" stroke="#8B6914" stroke-width="0.8" fill="rgba(139,105,20,0.2)"/>
+  <line x1="17" y1="14" x2="17.5" y2="15.5" stroke="#8B6914" stroke-width="0.6"/>
 </svg>
 {% elif name == 'dumbbell' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <rect x="2" y="9" width="4" height="6" rx="1" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.2)"/>
-  <rect x="18" y="9" width="4" height="6" rx="1" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.2)"/>
-  <line x1="6" y1="12" x2="18" y2="12" stroke="var(--torch-orange)" stroke-width="2"/>
-  <rect x="5" y="7" width="2" height="10" rx="0.5" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)"/>
-  <rect x="17" y="7" width="2" height="10" rx="0.5" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)"/>
+{# Challenge obstacle — hurdle/balance beam with flag #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Balance beam / obstacle course element #}
+  <line x1="3" y1="20" x2="21" y2="20" stroke="var(--torch-orange)" stroke-width="1.5"/>
+  {# Left post #}
+  <rect x="4" y="7" width="2.5" height="13" rx="0.5" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.2)" stroke-width="1"/>
+  {# Right post #}
+  <rect x="17.5" y="7" width="2.5" height="13" rx="0.5" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.2)" stroke-width="1"/>
+  {# Crossbar — challenge beam #}
+  <rect x="6.5" y="10" width="11" height="2" rx="0.5" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.3)" stroke-width="1"/>
+  {# Rope texture on crossbar #}
+  <line x1="8" y1="10.5" x2="8" y2="11.5" stroke="var(--torch-orange)" stroke-width="0.4" opacity="0.5"/>
+  <line x1="10" y1="10.5" x2="10" y2="11.5" stroke="var(--torch-orange)" stroke-width="0.4" opacity="0.5"/>
+  <line x1="12" y1="10.5" x2="12" y2="11.5" stroke="var(--torch-orange)" stroke-width="0.4" opacity="0.5"/>
+  <line x1="14" y1="10.5" x2="14" y2="11.5" stroke="var(--torch-orange)" stroke-width="0.4" opacity="0.5"/>
+  <line x1="16" y1="10.5" x2="16" y2="11.5" stroke="var(--torch-orange)" stroke-width="0.4" opacity="0.5"/>
+  {# Flag on left post #}
+  <path d="M5.25 3v4" stroke="var(--torch-orange)" stroke-width="0.8"/>
+  <path d="M5.25 3l4 1.2-4 1.3" fill="rgba(255,107,53,0.5)" stroke="var(--torch-orange)" stroke-width="0.6"/>
 </svg>
 {% elif name == 'necklace' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M6 3c0 0-2 6-2 10a8 8 0 0 0 16 0c0-4-2-10-2-10" stroke="var(--bamboo, #E8C896)" fill="none"/>
-  <circle cx="12" cy="17" r="3" stroke="gold" fill="rgba(255,215,0,0.3)"/>
-  <circle cx="12" cy="17" r="1" fill="gold"/>
+{# Immunity necklace — detailed with shells and center pendant #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Necklace cord — sweeping curve #}
+  <path d="M5 3c-1 4-2.5 8-2.5 12a9.5 9.5 0 0 0 19 0c0-4-1.5-8-2.5-12" stroke="var(--bamboo, #E8C896)" stroke-width="1.3" fill="none"/>
+  {# Shell beads along cord #}
+  <circle cx="4" cy="9" r="0.8" fill="var(--bamboo, #E8C896)" stroke="none"/>
+  <circle cx="3.5" cy="12" r="0.8" fill="var(--bamboo, #E8C896)" stroke="none"/>
+  <circle cx="20" cy="9" r="0.8" fill="var(--bamboo, #E8C896)" stroke="none"/>
+  <circle cx="20.5" cy="12" r="0.8" fill="var(--bamboo, #E8C896)" stroke="none"/>
+  {# Center pendant — ornate tribal design #}
+  <path d="M12 15l-3 4h6z" fill="rgba(255,215,0,0.4)" stroke="gold" stroke-width="1"/>
+  <circle cx="12" cy="17.5" r="1.2" fill="gold" stroke="#DAA520" stroke-width="0.6"/>
+  {# Pendant glow #}
+  <circle cx="12" cy="17.5" r="0.5" fill="#FFF5CC" stroke="none" opacity="0.8"/>
+  {# Side ornaments #}
+  <circle cx="7" cy="17" r="1" fill="rgba(255,215,0,0.3)" stroke="gold" stroke-width="0.6"/>
+  <circle cx="17" cy="17" r="1" fill="rgba(255,215,0,0.3)" stroke="gold" stroke-width="0.6"/>
 </svg>
 {% elif name == 'arrows-cycle' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M17 1l4 4-4 4" stroke="var(--torch-orange)"/>
-  <path d="M3 11V9a4 4 0 0 1 4-4h14" stroke="var(--torch-orange)"/>
-  <path d="M7 23l-4-4 4-4" stroke="var(--torch-orange)"/>
-  <path d="M21 13v2a4 4 0 0 1-4 4H3" stroke="var(--torch-orange)"/>
+{# Returning players — tribal circular arrows #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Top arrow arc #}
+  <path d="M4 9a8 8 0 0 1 14-3" stroke="var(--torch-orange)" stroke-width="1.8" fill="none"/>
+  <path d="M18 6l1.5-3.5L15.5 4" stroke="var(--torch-orange)" stroke-width="1.5" fill="rgba(255,107,53,0.3)"/>
+  {# Bottom arrow arc #}
+  <path d="M20 15a8 8 0 0 1-14 3" stroke="var(--torch-orange)" stroke-width="1.8" fill="none"/>
+  <path d="M6 18l-1.5 3.5 4-1.5" stroke="var(--torch-orange)" stroke-width="1.5" fill="rgba(255,107,53,0.3)"/>
+  {# Center flame — they return to the fire #}
+  <path d="M12 9c-0.8 1-1.3 2-1.3 3a1.3 1.3 0 0 0 2.6 0c0-1-0.5-2-1.3-3z" fill="rgba(255,107,53,0.3)" stroke="#FF6B35" stroke-width="0.7"/>
 </svg>
 {% elif name == 'target' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="12" cy="12" r="10" stroke="var(--torch-orange)"/>
-  <circle cx="12" cy="12" r="6" stroke="var(--torch-orange)"/>
-  <circle cx="12" cy="12" r="2" fill="var(--torch-orange)" stroke="var(--torch-orange)"/>
+{# Target with tribal ring patterns #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Outer ring #}
+  <circle cx="12" cy="12" r="10" stroke="var(--torch-orange)" stroke-width="1.2" fill="rgba(255,107,53,0.05)"/>
+  {# Middle ring #}
+  <circle cx="12" cy="12" r="6.5" stroke="var(--torch-orange)" stroke-width="1" fill="rgba(255,107,53,0.08)"/>
+  {# Inner ring #}
+  <circle cx="12" cy="12" r="3.5" stroke="var(--torch-orange)" stroke-width="0.8" fill="rgba(255,107,53,0.12)"/>
+  {# Bullseye #}
+  <circle cx="12" cy="12" r="1.5" fill="var(--torch-orange)" stroke="none"/>
+  {# Crosshair marks #}
+  <line x1="12" y1="1.5" x2="12" y2="5" stroke="var(--torch-orange)" stroke-width="0.7"/>
+  <line x1="12" y1="19" x2="12" y2="22.5" stroke="var(--torch-orange)" stroke-width="0.7"/>
+  <line x1="1.5" y1="12" x2="5" y2="12" stroke="var(--torch-orange)" stroke-width="0.7"/>
+  <line x1="19" y1="12" x2="22.5" y2="12" stroke="var(--torch-orange)" stroke-width="0.7"/>
 </svg>
 {% elif name == 'dice' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <rect x="3" y="3" width="18" height="18" rx="3" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.1)"/>
-  <circle cx="8" cy="8" r="1.5" fill="var(--torch-orange)"/>
-  <circle cx="16" cy="8" r="1.5" fill="var(--torch-orange)"/>
-  <circle cx="12" cy="12" r="1.5" fill="var(--torch-orange)"/>
-  <circle cx="8" cy="16" r="1.5" fill="var(--torch-orange)"/>
-  <circle cx="16" cy="16" r="1.5" fill="var(--torch-orange)"/>
+{# Tribal dice — carved tiki cube with dots #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Cube front face #}
+  <path d="M3 6l9-4 9 4v12l-9 4-9-4V6z" fill="rgba(255,107,53,0.08)" stroke="var(--torch-orange)" stroke-width="1.2"/>
+  {# Top face #}
+  <path d="M3 6l9 4 9-4" stroke="var(--torch-orange)" stroke-width="1" fill="rgba(255,107,53,0.15)"/>
+  {# Center divider #}
+  <line x1="12" y1="10" x2="12" y2="22" stroke="var(--torch-orange)" stroke-width="0.8"/>
+  {# Left face dots (3) #}
+  <circle cx="7" cy="11" r="1" fill="var(--torch-orange)"/>
+  <circle cx="7.5" cy="14" r="1" fill="var(--torch-orange)"/>
+  <circle cx="8" cy="17" r="1" fill="var(--torch-orange)"/>
+  {# Right face dots (2) #}
+  <circle cx="16" cy="12" r="1" fill="var(--torch-orange)"/>
+  <circle cx="16.5" cy="16" r="1" fill="var(--torch-orange)"/>
 </svg>
 {% elif name == 'map' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3V6z" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.1)"/>
-  <line x1="9" y1="3" x2="9" y2="18" stroke="var(--torch-orange)"/>
-  <line x1="15" y1="6" x2="15" y2="21" stroke="var(--torch-orange)"/>
+{# Treasure map with X marks the spot #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Map outline — torn edges #}
+  <path d="M4 2c0 0 0.5 0.5 1 0.3L9 3l6 3 5-2c0.5-0.2 1 0.1 1 0.5v15c0 0.4-0.3 0.7-0.5 0.8l-5.5 2-6-3-5 2c-0.5 0.2-1-0.1-1-0.5V2.5C3 2.1 3.5 1.8 4 2z" fill="rgba(245,222,179,0.1)" stroke="var(--torch-orange)" stroke-width="1.1"/>
+  {# Map fold lines #}
+  <line x1="9" y1="3" x2="9" y2="18.5" stroke="var(--torch-orange)" stroke-width="0.6" opacity="0.4" stroke-dasharray="2 2"/>
+  <line x1="15" y1="6" x2="15" y2="21" stroke="var(--torch-orange)" stroke-width="0.6" opacity="0.4" stroke-dasharray="2 2"/>
+  {# X marks the spot #}
+  <line x1="10.5" y1="10" x2="13.5" y2="13" stroke="#FF4444" stroke-width="2"/>
+  <line x1="13.5" y1="10" x2="10.5" y2="13" stroke="#FF4444" stroke-width="2"/>
+  {# Trail path #}
+  <path d="M6 7c1 1 2 2 3.5 2.5" stroke="var(--torch-orange)" stroke-width="0.7" stroke-dasharray="1.5 1.5" opacity="0.5"/>
+  {# Compass rose hint #}
+  <circle cx="18" cy="8" r="1.5" stroke="var(--torch-orange)" stroke-width="0.6" fill="none" opacity="0.4"/>
+  <line x1="18" y1="6.8" x2="18" y2="9.2" stroke="var(--torch-orange)" stroke-width="0.4" opacity="0.4"/>
+  <line x1="16.8" y1="8" x2="19.2" y2="8" stroke="var(--torch-orange)" stroke-width="0.4" opacity="0.4"/>
 </svg>
 {% elif name == 'sun' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="12" cy="12" r="5" stroke="#FFD700" fill="rgba(255,215,0,0.3)"/>
-  <line x1="12" y1="1" x2="12" y2="4" stroke="#FFD700"/>
-  <line x1="12" y1="20" x2="12" y2="23" stroke="#FFD700"/>
-  <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" stroke="#FFD700"/>
-  <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" stroke="#FFD700"/>
-  <line x1="1" y1="12" x2="4" y2="12" stroke="#FFD700"/>
-  <line x1="20" y1="12" x2="23" y2="12" stroke="#FFD700"/>
-  <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" stroke="#FFD700"/>
-  <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" stroke="#FFD700"/>
+{# Bright tropical sun with detailed rays #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Sun disc #}
+  <circle cx="12" cy="12" r="5" stroke="#FFD700" stroke-width="1.3" fill="rgba(255,215,0,0.35)"/>
+  {# Inner glow #}
+  <circle cx="12" cy="12" r="3" fill="rgba(255,215,0,0.2)" stroke="none"/>
+  {# Major rays #}
+  <line x1="12" y1="1" x2="12" y2="4" stroke="#FFD700" stroke-width="1.5"/>
+  <line x1="12" y1="20" x2="12" y2="23" stroke="#FFD700" stroke-width="1.5"/>
+  <line x1="1" y1="12" x2="4" y2="12" stroke="#FFD700" stroke-width="1.5"/>
+  <line x1="20" y1="12" x2="23" y2="12" stroke="#FFD700" stroke-width="1.5"/>
+  {# Diagonal rays #}
+  <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" stroke="#FFD700" stroke-width="1.2"/>
+  <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" stroke="#FFD700" stroke-width="1.2"/>
+  <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" stroke="#FFD700" stroke-width="1.2"/>
+  <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" stroke="#FFD700" stroke-width="1.2"/>
+  {# Minor rays #}
+  <line x1="8" y1="2.5" x2="9" y2="5" stroke="#FFD700" stroke-width="0.6" opacity="0.6"/>
+  <line x1="16" y1="2.5" x2="15" y2="5" stroke="#FFD700" stroke-width="0.6" opacity="0.6"/>
+  <line x1="2.5" y1="8" x2="5" y2="9" stroke="#FFD700" stroke-width="0.6" opacity="0.6"/>
+  <line x1="2.5" y1="16" x2="5" y2="15" stroke="#FFD700" stroke-width="0.6" opacity="0.6"/>
 </svg>
 {% elif name == 'moon' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="#C0C0FF" fill="rgba(192,192,255,0.2)"/>
+{# Crescent moon with stars — nighttime on the island #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Moon crescent #}
+  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="#C0C0FF" stroke-width="1.3" fill="rgba(192,192,255,0.2)"/>
+  {# Moon surface texture #}
+  <circle cx="10" cy="10" r="1" fill="rgba(192,192,255,0.1)" stroke="rgba(192,192,255,0.15)" stroke-width="0.5"/>
+  <circle cx="8" cy="14" r="1.5" fill="rgba(192,192,255,0.08)" stroke="rgba(192,192,255,0.12)" stroke-width="0.5"/>
+  {# Stars #}
+  <circle cx="18" cy="5" r="0.6" fill="#C0C0FF" stroke="none" opacity="0.8"/>
+  <circle cx="20" cy="9" r="0.4" fill="#C0C0FF" stroke="none" opacity="0.6"/>
+  <circle cx="16" cy="3" r="0.3" fill="#C0C0FF" stroke="none" opacity="0.5"/>
 </svg>
 {% elif name == 'eye-open' %}
+{# Eye open — spoilers visible #}
 <svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" stroke="var(--sand, #FFF1DC)"/>
   <circle cx="12" cy="12" r="3" stroke="var(--sand, #FFF1DC)" fill="rgba(255,241,220,0.2)"/>
+  <circle cx="12" cy="12" r="1" fill="var(--sand, #FFF1DC)" opacity="0.6"/>
 </svg>
 {% elif name == 'eye-closed' %}
+{# Eye closed — spoiler-free mode #}
 <svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
   <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94" stroke="var(--sand, #FFF1DC)"/>
   <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19" stroke="var(--sand, #FFF1DC)"/>
-  <line x1="1" y1="1" x2="23" y2="23" stroke="var(--sand, #FFF1DC)"/>
+  <line x1="1" y1="1" x2="23" y2="23" stroke="var(--sand, #FFF1DC)" stroke-width="1.8"/>
 </svg>
 {% elif name == 'arrow-up' %}
+{# Back to top arrow #}
 <svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <line x1="12" y1="19" x2="12" y2="5"/>
   <polyline points="5 12 12 5 19 12"/>
 </svg>
 {% elif name == 'chevron-right' %}
+{# Navigation chevron #}
 <svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <polyline points="9 6 15 12 9 18"/>
 </svg>
 {% elif name == 'person' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="12" cy="7" r="4" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)"/>
-  <path d="M5.5 21a6.5 6.5 0 0 1 13 0" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.1)"/>
+{# Castaway silhouette with buff #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Head #}
+  <circle cx="12" cy="7" r="4" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)" stroke-width="1.2"/>
+  {# Buff/bandana #}
+  <path d="M8.5 5.5c0 0 1.5-1 3.5-1s3.5 1 3.5 1" stroke="var(--torch-orange)" stroke-width="1.5" fill="rgba(255,107,53,0.25)"/>
+  {# Body #}
+  <path d="M5.5 21a6.5 6.5 0 0 1 13 0" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.1)" stroke-width="1.2"/>
+  {# Shirt detail #}
+  <path d="M9.5 15c1-0.5 2-0.8 2.5-0.8s1.5 0.3 2.5 0.8" stroke="var(--torch-orange)" stroke-width="0.6" fill="none" opacity="0.4"/>
 </svg>
 {% elif name == 'timeline' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <line x1="12" y1="2" x2="12" y2="22" stroke="var(--torch-orange)"/>
-  <circle cx="12" cy="6" r="2" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.2)"/>
-  <line x1="14" y1="6" x2="20" y2="6" stroke="var(--torch-orange)"/>
-  <circle cx="12" cy="12" r="2" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.2)"/>
-  <line x1="10" y1="12" x2="4" y2="12" stroke="var(--torch-orange)"/>
-  <circle cx="12" cy="18" r="2" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.2)"/>
-  <line x1="14" y1="18" x2="20" y2="18" stroke="var(--torch-orange)"/>
+{# Event timeline with torches marking moments #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Main timeline line #}
+  <line x1="12" y1="2" x2="12" y2="22" stroke="var(--torch-orange)" stroke-width="1.5"/>
+  {# Event nodes with connecting lines #}
+  <circle cx="12" cy="5" r="2.2" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.25)" stroke-width="1"/>
+  <line x1="14.2" y1="5" x2="20" y2="5" stroke="var(--torch-orange)" stroke-width="0.8"/>
+  <rect x="16" y="3.5" width="5" height="3" rx="1" stroke="var(--torch-orange)" stroke-width="0.5" fill="rgba(255,107,53,0.1)" opacity="0.6"/>
+  <circle cx="12" cy="12" r="2.2" stroke="var(--torch-orange)" fill="rgba(255,215,0,0.25)" stroke-width="1"/>
+  <line x1="9.8" y1="12" x2="4" y2="12" stroke="var(--torch-orange)" stroke-width="0.8"/>
+  <rect x="2" y="10.5" width="5" height="3" rx="1" stroke="var(--torch-orange)" stroke-width="0.5" fill="rgba(255,107,53,0.1)" opacity="0.6"/>
+  <circle cx="12" cy="19" r="2.2" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.25)" stroke-width="1"/>
+  <line x1="14.2" y1="19" x2="20" y2="19" stroke="var(--torch-orange)" stroke-width="0.8"/>
+  <rect x="16" y="17.5" width="5" height="3" rx="1" stroke="var(--torch-orange)" stroke-width="0.5" fill="rgba(255,107,53,0.1)" opacity="0.6"/>
+  {# Mini flames on key events #}
+  <path d="M12 3.5c-0.3 0.4-0.5 0.8-0.5 1.1a0.5 0.5 0 0 0 1 0c0-0.3-0.2-0.7-0.5-1.1z" fill="#FFD700" stroke="none" opacity="0.7"/>
 </svg>
 {% elif name == 'scales' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <line x1="12" y1="2" x2="12" y2="22" stroke="var(--torch-orange)"/>
-  <line x1="4" y1="6" x2="20" y2="6" stroke="var(--torch-orange)" stroke-width="2"/>
-  <path d="M4 6l-2 8h8L8 6" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)"/>
-  <path d="M16 6l-2 8h8l-2-8" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)"/>
-  <rect x="9" y="20" width="6" height="2" rx="1" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.2)"/>
+{# Justice scales — tribal council judgment #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Center pole #}
+  <line x1="12" y1="2" x2="12" y2="20" stroke="var(--torch-orange)" stroke-width="1.5"/>
+  {# Beam #}
+  <line x1="3" y1="6" x2="21" y2="6" stroke="var(--torch-orange)" stroke-width="2"/>
+  {# Left pan — detailed bowl #}
+  <path d="M3 6l-1 7c0 1 1.5 2 3.5 2s3.5-1 3.5-2l-1-7" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)" stroke-width="1"/>
+  {# Chain links left #}
+  <line x1="3" y1="6" x2="2" y2="7.5" stroke="var(--torch-orange)" stroke-width="0.6"/>
+  <line x1="8" y1="6" x2="9" y2="7.5" stroke="var(--torch-orange)" stroke-width="0.6"/>
+  {# Right pan — detailed bowl #}
+  <path d="M16 6l-1 7c0 1 1.5 2 3.5 2s3.5-1 3.5-2l-1-7" stroke="var(--torch-orange)" fill="rgba(255,107,53,0.15)" stroke-width="1"/>
+  {# Chain links right #}
+  <line x1="16" y1="6" x2="15" y2="7.5" stroke="var(--torch-orange)" stroke-width="0.6"/>
+  <line x1="21" y1="6" x2="22" y2="7.5" stroke="var(--torch-orange)" stroke-width="0.6"/>
+  {# Base #}
+  <path d="M9 20h6l1 2H8z" fill="rgba(255,107,53,0.2)" stroke="var(--torch-orange)" stroke-width="0.8"/>
+  {# Crown/top ornament #}
+  <circle cx="12" cy="3" r="1.2" fill="rgba(255,107,53,0.3)" stroke="var(--torch-orange)" stroke-width="0.8"/>
 </svg>
 {% elif name == 'search' %}
+{# Search magnifying glass #}
 <svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="11" cy="11" r="8"/>
+  <circle cx="11" cy="11" r="8" stroke="currentColor" fill="rgba(255,255,255,0.05)"/>
   <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+  <circle cx="11" cy="11" r="4" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
 </svg>
 {% elif name == 'snuff' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M12 4c-1 1.5-2 3-2 4.5a2 2 0 0 0 4 0c0-1.5-1-3-2-4.5z" fill="rgba(255,107,53,0.3)" stroke="#FF6B35" stroke-dasharray="2 2"/>
-  <line x1="12" y1="12" x2="12" y2="22" stroke="#8B6914" stroke-width="2"/>
+{# Snuffed torch — extinguished flame with smoke wisps #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Dying flame — dashed, fading #}
+  <path d="M12 5c-0.8 1-1.5 2-1.5 3a1.5 1.5 0 0 0 3 0c0-1-0.7-2-1.5-3z" fill="rgba(255,107,53,0.15)" stroke="#FF6B35" stroke-width="0.8" stroke-dasharray="2 2" opacity="0.5"/>
+  {# Smoke wisps rising #}
+  <path d="M10 3c-0.5-1.5-1.5-2-2-1.5" stroke="rgba(150,150,150,0.5)" stroke-width="0.8" fill="none"/>
+  <path d="M14 3c0.5-1.5 1.5-2 2-1.5" stroke="rgba(150,150,150,0.5)" stroke-width="0.8" fill="none"/>
+  <path d="M12 2c0-1 0.3-2 0-2.5" stroke="rgba(150,150,150,0.4)" stroke-width="0.6" fill="none"/>
+  {# Torch bowl #}
+  <path d="M9.5 10.5h5l0.5 1.5h-6z" fill="rgba(139,105,20,0.5)" stroke="#8B6914" stroke-width="0.8"/>
+  {# Handle #}
+  <line x1="12" y1="12" x2="12" y2="22" stroke="#8B6914" stroke-width="2.5"/>
+  {# Handle wraps #}
+  <line x1="11" y1="14" x2="13" y2="14" stroke="#A07D1A" stroke-width="0.5"/>
+  <line x1="11" y1="16" x2="13" y2="16" stroke="#A07D1A" stroke-width="0.5"/>
+  <line x1="11" y1="18" x2="13" y2="18" stroke="#A07D1A" stroke-width="0.5"/>
+  {# Base #}
   <line x1="10" y1="22" x2="14" y2="22" stroke="#8B6914" stroke-width="2"/>
-  <path d="M8 6l-3-2M16 6l3-2M9 3l-2-1M15 3l2-1" stroke="rgba(150,150,150,0.5)" stroke-width="1"/>
 </svg>
 {% elif name == 'chart' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <line x1="3" y1="20" x2="21" y2="20" stroke="var(--torch-orange)"/>
-  <rect x="5" y="12" width="3" height="8" fill="rgba(255,107,53,0.3)" stroke="var(--torch-orange)"/>
-  <rect x="10" y="6" width="3" height="14" fill="rgba(255,107,53,0.3)" stroke="var(--torch-orange)"/>
-  <rect x="15" y="10" width="3" height="10" fill="rgba(255,107,53,0.3)" stroke="var(--torch-orange)"/>
+{# Analytics bar chart with trend line #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Axis lines #}
+  <line x1="3" y1="20" x2="21" y2="20" stroke="var(--torch-orange)" stroke-width="1.3"/>
+  <line x1="3" y1="4" x2="3" y2="20" stroke="var(--torch-orange)" stroke-width="1.3"/>
+  {# Bars with gradient fills #}
+  <rect x="5" y="14" width="3" height="6" rx="0.5" fill="rgba(255,107,53,0.5)" stroke="var(--torch-orange)" stroke-width="0.8"/>
+  <rect x="10" y="8" width="3" height="12" rx="0.5" fill="rgba(255,107,53,0.6)" stroke="var(--torch-orange)" stroke-width="0.8"/>
+  <rect x="15" y="11" width="3" height="9" rx="0.5" fill="rgba(255,107,53,0.5)" stroke="var(--torch-orange)" stroke-width="0.8"/>
+  {# Trend line overlay #}
+  <path d="M5.5 13 11.5 7 16.5 10 20 5" stroke="#FFD700" stroke-width="1.5" fill="none" stroke-dasharray="3 2"/>
+  {# Trend dot #}
+  <circle cx="20" cy="5" r="1.2" fill="#FFD700" stroke="none"/>
+  {# Grid lines #}
+  <line x1="3" y1="12" x2="21" y2="12" stroke="var(--torch-orange)" stroke-width="0.3" opacity="0.3"/>
+  <line x1="3" y1="8" x2="21" y2="8" stroke="var(--torch-orange)" stroke-width="0.3" opacity="0.3"/>
 </svg>
 {% elif name == 'fire-off' %}
+{# Torch cursor toggle off — circle with slash #}
 <svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="12" cy="12" r="8" stroke="rgba(150,150,150,0.5)" fill="rgba(150,150,150,0.1)"/>
   <line x1="6" y1="6" x2="18" y2="18" stroke="rgba(150,150,150,0.5)" stroke-width="2"/>
 </svg>
 {% elif name == 'idol' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M12 2l2.5 5h5.5l-4.5 3.5 1.5 5.5L12 13l-5 3 1.5-5.5L4 7h5.5z" fill="rgba(255,215,0,0.25)" stroke="gold"/>
-  <circle cx="12" cy="8.5" r="1.5" fill="gold"/>
+{# Hidden immunity idol — carved wooden tiki figure #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Idol body — carved figure shape #}
+  <path d="M12 2c-2 0-3.5 1.5-3.5 3.5v2c0 1 0.5 2 1.5 2.5v2l-1.5 1.5v3c0 1.5 1.2 3 3.5 3s3.5-1.5 3.5-3v-3L14 12v-2c1-0.5 1.5-1.5 1.5-2.5v-2C15.5 3.5 14 2 12 2z" fill="rgba(255,215,0,0.2)" stroke="gold" stroke-width="1.2"/>
+  {# Eyes — carved holes #}
+  <circle cx="10.5" cy="5.5" r="0.8" fill="gold" stroke="none"/>
+  <circle cx="13.5" cy="5.5" r="0.8" fill="gold" stroke="none"/>
+  {# Mouth — carved expression #}
+  <path d="M10 7.5c0.5 0.5 1.5 0.8 2 0.8s1.5-0.3 2-0.8" stroke="gold" stroke-width="0.8" fill="none"/>
+  {# Body markings — tribal carvings #}
+  <line x1="10.5" y1="11" x2="13.5" y2="11" stroke="gold" stroke-width="0.6" opacity="0.6"/>
+  <line x1="10.5" y1="12.5" x2="13.5" y2="12.5" stroke="gold" stroke-width="0.6" opacity="0.6"/>
+  <path d="M10.5 14c0.5 0.5 1 0.8 1.5 0.8s1-0.3 1.5-0.8" stroke="gold" stroke-width="0.5" fill="none" opacity="0.5"/>
+  {# Base notch #}
+  <line x1="11" y1="19" x2="13" y2="19" stroke="gold" stroke-width="0.5" opacity="0.5"/>
+  {# Glow effect #}
+  <circle cx="12" cy="10" r="6" fill="rgba(255,215,0,0.05)" stroke="none"/>
 </svg>
 {% elif name == 'challenge' %}
-<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M4 15l4-8 4 4 4-6 4 10" stroke="var(--torch-orange)" fill="none" stroke-width="2"/>
-  <line x1="2" y1="20" x2="22" y2="20" stroke="var(--torch-orange)"/>
-  <circle cx="8" cy="7" r="2" stroke="gold" fill="rgba(255,215,0,0.3)"/>
+{# Challenge course — obstacle with flag and path #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  {# Race path #}
+  <path d="M3 18c3-2 5 0 8 0s5-2 8 0" stroke="var(--torch-orange)" stroke-width="1.5" fill="none" stroke-dasharray="3 2"/>
+  {# Finish flag pole #}
+  <line x1="19" y1="3" x2="19" y2="16" stroke="var(--torch-orange)" stroke-width="1.5"/>
+  {# Flag — checkered style #}
+  <rect x="19" y="3" width="3.5" height="5" fill="rgba(255,107,53,0.4)" stroke="var(--torch-orange)" stroke-width="0.8"/>
+  <rect x="19" y="3" width="1.75" height="2.5" fill="rgba(255,107,53,0.6)" stroke="none"/>
+  <rect x="20.75" y="5.5" width="1.75" height="2.5" fill="rgba(255,107,53,0.6)" stroke="none"/>
+  {# Start marker #}
+  <line x1="3" y1="14" x2="3" y2="20" stroke="var(--torch-orange)" stroke-width="1.2"/>
+  <path d="M3 14l3 1.5-3 1.5" fill="rgba(74,222,128,0.4)" stroke="#4ADE80" stroke-width="0.8"/>
+  {# Obstacle hurdles #}
+  <line x1="9" y1="13" x2="9" y2="18" stroke="var(--torch-orange)" stroke-width="0.8" opacity="0.6"/>
+  <line x1="14" y1="12" x2="14" y2="18" stroke="var(--torch-orange)" stroke-width="0.8" opacity="0.6"/>
+  {# Winner medal at top #}
+  <circle cx="19" cy="3" r="0.8" fill="gold" stroke="none"/>
+</svg>
+{% elif name == 'chevron-left' %}
+{# Navigation chevron left #}
+<svg class="icon {{ cls }}" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="15 6 9 12 15 18"/>
 </svg>
 {% endif %}
 {% endmacro %}

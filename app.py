@@ -446,10 +446,25 @@ def precompute_hall_of_fame():
 
     for season_num, season_data in seasons_data.items():
         voting_data = season_data['voting']
+        season_headshots = season_data.get('headshots', {})
         for castaway in voting_data['castaways']:
             castaway_record = castaway.copy()
             castaway_record['season'] = season_num
             castaway_record['season_name'] = SEASON_NAMES[season_num]
+            # Enrich with headshot
+            name = castaway.get('name', '')
+            parts = name.split()
+            hs = (season_headshots.get(name, '') or
+                  season_headshots.get(parts[0] if parts else '', '') or
+                  season_headshots.get(parts[-1] if len(parts) > 1 else '', '') or
+                  season_headshots.get(player_nicknames.get(name, ''), ''))
+            if not hs:
+                name_lower = name.lower()
+                for hk, hv in season_headshots.items():
+                    if hk.lower() in name_lower or name_lower in hk.lower():
+                        hs = hv
+                        break
+            castaway_record['headshot'] = hs
             if castaway.get('placement') == 'Winner':
                 champions.append(castaway_record)
             all_castaways.append(castaway_record)
@@ -586,19 +601,6 @@ def challenges():
     season_data = seasons_data[season]
     return render_template('challenges.html',
                          challenges=season_data['challenges']['challenges'],
-                         season=season,
-                         season_name=SEASON_NAMES[season],
-                         seasons=AVAILABLE_SEASONS,
-                         season_names=SEASON_NAMES)
-
-@app.route('/events')
-def events():
-    """Key events timeline"""
-    season = get_season_param()
-
-    season_data = seasons_data[season]
-    return render_template('events.html',
-                         events=season_data['timeline'].get('events', []),
                          season=season,
                          season_name=SEASON_NAMES[season],
                          seasons=AVAILABLE_SEASONS,

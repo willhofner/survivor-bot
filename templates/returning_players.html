@@ -79,12 +79,10 @@
                         </div>
                         {% endif %}
                         <div>
-                        <h4 style="color: var(--torch-orange); margin-bottom: 0.25rem;">
-                            {{ player.nickname or player.name }}
+                        <h4 style="color: var(--torch-orange); margin-bottom: 0.15rem;">
+                            {{ player.nickname or player.name.split(' ')[0] }}
                         </h4>
-                        {% if player.nickname and player.nickname != player.name %}
-                        <small style="color: var(--sand);">{{ player.full_name or player.name }}</small>
-                        {% endif %}
+                        <small style="color: var(--sand); opacity: 0.8;">{{ player.full_name or player.name }}</small>
                         </div>
                     </div>
                     <span class="badge" style="background: var(--torch-orange); font-size: 0.9rem;">

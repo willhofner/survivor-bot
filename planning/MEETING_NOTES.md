@@ -4,6 +4,43 @@ Session-by-session log of conversations, decisions, and implementations.
 
 ---
 
+## 2026-02-25 — UI Polish Pass: Icons, Hall of Fame, Idols, Formatting
+
+### Icon Redesign
+- **Complete icon overhaul** in `_icons.html` — all 29 SVG icons redesigned with far more detail
+- Icons now have layered fills, gradients, tribal-style details (palm tree with coconuts, machetes instead of generic swords, carved tiki idol, torch with wrap marks, etc.)
+- Added `chevron-left` icon for carousel navigation
+
+### Hall of Fame Overhaul
+- **Converted to horizontal carousel** — one record card visible at a time with left/right navigation
+- Added dot indicators, keyboard arrows, and touch swipe support
+- **Added headshots** to all record holders (enriched in `precompute_hall_of_fame()`)
+- Tie formatting now shows holders stacked vertically within a single card with gold border accents and tie badge
+- Clean, centered layout with 800px max-width
+
+### Returning Players Name Formatting
+- **Fixed consistency** — all cards now show nickname (or first name if no nickname) as the big name, full name always shown as secondary text below
+
+### Page Cleanup
+- **Removed Events page** — deleted route from app.py, removed from nav in base.html, removed test
+- **Renamed "Idols & Advantages" to "Idols"** — updated nav, template title, breadcrumb, page header
+
+### Idols Page Box Formatting
+- **Equal-width boxes** — Found, Played, Result boxes now use `flex: 1` for uniform sizing
+- **Never-played items** — Found box limited to 1/3 width (not full row), Played/Result boxes hidden
+
+### Idol Strategy Spacing Fix
+- Reduced excessive `mb-5` margins to `mb-4` throughout
+- Tightened padding on all card containers (`p-4` → `p-3`, `2rem` → `1.5rem`)
+- Reduced spacing on verdict box, strategies-to-avoid section, and Best & Worst headers
+- Overall more cohesive, less whitespace between sections
+
+### Advantages Evolution Chart Fix
+- **Changed from grouped bars to stacked bar** — each season bar shows green (successful plays) + red (unsuccessful/not played), totaling to total advantages
+- Tooltip shows total count for clarity
+
+---
+
 ## 2026-02-25 — Site Restructuring: Icons, Nav, Page Consolidation
 
 ### Emoji Removal & Custom SVG Icon System
