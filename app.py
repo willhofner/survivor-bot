@@ -259,6 +259,51 @@ def get_flame_rating(score):
     empty = 10 - full - half
     return '\u25A0' * full + ('\u25B2' if half else '') + '\u25A1' * empty
 
+def ordinal(n):
+    """Convert integer to ordinal string: 1 -> '1st', 2 -> '2nd', etc."""
+    if 11 <= (n % 100) <= 13:
+        suffix = 'th'
+    else:
+        suffix = {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')
+    return f"{n}{suffix}"
+
+def normalize_placements(castaways):
+    """Convert placements to clean ordinal finish positions by sorting on days lasted."""
+    if not castaways:
+        return
+
+    finalist_labels = {'Winner', 'Runner-up', '2nd Runner-up'}
+    finalist_priority = {'Winner': 0, 'Runner-up': 1, '2nd Runner-up': 2}
+
+    # Extract vote-out numbers for tiebreaking (higher = eliminated later = better finish)
+    for c in castaways:
+        placement = c.get('placement', '')
+        m = re.match(r'(\d+)(?:st|nd|rd|th)\s+voted\s+out', placement, re.IGNORECASE)
+        c['_vote_out_num'] = int(m.group(1)) if m else 0
+
+    # Sort by: most days first, finalists before non-finalists (in ties), higher vote-out first
+    sorted_indices = sorted(
+        range(len(castaways)),
+        key=lambda i: (
+            -castaways[i].get('days_lasted', 0),
+            finalist_priority.get(castaways[i].get('placement', ''), 3),
+            -castaways[i].get('_vote_out_num', 0),
+            i  # stable tiebreak by original order
+        )
+    )
+
+    # Assign ordinal positions (finalists keep their labels)
+    pos = 1
+    for idx in sorted_indices:
+        c = castaways[idx]
+        if c.get('placement', '') not in finalist_labels:
+            c['placement'] = ordinal(pos)
+        pos += 1
+
+    # Clean up temp field
+    for c in castaways:
+        c.pop('_vote_out_num', None)
+
 def reconstruct_tribal_councils(voting_data, advantages_data):
     """Reconstruct tribal council data from castaway voting histories when episodes data is missing."""
     castaways = voting_data.get('castaways', [])
@@ -402,6 +447,9 @@ for season_num, season_data in seasons_data.items():
     else:
         all_tribal_councils = reconstruct_tribal_councils(voting_data, advantages_data)
     season_data['tribal_councils'] = all_tribal_councils
+
+    # Normalize placements: convert "Xth voted out" to clean ordinals like "4th", "5th"
+    normalize_placements(voting_data['castaways'])
 
     # Add computed stats to castaways (uses tribal councils for voting accuracy)
     for castaway in voting_data['castaways']:
@@ -1272,12 +1320,14 @@ def random_player():
     if not castaways:
         return jsonify({'error': 'No castaways found'}), 404
     castaway = random.choice(castaways)
+    import urllib.parse
+    player_slug = urllib.parse.quote(castaway['name'])
     return jsonify({
         'name': castaway['name'],
         'season': season_num,
         'season_name': SEASON_NAMES[season_num],
         'placement': castaway.get('placement', 'Unknown'),
-        'url': f'/castaways?season={season_num}'
+        'url': f'/castaways?season={season_num}#player-{player_slug}'
     })
 
 

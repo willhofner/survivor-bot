@@ -333,3 +333,29 @@ function discoverRandomPlayer() {
         })
         .catch(() => goToRandomPlayer());
 }
+
+// On castaways page: scroll to and highlight a player from URL hash
+(function() {
+    if (!window.location.hash || !window.location.hash.startsWith('#player-')) return;
+    const playerName = decodeURIComponent(window.location.hash.replace('#player-', ''));
+    // Wait for DOM and any animations
+    setTimeout(function() {
+        const cards = document.querySelectorAll('.castaway-card');
+        for (const card of cards) {
+            if (card.dataset.name === playerName) {
+                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                card.style.outline = '3px solid var(--torch-orange)';
+                card.style.outlineOffset = '4px';
+                card.style.transition = 'outline-color 3s';
+                // Auto-open voting history
+                const btn = card.querySelector('.btn-details');
+                if (btn) btn.click();
+                // Fade out highlight after 3s
+                setTimeout(function() {
+                    card.style.outlineColor = 'transparent';
+                }, 3000);
+                break;
+            }
+        }
+    }, 500);
+})();

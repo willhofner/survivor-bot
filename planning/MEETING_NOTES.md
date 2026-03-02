@@ -4,6 +4,56 @@ Session-by-session log of conversations, decisions, and implementations.
 
 ---
 
+## 2026-03-01 — UI Consistency Pass: Layout, Spacing, Spoilers, Navigation
+
+### Placement Normalization (all seasons)
+- **Clean ordinal placements** on ALL Castaways pages — "14th voted out", "Ejected", "Lost final 4 fire challenge" now display as "3rd", "4th", "5th" etc.
+- Winner/Runner-up/2nd Runner-up labels preserved, everything else normalized by days lasted
+- `ordinal()` and `normalize_placements()` added to `app.py`
+
+### Icon Overhaul → Lucide Icons
+- Replaced all 30 custom hand-drawn SVGs with **official Lucide icons** (https://lucide.dev)
+- Clean stroke-based design, consistent `stroke-width="2"`, all from a public open-source library
+
+### Homepage Card Grid Fix
+- Switched from mixed Bootstrap `row`/`col` layout to **CSS grid** (`repeat(auto-fill, minmax(260px, 1fr))`)
+- All 14 feature cards now uniform size — removed buttons from first 3 cards for visual consistency
+- Added `display: flex` on `.view-card` links so cards fill grid cells properly
+
+### Site-Wide Spacing Consistency
+- Standardized `.castaways-grid` gap from `2rem` → `1.5rem` (matching all other grids)
+- Custom grids (`.seasons-grid`, `.winners-grid`, `.feature-grid`) all use `gap: 1.5rem`
+
+### Spoiler-Free Mode: Winner Headshot Blur
+- Added `.winner-headshot`, `[data-placement="Winner"] .castaway-headshot`, and `.hof-headshot` to blur selectors
+- Winner photos now blur on Winners Hall, Castaways page, and Hall of Fame
+
+### Idols Page: Timeline Box Formatting
+- **Equal-width boxes** — Found/Played/Result all use `flex: 1 1 0` for uniform sizing
+- **Never-played items**: Found box constrained to 1/3 width via `.single-item` class
+- Removed all inline styles, CSS classes handle sizing
+- Timeline arrows centered vertically with `align-items: center`
+
+### Idol Strategy Page: Spacing Tightening
+- Reduced hero title/stats: smaller font sizes, tighter padding (`1.5rem` → `1rem`)
+- All card sections: `mb-4` → `mb-3`, `padding: 1.5rem` → `1.25rem`
+- Conclusions verdict box and strategies-to-avoid tightened
+- Advantages Evolution tab: reduced margins throughout
+
+### Advantages Evolution Chart
+- Already correctly stacked (green=successful, red=unsuccessful, total=green+red) from previous session
+- Confirmed no changes needed
+
+### Random Player Button → Player Profile
+- **Fixed destination**: Random Player now navigates to `/castaways?season=N#player-Name`
+- Auto-scrolls to the player's card, highlights it with orange outline, and opens voting history
+- Highlight fades after 3 seconds
+
+### Tests
+- **All 65 tests passing**
+
+---
+
 ## 2026-02-25 — UI Polish Pass: Icons, Hall of Fame, Idols, Formatting
 
 ### Icon Redesign

@@ -318,6 +318,31 @@ main {
     box-shadow: 0 0 25px rgba(255, 107, 53, 0.4);
 }
 
+/* Homepage Feature Grid — uniform card sizes */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-grid .view-card {
+    display: flex;
+}
+
+.feature-grid .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-grid .card-title {
+    font-size: 1.1rem;
+}
+
+.feature-grid .card-text {
+    flex: 1;
+    font-size: 0.85rem;
+}
+
 .card-icon {
     font-size: 4rem;
     margin-bottom: 1rem;
@@ -576,7 +601,7 @@ main {
 .castaways-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .castaway-card {
@@ -1118,25 +1143,32 @@ main {
 
 .advantage-timeline-row {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    align-items: stretch;
+    gap: 0;
     margin-bottom: 1.5rem;
-    flex-wrap: wrap;
 }
 
 .timeline-arrow {
     color: var(--torch-orange);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    flex: 0 0 auto;
 }
 
 .timeline-item {
     background: rgba(255, 255, 255, 0.04);
-    padding: 1rem;
+    padding: 0.75rem;
     border-radius: 5px;
     border-left: 3px solid var(--torch-orange);
-    flex: 1;
-    min-width: 200px;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.advantage-timeline-row.single-item .timeline-item {
+    flex: 0 0 33.33%;
 }
 
 .timeline-icon {
@@ -1305,7 +1337,10 @@ body.spoiler-free .spoiler,
 body.spoiler-free .winner-name,
 body.spoiler-free .castaway-placement .crown,
 body.spoiler-free [data-placement="Winner"] .castaway-name,
-body.spoiler-free .winner-announcement {
+body.spoiler-free .winner-announcement,
+body.spoiler-free .winner-headshot,
+body.spoiler-free [data-placement="Winner"] .castaway-headshot,
+body.spoiler-free .hof-headshot {
     filter: blur(8px);
     transition: filter 0.3s;
     cursor: pointer;
@@ -1315,7 +1350,10 @@ body.spoiler-free .spoiler:hover,
 body.spoiler-free .winner-name:hover,
 body.spoiler-free .castaway-placement .crown:hover,
 body.spoiler-free [data-placement="Winner"] .castaway-name:hover,
-body.spoiler-free .winner-announcement:hover {
+body.spoiler-free .winner-announcement:hover,
+body.spoiler-free .winner-headshot:hover,
+body.spoiler-free [data-placement="Winner"] .castaway-headshot:hover,
+body.spoiler-free .hof-headshot:hover {
     filter: blur(0);
 }
 

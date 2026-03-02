@@ -12,45 +12,45 @@
 
 {% block content %}
 <!-- Hero Section -->
-<div class="text-center mb-4">
-    <h1 style="font-family: 'Cinzel', serif; color: var(--torch-orange); font-size: 2.5rem;">
+<div class="text-center mb-3">
+    <h1 style="font-family: 'Cinzel', serif; color: var(--torch-orange); font-size: 2.2rem;">
         Idol Strategy Guide
     </h1>
-    <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto;">
+    <p style="color: var(--text-secondary); font-size: 1rem; max-width: 700px; margin: 0 auto;">
         How to find, hold, and play a Hidden Immunity Idol. Lessons from {{ total_real_idols }} idols across 39 seasons.
     </p>
 </div>
 
 <!-- Quick Stats Bar -->
-<div class="row g-3 mb-4">
+<div class="row g-2 mb-3">
     <div class="col-6 col-md-3">
-        <div class="stat-card text-center" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
-            <div style="font-size: 2.5rem; font-weight: bold; color: var(--torch-orange);">{{ total_real_idols }}</div>
-            <div style="color: var(--text-secondary); font-size: 0.85rem;">Idols Found</div>
+        <div class="stat-card text-center" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 1rem;">
+            <div style="font-size: 2rem; font-weight: bold; color: var(--torch-orange);">{{ total_real_idols }}</div>
+            <div style="color: var(--text-secondary); font-size: 0.8rem;">Idols Found</div>
         </div>
     </div>
     <div class="col-6 col-md-3">
-        <div class="stat-card text-center" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
-            <div style="font-size: 2.5rem; font-weight: bold; color: #4ADE80;">{{ success_rate }}%</div>
-            <div style="color: var(--text-secondary); font-size: 0.85rem;">Play Success Rate</div>
+        <div class="stat-card text-center" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 1rem;">
+            <div style="font-size: 2rem; font-weight: bold; color: #4ADE80;">{{ success_rate }}%</div>
+            <div style="color: var(--text-secondary); font-size: 0.8rem;">Play Success Rate</div>
         </div>
     </div>
     <div class="col-6 col-md-3">
-        <div class="stat-card text-center" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
-            <div style="font-size: 2.5rem; font-weight: bold; color: #60A5FA;">{{ total_votes_negated }}</div>
-            <div style="color: var(--text-secondary); font-size: 0.85rem;">Total Votes Negated</div>
+        <div class="stat-card text-center" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 1rem;">
+            <div style="font-size: 2rem; font-weight: bold; color: #60A5FA;">{{ total_votes_negated }}</div>
+            <div style="color: var(--text-secondary); font-size: 0.8rem;">Total Votes Negated</div>
         </div>
     </div>
     <div class="col-6 col-md-3">
-        <div class="stat-card text-center" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
-            <div style="font-size: 2.5rem; font-weight: bold; color: #F87171;">{{ total_voted_out_holding }}</div>
-            <div style="color: var(--text-secondary); font-size: 0.85rem;">Voted Out Holding</div>
+        <div class="stat-card text-center" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 1rem;">
+            <div style="font-size: 2rem; font-weight: bold; color: #F87171;">{{ total_voted_out_holding }}</div>
+            <div style="color: var(--text-secondary); font-size: 0.8rem;">Voted Out Holding</div>
         </div>
     </div>
 </div>
 
 <!-- Navigation Tabs -->
-<ul class="nav nav-tabs mb-4" id="idolTabs" role="tablist">
+<ul class="nav nav-tabs mb-3" id="idolTabs" role="tablist">
     <li class="nav-item"><a class="nav-link active" id="overview-tab" data-bs-toggle="tab" href="#overview" role="tab">Overview</a></li>
     <li class="nav-item"><a class="nav-link" id="types-tab" data-bs-toggle="tab" href="#types" role="tab">Idol Types</a></li>
     <li class="nav-item"><a class="nav-link" id="strategies-tab" data-bs-toggle="tab" href="#strategies" role="tab">Strategies</a></li>
@@ -67,13 +67,13 @@
     <!-- Idols Per Season Chart -->
     <div class="row g-4 mb-4">
         <div class="col-lg-8">
-            <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
+            <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 1rem;">
                 <h3 style="color: var(--torch-orange); font-size: 1.3rem; margin-bottom: 1rem;">Idols Per Season</h3>
                 <canvas id="idolsPerSeasonChart" height="280"></canvas>
             </div>
         </div>
         <div class="col-lg-4">
-            <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
+            <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 1rem;">
                 <h3 style="color: var(--torch-orange); font-size: 1.3rem; margin-bottom: 1rem;">Play Outcomes</h3>
                 <canvas id="outcomesDoughnut" height="250"></canvas>
             </div>
@@ -83,7 +83,7 @@
     <!-- Self vs Ally + Duration Charts -->
     <div class="row g-4 mb-4">
         <div class="col-md-6">
-            <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
+            <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 1rem;">
                 <h3 style="color: var(--torch-orange); font-size: 1.3rem; margin-bottom: 1rem;">Self vs. Ally Plays</h3>
                 <div class="row text-center mb-3">
                     <div class="col-6">
@@ -101,7 +101,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
+            <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 1rem;">
                 <h3 style="color: var(--torch-orange); font-size: 1.3rem; margin-bottom: 1rem;">How Long Do Players Hold Idols?</h3>
                 <div class="text-center mb-3">
                     <span style="font-size: 2rem; font-weight: bold; color: var(--sand);">{{ avg_duration }}</span>
@@ -113,7 +113,7 @@
     </div>
 
     <!-- Top Idol Finders -->
-    <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
+    <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 1rem; margin-bottom: 1rem;">
         <h3 style="color: var(--torch-orange); font-size: 1.3rem; margin-bottom: 1rem;">Top Idol Finders (All Time)</h3>
         <div class="table-responsive">
             <table class="table table-dark table-hover" style="--bs-table-bg: transparent; --bs-table-hover-bg: rgba(255,255,255,0.05);">
@@ -146,7 +146,7 @@
     </div>
 
     <!-- Most Votes Negated -->
-    <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
+    <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 1rem; margin-bottom: 1rem;">
         <h3 style="color: var(--torch-orange); font-size: 1.3rem; margin-bottom: 1rem;">Most Votes Negated (Single Play)</h3>
         <div class="table-responsive">
             <table class="table table-dark table-hover" style="--bs-table-bg: transparent; --bs-table-hover-bg: rgba(255,255,255,0.05);">
@@ -228,7 +228,7 @@
 
     {% for tc in type_catalog %}
     {% set desc = type_descriptions.get(tc.name, {}) %}
-    <div class="advantage-card mb-4" style="border-left: 5px solid var(--torch-orange);">
+    <div class="advantage-card mb-3" style="border-left: 5px solid var(--torch-orange);">
         <div class="advantage-header">
             <div class="advantage-icon">{{ icon('idol', '28') }}</div>
             <div class="advantage-meta">
@@ -272,7 +272,7 @@
     {% endfor %}
 
     <!-- Fake Idols Brief -->
-    <div class="advantage-card mb-4" style="border-left: 5px solid #9CA3AF;">
+    <div class="advantage-card mb-3" style="border-left: 5px solid #9CA3AF;">
         <div class="advantage-header">
             <div class="advantage-icon">{{ icon('idol', '28') }}</div>
             <div class="advantage-meta">
@@ -287,7 +287,7 @@
     </div>
 
     <!-- Idol Nullifier -->
-    <div class="advantage-card mb-4" style="border-left: 5px solid #F87171;">
+    <div class="advantage-card mb-3" style="border-left: 5px solid #F87171;">
         <div class="advantage-header">
             <div class="advantage-icon">{{ icon('target', '28') }}</div>
             <div class="advantage-meta">
@@ -309,8 +309,8 @@
     </p>
 
     <!-- Strategy 1: Timing -->
-    <div class="advantage-card mb-4" style="border-left: 5px solid #60A5FA;">
-        <div style="padding: 1.5rem;">
+    <div class="advantage-card mb-3" style="border-left: 5px solid #60A5FA;">
+        <div style="padding: 1.25rem;">
             <h3 style="color: #60A5FA; margin-bottom: 0.5rem;">
                 <span style="font-size: 1.5rem; margin-right: 0.5rem;">&#9201;</span>
                 Strategy 1: When to Play (Timing)
@@ -373,8 +373,8 @@
     </div>
 
     <!-- Strategy 2: Target -->
-    <div class="advantage-card mb-4" style="border-left: 5px solid #C084FC;">
-        <div style="padding: 1.5rem;">
+    <div class="advantage-card mb-3" style="border-left: 5px solid #C084FC;">
+        <div style="padding: 1.25rem;">
             <h3 style="color: #C084FC; margin-bottom: 0.5rem;">
                 <span style="font-size: 1.5rem; margin-right: 0.5rem;">&#127919;</span>
                 Strategy 2: Who to Play It On (Target)
@@ -411,8 +411,8 @@
     </div>
 
     <!-- Strategy 3: Secrecy -->
-    <div class="advantage-card mb-4" style="border-left: 5px solid #FBBF24;">
-        <div style="padding: 1.5rem;">
+    <div class="advantage-card mb-3" style="border-left: 5px solid #FBBF24;">
+        <div style="padding: 1.25rem;">
             <h3 style="color: #FBBF24; margin-bottom: 0.5rem;">
                 <span style="font-size: 1.5rem; margin-right: 0.5rem;">&#129296;</span>
                 Strategy 3: Secret vs. Public (Information)
@@ -461,8 +461,8 @@
     </div>
 
     <!-- Strategy 4: Success vs. Waste -->
-    <div class="advantage-card mb-4" style="border-left: 5px solid #4ADE80;">
-        <div style="padding: 1.5rem;">
+    <div class="advantage-card mb-3" style="border-left: 5px solid #4ADE80;">
+        <div style="padding: 1.25rem;">
             <h3 style="color: #4ADE80; margin-bottom: 0.5rem;">
                 <span style="font-size: 1.5rem; margin-right: 0.5rem;">&#9989;</span>
                 Strategy 4: Successful vs. Wasted (Outcome)
@@ -505,7 +505,7 @@
 <div class="tab-pane fade" id="bestworst" role="tabpanel">
 
     <!-- Best Plays -->
-    <h2 style="color: #4ADE80; font-family: 'Cinzel', serif; margin-bottom: 1.5rem;">
+    <h2 style="color: #4ADE80; font-family: 'Cinzel', serif; margin-bottom: 1rem;">
         Top 10 Greatest Idol Plays
     </h2>
     {% for play in best_plays %}
@@ -528,7 +528,7 @@
     {% endfor %}
 
     <!-- Worst Plays -->
-    <h2 style="color: #F87171; font-family: 'Cinzel', serif; margin-top: 2rem; margin-bottom: 1rem;">
+    <h2 style="color: #F87171; font-family: 'Cinzel', serif; margin-top: 1.5rem; margin-bottom: 1rem;">
         Worst Idol Blunders
     </h2>
     {% for play in worst_plays %}
@@ -556,8 +556,8 @@
     </div>
 
     <!-- Rule 1 -->
-    <div class="advantage-card mb-4" style="border-left: 5px solid #F87171;">
-        <div style="padding: 1.5rem;">
+    <div class="advantage-card mb-3" style="border-left: 5px solid #F87171;">
+        <div style="padding: 1.25rem;">
             <h3 style="color: #F87171;">Rule #1: ALWAYS Bring Your Idol to Tribal</h3>
             <p style="color: var(--text-secondary);">
                 This sounds obvious, but <strong>Garrett Adelstein</strong> (S28) and <strong>J.T. Thomas</strong> (S34) were both voted out because they left their idols at camp. An idol in your bag at camp is just a souvenir. An idol in your pocket at tribal is a lifeline.
@@ -569,8 +569,8 @@
     </div>
 
     <!-- Rule 2 -->
-    <div class="advantage-card mb-4" style="border-left: 5px solid #FBBF24;">
-        <div style="padding: 1.5rem;">
+    <div class="advantage-card mb-3" style="border-left: 5px solid #FBBF24;">
+        <div style="padding: 1.25rem;">
             <h3 style="color: #FBBF24;">Rule #2: Keep It Secret As Long As Possible</h3>
             <p style="color: var(--text-secondary);">
                 Secret idols produce dramatically better outcomes than public ones. When your idol is public, opponents split votes, redirect to allies, or deploy Nullifiers. <strong>Kelley Wentworth</strong> grabbed her idol at a challenge with nobody watching — then negated a record 9 votes. <strong>Carolyn Rivera</strong> kept hers hidden for 33 days. Both produced devastating blindsides.
@@ -582,8 +582,8 @@
     </div>
 
     <!-- Rule 3 -->
-    <div class="advantage-card mb-4" style="border-left: 5px solid #60A5FA;">
-        <div style="padding: 1.5rem;">
+    <div class="advantage-card mb-3" style="border-left: 5px solid #60A5FA;">
+        <div style="padding: 1.25rem;">
             <h3 style="color: #60A5FA;">Rule #3: Play When You KNOW, Not When You FEEL</h3>
             <p style="color: var(--text-secondary);">
                 The majority of wasted idol plays come from paranoia, not from bad luck. Players play their idol "just in case" and waste it on a round they weren't even targeted. <strong>Spencer Bledsoe</strong> (S28), <strong>Tony & LJ</strong> (S28), and dozens of others burned idols because they felt nervous — not because they had confirmed intel.
@@ -595,8 +595,8 @@
     </div>
 
     <!-- Rule 4 -->
-    <div class="advantage-card mb-4" style="border-left: 5px solid #4ADE80;">
-        <div style="padding: 1.5rem;">
+    <div class="advantage-card mb-3" style="border-left: 5px solid #4ADE80;">
+        <div style="padding: 1.25rem;">
             <h3 style="color: #4ADE80;">Rule #4: Never Go Home With an Idol in Your Pocket</h3>
             <p style="color: var(--text-secondary);">
                 <strong>{{ total_voted_out_holding }} players</strong> across 39 seasons were voted out while holding an idol. James Clement went home with TWO. Playing an idol "unnecessarily" is infinitely better than getting your torch snuffed while holding one.
@@ -608,8 +608,8 @@
     </div>
 
     <!-- Rule 5 -->
-    <div class="advantage-card mb-4" style="border-left: 5px solid #C084FC;">
-        <div style="padding: 1.5rem;">
+    <div class="advantage-card mb-3" style="border-left: 5px solid #C084FC;">
+        <div style="padding: 1.25rem;">
             <h3 style="color: #C084FC;">Rule #5: Playing on an Ally Is the Highest-Risk, Highest-Reward Move</h3>
             <p style="color: var(--text-secondary);">
                 Parvati's double play, Natalie's F5 play on Jaclyn, Davie saving Christian — these are the most celebrated moves in Survivor history. Juries reward bold plays for others. Natalie won because of her idol play on Jaclyn. But <strong>J.T. giving his idol to Russell</strong> is the worst move ever.
@@ -621,8 +621,8 @@
     </div>
 
     <!-- Rule 6 -->
-    <div class="advantage-card mb-4" style="border-left: 5px solid var(--torch-orange);">
-        <div style="padding: 1.5rem;">
+    <div class="advantage-card mb-3" style="border-left: 5px solid var(--torch-orange);">
+        <div style="padding: 1.25rem;">
             <h3 style="color: var(--torch-orange);">Rule #6: An Idol in Your Pocket Is Still a Weapon</h3>
             <p style="color: var(--text-secondary);">
                 Even without playing it, an idol shapes the game around you. <strong>Carolyn Rivera</strong> (S30) held hers for 33 days — her opponents spent weeks uncertain whether she had one, which changed how they voted. <strong>Mike Holloway</strong> (S30) openly threatened to play his idol, forcing the majority to redirect their vote and fracture their alliance. The mere possibility of an idol play creates chaos in the opposing alliance.
@@ -634,8 +634,8 @@
     </div>
 
     <!-- Rule 7 -->
-    <div class="advantage-card mb-4" style="border-left: 5px solid #34D399;">
-        <div style="padding: 1.5rem;">
+    <div class="advantage-card mb-3" style="border-left: 5px solid #34D399;">
+        <div style="padding: 1.25rem;">
             <h3 style="color: #34D399;">Rule #7: Invest in Social Reads, Not Just Idol Hunting</h3>
             <p style="color: var(--text-secondary);">
                 Every great idol play was powered by a great social read. Parvati knew exactly where the Heroes' votes were going. Davie read the room at the merge. Jenn Brown knew she, not Hali, was the target. Meanwhile, every wasted play came from someone who didn't know where the votes were going.
@@ -647,16 +647,16 @@
     </div>
 
     <!-- Final Verdict Box -->
-    <div style="background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(239,68,68,0.1)); border: 2px solid var(--torch-orange); border-radius: 16px; padding: 1.5rem; margin-top: 1.5rem; text-align: center;">
-        <h3 style="color: var(--torch-orange); font-family: 'Cinzel', serif; margin-bottom: 1rem;">The Most Effective Idol Strategy</h3>
+    <div style="background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(239,68,68,0.1)); border: 2px solid var(--torch-orange); border-radius: 12px; padding: 1.25rem; margin-top: 1rem; text-align: center;">
+        <h3 style="color: var(--torch-orange); font-family: 'Cinzel', serif; margin-bottom: 0.75rem;">The Most Effective Idol Strategy</h3>
         <p style="color: var(--sand); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
             Find it early. Tell nobody. Read the room obsessively. Play it only when you have confirmed intelligence that you or your closest ally is going home. The idol amplifies your social game — without good reads, it's just a shiny object you'll waste. And for the love of the game — bring it to tribal council.
         </p>
     </div>
 
     <!-- Strategies to Avoid -->
-    <div style="background: rgba(248,113,113,0.08); border: 1px solid rgba(248,113,113,0.3); border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem;">
-        <h3 style="color: #F87171; margin-bottom: 1rem;">Strategies to Avoid</h3>
+    <div style="background: rgba(248,113,113,0.08); border: 1px solid rgba(248,113,113,0.3); border-radius: 10px; padding: 1rem; margin-top: 1rem;">
+        <h3 style="color: #F87171; margin-bottom: 0.75rem;">Strategies to Avoid</h3>
         <div class="row g-3">
             <div class="col-md-6">
                 <ul style="color: var(--text-secondary);">
@@ -680,13 +680,13 @@
 
 <!-- TAB 6: Advantages Evolution (merged from advantages-timeline page) -->
 <div class="tab-pane fade" id="advantages" role="tabpanel">
-    <h2 class="text-center mb-4" style="color: var(--torch-orange);">The Evolution of Advantages</h2>
-    <p class="text-center mb-4" style="color: var(--text-secondary); max-width: 700px; margin: 0 auto;">
+    <h2 class="text-center mb-3" style="color: var(--torch-orange);">The Evolution of Advantages</h2>
+    <p class="text-center mb-3" style="color: var(--text-secondary); max-width: 700px; margin: 0 auto;">
         From zero advantages in Season 1 to advantage overload in modern Survivor — how idols and twists reshaped the game.
     </p>
 
     <!-- Summary Stats -->
-    <div class="row text-center g-3 mb-4">
+    <div class="row text-center g-2 mb-3">
         <div class="col-6 col-md-3">
             <div class="stat-box">
                 <div class="stat-number">{{ total_all_advantages }}</div>
@@ -714,30 +714,30 @@
     </div>
 
     <!-- Chart: Advantages per Season -->
-    <div class="tribal-card p-3 mb-4">
-        <h3 class="text-center mb-3" style="color: var(--torch-orange);">Advantages Per Season</h3>
+    <div class="tribal-card p-3 mb-3">
+        <h3 class="text-center mb-2" style="color: var(--torch-orange);">Advantages Per Season</h3>
         <canvas id="advPerSeasonChart" height="300"></canvas>
     </div>
 
     <!-- Chart: Votes Negated + Type Distribution -->
-    <div class="row g-4 mb-4">
+    <div class="row g-3 mb-3">
         <div class="col-md-6">
             <div class="tribal-card p-3 h-100">
-                <h4 class="text-center mb-3" style="color: var(--torch-orange);">Votes Negated Per Season</h4>
+                <h4 class="text-center mb-2" style="color: var(--torch-orange);">Votes Negated Per Season</h4>
                 <canvas id="advVotesNegatedChart" height="250"></canvas>
             </div>
         </div>
         <div class="col-md-6">
             <div class="tribal-card p-3 h-100">
-                <h4 class="text-center mb-3" style="color: var(--torch-orange);">Advantage Types Distribution</h4>
+                <h4 class="text-center mb-2" style="color: var(--torch-orange);">Advantage Types Distribution</h4>
                 <canvas id="advTypeChart" height="250"></canvas>
             </div>
         </div>
     </div>
 
     <!-- Era Breakdown -->
-    <div class="tribal-card p-3 mb-4">
-        <h3 class="text-center mb-4" style="color: var(--torch-orange);">The Advantage Eras</h3>
+    <div class="tribal-card p-3 mb-3">
+        <h3 class="text-center mb-3" style="color: var(--torch-orange);">The Advantage Eras</h3>
         <div class="row g-3">
             <div class="col-md-4">
                 <div class="stat-box text-center">
@@ -776,7 +776,7 @@
     </div>
 
     <!-- Season-by-Season Table -->
-    <div class="tribal-card p-3 mb-4">
+    <div class="tribal-card p-3 mb-3">
         <h3 class="text-center mb-3" style="color: var(--torch-orange);">Season-by-Season Breakdown</h3>
         <div class="table-responsive">
             <table class="table table-dark table-hover sortable">

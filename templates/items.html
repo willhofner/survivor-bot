@@ -98,8 +98,8 @@
                 </div>
             </div>
 
-            <div class="advantage-timeline-row" style="display: flex; gap: 0; align-items: stretch;">
-                <div class="timeline-item" style="flex: 1; min-width: 0; {% if not advantage.day_played %}max-width: 33.33%;{% endif %}">
+            <div class="advantage-timeline-row{% if not advantage.day_played %} single-item{% endif %}">
+                <div class="timeline-item">
                     <div class="timeline-icon">{{ icon('search', '18') }}</div>
                     <div class="timeline-content">
                         <strong>Found</strong><br>
@@ -108,8 +108,8 @@
                 </div>
 
                 {% if advantage.day_played %}
-                <div class="timeline-arrow" style="flex: 0 0 auto;">→</div>
-                <div class="timeline-item" style="flex: 1; min-width: 0;">
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">
                     <div class="timeline-icon">{{ icon('target', '18') }}</div>
                     <div class="timeline-content">
                         <strong>Played</strong><br>
@@ -120,8 +120,8 @@
                     </div>
                 </div>
 
-                <div class="timeline-arrow" style="flex: 0 0 auto;">→</div>
-                <div class="timeline-item" style="flex: 1; min-width: 0;">
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">
                     <div class="timeline-icon">
                         {% if advantage.result == 'successful' %}<span style="color: #28a745; font-weight: bold;">&#10003;</span>{% else %}<span style="color: #dc3545; font-weight: bold;">&#10007;</span>{% endif %}
                     </div>
